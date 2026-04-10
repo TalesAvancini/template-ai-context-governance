@@ -1,0 +1,18 @@
+{
+  "name": "template-ai-context-governance",
+  "version": "2.0.0",
+  "description": "AI-Ready Template with Context Governance Framework",
+  "scripts": {
+    "context:validate": "python .context/_scripts/validate_context.py",
+    "context:purge": "python .context/_scripts/purge_journal.py",
+    "context:sync": "python .context/_scripts/sync_project.py"
+  },
+  "keywords": [
+    "ai",
+    "context",
+    "governance",
+    "template"
+  ],
+  "author": "TalesAvancini",
+  "license": "MIT"
+}
