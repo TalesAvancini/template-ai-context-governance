@@ -1,12 +1,9 @@
--- ---------------------------------------------------------
--- Criado em: 2026-04-10
--- Ultima Atualizacao: 2026-04-10
--- Status: Ativo
--- ---------------------------------------------------------
-
--- Snapshot real da estrutura do banco de dados (SSOT)
-CREATE TABLE IF NOT EXISTS users (
+-- Snapshot Real da Tabela de Pedidos
+CREATE TABLE IF NOT EXISTS orders (
     id SERIAL PRIMARY KEY,
-    email VARCHAR(255) UNIQUE NOT NULL,
+    user_id INT REFERENCES users(id),
+    stripe_session_id VARCHAR(255),
+    status VARCHAR(50) DEFAULT 'pending', -- pending, succeeded, failed
+    total_amount DECIMAL(10, 2),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

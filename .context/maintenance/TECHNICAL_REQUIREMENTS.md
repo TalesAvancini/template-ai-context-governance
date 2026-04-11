@@ -1,9 +1,13 @@
 ---\nCriado em: 2026-04-10 20:50\nUltima Atualizacao: 2026-04-10 20:50\nStatus: Ativo\n---\n
 
 <!-- AUTO-SYNC START -->
-*🤖 Atualizado automaticamente em 2026-04-10 21:16*
+*🤖 Atualizado automaticamente em 2026-04-10 22:26*
+
+### DevDependencies
+- `husky`: `^9.1.7`
 
 ### Tabelas no Schema (schema.sql)
-- `users`
+- `orders`
 
 <!-- AUTO-SYNC END -->
+
