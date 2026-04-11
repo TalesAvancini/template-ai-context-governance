@@ -74,5 +74,11 @@ Ao clonar este template, siga estes passos:
 
 ---
 
+## 📖 Guia de Operação Avançada
+Para detalhes sobre o fluxo de trabalho diário (Sunrise/Sunset), ritos de handoff e troubleshooting, consulte o:
+👉 **[README_CONTEXT.md](./README_CONTEXT.md)**
+
+---
+
 > **Desenvolvido com 🤖 por Tales Avancini / Antigravity Kit.**  
 > *"Governança não é burocracia, é a fundação da inteligência escalável."*
