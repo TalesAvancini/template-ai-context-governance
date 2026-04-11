@@ -40,25 +40,69 @@ A IA deve disparar a seguinte mensagem ao usuário:
 
 ---
 
-## 🧠 3. Protocolo de Manutenção do Contexto
+## 🧠 1. Protocolo de Manutenção do Contexto
+A IA deve agir como o "bibliotecário chefe". A consistência entre Código e Contexto é obrigatória.
 
 ### 📖 `maintenance/JOURNAL.md` (O Diário de Bordo)
-- **Quando atualizar:** Após corrigir bugs persistentes ou alterar lógica de negócio.
-- **O Purge:** Ao atingir o limite heurístico, acionar `_scripts/purge_journal.py` para arquivar 70% e gerar semente.
+- **O que logar:** Decisões de arquitetura, resoluções de bugs complexos e mudanças em lógica de negócio.
+- **Proibido:** Erros de sintaxe triviais, mudanças de estilo (CSS) ou indentação.
+- **O Purge:** Ao atingir o limite heurístico (~50k char), acionar `_scripts/purge_journal.py` para arquivar 70% e gerar semente de contexto.
 
-### 🤖 4. Protocolo Multi-Agent (Especialização)
+### ⚙️ `maintenance/TECHNICAL_REQUIREMENTS.md`
+- **Atualização Obrigatória:** Mudanças no `package.json`, alteração de Schema ou integração de novas APIs/Serviços.
 
-1.  **Declaração de Ativação:** Toda tarefa deve iniciar com: `🤖 Ativando @[role] | Tarefa: [Descrição]`.
-2.  **Handoff Obrigatório:** Cruzamento de domínios exige registro de estado no `JOURNAL.md`:
-    - `🔄 Handoff: @[role-atual] → @[role-próxima] | Estado: [Checkpoint] | Próximo: [Ação]`
-
----
-
-## 🗄️ 5. Protocolo Database-First (Anti-Alucinação)
-
-1.  **Verificação Obrigatória:** Antes de criar UI, verificar `maintenance/schema.sql`.
-2.  **Aviso de Divergência:** Se o Schema não bate com o PRD, pare e peça a migration.
+### 🛠️ `maintenance/rebuild_guide.md` (Manual de Reconstrução)
+- **Atualização Obrigatória:** Descoberta de hacks de ambiente local, configurações críticas de CI/CD ou passos manuais de deploy.
 
 ---
 
-> **Nota Final para a IA:** Você é o guardião da integridade deste projeto. Sua eficiência depende de quão limpo e focado é o seu contexto atual. Sem contexto blindado, você alucina; com contexto em camadas, você escala.
+## 🗄️ 2. Protocolo Database-First (Anti-Alucinação)
+É proibido construir código baseado em suposições sobre a estrutura do Banco de Dados.
+
+1.  **Verificação Obrigatória:** Antes de criar UI ou lógica que dependa de dados, o Agente DEVE verificar `maintenance/schema.sql`.
+2.  **Aviso de Divergência:** Se a IA identificar que o código exige um campo inexistente no DB, ela deve parar e avisar: 
+    *"⚠️ Alerta: O Frontend exige o campo X, mas ele não existe no Schema. Sugiro a migration antes de prosseguir."*
+
+---
+
+## 🤖 3. Comportamento do Agente (Transparência & Roteamento)
+
+### 📋 3.1 Registro & Ativação
+- **DNS de Roles:** `brain/AGENT_REGISTRY.md` é a única fonte oficial de papéis.
+- **Identificação:** Toda tarefa inicia com: `🤖 Ativando @[role] | Escopo: [descrição]`.
+- **Isolamento de Contexto:** Carregar apenas: Global (`brain/` base) + Role-Specific + Task-Ephemeral (`brain/PRD.md` + tail de `maintenance/JOURNAL.md`).
+
+### 🤝 3.2 Handoff & Cruzamento de Domínios
+Se uma tarefa exigir 2+ especialidades, o agente atual deve pausar e registrar:
+- `🔄 Handoff: @[role-atual] → @[role-próxima] | Estado Tecnico: [Resumo] | Próximo Passo: [Ação]`
+O próximo agente inicia com contexto limpo + estado transferido.
+
+### ⚖️ 3.3 Validação Pré-Código (Context Gate)
+Antes de gerar código de produção, validar mentalmente ou via script:
+- [ ] `brain/PRD.md` ativo e alinhado.
+- [ ] `maintenance/schema.sql` contém as estruturas referenciadas.
+- [ ] `maintenance/JOURNAL.md` < 550 linhas.
+- [ ] Nenhuma variável sensível hardcoded.
+
+---
+
+## 🔢 4. Session Budget & Heurísticas de Token
+- **Volume:** Aprox. **50.000 caracteres** ou **15-20 trocas** densas.
+- **Alerta:** Ao detectar o limite, propor purge ou reset de sessão imediatamente.
+
+---
+
+## 🔄 5. Gatilhos de Interação (Para o Usuário)
+- **"Atualize o contexto":** IA sintetiza mudanças no `JOURNAL.md` e checa `TECHNICAL_REQUIREMENTS.md`.
+- **"Qual o estado do projeto?":** IA gera relatório baseado no `JOURNAL.md` e `ROADMAP.md`.
+- **"Roteie esta tarefa":** IA consulta `AGENT_REGISTRY.md` e inicia o fluxo de ativação/handoff.
+
+---
+
+## 🚨 6. Segurança e Saúde
+- **Segredos:** Variáveis (`API_KEYS`, `TOKENS`) nunca no código. Referenciar como `[VARIABLE_NAME]` e usar `.env`.
+- **Depreciação:** Se uma função/arquivo for removido, marcar como `[DEPRECATED]` ou remover do contexto para evitar sugestão de código morto.
+
+---
+
+> **Nota Final para a IA:** Você é a extensão cognitiva do desenvolvedor. Sem contexto atualizado e blindado, sua capacidade de longo prazo é nula. Seu compromisso é com a verdade documentada.
