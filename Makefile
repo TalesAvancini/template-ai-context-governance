@@ -9,6 +9,7 @@ help:
 	@echo "  make validate  - Check .context integrity & estimate tokens"
 	@echo "  make purge     - Archive 70% of oldest journal entries"
 	@echo "  make sync      - Sync TECH_REQUIREMENTS.md with package.json & schema.sql"
+	@echo "  make test      - Run automated infrastructure tests"
 	@echo "  make all       - Run full pipeline: validate -> sync -> purge"
 	@echo "  make help      - Show this message"
 
@@ -23,6 +24,10 @@ purge:
 sync:
 	@echo "🔄 Running project sync..."
 	@$(PYTHON) $(CONTEXT_SCRIPTS)/sync_project.py
+
+test:
+	@echo "🧪 Running infrastructure tests..."
+	@$(PYTHON) tests/test_context.py
 
 all: validate sync purge
 	@echo "🎉 Full context pipeline completed successfully."

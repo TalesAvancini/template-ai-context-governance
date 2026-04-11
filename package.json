@@ -5,7 +5,10 @@
   "scripts": {
     "context:validate": "python .context/_scripts/validate_context.py",
     "context:purge": "python .context/_scripts/purge_journal.py",
-    "context:sync": "python .context/_scripts/sync_project.py"
+    "context:sync": "python .context/_scripts/sync_project.py",
+    "context:test": "python tests/test_context.py",
+    "context:all": "npm run context:validate && npm run context:sync && npm run context:purge",
+    "context:help": "echo \"Comandos: validate | purge | sync | all\""
   },
   "keywords": [
     "ai",
