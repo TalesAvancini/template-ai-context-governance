@@ -1,2 +1,3 @@
-echo "🔍 [Husky] Executando validacao de infraestrutura antes do commit..."
-npm run context:test
+#!/usr/bin/env sh
+echo "🔍 [Husky] Validando contexto antes do commit..."
+python run_context.py validate

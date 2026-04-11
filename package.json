@@ -1,23 +1,25 @@
 {
-  "name": "template-ai-context-governance",
-  "version": "2.0.0",
-  "description": "AI-Ready Template with Context Governance Framework",
+  "name": "ai-context-governance-template",
+  "version": "2.2.0",
+  "description": "AI-Ready Template with Layered Context Governance & Spec-Driven Execution",
   "scripts": {
-    "context:validate": "python .context/_scripts/validate_context.py",
-    "context:purge": "python .context/_scripts/purge_journal.py",
-    "context:sync": "python .context/_scripts/sync_project.py",
+    "context:validate": "python run_context.py validate",
+    "context:sync": "python run_context.py sync",
+    "context:cleanup": "python run_context.py cleanup",
+    "context:purge": "python run_context.py purge",
+    "context:capture": "python captura_projeto.py --emit-symbol-index --emit-import-map",
+    "context:all": "python run_context.py all",
     "context:test": "python tests/test_context.py",
-    "context:all": "npm run context:validate && npm run context:sync && npm run context:purge",
-    "context:help": "echo \"Comandos: validate | purge | sync | all\"",
     "prepare": "husky"
   },
   "keywords": [
     "ai",
-    "context",
-    "governance",
-    "template"
+    "context-governance",
+    "spec-driven",
+    "multi-agent",
+    "automation"
   ],
-  "author": "TalesAvancini",
+  "author": "Tales Avancini",
   "license": "MIT",
   "devDependencies": {
     "husky": "^9.1.7"
