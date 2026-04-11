@@ -130,4 +130,25 @@ Status: Ativo
 - 🤝 **Handoff:** Se a tarefa cruzar 2+ roles, interrompa, registre no `maintenance/JOURNAL.md` e ative a proxima role.
 - 🧱 **Isolamento:** Carregue APENAS os arquivos listados em "Contexto Obrigatorio". Ignore o restante.
 
+### 🧬 `@agent-hybrid-tlc` (Spec-Driven + Context Governance)
+**Gatilho:** "Inicie SPECIFY", "Crie spec atômica", "Modo Híbrido TLC"  
+**Contexto Obrigatório:** `PRD.md`, `schema.sql`, `JOURNAL.md` (tail 30), `RULES.md`
+
+```text
+🤖 Ativando @agent-hybrid-tlc | Tarefa: SPECIFY para {{funcionalidade}}
+📌 PRD_REF: {{#ID}}
+📌 CONTEXT_CHECK: ✅ Validado
+🎯 Objetivo: Gerar spec atômica (.specs/) alinhada ao PRD e schema atual
+🚧 Restrições:
+- Criar pasta .specs/features/{{slug}}/ com spec.md e STATE.md
+- Especificar apenas 1 passo atômico por vez
+- Validar contrato contra schema.sql antes de definir outputs
+- Nunca hardcode; usar [PLACEHOLDER] se depender de env externo
+📤 Saída Esperada:
+1. Estrutura .specs/ criada
+2. spec.md com passos, contratos e critérios de verificação
+3. STATE.md: draft → pronto para execução
+```
+💡 *Insight IA: Este prompt transforma intenção em plano executável. A spec é o "compilador" entre PRD e código. Mantenha-a enxuta e verificável.*
+
 💡 *Insight IA: Estes templates sao contratos de execucao. Eles reduzem ruido e transformam a IA em um engenheiro previsivel.*

@@ -50,13 +50,32 @@ def check_registry_structure():
         return False, "Tabela de roles nao encontrada"
     return True, "OK"
 
+def check_specs_structure():
+    specs_dir = CONTEXT_DIR.parent / ".specs"
+    if not specs_dir.exists(): return True, "Workshop inativo (OK)"
+    
+    features_dir = specs_dir / "features"
+    if not features_dir.exists(): return False, "Diretorio features ausente no .specs"
+    
+    # Verifica se algum STATE.md esta presente em specs ativas
+    active_specs = [d for d in features_dir.iterdir() if d.is_dir()]
+    for spec in active_specs:
+        if not (spec / "STATE.md").exists():
+            return False, f"Falha de integridade: {spec.name}/STATE.md ausente"
+            
+    return True, f"OK ({len(active_specs)} specs ativas)"
+
 def validate():
-    print("--- Iniciando validacao de contexto (v2.2) ---")
+    print("--- Iniciando validacao de contexto (v2.2 Premium+) ---")
     issues = []
 
     missing = check_files()
     if missing: issues.append(f"[ERROR] Arquivos ausentes: {', '.join(missing)}")
     else: print("[OK] Todos os arquivos obrigatorios presentes.")
+
+    spec_ok, spec_msg = check_specs_structure()
+    if not spec_ok: issues.append(f"[WARN] .specs/: {spec_msg}")
+    else: print(f"[OK] .specs/: {spec_msg}")
 
     journal_lines, journal_ok = check_journal_lines()
     if not journal_ok: issues.append(f"[WARN] JOURNAL.md excede limite: {journal_lines}/{JOURNAL_MAX_LINES}")

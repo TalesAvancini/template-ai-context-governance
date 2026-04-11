@@ -54,6 +54,11 @@ A IA deve agir como o "bibliotecário chefe". A consistência entre Código e Co
 ### 🛠️ `maintenance/rebuild_guide.md` (Manual de Reconstrução)
 - **Atualização Obrigatória:** Descoberta de hacks de ambiente local, configurações críticas de CI/CD ou passos manuais de deploy.
 
+### 🧪 Gestão do `.specs/` (The Workshop)
+- **Efemeridade:** Specs são rascunhos de execução. Pós-merge ou >48h inativo → arquivar em `_archive_context/specs/` ou deletar.
+- **Validação Leve:** O validador checa apenas a existência e o `STATE.md`, sem fiscalizar o conteúdo interno para manter a agilidade.
+- **Sincronia:** Decisões tomadas na spec devem ser transferidas para o `JOURNAL.md` no momento do merge.
+
 ---
 
 ## 🗄️ 2. Protocolo Database-First (Anti-Alucinação)
@@ -96,8 +101,9 @@ Antes de gerar código de produção, validar mentalmente ou via script:
 - **"Atualize o contexto":** IA sintetiza mudanças no `JOURNAL.md` e checa requisitos.
 - **"Qual o estado do projeto?":** IA gera relatório baseado no `JOURNAL.md` e `ROADMAP.md`.
 - **"Roteie esta tarefa":** IA consulta `AGENT_REGISTRY.md` e inicia o fluxo de ativação/handoff.
-- **"Use o prompt padrao":** IA seleciona o template no `brain/PROMPT_LIBRARY.md`, preenche placeholders e solicita confirmação.
+- **"Use o prompt padrão":** IA seleciona o template no `brain/PROMPT_LIBRARY.md`, preenche placeholders e solicita confirmação.
 - **"Novo PRD":** IA deve usar o template v2.0 (`brain/PRD.md`), preencher metadados, validar Context Gate e registrar no `ROADMAP.md`.
+- **"Inicie a fase de SPECIFY para o PRD #[ID]":** A IA cria a estrutura em `.specs/features/`, gera o `spec.md` alinhado ao PRD e inicia o ciclo TLC.
 
 ---
 

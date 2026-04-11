@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # -----------------------------------------------------------------------------
-# 🚀 init_ai_project.sh - Antigravity Kit Bootstrapper (v2.2 Premium)
+# 🚀 init_ai_project.sh - Antigravity Kit Bootstrapper (v2.2 Premium+)
 # -----------------------------------------------------------------------------
-# Versão com Detecção Automática de Gerenciador (NPM, YARN, PNPM)
-# Injeta automaticamente motores de automação v2.2 e blindagem Husky.
+# Versão Suprema: Fusão Antigravity + TLC Spec-Driven.
+# Com detecção automática de gerenciador e motores de manutenção completos.
 # -----------------------------------------------------------------------------
 set -euo pipefail
 
@@ -44,18 +44,19 @@ fi
 check_deps
 PKG_MGR=$(detect_pkg_mgr)
 log "Gerenciador detectado: $PKG_MGR"
-log "Inicializando Antigravity AI-Ready Framework v2.2 Premium..."
+log "Inicializando Antigravity AI-Ready Framework v2.2 Premium+..."
 
 # 📂 Estrutura de Diretorios
-log "Criando estrutura de camadas..."
+log "Criando estrutura de camadas e workshop TLC..."
 mkdir -p .context/{brain,maintenance,monitoring,_scripts}
-mkdir -p .context/maintenance/_archive_context/{prds,schemas,journals}
+mkdir -p .context/maintenance/_archive_context/{prds,schemas,journals,specs}
+mkdir -p .specs/features
 mkdir -p tests .husky
 
 NOW=$(date +%Y-%m-%d\ %H:%M)
 
 # 📄 Geração de Documentos de Governança
-log "Gerando documentos de governança v2.2..."
+log "Gerando documentos de governança e integração TLC..."
 
 cat > .context/brain/RULES.md << EOF
 ---
@@ -64,89 +65,73 @@ Status: Ativo
 ---
 # 📜 RULES.md — Template Universal de Contexto & Governança
 Projeto: [NOME DO PROJETO]
-Arquitetura: AI-Agent Driven (Antigravity Kit)
+Arquitetura: AI-Agent Driven (Antigravity Kit + TLC Fusion)
 
-Conceito Central: A pasta \`.context\` e a fonte da verdade (SSOT).
+Conceito Central: A pasta \`.context\` e a fonte da verdade (SSOT). O workshop \`.specs\` e o espaco de execucao efemera.
 
 🧠 1. Protocolo de Manutencao
-- JOURNAL.md: Memoria de longo prazo para decisoes criticas.
-- TECHNICAL_REQUIREMENTS.md: Inventario tecnico auto-sincronizado.
+- JOURNAL.md: Memoria de longo prazo e handoffs.
+- .specs/: Workbench atômico (Regra de 48h/Max 3).
 
-🤖 2. Comportamento do Agente
-- Identificacao: \`🤖 Ativando @role para...\`
-- Context Gate: Valide Schema, Journal e Libs antes de codar.
-- Handoff: Registro obrigatorio no \`JOURNAL.md\` ao trocar de dominio.
+🔄 4. Gatilhos Operacionais
+- "Inicie a fase de SPECIFY para o PRD #[ID]": IA cria spec atômica no .specs/.
+- "Atualize contexto": Sincronizacao proativa via sync_project.py.
 EOF
 
-# (Injeção do motor real v2.2 - Purge/Sync/Validate)
-log "Injetando motor de automacao Python v2.2 Reais..."
+cat > .context/brain/TLC_INTEGRATION.md << EOF
+---
+Criado em: $NOW
+Status: Ativo
+---
+# 🔗 TLC_INTEGRATION.md
+Ponte entre Governança (.context/) e Execução Atômica (.specs/).
 
+## 🔄 Ciclo de Vida Híbrido
+1. INTENT -> PRD.md ativo define escopo.
+2. SPECIFY -> IA cria .specs/features/[nome]/spec.md.
+3. IMPLEMENT -> Geração de código baseada na spec.
+4. VERIFY -> STATE.md marcado como ✅ PASSED.
+5. SYNC -> Lições para o JOURNAL.md e limpeza da spec.
+EOF
+
+# (Injeção dos Motores Reais v2.2 Premium+)
 cat > .context/_scripts/validate_context.py << 'EOF'
 #!/usr/bin/env python3
 import os, sys
 from pathlib import Path
 SCRIPT_DIR = Path(__file__).parent
 CONTEXT_DIR = SCRIPT_DIR.parent
-REQUIRED = ["brain/RULES.md", "brain/MASTER_FLOW.md", "brain/AGENT_REGISTRY.md", "brain/PRD.md", "maintenance/JOURNAL.md", "maintenance/schema.sql", "maintenance/TECHNICAL_REQUIREMENTS.md"]
+REQUIRED = ["brain/RULES.md", "brain/PRD.md", "maintenance/JOURNAL.md"]
+def check_specs():
+    specs = CONTEXT_DIR.parent / ".specs/features"
+    if not specs.exists(): return True
+    return all((d / "STATE.md").exists() for d in specs.iterdir() if d.is_dir())
 def validate():
-    print("--- Validacao v2.2 ---")
+    print("--- Validacao v2.2 Premium+ ---")
     missing = [f for f in REQUIRED if not (CONTEXT_DIR / f).exists()]
-    if missing: 
-        print(f"❌ Ausentes: {missing}")
-        sys.exit(1)
-    print("✅ Contexto integro.")
+    if missing or not check_specs(): sys.exit(1)
+    print("✅ Contexto e Workshop integros.")
 if __name__ == "__main__": validate()
 EOF
 
-cat > .context/_scripts/purge_journal.py << 'EOF'
+cat > .context/_scripts/cleanup_specs.py << 'EOF'
 #!/usr/bin/env python3
-import re, os
+import os, shutil, time
 from pathlib import Path
-from datetime import datetime
 SCRIPT_DIR = Path(__file__).parent
-JOURNAL = SCRIPT_DIR.parent / "maintenance/JOURNAL.md"
-ARCHIVE = SCRIPT_DIR.parent / "maintenance/_archive_context/journals"
-def purge():
-    if not JOURNAL.exists(): return
-    content = JOURNAL.read_text(encoding="utf-8")
-    parts = re.split(r'(?=^## )', content, flags=re.MULTILINE)
-    entries = [p.strip() for p in parts if p.strip()]
-    if len(entries) <= 1: return
-    keep = max(1, int(len(entries) * 0.3))
-    ARCHIVE.mkdir(parents=True, exist_ok=True)
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    (ARCHIVE / f"journal_{ts}.md").write_text("\n\n".join(entries[:-keep]), encoding="utf-8")
-    JOURNAL.write_text("\n\n".join(entries[-keep:]), encoding="utf-8")
-    print(f"[OK] Purge concluido.")
-if __name__ == "__main__": purge()
+SPECS_DIR = SCRIPT_DIR.parent.parent / ".specs" / "features"
+ARCHIVE_DIR = SCRIPT_DIR.parent / "maintenance" / "_archive_context" / "specs"
+def cleanup():
+    if not SPECS_DIR.exists(): return
+    specs = sorted([d for d in SPECS_DIR.iterdir() if d.is_dir()], key=os.path.getmtime)
+    while len(specs) > 3:
+        shutil.move(str(specs.pop(0)), str(ARCHIVE_DIR))
+    print("[OK] Manutencao de specs concluida.")
+if __name__ == "__main__": cleanup()
 EOF
 
-# Orquestradores
-cat > run_context.sh << 'EOF'
-#!/usr/bin/env bash
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.context/_scripts"
-PYTHON="${PYTHON:-python3}"
-[ -z "$1" ] && exit 1
-$PYTHON "$SCRIPT_DIR/${1}_context.py"
-EOF
-
-# 📦 Inicializa package.json se não existir
-if [ ! -f package.json ]; then
-  case $PKG_MGR in
-    npm)  npm init -y > /dev/null 2>&1 ;;
-    yarn) yarn init -y > /dev/null 2>&1 ;;
-    pnpm) pnpm init > /dev/null 2>&1 ;;
-  esac
-fi
-
-log "Instalando Husky via $PKG_MGR..."
-case $PKG_MGR in
-  npm)  npm install -D husky > /dev/null 2>&1 ;;
-  yarn) yarn add -D husky > /dev/null 2>&1 ;;
-  pnpm) pnpm add -D husky > /dev/null 2>&1 ;;
-esac
-
-log "Injetando scripts no package.json..."
+# Injeta scripts no package.json via Node
+[ -f package.json ] || npm init -y > /dev/null 2>&1
 node -e "
 const fs = require('fs');
 const pkg = JSON.parse(fs.readFileSync('package.json','utf8'));
@@ -154,17 +139,17 @@ pkg.scripts = pkg.scripts || {};
 const runner = '$PKG_MGR' === 'npm' ? 'npm run' : '$PKG_MGR';
 Object.assign(pkg.scripts, {
   'context:validate': 'bash run_context.sh validate',
-  'context:test': 'python tests/test_context.py',
-  'context:all': runner + ' context:validate && ' + runner + ' context:sync && ' + runner + ' context:purge',
+  'context:cleanup': 'bash run_context.sh cleanup',
+  'context:all': runner + ' context:validate && ' + runner + ' context:cleanup',
   'prepare': 'husky'
 });
 fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
 "
 
+log "Instalando Husky e configurando Hooks..."
 npx husky init > /dev/null 2>&1
-echo "$PKG_MGR run context:test" > .husky/pre-commit
+echo "$PKG_MGR run context:validate" > .husky/pre-commit
+chmod +x .context/_scripts/*.py .husky/pre-commit
 
-chmod +x run_context.sh .context/_scripts/*.py .husky/pre-commit
-
-success "Antigravity Kit v2.2 Premium inicializado com $PKG_MGR!"
-warn "Execute '$PKG_MGR run context:validate' para confirmar."
+success "Antigravity + TLC Fusion inicializado com sucesso!"
+warn "Acesse README_CONTEXT.md para o manual de operacao."

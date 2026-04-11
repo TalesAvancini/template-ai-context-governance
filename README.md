@@ -1,17 +1,17 @@
-# 🏛️ AI-Ready Engineering Kit (v2.2)
-> **Governance, Context & Multi-Agent Orchestration for Next-Gen Development.**
+# 🛸 Antigravity Kit v2.2 Premium+
+> **O ecossistema definitivo para engenharia AI-Ready: Governança Macro + Execução Atômica.**
 
-Este repositório é um **Template Semente** desenhado para projetos que utilizam IA como parceira de codificação (GitHub Copilot, Cursor, Antigravity). Ele estabelece uma infraestrutura de **Governança de Contexto** rígida para evitar alucinações, garantir escalabilidade e manter a saúde técnica do projeto a longo prazo.
+Este repositório é um **Template Semente** desenhado para projetos que utilizam IA como parceira de codificação (GitHub Copilot, Cursor, Antigravity). Ele unifica o **Antigravity Kit** (Governança Macro) com o **TLC Spec-Driven** (Execução Atômica), garantindo que o Propósito (PRD) se transforme em Ação (Código) com precisão cirúrgica.
 
 ---
 
 ## 🧠 A Filosofia: "Se não está no Contexto, não existe."
 
-Neste framework, a pasta `.context/` é a **Single Source of Truth (SSOT)**. O código é apenas o reflexo físico da inteligência e das decisões documentadas aqui.
+Neste framework, a pasta `.context/` é a **Single Source of Truth (SSOT)**. A pasta `.specs/` é o seu **Workshop Efêmero**. O código é apenas o reflexo físico da inteligência documentada.
 
 ## 🚀 Instalação Ultra-Rapida (One-Click Setup)
 
-Se voce quer inicializar este framework em um novo projeto do zero, basta rodar o nosso bootstrapper:
+Se voce quer inicializar este framework em um novo projeto do zero, basta rodar o nosso bootstrapper supremo:
 
 ```bash
 # 1. Torne o script executavel
@@ -21,76 +21,46 @@ chmod +x init_ai_project.sh
 ./init_ai_project.sh
 ```
 
-O script ira criar automaticamente toda a estrutura de camadas, injetar os motores de automacao Python v2.2, configurar o Husky e preparar a suite de testes.
+O script ira criar automaticamente toda a estrutura de camadas, os workshops de execução, os motores de manutenção v2.2+, e configurar a blindagem Husky.
 
 ---
 
 ## 📂 Anatomia do Repositório
 
-### 1. `.context/` - A Camada Cognitiva
-- **`brain/`**: Onde mora a inteligência. Contém as regras (`RULES.md`), o fluxo mestre (`MASTER_FLOW.md`), o registro de agentes (`AGENT_REGISTRY.md`) e os prompts padronizados (`PROMPT_LIBRARY.md`).
-- **`maintenance/`**: Onde mora a "verdade real". Contém o log vivo (`JOURNAL.md`), o esquema do banco (`schema.sql`), arquitetura e requisitos técnicos.
-- **`monitoring/`**: Dashboard de saúde do contexto (`CONTEXT_HEALTH.md`).
-- **`_scripts/`**: O motor de automação (Python).
+### 1. `.context/` - A Camada de Governança
+- **`brain/`**: Onde mora a inteligência. PRD v2.0, Rules, Registry e a Ponte de Integração TLC.
+- **`maintenance/`**: Onde mora a "verdade real". Log vivo (`JOURNAL.md`), Schema e Inventário Técnico.
+- **`monitoring/`**: Dashboard de saúde técnica e cognitiva.
 
-### 2. Automação & Orquestração
-O projeto vem "blindado" com ferramentas de orquestração:
-- **`Makefile`**: Padrão industrial para automação Unix.
-- **`run_context.sh`**: Script bash universal.
-- **`package.json`**: Atalhos NPM para fácil acesso.
+### 2. `.specs/` - A Camada de Execução (TLC)
+- **`features/`**: Workshop efêmero para desenvolvimento Spec-Driven. Máximo de 3 specs ativas. Regra de limpeza automática pós-merge ou 48h de inatividade.
 
 ---
 
-## 🚀 Como Começar (Getting Started)
+## 🚀 Comandos de Operação
 
-### Requisitos de Sistema:
-- **Python ≥ 3.8**
-- **Node.js**
-- **Git**
-
-### Instalação:
-```bash
-# Instale as dependências (Husky, etc.)
-npm install
-```
-
-### Comandos Essenciais:
 | Comando | Descrição |
 |---------|-----------|
-| `npm run context:validate` | Verifica a integridade dos arquivos e saúde dos tokens. |
-| `npm run context:sync` | Sincroniza `TECHNICAL_REQUIREMENTS.md` com `package.json` e `schema.sql`. |
-| `npm run context:purge` | Limpa o `JOURNAL.md` mantendo 30% como semente e arquivando o resto. |
-| `npm run context:all` | Executa o pipeline completo (Valida -> Sync -> Purge). |
-| `npm run context:test` | Roda a suíte de testes de infraestrutura (Python). |
+| `npm run context:validate` | Verifica a integridade dos arquivos e a estrutura do workshop. |
+| `npm run context:sync`     | Sincroniza `TECHNICAL_REQUIREMENTS.md` com dependências e DB. |
+| `npm run context:cleanup`  | Gerencia a efemeridade do `.specs/` (Arquiva specs obsoletas). |
+| `npm run context:all`      | Pipeline completo de saúde e manutenção. |
 
 ---
 
-## 🤝 Protocolo Multi-Agent
+## 🤝 Protocolo de Ativação Híbrida
 
-Este template foi desenhado para fluxo de múltiplos agentes. Sempre declare sua role ao iniciar uma tarefa:
-1. Consulte `brain/AGENT_REGISTRY.md`.
-2. Use um template de `brain/PROMPT_LIBRARY.md`.
-3. Registre decisões críticas no `maintenance/JOURNAL.md`.
+Para iniciar uma tarefa com poder total, use o prompt mestre:
+> *"Inicie a fase de SPECIFY para o PRD #[ID] usando o modo Híbrido TLC."*
 
----
-
-## 🛡️ Camadas de Blindagem
-- **Local:** Husky impede commits se os testes de contexto falharem.
-- **Remoto:** GitHub Actions valida a estrutura em cada Push/Pull Request.
+Isso ativará a role `@spec-driver` e iniciará o ciclo atômico no `.specs/` alinhado à governança do `.context/`.
 
 ---
 
-## 🛠️ Personalização
-Ao clonar este template, siga estes passos:
-1. Edite o `brain/ROADMAP.md` com as metas do seu novo projeto.
-2. Atualize o `maintenance/TECHNICAL_REQUIREMENTS.md` com a sua Stack.
-3. Defina o seu `maintenance/schema.sql` inicial.
-
----
-
-## 📖 Guia de Operação Avançada
-Para detalhes sobre o fluxo de trabalho diário (Sunrise/Sunset), ritos de handoff e troubleshooting, consulte o:
+## 📖 Documentação de Operação
+Para ritos de Sunrise/Sunset e gerenciamento de memória, consulte:
 👉 **[README_CONTEXT.md](./README_CONTEXT.md)**
+👉 **[TLC_INTEGRATION.md](./.context/brain/TLC_INTEGRATION.md)**
 
 ---
 
