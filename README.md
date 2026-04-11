@@ -9,6 +9,20 @@ Este repositório é um **Template Semente** desenhado para projetos que utiliza
 
 Neste framework, a pasta `.context/` é a **Single Source of Truth (SSOT)**. O código é apenas o reflexo físico da inteligência e das decisões documentadas aqui.
 
+## 🚀 Instalação Ultra-Rapida (One-Click Setup)
+
+Se voce quer inicializar este framework em um novo projeto do zero, basta rodar o nosso bootstrapper:
+
+```bash
+# 1. Torne o script executavel
+chmod +x init_ai_project.sh
+
+# 2. Execute
+./init_ai_project.sh
+```
+
+O script ira criar automaticamente toda a estrutura de camadas, injetar os motores de automacao Python v2.2, configurar o Husky e preparar a suite de testes.
+
 ---
 
 ## 📂 Anatomia do Repositório
