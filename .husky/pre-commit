@@ -1,0 +1,2 @@
+echo "🔍 [Husky] Executando validacao de infraestrutura antes do commit..."
+npm run context:test
