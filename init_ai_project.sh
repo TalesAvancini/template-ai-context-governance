@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # -----------------------------------------------------------------------------
-# 🚀 init_ai_project.sh - Antigravity Kit Bootstrapper (v2.2)
+# 🚀 init_ai_project.sh - Antigravity Kit Bootstrapper (v2.2 Premium)
 # -----------------------------------------------------------------------------
-# Um script para inicializar a governança de contexto, automação e blindagem
-# em novos projetos AI-Ready.
+# Versão com Detecção Automática de Gerenciador (NPM, YARN, PNPM)
+# Injeta automaticamente motores de automação v2.2 e blindagem Husky.
 # -----------------------------------------------------------------------------
 set -euo pipefail
 
@@ -22,19 +22,29 @@ error() { echo -e "${RED}❌ $1${NC}"; exit 1; }
 # 🛡️ Pre-flight Checks
 check_deps() {
   command -v git >/dev/null 2>&1 || error "git e obrigatorio."
-  command -v npm >/dev/null 2>&1 || error "npm/node e obrigatorio."
   command -v python3 >/dev/null 2>&1 || PYTHON="python3"
   command -v python >/dev/null 2>&1 || PYTHON="python"
   [ -z "${PYTHON:-}" ] && error "python3 ou python e obrigatorio."
 }
 
-# 🔒 Seguranca: Nao sobrescrever contexto existente
+# 🔍 Detecção de Gerenciador de Pacotes
+detect_pkg_mgr() {
+  if command -v pnpm >/dev/null 2>&1; then echo "pnpm"
+  elif command -v yarn >/dev/null 2>&1; then echo "yarn"
+  elif command -v npm >/dev/null 2>&1; then echo "npm"
+  else error "Nenhum gerenciador de pacotes encontrado (npm, yarn ou pnpm)."
+  fi
+}
+
+# 🔒 Segurança
 if [ -d ".context" ]; then
-    error ".context/ ja existe neste diretorio. Abortando para proteger dados."
+    error ".context/ ja existe. Abortando para proteger dados."
 fi
 
 check_deps
-log "Iniciando Antigravity AI-Ready Framework v2.2..."
+PKG_MGR=$(detect_pkg_mgr)
+log "Gerenciador detectado: $PKG_MGR"
+log "Inicializando Antigravity AI-Ready Framework v2.2 Premium..."
 
 # 📂 Estrutura de Diretorios
 log "Criando estrutura de camadas..."
@@ -54,64 +64,22 @@ Status: Ativo
 ---
 # 📜 RULES.md — Template Universal de Contexto & Governança
 Projeto: [NOME DO PROJETO]
-Arquitetura: AI-Agent Driven (Antigravity Kit / Spec-Driven)
+Arquitetura: AI-Agent Driven (Antigravity Kit)
 
-Conceito Central: A pasta \`.context\` e a fonte da verdade (SSOT). Se nao esta no contexto, nao existe.
+Conceito Central: A pasta \`.context\` e a fonte da verdade (SSOT).
 
 🧠 1. Protocolo de Manutencao
 - JOURNAL.md: Memoria de longo prazo para decisoes criticas.
 - TECHNICAL_REQUIREMENTS.md: Inventario tecnico auto-sincronizado.
-- rebuild_guide.md: Manual para subir o projeto do zero.
 
-🗄️ 2. Protocolo Database-First
-- Proibido UI sem validacao do \`schema.sql\`.
-- Alerta de Divergencia: IA deve parar se o schema nao suportar a demanda da UI.
-
-🤖 3. Comportamento do Agente
+🤖 2. Comportamento do Agente
 - Identificacao: \`🤖 Ativando @role para...\`
-- Context Gate: Valide Schema, Journal (<600) e Libs antes de codar.
+- Context Gate: Valide Schema, Journal e Libs antes de codar.
 - Handoff: Registro obrigatorio no \`JOURNAL.md\` ao trocar de dominio.
-
-🔄 4. Gatilhos Operacionais
-- "Atualize contexto" -> Sincronizacao proativa.
-- "Qual o estado?" -> Relatorio via Journal/Roadmap.
-- "Novo PRD" -> IA usa template v2.0 e valida Context Gate.
 EOF
 
-cat > .context/brain/MASTER_FLOW.md << EOF
----
-Criado em: $NOW
-Status: Ativo
----
-# 🏛️ MASTER_FLOW: Template Universal de Gestao de Contexto
-
-📂 Estrutura do Diretorio .context/
-.context/
-├── brain/                  # CAMADA COGNITIVA (The Strategist)
-│   ├── RULES.md            # Protocolos e "A Lei"
-│   ├── AGENT_REGISTRY.md   # DNS de Roles e Permissoes
-│   ├── PROMPT_LIBRARY.md   # Templates de prompts padronizados
-│   ├── PRD.md              # Requisito em execucao (v2.0 - O Contrato)
-│   └── ROADMAP.md          # Metas e fases (O Planejamento)
-│
-├── maintenance/            # CAMADA DE MANUTENCAO (The Housekeeper)
-│   ├── JOURNAL.md          # Log vivo (Memoria Curta)
-│   ├── TECH_REQ.md         # Status tecnico e dependencias
-│   ├── schema.sql          # Snapshot do Banco de Dados
-│   └── rebuild_guide.md    # Manual de recuperacao
-│
-├── monitoring/             # CAMADA DE MONITORAMENTO (The Guardian)
-│   └── CONTEXT_HEALTH.md   # Dashboard de integridade
-│
-└── _scripts/               # CAMADA DE AUTOMACAO (The Motor)
-
-📝 Gestao do JOURNAL.md
-Limite de 600 linhas. Ao atingir, arquive 70% e mantenha 30% como semente.
-EOF
-
-# ... (Continua com AGENT_REGISTRY, PROMPT_LIBRARY, etc)
-# Injeção dos Scripts Python v2.2 Reais
-log "Injetando motor de automacao Python v2.2..."
+# (Injeção do motor real v2.2 - Purge/Sync/Validate)
+log "Injetando motor de automacao Python v2.2 Reais..."
 
 cat > .context/_scripts/validate_context.py << 'EOF'
 #!/usr/bin/env python3
@@ -130,7 +98,6 @@ def validate():
 if __name__ == "__main__": validate()
 EOF
 
-# (Por brevidade, injetarei o purge e sync reais conforme planejado)
 cat > .context/_scripts/purge_journal.py << 'EOF'
 #!/usr/bin/env python3
 import re, os
@@ -150,7 +117,7 @@ def purge():
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     (ARCHIVE / f"journal_{ts}.md").write_text("\n\n".join(entries[:-keep]), encoding="utf-8")
     JOURNAL.write_text("\n\n".join(entries[-keep:]), encoding="utf-8")
-    print(f"[OK] Purge concluido. {len(entries)-keep} entradas arquivadas.")
+    print(f"[OK] Purge concluido.")
 if __name__ == "__main__": purge()
 EOF
 
@@ -163,36 +130,41 @@ PYTHON="${PYTHON:-python3}"
 $PYTHON "$SCRIPT_DIR/${1}_context.py"
 EOF
 
-# Setup de Testes
-log "Configurando suite de testes universal..."
-cat > tests/test_context.py << 'EOF'
-import unittest, os, shutil, tempfile, subprocess, sys
-from pathlib import Path
-class TestContext(unittest.TestCase):
-    def test_baseline(self):
-        self.assertTrue(True)
-if __name__ == "__main__": unittest.main()
-EOF
+# 📦 Inicializa package.json se não existir
+if [ ! -f package.json ]; then
+  case $PKG_MGR in
+    npm)  npm init -y > /dev/null 2>&1 ;;
+    yarn) yarn init -y > /dev/null 2>&1 ;;
+    pnpm) pnpm init > /dev/null 2>&1 ;;
+  esac
+fi
 
-log "Configurando package.json e Husky..."
-[ -f package.json ] || npm init -y > /dev/null 2>&1
+log "Instalando Husky via $PKG_MGR..."
+case $PKG_MGR in
+  npm)  npm install -D husky > /dev/null 2>&1 ;;
+  yarn) yarn add -D husky > /dev/null 2>&1 ;;
+  pnpm) pnpm add -D husky > /dev/null 2>&1 ;;
+esac
+
+log "Injetando scripts no package.json..."
 node -e "
 const fs = require('fs');
 const pkg = JSON.parse(fs.readFileSync('package.json','utf8'));
 pkg.scripts = pkg.scripts || {};
+const runner = '$PKG_MGR' === 'npm' ? 'npm run' : '$PKG_MGR';
 Object.assign(pkg.scripts, {
   'context:validate': 'bash run_context.sh validate',
   'context:test': 'python tests/test_context.py',
+  'context:all': runner + ' context:validate && ' + runner + ' context:sync && ' + runner + ' context:purge',
   'prepare': 'husky'
 });
 fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
 "
 
-npm install -D husky > /dev/null 2>&1
 npx husky init > /dev/null 2>&1
-echo "npm run context:test" > .husky/pre-commit
+echo "$PKG_MGR run context:test" > .husky/pre-commit
 
 chmod +x run_context.sh .context/_scripts/*.py .husky/pre-commit
 
-success "Antigravity Kit v2.2 inicializado!"
-warn "Execute 'npm run context:validate' para confirmar."
+success "Antigravity Kit v2.2 Premium inicializado com $PKG_MGR!"
+warn "Execute '$PKG_MGR run context:validate' para confirmar."
