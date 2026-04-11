@@ -66,5 +66,15 @@ A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é o
 ## 🚨 7. Segurança e Saúde
 - **Segredos:** Variáveis (`API_KEYS`, `TOKENS`) nunca no código. Referenciar como `[VARIABLE_NAME]` e usar `.env`.
 - **Depreciação:** Se função/arquivo for removido, marcar como `[DEPRECATED]` ou remover do contexto para evitar sugestão de código morto.
+---
+
+## 🔍 8. Protocolo Oracle (Consult-Before-Act)
+- Se a spec ou PRD contiver ambiguidade técnica, execute: `npm run context:oracle "sua dúvida"`
+- Se `confidence < 0.5` -> pause, registre `[oracle:uncertain]` no `JOURNAL.md` e solicite clarificação humana.
+- Nunca assuma. Consulte!
+
+## 📖 9. Regra Karpathy (Citação Obrigatória)
+- Todo conteúdo/decisão de arquitetura sintetizado em `.context/` DEVE ser lastreado na realidade. Idealmente deve conter `> Fonte: raw/nome-arquivo`.
+- `npm run context:lint` avalia (atualmente em modo Warn-Only) se há claims de arquitetura (`implementa X`, `segue padrão Y`) sem lastro de documentação originária.
 
 > **Nota Final para a IA:** Você é a extensão cognitiva do desenvolvedor. Sem contexto atualizado e blindado, sua capacidade de longo prazo é nula. Seu compromisso é com a verdade documentada.

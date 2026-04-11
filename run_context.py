@@ -37,13 +37,18 @@ def main():
     elif cmd == "purge":  run_script("purge_journal.py")
     elif cmd == "sync":   run_script("sync_project.py")
     elif cmd == "cleanup": run_script("cleanup_specs.py")
+    elif cmd == "harness": run_script("harness_runner.py")
+    elif cmd == "lint":    run_script("lint_wiki.py")
+    elif cmd == "oracle":  run_script("context_oracle.py")
     elif cmd == "all":
         run_script("validate_context.py")
         run_script("sync_project.py")
         run_script("cleanup_specs.py")
-        print("[DONE] Pipeline completo finalizado (Validate -> Sync -> Cleanup).")
+        run_script("harness_runner.py")
+        run_script("lint_wiki.py")
+        print("[DONE] Pipeline H.O.K. completo (Validate -> Sync -> Cleanup -> Harness -> Lint).")
     elif cmd in ["help", "--help", "-h"]:
-        print("Comandos: validate | purge | sync | cleanup | all")
+        print("Comandos: validate | purge | sync | cleanup | harness | lint | oracle | all")
     else:
         print(f"❌ Comando desconhecido: {cmd}")
         sys.exit(1)

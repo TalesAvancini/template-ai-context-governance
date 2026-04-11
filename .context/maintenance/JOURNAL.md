@@ -21,3 +21,6 @@ Status: Ativo
 **Decisão/Bug:** ✅ Ciclo Checkout Stripe Concluído
 **Solução:** Cobertura de testes em 92%. Validado happy path e 'card declined'. Injetado retry pattern no webhook.
 **Implicação:** PRD #15 concluído. Tecnologias Stripe adicionadas ao env.
+
+## [HARNESS-PASS] Report | spec:manual
+- **Detalhe:** All contracts valid
