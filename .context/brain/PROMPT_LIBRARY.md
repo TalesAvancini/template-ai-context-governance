@@ -1,64 +1,133 @@
 ---
-Criado em: 2026-04-10 20:50
-Última Atualização: 2026-04-10 20:50
+Criado em: 2026-04-10 21:35
+Ultima Atualizacao: 2026-04-10 21:35
 Status: Ativo
 ---
 
 # 📖 PROMPT_LIBRARY.md
-> Catálogo de sementes e templates de prompts para garantir consistência e performance.
+> Catalogo de prompts padronizados por role. Use estes templates para garantir consistência, contexto enxuto e execução previsivel.
 
-💡 *Insight Humano: Ter uma biblioteca de prompts evita que a IA tenha que "adivinhar" o formato de saída desejado. Isso economiza tempo e garante que o código siga os padrões de arquitetura do projeto.*
-
----
-
-## 🏗️ Templates de Engenharia
-
-### `@db-architect` | Criar nova Migration
-```text
-Role: @db-architect
-Tarefa: Gerar migration SQL para [NOME_DA_TABELA]
-📌 PRD_REF: [ID_REQUISITO]
-📌 SCHEMA_SNAPSHOT: maintenance/schema.sql
-🎯 Objetivo: Criar estrutura robusta seguindo [PADRÃO_SQL]
-🚧 Restrições: Usar snake_case, incluir timestamps, chaves estrangeiras explicitas.
-```
-
-### `@frontend-specialist` | Criar Componente UI
-```text
-Role: @frontend-specialist
-Tarefa: Desenvolver componente [NOME] em [FRAMEWORK]
-📌 PRD_REF: [ID_REQUISITO]
-📌 STYLE_REF: maintenance/rx-anatomy.md
-🎯 Objetivo: Criar UI responsiva, acessível e performática.
-🚧 Restrições: Usar design tokens do projeto, prop-types/Typescript, testes unitários.
-```
-
-### `@backend-engineer` | Criar Endpoint API
-```text
-Role: @backend-engineer
-Tarefa: Implementar rota [MÉTODO] [PATH]
-📌 BIOLOGY_REF: maintenance/rx-biology.md
-📌 SCHEMA_REF: maintenance/schema.sql
-🎯 Objetivo: Lógica de negócio isolada, tratamento de erros e validação.
-🚧 Restrições: Seguir convenção REST, usar Joi/Zod para validação, logar erros complexos.
-```
+💡 *Insight Humano: Prompts padronizados reduzem variabilidade, economizam tokens e forcam a IA a seguir o protocolo. Pense neles como "funcoes" bem tipadas: entrada clara, contexto limitado, saida esperada.*
 
 ---
 
-## 🛠️ Templates de Manutenção
+## 🧭 Como Usar
+1. Escolha a role no `brain/AGENT_REGISTRY.md`
+2. Copie o template correspondente
+3. Substitua os placeholders `{{...}}`
+4. Cole no chat + declare a ativação da role
+5. A IA responderá seguindo estritamente o escopo definido
 
-### `@context-keeper` | Executar Purge de Sessão
+---
+
+## 🤖 Templates por Role
+
+### 🗄️ `@db-architect`
+**Gatilho:** Criacao de tabela, migration, otimizacao de query, normalizacao  
+**Contexto Obrigatorio:** `maintenance/schema.sql`, `maintenance/TECHNICAL_REQUIREMENTS.md` (secao DB), `maintenance/JOURNAL.md` (bugs recentes)
 ```text
-Role: @context-keeper
-Tarefa: Sintetizar Journal e preparar semente de contexto.
-📌 JOURNAL_SNAPSHOT: maintenance/journal.md
-🎯 Objetivo: Reduzir Journal mantendo os pontos de decisão críticos.
-📝 Instrução: Gere um resumo executivo de 5 itens e insira no topo após o purge.
+🤖 Ativando @db-architect | Tarefa: {{descrição_curta}}
+📌 PRD_REF: {{#ID ou "N/A"}}
+📌 SCHEMA_SNAPSHOT: {{tabela(s)_alvo}}
+📌 CONTEXT_CHECK: ✅ Validado via npm run context:validate
+🎯 Objetivo: {{o que precisa ser feito no DB}}
+🚧 Restricoes: 
+- Seguir padrao de nomenclatura do schema atual
+- Gerar migration SQL compativel com a stack definida
+- Nao quebrar relacoes existentes
+- Incluir indices apenas se justificado por query pattern
+📤 Saida Esperada: 
+1. SQL da migration (CREATE/ALTER)
+2. Breve explicacao de impacto
+3. Atualizacao sugerida para maintenance/schema.sql
+```
+
+### 🖥️ `@frontend-specialist`
+**Gatilho:** Telas, componentes, UI/UX, estado, responsividade, acessibilidade  
+**Contexto Obrigatorio:** `maintenance/rx-anatomy.md`, `maintenance/ARCHITECTURE.md` (UI Layer), `brain/PRD.md` (fluxos visuais)
+```text
+🤖 Ativando @frontend-specialist | Tarefa: {{descrição_curta}}
+📌 PRD_REF: {{#ID ou "N/A"}}
+📌 UI_CONTEXT: {{pasta/componente alvo}}
+📌 CONTEXT_CHECK: ✅ Validado via npm run context:validate
+🎯 Objetivo: {{o que precisa ser construido/ajustado na UI}}
+🚧 Restricoes:
+- Usar stack definida em maintenance/TECHNICAL_REQUIREMENTS.md
+- Seguir padrao de nomenclatura de maintenance/rx-anatomy.md
+- Garantir acessibilidade (WCAG 2.1 AA minimo)
+- Nao hardcoded de dados; usar mock/props tipados
+📤 Saida Esperada:
+1. Codigo do componente/tela
+2. Estados gerenciados e interface de props
+3. Checklist de responsividade/a11y
+```
+
+### ⚙️ `@backend-engineer`
+**Gatilho:** Endpoints, logica de negocio, auth, webhooks, cache, filas  
+**Contexto Obrigatorio:** `maintenance/rx-biology.md`, `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/TECHNICAL_REQUIREMENTS.md` (APIs)
+```text
+🤖 Ativando @backend-engineer | Tarefa: {{descrição_curta}}
+📌 PRD_REF: {{#ID ou "N/A"}}
+📌 API_SCOPE: {{rota/servico alvo}}
+📌 CONTEXT_CHECK: ✅ Validado via npm run context:validate
+🎯 Objetivo: {{logica, endpoint ou integracao a ser implementada}}
+🚧 Restricoes:
+- Validar input contra schema do DB antes de processar
+- Retornar erros padronizados (HTTP status + mensagem clara)
+- Nenhuma credencial hardcoded; usar variaveis de ambiente
+- Seguir arquitetura definida em maintenance/rx-biology.md
+📤 Saida Esperada:
+1. Codigo do servico/rota
+2. Validacoes e tratamento de erro
+3. Exemplo de request/response
+4. Nota de seguranca/performance se aplicavel
+```
+
+### 🧪 `@qa-validator`
+**Gatilho:** Testes, validacao, edge cases, cobertura, mocks  
+**Contexto Obrigatorio:** `maintenance/TESTS.md`, `maintenance/JOURNAL.md` (bugs recentes), `brain/PRD.md` (criterios de aceite)
+```text
+🤖 Ativando @qa-validator | Tarefa: {{descrição_curta}}
+📌 PRD_REF: {{#ID ou "N/A"}}
+📌 SCOPE: {{arquivo/feature a ser testada}}
+📌 CONTEXT_CHECK: ✅ Validado via npm run context:validate
+🎯 Objetivo: {{criar testes, validar edge cases ou aumentar cobertura}}
+🚧 Restricoes:
+- Seguir framework de testes definido em maintenance/TECHNICAL_REQUIREMENTS.md
+- Mockar servicos externos; nao depender de rede real
+- Cobrir happy path + 2 edge cases criticos no minimo
+- Documentar falhas conhecidas no maintenance/JOURNAL.md se houver
+📤 Saida Esperada:
+1. Codigo dos testes (unitarios/integracao)
+2. Matriz de cenarios cobertos
+3. Recomendacoes de refatoracao se aplicavel
+```
+
+### 🔄 `@fullstack-generalist` (Modo Solo/Light)
+**Gatilho:** Projetos pequenos, tarefas rapidas, modo fallback  
+**Contexto Obrigatorio:** `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/JOURNAL.md` (ultimas 30 linhas)
+```text
+🤖 Ativando @fullstack-generalist | Tarefa: {{descrição_curta}}
+📌 PRD_REF: {{#ID ou "N/A"}}
+📌 SCOPE: {{area do projeto}}
+📌 CONTEXT_CHECK: ✅ Validado via npm run context:validate
+🎯 Objetivo: {{implementar ajuste rapido ou feature simples}}
+🚧 Restricoes:
+- Manter escopo minimo e atomico
+- Atualizar maintenance/JOURNAL.md se houver mudanca de logica
+- Validar maintenance/schema.sql antes de criar interfaces
+- Evitar over-engineering
+📤 Saida Esperada:
+1. Codigo necessario
+2. Nota de contexto atualizado (se aplicavel)
+3. Proximos passos recomendados
 ```
 
 ---
 
-## 🆕 Como adicionar novo template
-1. Defina a **Role** responsável.
-2. Identifique as **Referências** (arquivos do `.context`) necessárias.
-3. Descreva o **Objetivo** e as **Restrições** fixas.
+## 🛡️ Regras de Uso
+- 🔒 **Context Gate:** Nunca execute um template sem validar a integridade do contexto via `npm run context:validate`.
+- 🤝 **Handoff:** Se a tarefa cruzar 2+ roles, interrompa, registre no `maintenance/JOURNAL.md` e ative a proxima role.
+- 🧱 **Isolamento:** Carregue APENAS os arquivos listados em "Contexto Obrigatorio". Ignore o restante.
+
+💡 *Insight IA: Estes templates sao contratos de execucao. Eles reduzem ruido e transformam a IA em um engenheiro previsivel.*

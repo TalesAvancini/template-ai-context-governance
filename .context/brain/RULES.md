@@ -93,9 +93,10 @@ Antes de gerar código de produção, validar mentalmente ou via script:
 ---
 
 ## 🔄 5. Gatilhos de Interação (Para o Usuário)
-- **"Atualize o contexto":** IA sintetiza mudanças no `JOURNAL.md` e checa `TECHNICAL_REQUIREMENTS.md`.
+- **"Atualize o contexto":** IA sintetiza mudanças no `JOURNAL.md` e checa requisitos.
 - **"Qual o estado do projeto?":** IA gera relatório baseado no `JOURNAL.md` e `ROADMAP.md`.
 - **"Roteie esta tarefa":** IA consulta `AGENT_REGISTRY.md` e inicia o fluxo de ativação/handoff.
+- **"Use o prompt padrao":** IA seleciona o template no `brain/PROMPT_LIBRARY.md`, preenche placeholders e solicita confirmação.
 
 ---
 

@@ -63,7 +63,7 @@ Status: [Ativo | Arquivado | Depreciado]
 2.  **Snapshot:** O arquivo na raiz da camada deve representar sempre o estado "Em Execução" ou "Produção".
 
 ### 🤖 Roteamento & Isolamento Multi-Agent
-1.  **Ativação:** Consultar `brain/AGENT_REGISTRY.md` e declarar ativação.
+1.  **Ativação:** Consultar `brain/AGENT_REGISTRY.md` + template de `brain/PROMPT_LIBRARY.md` e declarar ativação.
 2.  **Janela de Contexto:** Global + Role-Specific + Task-Ephemeral. Nunca carregar o `_archive/` sem comando explícito.
 3.  **Sync Pós-Execução:** Ao finalizar uma tarefa, valide a consistência entre código, `schema.sql` e `JOURNAL.md` antes de encerrar.
 
