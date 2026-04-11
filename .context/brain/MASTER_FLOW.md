@@ -31,7 +31,7 @@ Status: [Ativo | Arquivado | Depreciado]
 │   ├── RULES.md                   # Protocolos e "A Lei"
 │   ├── AGENT_REGISTRY.md          # DNS de Roles e Permissões
 │   ├── PROMPT_LIBRARY.md          # Catálogo de templates de prompts
-│   ├── PRD.md                     # Requisito em execução (O Norte)
+│   ├── PRD.md                     # Requisito em execução (v2.0 - O Contrato)
 │   └── ROADMAP.md                 # Metas e fases (O Planejamento)
 │
 ├── 🛠️ maintenance/                 # CAMADA DE MANUTENÇÃO (The Housekeeper)

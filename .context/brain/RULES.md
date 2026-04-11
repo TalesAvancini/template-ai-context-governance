@@ -97,6 +97,7 @@ Antes de gerar código de produção, validar mentalmente ou via script:
 - **"Qual o estado do projeto?":** IA gera relatório baseado no `JOURNAL.md` e `ROADMAP.md`.
 - **"Roteie esta tarefa":** IA consulta `AGENT_REGISTRY.md` e inicia o fluxo de ativação/handoff.
 - **"Use o prompt padrao":** IA seleciona o template no `brain/PROMPT_LIBRARY.md`, preenche placeholders e solicita confirmação.
+- **"Novo PRD":** IA deve usar o template v2.0 (`brain/PRD.md`), preencher metadados, validar Context Gate e registrar no `ROADMAP.md`.
 
 ---
 
