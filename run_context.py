@@ -43,14 +43,16 @@ def main():
     elif cmd == "cleanup": run_script("cleanup_specs.py", extra_args)
     elif cmd == "harness": run_script("harness_runner.py", extra_args)
     elif cmd == "lint":    run_script("lint_wiki.py", extra_args)
+    elif cmd == "lint-strict": run_script("lint_wiki.py", ["--strict"] + extra_args)
     elif cmd == "oracle":  run_script("context_oracle.py", extra_args)
     elif cmd == "all":
         run_script("validate_context.py")
         run_script("sync_project.py")
         run_script("cleanup_specs.py")
         run_script("harness_runner.py")
-        run_script("lint_wiki.py")
-        print("[DONE] Pipeline H.O.K. completo (Validate -> Sync -> Cleanup -> Harness -> Lint).")
+        print("[RUN] Executando lint_wiki.py (Strict)...")
+        run_script("lint_wiki.py", ["--strict"])
+        print("[DONE] Pipeline H.O.K. completo (Validate -> Sync -> Cleanup -> Harness -> Lint-Strict).")
     elif cmd in ["help", "--help", "-h"]:
         print("Comandos: validate | purge | sync | cleanup | harness | lint | oracle | all")
     else:

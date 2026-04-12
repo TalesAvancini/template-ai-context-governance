@@ -24,3 +24,9 @@ Status: Ativo
 
 ## [HARNESS-PASS] Report | spec:manual
 - **Detalhe:** All contracts valid
+
+## Teste Epistemológico
+O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
+
+## [HARNESS-PASS] Report | spec:manual
+- **Detalhe:** All contracts valid
