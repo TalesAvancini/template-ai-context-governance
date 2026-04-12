@@ -1,13 +1,21 @@
-# 🛸 Antigravity Kit v2.2 Premium+
-> **O ecossistema definitivo para engenharia AI-Ready: Governança Macro + Execução Atômica.**
+# 🛸 Antigravity Kit v2.3 Premium+ (H.O.K. Enabled)
+> **O ecossistema definitivo para engenharia AI-Ready: Governança Macro + Execução Atômica + Controle Ativo.**
 
-Este repositório é um **Template Semente** desenhado para projetos que utilizam IA como parceira de codificação (GitHub Copilot, Cursor, Antigravity). Ele unifica o **Antigravity Kit** (Governança Macro) com o **TLC Spec-Driven** (Execução Atômica), garantindo que o Propósito (PRD) se transforme em Ação (Código) com precisão cirúrgica.
+Este repositório é um **Template Semente** desenhado para projetos que utilizam IA como parceira de codificação. Ele unifica o **Antigravity Kit** com o **TLC Spec-Driven** e eleva a governança ao **Nível 3 (H.O.K.)**, garantindo que Propósito → Execução → Validação operem em loop fechado e autônomo.
 
 ---
 
-## 🧠 A Filosofia: "Se não está no Contexto, não existe."
+## 🛡️ A Tríade H.O.K. (Governança Nível 3)
+O kit evoluiu de validação passiva para **controle ativo e reativo**:
+| Pilar | Função | Script | Gatilho |
+|-------|--------|--------|---------|
+| 🛡️ **Harness** | Bloqueia specs que violam contratos (Schema vs PRD, Handoffs incompletos) | `harness_runner.py` | `npm run context:all` / `pre-commit` |
+| 🔍 **Oracle**  | RAG local `stdlib` que resolve ambiguidades antes da geração de código | `context_oracle.py` | `npm run context:oracle "dúvida"` |
+| 📖 **Karpathy**| Linter epistemológico: exige `> Fonte: raw/...` em claims técnicos | `lint_wiki.py` | `npm run context:lint` (Strict no commit) |
 
-Neste framework, a pasta `.context/` é a **Single Source of Truth (SSOT)**. A pasta `.specs/` é o seu **Workshop Efêmero**. O código é apenas o reflexo físico da inteligência documentada.
+> 💡 **Regra de Ouro:** `Se não está no .context, não existe. Se não tem fonte, é alucinação. Se não passa no Harness, não vai pro repositório.`
+
+---
 
 ## 🚀 Instalação Ultra-Rapida (One-Click Setup)
 
@@ -37,14 +45,14 @@ O script ira criar automaticamente toda a estrutura de camadas, os workshops de 
 
 ---
 
-## 🚀 Comandos de Operação
-
+## 🚀 Comandos de Operação (v2.3)
 | Comando | Descrição |
 |---------|-----------|
-| `npm run context:validate` | Verifica a integridade dos arquivos e a estrutura do workshop. |
-| `npm run context:sync`     | Sincroniza `TECHNICAL_REQUIREMENTS.md` com dependências e DB. |
-| `npm run context:cleanup`  | Gerencia a efemeridade do `.specs/` (Arquiva specs obsoletas). |
-| `npm run context:all`      | Pipeline completo de saúde e manutenção. |
+| `npm run context:validate` | Checa integridade, estrutura e estimativa de tokens |
+| `npm run context:harness`  | Valida contratos ativos e handoffs (`harness_runner.py`) |
+| `npm run context:oracle`   | Roteia consulta proativa ao Oráculo local (com confidence) |
+| `npm run context:lint`     | Fiscaliza citações epistemológicas e claims sem fonte |
+| `npm run context:all`      | 🟢 Pipeline C-Level: Validate → Sync → Cleanup → Harness → Lint(Strict) |
 
 ---
 

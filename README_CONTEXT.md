@@ -1,7 +1,7 @@
 ---
 Criado em: 2026-04-10 22:45
-Ultima Atualizacao: 2026-04-10 22:45
-Status: Ativo
+Ultima Atualizacao: 2026-04-11 23:30
+Status: Ativo (v2.3-HOK)
 ---
 
 # 📖 README_CONTEXT.md — Guia de Operação do Framework
@@ -15,6 +15,11 @@ O diretório `.context/` é a **Fonte Unica da Verdade (SSOT)** do projeto. Ele 
 - 🛡️ Impedir que codigo e documentacao divirjam ao longo do tempo.
 
 **Regra de Ouro:** `Se nao esta no .context, nao existe. O codigo deve ser o reflexo fiel do contexto.`
+
+## 🧩 Novos Pilares de Operação (v2.3+)
+- **🛡️ Harness:** O pipeline aborta automaticamente se uma Spec referenciar tabelas/campos inexistentes no `schema.sql` ou se handoffs estiverem incompletos.
+- **🔍 Oracle:** Ao detectar ambiguidade, execute `npm run context:oracle "sua pergunta"`. Retorno com `confidence < 0.5` pausa o fluxo e exige `[oracle:uncertain]` no `JOURNAL.md`.
+- **📖 Karpathy:** Todo claim técnico adicionado ao `.context/` deve conter `> Fonte: raw/nome-arquivo.md`. O `pre-commit` roda em modo `--strict` e rejeita commits sem citação.
 
 ---
 
@@ -62,24 +67,26 @@ O diretório `.context/` é a **Fonte Unica da Verdade (SSOT)** do projeto. Ele 
 
 ---
 
-## ⚙️ 5. Comandos Rapidos (Cheat Sheet)
+## ⚙️ 5. Comandos Rápidos (Cheat Sheet v2.3)
 ```bash
 # Validar integridade + estimar tokens
 npm run context:validate
 
-# Sincronizar deps e schema com TECH_REQUIREMENTS.md
-npm run context:sync
+# Consultar Oráculo antes de assumir ambiguidades
+npm run context:oracle "qual regex de validação?"
 
-# Arquivar 70% do journal (mantem 30% como semente)
-npm run context:purge
+# Checar citações epistemológicas (modo manual)
+npm run context:lint
 
-# Pipeline completo (validate -> sync -> purge)
+# Pipeline completo (orquestrado por run_context.py, zero bash cru)
 npm run context:all
 
-# Rodar testes do framework manualmente (Universal Python)
-npm run context:test
+# Limpar specs inativas / Sincronizar deps / Purge Journal
+npm run context:cleanup
+npm run context:sync
+npm run context:purge
 ```
-> 💡 *Fallbacks:* `make all` ou `bash run_context.sh all`
+> 💡 *Nota:* Todos os comandos são roteados pelo `run_context.py`. Isso garante compatibilidade nativa Windows/WSL/Linux no `pre-commit`, sem dependências de shell.
 
 ---
 
