@@ -4,6 +4,7 @@
 Valida spec vs schema, PRD vs código, e integridade de handoffs.
 """
 import os, re, sys, json
+from datetime import datetime
 from pathlib import Path
 
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
@@ -47,9 +48,33 @@ def log_harness(status, detail, spec_name="unknown"):
     except Exception as e:
         print(f"[WARN] Falha ao logar harness: {e}")
 
+def update_state_md(spec_dir: Path, status: str, detail: str = ""):
+    state = spec_dir / "STATE.md"
+    if not state.exists(): return
+    content = f"---\nstatus: {status}\nupdated: {datetime.now().strftime('%Y-%m-%d %H:%M')}\ndetail: {detail}\n---\n"
+    tmp = state.with_suffix(".tmp")
+    tmp.write_text(content, encoding="utf-8")
+    tmp.replace(state)
+    status_print = status.replace("✅", "[OK]").replace("❌", "[FAIL]")
+    print(f"[STATE.md] -> {status_print} na spec {spec_dir.name}")
+
 def main():
-    spec_name = os.environ.get("ACTIVE_SPEC", "manual")
-    spec_path = CONTEXT_DIR.parent / ".specs" / "features" / spec_name / "spec.md"
+    # 1. Definindo a pasta spec ativa
+    features_dir = CONTEXT_DIR.parent / ".specs" / "features"
+    spec_dir_env = os.environ.get("ACTIVE_SPEC")
+    
+    if spec_dir_env and (features_dir / spec_dir_env).exists():
+        spec_dir = features_dir / spec_dir_env
+    else:
+        # Fallback: spec modificada mais recentemente
+        if features_dir.exists():
+            active = sorted([d for d in features_dir.iterdir() if d.is_dir()], key=os.path.getmtime, reverse=True)
+            spec_dir = active[0] if active else None
+        else:
+            spec_dir = None
+
+    spec_name = spec_dir.name if spec_dir else "manual"
+    spec_path = spec_dir / "spec.md" if spec_dir else Path("dummy")
     
     checks = {
         "schema": check_schema_contract(spec_path),
@@ -60,10 +85,12 @@ def main():
     if fails:
         detail = " | ".join(fails)
         log_harness("fail", detail, spec_name)
+        if spec_dir: update_state_md(spec_dir, "❌ FAILED", detail)
         print(f"[ERROR] Harness fail: {detail}")
         sys.exit(1)
     
     log_harness("pass", "All contracts valid", spec_name)
+    if spec_dir: update_state_md(spec_dir, "✅ PASSED", "All checks passed")
     print("[OK] Harness pass: Contracts validated.")
     sys.exit(0)
 

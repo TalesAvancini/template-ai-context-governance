@@ -11,6 +11,8 @@
     "context:lint": "python run_context.py lint",
     "context:oracle": "python run_context.py oracle",
     "context:health": "python run_context.py health",
+    "context:scan-secrets": "python run_context.py scan-secrets",
+    "context:check-migrations": "python run_context.py check-migrations",
     "context:capture": "python captura_projeto.py --emit-symbol-index --emit-import-map",
     "context:all": "python run_context.py all",
     "context:test": "python tests/test_context.py",
