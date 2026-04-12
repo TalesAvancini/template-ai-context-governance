@@ -62,8 +62,10 @@ def check_wiki(strict=False):
 
             for match in CLAIM_REGEX.finditer(text):
                 claim = match.group(0)
-                # Verifica se há citação próxima (janela de 250 chars)
-                context_window = text[match.start():min(len(text), match.start() + 250)]
+                # Verifica se há citação próxima (janela de -150 a +250 chars)
+                start_idx = max(0, match.start() - 150)
+                end_idx = min(len(text), match.start() + 250)
+                context_window = text[start_idx:end_idx]
                 if "> Fonte:" not in context_window and "SSOT" not in text:
                     suggestion = suggest_source(claim, raw_files)
                     

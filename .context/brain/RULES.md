@@ -76,5 +76,7 @@ A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é o
 ## 📖 9. Regra Karpathy (Citação Obrigatória)
 - Todo conteúdo/decisão de arquitetura sintetizado em `.context/` DEVE ser lastreado na realidade. Idealmente deve conter `> Fonte: raw/nome-arquivo`.
 - `npm run context:lint` avalia (atualmente em modo Warn-Only) se há claims de arquitetura (`implementa X`, `segue padrão Y`) sem lastro de documentação originária.
+## 📊 10. Dashboard Health Sync
+- Antes de processar features complexas ou abrir Specs Atômicas, verifique o `.context/monitoring/CONTEXT_HEALTH.md` para assegurar que a janela de tokens e a saúde do Journal não exigem repouso ou manutenção prévia.
 
 > **Nota Final para a IA:** Você é a extensão cognitiva do desenvolvedor. Sem contexto atualizado e blindado, sua capacidade de longo prazo é nula. Seu compromisso é com a verdade documentada.

@@ -45,6 +45,7 @@ def main():
     elif cmd == "lint":    run_script("lint_wiki.py", extra_args)
     elif cmd == "lint-strict": run_script("lint_wiki.py", ["--strict"] + extra_args)
     elif cmd == "oracle":  run_script("context_oracle.py", extra_args)
+    elif cmd == "health":  run_script("health_sync.py", extra_args)
     elif cmd == "all":
         run_script("validate_context.py")
         run_script("sync_project.py")
@@ -52,9 +53,11 @@ def main():
         run_script("harness_runner.py")
         print("[RUN] Executando lint_wiki.py (Strict)...")
         run_script("lint_wiki.py", ["--strict"])
-        print("[DONE] Pipeline H.O.K. completo (Validate -> Sync -> Cleanup -> Harness -> Lint-Strict).")
+        print("[RUN] Sincronizando Health Dashboard...")
+        run_script("health_sync.py")
+        print("[DONE] Pipeline H.O.K. + Health completo (Validate -> Sync -> Cleanup -> Harness -> Lint-Strict -> Health).")
     elif cmd in ["help", "--help", "-h"]:
-        print("Comandos: validate | purge | sync | cleanup | harness | lint | oracle | all")
+        print("Comandos: validate | purge | sync | cleanup | harness | lint | oracle | health | all")
     else:
         print(f"❌ Comando desconhecido: {cmd}")
         sys.exit(1)

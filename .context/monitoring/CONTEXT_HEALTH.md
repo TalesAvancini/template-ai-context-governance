@@ -1,6 +1,6 @@
 ---
 Criado em: 2026-04-10 20:50
-Última Atualização: 2026-04-10 20:50
+Ultima Atualizacao: 2026-04-11 21:33
 Status: Ativo
 ---
 
@@ -8,20 +8,19 @@ Status: Ativo
 
 💡 *Insight Humano: Este dashboard permite saber rapidamente se a IA pode operar com precisão ou se o contexto está "poluído" ou "desatualizado".*
 
-| Métrica | Valor Atual| Limite / Heurística | Pilar | Status |
+<!-- HEALTH_TABLE_START -->
+| Metrica | Valor Atual | Limite Ideal | Pilar | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| **Pilar de Manutenção** | | | | |
-| JOURNAL.md (linhas) | 412 | 600 | Manutenção | ✅ OK |
-| JOURNAL.md (tamanho) | ~12k char | 50k char | Manutenção | ✅ OK |
-| **Pilar Cognitivo** | | | | |
-| Role Ativa | @frontend-specialist | N/A | Cognitivo | ⚠️ Em Task |
-| PRD Ativo | #14 - Auth Flows | 1 por vez | Cognitivo | ✅ OK |
-| **Pilar de Consistência** | | | | |
-| Schema vs PRD Sync | 0 divergências | 0 | DB-First | ✅ OK |
-| Último Sincronismo | 2h atrás | < 24h | Governança | ✅ OK |
-| **Pilar de Sessão** | | | | |
-| Turns de Sessão | 8 trocas | 20 trocas | Sessão | ✅ OK |
-| Token Window Est. | ~78k | 128k | Sessão | ⚠️ 80% |
+| **Manutencao** | | | | |
+| Linhas do Journal | 42 | 600 | Tracker | [OK] |
+| Carga do Journal | 1k chars | 50k chars | Tracker | [OK] |
+| **Cognitivo** | | | | |
+| Estimativa Tokens | ~15k | 128k (Max) | Eficiencia | [OK] |
+| **Consistencia** | | | | |
+| Tabelas no Schema | 1 | N/A | DB-First | [OK] |
+| Ultimo Harness | Role Check | Pass/Fail | Integridade | [PASS] |
+| Ultima Sincronia | 2026-04-11 21:33 | Real-Time | Automacao | [OK] |
+<!-- HEALTH_TABLE_END -->
 
 ---
 
