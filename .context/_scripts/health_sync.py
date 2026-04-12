@@ -37,6 +37,11 @@ def count_schema_tables():
     tables = re.findall(r'CREATE\s+TABLE', text, re.I)
     return len(tables)
 
+def count_pending_migrations():
+    mig_dir = CONTEXT_DIR / "maintenance" / "migrations"
+    if not mig_dir.exists(): return 0
+    return len(list(mig_dir.glob("*.sql")))
+
 def estimate_tokens():
     total_chars = 0
     # Vasculha todos os arquivos do contexto
@@ -53,6 +58,7 @@ def update_dashboard():
     j_lines, j_chars, harness = count_journal_metrics()
     tables = count_schema_tables()
     tokens = estimate_tokens()
+    migs = count_pending_migrations()
     
     now = format_ts()
     
@@ -61,6 +67,7 @@ def update_dashboard():
     chars_status = "[OK]" if j_chars < 45000 else "[WARN] Pesado"
     tokens_status = "[OK]" if tokens < 100000 else "[WARN] Context Bloat"
     harness_status = f"[{harness}]" if harness != "N/A" else "N/A"
+    migs_status = f"{migs} file(s)" if migs > 0 else "N/A"
     
     table_content = f"""<!-- HEALTH_TABLE_START -->
 | Metrica | Valor Atual | Limite Ideal | Pilar | Status |
@@ -72,6 +79,7 @@ def update_dashboard():
 | Estimativa Tokens | ~{tokens // 1000}k | 128k (Max) | Eficiencia | {tokens_status} |
 | **Consistencia** | | | | |
 | Tabelas no Schema | {tables} | N/A | DB-First | [OK] |
+| Migrations Pendentes | {migs_status} | N/A | DB-First | [OK] |
 | Ultimo Harness | Role Check | Pass/Fail | Integridade | {harness_status} |
 | Ultima Sincronia | {now} | Real-Time | Automacao | [OK] |
 <!-- HEALTH_TABLE_END -->"""

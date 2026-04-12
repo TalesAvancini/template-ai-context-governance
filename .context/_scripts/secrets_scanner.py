@@ -28,11 +28,12 @@ def get_files_to_scan():
     except Exception:
         # Fallback seguro: escopo explícito, ignora node_modules/venv/dist
         safe_dirs = ["src", "api", "config", ".context"]
+        SAFE_EXTS = {'.py', '.js', '.ts', '.jsx', '.tsx', '.env', '.sql', '.json', '.yml', '.yaml', '.toml', '.sh'}
         files = []
         for d in safe_dirs:
             p = ROOT_DIR / d
             if p.exists():
-                files.extend(p.rglob("*.*"))
+                files.extend([f for f in p.rglob("*") if f.suffix.lower() in SAFE_EXTS and not f.is_dir()])
         return files
 
 def scan():

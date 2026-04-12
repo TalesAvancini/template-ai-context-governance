@@ -14,6 +14,8 @@ from datetime import datetime, timezone
 from fnmatch import fnmatch
 from pathlib import Path
 
+VERSION = "2.3.0-hok"
+
 # 🛠️ CUSTOMIZE AQUI: Padrões universais + adicione os específicos do seu projeto
 PASTAS_IGNORAR = {
     ".git", "node_modules", "dist", "build", "out", "target", "bin", "obj",
@@ -255,9 +257,25 @@ def collect_files(config: BundleConfig) -> tuple[FileRecord, ...]:
     return tuple(records)
 
 def mode_name(config: BundleConfig) -> str:
-    if config.only_core: return "only-core"
-    if config.exclude_core: return "exclude-core"
-    return "full"
+    parts = []
+    if config.only_core: parts.append("only-core")
+    elif config.exclude_core: parts.append("exclude-core")
+    else: parts.append("full")
+    if config.toc_only: parts.append("TOC")
+    return " | ".join(parts)
+
+def get_dynamic_filename(config: BundleConfig) -> str:
+    # Se o usuário não mudou o default, geramos um nome inteligente
+    if config.output != DEFAULT_OUTPUT:
+        return config.output
+    
+    base = "contexto"
+    ver = f"_v{VERSION}"
+    suffix = ""
+    if config.toc_only: suffix += "_toc"
+    if config.only_core: suffix += "_core"
+    
+    return f"{base}{ver}{suffix}.md"
 
 def render_frontmatter(config: BundleConfig, records: tuple[FileRecord, ...]) -> str:
     total_bytes = sum(r.byte_count for r in records)
@@ -342,7 +360,8 @@ def generate_context_markdown(config: BundleConfig) -> str:
     return "\n".join(blocks) + "\n"
 
 def write_output(config: BundleConfig) -> Path:
-    output_path = config.diretorio / config.output
+    target_name = get_dynamic_filename(config)
+    output_path = config.diretorio / target_name
     content = generate_context_markdown(config)
     output_path.write_text(content, encoding="utf-8")
     return output_path

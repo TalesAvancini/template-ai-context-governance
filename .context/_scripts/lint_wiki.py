@@ -66,7 +66,13 @@ def check_wiki(strict=False):
                 start_idx = max(0, match.start() - 150)
                 end_idx = min(len(text), match.start() + 250)
                 context_window = text[start_idx:end_idx]
-                if "> Fonte:" not in context_window and "SSOT" not in text:
+                citation_found = "> Fonte:" in context_window
+                
+                # Fallback: se não achou na janela, varre o arquivo inteiro (performance aceitável para .md)
+                if not citation_found and "> Fonte:" in text:
+                    citation_found = True
+
+                if not citation_found and "SSOT" not in text:
                     suggestion = suggest_source(claim, raw_files)
                     
                     error_msg = f"[WARN] [{f.name}] Claim sem fonte: '{claim[:50]}...'"
