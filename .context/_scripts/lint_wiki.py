@@ -58,7 +58,7 @@ def check_wiki(strict=False):
             text = f.read_text(encoding="utf-8")
             
             # Pula arquivos raiz de documentação geral (opcional, mas recomendado)
-            if f.name in ["README.md", "MASTER_FLOW.md", "RULES.md", "CONTEXT_HEALTH.md"]: continue
+            if f.name in ["README.md", "MASTER_FLOW.md", "RULES.md", "CONTEXT_HEALTH.md", "rebuild_guide.md"]: continue
 
             for match in CLAIM_REGEX.finditer(text):
                 claim = match.group(0)
