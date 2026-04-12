@@ -20,14 +20,14 @@ def build_index():
         p = CONTEXT_DIR / rel
         if not p.exists(): continue
         text = p.read_text(encoding="utf-8")
-        words = re.findall(r'\b[a-zA-Z]{4,}\b', text.lower())
+        words = re.findall(r'\b[a-zA-Z]{3,}\b', text.lower())
         for w in set(words):
             index.setdefault(w, []).append(rel)
     return index
 
 def query_oracle(question, role="unknown"):
     idx = build_index()
-    keywords = set(re.findall(r'\b[a-zA-Z]{4,}\b', question.lower()))
+    keywords = set(re.findall(r'\b[a-zA-Z]{3,}\b', question.lower()))
     hits = Counter()
     for kw in keywords:
         for file in idx.get(kw, []):
