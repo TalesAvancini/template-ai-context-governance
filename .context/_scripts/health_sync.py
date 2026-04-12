@@ -7,6 +7,13 @@ import re, sys, os
 from pathlib import Path
 from datetime import datetime
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    from _tz_utils import format_ts
+except ImportError:
+    format_ts = lambda dt=None, fmt="%Y-%m-%d %H:%M": (dt or datetime.now()).strftime(fmt)
+    print("[WARN] _tz_utils inacessivel. Usando timezone local MS-WIN.")
+
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
 HEALTH_PATH = CONTEXT_DIR / "monitoring" / "CONTEXT_HEALTH.md"
 JOURNAL_PATH = CONTEXT_DIR / "maintenance" / "JOURNAL.md"
@@ -47,7 +54,7 @@ def update_dashboard():
     tables = count_schema_tables()
     tokens = estimate_tokens()
     
-    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    now = format_ts()
     
     # Determinar status heurísticos
     lines_status = "[OK]" if j_lines < 550 else "[WARN] Limpar!"

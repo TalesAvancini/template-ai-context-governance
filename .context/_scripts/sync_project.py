@@ -6,8 +6,16 @@ Usa marcadores <!-- AUTO-SYNC START/END --> para preservar edicoes humanas.
 """
 import json
 import re
+import sys
 from pathlib import Path
 from datetime import datetime
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    from _tz_utils import format_ts
+except ImportError:
+    format_ts = lambda dt=None, fmt="%Y-%m-%d %H:%M": (dt or datetime.now()).strftime(fmt)
+    print("[WARN] _tz_utils inacessivel. Usando timezone local MS-WIN.")
 
 SCRIPT_DIR = Path(__file__).parent
 CONTEXT_DIR = SCRIPT_DIR.parent
@@ -40,7 +48,7 @@ def get_schema_tables():
 def sync_requirements():
     deps = get_package_deps()
     tables = get_schema_tables()
-    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    now = format_ts()
 
     block = [
         AUTO_START,

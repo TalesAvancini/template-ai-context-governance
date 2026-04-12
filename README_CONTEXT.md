@@ -86,6 +86,8 @@ npm run context:cleanup
 npm run context:sync
 npm run context:purge
 ```
+**🌎 Fuso Horário:** Por padrão, todos os artefatos temporais usam **Brasília (-3h)**. Exporte `CONTEXT_TIMEZONE="..."` para sobrescrever nativamente.
+
 > 💡 *Nota:* Todos os comandos são roteados pelo `run_context.py`. Isso garante compatibilidade nativa Windows/WSL/Linux no `pre-commit`, sem dependências de shell.
 
 ---

@@ -7,6 +7,13 @@ import os, re, sys, json
 from datetime import datetime
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    from _tz_utils import format_ts
+except ImportError:
+    format_ts = lambda dt=None, fmt="%Y-%m-%d %H:%M": (dt or datetime.now()).strftime(fmt)
+    print("[WARN] _tz_utils inacessivel. Usando timezone local MS-WIN.")
+
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
 JOURNAL = CONTEXT_DIR / "maintenance" / "JOURNAL.md"
 SCHEMA = CONTEXT_DIR / "maintenance" / "schema.sql"
@@ -51,7 +58,7 @@ def log_harness(status, detail, spec_name="unknown"):
 def update_state_md(spec_dir: Path, status: str, detail: str = ""):
     state = spec_dir / "STATE.md"
     if not state.exists(): return
-    content = f"---\nstatus: {status}\nupdated: {datetime.now().strftime('%Y-%m-%d %H:%M')}\ndetail: {detail}\n---\n"
+    content = f"---\nstatus: {status}\nupdated: {format_ts()}\ndetail: {detail}\n---\n"
     tmp = state.with_suffix(".tmp")
     tmp.write_text(content, encoding="utf-8")
     tmp.replace(state)

@@ -5,8 +5,16 @@ Arquiva 70% das entradas mais antigas do JOURNAL.md.
 Mantém 30% mais recentes como semente. Backup automático e escrita atômica.
 """
 import re
+import sys
 from pathlib import Path
 from datetime import datetime
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    from _tz_utils import format_ts
+except ImportError:
+    format_ts = lambda dt=None, fmt="%Y-%m-%d %H:%M": (dt or datetime.now()).strftime(fmt)
+    print("[WARN] _tz_utils inacessivel. Usando timezone local MS-WIN.")
 
 SCRIPT_DIR = Path(__file__).parent
 CONTEXT_DIR = SCRIPT_DIR.parent
@@ -39,13 +47,13 @@ def purge_journal():
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 
     # Backup com timestamp
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = format_ts(fmt="%Y%m%d_%H%M%S")
     archive_file = ARCHIVE_DIR / f"journal_archive_{timestamp}.md"
     archive_content = f"# Arquivo de Journal - {timestamp}\n\n" + "\n\n".join(archive_entries) + "\n"
     archive_file.write_text(archive_content, encoding="utf-8")
 
     # Nova semente
-    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    now = format_ts()
     seed = f"""---
 Criado em: {now}
 Ultima Atualizacao: {now}

@@ -65,6 +65,22 @@ Isso ativará a role `@spec-driver` e iniciará o ciclo atômico no `.specs/` al
 
 ---
 
+## 🕐 Configuração de Fuso Horário
+Por padrão, o kit usa **America/Sao_Paulo (Brasília)** (-3h fixo). Para alterar globalmente:
+
+```bash
+# No terminal (temporário)
+export CONTEXT_TIMEZONE="America/New_York"
+npm run context:all
+
+# Ou no .env do projeto (permanente)
+echo "CONTEXT_TIMEZONE=Europe/London" >> .env
+```
+
+*Nota: Usa apenas Python stdlib (sem dependência do módulo 'pytz') para máxima compatibilidade cruzada.*
+
+---
+
 ## 📖 Documentação de Operação
 Para ritos de Sunrise/Sunset e gerenciamento de memória, consulte:
 👉 **[README_CONTEXT.md](./README_CONTEXT.md)**
