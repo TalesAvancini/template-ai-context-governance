@@ -18,6 +18,8 @@ CONTEXT_DIR = Path(__file__).resolve().parents[1]
 JOURNAL = CONTEXT_DIR / "maintenance" / "JOURNAL.md"
 SCHEMA = CONTEXT_DIR / "maintenance" / "schema.sql"
 HARNESS_REG = CONTEXT_DIR / "brain" / "HARNESS_REGISTRY.md"
+PRD = CONTEXT_DIR / "brain" / "PRD.md"
+INCEPTION = CONTEXT_DIR / "brain" / "INCEPTION.md"
 
 def check_schema_contract(spec_path):
     """Valida se campos/tabelas da spec existem no schema.sql"""
@@ -43,6 +45,17 @@ def check_handoff_integrity(journal_text):
     if incomplete:
         return False, f"Handoff incompleto detectado: {incomplete}"
     return True, "Handoffs integros"
+
+def check_strategic_alignment():
+    if not INCEPTION.exists() or not PRD.exists():
+        return True, "INCEPTION/PRD ausentes (skip estratégico)"
+    prd_text = PRD.read_text(encoding="utf-8").lower()
+    inception_text = INCEPTION.read_text(encoding="utf-8")
+    # Captura regras "- NUNCA: <regra>"
+    boundaries = re.findall(r'^-\s*NUNCA:\s*(.+)$', inception_text, re.I | re.MULTILINE)
+    violations = [b.strip() for b in boundaries if re.search(re.escape(b.strip().lower()), prd_text)]
+    if violations: return False, f"PRD viola boundaries estratégicas: {violations}"
+    return True, "Strategic alignment OK"
 
 def log_harness(status, detail, spec_name="unknown"):
     """Registra no JOURNAL.md de forma compacta e atomica"""
@@ -85,7 +98,8 @@ def main():
     
     checks = {
         "schema": check_schema_contract(spec_path),
-        "handoff": check_handoff_integrity(JOURNAL.read_text(encoding="utf-8") if JOURNAL.exists() else "")
+        "handoff": check_handoff_integrity(JOURNAL.read_text(encoding="utf-8") if JOURNAL.exists() else ""),
+        "strategy": check_strategic_alignment()
     }
     
     fails = [f"{k}: {v[1]}" for k, v in checks.items() if not v[0]]

@@ -34,6 +34,7 @@ Status: Ativo
 | `@backend-engineer` | APIs, auth, lógica de negócio, webhooks, cache, filas | `src/api/`, `src/services/`, `src/utils/`, `src/config/` | `maintenance/rx-biology.md`, `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/TECHNICAL_REQUIREMENTS.md` (APIs) | "endpoint", "rota", "validação", "webhook", "auth", "serviço", "cache" |
 | `@qa-validator` | Testes unitários/E2E, edge cases, cobertura, mocks, TDD | `tests/`, `maintenance/TESTS.md`, `maintenance/JOURNAL.md` (apenas leitura para bugs) | `maintenance/TESTS.md`, `maintenance/JOURNAL.md` (bugs recentes), `brain/PRD.md` (critérios de aceite) | "testar", "validar", "cobertura", "mock", "edge case", "TDD", "bug" |
 | `@devops-guardian` | CI/CD, deploy, env vars, monitoramento, segurança infra | `.github/workflows/`, `Dockerfile`, `maintenance/rebuild_guide.md`, `.env.example` | `maintenance/rebuild_guide.md`, `maintenance/TECHNICAL_REQUIREMENTS.md` (infra), `brain/ROADMAP.md` (deploys) | "deploy", "CI/CD", "docker", "variável de ambiente", "monitoramento", "rollback" |
+| `@vision-architect` | Estratégia de produto, validação de market fit, definição de boundaries | `.context/brain/INCEPTION.md`, `.context/market/MARKET_INBOX.md` | `.context/brain/INCEPTION.md`, `.context/market/SSOT_MAP.md` | "definir boundary", "validar gap de mercado", "revisar inception" |
 | `@spec-driver` | Criação e orquestração de specs atômicas | `.specs/` (leitura/gravação temporária) | `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/JOURNAL.md` (tail 30) | "inicie specify", "crie spec", "modo híbrido" |
 | `@context-keeper` | Sync, purge, validação de consistência, saúde do contexto | `.context/` (exceto `_archive/`), `maintenance/JOURNAL.md`, `brain/RULES.md` | `brain/RULES.md`, `brain/MASTER_FLOW.md`, `maintenance/JOURNAL.md`, `monitoring/CONTEXT_HEALTH.md` | "atualize contexto", "purge", "health check", "validar consistência", "sincronizar" |
 | `@fullstack-generalist` | Modo fallback para tarefas transversais ou projetos light | Leitura em todo o projeto; Escrita apenas com confirmação explícita | `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/JOURNAL.md` (últimas 30 linhas) + Global | "modo light", "tarefa rápida", "projeto pequeno", "não especificado" |
@@ -66,6 +67,7 @@ Status: Ativo
 | Camada | Arquivos | Quando Carregar |
 |--------|----------|-----------------|
 | 🌍 Global | `brain/RULES.md`, `brain/MASTER_FLOW.md`, `brain/ROADMAP.md` | Sempre (regras imutáveis do jogo) |
+| 🧭 Strategic | `brain/INCEPTION.md`, `market/SSOT_MAP.md` | Durante planejamento estratégico ou via `@vision-architect` |
 | 🎯 Role-Specific | Definido na coluna "Contexto Prioritário" da tabela | Só durante a execução daquele agente |
 | 📦 Task-Ephemeral | `brain/PRD.md` ativo, `maintenance/schema.sql`, `maintenance/JOURNAL.md` (últimas 30-50 linhas) | Durante a tarefa atual |
 | 🗃️ Deep Archive | `_archive_context/` | Nunca por padrão. Só via comando explícito: "consulte o archive de X" |

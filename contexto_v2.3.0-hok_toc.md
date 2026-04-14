@@ -2,12 +2,12 @@
 
 ---
 schema_version: 1
-generated_at: 2026-04-14T11:16:40.033224+00:00
+generated_at: 2026-04-14T16:46:42.169149+00:00
 root: template_inicío_de_projeto
 mode: full | TOC
 profile: ai-default
-file_count: 52
-byte_count: 141013
+file_count: 61
+byte_count: 174610
 ignored_dirs:
   - .cache
   - .cursor
@@ -56,6 +56,7 @@ sensitive_rules:
 - `docs`:
   - `.context/brain/AGENT_REGISTRY.md` -> [file_e7c17acb71ff](#file_e7c17acb71ff)
   - `.context/brain/HARNESS_REGISTRY.md` -> [file_4b29e274836e](#file_4b29e274836e)
+  - `.context/brain/INCEPTION.md` -> [file_de9ef20db2be](#file_de9ef20db2be)
   - `.context/brain/MASTER_FLOW.md` -> [file_d833c436f547](#file_d833c436f547)
   - `.context/brain/PRD.md` -> [file_d124f6374cab](#file_d124f6374cab)
   - `.context/brain/PROMPT_LIBRARY.md` -> [file_9fe16e5591f0](#file_9fe16e5591f0)
@@ -73,7 +74,12 @@ sensitive_rules:
   - `.context/maintenance/rebuild_guide.md` -> [file_a5c71962029a](#file_a5c71962029a)
   - `.context/maintenance/rx-anatomy.md` -> [file_54a6a553d34b](#file_54a6a553d34b)
   - `.context/maintenance/rx-biology.md` -> [file_ca8da4f87431](#file_ca8da4f87431)
+  - `.context/market/MARKET_INBOX.md` -> [file_81ef387da7b7](#file_81ef387da7b7)
+  - `.context/market/SSOT_MAP.md` -> [file_65a089176b85](#file_65a089176b85)
+  - `.context/market/economics.md` -> [file_b5d38697335e](#file_b5d38697335e)
   - `.context/monitoring/CONTEXT_HEALTH.md` -> [file_068a21d64bec](#file_068a21d64bec)
+  - `.specs/features/meta-inception/STATE.md` -> [file_238a0e1da225](#file_238a0e1da225)
+  - `.specs/features/meta-inception/spec.md` -> [file_9801af51c558](#file_9801af51c558)
   - `README.md` -> [file_8ec9a00bfd09](#file_8ec9a00bfd09)
   - `README_CONTEXT.md` -> [file_4efb6293109d](#file_4efb6293109d)
   - `TEMPLATE_MIGRATION.md` -> [file_19e76e009f38](#file_19e76e009f38)
@@ -83,7 +89,10 @@ sensitive_rules:
   - `planos/master_plan.md` -> [file_32db3e3783df](#file_32db3e3783df)
   - `planos/multi_agent_plan.md` -> [file_2a788cb45159](#file_2a788cb45159)
   - `planos/plan_hok_advanced_security_and_db.md` -> [file_7bd2d6af54a4](#file_7bd2d6af54a4)
+  - `planos/plan_inception_final_v2_4.md` -> [file_385231f1afeb](#file_385231f1afeb)
+  - `planos/plan_inception_market_v2_4.md` -> [file_b7594f581e6a](#file_b7594f581e6a)
   - `planos/roadmap_reactive_hok_v2_v3.md` -> [file_44c34e6237da](#file_44c34e6237da)
+  - `planos/template_base_v2_3_1.md` -> [file_f23e47398730](#file_f23e47398730)
   - `planos/walkthrough_hok_triad.md` -> [file_6a4bd0586b20](#file_6a4bd0586b20)
 - `source`:
   - `.context/_scripts/_tz_utils.py` -> [file_dbef1acce0d4](#file_dbef1acce0d4)
@@ -119,6 +128,7 @@ sensitive_rules:
 - `.context/_scripts/validate_context.py` -> [file_1077e9084ea1](#file_1077e9084ea1)
 - `.context/brain/AGENT_REGISTRY.md` -> [file_e7c17acb71ff](#file_e7c17acb71ff)
 - `.context/brain/HARNESS_REGISTRY.md` -> [file_4b29e274836e](#file_4b29e274836e)
+- `.context/brain/INCEPTION.md` -> [file_de9ef20db2be](#file_de9ef20db2be)
 - `.context/brain/MASTER_FLOW.md` -> [file_d833c436f547](#file_d833c436f547)
 - `.context/brain/PRD.md` -> [file_d124f6374cab](#file_d124f6374cab)
 - `.context/brain/PROMPT_LIBRARY.md` -> [file_9fe16e5591f0](#file_9fe16e5591f0)
@@ -138,9 +148,14 @@ sensitive_rules:
 - `.context/maintenance/rx-anatomy.md` -> [file_54a6a553d34b](#file_54a6a553d34b)
 - `.context/maintenance/rx-biology.md` -> [file_ca8da4f87431](#file_ca8da4f87431)
 - `.context/maintenance/schema.sql` -> [file_91d5627a725e](#file_91d5627a725e)
+- `.context/market/MARKET_INBOX.md` -> [file_81ef387da7b7](#file_81ef387da7b7)
+- `.context/market/SSOT_MAP.md` -> [file_65a089176b85](#file_65a089176b85)
+- `.context/market/economics.md` -> [file_b5d38697335e](#file_b5d38697335e)
 - `.context/monitoring/CONTEXT_HEALTH.md` -> [file_068a21d64bec](#file_068a21d64bec)
 - `.github/workflows/context-health.yml` -> [file_e477c4c5a96c](#file_e477c4c5a96c)
 - `.husky/_/husky.sh` -> [file_3adfd36c1559](#file_3adfd36c1559)
+- `.specs/features/meta-inception/STATE.md` -> [file_238a0e1da225](#file_238a0e1da225)
+- `.specs/features/meta-inception/spec.md` -> [file_9801af51c558](#file_9801af51c558)
 - `README.md` -> [file_8ec9a00bfd09](#file_8ec9a00bfd09)
 - `README_CONTEXT.md` -> [file_4efb6293109d](#file_4efb6293109d)
 - `TEMPLATE_MIGRATION.md` -> [file_19e76e009f38](#file_19e76e009f38)
@@ -153,7 +168,10 @@ sensitive_rules:
 - `planos/master_plan.md` -> [file_32db3e3783df](#file_32db3e3783df)
 - `planos/multi_agent_plan.md` -> [file_2a788cb45159](#file_2a788cb45159)
 - `planos/plan_hok_advanced_security_and_db.md` -> [file_7bd2d6af54a4](#file_7bd2d6af54a4)
+- `planos/plan_inception_final_v2_4.md` -> [file_385231f1afeb](#file_385231f1afeb)
+- `planos/plan_inception_market_v2_4.md` -> [file_b7594f581e6a](#file_b7594f581e6a)
 - `planos/roadmap_reactive_hok_v2_v3.md` -> [file_44c34e6237da](#file_44c34e6237da)
+- `planos/template_base_v2_3_1.md` -> [file_f23e47398730](#file_f23e47398730)
 - `planos/walkthrough_hok_triad.md` -> [file_6a4bd0586b20](#file_6a4bd0586b20)
 - `run_context.py` -> [file_350a79f8b829](#file_350a79f8b829)
 - `run_context.sh` -> [file_86bac54f32d7](#file_86bac54f32d7)
@@ -173,13 +191,13 @@ FILE_END id=file_82cd6bde54ff
 
 ---
 <a id="file_10081abf87e1"></a>
-FILE_START id=file_10081abf87e1 path=.context/_scripts/context_oracle.py domain=source lang=python lines=69 bytes=2393 mtime=2026-04-11T23:58:41.287250+00:00 sha1=461ad9521982d5934769db35c938e5956f50a552
+FILE_START id=file_10081abf87e1 path=.context/_scripts/context_oracle.py domain=source lang=python lines=78 bytes=2798 mtime=2026-04-14T16:43:56.809132+00:00 sha1=db11007d6624952ee8025467899c8edb829d2c6c
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_10081abf87e1
 
 ---
 <a id="file_1edef35c2f56"></a>
-FILE_START id=file_1edef35c2f56 path=.context/_scripts/harness_runner.py domain=source lang=python lines=105 bytes=4438 mtime=2026-04-12T02:49:38.135700+00:00 sha1=4017d9da1bb2ca25a73a2cd4afb6717f80eae977
+FILE_START id=file_1edef35c2f56 path=.context/_scripts/harness_runner.py domain=source lang=python lines=119 bytes=5200 mtime=2026-04-14T16:44:14.745227+00:00 sha1=d3eed97f128b15acd6838c41f2a50ffbaa3d9c6c
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_1edef35c2f56
 
@@ -209,7 +227,7 @@ FILE_END id=file_024b28a37d29
 
 ---
 <a id="file_e98b95e5fb6d"></a>
-FILE_START id=file_e98b95e5fb6d path=.context/_scripts/secrets_scanner.py domain=source lang=python lines=62 bytes=2637 mtime=2026-04-12T03:40:29.937695+00:00 sha1=bab69d74dd308f5463f961b8f62572162122830c
+FILE_START id=file_e98b95e5fb6d path=.context/_scripts/secrets_scanner.py domain=source lang=python lines=69 bytes=2622 mtime=2026-04-14T12:47:41.549578+00:00 sha1=f73abf4fe2fa1a6e146de3fefae50c9016b77045
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_e98b95e5fb6d
 
@@ -221,13 +239,13 @@ FILE_END id=file_f122711ba9e1
 
 ---
 <a id="file_1077e9084ea1"></a>
-FILE_START id=file_1077e9084ea1 path=.context/_scripts/validate_context.py domain=source lang=python lines=106 bytes=3827 mtime=2026-04-11T02:29:28.743870+00:00 sha1=e6e9a29604fb4a340a2335bbca07488c56baff2a
+FILE_START id=file_1077e9084ea1 path=.context/_scripts/validate_context.py domain=source lang=python lines=112 bytes=3995 mtime=2026-04-14T16:43:40.446806+00:00 sha1=36db7de5f6ffa88dab32ae3598f87b2b1fe387ce
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_1077e9084ea1
 
 ---
 <a id="file_e7c17acb71ff"></a>
-FILE_START id=file_e7c17acb71ff path=.context/brain/AGENT_REGISTRY.md domain=docs lang=markdown lines=97 bytes=7180 mtime=2026-04-11T02:28:38.100881+00:00 sha1=3232fd65b8b05382d366aa1a8890e6385eb7f705
+FILE_START id=file_e7c17acb71ff path=.context/brain/AGENT_REGISTRY.md domain=docs lang=markdown lines=99 bytes=7608 mtime=2026-04-14T15:00:35.033399+00:00 sha1=65db425505a5b346b38f86cb5367a26b75cc8745
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_e7c17acb71ff
 
@@ -238,32 +256,38 @@ CONTENT_OMITTED toc_only=true
 FILE_END id=file_4b29e274836e
 
 ---
+<a id="file_de9ef20db2be"></a>
+FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=26 bytes=847 mtime=2026-04-14T15:02:24.478806+00:00 sha1=1236e289c232f6a7dd04ca408e00b2c665694842
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_de9ef20db2be
+
+---
 <a id="file_d833c436f547"></a>
-FILE_START id=file_d833c436f547 path=.context/brain/MASTER_FLOW.md domain=docs lang=markdown lines=86 bytes=4370 mtime=2026-04-11T02:59:02.297440+00:00 sha1=06ce6786a149620314b57f8231142f652d4fc412
+FILE_START id=file_d833c436f547 path=.context/brain/MASTER_FLOW.md domain=docs lang=markdown lines=94 bytes=4989 mtime=2026-04-14T14:50:11.599857+00:00 sha1=625d3a48cc49a624db746f69ba0286467c5d96e6
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_d833c436f547
 
 ---
 <a id="file_d124f6374cab"></a>
-FILE_START id=file_d124f6374cab path=.context/brain/PRD.md domain=docs lang=markdown lines=67 bytes=2446 mtime=2026-04-11T01:31:37.755946+00:00 sha1=b5c06bc8a67d2a788cc8263f03971f379d04e92e
+FILE_START id=file_d124f6374cab path=.context/brain/PRD.md domain=docs lang=markdown lines=67 bytes=2446 mtime=2026-04-14T15:02:30.490045+00:00 sha1=b5c06bc8a67d2a788cc8263f03971f379d04e92e
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_d124f6374cab
 
 ---
 <a id="file_9fe16e5591f0"></a>
-FILE_START id=file_9fe16e5591f0 path=.context/brain/PROMPT_LIBRARY.md domain=docs lang=markdown lines=154 bytes=6687 mtime=2026-04-11T02:28:52.575335+00:00 sha1=aa3419c1efa08687a7c551dc44f40b504b422353
+FILE_START id=file_9fe16e5591f0 path=.context/brain/PROMPT_LIBRARY.md domain=docs lang=markdown lines=179 bytes=8253 mtime=2026-04-14T16:07:34.154588+00:00 sha1=e5ae4734d5073c28f34da257bb88fff751f489e6
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_9fe16e5591f0
 
 ---
 <a id="file_c94f001202db"></a>
-FILE_START id=file_c94f001202db path=.context/brain/ROADMAP.md domain=docs lang=markdown lines=1 bytes=93 mtime=2026-04-10T23:54:29.772397+00:00 sha1=6ce5abcb8d49b1e31f741778b50586f3cb5c2e24
+FILE_START id=file_c94f001202db path=.context/brain/ROADMAP.md domain=docs lang=markdown lines=16 bytes=404 mtime=2026-04-14T12:47:50.541630+00:00 sha1=fa053c5fb84692b6b9fe1736757c0998bf51abb8
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_c94f001202db
 
 ---
 <a id="file_cd6526d17218"></a>
-FILE_START id=file_cd6526d17218 path=.context/brain/RULES.md domain=docs lang=markdown lines=82 bytes=5460 mtime=2026-04-12T00:33:15.586634+00:00 sha1=270b5c863f91b42f2ef229b18bd87218d95aee53
+FILE_START id=file_cd6526d17218 path=.context/brain/RULES.md domain=docs lang=markdown lines=94 bytes=6285 mtime=2026-04-14T15:00:02.829070+00:00 sha1=5b5782f6d450ea28bd85133ef33d75d782110344
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_cd6526d17218
 
@@ -275,25 +299,25 @@ FILE_END id=file_450d7ec70909
 
 ---
 <a id="file_9b6470da8849"></a>
-FILE_START id=file_9b6470da8849 path=.context/maintenance/ARCHITECTURE.md domain=docs lang=markdown lines=1 bytes=93 mtime=2026-04-10T23:54:29.800876+00:00 sha1=6ce5abcb8d49b1e31f741778b50586f3cb5c2e24
+FILE_START id=file_9b6470da8849 path=.context/maintenance/ARCHITECTURE.md domain=docs lang=markdown lines=14 bytes=469 mtime=2026-04-14T12:47:52.604426+00:00 sha1=45a3fb7b057becba5acd3e6677fafc539cecb8b1
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_9b6470da8849
 
 ---
 <a id="file_019509328844"></a>
-FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=78 bytes=2588 mtime=2026-04-14T10:55:08.595585+00:00 sha1=fb251e3bd5ee4f38907202f37f4532a4a14e3699
+FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=117 bytes=4378 mtime=2026-04-14T16:46:18.297788+00:00 sha1=2d3855fa50abac33090d1834097b1bb39b650d18
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_019509328844
 
 ---
 <a id="file_d069d4f2ebef"></a>
-FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=33 bytes=306 mtime=2026-04-14T10:55:08.027307+00:00 sha1=9e236ec2ddecc6eb29898a957d20e93774efc699
+FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=40 bytes=313 mtime=2026-04-14T16:46:17.728858+00:00 sha1=e006d9d45d66e98aaaae1386722302972c355071
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_d069d4f2ebef
 
 ---
 <a id="file_0858a02cf53f"></a>
-FILE_START id=file_0858a02cf53f path=.context/maintenance/TESTS.md domain=docs lang=markdown lines=1 bytes=93 mtime=2026-04-10T23:54:29.794384+00:00 sha1=6ce5abcb8d49b1e31f741778b50586f3cb5c2e24
+FILE_START id=file_0858a02cf53f path=.context/maintenance/TESTS.md domain=docs lang=markdown lines=14 bytes=416 mtime=2026-04-14T12:47:54.628006+00:00 sha1=fc4e2ba775d52345277e7a16625e44774a5e2d70
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_0858a02cf53f
 
@@ -341,7 +365,7 @@ FILE_END id=file_54a6a553d34b
 
 ---
 <a id="file_ca8da4f87431"></a>
-FILE_START id=file_ca8da4f87431 path=.context/maintenance/rx-biology.md domain=docs lang=markdown lines=1 bytes=93 mtime=2026-04-10T23:54:29.789386+00:00 sha1=6ce5abcb8d49b1e31f741778b50586f3cb5c2e24
+FILE_START id=file_ca8da4f87431 path=.context/maintenance/rx-biology.md domain=docs lang=markdown lines=16 bytes=885 mtime=2026-04-14T12:47:56.663727+00:00 sha1=e21edd4ab2bc3e50868ab2274483cd20980468d3
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_ca8da4f87431
 
@@ -352,14 +376,32 @@ CONTENT_OMITTED toc_only=true
 FILE_END id=file_91d5627a725e
 
 ---
+<a id="file_81ef387da7b7"></a>
+FILE_START id=file_81ef387da7b7 path=.context/market/MARKET_INBOX.md domain=docs lang=markdown lines=12 bytes=772 mtime=2026-04-14T16:45:23.861741+00:00 sha1=a48e688a7723acbcae1af7b9b57af7e66730fd7a
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_81ef387da7b7
+
+---
+<a id="file_65a089176b85"></a>
+FILE_START id=file_65a089176b85 path=.context/market/SSOT_MAP.md domain=docs lang=markdown lines=17 bytes=949 mtime=2026-04-14T16:45:51.494110+00:00 sha1=4d21781b5cbfa9f85f27d0013f1045e7394688fc
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_65a089176b85
+
+---
+<a id="file_b5d38697335e"></a>
+FILE_START id=file_b5d38697335e path=.context/market/economics.md domain=docs lang=markdown lines=19 bytes=486 mtime=2026-04-14T16:46:05.811354+00:00 sha1=935c22a2a6e1e346902b115f59ebb430920567f9
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_b5d38697335e
+
+---
 <a id="file_068a21d64bec"></a>
-FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1504 mtime=2026-04-14T10:55:10.118670+00:00 sha1=28e9109a5f63968d8ba67315d0c9ac882541ba29
+FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1505 mtime=2026-04-14T16:46:18.731196+00:00 sha1=bba343e9f2f18a5f070dda24588a4b60275b4503
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_068a21d64bec
 
 ---
 <a id="file_e477c4c5a96c"></a>
-FILE_START id=file_e477c4c5a96c path=.github/workflows/context-health.yml domain=config lang=yaml lines=26 bytes=693 mtime=2026-04-11T00:55:20.246274+00:00 sha1=163dd12b4c98d348f80986ea59afcb4604dc9e0e
+FILE_START id=file_e477c4c5a96c path=.github/workflows/context-health.yml domain=config lang=yaml lines=25 bytes=569 mtime=2026-04-14T12:47:48.321567+00:00 sha1=7c7488139d3c3c4327aa9889700f683ee1f47be1
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_e477c4c5a96c
 
@@ -368,6 +410,18 @@ FILE_END id=file_e477c4c5a96c
 FILE_START id=file_3adfd36c1559 path=.husky/_/husky.sh domain=source lang=bash lines=9 bytes=160 mtime=2026-04-11T01:12:06.610441+00:00 sha1=e8c52ee10c10eaa739ae7eca69c373dd437d9f33
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_3adfd36c1559
+
+---
+<a id="file_238a0e1da225"></a>
+FILE_START id=file_238a0e1da225 path=.specs/features/meta-inception/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-14T16:46:18.299370+00:00 sha1=e0b5e5c1838dff1fc982b642fcf4d118b22df216
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_238a0e1da225
+
+---
+<a id="file_9801af51c558"></a>
+FILE_START id=file_9801af51c558 path=.specs/features/meta-inception/spec.md domain=docs lang=markdown lines=22 bytes=1094 mtime=2026-04-14T14:46:50.141889+00:00 sha1=9471f4fdc679bb0ff7fd35796e75968de9fc34ec
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_9801af51c558
 
 ---
 <a id="file_8ec9a00bfd09"></a>
@@ -401,7 +455,7 @@ FILE_END id=file_1f98938d3cd9
 
 ---
 <a id="file_c3916196f58f"></a>
-FILE_START id=file_c3916196f58f path=captura_projeto.py domain=source lang=python lines=418 bytes=17263 mtime=2026-04-14T11:10:51.136116+00:00 sha1=9a985028f9c3691042599b17c099001b7aa541b6
+FILE_START id=file_c3916196f58f path=captura_projeto.py domain=source lang=python lines=423 bytes=17531 mtime=2026-04-14T16:44:37.932599+00:00 sha1=22de7724ad77c8fd6139284c7100f88e48fa53de
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_c3916196f58f
 
@@ -442,10 +496,28 @@ CONTENT_OMITTED toc_only=true
 FILE_END id=file_7bd2d6af54a4
 
 ---
+<a id="file_385231f1afeb"></a>
+FILE_START id=file_385231f1afeb path=planos/plan_inception_final_v2_4.md domain=docs lang=markdown lines=79 bytes=5369 mtime=2026-04-14T14:17:36.087744+00:00 sha1=f065eff9f0cf713fa7a76b33e65e9bf81174228a
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_385231f1afeb
+
+---
+<a id="file_b7594f581e6a"></a>
+FILE_START id=file_b7594f581e6a path=planos/plan_inception_market_v2_4.md domain=docs lang=markdown lines=65 bytes=3658 mtime=2026-04-14T11:45:09.915754+00:00 sha1=cd869123cd6543d25a3fe7bbe6b4a4681ee5abbb
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_b7594f581e6a
+
+---
 <a id="file_44c34e6237da"></a>
 FILE_START id=file_44c34e6237da path=planos/roadmap_reactive_hok_v2_v3.md domain=docs lang=markdown lines=43 bytes=2070 mtime=2026-04-12T00:16:01.408542+00:00 sha1=bcab4c7525fa8c4ba078bf84d63965f3e60d3e23
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_44c34e6237da
+
+---
+<a id="file_f23e47398730"></a>
+FILE_START id=file_f23e47398730 path=planos/template_base_v2_3_1.md domain=docs lang=markdown lines=376 bytes=11814 mtime=2026-04-14T14:42:34.080446+00:00 sha1=b5883553cf4d4667c6381e63b064b87d92e2ba46
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_f23e47398730
 
 ---
 <a id="file_6a4bd0586b20"></a>
@@ -455,7 +527,7 @@ FILE_END id=file_6a4bd0586b20
 
 ---
 <a id="file_350a79f8b829"></a>
-FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=70 bytes=2796 mtime=2026-04-12T02:17:34.844708+00:00 sha1=9186d63c21dc716dfb7f4fc04a3375f0fc081f46
+FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=68 bytes=2823 mtime=2026-04-14T16:43:02.192041+00:00 sha1=7e76400fd2380e743022135a65cdaca779826d6d
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_350a79f8b829
 

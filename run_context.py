@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-🐍 run_context.py - Gestor Universal de Contexto v2.3 (Fail-Fast Pipeline)
-Sequencia otimizada: validate → scan-secrets → sync → check-migrations → harness → lint(--) → health
+🐍 run_context.py - Gestor Universal de Contexto v2.4 (Hardened Pipeline)
+Sequencia otimizada: validate → scan-secrets → sync → migrations → harness → lint(strict) → health
 """
 import sys
 import subprocess

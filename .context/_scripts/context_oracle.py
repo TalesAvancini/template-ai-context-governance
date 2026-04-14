@@ -13,17 +13,26 @@ INDEX_FILES = [
     "maintenance/schema.sql", "maintenance/TECHNICAL_REQUIREMENTS.md",
     "maintenance/JOURNAL.md"
 ]
+EXTRA_INDEX = ["brain/INCEPTION.md", "market/SSOT_MAP.md", "market/economics.md"]
 
 def build_index():
     index = {}
-    for rel in INDEX_FILES:
-        p = CONTEXT_DIR / rel
+    # Arquivos base
+    base_paths = [CONTEXT_DIR / f for f in INDEX_FILES + EXTRA_INDEX]
+    # Varredura dinâmica da camada Market (v2.4.1)
+    market_paths = [f for f in CONTEXT_DIR.glob("market/**/*.md") if f.is_file()]
+    
+    for p in set(base_paths + market_paths):
         if not p.exists(): continue
-        text = p.read_text(encoding="utf-8")
-        # \w em Python 3 já é Unicode-aware (inclui acentos)
-        words = re.findall(r'\b\w{3,}\b', text.lower())
-        for w in set(words):
-            index.setdefault(w, []).append(rel)
+        try:
+            rel = p.relative_to(CONTEXT_DIR).as_posix()
+            text = p.read_text(encoding="utf-8")
+            # Python 3 \w já inclui acentos e caracteres latinos
+            words = re.findall(r'\b\w{3,}\b', text.lower())
+            for w in set(words):
+                index.setdefault(w, []).append(rel)
+        except Exception:
+            continue
     return index
 
 def query_oracle(question, role="unknown"):

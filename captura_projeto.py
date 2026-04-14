@@ -202,6 +202,11 @@ def collect_files(config: BundleConfig) -> tuple[FileRecord, ...]:
         current = Path(dirpath)
         is_root = (current == root)
 
+        # 🛡️ Isolamento Cirúrgico (v2.4.1): Ignora pastas densas específicas
+        rel_dir = current.relative_to(root).as_posix()
+        if rel_dir == ".context/market":
+            dirnames[:] = [d for d in dirnames if d not in {"compliance", "research"}]
+
         if config.only_core:
             dirnames[:] = sorted(d for d in dirnames if (d in PASTAS_CORE or not is_root) and d not in PASTAS_IGNORAR)
         elif config.exclude_core:

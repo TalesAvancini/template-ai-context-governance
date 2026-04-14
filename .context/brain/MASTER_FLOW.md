@@ -33,7 +33,15 @@ Status: [Ativo | Arquivado | Depreciado]
 │   ├── PROMPT_LIBRARY.md          # Catálogo de templates de prompts
 │   ├── PRD.md                     # Requisito em execução (v2.0 - O Contrato)
 │   ├── ROADMAP.md                 # Metas e fases (O Planejamento)
-│   └── TLC_INTEGRATION.md         # Ponte entre Governança e Execução
+│   ├── TLC_INTEGRATION.md         # Ponte entre Governança e Execução
+│   └── INCEPTION.md               # 🆕 Fronteiras estratégicas (Vibe, Boundaries)
+│
+├── 🌐 market/                      # 🆕 CAMADA ESTRATÉGICA (Restrições Externas)
+│   ├── SSOT_MAP.md                # Hierarquia da Verdade (Compliance > Inception > PRD)
+│   ├── MARKET_INBOX.md            # Tabela de gaps sistêmicos com Regra Karpathy
+│   ├── economics.md               # Planejamento financeiro
+│   ├── compliance/                # Regras duras de jurisdição e negócios
+│   └── research/                  # Dumps analíticos (NotebookLM ready)
 │
 ├── 🛠️ maintenance/                 # CAMADA DE MANUTENÇÃO (The Housekeeper)
 │   ├── JOURNAL.md                 # Log vivo (Máx ~50k char - Memória Curta)
