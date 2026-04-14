@@ -2,12 +2,12 @@
 
 ---
 schema_version: 1
-generated_at: 2026-04-12T03:24:27.332921+00:00
+generated_at: 2026-04-14T11:15:32.878486+00:00
 root: template_inicío_de_projeto
 mode: full
 profile: ai-default
-file_count: 54
-byte_count: 164909
+file_count: 52
+byte_count: 141013
 ignored_dirs:
   - .cache
   - .cursor
@@ -50,7 +50,6 @@ sensitive_rules:
 ## INDEX_BY_DOMAIN
 - `config`:
   - `.github/workflows/context-health.yml` -> [file_e477c4c5a96c](#file_e477c4c5a96c)
-  - `package-lock.json` -> [file_fa288d1472d2](#file_fa288d1472d2)
   - `package.json` -> [file_7030d0b2f71b](#file_7030d0b2f71b)
 - `db`:
   - `.context/maintenance/migrations/001_init.sql` -> [file_3707c3aa3239](#file_3707c3aa3239)
@@ -69,18 +68,17 @@ sensitive_rules:
   - `.context/maintenance/TESTS.md` -> [file_0858a02cf53f](#file_0858a02cf53f)
   - `.context/maintenance/_archive_context/raw/stripe_docs.md` -> [file_eaebfc593089](#file_eaebfc593089)
   - `.context/maintenance/_archive_context/raw/template_inbox.md` -> [file_618e9f7de1e8](#file_618e9f7de1e8)
+  - `.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/STATE.md` -> [file_5f4a4ae13ef8](#file_5f4a4ae13ef8)
+  - `.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/spec.md` -> [file_64bc4e458b6c](#file_64bc4e458b6c)
   - `.context/maintenance/rebuild_guide.md` -> [file_a5c71962029a](#file_a5c71962029a)
   - `.context/maintenance/rx-anatomy.md` -> [file_54a6a553d34b](#file_54a6a553d34b)
   - `.context/maintenance/rx-biology.md` -> [file_ca8da4f87431](#file_ca8da4f87431)
   - `.context/monitoring/CONTEXT_HEALTH.md` -> [file_068a21d64bec](#file_068a21d64bec)
-  - `.specs/features/hok-advanced-modules/STATE.md` -> [file_3c39185314df](#file_3c39185314df)
-  - `.specs/features/hok-advanced-modules/spec.md` -> [file_8746e653f22c](#file_8746e653f22c)
   - `README.md` -> [file_8ec9a00bfd09](#file_8ec9a00bfd09)
   - `README_CONTEXT.md` -> [file_4efb6293109d](#file_4efb6293109d)
   - `TEMPLATE_MIGRATION.md` -> [file_19e76e009f38](#file_19e76e009f38)
   - `VERSION.md` -> [file_f6f7100f063b](#file_f6f7100f063b)
   - `_modoLight/Modo_Light.md` -> [file_1f98938d3cd9](#file_1f98938d3cd9)
-  - `contexto_v2.3.0-hok_toc.md` -> [file_c079935d382e](#file_c079935d382e)
   - `planos/implementation_plan.md` -> [file_a9422a4b7476](#file_a9422a4b7476)
   - `planos/master_plan.md` -> [file_32db3e3783df](#file_32db3e3783df)
   - `planos/multi_agent_plan.md` -> [file_2a788cb45159](#file_2a788cb45159)
@@ -133,6 +131,8 @@ sensitive_rules:
 - `.context/maintenance/TESTS.md` -> [file_0858a02cf53f](#file_0858a02cf53f)
 - `.context/maintenance/_archive_context/raw/stripe_docs.md` -> [file_eaebfc593089](#file_eaebfc593089)
 - `.context/maintenance/_archive_context/raw/template_inbox.md` -> [file_618e9f7de1e8](#file_618e9f7de1e8)
+- `.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/STATE.md` -> [file_5f4a4ae13ef8](#file_5f4a4ae13ef8)
+- `.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/spec.md` -> [file_64bc4e458b6c](#file_64bc4e458b6c)
 - `.context/maintenance/migrations/001_init.sql` -> [file_3707c3aa3239](#file_3707c3aa3239)
 - `.context/maintenance/rebuild_guide.md` -> [file_a5c71962029a](#file_a5c71962029a)
 - `.context/maintenance/rx-anatomy.md` -> [file_54a6a553d34b](#file_54a6a553d34b)
@@ -141,17 +141,13 @@ sensitive_rules:
 - `.context/monitoring/CONTEXT_HEALTH.md` -> [file_068a21d64bec](#file_068a21d64bec)
 - `.github/workflows/context-health.yml` -> [file_e477c4c5a96c](#file_e477c4c5a96c)
 - `.husky/_/husky.sh` -> [file_3adfd36c1559](#file_3adfd36c1559)
-- `.specs/features/hok-advanced-modules/STATE.md` -> [file_3c39185314df](#file_3c39185314df)
-- `.specs/features/hok-advanced-modules/spec.md` -> [file_8746e653f22c](#file_8746e653f22c)
 - `README.md` -> [file_8ec9a00bfd09](#file_8ec9a00bfd09)
 - `README_CONTEXT.md` -> [file_4efb6293109d](#file_4efb6293109d)
 - `TEMPLATE_MIGRATION.md` -> [file_19e76e009f38](#file_19e76e009f38)
 - `VERSION.md` -> [file_f6f7100f063b](#file_f6f7100f063b)
 - `_modoLight/Modo_Light.md` -> [file_1f98938d3cd9](#file_1f98938d3cd9)
 - `captura_projeto.py` -> [file_c3916196f58f](#file_c3916196f58f)
-- `contexto_v2.3.0-hok_toc.md` -> [file_c079935d382e](#file_c079935d382e)
 - `init_ai_project.sh` -> [file_c59135753d26](#file_c59135753d26)
-- `package-lock.json` -> [file_fa288d1472d2](#file_fa288d1472d2)
 - `package.json` -> [file_7030d0b2f71b](#file_7030d0b2f71b)
 - `planos/implementation_plan.md` -> [file_a9422a4b7476](#file_a9422a4b7476)
 - `planos/master_plan.md` -> [file_32db3e3783df](#file_32db3e3783df)
@@ -487,8 +483,8 @@ FILE_END id=file_1edef35c2f56
 
 ---
 <a id="file_a642d240b9ab"></a>
-FILE_START id=file_a642d240b9ab path=.context/_scripts/health_sync.py domain=source lang=python lines=103 bytes=3798 mtime=2026-04-12T02:49:21.674220+00:00 sha1=e49da12ab25915331abf008d7edd5b95f86fdca0
-CHUNK_START id=a642d240b9ab_c001 start_line=1 end_line=103
+FILE_START id=file_a642d240b9ab path=.context/_scripts/health_sync.py domain=source lang=python lines=111 bytes=4132 mtime=2026-04-12T03:40:11.302253+00:00 sha1=1f23d31d0c88fe19ee916b4d6dd9676fb2f0018b
+CHUNK_START id=a642d240b9ab_c001 start_line=1 end_line=111
 ```python
 #!/usr/bin/env python3
 """
@@ -529,6 +525,11 @@ def count_schema_tables():
     tables = re.findall(r'CREATE\s+TABLE', text, re.I)
     return len(tables)
 
+def count_pending_migrations():
+    mig_dir = CONTEXT_DIR / "maintenance" / "migrations"
+    if not mig_dir.exists(): return 0
+    return len(list(mig_dir.glob("*.sql")))
+
 def estimate_tokens():
     total_chars = 0
     # Vasculha todos os arquivos do contexto
@@ -545,6 +546,7 @@ def update_dashboard():
     j_lines, j_chars, harness = count_journal_metrics()
     tables = count_schema_tables()
     tokens = estimate_tokens()
+    migs = count_pending_migrations()
     
     now = format_ts()
     
@@ -553,6 +555,7 @@ def update_dashboard():
     chars_status = "[OK]" if j_chars < 45000 else "[WARN] Pesado"
     tokens_status = "[OK]" if tokens < 100000 else "[WARN] Context Bloat"
     harness_status = f"[{harness}]" if harness != "N/A" else "N/A"
+    migs_status = f"{migs} file(s)" if migs > 0 else "N/A"
     
     table_content = f"""<!-- HEALTH_TABLE_START -->
 | Metrica | Valor Atual | Limite Ideal | Pilar | Status |
@@ -564,6 +567,7 @@ def update_dashboard():
 | Estimativa Tokens | ~{tokens // 1000}k | 128k (Max) | Eficiencia | {tokens_status} |
 | **Consistencia** | | | | |
 | Tabelas no Schema | {tables} | N/A | DB-First | [OK] |
+| Migrations Pendentes | {migs_status} | N/A | DB-First | [OK] |
 | Ultimo Harness | Role Check | Pass/Fail | Integridade | {harness_status} |
 | Ultima Sincronia | {now} | Real-Time | Automacao | [OK] |
 <!-- HEALTH_TABLE_END -->"""
@@ -600,8 +604,8 @@ FILE_END id=file_a642d240b9ab
 
 ---
 <a id="file_ab41b07fb3fb"></a>
-FILE_START id=file_ab41b07fb3fb path=.context/_scripts/lint_wiki.py domain=source lang=python lines=97 bytes=4141 mtime=2026-04-12T00:24:32.722433+00:00 sha1=24366d0cb8d5600c06dbb9d9a7e8d0f89470a576
-CHUNK_START id=ab41b07fb3fb_c001 start_line=1 end_line=97
+FILE_START id=file_ab41b07fb3fb path=.context/_scripts/lint_wiki.py domain=source lang=python lines=103 bytes=4422 mtime=2026-04-12T03:39:45.482564+00:00 sha1=fd071ee8ca5653747a4d2a43de307d90ba19965f
+CHUNK_START id=ab41b07fb3fb_c001 start_line=1 end_line=103
 ```python
 #!/usr/bin/env python3
 """
@@ -671,7 +675,13 @@ def check_wiki(strict=False):
                 start_idx = max(0, match.start() - 150)
                 end_idx = min(len(text), match.start() + 250)
                 context_window = text[start_idx:end_idx]
-                if "> Fonte:" not in context_window and "SSOT" not in text:
+                citation_found = "> Fonte:" in context_window
+                
+                # Fallback: se não achou na janela, varre o arquivo inteiro (performance aceitável para .md)
+                if not citation_found and "> Fonte:" in text:
+                    citation_found = True
+
+                if not citation_found and "SSOT" not in text:
                     suggestion = suggest_source(claim, raw_files)
                     
                     error_msg = f"[WARN] [{f.name}] Claim sem fonte: '{claim[:50]}...'"
@@ -853,8 +863,8 @@ FILE_END id=file_024b28a37d29
 
 ---
 <a id="file_e98b95e5fb6d"></a>
-FILE_START id=file_e98b95e5fb6d path=.context/_scripts/secrets_scanner.py domain=source lang=python lines=61 bytes=2458 mtime=2026-04-12T02:17:08.346225+00:00 sha1=f89861127275e414260a7690cd4e9bd42bee50ba
-CHUNK_START id=e98b95e5fb6d_c001 start_line=1 end_line=61
+FILE_START id=file_e98b95e5fb6d path=.context/_scripts/secrets_scanner.py domain=source lang=python lines=62 bytes=2637 mtime=2026-04-12T03:40:29.937695+00:00 sha1=bab69d74dd308f5463f961b8f62572162122830c
+CHUNK_START id=e98b95e5fb6d_c001 start_line=1 end_line=62
 ```python
 #!/usr/bin/env python3
 """
@@ -886,11 +896,12 @@ def get_files_to_scan():
     except Exception:
         # Fallback seguro: escopo explícito, ignora node_modules/venv/dist
         safe_dirs = ["src", "api", "config", ".context"]
+        SAFE_EXTS = {'.py', '.js', '.ts', '.jsx', '.tsx', '.env', '.sql', '.json', '.yml', '.yaml', '.toml', '.sh'}
         files = []
         for d in safe_dirs:
             p = ROOT_DIR / d
             if p.exists():
-                files.extend(p.rglob("*.*"))
+                files.extend([f for f in p.rglob("*") if f.suffix.lower() in SAFE_EXTS and not f.is_dir()])
         return files
 
 def scan():
@@ -1782,8 +1793,8 @@ FILE_END id=file_9b6470da8849
 
 ---
 <a id="file_019509328844"></a>
-FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=69 bytes=2335 mtime=2026-04-12T02:53:33.658657+00:00 sha1=4ec7bccab619b92952bef272d9518e7176fb041b
-CHUNK_START id=019509328844_c001 start_line=1 end_line=69
+FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=78 bytes=2588 mtime=2026-04-14T10:55:08.595585+00:00 sha1=fb251e3bd5ee4f38907202f37f4532a4a14e3699
+CHUNK_START id=019509328844_c001 start_line=1 end_line=78
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
@@ -1855,19 +1866,28 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 ## [HARNESS-PASS] Report | spec:hok-advanced-modules
 - **Detalhe:** All contracts valid
 
+## [HARNESS-PASS] Report | spec:hok-advanced-modules
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:hok-advanced-modules
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:manual
+- **Detalhe:** All contracts valid
+
 ```
 CHUNK_END id=019509328844_c001
 FILE_END id=file_019509328844
 
 ---
 <a id="file_d069d4f2ebef"></a>
-FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=30 bytes=303 mtime=2026-04-12T02:53:33.221751+00:00 sha1=9c19bd0ca0e1f3cd18a7b36ebcccdce4f1aa0b63
-CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=30
+FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=33 bytes=306 mtime=2026-04-14T10:55:08.027307+00:00 sha1=9e236ec2ddecc6eb29898a957d20e93774efc699
+CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=33
 ```markdown
 ---\nCriado em: 2026-04-10 20:50\nUltima Atualizacao: 2026-04-10 20:50\nStatus: Ativo\n---\n
 
 <!-- AUTO-SYNC START -->
-*🤖 Atualizado automaticamente em 2026-04-11 23:53*
+*🤖 Atualizado automaticamente em 2026-04-14 07:55*
 
 ### DevDependencies
 - `husky`: `^9.1.7`
@@ -1876,6 +1896,9 @@ CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=30
 - `orders`
 
 <!-- AUTO-SYNC END -->
+
+
+
 
 
 
@@ -1950,6 +1973,55 @@ Cole abaixo os tutoriais cruéis, referências de código ou diretrizes inviolá
 ````
 CHUNK_END id=618e9f7de1e8_c001
 FILE_END id=file_618e9f7de1e8
+
+---
+<a id="file_5f4a4ae13ef8"></a>
+FILE_START id=file_5f4a4ae13ef8 path=.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-12T03:41:44.408070+00:00 sha1=a5e7d0331e8f6f74044d9ae52e4930b5bd648d67
+CHUNK_START id=5f4a4ae13ef8_c001 start_line=1 end_line=5
+```markdown
+---
+status: ✅ PASSED
+updated: 2026-04-12 00:41
+detail: All checks passed
+---
+
+```
+CHUNK_END id=5f4a4ae13ef8_c001
+FILE_END id=file_5f4a4ae13ef8
+
+---
+<a id="file_64bc4e458b6c"></a>
+FILE_START id=file_64bc4e458b6c path=.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/spec.md domain=docs lang=markdown lines=24 bytes=1573 mtime=2026-04-12T02:10:32.710904+00:00 sha1=4afa0f114364110370467d1033c99a6a49058746
+CHUNK_START id=64bc4e458b6c_c001 start_line=1 end_line=24
+```markdown
+# 🚀 Spec: Automação Extrema H.O.K. (Security, Migrations, State Sync)
+
+---
+
+## 🎯 1. Objetivo (O Quê e Por Quê)
+**Por Que:** O nível 3 de Governança (H.O.K.) precisa ser blindado contra vazamentos de tokens (Security), drift de dados (Migrations) e abandono de specs (State Sync).
+**O Quê:** Implementar scanners de segredo, registro de migrações e atualização autônoma do `STATE.md`, roteando tudo nativamente pelo `run_context.py`.
+
+## 📐 2. Escopo Técnico (Como)
+
+### 2.1. Módulos Core
+- `secrets_scanner.py`: Varredura via `git ls-files` para prevenir vazamentos na pipeline. Usa `.secrets-allowlist` para mitigar falsos positivos.
+- `migration_registry.py`: Força a padronização de arquivos `.sql` e cruza a validação com `schema.sql`.
+- `update_state_md`: Incorporado em `harness_runner.py`, muda interativamente o estado final da Spec.
+
+### 2.2. Integração Orquestrador
+- Modificar `run_context.py` para injetar `scan-secrets` e `check-migrations` no loop `all`.
+- Ordem do pipeline: `validate → scan-secrets → sync → check-migrations → harness → lint → health`.
+
+## 🧪 3. Critérios de Aceite (Done)
+- [ ] O `secrets_scanner.py` usa `git ls-files` ou fallback estrito (`src`, `api`, `config`, `.context`).
+- [ ] O `migration_registry.py` exige padrão `001_*.sql` e verifica contra `schema.sql`.
+- [ ] O `harness_runner.py` escreve `✅ PASSED` ou `❌ FAILED` no `STATE.md` desta própria pasta local ao ser acionado.
+- [ ] Todos os novos fluxos são orquestrados no `run_context.py` sem chamadas shell no `package.json`.
+
+```
+CHUNK_END id=64bc4e458b6c_c001
+FILE_END id=file_64bc4e458b6c
 
 ---
 <a id="file_3707c3aa3239"></a>
@@ -2115,12 +2187,12 @@ FILE_END id=file_91d5627a725e
 
 ---
 <a id="file_068a21d64bec"></a>
-FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=37 bytes=1443 mtime=2026-04-12T02:53:34.069247+00:00 sha1=75e9b4255496301209862ce709a568a4b1a4770d
-CHUNK_START id=068a21d64bec_c001 start_line=1 end_line=37
+FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1504 mtime=2026-04-14T10:55:10.118670+00:00 sha1=28e9109a5f63968d8ba67315d0c9ac882541ba29
+CHUNK_START id=068a21d64bec_c001 start_line=1 end_line=38
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
-Ultima Atualizacao: 2026-04-11 23:53
+Ultima Atualizacao: 2026-04-14 07:55
 Status: Ativo
 ---
 
@@ -2132,14 +2204,15 @@ Status: Ativo
 | Metrica | Valor Atual | Limite Ideal | Pilar | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **Manutencao** | | | | |
-| Linhas do Journal | 69 | 600 | Tracker | [OK] |
+| Linhas do Journal | 78 | 600 | Tracker | [OK] |
 | Carga do Journal | 2k chars | 50k chars | Tracker | [OK] |
 | **Cognitivo** | | | | |
-| Estimativa Tokens | ~17k | 128k (Max) | Eficiencia | [OK] |
+| Estimativa Tokens | ~18k | 128k (Max) | Eficiencia | [OK] |
 | **Consistencia** | | | | |
 | Tabelas no Schema | 1 | N/A | DB-First | [OK] |
+| Migrations Pendentes | 1 file(s) | N/A | DB-First | [OK] |
 | Ultimo Harness | Role Check | Pass/Fail | Integridade | [PASS] |
-| Ultima Sincronia | 2026-04-11 23:53 | Real-Time | Automacao | [OK] |
+| Ultima Sincronia | 2026-04-14 07:55 | Real-Time | Automacao | [OK] |
 <!-- HEALTH_TABLE_END -->
 
 ---
@@ -2213,55 +2286,6 @@ They WILL FAIL in v10.0.0
 ```
 CHUNK_END id=3adfd36c1559_c001
 FILE_END id=file_3adfd36c1559
-
----
-<a id="file_3c39185314df"></a>
-FILE_START id=file_3c39185314df path=.specs/features/hok-advanced-modules/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-12T02:53:33.661113+00:00 sha1=8628e643ca9dec24a77017bd390e043c561ee427
-CHUNK_START id=3c39185314df_c001 start_line=1 end_line=5
-```markdown
----
-status: ✅ PASSED
-updated: 2026-04-11 23:53
-detail: All checks passed
----
-
-```
-CHUNK_END id=3c39185314df_c001
-FILE_END id=file_3c39185314df
-
----
-<a id="file_8746e653f22c"></a>
-FILE_START id=file_8746e653f22c path=.specs/features/hok-advanced-modules/spec.md domain=docs lang=markdown lines=24 bytes=1573 mtime=2026-04-12T02:10:32.710904+00:00 sha1=4afa0f114364110370467d1033c99a6a49058746
-CHUNK_START id=8746e653f22c_c001 start_line=1 end_line=24
-```markdown
-# 🚀 Spec: Automação Extrema H.O.K. (Security, Migrations, State Sync)
-
----
-
-## 🎯 1. Objetivo (O Quê e Por Quê)
-**Por Que:** O nível 3 de Governança (H.O.K.) precisa ser blindado contra vazamentos de tokens (Security), drift de dados (Migrations) e abandono de specs (State Sync).
-**O Quê:** Implementar scanners de segredo, registro de migrações e atualização autônoma do `STATE.md`, roteando tudo nativamente pelo `run_context.py`.
-
-## 📐 2. Escopo Técnico (Como)
-
-### 2.1. Módulos Core
-- `secrets_scanner.py`: Varredura via `git ls-files` para prevenir vazamentos na pipeline. Usa `.secrets-allowlist` para mitigar falsos positivos.
-- `migration_registry.py`: Força a padronização de arquivos `.sql` e cruza a validação com `schema.sql`.
-- `update_state_md`: Incorporado em `harness_runner.py`, muda interativamente o estado final da Spec.
-
-### 2.2. Integração Orquestrador
-- Modificar `run_context.py` para injetar `scan-secrets` e `check-migrations` no loop `all`.
-- Ordem do pipeline: `validate → scan-secrets → sync → check-migrations → harness → lint → health`.
-
-## 🧪 3. Critérios de Aceite (Done)
-- [ ] O `secrets_scanner.py` usa `git ls-files` ou fallback estrito (`src`, `api`, `config`, `.context`).
-- [ ] O `migration_registry.py` exige padrão `001_*.sql` e verifica contra `schema.sql`.
-- [ ] O `harness_runner.py` escreve `✅ PASSED` ou `❌ FAILED` no `STATE.md` desta própria pasta local ao ser acionado.
-- [ ] Todos os novos fluxos são orquestrados no `run_context.py` sem chamadas shell no `package.json`.
-
-```
-CHUNK_END id=8746e653f22c_c001
-FILE_END id=file_8746e653f22c
 
 ---
 <a id="file_8ec9a00bfd09"></a>
@@ -2739,7 +2763,7 @@ FILE_END id=file_1f98938d3cd9
 
 ---
 <a id="file_c3916196f58f"></a>
-FILE_START id=file_c3916196f58f path=captura_projeto.py domain=source lang=python lines=399 bytes=16353 mtime=2026-04-12T03:17:11.664666+00:00 sha1=8a148e7ad8f5ce1f7855b502617105b6247112e3
+FILE_START id=file_c3916196f58f path=captura_projeto.py domain=source lang=python lines=418 bytes=17263 mtime=2026-04-14T11:10:51.136116+00:00 sha1=9a985028f9c3691042599b17c099001b7aa541b6
 CHUNK_START id=c3916196f58f_c001 start_line=1 end_line=300
 ```python
 #!/usr/bin/env python3
@@ -2767,6 +2791,11 @@ PASTAS_IGNORAR = {
     ".next", ".nuxt", ".vercel", ".netlify", ".vite", ".cache",
     ".vscode", ".idea", ".cursor", "coverage", ".pytest_cache",
     "captura_projeto", # 📝 Ignorar a própria pasta do utilitário
+}
+
+ARQUIVOS_IGNORAR = {
+    "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "composer.lock",
+    "contexto.md", "contexto_*.md", ".*.lock"
 }
 
 PASTAS_CORE = {
@@ -2827,6 +2856,7 @@ class BundleConfig:
     emit_symbol_index: bool = False
     emit_import_map: bool = False
     mask_secrets: bool = False
+    include_lockfiles: bool = False
 
 @dataclass(frozen=True)
 class Chunk:
@@ -2957,6 +2987,17 @@ def collect_files(config: BundleConfig) -> tuple[FileRecord, ...]:
                 continue
             if config.exclude_core and is_root and top in PASTAS_CORE:
                 continue
+            
+            # 🛡️ Blindagem contra Self-Capture e Locks
+            is_output_file = (filename == config.output or filename == get_dynamic_filename(config))
+            is_ignored_file = any(fnmatch(filename.lower(), pat.lower()) for pat in ARQUIVOS_IGNORAR)
+            is_lockfile = ("lock" in filename.lower() and path.suffix in {".json", ".yaml", ".yml", ".lock"})
+
+            if is_output_file: 
+                continue
+            if is_ignored_file and not (is_lockfile and config.include_lockfiles):
+                continue
+
             if is_sensitive_file(path):
                 continue
             if not is_text_file(path):
@@ -3025,6 +3066,11 @@ def render_frontmatter(config: BundleConfig, records: tuple[FileRecord, ...]) ->
     total_bytes = sum(r.byte_count for r in records)
     lines = [
         "---", "schema_version: 1",
+
+```
+CHUNK_END id=c3916196f58f_c001
+CHUNK_START id=c3916196f58f_c002 start_line=301 end_line=418
+````python
         f"generated_at: {datetime.now(timezone.utc).isoformat()}",
         f"root: {config.diretorio.resolve().name}",
         f"mode: {mode_name(config)}", f"profile: {config.profile}",
@@ -3042,11 +3088,6 @@ def render_index_by_domain(records: tuple[FileRecord, ...]) -> str:
     for r in records:
         grouped.setdefault(r.domain, []).append(r)
     lines = ["## INDEX_BY_DOMAIN"]
-
-```
-CHUNK_END id=c3916196f58f_c001
-CHUNK_START id=c3916196f58f_c002 start_line=301 end_line=399
-````python
     for domain in sorted(grouped):
         lines.append(f"- `{domain}`:")
         lines.extend(f"  - `{r.relative_path}` -> [file_{r.file_id}](#file_{r.file_id})" for r in grouped[domain])
@@ -3128,6 +3169,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--emit-symbol-index", action="store_true", help="Adiciona SYMBOL_INDEX")
     parser.add_argument("--emit-import-map", action="store_true", help="Adiciona IMPORT_MAP_MIN")
     parser.add_argument("--mask-secrets", action="store_true", help="Ofusca segredos no conteudo")
+    parser.add_argument("--include-lockfiles", action="store_true", help="Força a inclusão de package-lock.json e similares")
     return parser.parse_args()
 
 def main() -> None:
@@ -3138,7 +3180,8 @@ def main() -> None:
         profile=args.profile, toc_only=args.toc_only,
         max_lines_per_file=args.max_lines_per_file,
         emit_symbol_index=args.emit_symbol_index,
-        emit_import_map=args.emit_import_map, mask_secrets=args.mask_secrets
+        emit_import_map=args.emit_import_map, mask_secrets=args.mask_secrets,
+        include_lockfiles=args.include_lockfiles
     )
     out = write_output(config)
     print(f"\n[OK] Gerado: {out}")
@@ -3149,509 +3192,6 @@ if __name__ == "__main__":
 ````
 CHUNK_END id=c3916196f58f_c002
 FILE_END id=file_c3916196f58f
-
----
-<a id="file_c079935d382e"></a>
-FILE_START id=file_c079935d382e path=contexto_v2.3.0-hok_toc.md domain=docs lang=markdown lines=488 bytes=25132 mtime=2026-04-12T03:21:39.891641+00:00 sha1=b6824e909c80e17f2d0d876675e5469fcf11853a
-CHUNK_START id=c079935d382e_c001 start_line=1 end_line=300
-```markdown
-# Project Context Bundle
-
----
-schema_version: 1
-generated_at: 2026-04-12T03:21:39.890203+00:00
-root: template_inicío_de_projeto
-mode: full | TOC
-profile: ai-default
-file_count: 54
-byte_count: 164505
-ignored_dirs:
-  - .cache
-  - .cursor
-  - .git
-  - .idea
-  - .mypy_cache
-  - .netlify
-  - .next
-  - .nuxt
-  - .pytest_cache
-  - .ruff_cache
-  - .tox
-  - .venv
-  - .vercel
-  - .vite
-  - .vscode
-  - __pycache__
-  - bin
-  - build
-  - captura_projeto
-  - coverage
-  - dist
-  - node_modules
-  - obj
-  - out
-  - target
-  - venv
-sensitive_rules:
-  - *.cert
-  - *.key
-  - *.p12
-  - *.pem
-  - *.pfx
-  - .env*
-  - credentials*.json
-  - id_rsa*
-  - secrets.*
----
-
-## INDEX_BY_DOMAIN
-- `config`:
-  - `.github/workflows/context-health.yml` -> [file_e477c4c5a96c](#file_e477c4c5a96c)
-  - `package-lock.json` -> [file_fa288d1472d2](#file_fa288d1472d2)
-  - `package.json` -> [file_7030d0b2f71b](#file_7030d0b2f71b)
-- `db`:
-  - `.context/maintenance/migrations/001_init.sql` -> [file_3707c3aa3239](#file_3707c3aa3239)
-- `docs`:
-  - `.context/brain/AGENT_REGISTRY.md` -> [file_e7c17acb71ff](#file_e7c17acb71ff)
-  - `.context/brain/HARNESS_REGISTRY.md` -> [file_4b29e274836e](#file_4b29e274836e)
-  - `.context/brain/MASTER_FLOW.md` -> [file_d833c436f547](#file_d833c436f547)
-  - `.context/brain/PRD.md` -> [file_d124f6374cab](#file_d124f6374cab)
-  - `.context/brain/PROMPT_LIBRARY.md` -> [file_9fe16e5591f0](#file_9fe16e5591f0)
-  - `.context/brain/ROADMAP.md` -> [file_c94f001202db](#file_c94f001202db)
-  - `.context/brain/RULES.md` -> [file_cd6526d17218](#file_cd6526d17218)
-  - `.context/brain/TLC_INTEGRATION.md` -> [file_450d7ec70909](#file_450d7ec70909)
-  - `.context/maintenance/ARCHITECTURE.md` -> [file_9b6470da8849](#file_9b6470da8849)
-  - `.context/maintenance/JOURNAL.md` -> [file_019509328844](#file_019509328844)
-  - `.context/maintenance/TECHNICAL_REQUIREMENTS.md` -> [file_d069d4f2ebef](#file_d069d4f2ebef)
-  - `.context/maintenance/TESTS.md` -> [file_0858a02cf53f](#file_0858a02cf53f)
-  - `.context/maintenance/_archive_context/raw/stripe_docs.md` -> [file_eaebfc593089](#file_eaebfc593089)
-  - `.context/maintenance/_archive_context/raw/template_inbox.md` -> [file_618e9f7de1e8](#file_618e9f7de1e8)
-  - `.context/maintenance/rebuild_guide.md` -> [file_a5c71962029a](#file_a5c71962029a)
-  - `.context/maintenance/rx-anatomy.md` -> [file_54a6a553d34b](#file_54a6a553d34b)
-  - `.context/maintenance/rx-biology.md` -> [file_ca8da4f87431](#file_ca8da4f87431)
-  - `.context/monitoring/CONTEXT_HEALTH.md` -> [file_068a21d64bec](#file_068a21d64bec)
-  - `.specs/features/hok-advanced-modules/STATE.md` -> [file_3c39185314df](#file_3c39185314df)
-  - `.specs/features/hok-advanced-modules/spec.md` -> [file_8746e653f22c](#file_8746e653f22c)
-  - `README.md` -> [file_8ec9a00bfd09](#file_8ec9a00bfd09)
-  - `README_CONTEXT.md` -> [file_4efb6293109d](#file_4efb6293109d)
-  - `TEMPLATE_MIGRATION.md` -> [file_19e76e009f38](#file_19e76e009f38)
-  - `VERSION.md` -> [file_f6f7100f063b](#file_f6f7100f063b)
-  - `_modoLight/Modo_Light.md` -> [file_1f98938d3cd9](#file_1f98938d3cd9)
-  - `contexto.md` -> [file_aa78525fb574](#file_aa78525fb574)
-  - `planos/implementation_plan.md` -> [file_a9422a4b7476](#file_a9422a4b7476)
-  - `planos/master_plan.md` -> [file_32db3e3783df](#file_32db3e3783df)
-  - `planos/multi_agent_plan.md` -> [file_2a788cb45159](#file_2a788cb45159)
-  - `planos/plan_hok_advanced_security_and_db.md` -> [file_7bd2d6af54a4](#file_7bd2d6af54a4)
-  - `planos/roadmap_reactive_hok_v2_v3.md` -> [file_44c34e6237da](#file_44c34e6237da)
-  - `planos/walkthrough_hok_triad.md` -> [file_6a4bd0586b20](#file_6a4bd0586b20)
-- `source`:
-  - `.context/_scripts/_tz_utils.py` -> [file_dbef1acce0d4](#file_dbef1acce0d4)
-  - `.context/_scripts/cleanup_specs.py` -> [file_82cd6bde54ff](#file_82cd6bde54ff)
-  - `.context/_scripts/context_oracle.py` -> [file_10081abf87e1](#file_10081abf87e1)
-  - `.context/_scripts/harness_runner.py` -> [file_1edef35c2f56](#file_1edef35c2f56)
-  - `.context/_scripts/health_sync.py` -> [file_a642d240b9ab](#file_a642d240b9ab)
-  - `.context/_scripts/lint_wiki.py` -> [file_ab41b07fb3fb](#file_ab41b07fb3fb)
-  - `.context/_scripts/migration_registry.py` -> [file_d65b48a9d56c](#file_d65b48a9d56c)
-  - `.context/_scripts/purge_journal.py` -> [file_024b28a37d29](#file_024b28a37d29)
-  - `.context/_scripts/secrets_scanner.py` -> [file_e98b95e5fb6d](#file_e98b95e5fb6d)
-  - `.context/_scripts/sync_project.py` -> [file_f122711ba9e1](#file_f122711ba9e1)
-  - `.context/_scripts/validate_context.py` -> [file_1077e9084ea1](#file_1077e9084ea1)
-  - `.context/maintenance/schema.sql` -> [file_91d5627a725e](#file_91d5627a725e)
-  - `.husky/_/husky.sh` -> [file_3adfd36c1559](#file_3adfd36c1559)
-  - `captura_projeto.py` -> [file_c3916196f58f](#file_c3916196f58f)
-  - `init_ai_project.sh` -> [file_c59135753d26](#file_c59135753d26)
-  - `run_context.py` -> [file_350a79f8b829](#file_350a79f8b829)
-  - `run_context.sh` -> [file_86bac54f32d7](#file_86bac54f32d7)
-  - `tests/test_context.py` -> [file_4c6bbd05056e](#file_4c6bbd05056e)
-
-## INDEX_BY_PATH
-- `.context/_scripts/_tz_utils.py` -> [file_dbef1acce0d4](#file_dbef1acce0d4)
-- `.context/_scripts/cleanup_specs.py` -> [file_82cd6bde54ff](#file_82cd6bde54ff)
-- `.context/_scripts/context_oracle.py` -> [file_10081abf87e1](#file_10081abf87e1)
-- `.context/_scripts/harness_runner.py` -> [file_1edef35c2f56](#file_1edef35c2f56)
-- `.context/_scripts/health_sync.py` -> [file_a642d240b9ab](#file_a642d240b9ab)
-- `.context/_scripts/lint_wiki.py` -> [file_ab41b07fb3fb](#file_ab41b07fb3fb)
-- `.context/_scripts/migration_registry.py` -> [file_d65b48a9d56c](#file_d65b48a9d56c)
-- `.context/_scripts/purge_journal.py` -> [file_024b28a37d29](#file_024b28a37d29)
-- `.context/_scripts/secrets_scanner.py` -> [file_e98b95e5fb6d](#file_e98b95e5fb6d)
-- `.context/_scripts/sync_project.py` -> [file_f122711ba9e1](#file_f122711ba9e1)
-- `.context/_scripts/validate_context.py` -> [file_1077e9084ea1](#file_1077e9084ea1)
-- `.context/brain/AGENT_REGISTRY.md` -> [file_e7c17acb71ff](#file_e7c17acb71ff)
-- `.context/brain/HARNESS_REGISTRY.md` -> [file_4b29e274836e](#file_4b29e274836e)
-- `.context/brain/MASTER_FLOW.md` -> [file_d833c436f547](#file_d833c436f547)
-- `.context/brain/PRD.md` -> [file_d124f6374cab](#file_d124f6374cab)
-- `.context/brain/PROMPT_LIBRARY.md` -> [file_9fe16e5591f0](#file_9fe16e5591f0)
-- `.context/brain/ROADMAP.md` -> [file_c94f001202db](#file_c94f001202db)
-- `.context/brain/RULES.md` -> [file_cd6526d17218](#file_cd6526d17218)
-- `.context/brain/TLC_INTEGRATION.md` -> [file_450d7ec70909](#file_450d7ec70909)
-- `.context/maintenance/ARCHITECTURE.md` -> [file_9b6470da8849](#file_9b6470da8849)
-- `.context/maintenance/JOURNAL.md` -> [file_019509328844](#file_019509328844)
-- `.context/maintenance/TECHNICAL_REQUIREMENTS.md` -> [file_d069d4f2ebef](#file_d069d4f2ebef)
-- `.context/maintenance/TESTS.md` -> [file_0858a02cf53f](#file_0858a02cf53f)
-- `.context/maintenance/_archive_context/raw/stripe_docs.md` -> [file_eaebfc593089](#file_eaebfc593089)
-- `.context/maintenance/_archive_context/raw/template_inbox.md` -> [file_618e9f7de1e8](#file_618e9f7de1e8)
-- `.context/maintenance/migrations/001_init.sql` -> [file_3707c3aa3239](#file_3707c3aa3239)
-- `.context/maintenance/rebuild_guide.md` -> [file_a5c71962029a](#file_a5c71962029a)
-- `.context/maintenance/rx-anatomy.md` -> [file_54a6a553d34b](#file_54a6a553d34b)
-- `.context/maintenance/rx-biology.md` -> [file_ca8da4f87431](#file_ca8da4f87431)
-- `.context/maintenance/schema.sql` -> [file_91d5627a725e](#file_91d5627a725e)
-- `.context/monitoring/CONTEXT_HEALTH.md` -> [file_068a21d64bec](#file_068a21d64bec)
-- `.github/workflows/context-health.yml` -> [file_e477c4c5a96c](#file_e477c4c5a96c)
-- `.husky/_/husky.sh` -> [file_3adfd36c1559](#file_3adfd36c1559)
-- `.specs/features/hok-advanced-modules/STATE.md` -> [file_3c39185314df](#file_3c39185314df)
-- `.specs/features/hok-advanced-modules/spec.md` -> [file_8746e653f22c](#file_8746e653f22c)
-- `README.md` -> [file_8ec9a00bfd09](#file_8ec9a00bfd09)
-- `README_CONTEXT.md` -> [file_4efb6293109d](#file_4efb6293109d)
-- `TEMPLATE_MIGRATION.md` -> [file_19e76e009f38](#file_19e76e009f38)
-- `VERSION.md` -> [file_f6f7100f063b](#file_f6f7100f063b)
-- `_modoLight/Modo_Light.md` -> [file_1f98938d3cd9](#file_1f98938d3cd9)
-- `captura_projeto.py` -> [file_c3916196f58f](#file_c3916196f58f)
-- `contexto.md` -> [file_aa78525fb574](#file_aa78525fb574)
-- `init_ai_project.sh` -> [file_c59135753d26](#file_c59135753d26)
-- `package-lock.json` -> [file_fa288d1472d2](#file_fa288d1472d2)
-- `package.json` -> [file_7030d0b2f71b](#file_7030d0b2f71b)
-- `planos/implementation_plan.md` -> [file_a9422a4b7476](#file_a9422a4b7476)
-- `planos/master_plan.md` -> [file_32db3e3783df](#file_32db3e3783df)
-- `planos/multi_agent_plan.md` -> [file_2a788cb45159](#file_2a788cb45159)
-- `planos/plan_hok_advanced_security_and_db.md` -> [file_7bd2d6af54a4](#file_7bd2d6af54a4)
-- `planos/roadmap_reactive_hok_v2_v3.md` -> [file_44c34e6237da](#file_44c34e6237da)
-- `planos/walkthrough_hok_triad.md` -> [file_6a4bd0586b20](#file_6a4bd0586b20)
-- `run_context.py` -> [file_350a79f8b829](#file_350a79f8b829)
-- `run_context.sh` -> [file_86bac54f32d7](#file_86bac54f32d7)
-- `tests/test_context.py` -> [file_4c6bbd05056e](#file_4c6bbd05056e)
-
----
-<a id="file_dbef1acce0d4"></a>
-FILE_START id=file_dbef1acce0d4 path=.context/_scripts/_tz_utils.py domain=source lang=python lines=37 bytes=1257 mtime=2026-04-12T02:47:25.198957+00:00 sha1=a49568f45d4b962ab01f0ed4b359ee4c09f65741
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_dbef1acce0d4
-
----
-<a id="file_82cd6bde54ff"></a>
-FILE_START id=file_82cd6bde54ff path=.context/_scripts/cleanup_specs.py domain=source lang=python lines=71 bytes=2335 mtime=2026-04-11T02:29:19.704104+00:00 sha1=8567b3ea9b8c513859bab8793632e38aef509fd5
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_82cd6bde54ff
-
----
-<a id="file_10081abf87e1"></a>
-FILE_START id=file_10081abf87e1 path=.context/_scripts/context_oracle.py domain=source lang=python lines=69 bytes=2393 mtime=2026-04-11T23:58:41.287250+00:00 sha1=461ad9521982d5934769db35c938e5956f50a552
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_10081abf87e1
-
----
-<a id="file_1edef35c2f56"></a>
-FILE_START id=file_1edef35c2f56 path=.context/_scripts/harness_runner.py domain=source lang=python lines=105 bytes=4438 mtime=2026-04-12T02:49:38.135700+00:00 sha1=4017d9da1bb2ca25a73a2cd4afb6717f80eae977
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_1edef35c2f56
-
----
-<a id="file_a642d240b9ab"></a>
-FILE_START id=file_a642d240b9ab path=.context/_scripts/health_sync.py domain=source lang=python lines=103 bytes=3798 mtime=2026-04-12T02:49:21.674220+00:00 sha1=e49da12ab25915331abf008d7edd5b95f86fdca0
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_a642d240b9ab
-
----
-<a id="file_ab41b07fb3fb"></a>
-FILE_START id=file_ab41b07fb3fb path=.context/_scripts/lint_wiki.py domain=source lang=python lines=97 bytes=4141 mtime=2026-04-12T00:24:32.722433+00:00 sha1=24366d0cb8d5600c06dbb9d9a7e8d0f89470a576
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_ab41b07fb3fb
-
----
-<a id="file_d65b48a9d56c"></a>
-FILE_START id=file_d65b48a9d56c path=.context/_scripts/migration_registry.py domain=source lang=python lines=44 bytes=1700 mtime=2026-04-12T02:18:47.875961+00:00 sha1=a1e9beb894aba2b44931e9c41522a020b7359ebf
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_d65b48a9d56c
-
----
-<a id="file_024b28a37d29"></a>
-FILE_START id=file_024b28a37d29 path=.context/_scripts/purge_journal.py domain=source lang=python lines=82 bytes=2761 mtime=2026-04-12T02:48:42.689091+00:00 sha1=8b12ecb77b7b91c035a2d7c9752910c71064d1e5
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_024b28a37d29
-
----
-<a id="file_e98b95e5fb6d"></a>
-FILE_START id=file_e98b95e5fb6d path=.context/_scripts/secrets_scanner.py domain=source lang=python lines=61 bytes=2458 mtime=2026-04-12T02:17:08.346225+00:00 sha1=f89861127275e414260a7690cd4e9bd42bee50ba
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_e98b95e5fb6d
-
----
-<a id="file_f122711ba9e1"></a>
-FILE_START id=file_f122711ba9e1 path=.context/_scripts/sync_project.py domain=source lang=python lines=102 bytes=3426 mtime=2026-04-12T02:48:59.755191+00:00 sha1=d2b0f3541ccaab8c75f381f47d539c762618a0b7
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_f122711ba9e1
-
----
-<a id="file_1077e9084ea1"></a>
-FILE_START id=file_1077e9084ea1 path=.context/_scripts/validate_context.py domain=source lang=python lines=106 bytes=3827 mtime=2026-04-11T02:29:28.743870+00:00 sha1=e6e9a29604fb4a340a2335bbca07488c56baff2a
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_1077e9084ea1
-
----
-<a id="file_e7c17acb71ff"></a>
-FILE_START id=file_e7c17acb71ff path=.context/brain/AGENT_REGISTRY.md domain=docs lang=markdown lines=97 bytes=7180 mtime=2026-04-11T02:28:38.100881+00:00 sha1=3232fd65b8b05382d366aa1a8890e6385eb7f705
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_e7c17acb71ff
-
----
-<a id="file_4b29e274836e"></a>
-FILE_START id=file_4b29e274836e path=.context/brain/HARNESS_REGISTRY.md domain=docs lang=markdown lines=20 bytes=1180 mtime=2026-04-11T23:46:58.142679+00:00 sha1=5a29edb2d353e3117e7e904191ef4dadfd322309
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_4b29e274836e
-
----
-<a id="file_d833c436f547"></a>
-FILE_START id=file_d833c436f547 path=.context/brain/MASTER_FLOW.md domain=docs lang=markdown lines=86 bytes=4370 mtime=2026-04-11T02:59:02.297440+00:00 sha1=06ce6786a149620314b57f8231142f652d4fc412
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_d833c436f547
-
----
-<a id="file_d124f6374cab"></a>
-FILE_START id=file_d124f6374cab path=.context/brain/PRD.md domain=docs lang=markdown lines=67 bytes=2446 mtime=2026-04-11T01:31:37.755946+00:00 sha1=b5c06bc8a67d2a788cc8263f03971f379d04e92e
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_d124f6374cab
-
----
-<a id="file_9fe16e5591f0"></a>
-FILE_START id=file_9fe16e5591f0 path=.context/brain/PROMPT_LIBRARY.md domain=docs lang=markdown lines=154 bytes=6687 mtime=2026-04-11T02:28:52.575335+00:00 sha1=aa3419c1efa08687a7c551dc44f40b504b422353
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_9fe16e5591f0
-
----
-<a id="file_c94f001202db"></a>
-FILE_START id=file_c94f001202db path=.context/brain/ROADMAP.md domain=docs lang=markdown lines=1 bytes=93 mtime=2026-04-10T23:54:29.772397+00:00 sha1=6ce5abcb8d49b1e31f741778b50586f3cb5c2e24
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_c94f001202db
-
----
-<a id="file_cd6526d17218"></a>
-FILE_START id=file_cd6526d17218 path=.context/brain/RULES.md domain=docs lang=markdown lines=82 bytes=5460 mtime=2026-04-12T00:33:15.586634+00:00 sha1=270b5c863f91b42f2ef229b18bd87218d95aee53
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_cd6526d17218
-
----
-<a id="file_450d7ec70909"></a>
-FILE_START id=file_450d7ec70909 path=.context/brain/TLC_INTEGRATION.md domain=docs lang=markdown lines=32 bytes=1739 mtime=2026-04-11T02:29:02.337886+00:00 sha1=35e6506fdaaa427e4d5795b83709f4f9da37fc2d
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_450d7ec70909
-
----
-<a id="file_9b6470da8849"></a>
-FILE_START id=file_9b6470da8849 path=.context/maintenance/ARCHITECTURE.md domain=docs lang=markdown lines=1 bytes=93 mtime=2026-04-10T23:54:29.800876+00:00 sha1=6ce5abcb8d49b1e31f741778b50586f3cb5c2e24
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_9b6470da8849
-
----
-<a id="file_019509328844"></a>
-FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=69 bytes=2335 mtime=2026-04-12T02:53:33.658657+00:00 sha1=4ec7bccab619b92952bef272d9518e7176fb041b
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_019509328844
-
----
-<a id="file_d069d4f2ebef"></a>
-FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=30 bytes=303 mtime=2026-04-12T02:53:33.221751+00:00 sha1=9c19bd0ca0e1f3cd18a7b36ebcccdce4f1aa0b63
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_d069d4f2ebef
-
----
-<a id="file_0858a02cf53f"></a>
-FILE_START id=file_0858a02cf53f path=.context/maintenance/TESTS.md domain=docs lang=markdown lines=1 bytes=93 mtime=2026-04-10T23:54:29.794384+00:00 sha1=6ce5abcb8d49b1e31f741778b50586f3cb5c2e24
-
-```
-CHUNK_END id=c079935d382e_c001
-CHUNK_START id=c079935d382e_c002 start_line=301 end_line=488
-```markdown
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_0858a02cf53f
-
----
-<a id="file_eaebfc593089"></a>
-FILE_START id=file_eaebfc593089 path=.context/maintenance/_archive_context/raw/stripe_docs.md domain=docs lang=markdown lines=4 bytes=184 mtime=2026-04-12T00:21:42.178827+00:00 sha1=a8ca349e81fe936c2d0c8e39de0d94e9f16ae2eb
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_eaebfc593089
-
----
-<a id="file_618e9f7de1e8"></a>
-FILE_START id=file_618e9f7de1e8 path=.context/maintenance/_archive_context/raw/template_inbox.md domain=docs lang=markdown lines=17 bytes=585 mtime=2026-04-12T00:21:32.947043+00:00 sha1=e7906c232c8df4de3d7839e53291826495d57cd8
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_618e9f7de1e8
-
----
-<a id="file_3707c3aa3239"></a>
-FILE_START id=file_3707c3aa3239 path=.context/maintenance/migrations/001_init.sql domain=db lang=sql lines=12 bytes=450 mtime=2026-04-12T02:14:15.429255+00:00 sha1=a4e5465634cd084041656f59f9093be09f5a8fc9
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_3707c3aa3239
-
----
-<a id="file_a5c71962029a"></a>
-FILE_START id=file_a5c71962029a path=.context/maintenance/rebuild_guide.md domain=docs lang=markdown lines=63 bytes=1988 mtime=2026-04-11T00:43:15.350621+00:00 sha1=28659c89fedac91d1973177b8cedcf60ad5f622a
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_a5c71962029a
-
----
-<a id="file_54a6a553d34b"></a>
-FILE_START id=file_54a6a553d34b path=.context/maintenance/rx-anatomy.md domain=docs lang=markdown lines=27 bytes=1336 mtime=2026-04-11T02:26:43.636538+00:00 sha1=adb37745498ccfa61a2b793c10240a2b20d3d716
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_54a6a553d34b
-
----
-<a id="file_ca8da4f87431"></a>
-FILE_START id=file_ca8da4f87431 path=.context/maintenance/rx-biology.md domain=docs lang=markdown lines=1 bytes=93 mtime=2026-04-10T23:54:29.789386+00:00 sha1=6ce5abcb8d49b1e31f741778b50586f3cb5c2e24
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_ca8da4f87431
-
----
-<a id="file_91d5627a725e"></a>
-FILE_START id=file_91d5627a725e path=.context/maintenance/schema.sql domain=source lang=sql lines=9 bytes=334 mtime=2026-04-11T01:25:08.344668+00:00 sha1=1814fd1f837ef5f31c2a6031222ba3055f9fd3c8
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_91d5627a725e
-
----
-<a id="file_068a21d64bec"></a>
-FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=37 bytes=1443 mtime=2026-04-12T02:53:34.069247+00:00 sha1=75e9b4255496301209862ce709a568a4b1a4770d
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_068a21d64bec
-
----
-<a id="file_e477c4c5a96c"></a>
-FILE_START id=file_e477c4c5a96c path=.github/workflows/context-health.yml domain=config lang=yaml lines=26 bytes=693 mtime=2026-04-11T00:55:20.246274+00:00 sha1=163dd12b4c98d348f80986ea59afcb4604dc9e0e
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_e477c4c5a96c
-
----
-<a id="file_3adfd36c1559"></a>
-FILE_START id=file_3adfd36c1559 path=.husky/_/husky.sh domain=source lang=bash lines=9 bytes=160 mtime=2026-04-11T01:12:06.610441+00:00 sha1=e8c52ee10c10eaa739ae7eca69c373dd437d9f33
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_3adfd36c1559
-
----
-<a id="file_3c39185314df"></a>
-FILE_START id=file_3c39185314df path=.specs/features/hok-advanced-modules/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-12T02:53:33.661113+00:00 sha1=8628e643ca9dec24a77017bd390e043c561ee427
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_3c39185314df
-
----
-<a id="file_8746e653f22c"></a>
-FILE_START id=file_8746e653f22c path=.specs/features/hok-advanced-modules/spec.md domain=docs lang=markdown lines=24 bytes=1573 mtime=2026-04-12T02:10:32.710904+00:00 sha1=4afa0f114364110370467d1033c99a6a49058746
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_8746e653f22c
-
----
-<a id="file_8ec9a00bfd09"></a>
-FILE_START id=file_8ec9a00bfd09 path=README.md domain=docs lang=markdown lines=92 bytes=4017 mtime=2026-04-12T02:50:09.095504+00:00 sha1=8dd17ddb4907fab2890fd5706df07610aeb55c24
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_8ec9a00bfd09
-
----
-<a id="file_4efb6293109d"></a>
-FILE_START id=file_4efb6293109d path=README_CONTEXT.md domain=docs lang=markdown lines=123 bytes=5644 mtime=2026-04-12T02:50:25.829553+00:00 sha1=712d7adc5114926d1dec5ba37d7ff87141ef0b7b
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_4efb6293109d
-
----
-<a id="file_19e76e009f38"></a>
-FILE_START id=file_19e76e009f38 path=TEMPLATE_MIGRATION.md domain=docs lang=markdown lines=59 bytes=1926 mtime=2026-04-12T03:07:09.407660+00:00 sha1=20f937b7b3cfaf5e0b5beb46c68112ca84ce7d5e
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_19e76e009f38
-
----
-<a id="file_f6f7100f063b"></a>
-FILE_START id=file_f6f7100f063b path=VERSION.md domain=docs lang=markdown lines=11 bytes=416 mtime=2026-04-12T00:57:24.540624+00:00 sha1=9ddd807983a0b3be0e492db5fb2a29f9bfe014f8
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_f6f7100f063b
-
----
-<a id="file_1f98938d3cd9"></a>
-FILE_START id=file_1f98938d3cd9 path=_modoLight/Modo_Light.md domain=docs lang=markdown lines=140 bytes=5961 mtime=2026-04-11T03:09:45.201801+00:00 sha1=267fea8bb9a67840095155f98e5860cd0cf82760
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_1f98938d3cd9
-
----
-<a id="file_c3916196f58f"></a>
-FILE_START id=file_c3916196f58f path=captura_projeto.py domain=source lang=python lines=399 bytes=16353 mtime=2026-04-12T03:17:11.664666+00:00 sha1=8a148e7ad8f5ce1f7855b502617105b6247112e3
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_c3916196f58f
-
----
-<a id="file_aa78525fb574"></a>
-FILE_START id=file_aa78525fb574 path=contexto.md domain=docs lang=markdown lines=480 bytes=24728 mtime=2026-04-12T03:14:11.257218+00:00 sha1=89ec80e48f9bdd9fa7d52508825c16a5edbaa9a3
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_aa78525fb574
-
----
-<a id="file_c59135753d26"></a>
-FILE_START id=file_c59135753d26 path=init_ai_project.sh domain=source lang=bash lines=155 bytes=5469 mtime=2026-04-11T02:29:46.289656+00:00 sha1=18e30807c6ef1ce94e3619f19f8ec2bd93f77c52
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_c59135753d26
-
----
-<a id="file_fa288d1472d2"></a>
-FILE_START id=file_fa288d1472d2 path=package-lock.json domain=config lang=json lines=32 bytes=785 mtime=2026-04-11T01:12:03.334672+00:00 sha1=e8450c2eeca43eabd30597b19a6cb24ad70fcddb
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_fa288d1472d2
-
----
-<a id="file_7030d0b2f71b"></a>
-FILE_START id=file_7030d0b2f71b path=package.json domain=config lang=json lines=33 bytes=1178 mtime=2026-04-12T02:15:21.293639+00:00 sha1=ccfed0b4b64de88e6d54ceec22c07086f30f140a
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_7030d0b2f71b
-
----
-<a id="file_a9422a4b7476"></a>
-FILE_START id=file_a9422a4b7476 path=planos/implementation_plan.md domain=docs lang=markdown lines=77 bytes=3338 mtime=2026-04-10T23:15:28.184032+00:00 sha1=37ad3605aae584ee4398621d92edd7b76058413e
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_a9422a4b7476
-
----
-<a id="file_32db3e3783df"></a>
-FILE_START id=file_32db3e3783df path=planos/master_plan.md domain=docs lang=markdown lines=88 bytes=3620 mtime=2026-04-10T23:48:33.652301+00:00 sha1=9269f2e75a4300b61121c540eb8c3e57ba44329f
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_32db3e3783df
-
----
-<a id="file_2a788cb45159"></a>
-FILE_START id=file_2a788cb45159 path=planos/multi_agent_plan.md domain=docs lang=markdown lines=62 bytes=2824 mtime=2026-04-10T23:32:27.825062+00:00 sha1=71ea8355ff980c67c66959bec1e4782108bad081
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_2a788cb45159
-
----
-<a id="file_7bd2d6af54a4"></a>
-FILE_START id=file_7bd2d6af54a4 path=planos/plan_hok_advanced_security_and_db.md domain=docs lang=markdown lines=54 bytes=2567 mtime=2026-04-12T01:55:31.645679+00:00 sha1=cf3305760cc94cf4ce1e359641fe889b16696354
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_7bd2d6af54a4
-
----
-<a id="file_44c34e6237da"></a>
-FILE_START id=file_44c34e6237da path=planos/roadmap_reactive_hok_v2_v3.md domain=docs lang=markdown lines=43 bytes=2070 mtime=2026-04-12T00:16:01.408542+00:00 sha1=bcab4c7525fa8c4ba078bf84d63965f3e60d3e23
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_44c34e6237da
-
----
-<a id="file_6a4bd0586b20"></a>
-FILE_START id=file_6a4bd0586b20 path=planos/walkthrough_hok_triad.md domain=docs lang=markdown lines=32 bytes=2243 mtime=2026-04-12T00:05:31.404227+00:00 sha1=0bbfa5d700f335f10599d185d0fa8e788cf93cac
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_6a4bd0586b20
-
----
-<a id="file_350a79f8b829"></a>
-FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=70 bytes=2796 mtime=2026-04-12T02:17:34.844708+00:00 sha1=9186d63c21dc716dfb7f4fc04a3375f0fc081f46
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_350a79f8b829
-
----
-<a id="file_86bac54f32d7"></a>
-FILE_START id=file_86bac54f32d7 path=run_context.sh domain=source lang=bash lines=38 bytes=1386 mtime=2026-04-11T02:57:36.569915+00:00 sha1=e6604f22108387e02990d6bc08fc703d62cb82f6
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_86bac54f32d7
-
----
-<a id="file_4c6bbd05056e"></a>
-FILE_START id=file_4c6bbd05056e path=tests/test_context.py domain=source lang=python lines=89 bytes=3753 mtime=2026-04-11T01:08:20.157384+00:00 sha1=7179930319fcc060058fbd50dcb63770bc05bc28
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_4c6bbd05056e
-
-```
-CHUNK_END id=c079935d382e_c002
-FILE_END id=file_c079935d382e
 
 ---
 <a id="file_c59135753d26"></a>
@@ -3817,48 +3357,6 @@ warn "Acesse README_CONTEXT.md para o manual de operacao."
 ```
 CHUNK_END id=c59135753d26_c001
 FILE_END id=file_c59135753d26
-
----
-<a id="file_fa288d1472d2"></a>
-FILE_START id=file_fa288d1472d2 path=package-lock.json domain=config lang=json lines=32 bytes=785 mtime=2026-04-11T01:12:03.334672+00:00 sha1=e8450c2eeca43eabd30597b19a6cb24ad70fcddb
-CHUNK_START id=fa288d1472d2_c001 start_line=1 end_line=32
-```json
-{
-  "name": "template-ai-context-governance",
-  "version": "2.0.0",
-  "lockfileVersion": 3,
-  "requires": true,
-  "packages": {
-    "": {
-      "name": "template-ai-context-governance",
-      "version": "2.0.0",
-      "license": "MIT",
-      "devDependencies": {
-        "husky": "^9.1.7"
-      }
-    },
-    "node_modules/husky": {
-      "version": "9.1.7",
-      "resolved": "https://registry.npmjs.org/husky/-/husky-9.1.7.tgz",
-      "integrity": "sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==",
-      "dev": true,
-      "license": "MIT",
-      "bin": {
-        "husky": "bin.js"
-      },
-      "engines": {
-        "node": ">=18"
-      },
-      "funding": {
-        "url": "https://github.com/sponsors/typicode"
-      }
-    }
-  }
-}
-
-```
-CHUNK_END id=fa288d1472d2_c001
-FILE_END id=file_fa288d1472d2
 
 ---
 <a id="file_7030d0b2f71b"></a>

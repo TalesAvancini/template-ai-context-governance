@@ -25,6 +25,11 @@ PASTAS_IGNORAR = {
     "captura_projeto", # 📝 Ignorar a própria pasta do utilitário
 }
 
+ARQUIVOS_IGNORAR = {
+    "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "composer.lock",
+    "contexto.md", "contexto_*.md", ".*.lock"
+}
+
 PASTAS_CORE = {
     # 📝 Defina as pastas ARQUITETURALMENTE essenciais para a IA entender seu projeto
     # Ex: {"src", "lib", "api", "supabase", ".context", ".specs"}
@@ -83,6 +88,7 @@ class BundleConfig:
     emit_symbol_index: bool = False
     emit_import_map: bool = False
     mask_secrets: bool = False
+    include_lockfiles: bool = False
 
 @dataclass(frozen=True)
 class Chunk:
@@ -213,6 +219,17 @@ def collect_files(config: BundleConfig) -> tuple[FileRecord, ...]:
                 continue
             if config.exclude_core and is_root and top in PASTAS_CORE:
                 continue
+            
+            # 🛡️ Blindagem contra Self-Capture e Locks
+            is_output_file = (filename == config.output or filename == get_dynamic_filename(config))
+            is_ignored_file = any(fnmatch(filename.lower(), pat.lower()) for pat in ARQUIVOS_IGNORAR)
+            is_lockfile = ("lock" in filename.lower() and path.suffix in {".json", ".yaml", ".yml", ".lock"})
+
+            if is_output_file: 
+                continue
+            if is_ignored_file and not (is_lockfile and config.include_lockfiles):
+                continue
+
             if is_sensitive_file(path):
                 continue
             if not is_text_file(path):
@@ -379,6 +396,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--emit-symbol-index", action="store_true", help="Adiciona SYMBOL_INDEX")
     parser.add_argument("--emit-import-map", action="store_true", help="Adiciona IMPORT_MAP_MIN")
     parser.add_argument("--mask-secrets", action="store_true", help="Ofusca segredos no conteudo")
+    parser.add_argument("--include-lockfiles", action="store_true", help="Força a inclusão de package-lock.json e similares")
     return parser.parse_args()
 
 def main() -> None:
@@ -389,7 +407,8 @@ def main() -> None:
         profile=args.profile, toc_only=args.toc_only,
         max_lines_per_file=args.max_lines_per_file,
         emit_symbol_index=args.emit_symbol_index,
-        emit_import_map=args.emit_import_map, mask_secrets=args.mask_secrets
+        emit_import_map=args.emit_import_map, mask_secrets=args.mask_secrets,
+        include_lockfiles=args.include_lockfiles
     )
     out = write_output(config)
     print(f"\n[OK] Gerado: {out}")
