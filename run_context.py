@@ -1,20 +1,17 @@
 #!/usr/bin/env python3
 """
-🐍 run_context.py - Gestor Universal de Contexto (v2.2.1 Premium)
-Orquestrador multiplataforma para validacao, sincronia e limpeza.
+🐍 run_context.py - Gestor Universal de Contexto v2.3 (Fail-Fast Pipeline)
+Sequencia otimizada: validate → scan-secrets → sync → check-migrations → harness → lint(--) → health
 """
 import sys
 import subprocess
 from pathlib import Path
 
-# Configurações
 BASE_DIR = Path(__file__).parent
 SCRIPTS_DIR = BASE_DIR / ".context" / "_scripts"
 
 def run_script(name, args=None):
-    if args is None:
-        args = []
-        
+    if args is None: args = []
     script_path = SCRIPTS_DIR / name
     if not script_path.exists():
         print(f"[ERROR] Script {name} nao encontrado em {SCRIPTS_DIR}")
@@ -22,7 +19,6 @@ def run_script(name, args=None):
     
     print(f"[RUN] Executando {name}...")
     try:
-        # Usa o mesmo interpretador atual para garantir consistência
         subprocess.run([sys.executable, str(script_path)] + args, check=True)
         print(f"[OK] Concluido: {name}\n")
     except subprocess.CalledProcessError:
@@ -31,7 +27,7 @@ def run_script(name, args=None):
 
 def main():
     if len(sys.argv) < 2:
-        print("[USAGE] python run_context.py [validate|purge|sync|cleanup|all|help]")
+        print("[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|oracle|health|scan-secrets|check-migrations|all|help]")
         sys.exit(1)
 
     cmd = sys.argv[1]
@@ -48,18 +44,20 @@ def main():
     elif cmd == "health":  run_script("health_sync.py", extra_args)
     elif cmd == "scan-secrets": run_script("secrets_scanner.py", extra_args)
     elif cmd == "check-migrations": run_script("migration_registry.py", extra_args)
+    
     elif cmd == "all":
+        # Fail-Fast Pipeline (CRÍTICO APENAS)
         run_script("validate_context.py")
         run_script("secrets_scanner.py")
         run_script("sync_project.py")
         run_script("migration_registry.py")
-        run_script("cleanup_specs.py")
         run_script("harness_runner.py")
         print("[RUN] Executando lint_wiki.py (Strict)...")
         run_script("lint_wiki.py", ["--strict"])
         print("[RUN] Sincronizando Health Dashboard...")
         run_script("health_sync.py")
         print("[DONE] Pipeline H.O.K. + Security + Migrations + Health concluido com sucesso.")
+        
     elif cmd in ["help", "--help", "-h"]:
         print("Comandos: validate | purge | sync | cleanup | harness | lint | oracle | health | scan-secrets | check-migrations | all")
     else:

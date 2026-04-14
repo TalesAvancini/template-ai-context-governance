@@ -18,9 +18,8 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Run Context Validation
-        # No GitHub Actions (Linux), usamos python3
+      - name: Run Context Validation (Exit Code Check)
         run: python3 .context/_scripts/validate_context.py
 
-      - name: Check Journal Limits
-        run: python3 .context/_scripts/validate_context.py | grep -q "SUCCESS" || (echo "❌ Contexto quebrado ou Journal excedido!" && exit 1)
+      - name: Run Secrets Scan
+        run: python3 .context/_scripts/secrets_scanner.py

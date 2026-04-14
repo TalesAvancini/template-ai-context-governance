@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-🔍 context_oracle.py — Oráculo de consulta local (Oracle Layer)
+🔍 context_oracle.py — Oráculo de consulta local (Unicode-PT-BR Optimized)
 Indexa arquivos-chave da .context/ e retorna snippets + confianca.
 """
 import re, sys, json, os
@@ -20,14 +20,15 @@ def build_index():
         p = CONTEXT_DIR / rel
         if not p.exists(): continue
         text = p.read_text(encoding="utf-8")
-        words = re.findall(r'\b[a-zA-Z]{3,}\b', text.lower())
+        # \w em Python 3 já é Unicode-aware (inclui acentos)
+        words = re.findall(r'\b\w{3,}\b', text.lower())
         for w in set(words):
             index.setdefault(w, []).append(rel)
     return index
 
 def query_oracle(question, role="unknown"):
     idx = build_index()
-    keywords = set(re.findall(r'\b[a-zA-Z]{3,}\b', question.lower()))
+    keywords = set(re.findall(r'\b\w{3,}\b', question.lower()))
     hits = Counter()
     for kw in keywords:
         for file in idx.get(kw, []):
@@ -43,8 +44,8 @@ def query_oracle(question, role="unknown"):
         for kw in keywords:
             idx_kw = content.lower().find(kw)
             if idx_kw != -1:
-                start = max(0, idx_kw - 80)
-                end = min(len(content), idx_kw + 80)
+                start = max(0, idx_kw - 100)
+                end = min(len(content), idx_kw + 100)
                 snippets.append(f"DOC {f}: `...{content[start:end].strip()}...`")
                 break
                 
@@ -59,7 +60,6 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Uso: python context_oracle.py \"sua pergunta aqui\"")
         sys.exit(1)
-    # Ensure Windows compatibility by not printing raw json if it contains unmappable chars
     res = query_oracle(sys.argv[1], os.environ.get("AGENT_ROLE", "manual"))
     try:
         print(json.dumps(res, indent=2, ensure_ascii=True))
