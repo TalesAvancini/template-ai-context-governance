@@ -7,7 +7,18 @@ Status: Ativo
 # 📜 RULES.md — Template Universal de Contexto & Governança
 **Projeto:** [NOME DO PROJETO]  
 **Arquitetura:** AI-Agent Driven (Layered Context Architecture)  
+**PROJECT_MODE:** `[BOOTSTRAP]` *(Fases finitas: BOOTSTRAP, HARDENING, PRODUCTION)*
+
 > **Conceito Central:** A pasta `.context` é a **fonte da verdade** (Single Source of Truth). O projeto é dividido em camadas para garantir escala, foco e rastreabilidade.
+
+---
+
+## 🏗️ 0. Máquina de Estados do Projeto (`PROJECT_MODE`)
+O template governa a si mesmo e ao projeto através de três estados rígidos:
+1. **`[BOOTSTRAP]`**: Focado na criação da infraestrutura do template, documentação core (RULES, AGENTS) e scripts de governança (INCEPTION/MARKET).
+2. **`[HARDENING]`**: Ajustes em segurança (ci/cd, secret-scanners), estabilização e redução de dívida técnica antes de lançar o app.
+3. **`[PRODUCTION]`**: Desenvolvimento maduro de features.
+> ⚠️ **Regra de Transição:** Qualquer mudança de estado deve ser registrada no `JOURNAL.md` via `[handoff]` e validada com `npm run context:all`.
 
 ---
 

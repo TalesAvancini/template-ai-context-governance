@@ -1,6 +1,6 @@
 ---
 Criado em: 2026-04-10 20:50
-Ultima Atualizacao: 2026-04-14 09:48
+Ultima Atualizacao: 2026-04-14 10:39
 Status: Ativo
 ---
 
@@ -12,15 +12,15 @@ Status: Ativo
 | Metrica | Valor Atual | Limite Ideal | Pilar | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **Manutencao** | | | | |
-| Linhas do Journal | 84 | 600 | Tracker | [OK] |
-| Carga do Journal | 2k chars | 50k chars | Tracker | [OK] |
+| Linhas do Journal | 95 | 600 | Tracker | [OK] |
+| Carga do Journal | 3k chars | 50k chars | Tracker | [OK] |
 | **Cognitivo** | | | | |
 | Estimativa Tokens | ~18k | 128k (Max) | Eficiencia | [OK] |
 | **Consistencia** | | | | |
 | Tabelas no Schema | 1 | N/A | DB-First | [OK] |
 | Migrations Pendentes | 1 file(s) | N/A | DB-First | [OK] |
 | Ultimo Harness | Role Check | Pass/Fail | Integridade | [PASS] |
-| Ultima Sincronia | 2026-04-14 09:48 | Real-Time | Automacao | [OK] |
+| Ultima Sincronia | 2026-04-14 10:39 | Real-Time | Automacao | [OK] |
 <!-- HEALTH_TABLE_END -->
 
 ---
