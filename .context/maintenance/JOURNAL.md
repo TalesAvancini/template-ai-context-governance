@@ -160,3 +160,24 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:meta-inception
+- **Detalhe:** enrichment: Seção Critical Dependencies obrigatória para PRDs com integrações/compliance
+
+## [HARNESS-FAIL] Report | spec:meta-inception
+- **Detalhe:** enrichment: Dependencies sem lastro em market/: ['- LGPD (faltando fonte)']
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+
+## [2026-04-15 16:17] release: Spec Enricher v2.4.1-Hardened
+- **Status:** Ativado e validado via H.O.K.
+- **Ritual:** @vision-architect ⮕ @spec-enricher (Exit 2) ⮕ @spec-driver.
+- **Harness:** Adicionada validação de contract de Critical Dependencies.
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid

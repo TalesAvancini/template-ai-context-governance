@@ -39,7 +39,7 @@ def run_script(name, args=None):
 def main():
     if len(sys.argv) < 2:
         print(
-            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|oracle|health|scan-secrets|check-migrations|all|help]"
+            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|oracle|health|scan-secrets|check-migrations|enrich|all|help]"
         )
         sys.exit(1)
 
@@ -68,6 +68,22 @@ def main():
         run_script("secrets_scanner.py", extra_args)
     elif cmd == "check-migrations":
         run_script("migration_registry.py", extra_args)
+
+    elif cmd == "enrich":
+        print("[RUN] Executando enrich_context.py...")
+        try:
+            res = subprocess.run([sys.executable, str(SCRIPTS_DIR / "enrich_context.py")], check=False)
+            if res.returncode == 0:
+                print("[OK] Concluído: enrich_context.py\n")
+            elif res.returncode == 2:
+                print("[STRATEGIC BLOCK] Research needed. Pipeline local TRAVADO até resolução.\n")
+                sys.exit(2)
+            else:
+                print(f"[FATAL] Falha estrutural em enrich_context.py. Exit: {res.returncode}\n")
+                sys.exit(1)
+        except Exception as e:
+            print(f"[ERROR] Erro na execução: {e}\n")
+            sys.exit(1)
 
     elif cmd == "all":
         # Pipeline Fail-Fast (Hardened v2.4.1)

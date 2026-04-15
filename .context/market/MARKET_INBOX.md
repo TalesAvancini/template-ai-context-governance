@@ -8,3 +8,4 @@ type: INBOX
 | Data | Gap/Gap de Pesquisa | Status | Fonte Relacionada |
 |------|--------------------|--------|-------------------|
 | [Data] | [Descrição do Gap] | `[TODO: research]` | [Referência] |
+| Integração LGPD | `> Fonte: raw/docs_oficiais.md` | Crítica | 🔍 Pesquisa | 2026-04-15

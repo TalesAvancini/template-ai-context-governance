@@ -56,6 +56,37 @@ def check_strategic_alignment():
     if violations: return False, f"PRD viola boundaries estrategicas: {violations}"
     return True, "Strategic alignment OK"
 
+def check_enrichment_integrity(prd_path: Path):
+    """Valida seção Critical Dependencies semanticamente (bullet + Fonte: + market/)."""
+    if not prd_path.exists(): return True, "PRD ausente (skip)"
+    text = prd_path.read_text(encoding="utf-8")
+    text_lower = text.lower()
+
+    # Só exige a seção se o PRD mencionar integrações, compliance ou APIs externas
+    trigger_keywords = [
+        "integração", "integracao", "integration", 
+        "compliance", "api externa", "external api", 
+        "stripe", "lgpd", "meta", "aws", "webhook"
+    ]
+    if not any(kw in text_lower for kw in trigger_keywords):
+        return True, "Sem menção a integrações/compliance (skip)"
+
+    section_match = re.search(r'^## 🚨 Critical Dependencies\s*\n(.*?)(?=\n## |\Z)', text, re.I | re.DOTALL | re.MULTILINE)
+    if not section_match: 
+        return False, "Seção Critical Dependencies obrigatória para PRDs com integrações/compliance"
+    
+    deps_text = section_match.group(1)
+    missing = []
+    for line in deps_text.splitlines():
+        line = line.strip()
+        if line.startswith("-"):
+            # Validação semântica: deve conter "Fonte:" e "market/"
+            if "fonte:" not in line.lower() or "market/" not in line.lower():
+                missing.append(line[:60])
+                
+    if missing: return False, f"Dependencies sem lastro em market/: {missing}"
+    return True, "Enrichment contract OK"
+
 def log_harness(status, detail, spec_name="unknown"):
     """Registra no JOURNAL.md de forma compacta e atomica"""
     entry = f"\n## [HARNESS-{status.upper()}] Report | spec:{spec_name}\n- **Detalhe:** {detail}\n"
@@ -98,7 +129,8 @@ def main():
     checks = {
         "schema": check_schema_contract(spec_path),
         "handoff": check_handoff_integrity(JOURNAL.read_text(encoding="utf-8") if JOURNAL.exists() else ""),
-        "strategy": check_strategic_alignment()
+        "strategy": check_strategic_alignment(),
+        "enrichment": check_enrichment_integrity(PRD)
     }
     
     fails = [f"{k}: {v[1]}" for k, v in checks.items() if not v[0]]

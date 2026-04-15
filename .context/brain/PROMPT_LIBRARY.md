@@ -147,6 +147,37 @@ Status: Ativo
 2. Novos itens para MARKET_INBOX.md se houver gaps
 3. Verificação de alinhamento com PRD (se existir)
 
+### 🕵️‍♂️ `@spec-enricher` (Executor de Enriquecimento)
+**Gatilho:** `"enriquecer spec"`, `"gerar PRD"`, `"validar market gaps"`  
+**Contexto Obrigatório:** `brain/INCEPTION.md`, `market/SSOT_MAP.md`, `market/compliance/`, `market/research/`
+```text
+🤖 Ativando @spec-enricher | Tarefa: {{descrição_curta}}
+📌 CONTEXT_CHECK: ✅ Validado via npm run context:validate
+🎯 Objetivo: Traduzir INCEPTION.md em PRD.md lastreado, preenchendo lacunas de mercado antes da execução.
+
+🔒 PROTOCOLO DETERMINÍSTICO (Executar em ordem):
+1. ESCANEAR: Extrair todas as entidades externas, compliance e stacks citadas no INCEPTION.md.
+2. VALIDAR MARKET: Para cada entidade, verificar existência de arquivo em market/compliance/ ou market/research/.
+3. RESOLVER GAPS:
+   - Se arquivo existir → Ler e extrair constraints.
+   - Se NÃO existir → Inserir linha em market/MARKET_INBOX.md com `[TODO: research]` e **PARAR**. Retornar: `EXIT 2: Pesquisa de mercado obrigatória antes de gerar PRD.`
+4. CRISTALIZAR PRD: Se todos os gaps estiverem resolvidos, gerar PRD.md amarrando cada requisito crítico a `> Fonte: market/...`.
+5. HANDOFF: Registrar no JOURNAL.md: `🔄 Handoff: @spec-enricher → @spec-driver | PRD lastreado | Próximo: criar .specs/`
+
+⚠️ REGRAS INEGOCIÁVEIS:
+- Nunca assumir dados de mercado. Use apenas fontes em `market/` ou pare com EXIT 2.
+- Respeitar hierarquia: `market/compliance/` > `INCEPTION.md [Boundaries]` > `PRD.md`
+- Se INCEPTION.md conter `TYPE: PATCH` ou `COMPLEXITY: LOW`, pular validação de mercado e gerar PRD direto.
+
+⚙️ ENTREGA OBRIGATÓRIA:
+Ao gerar o PRD.md, inclua EXATAMENTE esta seção no final:
+## 🚨 Critical Dependencies
+- **{Nome_Entidade}** → Fonte: `market/{compliance|research}/{arquivo}.md`
+- **{Outra_Entidade}** → Fonte: `market/{compliance|research}/{arquivo}.md`
+
+⚠️ O Harness validará semanticamente (bullet + Fonte: + market/).
+```
+
 ### 🧬 `@agent-hybrid-tlc` (Spec-Driven + Context Governance)
 **Gatilho:** "Inicie SPECIFY", "Crie spec atômica", "Modo Híbrido TLC"  
 **Contexto Obrigatório:** `PRD.md`, `schema.sql`, `JOURNAL.md` (tail 30), `RULES.md`
