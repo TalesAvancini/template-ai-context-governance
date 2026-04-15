@@ -2,12 +2,12 @@
 
 ---
 schema_version: 1
-generated_at: 2026-04-15T17:52:34.173351+00:00
+generated_at: 2026-04-15T19:51:11.868765+00:00
 root: template_inicío_de_projeto
 mode: full
 profile: ai-default
-file_count: 63
-byte_count: 189291
+file_count: 66
+byte_count: 202780
 ignored_dirs:
   - .cache
   - .cursor
@@ -79,6 +79,7 @@ sensitive_rules:
   - `.context/market/economics.md` -> [file_b5d38697335e](#file_b5d38697335e)
   - `.context/monitoring/CONTEXT_HEALTH.md` -> [file_068a21d64bec](#file_068a21d64bec)
   - `.context/specs/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_37fb63b0fac5](#file_37fb63b0fac5)
+  - `.context/specs/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_0511c79bd7d2](#file_0511c79bd7d2)
   - `.specs/features/meta-inception/STATE.md` -> [file_238a0e1da225](#file_238a0e1da225)
   - `.specs/features/meta-inception/spec.md` -> [file_9801af51c558](#file_9801af51c558)
   - `README.md` -> [file_8ec9a00bfd09](#file_8ec9a00bfd09)
@@ -87,6 +88,7 @@ sensitive_rules:
   - `VERSION.md` -> [file_f6f7100f063b](#file_f6f7100f063b)
   - `_modoLight/Modo_Light.md` -> [file_1f98938d3cd9](#file_1f98938d3cd9)
   - `planos/_arquivo_planos/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_80252595b07f](#file_80252595b07f)
+  - `planos/_arquivo_planos/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_482a16303af0](#file_482a16303af0)
   - `planos/_arquivo_planos/implementation_plan.md` -> [file_e7f1855928ad](#file_e7f1855928ad)
   - `planos/_arquivo_planos/master_plan.md` -> [file_2d826d235b59](#file_2d826d235b59)
   - `planos/_arquivo_planos/multi_agent_plan.md` -> [file_9efc22dd3673](#file_9efc22dd3673)
@@ -100,6 +102,7 @@ sensitive_rules:
   - `.context/_scripts/_tz_utils.py` -> [file_dbef1acce0d4](#file_dbef1acce0d4)
   - `.context/_scripts/cleanup_specs.py` -> [file_82cd6bde54ff](#file_82cd6bde54ff)
   - `.context/_scripts/context_oracle.py` -> [file_10081abf87e1](#file_10081abf87e1)
+  - `.context/_scripts/enrich_context.py` -> [file_e94b4e40315c](#file_e94b4e40315c)
   - `.context/_scripts/harness_runner.py` -> [file_1edef35c2f56](#file_1edef35c2f56)
   - `.context/_scripts/health_sync.py` -> [file_a642d240b9ab](#file_a642d240b9ab)
   - `.context/_scripts/lint_wiki.py` -> [file_ab41b07fb3fb](#file_ab41b07fb3fb)
@@ -120,6 +123,7 @@ sensitive_rules:
 - `.context/_scripts/_tz_utils.py` -> [file_dbef1acce0d4](#file_dbef1acce0d4)
 - `.context/_scripts/cleanup_specs.py` -> [file_82cd6bde54ff](#file_82cd6bde54ff)
 - `.context/_scripts/context_oracle.py` -> [file_10081abf87e1](#file_10081abf87e1)
+- `.context/_scripts/enrich_context.py` -> [file_e94b4e40315c](#file_e94b4e40315c)
 - `.context/_scripts/harness_runner.py` -> [file_1edef35c2f56](#file_1edef35c2f56)
 - `.context/_scripts/health_sync.py` -> [file_a642d240b9ab](#file_a642d240b9ab)
 - `.context/_scripts/lint_wiki.py` -> [file_ab41b07fb3fb](#file_ab41b07fb3fb)
@@ -155,6 +159,7 @@ sensitive_rules:
 - `.context/market/economics.md` -> [file_b5d38697335e](#file_b5d38697335e)
 - `.context/monitoring/CONTEXT_HEALTH.md` -> [file_068a21d64bec](#file_068a21d64bec)
 - `.context/specs/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_37fb63b0fac5](#file_37fb63b0fac5)
+- `.context/specs/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_0511c79bd7d2](#file_0511c79bd7d2)
 - `.github/workflows/context-health.yml` -> [file_e477c4c5a96c](#file_e477c4c5a96c)
 - `.husky/_/husky.sh` -> [file_3adfd36c1559](#file_3adfd36c1559)
 - `.specs/features/meta-inception/STATE.md` -> [file_238a0e1da225](#file_238a0e1da225)
@@ -168,6 +173,7 @@ sensitive_rules:
 - `init_ai_project.sh` -> [file_c59135753d26](#file_c59135753d26)
 - `package.json` -> [file_7030d0b2f71b](#file_7030d0b2f71b)
 - `planos/_arquivo_planos/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_80252595b07f](#file_80252595b07f)
+- `planos/_arquivo_planos/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_482a16303af0](#file_482a16303af0)
 - `planos/_arquivo_planos/implementation_plan.md` -> [file_e7f1855928ad](#file_e7f1855928ad)
 - `planos/_arquivo_planos/master_plan.md` -> [file_2d826d235b59](#file_2d826d235b59)
 - `planos/_arquivo_planos/multi_agent_plan.md` -> [file_9efc22dd3673](#file_9efc22dd3673)
@@ -180,6 +186,169 @@ sensitive_rules:
 - `run_context.py` -> [file_350a79f8b829](#file_350a79f8b829)
 - `run_context.sh` -> [file_86bac54f32d7](#file_86bac54f32d7)
 - `tests/test_context.py` -> [file_4c6bbd05056e](#file_4c6bbd05056e)
+
+## SYMBOL_INDEX
+- `.context/_scripts/_tz_utils.py`:
+  - `get_now_tz`
+  - `format_ts`
+- `.context/_scripts/cleanup_specs.py`:
+  - `get_specs`
+  - `archive_spec`
+  - `cleanup`
+- `.context/_scripts/context_oracle.py`:
+  - `build_index`
+  - `query_oracle`
+- `.context/_scripts/enrich_context.py`:
+  - `scan_entities`
+  - `check_market_coverage`
+  - `update_inbox`
+  - `main`
+- `.context/_scripts/harness_runner.py`:
+  - `check_schema_contract`
+  - `check_handoff_integrity`
+  - `check_strategic_alignment`
+  - `check_enrichment_integrity`
+  - `log_harness`
+  - `update_state_md`
+  - `main`
+- `.context/_scripts/health_sync.py`:
+  - `count_journal_metrics`
+  - `count_schema_tables`
+  - `count_pending_migrations`
+  - `estimate_tokens`
+  - `update_dashboard`
+- `.context/_scripts/lint_wiki.py`:
+  - `find_raw_sources`
+  - `suggest_source`
+  - `check_wiki`
+- `.context/_scripts/migration_registry.py`:
+  - `validate`
+- `.context/_scripts/purge_journal.py`:
+  - `parse_entries`
+  - `purge_journal`
+- `.context/_scripts/secrets_scanner.py`:
+  - `get_files_to_scan`
+  - `scan`
+- `.context/_scripts/sync_project.py`:
+  - `get_package_deps`
+  - `get_schema_tables`
+  - `sync_requirements`
+- `.context/_scripts/validate_context.py`:
+  - `check_files`
+  - `check_journal_lines`
+  - `estimate_tokens`
+  - `check_registry_structure`
+  - `check_specs_structure`
+  - `validate`
+- `captura_projeto.py`:
+  - `is_text_file`
+  - `is_sensitive_file`
+  - `classify_domain`
+  - `should_include_profile`
+  - `mask_sensitive`
+  - `extract_symbols`
+  - `extract_imports`
+  - `chunk_content`
+  - `make_file_id`
+  - `collect_files`
+  - `mode_name`
+  - `get_dynamic_filename`
+  - `render_frontmatter`
+  - `render_index_by_domain`
+  - `render_index_by_path`
+  - `render_symbols`
+  - `render_imports`
+  - `pick_fence`
+  - `render_file_record`
+  - `generate_context_markdown`
+  - `write_output`
+  - `parse_args`
+  - `main`
+  - `BundleConfig`
+  - `Chunk`
+  - `FileRecord`
+- `run_context.py`:
+  - `run_script`
+  - `main`
+- `tests/test_context.py`:
+  - `TestContextGovernance`
+
+## IMPORT_MAP_MIN
+- `.context/_scripts/_tz_utils.py`:
+  - `os`
+  - `from datetime import datetime, timezone, timedelta`
+- `.context/_scripts/cleanup_specs.py`:
+  - `os`
+  - `shutil`
+  - `time`
+  - `from pathlib import Path`
+  - `from datetime import datetime`
+- `.context/_scripts/context_oracle.py`:
+  - `re, sys, json, os`
+  - `from pathlib import Path`
+  - `from collections import Counter`
+- `.context/_scripts/enrich_context.py`:
+  - `re, sys`
+  - `from datetime import date`
+  - `from pathlib import Path`
+- `.context/_scripts/harness_runner.py`:
+  - `os, re, sys, json`
+  - `from datetime import datetime`
+  - `from pathlib import Path`
+- `.context/_scripts/health_sync.py`:
+  - `re, sys, os`
+  - `from pathlib import Path`
+  - `from datetime import datetime`
+- `.context/_scripts/lint_wiki.py`:
+  - `sys`
+  - `re`
+  - `argparse`
+  - `from pathlib import Path`
+- `.context/_scripts/migration_registry.py`:
+  - `re, sys`
+  - `from pathlib import Path`
+- `.context/_scripts/purge_journal.py`:
+  - `re`
+  - `sys`
+  - `from pathlib import Path`
+  - `from datetime import datetime`
+- `.context/_scripts/secrets_scanner.py`:
+  - `re, sys, subprocess, os`
+  - `from pathlib import Path`
+- `.context/_scripts/sync_project.py`:
+  - `json`
+  - `re`
+  - `sys`
+  - `from pathlib import Path`
+  - `from datetime import datetime`
+- `.context/_scripts/validate_context.py`:
+  - `os`
+  - `sys`
+  - `from pathlib import Path`
+- `captura_projeto.py`:
+  - `argparse`
+  - `hashlib`
+  - `logging`
+  - `mimetypes`
+  - `os`
+  - `re`
+  - `from __future__ import annotations`
+  - `from dataclasses import dataclass`
+  - `from datetime import datetime, timezone`
+  - `from fnmatch import fnmatch`
+  - `from pathlib import Path`
+- `run_context.py`:
+  - `sys`
+  - `subprocess`
+  - `from pathlib import Path`
+- `tests/test_context.py`:
+  - `unittest`
+  - `os`
+  - `shutil`
+  - `tempfile`
+  - `subprocess`
+  - `sys`
+  - `from pathlib import Path`
 
 ---
 <a id="file_dbef1acce0d4"></a>
@@ -398,9 +567,108 @@ CHUNK_END id=10081abf87e1_c001
 FILE_END id=file_10081abf87e1
 
 ---
+<a id="file_e94b4e40315c"></a>
+FILE_START id=file_e94b4e40315c path=.context/_scripts/enrich_context.py domain=source lang=python lines=89 bytes=3454 mtime=2026-04-15T19:13:29.845883+00:00 sha1=2044f09b86c8e6a84daaec96ada0f6d3082bc09d
+CHUNK_START id=e94b4e40315c_c001 start_line=1 end_line=89
+```python
+#!/usr/bin/env python3
+"""
+🕵️‍♂️ enrich_context.py — Valida gaps de mercado e prepara scaffolding.
+Exit: 0 (PRD ready) | 2 (Research needed) | 1 (Structural error)
+"""
+import re, sys
+from datetime import date
+from pathlib import Path
+
+# Configuração de caminhos relativos ao script
+CONTEXT_DIR = Path(__file__).resolve().parents[1]
+INCEPTION = CONTEXT_DIR / "brain" / "INCEPTION.md"
+MARKET = CONTEXT_DIR / "market"
+INBOX = MARKET / "MARKET_INBOX.md"
+
+def scan_entities():
+    if not INCEPTION.exists(): return [], "INCEPTION.md ausente"
+    text = INCEPTION.read_text(encoding="utf-8")
+    # Captura entidades conhecidas (case-insensitive)
+    entities = re.findall(r'(META|Stripe|Supabase|Firebase|AWS|LGPD|PCI|HIPAA|Oracle|MongoDB|PostgreSQL|React|Node|Python)\b', text, re.I)
+    return list(set(entities)), "OK"
+
+def check_market_coverage(entities):
+    """Verifica se entidades críticas possuem lastro REAL em compliance/ ou research/."""
+    missing = []
+    # 🔒 Restringe busca APENAS às pastas de fonte (ignora inbox, ssot, economics)
+    search_paths = [MARKET / "compliance", MARKET / "research"]
+    
+    for e in entities:
+        found = False
+        for search_dir in search_paths:
+            if not search_dir.exists(): continue
+            for p in search_dir.rglob("*.md"):
+                # 1. Check por nome/arquivo (rápido)
+                if e.lower() in p.stem.lower() or e.lower() in p.name.lower():
+                    found = True; break
+                # 2. Check por conteúdo (primeiros 1000 chars para performance)
+                try:
+                    text = p.read_text(encoding="utf-8", errors="ignore")[:1000].lower()
+                    if e.lower() in text:
+                        found = True; break
+                except: continue
+            if found: break
+        if not found:
+            missing.append(e)
+    return missing
+
+def update_inbox(missing):
+    """Registra gaps detectados no MARKET_INBOX.md (uma linha por entidade)."""
+    if not missing: return
+    today = date.today().isoformat()
+    
+    new_entries = ""
+    for e in missing:
+        new_entries += f"| Integração {e} | `> Fonte: raw/docs_oficiais.md` | Crítica | 🔍 Pesquisa | {today}\n"
+    
+    if INBOX.exists():
+        text = INBOX.read_text(encoding="utf-8")
+        # Filtra entradas que já existem para evitar duplicatas
+        final_entries = ""
+        for line in new_entries.strip().split("\n"):
+            if line.split("|")[1].strip() not in text:
+                final_entries += line + "\n"
+        
+        if final_entries:
+            INBOX.write_text(text.rstrip() + "\n" + final_entries, encoding="utf-8")
+    else:
+        header = "# MARKET INBOX\n| Gap | Fonte | Prioridade | Status | Data |\n|-----|-------|------------|--------|------|\n"
+        INBOX.write_text(header + new_entries, encoding="utf-8")
+
+def main():
+    print("[RUN] Spec Enricher (Gap Check)...")
+    entities, status = scan_entities()
+    if status != "OK":
+        print(f"[ERROR] {status}")
+        sys.exit(1)
+
+    missing = check_market_coverage(entities)
+    if missing:
+        update_inbox(missing)
+        print(f"[ACTION] Gaps detectados: {', '.join(missing)}")
+        print("[EXIT 2] Popule market/ e rode 'npm run context:enrich' novamente.")
+        sys.exit(2)
+
+    print("[OK] Market coverage validada. Pronto para cristalização do PRD.")
+    sys.exit(0)
+
+if __name__ == "__main__":
+    main()
+
+```
+CHUNK_END id=e94b4e40315c_c001
+FILE_END id=file_e94b4e40315c
+
+---
 <a id="file_1edef35c2f56"></a>
-FILE_START id=file_1edef35c2f56 path=.context/_scripts/harness_runner.py domain=source lang=python lines=118 bytes=5159 mtime=2026-04-15T17:48:34.914067+00:00 sha1=fbe478d4cd9905da97b325b426966e091a4f0b97
-CHUNK_START id=1edef35c2f56_c001 start_line=1 end_line=118
+FILE_START id=file_1edef35c2f56 path=.context/_scripts/harness_runner.py domain=source lang=python lines=150 bytes=6657 mtime=2026-04-15T19:16:56.367151+00:00 sha1=49a971d8cda6db640896fa52030c75902232df48
+CHUNK_START id=1edef35c2f56_c001 start_line=1 end_line=150
 ```python
 #!/usr/bin/env python3
 """
@@ -460,6 +728,37 @@ def check_strategic_alignment():
     if violations: return False, f"PRD viola boundaries estrategicas: {violations}"
     return True, "Strategic alignment OK"
 
+def check_enrichment_integrity(prd_path: Path):
+    """Valida seção Critical Dependencies semanticamente (bullet + Fonte: + market/)."""
+    if not prd_path.exists(): return True, "PRD ausente (skip)"
+    text = prd_path.read_text(encoding="utf-8")
+    text_lower = text.lower()
+
+    # Só exige a seção se o PRD mencionar integrações, compliance ou APIs externas
+    trigger_keywords = [
+        "integração", "integracao", "integration", 
+        "compliance", "api externa", "external api", 
+        "stripe", "lgpd", "meta", "aws", "webhook"
+    ]
+    if not any(kw in text_lower for kw in trigger_keywords):
+        return True, "Sem menção a integrações/compliance (skip)"
+
+    section_match = re.search(r'^## 🚨 Critical Dependencies\s*\n(.*?)(?=\n## |\Z)', text, re.I | re.DOTALL | re.MULTILINE)
+    if not section_match: 
+        return False, "Seção Critical Dependencies obrigatória para PRDs com integrações/compliance"
+    
+    deps_text = section_match.group(1)
+    missing = []
+    for line in deps_text.splitlines():
+        line = line.strip()
+        if line.startswith("-"):
+            # Validação semântica: deve conter "Fonte:" e "market/"
+            if "fonte:" not in line.lower() or "market/" not in line.lower():
+                missing.append(line[:60])
+                
+    if missing: return False, f"Dependencies sem lastro em market/: {missing}"
+    return True, "Enrichment contract OK"
+
 def log_harness(status, detail, spec_name="unknown"):
     """Registra no JOURNAL.md de forma compacta e atomica"""
     entry = f"\n## [HARNESS-{status.upper()}] Report | spec:{spec_name}\n- **Detalhe:** {detail}\n"
@@ -502,7 +801,8 @@ def main():
     checks = {
         "schema": check_schema_contract(spec_path),
         "handoff": check_handoff_integrity(JOURNAL.read_text(encoding="utf-8") if JOURNAL.exists() else ""),
-        "strategy": check_strategic_alignment()
+        "strategy": check_strategic_alignment(),
+        "enrichment": check_enrichment_integrity(PRD)
     }
     
     fails = [f"{k}: {v[1]}" for k, v in checks.items() if not v[0]]
@@ -1098,8 +1398,8 @@ FILE_END id=file_f122711ba9e1
 
 ---
 <a id="file_1077e9084ea1"></a>
-FILE_START id=file_1077e9084ea1 path=.context/_scripts/validate_context.py domain=source lang=python lines=114 bytes=4014 mtime=2026-04-15T17:48:06.794241+00:00 sha1=ec0daa528ae7e10c84b0e733c01c20f420cf7b39
-CHUNK_START id=1077e9084ea1_c001 start_line=1 end_line=114
+FILE_START id=file_1077e9084ea1 path=.context/_scripts/validate_context.py domain=source lang=python lines=142 bytes=4301 mtime=2026-04-15T18:02:20.660922+00:00 sha1=3f6f1edb61da1fdc0d3ab0ec7796546fadb7703c
+CHUNK_START id=1077e9084ea1_c001 start_line=1 end_line=142
 ```python
 #!/usr/bin/env python3
 """
@@ -1107,6 +1407,7 @@ CHUNK_START id=1077e9084ea1_c001 start_line=1 end_line=114
 Verifica saude do .context, estima consumo de tokens e valida conformidade.
 Retorna exit 1 se houver qualquer alerta ou erro.
 """
+
 import os
 import sys
 from pathlib import Path
@@ -1115,31 +1416,33 @@ SCRIPT_DIR = Path(__file__).parent
 CONTEXT_DIR = SCRIPT_DIR.parent
 
 REQUIRED_FILES = [
-    "brain/RULES.md", 
-    "brain/MASTER_FLOW.md", 
+    "brain/RULES.md",
+    "brain/MASTER_FLOW.md",
     "brain/AGENT_REGISTRY.md",
-    "brain/PRD.md", 
-    "maintenance/JOURNAL.md", 
-    "maintenance/schema.sql", 
-    "maintenance/TECHNICAL_REQUIREMENTS.md"
+    "brain/PRD.md",
+    "maintenance/JOURNAL.md",
+    "maintenance/schema.sql",
+    "maintenance/TECHNICAL_REQUIREMENTS.md",
 ]
 
-OPTIONAL_FILES = [
-    "brain/INCEPTION.md"
-]
+OPTIONAL_FILES = ["brain/INCEPTION.md"]
 
 
 JOURNAL_MAX_LINES = 600
 TOKEN_WARN_THRESHOLD_CHARS = 400_000
 
+
 def check_files():
     return [f for f in REQUIRED_FILES if not (CONTEXT_DIR / f).exists()]
 
+
 def check_journal_lines():
     journal = CONTEXT_DIR / "maintenance/JOURNAL.md"
-    if not journal.exists(): return 0, True
+    if not journal.exists():
+        return 0, True
     lines = journal.read_text(encoding="utf-8").splitlines()
     return len(lines), len(lines) <= JOURNAL_MAX_LINES
+
 
 def estimate_tokens():
     total_chars = 0
@@ -1147,34 +1450,43 @@ def estimate_tokens():
         path = CONTEXT_DIR / f
         if path.exists():
             total_chars += len(path.read_text(encoding="utf-8", errors="ignore"))
-    return total_chars, total_chars < TOKEN_WARN_THRESHOLD_CHARS
+    tokens_raw = total_chars // 4
+    return total_chars, tokens_raw, total_chars < TOKEN_WARN_THRESHOLD_CHARS
+
 
 def check_registry_structure():
     registry = CONTEXT_DIR / "brain/AGENT_REGISTRY.md"
-    if not registry.exists(): return False, "Arquivo ausente"
+    if not registry.exists():
+        return False, "Arquivo ausente"
     content = registry.read_text(encoding="utf-8")
     if "| Role | " not in content and "| Role " not in content:
         return False, "Tabela de roles nao encontrada"
     return True, "OK"
 
+
 def check_specs_structure():
     specs_dir = CONTEXT_DIR.parent / ".specs"
-    if not specs_dir.exists(): return True, "Workshop inativo (OK)"
+    if not specs_dir.exists():
+        return True, "Workshop inativo (OK)"
     features_dir = specs_dir / "features"
-    if not features_dir.exists(): return False, "Diretorio features ausente no .specs"
+    if not features_dir.exists():
+        return False, "Diretorio features ausente no .specs"
     active_specs = [d for d in features_dir.iterdir() if d.is_dir()]
     for spec in active_specs:
         if not (spec / "STATE.md").exists():
             return False, f"Falha de integridade: {spec.name}/STATE.md ausente"
     return True, f"OK ({len(active_specs)} specs ativas)"
 
+
 def validate():
     print("--- Iniciando validação de contexto (v2.4.1 Hardened) ---")
     issues = []
 
     missing = check_files()
-    if missing: issues.append(f"[ERROR] Arquivos ausentes: {', '.join(missing)}")
-    else: print("[OK] Todos os arquivos obrigatórios presentes.")
+    if missing:
+        issues.append(f"[ERROR] Arquivos ausentes: {', '.join(missing)}")
+    else:
+        print("[OK] Todos os arquivos obrigatórios presentes.")
 
     # Check for optional strategic layers
     inception = CONTEXT_DIR / "brain/INCEPTION.md"
@@ -1184,30 +1496,46 @@ def validate():
         print("[INFO] INCEPTION.md ausente (Modo de execução direta).")
 
     spec_ok, spec_msg = check_specs_structure()
-    if not spec_ok: issues.append(f"[WARN] .specs/: {spec_msg}")
-    else: print(f"[OK] .specs/: {spec_msg}")
+    if not spec_ok:
+        issues.append(f"[WARN] .specs/: {spec_msg}")
+    else:
+        print(f"[OK] .specs/: {spec_msg}")
 
     journal_lines, journal_ok = check_journal_lines()
-    if not journal_ok: issues.append(f"[WARN] JOURNAL.md excede limite: {journal_lines}/{JOURNAL_MAX_LINES}")
-    else: print(f"[OK] JOURNAL.md dentro do limite: {journal_lines}/{JOURNAL_MAX_LINES}")
+    if not journal_ok:
+        issues.append(
+            f"[WARN] JOURNAL.md excede limite: {journal_lines}/{JOURNAL_MAX_LINES}"
+        )
+    else:
+        print(f"[OK] JOURNAL.md dentro do limite: {journal_lines}/{JOURNAL_MAX_LINES}")
 
-    total_chars, token_ok = estimate_tokens()
-    est_tokens = total_chars // 4
-    if not token_ok: issues.append(f"[WARN] Contexto estimado alto: ~{est_tokens}k tokens. Execute purge.")
-    else: print(f"[OK] Estimativa de contexto segura: ~{est_tokens}k tokens")
+    total_chars, tokens_raw, token_ok = estimate_tokens()
+    tokens_k = tokens_raw / 1000
+    if not token_ok:
+        issues.append(
+            f"[WARN] Contexto estimado alto: tokens_raw={tokens_raw} (~{tokens_k:.1f}k). Execute purge."
+        )
+    else:
+        print(
+            f"[OK] Estimativa de contexto segura: tokens_raw={tokens_raw} (~{tokens_k:.1f}k)"
+        )
 
     reg_ok, reg_msg = check_registry_structure()
-    if not reg_ok: issues.append(f"[WARN] AGENT_REGISTRY.md: {reg_msg}")
-    else: print("[OK] AGENT_REGISTRY.md estrutura válida.")
+    if not reg_ok:
+        issues.append(f"[WARN] AGENT_REGISTRY.md: {reg_msg}")
+    else:
+        print("[OK] AGENT_REGISTRY.md estrutura válida.")
 
     print("\n--- Relatório Final ---")
     if not issues:
         print("[SUCCESS] Contexto íntegro. Pronto para execução.")
         sys.exit(0)
     else:
-        for issue in issues: print(issue)
+        for issue in issues:
+            print(issue)
         print("[FATAL] Resolva os alertas antes de gerar código.")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     try:
@@ -1222,8 +1550,8 @@ FILE_END id=file_1077e9084ea1
 
 ---
 <a id="file_e7c17acb71ff"></a>
-FILE_START id=file_e7c17acb71ff path=.context/brain/AGENT_REGISTRY.md domain=docs lang=markdown lines=99 bytes=7597 mtime=2026-04-15T17:49:02.676423+00:00 sha1=5f2c16a74642330aefa2a8621417afb931251c37
-CHUNK_START id=e7c17acb71ff_c001 start_line=1 end_line=99
+FILE_START id=file_e7c17acb71ff path=.context/brain/AGENT_REGISTRY.md domain=docs lang=markdown lines=100 bytes=8003 mtime=2026-04-15T19:12:43.203852+00:00 sha1=c2a3793b9b69e024a7bb011f40d44b5a77ee1263
+CHUNK_START id=e7c17acb71ff_c001 start_line=1 end_line=100
 ````markdown
 ---
 Criado em: 2026-04-10 20:50
@@ -1262,6 +1590,7 @@ Status: Ativo
 | `@qa-validator` | Testes unitários/E2E, edge cases, cobertura, mocks, TDD | `tests/`, `maintenance/TESTS.md`, `maintenance/JOURNAL.md` (apenas leitura para bugs) | `maintenance/TESTS.md`, `maintenance/JOURNAL.md` (bugs recentes), `brain/PRD.md` (critérios de aceite) | "testar", "validar", "cobertura", "mock", "edge case", "TDD", "bug" |
 | `@devops-guardian` | CI/CD, deploy, env vars, monitoramento, segurança infra | `.github/workflows/`, `Dockerfile`, `maintenance/rebuild_guide.md`, `.env.example` | `maintenance/rebuild_guide.md`, `maintenance/TECHNICAL_REQUIREMENTS.md` (infra), `brain/ROADMAP.md` (deploys) | "deploy", "CI/CD", "docker", "variável de ambiente", "monitoramento", "rollback" |
 | `@vision-architect` | Estratégia, validação de market fit, definição de boundaries | `.context/brain/INCEPTION.md`, `.context/market/MARKET_INBOX.md` | `.context/brain/INCEPTION.md`, `.context/market/SSOT_MAP.md` | "definir boundary", "validar gap de mercado", "revisar inception" |
+| `@spec-enricher` | Tradução estratégica em PRD, validação de gaps de mercado, geração de contratos de sprint | `.context/brain/PRD.md`, `.context/market/MARKET_INBOX.md` (escrita) | `.context/brain/INCEPTION.md`, `.context/market/SSOT_MAP.md`, `.context/market/compliance/`, `.context/market/research/` (leitura) | "enriquecer spec", "gerar PRD", "validar market gaps", `npm run context:enrich` |
 | `@spec-driver` | Criação e orquestração de specs atômicas | `.specs/` (leitura/gravação temporária) | `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/JOURNAL.md` (tail 30) | "inicie specify", "crie spec", "modo híbrido" |
 | `@context-keeper` | Sync, purge, validação de consistência, saúde do contexto | `.context/` (exceto `_archive/`), `maintenance/JOURNAL.md`, `brain/RULES.md` | `brain/RULES.md`, `brain/MASTER_FLOW.md`, `maintenance/JOURNAL.md`, `monitoring/CONTEXT_HEALTH.md` | "atualize contexto", "purge", "health check", "validar consistência", "sincronizar" |
 | `@fullstack-generalist` | Modo fallback para tarefas transversais ou projetos light | Leitura em todo o projeto; Escrita apenas com confirmação explícita | `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/JOURNAL.md` (últimas 30 linhas) + Global | "modo light", "tarefa rápida", "projeto pequeno", "não especificado" |
@@ -1361,8 +1690,8 @@ FILE_END id=file_4b29e274836e
 
 ---
 <a id="file_de9ef20db2be"></a>
-FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=17 bytes=313 mtime=2026-04-15T17:49:51.236085+00:00 sha1=505c270831a7ac55144624e8034a033e50bd3f7d
-CHUNK_START id=de9ef20db2be_c001 start_line=1 end_line=17
+FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=25 bytes=702 mtime=2026-04-15T19:50:48.899879+00:00 sha1=cb7b11c33eca252d254f1f7b0f6bdff5e02cf7a8
+CHUNK_START id=de9ef20db2be_c001 start_line=1 end_line=25
 ```markdown
 ---
 version: 2.4.1
@@ -1381,6 +1710,14 @@ status: ACTIVE
 
 ## 🔮 Assumptions
 - [Premissas de mercado ou técnicas]
+
+---
+## 🚀 Próximos Passos (Backlog Estratégico)
+- **v2.4.2 - Contratos de Sprint:** Implementar o ritual de negociação entre QA e Dev.
+- **Harness Engineering:** Evoluir os testes para vereditos binários 0/1 bloqueantes.
+- **Automatização de Gaps:** Expandir `enrich_context.py` para sugerir rascunhos de pesquisa.
+
+*Última atualização: Antigravity v2.4.1-Hardened (Evolved)*
 
 ```
 CHUNK_END id=de9ef20db2be_c001
@@ -1486,76 +1823,19 @@ FILE_END id=file_d833c436f547
 
 ---
 <a id="file_d124f6374cab"></a>
-FILE_START id=file_d124f6374cab path=.context/brain/PRD.md domain=docs lang=markdown lines=67 bytes=2446 mtime=2026-04-14T16:47:37.883559+00:00 sha1=b5c06bc8a67d2a788cc8263f03971f379d04e92e
-CHUNK_START id=d124f6374cab_c001 start_line=1 end_line=67
+FILE_START id=file_d124f6374cab path=.context/brain/PRD.md domain=docs lang=markdown lines=10 bytes=267 mtime=2026-04-15T19:19:11.449308+00:00 sha1=7a2c88002ae61a46f69f1117228d89ee39e67d43
+CHUNK_START id=d124f6374cab_c001 start_line=1 end_line=10
 ```markdown
----
-Criado em: 2026-04-10 22:35
-Ultima Atualizacao: 2026-04-10 22:35
-Status: Ativo (EM EXECUCAO)
-PRD_ID: #15
----
+# Product Requirements Document (PRD)
 
-# 🎯 PRD: Checkout com Integração Stripe
-> Implementar um fluxo de pagamento seguro e resiliente usando Stripe Elements e Webhooks para pedidos digitais.
+## 1. Visão Geral
+Este documento descreve as funcionalidades e requisitos do projeto.
 
-💡 *Insight Humano: Este PRD é um contrato vivo. Ele guia o roteamento de agentes, define criterios de aceite e serve como referência para o JOURNAL.md.*
+## 2. Requisitos Funcionais
+- [ ] Exemplo de requisito
 
----
-
-## 📋 1. Visão Geral
-| Campo | Valor |
-|-------|-------|
-| **Objetivo de Negocio** | Reduzir abandono de carrinho e garantir seguranca no processamento. |
-| **Publico-Alvo** | Compradores finais da plataforma. |
-| **Escopo** | UI de pagamento, Geracao de Session, Webhooks de confirmacao. |
-| **MVP vs Futuro** | MVP: Cartao de Credito. Futuro: Apple Pay/Google Pay. |
-| **Dependencias** | Stripe API, Tabela `orders`, Variaveis de ambiente seguras. |
-
----
-
-## 🎯 2. Critérios de Aceite (Definition of Done)
-### Funcionais
-- [ ] Usuario finaliza compra com cartao valido.
-- [ ] Webhook atualiza `orders.status` para 'succeeded'.
-- [ ] Erro de cartao exibe mensagem amigavel (WCAG).
-- [ ] Idempotencia garantida via `event.id` do Stripe.
-
-### Não-Funcionais
-- [ ] Tempo de resposta API < 500ms.
-- [ ] Nenhum segredo (Keys) hardcoded no codigo.
-- [ ] Logs estruturados para auditoria.
-
----
-
-## 🤖 3. Roteamento Multi-Agent
-| Etapa | Role Responsável | Entregável | Gatilho de Handoff |
-|-------|-----------------|------------|-------------------|
-| 1. UI Checkout | `@frontend-specialist` | `StripeForm.tsx` | "UI pronta, aguarda contrato de API" |
-| 2. API Stripe | `@backend-engineer` | `/api/checkout` + Webhook | "Rotas operacionais, inicia validacao" |
-| 3. Testes E2E | `@qa-validator` | Suite de testes | "Cobertura >90%, edge cases validados" |
-
----
-
-## 🔒 4. Context Gate (Pré-Execução)
-- [ ] `maintenance/schema.sql` contem a tabela `orders`? ✅
-- [ ] `maintenance/TECHNICAL_REQUIREMENTS.md` atualizado? ✅
-- [ ] `maintenance/JOURNAL.md` < 550 linhas? ✅
-- [ ] `brain/AGENT_REGISTRY.md` tem as roles necessarias? ✅
-
----
-
-## 📊 5. Health Check Integrado
-| Metrica | Valor | Status |
-|---------|-------|--------|
-| **Progresso** | 50% | 🟡 Em andamento |
-| **Cobertura de Testes** | 92% (Simulada) | ✅ OK |
-| **Divergência Schema** | 0 campos | ✅ OK |
-
----
-
-## 🔄 6. Ciclo de Vida & Arquivamento
-Ao concluir, mover para `_archive_context/prds/` e atualizar `ROADMAP.md`.
+## 🚨 Critical Dependencies
+- **Nenhuma Detectada** → Fonte: market/SSOT_MAP.md
 
 ```
 CHUNK_END id=d124f6374cab_c001
@@ -1563,8 +1843,8 @@ FILE_END id=file_d124f6374cab
 
 ---
 <a id="file_9fe16e5591f0"></a>
-FILE_START id=file_9fe16e5591f0 path=.context/brain/PROMPT_LIBRARY.md domain=docs lang=markdown lines=171 bytes=7533 mtime=2026-04-15T17:49:37.825706+00:00 sha1=b6e52d6826dab1e841156b51b653163a6061abe0
-CHUNK_START id=9fe16e5591f0_c001 start_line=1 end_line=171
+FILE_START id=file_9fe16e5591f0 path=.context/brain/PROMPT_LIBRARY.md domain=docs lang=markdown lines=202 bytes=9459 mtime=2026-04-15T19:13:15.902323+00:00 sha1=aac08f9e1cef1cba6ff76128a7f3a4c90ce22813
+CHUNK_START id=9fe16e5591f0_c001 start_line=1 end_line=202
 ````markdown
 ---
 Criado em: 2026-04-10 21:35
@@ -1714,6 +1994,37 @@ Status: Ativo
 1. Proposta editada para INCEPTION.md
 2. Novos itens para MARKET_INBOX.md se houver gaps
 3. Verificação de alinhamento com PRD (se existir)
+
+### 🕵️‍♂️ `@spec-enricher` (Executor de Enriquecimento)
+**Gatilho:** `"enriquecer spec"`, `"gerar PRD"`, `"validar market gaps"`  
+**Contexto Obrigatório:** `brain/INCEPTION.md`, `market/SSOT_MAP.md`, `market/compliance/`, `market/research/`
+```text
+🤖 Ativando @spec-enricher | Tarefa: {{descrição_curta}}
+📌 CONTEXT_CHECK: ✅ Validado via npm run context:validate
+🎯 Objetivo: Traduzir INCEPTION.md em PRD.md lastreado, preenchendo lacunas de mercado antes da execução.
+
+🔒 PROTOCOLO DETERMINÍSTICO (Executar em ordem):
+1. ESCANEAR: Extrair todas as entidades externas, compliance e stacks citadas no INCEPTION.md.
+2. VALIDAR MARKET: Para cada entidade, verificar existência de arquivo em market/compliance/ ou market/research/.
+3. RESOLVER GAPS:
+   - Se arquivo existir → Ler e extrair constraints.
+   - Se NÃO existir → Inserir linha em market/MARKET_INBOX.md com `[TODO: research]` e **PARAR**. Retornar: `EXIT 2: Pesquisa de mercado obrigatória antes de gerar PRD.`
+4. CRISTALIZAR PRD: Se todos os gaps estiverem resolvidos, gerar PRD.md amarrando cada requisito crítico a `> Fonte: market/...`.
+5. HANDOFF: Registrar no JOURNAL.md: `🔄 Handoff: @spec-enricher → @spec-driver | PRD lastreado | Próximo: criar .specs/`
+
+⚠️ REGRAS INEGOCIÁVEIS:
+- Nunca assumir dados de mercado. Use apenas fontes em `market/` ou pare com EXIT 2.
+- Respeitar hierarquia: `market/compliance/` > `INCEPTION.md [Boundaries]` > `PRD.md`
+- Se INCEPTION.md conter `TYPE: PATCH` ou `COMPLEXITY: LOW`, pular validação de mercado e gerar PRD direto.
+
+⚙️ ENTREGA OBRIGATÓRIA:
+Ao gerar o PRD.md, inclua EXATAMENTE esta seção no final:
+## 🚨 Critical Dependencies
+- **{Nome_Entidade}** → Fonte: `market/{compliance|research}/{arquivo}.md`
+- **{Outra_Entidade}** → Fonte: `market/{compliance|research}/{arquivo}.md`
+
+⚠️ O Harness validará semanticamente (bullet + Fonte: + market/).
+```
 
 ### 🧬 `@agent-hybrid-tlc` (Spec-Driven + Context Governance)
 **Gatilho:** "Inicie SPECIFY", "Crie spec atômica", "Modo Híbrido TLC"  
@@ -1939,8 +2250,8 @@ FILE_END id=file_9b6470da8849
 
 ---
 <a id="file_019509328844"></a>
-FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=153 bytes=5872 mtime=2026-04-15T17:51:30.204708+00:00 sha1=e9573f37d72af2b65ccbc61a2f4d249f0aaf8650
-CHUNK_START id=019509328844_c001 start_line=1 end_line=153
+FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=189 bytes=7093 mtime=2026-04-15T19:24:49.601889+00:00 sha1=4795fbe3f66b869b7c5bfd4b0205f6b9169486f7
+CHUNK_START id=019509328844_c001 start_line=1 end_line=189
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
@@ -2096,19 +2407,55 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
 
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:meta-inception
+- **Detalhe:** enrichment: Seção Critical Dependencies obrigatória para PRDs com integrações/compliance
+
+## [HARNESS-FAIL] Report | spec:meta-inception
+- **Detalhe:** enrichment: Dependencies sem lastro em market/: ['- LGPD (faltando fonte)']
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+
+## [2026-04-15 16:17] release: Spec Enricher v2.4.1-Hardened
+- **Status:** Ativado e validado via H.O.K.
+- **Ritual:** @vision-architect ⮕ @spec-enricher (Exit 2) ⮕ @spec-driver.
+- **Harness:** Adicionada validação de contract de Critical Dependencies.
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
 ```
 CHUNK_END id=019509328844_c001
 FILE_END id=file_019509328844
 
 ---
 <a id="file_d069d4f2ebef"></a>
-FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=46 bytes=319 mtime=2026-04-15T17:51:29.814873+00:00 sha1=d70cd5eee3cc4a5fda06aa851ca8b8c574a3900f
-CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=46
+FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=53 bytes=326 mtime=2026-04-15T19:24:49.335526+00:00 sha1=336b732bf38781a09d5766f5646077d765812ebe
+CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=53
 ```markdown
 ---\nCriado em: 2026-04-10 20:50\nUltima Atualizacao: 2026-04-10 20:50\nStatus: Ativo\n---\n
 
 <!-- AUTO-SYNC START -->
-*🤖 Atualizado automaticamente em 2026-04-15 14:51*
+*🤖 Atualizado automaticamente em 2026-04-15 16:24*
 
 ### DevDependencies
 - `husky`: `^9.1.7`
@@ -2117,6 +2464,13 @@ CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=46
 - `orders`
 
 <!-- AUTO-SYNC END -->
+
+
+
+
+
+
+
 
 
 
@@ -2449,8 +2803,8 @@ FILE_END id=file_91d5627a725e
 
 ---
 <a id="file_81ef387da7b7"></a>
-FILE_START id=file_81ef387da7b7 path=.context/market/MARKET_INBOX.md domain=docs lang=markdown lines=10 bytes=247 mtime=2026-04-15T17:50:06.262213+00:00 sha1=ae6908ca0dded72bec346e6b058b1bf77280964a
-CHUNK_START id=81ef387da7b7_c001 start_line=1 end_line=10
+FILE_START id=file_81ef387da7b7 path=.context/market/MARKET_INBOX.md domain=docs lang=markdown lines=11 bytes=341 mtime=2026-04-15T19:15:21.935146+00:00 sha1=66adcca82c5eae73d386371aef29795c87e283b3
+CHUNK_START id=81ef387da7b7_c001 start_line=1 end_line=11
 ```markdown
 ---
 version: 2.4.1
@@ -2462,6 +2816,7 @@ type: INBOX
 | Data | Gap/Gap de Pesquisa | Status | Fonte Relacionada |
 |------|--------------------|--------|-------------------|
 | [Data] | [Descrição do Gap] | `[TODO: research]` | [Referência] |
+| Integração LGPD | `> Fonte: raw/docs_oficiais.md` | Crítica | 🔍 Pesquisa | 2026-04-15
 
 ```
 CHUNK_END id=81ef387da7b7_c001
@@ -2509,12 +2864,12 @@ FILE_END id=file_b5d38697335e
 
 ---
 <a id="file_068a21d64bec"></a>
-FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1505 mtime=2026-04-15T17:51:31.220989+00:00 sha1=00543693253062eca14b7afcd9f1a7f796d70117
+FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1505 mtime=2026-04-15T19:24:50.021497+00:00 sha1=b69419fa48450837560bc86a3ee9a103ff864244
 CHUNK_START id=068a21d64bec_c001 start_line=1 end_line=38
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
-Ultima Atualizacao: 2026-04-15 14:51
+Ultima Atualizacao: 2026-04-15 16:24
 Status: Ativo
 ---
 
@@ -2526,15 +2881,15 @@ Status: Ativo
 | Metrica | Valor Atual | Limite Ideal | Pilar | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **Manutencao** | | | | |
-| Linhas do Journal | 153 | 600 | Tracker | [OK] |
-| Carga do Journal | 5k chars | 50k chars | Tracker | [OK] |
+| Linhas do Journal | 189 | 600 | Tracker | [OK] |
+| Carga do Journal | 6k chars | 50k chars | Tracker | [OK] |
 | **Cognitivo** | | | | |
-| Estimativa Tokens | ~22k | 128k (Max) | Eficiencia | [OK] |
+| Estimativa Tokens | ~24k | 128k (Max) | Eficiencia | [OK] |
 | **Consistencia** | | | | |
 | Tabelas no Schema | 1 | N/A | DB-First | [OK] |
 | Migrations Pendentes | 1 file(s) | N/A | DB-First | [OK] |
 | Ultimo Harness | Role Check | Pass/Fail | Integridade | [PASS] |
-| Ultima Sincronia | 2026-04-15 14:51 | Real-Time | Automacao | [OK] |
+| Ultima Sincronia | 2026-04-15 16:24 | Real-Time | Automacao | [OK] |
 <!-- HEALTH_TABLE_END -->
 
 ---
@@ -2740,6 +3095,74 @@ CHUNK_END id=37fb63b0fac5_c001
 FILE_END id=file_37fb63b0fac5
 
 ---
+<a id="file_0511c79bd7d2"></a>
+FILE_START id=file_0511c79bd7d2 path=.context/specs/PLAN_SPEC_ENRICHER_V2.4.1.md domain=docs lang=markdown lines=58 bytes=2572 mtime=2026-04-15T19:09:36.074497+00:00 sha1=9069fe10243396ca96cc0b1e8b76b29a7084307e
+CHUNK_START id=0511c79bd7d2_c001 start_line=1 end_line=58
+```markdown
+# 📜 PLANO DE IMPLEMENTAÇÃO: Spec Enricher (v2.4.1-Hardened)
+*(Documento mestre para instalação do Módulo de Enriquecimento de Especificações)*
+
+---
+
+## 🎯 Objetivo & Visão
+Instalar o **@spec-enricher** como role e ritual oficial, criando a ponte cognitiva entre a incepção estratégica e as especificações funcionais. O sistema deve impedir a geração de PRDs se houver gaps de mercado, forçando o ciclo **Research -> Valid -> Execute**.
+
+---
+
+## 🛠️ Arquitetura de Patches (Auditada)
+
+### 🐍 scripts/enrich_context.py (Gap-Checker)
+- **Logica:** Scan `INCEPTION.md` -> Busca restrita em `market/compliance` e `market/research` -> Validação de conteúdo (1000 chars) -> Update `MARKET_INBOX.md` (uma linha por entidade).
+- **Exit Codes:** `0` (Ready), `2` (Research Needed), `1` (Error).
+
+### 🛡️ scripts/harness_runner.py (Integrity Check)
+- **Nova Funcionalidade:** `check_enrichment_integrity(prd_path)`.
+- **Gatilhos Semânticos:** Monitora menções a integrações/compliance (integracao, compliance, integration, external api, etc.).
+- **Contrato:** Exige seção `## 🚨 Critical Dependencies` com formato exato `- **{Entidade}** → Fonte: market/...`.
+
+### 🐍 run_context.py (Dispatcher)
+- **Integração:** Novo comando `enrich`.
+- **Tratamento:** `subprocess.run(..., check=False)` + print do `[STRATEGIC BLOCK]`.
+- **Help:** Atualizado para refletir o novo rito.
+
+---
+
+## 📋 Matriz de Roles & Prompts
+
+| Role | Especialidade | Escrita | Leitura (Market) | Gátilho |
+|------|---------------|---------|------------------|---------|
+| `@spec-enricher` | Tradução estratégica, validação de gaps, PRDs lastreados | `PRD.md`, `MARKET_INBOX.md` | `compliance/`, `research/`, `INCEPTION.md` | `npm run context:enrich` |
+
+---
+
+## ✅ Plano de Verificação (H.O.K.)
+
+### 1. Teste de Bloqueio (Exit 2)
+1. Inserir entidade (ex: `LGPD`) no `INCEPTION.md`.
+2. Certificar ausência do arquivo fonte em `market/`.
+3. Rodar `npm run context:enrich`.
+4. **Esperado:** Exit 2 + Mensagem de Strategic Block.
+
+### 2. Teste de Sucesso (Exit 0)
+1. Criar arquivo fonte `market/research/LGPD.md`.
+2. Rodar `npm run context:enrich`.
+3. **Esperado:** Exit 0 + Mensagem de Sucesso.
+
+### 3. Teste de Validação (Harness)
+1. Criar `PRD.md` com menção a integrações mas sem a seção de dependências.
+2. Rodar `npm run context:harness`.
+3. **Esperado:** Exit 1 + Erro de contrato de enriquecimento.
+
+---
+
+## 🔒 Handoff Final (Estado Pronto)
+`@vision-architect` (Incepção) ⮕ `@spec-enricher` (Research & PRD) ⮕ `@spec-driver` (Specs)
+
+```
+CHUNK_END id=0511c79bd7d2_c001
+FILE_END id=file_0511c79bd7d2
+
+---
 <a id="file_e477c4c5a96c"></a>
 FILE_START id=file_e477c4c5a96c path=.github/workflows/context-health.yml domain=config lang=yaml lines=25 bytes=569 mtime=2026-04-14T12:47:48.321567+00:00 sha1=7c7488139d3c3c4327aa9889700f683ee1f47be1
 CHUNK_START id=e477c4c5a96c_c001 start_line=1 end_line=25
@@ -2794,12 +3217,12 @@ FILE_END id=file_3adfd36c1559
 
 ---
 <a id="file_238a0e1da225"></a>
-FILE_START id=file_238a0e1da225 path=.specs/features/meta-inception/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-15T17:51:30.206708+00:00 sha1=a22318eb5a612fc7fcc9954f983870e96d8b5584
+FILE_START id=file_238a0e1da225 path=.specs/features/meta-inception/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-15T19:24:49.605886+00:00 sha1=284f8874b6f3c07e37659cca7d43118fd035f520
 CHUNK_START id=238a0e1da225_c001 start_line=1 end_line=5
 ```markdown
 ---
 status: ✅ PASSED
-updated: 2026-04-15 14:51
+updated: 2026-04-15 16:24
 detail: All checks passed
 ---
 
@@ -3922,8 +4345,8 @@ FILE_END id=file_c59135753d26
 
 ---
 <a id="file_7030d0b2f71b"></a>
-FILE_START id=file_7030d0b2f71b path=package.json domain=config lang=json lines=33 bytes=1178 mtime=2026-04-15T13:54:47.619052+00:00 sha1=a445b6ec0e94e30d578f60283da00f2a0052da82
-CHUNK_START id=7030d0b2f71b_c001 start_line=1 end_line=33
+FILE_START id=file_7030d0b2f71b path=package.json domain=config lang=json lines=34 bytes=1232 mtime=2026-04-15T19:13:58.308600+00:00 sha1=dc707667997b95d8b8900b73c970f7356df992ef
+CHUNK_START id=7030d0b2f71b_c001 start_line=1 end_line=34
 ```json
 {
   "name": "ai-context-governance-template",
@@ -3940,6 +4363,7 @@ CHUNK_START id=7030d0b2f71b_c001 start_line=1 end_line=33
     "context:health": "python run_context.py health",
     "context:scan-secrets": "python run_context.py scan-secrets",
     "context:check-migrations": "python run_context.py check-migrations",
+    "context:enrich": "python run_context.py enrich",
     "context:capture": "python captura_projeto.py --emit-symbol-index --emit-import-map",
     "context:all": "python run_context.py all",
     "context:test": "python tests/test_context.py",
@@ -4146,6 +4570,74 @@ sequenceDiagram
 ````
 CHUNK_END id=80252595b07f_c001
 FILE_END id=file_80252595b07f
+
+---
+<a id="file_482a16303af0"></a>
+FILE_START id=file_482a16303af0 path=planos/_arquivo_planos/PLAN_SPEC_ENRICHER_V2.4.1.md domain=docs lang=markdown lines=58 bytes=2572 mtime=2026-04-15T19:09:36.074497+00:00 sha1=9069fe10243396ca96cc0b1e8b76b29a7084307e
+CHUNK_START id=482a16303af0_c001 start_line=1 end_line=58
+```markdown
+# 📜 PLANO DE IMPLEMENTAÇÃO: Spec Enricher (v2.4.1-Hardened)
+*(Documento mestre para instalação do Módulo de Enriquecimento de Especificações)*
+
+---
+
+## 🎯 Objetivo & Visão
+Instalar o **@spec-enricher** como role e ritual oficial, criando a ponte cognitiva entre a incepção estratégica e as especificações funcionais. O sistema deve impedir a geração de PRDs se houver gaps de mercado, forçando o ciclo **Research -> Valid -> Execute**.
+
+---
+
+## 🛠️ Arquitetura de Patches (Auditada)
+
+### 🐍 scripts/enrich_context.py (Gap-Checker)
+- **Logica:** Scan `INCEPTION.md` -> Busca restrita em `market/compliance` e `market/research` -> Validação de conteúdo (1000 chars) -> Update `MARKET_INBOX.md` (uma linha por entidade).
+- **Exit Codes:** `0` (Ready), `2` (Research Needed), `1` (Error).
+
+### 🛡️ scripts/harness_runner.py (Integrity Check)
+- **Nova Funcionalidade:** `check_enrichment_integrity(prd_path)`.
+- **Gatilhos Semânticos:** Monitora menções a integrações/compliance (integracao, compliance, integration, external api, etc.).
+- **Contrato:** Exige seção `## 🚨 Critical Dependencies` com formato exato `- **{Entidade}** → Fonte: market/...`.
+
+### 🐍 run_context.py (Dispatcher)
+- **Integração:** Novo comando `enrich`.
+- **Tratamento:** `subprocess.run(..., check=False)` + print do `[STRATEGIC BLOCK]`.
+- **Help:** Atualizado para refletir o novo rito.
+
+---
+
+## 📋 Matriz de Roles & Prompts
+
+| Role | Especialidade | Escrita | Leitura (Market) | Gátilho |
+|------|---------------|---------|------------------|---------|
+| `@spec-enricher` | Tradução estratégica, validação de gaps, PRDs lastreados | `PRD.md`, `MARKET_INBOX.md` | `compliance/`, `research/`, `INCEPTION.md` | `npm run context:enrich` |
+
+---
+
+## ✅ Plano de Verificação (H.O.K.)
+
+### 1. Teste de Bloqueio (Exit 2)
+1. Inserir entidade (ex: `LGPD`) no `INCEPTION.md`.
+2. Certificar ausência do arquivo fonte em `market/`.
+3. Rodar `npm run context:enrich`.
+4. **Esperado:** Exit 2 + Mensagem de Strategic Block.
+
+### 2. Teste de Sucesso (Exit 0)
+1. Criar arquivo fonte `market/research/LGPD.md`.
+2. Rodar `npm run context:enrich`.
+3. **Esperado:** Exit 0 + Mensagem de Sucesso.
+
+### 3. Teste de Validação (Harness)
+1. Criar `PRD.md` com menção a integrações mas sem a seção de dependências.
+2. Rodar `npm run context:harness`.
+3. **Esperado:** Exit 1 + Erro de contrato de enriquecimento.
+
+---
+
+## 🔒 Handoff Final (Estado Pronto)
+`@vision-architect` (Incepção) ⮕ `@spec-enricher` (Research & PRD) ⮕ `@spec-driver` (Specs)
+
+```
+CHUNK_END id=482a16303af0_c001
+FILE_END id=file_482a16303af0
 
 ---
 <a id="file_e7f1855928ad"></a>
@@ -5120,28 +5612,38 @@ FILE_END id=file_f23e47398730
 
 ---
 <a id="file_350a79f8b829"></a>
-FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=68 bytes=2826 mtime=2026-04-15T17:47:52.526371+00:00 sha1=bed548b1a59244f6ded3ca6874a0359b5b5150dc
-CHUNK_START id=350a79f8b829_c001 start_line=1 end_line=68
+FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=113 bytes=4014 mtime=2026-04-15T19:24:29.988127+00:00 sha1=1114268605452b71c34e872a9c5eab1dac950889
+CHUNK_START id=350a79f8b829_c001 start_line=1 end_line=113
 ```python
 #!/usr/bin/env python3
 """
 🐍 run_context.py - Gestor Universal de Contexto v2.4.1 (Hardened Pipeline)
 Sequencia otimizada: validate → scan-secrets → sync → migrations → harness → lint(strict) → health
 """
+
 import sys
 import subprocess
 from pathlib import Path
 
+stdout_reconfigure = getattr(sys.stdout, "reconfigure", None)
+stderr_reconfigure = getattr(sys.stderr, "reconfigure", None)
+if callable(stdout_reconfigure):
+    stdout_reconfigure(encoding="utf-8", errors="replace")
+if callable(stderr_reconfigure):
+    stderr_reconfigure(encoding="utf-8", errors="replace")
+
 BASE_DIR = Path(__file__).parent
 SCRIPTS_DIR = BASE_DIR / ".context" / "_scripts"
 
+
 def run_script(name, args=None):
-    if args is None: args = []
+    if args is None:
+        args = []
     script_path = SCRIPTS_DIR / name
     if not script_path.exists():
         print(f"[ERROR] Script {name} nao encontrado em {SCRIPTS_DIR}")
         sys.exit(1)
-    
+
     print(f"[RUN] Executando {name}...")
     try:
         subprocess.run([sys.executable, str(script_path)] + args, check=True)
@@ -5150,26 +5652,56 @@ def run_script(name, args=None):
         print(f"[ERROR] Falha em {name}. Pipeline abortado.")
         sys.exit(1)
 
+
 def main():
     if len(sys.argv) < 2:
-        print("[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|oracle|health|scan-secrets|check-migrations|all|help]")
+        print(
+            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|oracle|health|scan-secrets|check-migrations|enrich|all|help]"
+        )
         sys.exit(1)
 
     cmd = sys.argv[1]
     extra_args = sys.argv[2:]
 
-    if cmd == "validate": run_script("validate_context.py", extra_args)
-    elif cmd == "purge":  run_script("purge_journal.py", extra_args)
-    elif cmd == "sync":   run_script("sync_project.py", extra_args)
-    elif cmd == "cleanup": run_script("cleanup_specs.py", extra_args)
-    elif cmd == "harness": run_script("harness_runner.py", extra_args)
-    elif cmd == "lint":    run_script("lint_wiki.py", extra_args)
-    elif cmd == "lint-strict": run_script("lint_wiki.py", ["--strict"] + extra_args)
-    elif cmd == "oracle":  run_script("context_oracle.py", extra_args)
-    elif cmd == "health":  run_script("health_sync.py", extra_args)
-    elif cmd == "scan-secrets": run_script("secrets_scanner.py", extra_args)
-    elif cmd == "check-migrations": run_script("migration_registry.py", extra_args)
-    
+    if cmd == "validate":
+        run_script("validate_context.py", extra_args)
+    elif cmd == "purge":
+        run_script("purge_journal.py", extra_args)
+    elif cmd == "sync":
+        run_script("sync_project.py", extra_args)
+    elif cmd == "cleanup":
+        run_script("cleanup_specs.py", extra_args)
+    elif cmd == "harness":
+        run_script("harness_runner.py", extra_args)
+    elif cmd == "lint":
+        run_script("lint_wiki.py", extra_args)
+    elif cmd == "lint-strict":
+        run_script("lint_wiki.py", ["--strict"] + extra_args)
+    elif cmd == "oracle":
+        run_script("context_oracle.py", extra_args)
+    elif cmd == "health":
+        run_script("health_sync.py", extra_args)
+    elif cmd == "scan-secrets":
+        run_script("secrets_scanner.py", extra_args)
+    elif cmd == "check-migrations":
+        run_script("migration_registry.py", extra_args)
+
+    elif cmd == "enrich":
+        print("[RUN] Executando enrich_context.py...")
+        try:
+            res = subprocess.run([sys.executable, str(SCRIPTS_DIR / "enrich_context.py")], check=False)
+            if res.returncode == 0:
+                print("[OK] Concluído: enrich_context.py\n")
+            elif res.returncode == 2:
+                print("[STRATEGIC BLOCK] Research needed. Pipeline local TRAVADO até resolução.\n")
+                sys.exit(2)
+            else:
+                print(f"[FATAL] Falha estrutural em enrich_context.py. Exit: {res.returncode}\n")
+                sys.exit(1)
+        except Exception as e:
+            print(f"[ERROR] Erro na execução: {e}\n")
+            sys.exit(1)
+
     elif cmd == "all":
         # Pipeline Fail-Fast (Hardened v2.4.1)
         run_script("validate_context.py")
@@ -5181,13 +5713,18 @@ def main():
         run_script("lint_wiki.py", ["--strict"])
         print("[RUN] Sincronizando Health Dashboard...")
         run_script("health_sync.py")
-        print("[DONE] Pipeline H.O.K. + Security + Migrations + Health concluído com sucesso.")
-        
+        print(
+            "[DONE] Pipeline H.O.K. + Security + Migrations + Health concluído com sucesso."
+        )
+
     elif cmd in ["help", "--help", "-h"]:
-        print("Comandos: validate | purge | sync | cleanup | harness | lint | oracle | health | scan-secrets | check-migrations | all")
+        print(
+            "Comandos: validate | purge | sync | cleanup | harness | lint | oracle | health | scan-secrets | check-migrations | enrich | all"
+        )
     else:
         print(f"❌ Comando desconhecido: {cmd}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
