@@ -102,7 +102,7 @@ def main():
 
     elif cmd in ["help", "--help", "-h"]:
         print(
-            "Comandos: validate | purge | sync | cleanup | harness | lint | oracle | health | scan-secrets | check-migrations | all"
+            "Comandos: validate | purge | sync | cleanup | harness | lint | oracle | health | scan-secrets | check-migrations | enrich | all"
         )
     else:
         print(f"❌ Comando desconhecido: {cmd}")
