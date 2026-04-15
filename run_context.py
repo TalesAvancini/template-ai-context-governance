@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-🐍 run_context.py - Gestor Universal de Contexto v2.4 (Hardened Pipeline)
+🐍 run_context.py - Gestor Universal de Contexto v2.4.1 (Hardened Pipeline)
 Sequencia otimizada: validate → scan-secrets → sync → migrations → harness → lint(strict) → health
 """
 import sys

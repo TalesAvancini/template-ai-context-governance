@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ---------------------------------------------------------
-# 🐚 run_context.sh - Orquestrador Universal de Contexto v2.2
+# 🐚 run_context.sh - Orquestrador Universal de Contexto v2.4.1
 # ---------------------------------------------------------
 set -euo pipefail
 

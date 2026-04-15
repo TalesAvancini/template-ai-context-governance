@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # -----------------------------------------------------------------------------
-# 🚀 init_ai_project.sh - Antigravity Kit Bootstrapper (v2.2 Premium+)
+# 🚀 init_ai_project.sh - Antigravity Kit Bootstrapper (v2.4.1 Hardened)
 # -----------------------------------------------------------------------------
 # Versão Suprema: Fusão Antigravity + TLC Spec-Driven.
 # Com detecção automática de gerenciador e motores de manutenção completos.
@@ -44,7 +44,7 @@ fi
 check_deps
 PKG_MGR=$(detect_pkg_mgr)
 log "Gerenciador detectado: $PKG_MGR"
-log "Inicializando Antigravity AI-Ready Framework v2.2 Premium+..."
+log "Inicializando Antigravity AI-Ready Framework v2.4.1 Hardened..."
 
 # 📂 Estrutura de Diretorios
 log "Criando estrutura de camadas e workshop TLC..."
@@ -94,7 +94,7 @@ Ponte entre Governança (.context/) e Execução Atômica (.specs/).
 5. SYNC -> Lições para o JOURNAL.md e limpeza da spec.
 EOF
 
-# (Injeção dos Motores Reais v2.2 Premium+)
+# (Injeção dos Motores Reais v2.4.1 Hardened)
 cat > .context/_scripts/validate_context.py << 'EOF'
 #!/usr/bin/env python3
 import os, sys
@@ -107,7 +107,7 @@ def check_specs():
     if not specs.exists(): return True
     return all((d / "STATE.md").exists() for d in specs.iterdir() if d.is_dir())
 def validate():
-    print("--- Validacao v2.2 Premium+ ---")
+    print("--- Validacao v2.4.1 Hardened ---")
     missing = [f for f in REQUIRED if not (CONTEXT_DIR / f).exists()]
     if missing or not check_specs(): sys.exit(1)
     print("✅ Contexto e Workshop integros.")

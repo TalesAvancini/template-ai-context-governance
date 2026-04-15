@@ -1,6 +1,6 @@
 # 🛸 Antigravity Kit Versioning
-v2.3.0-hok
-Dash: [Antigravity Kit v2.3.0-hok]
+v2.4.1
+Dash: [Antigravity Kit v2.4.1]
 Audit Status: ✅ PASSED
 Release Date: 2026-04-11
 

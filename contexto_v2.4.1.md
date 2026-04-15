@@ -2,12 +2,12 @@
 
 ---
 schema_version: 1
-generated_at: 2026-04-14T15:09:08.030805+00:00
+generated_at: 2026-04-15T13:56:31.331103+00:00
 root: template_inicío_de_projeto
 mode: full
 profile: ai-default
 file_count: 61
-byte_count: 172671
+byte_count: 175284
 ignored_dirs:
   - .cache
   - .cursor
@@ -177,6 +177,159 @@ sensitive_rules:
 - `run_context.sh` -> [file_86bac54f32d7](#file_86bac54f32d7)
 - `tests/test_context.py` -> [file_4c6bbd05056e](#file_4c6bbd05056e)
 
+## SYMBOL_INDEX
+- `.context/_scripts/_tz_utils.py`:
+  - `get_now_tz`
+  - `format_ts`
+- `.context/_scripts/cleanup_specs.py`:
+  - `get_specs`
+  - `archive_spec`
+  - `cleanup`
+- `.context/_scripts/context_oracle.py`:
+  - `build_index`
+  - `query_oracle`
+- `.context/_scripts/harness_runner.py`:
+  - `check_schema_contract`
+  - `check_handoff_integrity`
+  - `check_strategic_alignment`
+  - `log_harness`
+  - `update_state_md`
+  - `main`
+- `.context/_scripts/health_sync.py`:
+  - `count_journal_metrics`
+  - `count_schema_tables`
+  - `count_pending_migrations`
+  - `estimate_tokens`
+  - `update_dashboard`
+- `.context/_scripts/lint_wiki.py`:
+  - `find_raw_sources`
+  - `suggest_source`
+  - `check_wiki`
+- `.context/_scripts/migration_registry.py`:
+  - `validate`
+- `.context/_scripts/purge_journal.py`:
+  - `parse_entries`
+  - `purge_journal`
+- `.context/_scripts/secrets_scanner.py`:
+  - `get_files_to_scan`
+  - `scan`
+- `.context/_scripts/sync_project.py`:
+  - `get_package_deps`
+  - `get_schema_tables`
+  - `sync_requirements`
+- `.context/_scripts/validate_context.py`:
+  - `check_files`
+  - `check_journal_lines`
+  - `estimate_tokens`
+  - `check_registry_structure`
+  - `check_specs_structure`
+  - `validate`
+- `captura_projeto.py`:
+  - `is_text_file`
+  - `is_sensitive_file`
+  - `classify_domain`
+  - `should_include_profile`
+  - `mask_sensitive`
+  - `extract_symbols`
+  - `extract_imports`
+  - `chunk_content`
+  - `make_file_id`
+  - `collect_files`
+  - `mode_name`
+  - `get_dynamic_filename`
+  - `render_frontmatter`
+  - `render_index_by_domain`
+  - `render_index_by_path`
+  - `render_symbols`
+  - `render_imports`
+  - `pick_fence`
+  - `render_file_record`
+  - `generate_context_markdown`
+  - `write_output`
+  - `parse_args`
+  - `main`
+  - `BundleConfig`
+  - `Chunk`
+  - `FileRecord`
+- `run_context.py`:
+  - `run_script`
+  - `main`
+- `tests/test_context.py`:
+  - `TestContextGovernance`
+
+## IMPORT_MAP_MIN
+- `.context/_scripts/_tz_utils.py`:
+  - `os`
+  - `from datetime import datetime, timezone, timedelta`
+- `.context/_scripts/cleanup_specs.py`:
+  - `os`
+  - `shutil`
+  - `time`
+  - `from pathlib import Path`
+  - `from datetime import datetime`
+- `.context/_scripts/context_oracle.py`:
+  - `re, sys, json, os`
+  - `from pathlib import Path`
+  - `from collections import Counter`
+- `.context/_scripts/harness_runner.py`:
+  - `os, re, sys, json`
+  - `from datetime import datetime`
+  - `from pathlib import Path`
+- `.context/_scripts/health_sync.py`:
+  - `re, sys, os`
+  - `from pathlib import Path`
+  - `from datetime import datetime`
+- `.context/_scripts/lint_wiki.py`:
+  - `sys`
+  - `re`
+  - `argparse`
+  - `from pathlib import Path`
+- `.context/_scripts/migration_registry.py`:
+  - `re, sys`
+  - `from pathlib import Path`
+- `.context/_scripts/purge_journal.py`:
+  - `re`
+  - `sys`
+  - `from pathlib import Path`
+  - `from datetime import datetime`
+- `.context/_scripts/secrets_scanner.py`:
+  - `re, sys, subprocess, os`
+  - `from pathlib import Path`
+- `.context/_scripts/sync_project.py`:
+  - `json`
+  - `re`
+  - `sys`
+  - `from pathlib import Path`
+  - `from datetime import datetime`
+- `.context/_scripts/validate_context.py`:
+  - `os`
+  - `sys`
+  - `from pathlib import Path`
+- `captura_projeto.py`:
+  - `argparse`
+  - `hashlib`
+  - `logging`
+  - `mimetypes`
+  - `os`
+  - `re`
+  - `from __future__ import annotations`
+  - `from dataclasses import dataclass`
+  - `from datetime import datetime, timezone`
+  - `from fnmatch import fnmatch`
+  - `from pathlib import Path`
+- `run_context.py`:
+  - `sys`
+  - `subprocess`
+  - `from pathlib import Path`
+- `tests/test_context.py`:
+  - `unittest`
+  - `os`
+  - `shutil`
+  - `tempfile`
+  - `subprocess`
+  - `sys`
+  - `from pathlib import Path`
+
 ---
 <a id="file_dbef1acce0d4"></a>
 FILE_START id=file_dbef1acce0d4 path=.context/_scripts/_tz_utils.py domain=source lang=python lines=37 bytes=1257 mtime=2026-04-12T02:47:25.198957+00:00 sha1=a49568f45d4b962ab01f0ed4b359ee4c09f65741
@@ -307,8 +460,8 @@ FILE_END id=file_82cd6bde54ff
 
 ---
 <a id="file_10081abf87e1"></a>
-FILE_START id=file_10081abf87e1 path=.context/_scripts/context_oracle.py domain=source lang=python lines=71 bytes=2417 mtime=2026-04-14T15:01:11.237284+00:00 sha1=966b9782f7f75006d84b579f9cbab46221369466
-CHUNK_START id=10081abf87e1_c001 start_line=1 end_line=71
+FILE_START id=file_10081abf87e1 path=.context/_scripts/context_oracle.py domain=source lang=python lines=78 bytes=2798 mtime=2026-04-14T16:43:56.809132+00:00 sha1=db11007d6624952ee8025467899c8edb829d2c6c
+CHUNK_START id=10081abf87e1_c001 start_line=1 end_line=78
 ```python
 #!/usr/bin/env python3
 """
@@ -322,22 +475,29 @@ from collections import Counter
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
 INDEX_FILES = [
     "brain/PRD.md", "brain/AGENT_REGISTRY.md", "brain/RULES.md",
-    "brain/INCEPTION.md",
     "maintenance/schema.sql", "maintenance/TECHNICAL_REQUIREMENTS.md",
-    "maintenance/JOURNAL.md",
-    "market/SSOT_MAP.md"
+    "maintenance/JOURNAL.md"
 ]
+EXTRA_INDEX = ["brain/INCEPTION.md", "market/SSOT_MAP.md", "market/economics.md"]
 
 def build_index():
     index = {}
-    for rel in INDEX_FILES:
-        p = CONTEXT_DIR / rel
+    # Arquivos base
+    base_paths = [CONTEXT_DIR / f for f in INDEX_FILES + EXTRA_INDEX]
+    # Varredura dinâmica da camada Market (v2.4.1)
+    market_paths = [f for f in CONTEXT_DIR.glob("market/**/*.md") if f.is_file()]
+    
+    for p in set(base_paths + market_paths):
         if not p.exists(): continue
-        text = p.read_text(encoding="utf-8")
-        # \w em Python 3 já é Unicode-aware (inclui acentos)
-        words = re.findall(r'\b\w{3,}\b', text.lower())
-        for w in set(words):
-            index.setdefault(w, []).append(rel)
+        try:
+            rel = p.relative_to(CONTEXT_DIR).as_posix()
+            text = p.read_text(encoding="utf-8")
+            # Python 3 \w já inclui acentos e caracteres latinos
+            words = re.findall(r'\b\w{3,}\b', text.lower())
+            for w in set(words):
+                index.setdefault(w, []).append(rel)
+        except Exception:
+            continue
     return index
 
 def query_oracle(question, role="unknown"):
@@ -388,8 +548,8 @@ FILE_END id=file_10081abf87e1
 
 ---
 <a id="file_1edef35c2f56"></a>
-FILE_START id=file_1edef35c2f56 path=.context/_scripts/harness_runner.py domain=source lang=python lines=131 bytes=5477 mtime=2026-04-14T15:01:29.070359+00:00 sha1=d871b2539d5c82fb62a52e665349b6ade189fb82
-CHUNK_START id=1edef35c2f56_c001 start_line=1 end_line=131
+FILE_START id=file_1edef35c2f56 path=.context/_scripts/harness_runner.py domain=source lang=python lines=119 bytes=5200 mtime=2026-04-14T16:44:14.745227+00:00 sha1=d3eed97f128b15acd6838c41f2a50ffbaa3d9c6c
+CHUNK_START id=1edef35c2f56_c001 start_line=1 end_line=119
 ```python
 #!/usr/bin/env python3
 """
@@ -440,26 +600,14 @@ def check_handoff_integrity(journal_text):
     return True, "Handoffs integros"
 
 def check_strategic_alignment():
-    """Valida se o PRD viola boundaries definidos no INCEPTION.md"""
-    if not INCEPTION.exists():
-        return True, "INCEPTION.md ausente (skip)"
-    if not PRD.exists():
-        return True, "PRD.md ausente (skip)"
-    
+    if not INCEPTION.exists() or not PRD.exists():
+        return True, "INCEPTION/PRD ausentes (skip estratégico)"
     prd_text = PRD.read_text(encoding="utf-8").lower()
     inception_text = INCEPTION.read_text(encoding="utf-8")
-    
-    # Extrair boundaries no formato: "- NUNCA: <regra>"
+    # Captura regras "- NUNCA: <regra>"
     boundaries = re.findall(r'^-\s*NUNCA:\s*(.+)$', inception_text, re.I | re.MULTILINE)
-    
-    violations = []
-    for boundary in boundaries:
-        # Verifica se o PRD menciona algo que viola a boundary
-        if re.search(re.escape(boundary.lower().strip()), prd_text):
-            violations.append(boundary.strip())
-    
-    if violations:
-        return False, f"PRD viola boundaries estrategicas: {violations}"
+    violations = [b.strip() for b in boundaries if re.search(re.escape(b.strip().lower()), prd_text)]
+    if violations: return False, f"PRD viola boundaries estratégicas: {violations}"
     return True, "Strategic alignment OK"
 
 def log_harness(status, detail, spec_name="unknown"):
@@ -1100,8 +1248,8 @@ FILE_END id=file_f122711ba9e1
 
 ---
 <a id="file_1077e9084ea1"></a>
-FILE_START id=file_1077e9084ea1 path=.context/_scripts/validate_context.py domain=source lang=python lines=125 bytes=4105 mtime=2026-04-14T15:01:00.620719+00:00 sha1=38074ac845d067c8f7310713dd25b1b694aacbd9
-CHUNK_START id=1077e9084ea1_c001 start_line=1 end_line=125
+FILE_START id=file_1077e9084ea1 path=.context/_scripts/validate_context.py domain=source lang=python lines=112 bytes=3997 mtime=2026-04-15T13:55:40.889111+00:00 sha1=0156a8f100f942dbbf9ba10a5327a5b0f0f9daea
+CHUNK_START id=1077e9084ea1_c001 start_line=1 end_line=112
 ```python
 #!/usr/bin/env python3
 """
@@ -1171,55 +1319,42 @@ def check_specs_structure():
     return True, f"OK ({len(active_specs)} specs ativas)"
 
 def validate():
-    print("--- Iniciando validacao de contexto (v2.3 Hardened) ---")
+    print("--- Iniciando validação de contexto (v2.4.1 Hardened) ---")
     issues = []
 
     missing = check_files()
-    if missing: 
-        issues.append(f"[ERROR] Arquivos ausentes: {', '.join(missing)}")
-    else: 
-        print("[OK] Todos os arquivos obrigatorios presentes.")
+    if missing: issues.append(f"[ERROR] Arquivos ausentes: {', '.join(missing)}")
+    else: print("[OK] Todos os arquivos obrigatórios presentes.")
+
+    # Verifica camada estratégica (opcional)
+    inception = CONTEXT_DIR / "brain/INCEPTION.md"
+    if inception.exists(): print("[OK] INCEPTION.md presente (Camada Estratégica Ativa)")
+    else: print("[INFO] INCEPTION.md ausente (Modo execução direta)")
 
     spec_ok, spec_msg = check_specs_structure()
-    if not spec_ok: 
-        issues.append(f"[WARN] .specs/: {spec_msg}")
-    else: 
-        print(f"[OK] .specs/: {spec_msg}")
+    if not spec_ok: issues.append(f"[WARN] .specs/: {spec_msg}")
+    else: print(f"[OK] .specs/: {spec_msg}")
 
     journal_lines, journal_ok = check_journal_lines()
-    if not journal_ok: 
-        issues.append(f"[WARN] JOURNAL.md excede limite: {journal_lines}/{JOURNAL_MAX_LINES}")
-    else: 
-        print(f"[OK] JOURNAL.md dentro do limite: {journal_lines}/{JOURNAL_MAX_LINES}")
+    if not journal_ok: issues.append(f"[WARN] JOURNAL.md excede limite: {journal_lines}/{JOURNAL_MAX_LINES}")
+    else: print(f"[OK] JOURNAL.md dentro do limite: {journal_lines}/{JOURNAL_MAX_LINES}")
 
     total_chars, token_ok = estimate_tokens()
     est_tokens = total_chars // 4
-    if not token_ok:
-        issues.append(f"[WARN] Contexto estimado alto: ~{est_tokens}k tokens. Execute purge.")
-    else: 
-        print(f"[OK] Estimativa de contexto segura: ~{est_tokens}k tokens")
+    if not token_ok: issues.append(f"[WARN] Contexto estimado alto: ~{est_tokens}k tokens. Execute purge.")
+    else: print(f"[OK] Estimativa de contexto segura: ~{est_tokens}k tokens")
 
     reg_ok, reg_msg = check_registry_structure()
-    if not reg_ok: 
-        issues.append(f"[WARN] AGENT_REGISTRY.md: {reg_msg}")
-    else: 
-        print("[OK] AGENT_REGISTRY.md estrutura valida.")
+    if not reg_ok: issues.append(f"[WARN] AGENT_REGISTRY.md: {reg_msg}")
+    else: print("[OK] AGENT_REGISTRY.md estrutura válida.")
 
-    # Check for optional strategic layers
-    inception = CONTEXT_DIR / "brain/INCEPTION.md"
-    if inception.exists():
-        print("[OK] INCEPTION.md presente (Camada Estratégica Ativa).")
-    else:
-        print("[INFO] INCEPTION.md ausente (Modo de execução direta).")
-
-    print("\n--- Relatorio Final ---")
+    print("\n--- Relatório Final ---")
     if not issues:
-        print("[SUCCESS] Contexto integro. Pronto para execucao.")
+        print("[SUCCESS] Contexto íntegro. Pronto para execução.")
         sys.exit(0)
     else:
-        for issue in issues: 
-            print(issue)
-        print("[ALERT] Resolva os alertas antes de gerar codigo.")
+        for issue in issues: print(issue)
+        print("[FATAL] Resolva os alertas antes de gerar código.")
         sys.exit(1)
 
 if __name__ == "__main__":
@@ -1374,7 +1509,7 @@ FILE_END id=file_4b29e274836e
 
 ---
 <a id="file_de9ef20db2be"></a>
-FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=26 bytes=847 mtime=2026-04-14T15:02:24.478806+00:00 sha1=1236e289c232f6a7dd04ca408e00b2c665694842
+FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=26 bytes=847 mtime=2026-04-14T16:47:30.781260+00:00 sha1=1236e289c232f6a7dd04ca408e00b2c665694842
 CHUNK_START id=de9ef20db2be_c001 start_line=1 end_line=26
 ```markdown
 ---
@@ -1514,7 +1649,7 @@ FILE_END id=file_d833c436f547
 
 ---
 <a id="file_d124f6374cab"></a>
-FILE_START id=file_d124f6374cab path=.context/brain/PRD.md domain=docs lang=markdown lines=67 bytes=2446 mtime=2026-04-14T15:02:30.490045+00:00 sha1=b5c06bc8a67d2a788cc8263f03971f379d04e92e
+FILE_START id=file_d124f6374cab path=.context/brain/PRD.md domain=docs lang=markdown lines=67 bytes=2446 mtime=2026-04-14T16:47:37.883559+00:00 sha1=b5c06bc8a67d2a788cc8263f03971f379d04e92e
 CHUNK_START id=d124f6374cab_c001 start_line=1 end_line=67
 ```markdown
 ---
@@ -1591,8 +1726,8 @@ FILE_END id=file_d124f6374cab
 
 ---
 <a id="file_9fe16e5591f0"></a>
-FILE_START id=file_9fe16e5591f0 path=.context/brain/PROMPT_LIBRARY.md domain=docs lang=markdown lines=173 bytes=7571 mtime=2026-04-14T14:59:42.890606+00:00 sha1=7eda5a930f6496eceb324af1f23a872799b68a00
-CHUNK_START id=9fe16e5591f0_c001 start_line=1 end_line=173
+FILE_START id=file_9fe16e5591f0 path=.context/brain/PROMPT_LIBRARY.md domain=docs lang=markdown lines=179 bytes=8253 mtime=2026-04-14T16:07:34.154588+00:00 sha1=e5ae4734d5073c28f34da257bb88fff751f489e6
+CHUNK_START id=9fe16e5591f0_c001 start_line=1 end_line=179
 ````markdown
 ---
 Criado em: 2026-04-10 21:35
@@ -1731,18 +1866,24 @@ Status: Ativo
 **Contexto Obrigatório:** `brain/INCEPTION.md`, `market/SSOT_MAP.md`, `market/MARKET_INBOX.md`
 ```text
 🤖 Ativando @vision-architect | Tarefa: {{descrição_curta}}
-📌 PROJECT_VIBE: {{resumo do sentimento do projeto}}
-📌 MARKET_CONTEXT: {{gaps ou pesquisas alvo}}
+📌 PRD_REF: {{#ID ou "N/A"}}
+📌 PROJECT_VIBE: {{resumo subjetivo do produto - MÁX 3 PARÁGRAFOS}}
+📌 MARKET_CONTEXT: {{gaps, compliance ou integrações alvo}}
 📌 CONTEXT_CHECK: ✅ Validado via npm run context:validate
-🎯 Objetivo: {{definir boundaries, validar fit ou resolver gaps de mercado}}
-🚧 Restrições:
-- Respeitar a hierarquia do market/SSOT_MAP.md
-- Use citações explícitas em previsões (Regra Karpathy)
-- Limitar boundaries a itens verificáveis (NUNCA: X)
+
+🎯 Objetivo: Refinar a visão estratégica, definir boundaries não negociáveis e mapear lacunas para o diretório `market/`.
+
+🚧 Restrições H.O.K. (Obrigatórias):
+1. 📏 Hierarquia de Verdade: `market/compliance/*.md` > `brain/INCEPTION.md` > `brain/PRD.md`. Nunca contradiga compliance registrado.
+2. 🔒 Boundaries Explícitos: Todo escopo excluído deve ser listado como `- NUNCA: <regra>`. O Harness usará isso para fail-fast no pipeline.
+3. 📖 Regra Karpathy: Claims técnicos ou de mercado exigem `> Fonte: raw/{{arquivo}}` ou referência a `market/{{pasta}}`.
+4. 🧩 Lacunas ≠ Suposições: Se houver incerteza técnica, registre em `market/MARKET_INBOX.md` com `[TODO: research]`. Nunca assuma.
+
 📤 Saída Esperada:
-1. Proposta editada para INCEPTION.md
-2. Novos itens para MARKET_INBOX.md se houver gaps
-3. Verificação de alinhamento com PRD (se existir)
+1. Seções atualizadas do `INCEPTION.md` ([Vibe], [Boundaries], [Assumptions])
+2. Tabela de lacunas formatada para `market/MARKET_INBOX.md`
+3. Confirmação de alinhamento com `SSOT_MAP.md` (se existir)
+4. Próximo passo claro: [ ] Derivar PRD | [ ] Pesquisar market gap | [ ] Validar com humano
 ```
 
 ### 🧬 `@agent-hybrid-tlc` (Spec-Driven + Context Governance)
@@ -1970,8 +2111,8 @@ FILE_END id=file_9b6470da8849
 
 ---
 <a id="file_019509328844"></a>
-FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=109 bytes=3936 mtime=2026-04-14T15:03:08.864352+00:00 sha1=be07fb9ce276b35f386319beb81a23ce76a09963
-CHUNK_START id=019509328844_c001 start_line=1 end_line=109
+FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=132 bytes=5039 mtime=2026-04-14T16:54:37.334224+00:00 sha1=25431f006b919333e53d38ddd6d02b76cfe80d6c
+CHUNK_START id=019509328844_c001 start_line=1 end_line=132
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
@@ -1991,6 +2132,11 @@ Status: Ativo
 **Decisão/Bug:** ✅ Camada Inception + Market (v2.4.0) Ativada
 **Solução:** Implementada estrutura de Market/, templates Inception e logic de STRATEGIC_ALIGNMENT no Harness. Dogfooding concluído.
 **Implicação:** O pipeline H.O.K. agora protege contra drift estratégico, falhando se o PRD violar boundaries definidos no Inception. Handoff: @vision-architect -> @dev-ops.
+
+## 📅 2026-04-14 13:10
+**Decisão/Bug:** 🛡️ Hardening do Prompt @vision-architect (v2.4.1)
+**Solução:** Injetada hierarquia explícita de SSOT, instrução de sintaxe para Harness e limite de 3 parágrafos para o VIBE.
+**Implicação:** Redução de alucinações estratégicas e garantia de que boundaries escritos serão capturados pelo pipeline.
 
 ## 📅 2026-04-11 01:25
 **Decisão/Bug:** 🔄 Handoff: @frontend-specialist → @backend-engineer
@@ -2083,19 +2229,37 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
 
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:meta-inception
+- **Detalhe:** strategy: PRD viola boundaries estratégicas: ['mongoDB']
+
+## [SESSION-COMPLETE] Antigravity Kit v2.4.1 Hardened
+- **Meta-Ação:** Re-Baseline completo da infraestrutura e camada estratégica.
+- **Destaques:** 
+  - Scripts Hardened (Unicode, JSON Allowlist, Surgical Isolation).
+  - Camada Market operacional com indexação dinâmica no Oracle.
+  - Fail-fast estratégico validado via Harness Runner.
+- **Status:** [PRODUCTION READY]
+- **Próximo:** Iniciar ciclo de desenvolvimento de features na Versão 2.4.1.
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
 ```
 CHUNK_END id=019509328844_c001
 FILE_END id=file_019509328844
 
 ---
 <a id="file_d069d4f2ebef"></a>
-FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=39 bytes=312 mtime=2026-04-14T15:02:45.838427+00:00 sha1=93587876b687b5a956688ab7ca61e9fd68976222
-CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=39
+FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=41 bytes=314 mtime=2026-04-14T16:54:37.065416+00:00 sha1=3039ab34fb5b619cfb899ba0858ac37d96a0ba37
+CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=41
 ```markdown
 ---\nCriado em: 2026-04-10 20:50\nUltima Atualizacao: 2026-04-10 20:50\nStatus: Ativo\n---\n
 
 <!-- AUTO-SYNC START -->
-*🤖 Atualizado automaticamente em 2026-04-14 12:02*
+*🤖 Atualizado automaticamente em 2026-04-14 13:54*
 
 ### DevDependencies
 - `husky`: `^9.1.7`
@@ -2104,6 +2268,8 @@ CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=39
 - `orders`
 
 <!-- AUTO-SYNC END -->
+
+
 
 
 
@@ -2429,22 +2595,19 @@ FILE_END id=file_91d5627a725e
 
 ---
 <a id="file_81ef387da7b7"></a>
-FILE_START id=file_81ef387da7b7 path=.context/market/MARKET_INBOX.md domain=docs lang=markdown lines=15 bytes=576 mtime=2026-04-14T14:51:04.030503+00:00 sha1=b947af333af48e2d71fcccb8aa8b26c561e5fb83
-CHUNK_START id=81ef387da7b7_c001 start_line=1 end_line=15
+FILE_START id=file_81ef387da7b7 path=.context/market/MARKET_INBOX.md domain=docs lang=markdown lines=12 bytes=772 mtime=2026-04-14T16:45:23.861741+00:00 sha1=a48e688a7723acbcae1af7b9b57af7e66730fd7a
+CHUNK_START id=81ef387da7b7_c001 start_line=1 end_line=12
 ```markdown
----
-Criado em: 2026-04-14 11:50
-Status: Ativo
----
+# 📥 MARKET INBOX (v2.4.1)
 
-# 📥 MARKET INBOX
-> Lixeira de pesquisa e gaps de mercado. Todo item aqui deve ser refinado em `market/research` ou `market/compliance`.
+> [!WARNING]
+> **Ponte Cognitiva (Deep Reference Store)**: As subpastas `market/compliance/` e `market/research/` possuem arquivos densos que **NÃO** entram no bundle principal (`contexto.md`) para economizar tokens. Eles estão indexados dinamicamente no **Oráculo**. Se precisar de detalhes sobre compliance ou pesquisa, use: `npm run context:oracle "sua dúvida"`.
 
 ## Gaps Pendentes
 
 | Gap | Fonte | Prioridade | Status | Última Atualização |
 |-----|-------|------------|--------|-------------------|
-| {{nome do gap}} | [Fonte: raw/{{arquivo}}] | {{Alta/Crítica/Baixa}} | {{Pesquisa/Validado}} | {{YYYY-MM-DD}} |
+| {{gap}} | [Fonte: raw/{{arquivo}}] | {{Alta/Crítica}} | {{Pesquisa/Validado}} | {{YYYY-MM-DD}} |
 
 > 💡 **Regra Karpathy**: Todo gap listado DEVE ter `> Fonte: raw/...` ou ser movido para `_archive_context/market/` se obsoleto.
 
@@ -2454,24 +2617,26 @@ FILE_END id=file_81ef387da7b7
 
 ---
 <a id="file_65a089176b85"></a>
-FILE_START id=file_65a089176b85 path=.context/market/SSOT_MAP.md domain=docs lang=markdown lines=15 bytes=628 mtime=2026-04-14T14:50:54.730298+00:00 sha1=b66ad7ca11f42ee4ee3f3b2dcd8ee423b31bb5c7
-CHUNK_START id=65a089176b85_c001 start_line=1 end_line=15
+FILE_START id=file_65a089176b85 path=.context/market/SSOT_MAP.md domain=docs lang=markdown lines=17 bytes=949 mtime=2026-04-14T16:45:51.494110+00:00 sha1=4d21781b5cbfa9f85f27d0013f1045e7394688fc
+CHUNK_START id=65a089176b85_c001 start_line=1 end_line=17
 ```markdown
 ---
 Criado em: 2026-04-14 11:50
 Status: Ativo
 ---
 
-# ⚖️ SSOT_MAP: Single Source of Truth
-> Este mapa define a precedência e hierarquia de autoridades para resolver conflitos entre documentos.
+# ⚖️ SSOT_MAP: Hierarquia de Verdade (v2.4.1 Hardened)
 
-## Precedência (maior → menor)
-1. `market/compliance/*.md` (Restrições legais absolutas, bloqueante)
-2. `brain/INCEPTION.md` [Boundaries] (Restrições estratégicas, bloqueante)
-3. `brain/PRD.md` (Contrato de execução da feature atual)
-4. `maintenance/JOURNAL.md` (Contexto operacional vivo)
+> Este mapa define a precedência absoluta de informações. Em caso de conflito, a camada superior anula a inferior.
 
-*Nota: Em caso de ambiguidade, o Oráculo de Contexto sempre priorizará arquivos no topo dessa lista para responder perguntas.*
+1.  ⚖️ **Market Compliance** (`market/compliance/*.md`): Restrições legais, jurisdição e termos de terceiros (Stripe, Apple, LGPD). **BLOQUEANTE**.
+2.  🧭 **Inception Layer** (`brain/INCEPTION.md`): Boundaries estratégicos e Vibe do produto. **BLOQUEANTE**.
+3.  📜 **Rules of Engagement** (`brain/RULES.md`): Protocolos de IA e Máquina de Estados.
+4.  🎯 **Execution Context** (`brain/PRD.md` + `maintenance/schema.sql`): O contrato técnico atual.
+5.  🕒 **Operational History** (`maintenance/JOURNAL.md`): Memória de curto prazo das sessões.
+
+---
+> ⚠️ **Harness Gate**: O `harness_runner.py` valida automaticamente se o PRD viola os boundaries definidos no `INCEPTION.md` (regras `- NUNCA:`).
 
 ```
 CHUNK_END id=65a089176b85_c001
@@ -2479,15 +2644,16 @@ FILE_END id=file_65a089176b85
 
 ---
 <a id="file_b5d38697335e"></a>
-FILE_START id=file_b5d38697335e path=.context/market/economics.md domain=docs lang=markdown lines=17 bytes=448 mtime=2026-04-14T14:51:11.824432+00:00 sha1=5beceac4f8f158567cd62ed70e895a61355f2647
-CHUNK_START id=b5d38697335e_c001 start_line=1 end_line=17
+FILE_START id=file_b5d38697335e path=.context/market/economics.md domain=docs lang=markdown lines=19 bytes=486 mtime=2026-04-14T16:46:05.811354+00:00 sha1=935c22a2a6e1e346902b115f59ebb430920567f9
+CHUNK_START id=b5d38697335e_c001 start_line=1 end_line=19
 ```markdown
 ---
 Criado em: 2026-04-14 11:50
 Status: Ativo
 ---
 
-# 💰 Economics
+# 💰 Economics (v2.4.1)
+
 > Definições de budget, custos projetados e restrições financeiras do produto.
 
 ## Premissas de Custo
@@ -2498,7 +2664,8 @@ Status: Ativo
 | Serviço | Custo Previsto | Limite Imposto | Observação |
 |---------|---------------|----------------|------------|
 | OpenAI API | - | - | - |
-| Vercel | - | - | - |
+| Vercel/DB | - | - | - |
+| Supabase | - | - | - |
 
 ```
 CHUNK_END id=b5d38697335e_c001
@@ -2506,12 +2673,12 @@ FILE_END id=file_b5d38697335e
 
 ---
 <a id="file_068a21d64bec"></a>
-FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1505 mtime=2026-04-14T15:02:46.588108+00:00 sha1=863fd41b4e8ab0d710117c9ca8333b95780db284
+FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1505 mtime=2026-04-14T16:54:37.728060+00:00 sha1=d53b7cb1e2de0f00939096bb2f2118bf782c89c6
 CHUNK_START id=068a21d64bec_c001 start_line=1 end_line=38
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
-Ultima Atualizacao: 2026-04-14 12:02
+Ultima Atualizacao: 2026-04-14 13:54
 Status: Ativo
 ---
 
@@ -2523,15 +2690,15 @@ Status: Ativo
 | Metrica | Valor Atual | Limite Ideal | Pilar | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **Manutencao** | | | | |
-| Linhas do Journal | 104 | 600 | Tracker | [OK] |
-| Carga do Journal | 3k chars | 50k chars | Tracker | [OK] |
+| Linhas do Journal | 132 | 600 | Tracker | [OK] |
+| Carga do Journal | 4k chars | 50k chars | Tracker | [OK] |
 | **Cognitivo** | | | | |
 | Estimativa Tokens | ~20k | 128k (Max) | Eficiencia | [OK] |
 | **Consistencia** | | | | |
 | Tabelas no Schema | 1 | N/A | DB-First | [OK] |
 | Migrations Pendentes | 1 file(s) | N/A | DB-First | [OK] |
 | Ultimo Harness | Role Check | Pass/Fail | Integridade | [PASS] |
-| Ultima Sincronia | 2026-04-14 12:02 | Real-Time | Automacao | [OK] |
+| Ultima Sincronia | 2026-04-14 13:54 | Real-Time | Automacao | [OK] |
 <!-- HEALTH_TABLE_END -->
 
 ---
@@ -2607,12 +2774,12 @@ FILE_END id=file_3adfd36c1559
 
 ---
 <a id="file_238a0e1da225"></a>
-FILE_START id=file_238a0e1da225 path=.specs/features/meta-inception/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-14T15:02:46.118901+00:00 sha1=03840c426ecfbf56c40007a9ffaf7d9d6c215ef3
+FILE_START id=file_238a0e1da225 path=.specs/features/meta-inception/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-14T16:54:37.337219+00:00 sha1=9eedbad63096d8b5c68569d78b814d72d6943234
 CHUNK_START id=238a0e1da225_c001 start_line=1 end_line=5
 ```markdown
 ---
 status: ✅ PASSED
-updated: 2026-04-14 12:02
+updated: 2026-04-14 13:54
 detail: All checks passed
 ---
 
@@ -2654,10 +2821,10 @@ FILE_END id=file_9801af51c558
 
 ---
 <a id="file_8ec9a00bfd09"></a>
-FILE_START id=file_8ec9a00bfd09 path=README.md domain=docs lang=markdown lines=92 bytes=4017 mtime=2026-04-12T02:50:09.095504+00:00 sha1=8dd17ddb4907fab2890fd5706df07610aeb55c24
+FILE_START id=file_8ec9a00bfd09 path=README.md domain=docs lang=markdown lines=92 bytes=4021 mtime=2026-04-15T13:55:00.452820+00:00 sha1=f1ffa29f720add19af522bd70565ff2c9c24fdff
 CHUNK_START id=8ec9a00bfd09_c001 start_line=1 end_line=92
 ````markdown
-# 🛸 Antigravity Kit v2.3 Premium+ (H.O.K. Enabled)
+# 🛸 Antigravity Kit v2.4.1 Hardened (H.O.K. Enabled)
 > **O ecossistema definitivo para engenharia AI-Ready: Governança Macro + Execução Atômica + Controle Ativo.**
 
 Este repositório é um **Template Semente** desenhado para projetos que utilizam IA como parceira de codificação. Ele unifica o **Antigravity Kit** com o **TLC Spec-Driven** e eleva a governança ao **Nível 3 (H.O.K.)**, garantindo que Propósito → Execução → Validação operem em loop fechado e autônomo.
@@ -2704,7 +2871,7 @@ O script ira criar automaticamente toda a estrutura de camadas, os workshops de 
 
 ---
 
-## 🚀 Comandos de Operação (v2.3)
+## 🚀 Comandos de Operação (v2.4.1)
 | Comando | Descrição |
 |---------|-----------|
 | `npm run context:validate` | Checa integridade, estrutura e estimativa de tokens |
@@ -2756,13 +2923,13 @@ FILE_END id=file_8ec9a00bfd09
 
 ---
 <a id="file_4efb6293109d"></a>
-FILE_START id=file_4efb6293109d path=README_CONTEXT.md domain=docs lang=markdown lines=123 bytes=5644 mtime=2026-04-12T02:50:25.829553+00:00 sha1=712d7adc5114926d1dec5ba37d7ff87141ef0b7b
+FILE_START id=file_4efb6293109d path=README_CONTEXT.md domain=docs lang=markdown lines=123 bytes=5646 mtime=2026-04-15T13:55:07.042658+00:00 sha1=11974770e2e6340511baa5857d61dfcb25062f03
 CHUNK_START id=4efb6293109d_c001 start_line=1 end_line=123
 ````markdown
 ---
 Criado em: 2026-04-10 22:45
 Ultima Atualizacao: 2026-04-11 23:30
-Status: Ativo (v2.3-HOK)
+Status: Ativo (v2.4.1)
 ---
 
 # 📖 README_CONTEXT.md — Guia de Operação do Framework
@@ -2777,7 +2944,7 @@ O diretório `.context/` é a **Fonte Unica da Verdade (SSOT)** do projeto. Ele 
 
 **Regra de Ouro:** `Se nao esta no .context, nao existe. O codigo deve ser o reflexo fiel do contexto.`
 
-## 🧩 Novos Pilares de Operação (v2.3+)
+## 🧩 Novos Pilares de Operação (v2.4.1+)
 - **🛡️ Harness:** O pipeline aborta automaticamente se uma Spec referenciar tabelas/campos inexistentes no `schema.sql` ou se handoffs estiverem incompletos.
 - **🔍 Oracle:** Ao detectar ambiguidade, execute `npm run context:oracle "sua pergunta"`. Retorno com `confidence < 0.5` pausa o fluxo e exige `[oracle:uncertain]` no `JOURNAL.md`.
 - **📖 Karpathy:** Todo claim técnico adicionado ao `.context/` deve conter `> Fonte: raw/nome-arquivo.md`. O `pre-commit` roda em modo `--strict` e rejeita commits sem citação.
@@ -2828,7 +2995,7 @@ O diretório `.context/` é a **Fonte Unica da Verdade (SSOT)** do projeto. Ele 
 
 ---
 
-## ⚙️ 5. Comandos Rápidos (Cheat Sheet v2.3)
+## ⚙️ 5. Comandos Rápidos (Cheat Sheet v2.4.1)
 ```bash
 # Validar integridade + estimar tokens
 npm run context:validate
@@ -2889,12 +3056,12 @@ FILE_END id=file_4efb6293109d
 
 ---
 <a id="file_19e76e009f38"></a>
-FILE_START id=file_19e76e009f38 path=TEMPLATE_MIGRATION.md domain=docs lang=markdown lines=59 bytes=1926 mtime=2026-04-12T03:07:09.407660+00:00 sha1=20f937b7b3cfaf5e0b5beb46c68112ca84ce7d5e
+FILE_START id=file_19e76e009f38 path=TEMPLATE_MIGRATION.md domain=docs lang=markdown lines=59 bytes=1930 mtime=2026-04-15T13:55:12.936320+00:00 sha1=a3590439f4c18d976ff928504760f8f35a29d25c
 CHUNK_START id=19e76e009f38_c001 start_line=1 end_line=59
 ````markdown
 # 🚀 Guia de Migração: Do Template para o Projeto Real
 
-Este guia descreve como "descolar" este template do repositório de origem e iniciar seu novo projeto com a Governança Antigravity Kit v2.3.
+Este guia descreve como "descolar" este template do repositório de origem e iniciar seu novo projeto com a Governança Antigravity Kit v2.4.1.
 
 ---
 
@@ -2921,7 +3088,7 @@ rm -rf .git
 ```powershell
 git init
 git add .
-git commit -m "chore: initial commit from Antigravity Kit v2.3"
+git commit -m "chore: initial commit from Antigravity Kit v2.4.1"
 ```
 
 ### 4. Conectar ao seu NOVO repositório no GitHub
@@ -2958,12 +3125,12 @@ FILE_END id=file_19e76e009f38
 
 ---
 <a id="file_f6f7100f063b"></a>
-FILE_START id=file_f6f7100f063b path=VERSION.md domain=docs lang=markdown lines=11 bytes=416 mtime=2026-04-12T00:57:24.540624+00:00 sha1=9ddd807983a0b3be0e492db5fb2a29f9bfe014f8
+FILE_START id=file_f6f7100f063b path=VERSION.md domain=docs lang=markdown lines=11 bytes=408 mtime=2026-04-15T13:54:53.950320+00:00 sha1=71c2d41808c7f35c0cd94af605138601c6d26cf3
 CHUNK_START id=f6f7100f063b_c001 start_line=1 end_line=11
 ```markdown
 # 🛸 Antigravity Kit Versioning
-v2.3.0-hok
-Dash: [Antigravity Kit v2.3.0-hok]
+v2.4.1
+Dash: [Antigravity Kit v2.4.1]
 Audit Status: ✅ PASSED
 Release Date: 2026-04-11
 
@@ -3128,7 +3295,7 @@ FILE_END id=file_1f98938d3cd9
 
 ---
 <a id="file_c3916196f58f"></a>
-FILE_START id=file_c3916196f58f path=captura_projeto.py domain=source lang=python lines=418 bytes=17263 mtime=2026-04-14T11:10:51.136116+00:00 sha1=9a985028f9c3691042599b17c099001b7aa541b6
+FILE_START id=file_c3916196f58f path=captura_projeto.py domain=source lang=python lines=423 bytes=17527 mtime=2026-04-15T13:55:46.805379+00:00 sha1=30b1941448284c9f32be842634277a984ee11608
 CHUNK_START id=c3916196f58f_c001 start_line=1 end_line=300
 ```python
 #!/usr/bin/env python3
@@ -3147,7 +3314,7 @@ from datetime import datetime, timezone
 from fnmatch import fnmatch
 from pathlib import Path
 
-VERSION = "2.3.0-hok"
+VERSION = "2.4.1"
 
 # 🛠️ CUSTOMIZE AQUI: Padrões universais + adicione os específicos do seu projeto
 PASTAS_IGNORAR = {
@@ -3335,6 +3502,11 @@ def collect_files(config: BundleConfig) -> tuple[FileRecord, ...]:
         current = Path(dirpath)
         is_root = (current == root)
 
+        # 🛡️ Isolamento Cirúrgico (v2.4.1): Ignora pastas densas específicas
+        rel_dir = current.relative_to(root).as_posix()
+        if rel_dir == ".context/market":
+            dirnames[:] = [d for d in dirnames if d not in {"compliance", "research"}]
+
         if config.only_core:
             dirnames[:] = sorted(d for d in dirnames if (d in PASTAS_CORE or not is_root) and d not in PASTAS_IGNORAR)
         elif config.exclude_core:
@@ -3427,15 +3599,15 @@ def get_dynamic_filename(config: BundleConfig) -> str:
     
     return f"{base}{ver}{suffix}.md"
 
+```
+CHUNK_END id=c3916196f58f_c001
+CHUNK_START id=c3916196f58f_c002 start_line=301 end_line=423
+````python
+
 def render_frontmatter(config: BundleConfig, records: tuple[FileRecord, ...]) -> str:
     total_bytes = sum(r.byte_count for r in records)
     lines = [
         "---", "schema_version: 1",
-
-```
-CHUNK_END id=c3916196f58f_c001
-CHUNK_START id=c3916196f58f_c002 start_line=301 end_line=418
-````python
         f"generated_at: {datetime.now(timezone.utc).isoformat()}",
         f"root: {config.diretorio.resolve().name}",
         f"mode: {mode_name(config)}", f"profile: {config.profile}",
@@ -3560,12 +3732,12 @@ FILE_END id=file_c3916196f58f
 
 ---
 <a id="file_c59135753d26"></a>
-FILE_START id=file_c59135753d26 path=init_ai_project.sh domain=source lang=bash lines=155 bytes=5469 mtime=2026-04-11T02:29:46.289656+00:00 sha1=18e30807c6ef1ce94e3619f19f8ec2bd93f77c52
+FILE_START id=file_c59135753d26 path=init_ai_project.sh domain=source lang=bash lines=155 bytes=5477 mtime=2026-04-15T13:55:21.100120+00:00 sha1=fc4f5a6da915195371a4251584d13075dbd30ae3
 CHUNK_START id=c59135753d26_c001 start_line=1 end_line=155
 ```bash
 #!/usr/bin/env bash
 # -----------------------------------------------------------------------------
-# 🚀 init_ai_project.sh - Antigravity Kit Bootstrapper (v2.2 Premium+)
+# 🚀 init_ai_project.sh - Antigravity Kit Bootstrapper (v2.4.1 Hardened)
 # -----------------------------------------------------------------------------
 # Versão Suprema: Fusão Antigravity + TLC Spec-Driven.
 # Com detecção automática de gerenciador e motores de manutenção completos.
@@ -3609,7 +3781,7 @@ fi
 check_deps
 PKG_MGR=$(detect_pkg_mgr)
 log "Gerenciador detectado: $PKG_MGR"
-log "Inicializando Antigravity AI-Ready Framework v2.2 Premium+..."
+log "Inicializando Antigravity AI-Ready Framework v2.4.1 Hardened..."
 
 # 📂 Estrutura de Diretorios
 log "Criando estrutura de camadas e workshop TLC..."
@@ -3659,7 +3831,7 @@ Ponte entre Governança (.context/) e Execução Atômica (.specs/).
 5. SYNC -> Lições para o JOURNAL.md e limpeza da spec.
 EOF
 
-# (Injeção dos Motores Reais v2.2 Premium+)
+# (Injeção dos Motores Reais v2.4.1 Hardened)
 cat > .context/_scripts/validate_context.py << 'EOF'
 #!/usr/bin/env python3
 import os, sys
@@ -3672,7 +3844,7 @@ def check_specs():
     if not specs.exists(): return True
     return all((d / "STATE.md").exists() for d in specs.iterdir() if d.is_dir())
 def validate():
-    print("--- Validacao v2.2 Premium+ ---")
+    print("--- Validacao v2.4.1 Hardened ---")
     missing = [f for f in REQUIRED if not (CONTEXT_DIR / f).exists()]
     if missing or not check_specs(): sys.exit(1)
     print("✅ Contexto e Workshop integros.")
@@ -3725,12 +3897,12 @@ FILE_END id=file_c59135753d26
 
 ---
 <a id="file_7030d0b2f71b"></a>
-FILE_START id=file_7030d0b2f71b path=package.json domain=config lang=json lines=33 bytes=1178 mtime=2026-04-12T02:15:21.293639+00:00 sha1=ccfed0b4b64de88e6d54ceec22c07086f30f140a
+FILE_START id=file_7030d0b2f71b path=package.json domain=config lang=json lines=33 bytes=1178 mtime=2026-04-15T13:54:47.619052+00:00 sha1=a445b6ec0e94e30d578f60283da00f2a0052da82
 CHUNK_START id=7030d0b2f71b_c001 start_line=1 end_line=33
 ```json
 {
   "name": "ai-context-governance-template",
-  "version": "2.2.0",
+  "version": "2.4.1",
   "description": "AI-Ready Template with Layered Context Governance & Spec-Driven Execution",
   "scripts": {
     "context:validate": "python run_context.py validate",
@@ -4739,13 +4911,13 @@ FILE_END id=file_6a4bd0586b20
 
 ---
 <a id="file_350a79f8b829"></a>
-FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=68 bytes=2826 mtime=2026-04-14T12:47:44.168950+00:00 sha1=5134572d6528b5959a8659a5098f89bdc5b72e20
+FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=68 bytes=2825 mtime=2026-04-15T13:55:27.886548+00:00 sha1=1f46351663598a86b075dee30ce618101e077bb9
 CHUNK_START id=350a79f8b829_c001 start_line=1 end_line=68
 ```python
 #!/usr/bin/env python3
 """
-🐍 run_context.py - Gestor Universal de Contexto v2.3 (Fail-Fast Pipeline)
-Sequencia otimizada: validate → scan-secrets → sync → check-migrations → harness → lint(--) → health
+🐍 run_context.py - Gestor Universal de Contexto v2.4.1 (Hardened Pipeline)
+Sequencia otimizada: validate → scan-secrets → sync → migrations → harness → lint(strict) → health
 """
 import sys
 import subprocess
@@ -4817,12 +4989,12 @@ FILE_END id=file_350a79f8b829
 
 ---
 <a id="file_86bac54f32d7"></a>
-FILE_START id=file_86bac54f32d7 path=run_context.sh domain=source lang=bash lines=38 bytes=1386 mtime=2026-04-11T02:57:36.569915+00:00 sha1=e6604f22108387e02990d6bc08fc703d62cb82f6
+FILE_START id=file_86bac54f32d7 path=run_context.sh domain=source lang=bash lines=38 bytes=1388 mtime=2026-04-15T13:55:34.017957+00:00 sha1=37e7f291a35fd6c477129f58fbeb2506763c6477
 CHUNK_START id=86bac54f32d7_c001 start_line=1 end_line=38
 ```bash
 #!/usr/bin/env bash
 # ---------------------------------------------------------
-# 🐚 run_context.sh - Orquestrador Universal de Contexto v2.2
+# 🐚 run_context.sh - Orquestrador Universal de Contexto v2.4.1
 # ---------------------------------------------------------
 set -euo pipefail
 

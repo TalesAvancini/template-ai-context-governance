@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from fnmatch import fnmatch
 from pathlib import Path
 
-VERSION = "2.3.0-hok"
+VERSION = "2.4.1"
 
 # 🛠️ CUSTOMIZE AQUI: Padrões universais + adicione os específicos do seu projeto
 PASTAS_IGNORAR = {

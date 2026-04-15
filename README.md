@@ -1,4 +1,4 @@
-# 🛸 Antigravity Kit v2.3 Premium+ (H.O.K. Enabled)
+# 🛸 Antigravity Kit v2.4.1 Hardened (H.O.K. Enabled)
 > **O ecossistema definitivo para engenharia AI-Ready: Governança Macro + Execução Atômica + Controle Ativo.**
 
 Este repositório é um **Template Semente** desenhado para projetos que utilizam IA como parceira de codificação. Ele unifica o **Antigravity Kit** com o **TLC Spec-Driven** e eleva a governança ao **Nível 3 (H.O.K.)**, garantindo que Propósito → Execução → Validação operem em loop fechado e autônomo.
@@ -45,7 +45,7 @@ O script ira criar automaticamente toda a estrutura de camadas, os workshops de 
 
 ---
 
-## 🚀 Comandos de Operação (v2.3)
+## 🚀 Comandos de Operação (v2.4.1)
 | Comando | Descrição |
 |---------|-----------|
 | `npm run context:validate` | Checa integridade, estrutura e estimativa de tokens |

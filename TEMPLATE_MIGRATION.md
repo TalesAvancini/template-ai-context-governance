@@ -1,6 +1,6 @@
 # 🚀 Guia de Migração: Do Template para o Projeto Real
 
-Este guia descreve como "descolar" este template do repositório de origem e iniciar seu novo projeto com a Governança Antigravity Kit v2.3.
+Este guia descreve como "descolar" este template do repositório de origem e iniciar seu novo projeto com a Governança Antigravity Kit v2.4.1.
 
 ---
 
@@ -27,7 +27,7 @@ rm -rf .git
 ```powershell
 git init
 git add .
-git commit -m "chore: initial commit from Antigravity Kit v2.3"
+git commit -m "chore: initial commit from Antigravity Kit v2.4.1"
 ```
 
 ### 4. Conectar ao seu NOVO repositório no GitHub

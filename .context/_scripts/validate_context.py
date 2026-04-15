@@ -66,7 +66,7 @@ def check_specs_structure():
     return True, f"OK ({len(active_specs)} specs ativas)"
 
 def validate():
-    print("--- Iniciando validação de contexto (v2.4 Hardened) ---")
+    print("--- Iniciando validação de contexto (v2.4.1 Hardened) ---")
     issues = []
 
     missing = check_files()
