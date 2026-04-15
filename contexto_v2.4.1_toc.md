@@ -2,12 +2,12 @@
 
 ---
 schema_version: 1
-generated_at: 2026-04-15T19:51:12.488835+00:00
+generated_at: 2026-04-15T20:04:36.677169+00:00
 root: template_inicío_de_projeto
 mode: full | TOC
 profile: ai-default
-file_count: 66
-byte_count: 202780
+file_count: 67
+byte_count: 203532
 ignored_dirs:
   - .cache
   - .cursor
@@ -87,6 +87,7 @@ sensitive_rules:
   - `TEMPLATE_MIGRATION.md` -> [file_19e76e009f38](#file_19e76e009f38)
   - `VERSION.md` -> [file_f6f7100f063b](#file_f6f7100f063b)
   - `_modoLight/Modo_Light.md` -> [file_1f98938d3cd9](#file_1f98938d3cd9)
+  - `planos/RESEARCH_NOTE_SPRINT_CONTRACTS.md` -> [file_7c2f50daa3f4](#file_7c2f50daa3f4)
   - `planos/_arquivo_planos/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_80252595b07f](#file_80252595b07f)
   - `planos/_arquivo_planos/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_482a16303af0](#file_482a16303af0)
   - `planos/_arquivo_planos/implementation_plan.md` -> [file_e7f1855928ad](#file_e7f1855928ad)
@@ -172,6 +173,7 @@ sensitive_rules:
 - `captura_projeto.py` -> [file_c3916196f58f](#file_c3916196f58f)
 - `init_ai_project.sh` -> [file_c59135753d26](#file_c59135753d26)
 - `package.json` -> [file_7030d0b2f71b](#file_7030d0b2f71b)
+- `planos/RESEARCH_NOTE_SPRINT_CONTRACTS.md` -> [file_7c2f50daa3f4](#file_7c2f50daa3f4)
 - `planos/_arquivo_planos/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_80252595b07f](#file_80252595b07f)
 - `planos/_arquivo_planos/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_482a16303af0](#file_482a16303af0)
 - `planos/_arquivo_planos/implementation_plan.md` -> [file_e7f1855928ad](#file_e7f1855928ad)
@@ -273,7 +275,7 @@ FILE_END id=file_4b29e274836e
 
 ---
 <a id="file_de9ef20db2be"></a>
-FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=25 bytes=702 mtime=2026-04-15T19:50:48.899879+00:00 sha1=cb7b11c33eca252d254f1f7b0f6bdff5e02cf7a8
+FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=4 bytes=49 mtime=2026-04-15T20:04:35.652389+00:00 sha1=d6a39c37275e48ecad6f7a630a66263c81254b95
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_de9ef20db2be
 
@@ -321,13 +323,13 @@ FILE_END id=file_9b6470da8849
 
 ---
 <a id="file_019509328844"></a>
-FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=189 bytes=7093 mtime=2026-04-15T19:24:49.601889+00:00 sha1=4795fbe3f66b869b7c5bfd4b0205f6b9169486f7
+FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=192 bytes=7176 mtime=2026-04-15T19:51:28.862753+00:00 sha1=2b7166fed9875f01f46314c9696b9d3f3aca571d
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_019509328844
 
 ---
 <a id="file_d069d4f2ebef"></a>
-FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=53 bytes=326 mtime=2026-04-15T19:24:49.335526+00:00 sha1=336b732bf38781a09d5766f5646077d765812ebe
+FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=54 bytes=327 mtime=2026-04-15T19:51:28.520061+00:00 sha1=ea68709a75a6b665a2d9b34737afd7cf685cd7ad
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_d069d4f2ebef
 
@@ -411,7 +413,7 @@ FILE_END id=file_b5d38697335e
 
 ---
 <a id="file_068a21d64bec"></a>
-FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1505 mtime=2026-04-15T19:24:50.021497+00:00 sha1=b69419fa48450837560bc86a3ee9a103ff864244
+FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1505 mtime=2026-04-15T19:51:29.870444+00:00 sha1=b6212c8fecee5526d76adeded2de089ae28e8b7c
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_068a21d64bec
 
@@ -441,7 +443,7 @@ FILE_END id=file_3adfd36c1559
 
 ---
 <a id="file_238a0e1da225"></a>
-FILE_START id=file_238a0e1da225 path=.specs/features/meta-inception/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-15T19:24:49.605886+00:00 sha1=284f8874b6f3c07e37659cca7d43118fd035f520
+FILE_START id=file_238a0e1da225 path=.specs/features/meta-inception/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-15T19:51:28.865233+00:00 sha1=4ba0fb215929ea73b721a17c237cb9e2a2b7ba1b
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_238a0e1da225
 
@@ -498,6 +500,12 @@ FILE_END id=file_c59135753d26
 FILE_START id=file_7030d0b2f71b path=package.json domain=config lang=json lines=34 bytes=1232 mtime=2026-04-15T19:13:58.308600+00:00 sha1=dc707667997b95d8b8900b73c970f7356df992ef
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_7030d0b2f71b
+
+---
+<a id="file_7c2f50daa3f4"></a>
+FILE_START id=file_7c2f50daa3f4 path=planos/RESEARCH_NOTE_SPRINT_CONTRACTS.md domain=docs lang=markdown lines=19 bytes=1321 mtime=2026-04-15T20:04:35.439521+00:00 sha1=c5f557bd5f78146273a135f13f0d6ec82bcd5088
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_7c2f50daa3f4
 
 ---
 <a id="file_80252595b07f"></a>

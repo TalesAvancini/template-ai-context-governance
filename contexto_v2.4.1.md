@@ -2,12 +2,12 @@
 
 ---
 schema_version: 1
-generated_at: 2026-04-15T19:51:11.868765+00:00
+generated_at: 2026-04-15T20:04:36.188322+00:00
 root: template_inicío_de_projeto
 mode: full
 profile: ai-default
-file_count: 66
-byte_count: 202780
+file_count: 67
+byte_count: 203532
 ignored_dirs:
   - .cache
   - .cursor
@@ -87,6 +87,7 @@ sensitive_rules:
   - `TEMPLATE_MIGRATION.md` -> [file_19e76e009f38](#file_19e76e009f38)
   - `VERSION.md` -> [file_f6f7100f063b](#file_f6f7100f063b)
   - `_modoLight/Modo_Light.md` -> [file_1f98938d3cd9](#file_1f98938d3cd9)
+  - `planos/RESEARCH_NOTE_SPRINT_CONTRACTS.md` -> [file_7c2f50daa3f4](#file_7c2f50daa3f4)
   - `planos/_arquivo_planos/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_80252595b07f](#file_80252595b07f)
   - `planos/_arquivo_planos/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_482a16303af0](#file_482a16303af0)
   - `planos/_arquivo_planos/implementation_plan.md` -> [file_e7f1855928ad](#file_e7f1855928ad)
@@ -172,6 +173,7 @@ sensitive_rules:
 - `captura_projeto.py` -> [file_c3916196f58f](#file_c3916196f58f)
 - `init_ai_project.sh` -> [file_c59135753d26](#file_c59135753d26)
 - `package.json` -> [file_7030d0b2f71b](#file_7030d0b2f71b)
+- `planos/RESEARCH_NOTE_SPRINT_CONTRACTS.md` -> [file_7c2f50daa3f4](#file_7c2f50daa3f4)
 - `planos/_arquivo_planos/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_80252595b07f](#file_80252595b07f)
 - `planos/_arquivo_planos/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_482a16303af0](#file_482a16303af0)
 - `planos/_arquivo_planos/implementation_plan.md` -> [file_e7f1855928ad](#file_e7f1855928ad)
@@ -1690,35 +1692,13 @@ FILE_END id=file_4b29e274836e
 
 ---
 <a id="file_de9ef20db2be"></a>
-FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=25 bytes=702 mtime=2026-04-15T19:50:48.899879+00:00 sha1=cb7b11c33eca252d254f1f7b0f6bdff5e02cf7a8
-CHUNK_START id=de9ef20db2be_c001 start_line=1 end_line=25
+FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=4 bytes=49 mtime=2026-04-15T20:04:35.652389+00:00 sha1=d6a39c37275e48ecad6f7a630a66263c81254b95
+CHUNK_START id=de9ef20db2be_c001 start_line=1 end_line=4
 ```markdown
 ---
 version: 2.4.1
 mode: STRATEGIC
 status: ACTIVE
----
-
-# 🎯 INCEPTION: [Nome do Projeto]
-
-## 🌈 Vibe & Essência
-- [Descreva o "feeling" do projeto em 3 parágrafos]
-
-## 🛡️ Boundaries (Regras Inegociáveis)
-- NUNCA: [Regra 1]
-- NUNCA: [Regra 2]
-
-## 🔮 Assumptions
-- [Premissas de mercado ou técnicas]
-
----
-## 🚀 Próximos Passos (Backlog Estratégico)
-- **v2.4.2 - Contratos de Sprint:** Implementar o ritual de negociação entre QA e Dev.
-- **Harness Engineering:** Evoluir os testes para vereditos binários 0/1 bloqueantes.
-- **Automatização de Gaps:** Expandir `enrich_context.py` para sugerir rascunhos de pesquisa.
-
-*Última atualização: Antigravity v2.4.1-Hardened (Evolved)*
-
 ```
 CHUNK_END id=de9ef20db2be_c001
 FILE_END id=file_de9ef20db2be
@@ -2250,8 +2230,8 @@ FILE_END id=file_9b6470da8849
 
 ---
 <a id="file_019509328844"></a>
-FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=189 bytes=7093 mtime=2026-04-15T19:24:49.601889+00:00 sha1=4795fbe3f66b869b7c5bfd4b0205f6b9169486f7
-CHUNK_START id=019509328844_c001 start_line=1 end_line=189
+FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=192 bytes=7176 mtime=2026-04-15T19:51:28.862753+00:00 sha1=2b7166fed9875f01f46314c9696b9d3f3aca571d
+CHUNK_START id=019509328844_c001 start_line=1 end_line=192
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
@@ -2443,19 +2423,22 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
 
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
 ```
 CHUNK_END id=019509328844_c001
 FILE_END id=file_019509328844
 
 ---
 <a id="file_d069d4f2ebef"></a>
-FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=53 bytes=326 mtime=2026-04-15T19:24:49.335526+00:00 sha1=336b732bf38781a09d5766f5646077d765812ebe
-CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=53
+FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=54 bytes=327 mtime=2026-04-15T19:51:28.520061+00:00 sha1=ea68709a75a6b665a2d9b34737afd7cf685cd7ad
+CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=54
 ```markdown
 ---\nCriado em: 2026-04-10 20:50\nUltima Atualizacao: 2026-04-10 20:50\nStatus: Ativo\n---\n
 
 <!-- AUTO-SYNC START -->
-*🤖 Atualizado automaticamente em 2026-04-15 16:24*
+*🤖 Atualizado automaticamente em 2026-04-15 16:51*
 
 ### DevDependencies
 - `husky`: `^9.1.7`
@@ -2464,6 +2447,7 @@ CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=53
 - `orders`
 
 <!-- AUTO-SYNC END -->
+
 
 
 
@@ -2864,12 +2848,12 @@ FILE_END id=file_b5d38697335e
 
 ---
 <a id="file_068a21d64bec"></a>
-FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1505 mtime=2026-04-15T19:24:50.021497+00:00 sha1=b69419fa48450837560bc86a3ee9a103ff864244
+FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1505 mtime=2026-04-15T19:51:29.870444+00:00 sha1=b6212c8fecee5526d76adeded2de089ae28e8b7c
 CHUNK_START id=068a21d64bec_c001 start_line=1 end_line=38
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
-Ultima Atualizacao: 2026-04-15 16:24
+Ultima Atualizacao: 2026-04-15 16:51
 Status: Ativo
 ---
 
@@ -2881,15 +2865,15 @@ Status: Ativo
 | Metrica | Valor Atual | Limite Ideal | Pilar | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **Manutencao** | | | | |
-| Linhas do Journal | 189 | 600 | Tracker | [OK] |
-| Carga do Journal | 6k chars | 50k chars | Tracker | [OK] |
+| Linhas do Journal | 192 | 600 | Tracker | [OK] |
+| Carga do Journal | 7k chars | 50k chars | Tracker | [OK] |
 | **Cognitivo** | | | | |
 | Estimativa Tokens | ~24k | 128k (Max) | Eficiencia | [OK] |
 | **Consistencia** | | | | |
 | Tabelas no Schema | 1 | N/A | DB-First | [OK] |
 | Migrations Pendentes | 1 file(s) | N/A | DB-First | [OK] |
 | Ultimo Harness | Role Check | Pass/Fail | Integridade | [PASS] |
-| Ultima Sincronia | 2026-04-15 16:24 | Real-Time | Automacao | [OK] |
+| Ultima Sincronia | 2026-04-15 16:51 | Real-Time | Automacao | [OK] |
 <!-- HEALTH_TABLE_END -->
 
 ---
@@ -3217,12 +3201,12 @@ FILE_END id=file_3adfd36c1559
 
 ---
 <a id="file_238a0e1da225"></a>
-FILE_START id=file_238a0e1da225 path=.specs/features/meta-inception/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-15T19:24:49.605886+00:00 sha1=284f8874b6f3c07e37659cca7d43118fd035f520
+FILE_START id=file_238a0e1da225 path=.specs/features/meta-inception/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-15T19:51:28.865233+00:00 sha1=4ba0fb215929ea73b721a17c237cb9e2a2b7ba1b
 CHUNK_START id=238a0e1da225_c001 start_line=1 end_line=5
 ```markdown
 ---
 status: ✅ PASSED
-updated: 2026-04-15 16:24
+updated: 2026-04-15 16:51
 detail: All checks passed
 ---
 
@@ -4386,6 +4370,35 @@ CHUNK_START id=7030d0b2f71b_c001 start_line=1 end_line=34
 ```
 CHUNK_END id=7030d0b2f71b_c001
 FILE_END id=file_7030d0b2f71b
+
+---
+<a id="file_7c2f50daa3f4"></a>
+FILE_START id=file_7c2f50daa3f4 path=planos/RESEARCH_NOTE_SPRINT_CONTRACTS.md domain=docs lang=markdown lines=19 bytes=1321 mtime=2026-04-15T20:04:35.439521+00:00 sha1=c5f557bd5f78146273a135f13f0d6ec82bcd5088
+CHUNK_START id=7c2f50daa3f4_c001 start_line=1 end_line=19
+```markdown
+# 🕵️‍♂️ Research: Harness Engineering & Sprint Contracts
+> Fonte: Anthropic Engineering Blog & Waldemar Neto (Dev Lab)
+
+## 1. O Problema: O Limite do Spec-Driven
+O desenvolvimento guiado apenas por especificações (*Spec-Driven*) atinge um teto de vidro em projetos de longa duração. A amnésia do modelo e a falta de restrições externas levam ao "Vibe Coding", onde o código parece correto, mas degrada a arquitetura.
+
+## 2. A Solução: Harness Engineering
+O **Harness (Armadura)** é o ecossistema que envolve a IA. Ele não pede permissão; ele impõe validade.
+- **Veredito Binário:** O Harness (testes, lints, schemas) deve retornar `0/1`. O agente não é o juiz de sua própria qualidade.
+- **Restrição de Execução:** O código só é aceito se passar na "Armadura".
+
+## 3. Contratos de Sprint (O Ritual)
+Antes de gerar código, o **@qa-validator** e o **@spec-driver** negociam um contrato:
+- **Harness Spec:** Quais testes automatizados devem estar verdes?
+- **DoD (Definition of Done):** Critérios de aceite inegociáveis.
+- **Custo/Complexidade:** Acerto de expectativas de tokens e infraestrutura.
+
+## 4. Aplicação no Antigravity Kit
+O pipeline deve ser interrompido (`Exit 2`) se o Contrato de Sprint não estiver assinado, garantindo que a execução seja sempre **Safety-First**.
+
+```
+CHUNK_END id=7c2f50daa3f4_c001
+FILE_END id=file_7c2f50daa3f4
 
 ---
 <a id="file_80252595b07f"></a>
