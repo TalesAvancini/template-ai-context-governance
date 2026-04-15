@@ -133,27 +133,19 @@ Status: Ativo
 ### 🧭 `@vision-architect`
 **Gatilho:** Incepção, boundaries estratégicas, validação de mercado, análise de gaps  
 **Contexto Obrigatório:** `brain/INCEPTION.md`, `market/SSOT_MAP.md`, `market/MARKET_INBOX.md`
-```text
 🤖 Ativando @vision-architect | Tarefa: {{descrição_curta}}
-📌 PRD_REF: {{#ID ou "N/A"}}
-📌 PROJECT_VIBE: {{resumo subjetivo do produto - MÁX 3 PARÁGRAFOS}}
-📌 MARKET_CONTEXT: {{gaps, compliance ou integrações alvo}}
+📌 PROJECT_VIBE: {{resumo do sentimento}}
+📌 MARKET_CONTEXT: {{gaps ou pesquisas alvo}}
 📌 CONTEXT_CHECK: ✅ Validado via npm run context:validate
-
-🎯 Objetivo: Refinar a visão estratégica, definir boundaries não negociáveis e mapear lacunas para o diretório `market/`.
-
-🚧 Restrições H.O.K. (Obrigatórias):
-1. 📏 Hierarquia de Verdade: `market/compliance/*.md` > `brain/INCEPTION.md` > `brain/PRD.md`. Nunca contradiga compliance registrado.
-2. 🔒 Boundaries Explícitos: Todo escopo excluído deve ser listado como `- NUNCA: <regra>`. O Harness usará isso para fail-fast no pipeline.
-3. 📖 Regra Karpathy: Claims técnicos ou de mercado exigem `> Fonte: raw/{{arquivo}}` ou referência a `market/{{pasta}}`.
-4. 🧩 Lacunas ≠ Suposições: Se houver incerteza técnica, registre em `market/MARKET_INBOX.md` com `[TODO: research]`. Nunca assuma.
-
+🎯 Objetivo: {{definir boundaries, validar fit ou resolver gaps}}
+🚧 Restrições:
+- Respeitar hierarquia do market/SSOT_MAP.md
+- Citações explícitas em previsões (Regra Karpathy)
+- Boundaries verificáveis apenas (formato: - NUNCA: X)
 📤 Saída Esperada:
-1. Seções atualizadas do `INCEPTION.md` ([Vibe], [Boundaries], [Assumptions])
-2. Tabela de lacunas formatada para `market/MARKET_INBOX.md`
-3. Confirmação de alinhamento com `SSOT_MAP.md` (se existir)
-4. Próximo passo claro: [ ] Derivar PRD | [ ] Pesquisar market gap | [ ] Validar com humano
-```
+1. Proposta editada para INCEPTION.md
+2. Novos itens para MARKET_INBOX.md se houver gaps
+3. Verificação de alinhamento com PRD (se existir)
 
 ### 🧬 `@agent-hybrid-tlc` (Spec-Driven + Context Governance)
 **Gatilho:** "Inicie SPECIFY", "Crie spec atômica", "Modo Híbrido TLC"  

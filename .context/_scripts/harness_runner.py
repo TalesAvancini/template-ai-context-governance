@@ -51,10 +51,9 @@ def check_strategic_alignment():
         return True, "INCEPTION/PRD ausentes (skip estratégico)"
     prd_text = PRD.read_text(encoding="utf-8").lower()
     inception_text = INCEPTION.read_text(encoding="utf-8")
-    # Captura regras "- NUNCA: <regra>"
     boundaries = re.findall(r'^-\s*NUNCA:\s*(.+)$', inception_text, re.I | re.MULTILINE)
     violations = [b.strip() for b in boundaries if re.search(re.escape(b.strip().lower()), prd_text)]
-    if violations: return False, f"PRD viola boundaries estratégicas: {violations}"
+    if violations: return False, f"PRD viola boundaries estrategicas: {violations}"
     return True, "Strategic alignment OK"
 
 def log_harness(status, detail, spec_name="unknown"):

@@ -230,6 +230,11 @@ def collect_files(config: BundleConfig) -> tuple[FileRecord, ...]:
             is_ignored_file = any(fnmatch(filename.lower(), pat.lower()) for pat in ARQUIVOS_IGNORAR)
             is_lockfile = ("lock" in filename.lower() and path.suffix in {".json", ".yaml", ".yml", ".lock"})
 
+            # Filtro path-scoped para Market (v2.4.1 Hardened)
+            # Ignora pastas de documentos brutos para evitar token bloat no bundle
+            if "market/compliance" in rel_path.lower() or "market/research" in rel_path.lower():
+                continue
+
             if is_output_file: 
                 continue
             if is_ignored_file and not (is_lockfile and config.include_lockfiles):

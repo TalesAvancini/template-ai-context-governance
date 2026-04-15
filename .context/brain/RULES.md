@@ -13,12 +13,11 @@ Status: Ativo
 
 ---
 
-## 🏗️ 0. Máquina de Estados do Projeto (`PROJECT_MODE`)
-O template governa a si mesmo e ao projeto através de três estados rígidos:
-1. **`[BOOTSTRAP]`**: Focado na criação da infraestrutura do template, documentação core (RULES, AGENTS) e scripts de governança (INCEPTION/MARKET).
-2. **`[HARDENING]`**: Ajustes em segurança (ci/cd, secret-scanners), estabilização e redução de dívida técnica antes de lançar o app.
-3. **`[PRODUCTION]`**: Desenvolvimento maduro de features.
-> ⚠️ **Regra de Transição:** Qualquer mudança de estado deve ser registrada no `JOURNAL.md` via `[handoff]` e validada com `npm run context:all`.
+## 🏗️ 0. Máquina de Estados (`PROJECT_MODE`)
+1. `[BOOTSTRAP]`: Criação de infra e docs core.
+2. `[HARDENING]`: Segurança, estabilização e redução de dívida técnica.
+3. `[PRODUCTION]`: Desenvolvimento maduro de features.
+⚠️ Transição de estado deve ser registrada no `JOURNAL.md`.
 
 ---
 

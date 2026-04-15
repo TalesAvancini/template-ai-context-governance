@@ -26,22 +26,16 @@ Status: [Ativo | Arquivado | Depreciado]
 
 ```text
 .context/
-├── 🧠 brain/                       # CAMADA COGNITIVA (The Brain)
-│   ├── MASTER_FLOW.md             # Este documento
-│   ├── RULES.md                   # Protocolos e "A Lei"
-│   ├── AGENT_REGISTRY.md          # DNS de Roles e Permissões
-│   ├── PROMPT_LIBRARY.md          # Catálogo de templates de prompts
-│   ├── PRD.md                     # Requisito em execução (v2.0 - O Contrato)
-│   ├── ROADMAP.md                 # Metas e fases (O Planejamento)
-│   ├── TLC_INTEGRATION.md         # Ponte entre Governança e Execução
+├── 🧠 brain/
+│   ├── ...
 │   └── INCEPTION.md               # 🆕 Fronteiras estratégicas (Vibe, Boundaries)
 │
 ├── 🌐 market/                      # 🆕 CAMADA ESTRATÉGICA (Restrições Externas)
-│   ├── SSOT_MAP.md                # Hierarquia da Verdade (Compliance > Inception > PRD)
-│   ├── MARKET_INBOX.md            # Tabela de gaps sistêmicos com Regra Karpathy
-│   ├── economics.md               # Planejamento financeiro
-│   ├── compliance/                # Regras duras de jurisdição e negócios
-│   └── research/                  # Dumps analíticos (NotebookLM ready)
+│   ├── SSOT_MAP.md
+│   ├── MARKET_INBOX.md
+│   ├── economics.md
+│   ├── compliance/
+│   └── research/
 │
 ├── 🛠️ maintenance/                 # CAMADA DE MANUTENÇÃO (The Housekeeper)
 │   ├── JOURNAL.md                 # Log vivo (Máx ~50k char - Memória Curta)

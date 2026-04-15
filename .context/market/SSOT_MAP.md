@@ -1,17 +1,13 @@
 ---
-Criado em: 2026-04-14 11:50
-Status: Ativo
+version: 2.4.1
+type: GOVERNANCE
 ---
 
-# ⚖️ SSOT_MAP: Hierarquia de Verdade (v2.4.1 Hardened)
+# 🗺️ SSOT_MAP: Hierarquia da Verdade
 
-> Este mapa define a precedência absoluta de informações. Em caso de conflito, a camada superior anula a inferior.
+1. `market/compliance/*.md`: Regras externas (Leis, Jurisdição, Contratos).
+2. `brain/INCEPTION.md`: Visão estratégica e Boundaries.
+3. `brain/PRD.md`: Especificação funcional.
+4. `maintenance/schema.sql`: Contrato de dados.
 
-1.  ⚖️ **Market Compliance** (`market/compliance/*.md`): Restrições legais, jurisdição e termos de terceiros (Stripe, Apple, LGPD). **BLOQUEANTE**.
-2.  🧭 **Inception Layer** (`brain/INCEPTION.md`): Boundaries estratégicos e Vibe do produto. **BLOQUEANTE**.
-3.  📜 **Rules of Engagement** (`brain/RULES.md`): Protocolos de IA e Máquina de Estados.
-4.  🎯 **Execution Context** (`brain/PRD.md` + `maintenance/schema.sql`): O contrato técnico atual.
-5.  🕒 **Operational History** (`maintenance/JOURNAL.md`): Memória de curto prazo das sessões.
-
----
-> ⚠️ **Harness Gate**: O `harness_runner.py` valida automaticamente se o PRD viola os boundaries definidos no `INCEPTION.md` (regras `- NUNCA:`).
+⚠️ **Conflito:** Na dúvida, o nível superior anula o inferior.

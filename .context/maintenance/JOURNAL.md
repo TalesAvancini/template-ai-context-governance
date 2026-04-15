@@ -7,6 +7,12 @@ Status: Ativo
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
+## 📅 2026-04-15 14:50
+**Decisão/Bug:** 🛡️ Antigravity Kit v2.4.1-Hardened CONCLUÍDO.
+**Solução:** Patches cirúrgicos nos scripts core, ativação da camada Inception/Market e isolamento de path no bundle. Pipeline Fail-Fast validado.
+**Implicação:** O template oficial agora opera no modo v2.4.1-Hardened, com governança estratégica blindada e redução drástica de alucinações via Market layer.
+
+
 ## 📅 2026-04-14 10:35
 **Decisão/Bug:** 🔄 Handoff: @governance-agent → @vision-architect | [MODE: BOOTSTRAP] Patches v2.3.1 Resolvidos.
 **Solução:** H.O.K Hardening integrado (fail-fast, rx-biology, project_mode).
@@ -127,6 +133,21 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
   - Fail-fast estratégico validado via Harness Runner.
 - **Status:** [PRODUCTION READY]
 - **Próximo:** Iniciar ciclo de desenvolvimento de features na Versão 2.4.1.
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
 
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid

@@ -11,9 +11,9 @@ CONTEXT_DIR = Path(__file__).resolve().parents[1]
 INDEX_FILES = [
     "brain/PRD.md", "brain/AGENT_REGISTRY.md", "brain/RULES.md",
     "maintenance/schema.sql", "maintenance/TECHNICAL_REQUIREMENTS.md",
-    "maintenance/JOURNAL.md"
+    "maintenance/JOURNAL.md", "brain/INCEPTION.md", "market/SSOT_MAP.md"
 ]
-EXTRA_INDEX = ["brain/INCEPTION.md", "market/SSOT_MAP.md", "market/economics.md"]
+EXTRA_INDEX = ["market/economics.md"]
 
 def build_index():
     index = {}
