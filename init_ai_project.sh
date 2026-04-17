@@ -22,9 +22,10 @@ error() { echo -e "${RED}❌ $1${NC}"; exit 1; }
 # 🛡️ Pre-flight Checks
 check_deps() {
   command -v git >/dev/null 2>&1 || error "git e obrigatorio."
-  command -v python3 >/dev/null 2>&1 || PYTHON="python3"
-  command -v python >/dev/null 2>&1 || PYTHON="python"
-  [ -z "${PYTHON:-}" ] && error "python3 ou python e obrigatorio."
+  if command -v python3 >/dev/null 2>&1; then PYTHON="python3"
+  elif command -v python >/dev/null 2>&1; then PYTHON="python"
+  else error "python3 ou python e obrigatorio."
+  fi
 }
 
 # 🔍 Detecção de Gerenciador de Pacotes
@@ -94,41 +95,8 @@ Ponte entre Governança (.context/) e Execução Atômica (.specs/).
 5. SYNC -> Lições para o JOURNAL.md e limpeza da spec.
 EOF
 
-# (Injeção dos Motores Reais v2.4.1 Hardened)
-cat > .context/_scripts/validate_context.py << 'EOF'
-#!/usr/bin/env python3
-import os, sys
-from pathlib import Path
-SCRIPT_DIR = Path(__file__).parent
-CONTEXT_DIR = SCRIPT_DIR.parent
-REQUIRED = ["brain/RULES.md", "brain/PRD.md", "maintenance/JOURNAL.md"]
-def check_specs():
-    specs = CONTEXT_DIR.parent / ".specs/features"
-    if not specs.exists(): return True
-    return all((d / "STATE.md").exists() for d in specs.iterdir() if d.is_dir())
-def validate():
-    print("--- Validacao v2.4.1 Hardened ---")
-    missing = [f for f in REQUIRED if not (CONTEXT_DIR / f).exists()]
-    if missing or not check_specs(): sys.exit(1)
-    print("✅ Contexto e Workshop integros.")
-if __name__ == "__main__": validate()
-EOF
-
-cat > .context/_scripts/cleanup_specs.py << 'EOF'
-#!/usr/bin/env python3
-import os, shutil, time
-from pathlib import Path
-SCRIPT_DIR = Path(__file__).parent
-SPECS_DIR = SCRIPT_DIR.parent.parent / ".specs" / "features"
-ARCHIVE_DIR = SCRIPT_DIR.parent / "maintenance" / "_archive_context" / "specs"
-def cleanup():
-    if not SPECS_DIR.exists(): return
-    specs = sorted([d for d in SPECS_DIR.iterdir() if d.is_dir()], key=os.path.getmtime)
-    while len(specs) > 3:
-        shutil.move(str(specs.pop(0)), str(ARCHIVE_DIR))
-    print("[OK] Manutencao de specs concluida.")
-if __name__ == "__main__": cleanup()
-EOF
+# Os Motores Reais v2.4.1 Hardened já residem na pasta .context/_scripts do template.
+# Diferente de versões anteriores, este bootstrapper NÃO sobrescreve os motores Python nativos com cat.
 
 # Injeta scripts no package.json via Node
 [ -f package.json ] || npm init -y > /dev/null 2>&1
@@ -136,11 +104,15 @@ node -e "
 const fs = require('fs');
 const pkg = JSON.parse(fs.readFileSync('package.json','utf8'));
 pkg.scripts = pkg.scripts || {};
-const runner = '$PKG_MGR' === 'npm' ? 'npm run' : '$PKG_MGR';
 Object.assign(pkg.scripts, {
-  'context:validate': 'bash run_context.sh validate',
-  'context:cleanup': 'bash run_context.sh cleanup',
-  'context:all': runner + ' context:validate && ' + runner + ' context:cleanup',
+  'context:validate': 'python run_context.py validate',
+  'context:cleanup': 'python run_context.py cleanup',
+  'context:purge': 'python run_context.py purge',
+  'context:sync': 'python run_context.py sync',
+  'context:oracle': 'python run_context.py oracle',
+  'context:lint': 'python run_context.py lint',
+  'context:harness': 'python run_context.py harness',
+  'context:all': 'python run_context.py all',
   'prepare': 'husky'
 });
 fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
@@ -148,7 +120,7 @@ fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
 
 log "Instalando Husky e configurando Hooks..."
 npx husky init > /dev/null 2>&1
-echo "$PKG_MGR run context:validate" > .husky/pre-commit
+echo "$PKG_MGR run context:all" > .husky/pre-commit
 chmod +x .context/_scripts/*.py .husky/pre-commit
 
 success "Antigravity + TLC Fusion inicializado com sucesso!"

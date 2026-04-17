@@ -9,19 +9,21 @@ Status: Ativo
 
 ## 📂 Estrutura de Pastas
 .
-├── .context/               # CAMADA DE GOVERNANÇA (Cérebro/Memória)
-│   ├── brain/              # Arquivos de decisão e regras
-│   ├── maintenance/        # Logs, db schema e inventários
-│   └── monitoring/         # Dashboard de saúde
+├── .context/               # 🏛️ CAMADA DE GOVERNANÇA (Cérebro/Memória)
+│   ├── brain/              # Regras, PRD e Fronteiras (VISION/INCEPTION)
+│   ├── market/             # Camada Estratégica (SSOT, Limits, Compliance)
+│   ├── maintenance/        # Logs (JOURNAL), Schema e Inventários
+│   ├── monitoring/         # Dashboard de Saúde (CONTEXT_HEALTH.md)
+│   └── _scripts/           # Motor de Validação em Python (Oráculo, Harness)
 ├── .specs/                  # 🧪 BANCADA DE EXECUÇÃO (Workshop Efêmero)
 │   └── features/            # Specs atômicas ativas (max 3)
 ├── tests/                   # Suíte de testes (Infra e Unitários)
-├── run_context.sh          # Orquestrador universal Bash
-├── init_ai_project.sh      # Bootstrapper supremo
-└── package.json            # Gerenciamento de libs e scripts context:*
+├── run_context.py          # ⚙️ Orquestrador Universal Python (SSOT de Execução)
+├── init_ai_project.sh      # Bootstrapper Supremo (injeta python no NPM)
+└── package.json            # Gerenciamento de libs e rotas context:* (Npm scripts)
 
 ## 🧪 .specs/ (Workbench de Execução Atômica)
 > Diretório efêmero para Spec-Driven Development (TLC). Criado por demanda, destruído ou arquivado pós-merge.
 - **Estrutura:** `.specs/features/[nome]/spec.md`, `STATE.md`, `outputs/`
-- **Regra de Vida:** Máx 3 specs ativas simultâneas. >48h sem update → arquivar em `_archive_context/specs/`
-- **Não é fonte da verdade.** O `.context/` permanece como SSOT.
+- **Regra de Vida:** Máx 3 specs ativas simultâneas. >48h sem update → arquivar em `.context/maintenance/_archive_context/specs/`
+- **Isolamento:** Não é fonte da verdade. O `.context/` permanece como SSOT. As specs são submetidas à validação do Harness (`run_context.py harness`).

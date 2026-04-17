@@ -22,11 +22,12 @@ O kit evoluiu de validação passiva para **controle ativo e reativo**:
 Se voce quer inicializar este framework em um novo projeto do zero, basta rodar o nosso bootstrapper supremo:
 
 ```bash
-# 1. Torne o script executavel
-chmod +x init_ai_project.sh
+# Usuários MacOS/Linux/WSL:
+bash init_ai_project.sh
 
-# 2. Execute
-./init_ai_project.sh
+# Usuários Windows (Powershell/Cmd - requer Node.js):
+node -e "require('child_process').execSync('bash init_ai_project.sh || echo USE_WSL_OU_GIT_BASH', {stdio:'inherit'})" 
+# Alternativamente, abra o Git Bash e use o comando Mac/Linux.
 ```
 
 O script ira criar automaticamente toda a estrutura de camadas, os workshops de execução, os motores de manutenção v2.2+, e configurar a blindagem Husky.
@@ -36,9 +37,11 @@ O script ira criar automaticamente toda a estrutura de camadas, os workshops de 
 ## 📂 Anatomia do Repositório
 
 ### 1. `.context/` - A Camada de Governança
-- **`brain/`**: Onde mora a inteligência. PRD v2.0, Rules, Registry e a Ponte de Integração TLC.
+- **`brain/`**: Onde mora a inteligência. Regras, Fronteiras (VISION/INCEPTON) e PRD-Template.
+- **`market/`**: Camada Estratégica. Restrições do mundo real, dependências externas e compliance.
 - **`maintenance/`**: Onde mora a "verdade real". Log vivo (`JOURNAL.md`), Schema e Inventário Técnico.
 - **`monitoring/`**: Dashboard de saúde técnica e cognitiva.
+- **`_scripts/`**: Validação ativa (Harness e Oracle) escrita na biblioteca Padrão do Python (Seguro Cross-Platform).
 
 ### 2. `.specs/` - A Camada de Execução (TLC)
 - **`features/`**: Workshop efêmero para desenvolvimento Spec-Driven. Máximo de 3 specs ativas. Regra de limpeza automática pós-merge ou 48h de inatividade.

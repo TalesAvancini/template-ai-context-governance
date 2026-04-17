@@ -3,9 +3,13 @@
 🛡️ harness_runner.py — Validação reativa de contratos (Harness Layer)
 Valida spec vs schema, PRD vs código, e integridade de handoffs.
 """
-import os, re, sys, json
+import os, re, sys, json, io
 from datetime import datetime
 from pathlib import Path
+
+if sys.platform == "win32":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 try:
@@ -39,11 +43,28 @@ def check_schema_contract(spec_path):
     return True, "Schema contract OK"
 
 def check_handoff_integrity(journal_text):
-    """Verifica se handoffs recentes estao completos"""
-    handoffs = re.findall(r'\[handoff:(.*?)\]', journal_text)
-    incomplete = [h for h in handoffs if h.count('|') < 2]
-    if incomplete:
-        return False, f"Handoff incompleto detectado: {incomplete}"
+    """Verifica se handoffs recentes estao completos (suporta historico e padrao atual)"""
+    fails = []
+    
+    # Previne loop: ignora linhas de log do próprio harness (- **Detalhe:** handoff: ...)
+    clean_lines = [
+        line for line in journal_text.splitlines() 
+        if "[HARNESS-" not in line and "Handoffs malformados:" not in line
+    ]
+    clean_text = "\n".join(clean_lines)
+    
+    # 1. Checa padrão legado: [handoff:...]
+    legados = re.findall(r'\[handoff:(.*?)\]', clean_text, re.I)
+    for h in legados:
+        if h.count('|') < 2: fails.append(f"Legado incompleto: {h[:30]}")
+
+    # 2. Checa padrão moderno: (🔄 )Handoff: RoleA -> RoleB | Info | Info
+    modernos = re.findall(r'(?:🔄\s*)?Handoff:\s*(.*?)(?=\n|$)', clean_text, re.I)
+    for h in modernos:
+        if h.count('|') < 2: fails.append(f"Handoff incompleto: {h[:30]}")
+
+    if fails:
+        return False, f"Handoffs malformados: {fails}"
     return True, "Handoffs integros"
 
 def check_strategic_alignment():

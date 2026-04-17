@@ -27,9 +27,10 @@ O diretório `.context/` é a **Fonte Unica da Verdade (SSOT)** do projeto. Ele 
 | Camada | Arquivos Principais | Função |
 |--------|---------------------|--------|
 | 🧠 **Cognitiva** | `brain/` (`RULES`, `MASTER_FLOW`, `AGENT_REGISTRY`, `PROMPT_LIBRARY`, `PRD`) | Governanca, roteamento, execucao e requisitos. |
+| 💼 **Mercado** | `market/` | Camada Estratégica, limites operacionais e compliance financeiro. |
 | 🛠️ **Manutencao** | `maintenance/` (`JOURNAL`, `TECH_REQ`, `rebuild_guide`, `schema.sql`) | Memoria viva, inventario tecnico e recovery. |
 | 📊 **Monitoramento** | `monitoring/` (`CONTEXT_HEALTH.md`) | Dashboard de integridade e limites de sessao. |
-| ⚙️ **Automacao** | `_scripts/*.py`, `run_context.sh`, `Makefile` | Validacao, purge, sync e orquestracao. |
+| ⚙️ **Automacao** | `_scripts/*.py`, `run_context.py` | Validacao, purge, sync, harness e orquestracao. (SSOT de Execucao). |
 | 🛡️ **Qualidade** | `tests/test_context.py`, `.husky/` | Testes automaticos e gate de commit. |
 
 ---
@@ -50,8 +51,8 @@ O diretório `.context/` é a **Fonte Unica da Verdade (SSOT)** do projeto. Ele 
 ### 🌙 Fim da Sessao / Pre-Commit (Sunset)
 1. Execute `npm run context:sync` se adicionou libs ou mudou schema.
 2. Responda ao prompt da IA: `"Deseja que eu atualize o contexto agora?"`
-3. Commit normal -> Husky roda `tests/test_context.py` automaticamente.
-4. Se passar: ✅ merge seguro. Se falhar: 🔍 corrija antes de forcar.
+3. Commit normal -> Husky roda `npm run context:all` automaticamente.
+4. Se passar: ✅ merge seguro. Se falhar: 🔍 corrija o contexto antes de forcar (Harness, Lint e Oráculo barrarão desvios).
 
 ---
 
@@ -75,10 +76,10 @@ npm run context:validate
 # Consultar Oráculo antes de assumir ambiguidades
 npm run context:oracle "qual regex de validação?"
 
-# Checar citações epistemológicas (modo manual)
+# Checar citações epistemológicas (modo manual: WARN-ONLY)
 npm run context:lint
 
-# Pipeline completo (orquestrado por run_context.py, zero bash cru)
+# Pipeline completo (orquestrado por run_context.py, lint vira STRICT-MODE aqui)
 npm run context:all
 
 # Limpar specs inativas / Sincronizar deps / Purge Journal
@@ -93,8 +94,8 @@ npm run context:purge
 ---
 
 ## 🛡️ 6. Gate de Qualidade (Husky & CI)
-- **Pre-commit:** Bloqueia commits se `validate_context.py` ou `test_context.py` falharem.
-- **CI/CD:** O GitHub Actions roda o pipeline em cada Pull Request para garantir consistencia remota.
+- **Pre-commit:** Bloqueia commits se o `npm run context:all` falhar (Harness aborta, ou Lint em modo Strict acusa falta de fonte crua).
+- **CI/CD:** O GitHub Actions roda o pipeline completo (`python run_context.py all`) em cada Pull Request para garantir consistencia remota.
 
 ---
 

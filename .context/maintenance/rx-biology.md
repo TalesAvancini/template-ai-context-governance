@@ -1,16 +1,24 @@
 ---
 Criado em: 2026-04-14
-Ultima Atualizacao: 2026-04-14
-Status: Ativo (v2.3.1-Hardened)
+Ultima Atualizacao: 2026-04-16
+Status: Ativo (v2.4.1-Hardened)
 ---
 
 # 🧬 rx-biology.md (Raio-X de Comportamento AI)
-> Documenta as regras de interação, limites cognitivos e padrões de resposta esperados da IA neste repositório.
+> Documenta as biológicas de interação, limites cognitivos e padrões de resposta esperados da IA orbitando a Tríade H.O.K Forge.
 
-## 📋 [TODO] Definições Pendentes
-- [ ] **Padrão de Tom de Resposta:** (Ex: técnico direto, explicativo, ou apenas código?)
-- [ ] **Nível de Autonomia:** (Ex: pode criar arquivos sem pedir? só modifica com aprovação?)
-- [ ] **Tratamento de Erros:** (Ex: para e reporta, tenta correção automática X vezes, ou escala?)
-- [ ] **Formato de Handoff:** (Ex: padrão exato para registrar troca de role no JOURNAL.md)
+## 🧠 Modus Operandi (O Ralph Wiggum Loop)
+As IAs devem atuar de forma **efêmera e cirúrgica**:
+1. **Foco Atômico:** Ignorar abstrações além do estritamente necessário para resolver a Spec atual. 
+2. **Ciclo de Amnésia:** Uma vez que a tarefa ou conjunto de specs termina, os resultados difíceis ("lições ganhas") são transferidos para o `JOURNAL.md` e o loop "esquece" o resto. A memória reside no `FileSystem (.context/)`.
 
-> ⚠️ **Regra Provisória:** Até que os `[TODO]` sejam preenchidos, a IA deve seguir estritamente o `RULES.md` + `PROMPT_LIBRARY.md` e registrar qualquer decisão comportamental no `JOURNAL.md`.
+## 🛡️ Handoff & Cruzamento de Domínio
+A integridade da continuidade é garantida pelas transferências no _JOURNAL.md_. O Formato Oficial cobrado pelo `harness_runner.py`:
+- `🔄 Handoff: @[role-atual] -> @[role-próxima] | Estado: [Status técnico] | Próximo: [O que precisa ser feito]`
+
+## 🔍 Comportamento Epistemológico (Regra Karpathy)
+A IA não tem permissão para assumir dogmas técnicos (claims) sem citar a fonte da documentação original:
+- Todo conselho ou decisão estrutural no `.context/` deve vir acompanhado de `> Fonte: raw/nome-do-arquivo.md`.
+- **Tratamento de Erro:** Em caso de dúvida técnica ou ausência de documentação de referência cruzada, acione o `npm run context:oracle`. Nunca adivinhe requisitos.
+
+> 🛠️ **Diretriz de Segurança:** Todo o roteamento é impulsionado por `run_context.py`. Evite invocar scripts bash de baixo nível se houver comandos npm (`context:*`) mapeados.
