@@ -100,13 +100,13 @@ npm run context:purge
 
 ## ✅ 7. Checklist de Operacao & Implantacao
 
-### 🆕 Novo Projeto / Clone
-- [ ] `.context/` existe com estrutura de camadas ok.
-- [ ] `brain/RULES.md` e `brain/MASTER_FLOW.md` alinhados a stack.
-- [ ] `brain/AGENT_REGISTRY.md` possui roles registradas.
-- [ ] `npm run context:all` executa sem erros.
+### 🆕 Novo Projeto / Onboarding (The Fool's Cut)
+- [ ] **Visão Humana:** Crie o arquivo `brain/VISION.md` (veja template).
+- [ ] **Enriquecimento:** Execute `npm run context:enrich`. A IA gerará o `INCEPTION.proposed.md`.
+- [ ] **Ratificação:** Revise a proposta. Se aprovado, renomeie para `INCEPTION.md` e mude `status` para `ACTIVE`.
+- [ ] **Consistência:** Execute `npm run context:validate` para garantir que o projeto está operando em modo governado.
 
-### 🚀 Inicio de Feature / PRD
+### 🚀 Feature / Desenvolvimento Normal
 - [ ] `brain/PRD.md` preenchido com objetivos e criterios de aceite.
 - [ ] `Context Gate` validado.
 - [ ] Roles mapeadas na tabela de roteamento do PRD.

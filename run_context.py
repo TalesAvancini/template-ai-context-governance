@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).parent
 SCRIPTS_DIR = BASE_DIR / ".context" / "_scripts"
 
 
-def run_script(name, args=None):
+def run_script(name, args=None, capture=False):
     if args is None:
         args = []
     script_path = SCRIPTS_DIR / name
@@ -29,11 +29,37 @@ def run_script(name, args=None):
 
     print(f"[RUN] Executando {name}...")
     try:
-        subprocess.run([sys.executable, str(script_path)] + args, check=True)
-        print(f"[OK] Concluido: {name}\n")
-    except subprocess.CalledProcessError:
-        print(f"[ERROR] Falha em {name}. Pipeline abortado.")
+        # Refatoração sugerida pela auditoria: Remover check=True para tratar códigos semânticos
+        res = subprocess.run([sys.executable, str(script_path)] + args, check=False)
+        
+        if res.returncode == 0:
+            print(f"[OK] Concluido: {name}\n")
+            return 0
+        elif res.returncode == 2:
+            print(f"[STRATEGIC BLOCK] Pendência em {name}. Pipeline local TRAVADO.\n")
+            sys.exit(2)
+        else:
+            print(f"[FATAL] Falha estrutural em {name}. Exit: {res.returncode}. Pipeline abortado.")
+            sys.exit(1)
+    except Exception as e:
+        print(f"[ERROR] Erro na execução de {name}: {e}\n")
         sys.exit(1)
+
+
+def get_inception_status():
+    """Lê o status do Inception mestre."""
+    path = BASE_DIR / ".context" / "brain" / "INCEPTION.md"
+    if not path.exists():
+        return "MISSING"
+    try:
+        content = path.read_text(encoding="utf-8")
+        for line in content.splitlines():
+            if line.strip().startswith("status:"):
+                # Captura o valor antes de qualquer comentário #
+                return line.split(":")[1].strip().split("#")[0].strip()
+    except:
+        return "ERROR"
+    return "UNKNOWN"
 
 
 def main():
@@ -45,6 +71,12 @@ def main():
 
     cmd = sys.argv[1]
     extra_args = sys.argv[2:]
+
+    # Bloqueio global preventivo (Auditoria: TRANSLATION_LOCK uniforme)
+    status = get_inception_status()
+    if status == "TRANSLATION_LOCK" and cmd != "enrich" and cmd != "help":
+        print("[LOCKED] O projeto está em TRANSLATION_LOCK. Aceite ou rejeite o INCEPTION.proposed.md primeiro.")
+        sys.exit(2)
 
     if cmd == "validate":
         run_script("validate_context.py", extra_args)
@@ -70,23 +102,10 @@ def main():
         run_script("migration_registry.py", extra_args)
 
     elif cmd == "enrich":
-        print("[RUN] Executando enrich_context.py...")
-        try:
-            res = subprocess.run([sys.executable, str(SCRIPTS_DIR / "enrich_context.py")], check=False)
-            if res.returncode == 0:
-                print("[OK] Concluído: enrich_context.py\n")
-            elif res.returncode == 2:
-                print("[STRATEGIC BLOCK] Research needed. Pipeline local TRAVADO até resolução.\n")
-                sys.exit(2)
-            else:
-                print(f"[FATAL] Falha estrutural em enrich_context.py. Exit: {res.returncode}\n")
-                sys.exit(1)
-        except Exception as e:
-            print(f"[ERROR] Erro na execução: {e}\n")
-            sys.exit(1)
+        run_script("enrich_context.py", extra_args)
 
     elif cmd == "all":
-        # Pipeline Fail-Fast (Hardened v2.4.1)
+        # Pipeline Fail-Fast (Hardened v2.4.1 + Hybrid Discovery)
         run_script("validate_context.py")
         run_script("secrets_scanner.py")
         run_script("sync_project.py")

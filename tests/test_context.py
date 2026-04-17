@@ -24,7 +24,8 @@ class TestContextGovernance(unittest.TestCase):
         (self.context_dir / "maintenance" / "_archive_context" / "journals").mkdir(parents=True, exist_ok=True)
 
         # Copia scripts reais para o sandbox
-        for script in ["validate_context.py", "purge_journal.py", "sync_project.py"]:
+        scripts_to_copy = ["validate_context.py", "purge_journal.py", "sync_project.py", "enrich_context.py", "harness_runner.py"]
+        for script in scripts_to_copy:
             shutil.copy(self.real_scripts_dir / script, self.scripts_dir / script)
 
         # Cria arquivos base vazios
@@ -34,11 +35,15 @@ class TestContextGovernance(unittest.TestCase):
         for f in ["maintenance/schema.sql", "maintenance/TECHNICAL_REQUIREMENTS.md", "maintenance/JOURNAL.md"]:
             (self.context_dir / f).write_text("# Test", encoding="utf-8")
 
+        # Configura Inception padrão
+        (self.context_dir / "brain/INCEPTION.md").write_text("status: ACTIVE\nversion: 2.4.1", encoding="utf-8")
+
         self.python_cmd = sys.executable
 
     def tearDown(self):
         # Limpa sandbox
-        shutil.rmtree(self.test_dir)
+        if os.path.exists(self.test_dir):
+            shutil.rmtree(self.test_dir)
 
     def run_script(self, name):
         script_path = self.scripts_dir / name
@@ -51,11 +56,52 @@ class TestContextGovernance(unittest.TestCase):
         )
         return result
 
-    def test_validate_integrity(self):
-        # Adiciona uma tabela válida em AGENT_REGISTRY para passar no check
+    def test_onboarding_draft(self):
+        """DRAFT + No Vision + Clean Context -> Exit 0"""
+        (self.context_dir / "brain/INCEPTION.md").write_text("status: DRAFT", encoding="utf-8")
+        (self.context_dir / "brain/AGENT_REGISTRY.md").write_text("| Role | Permissao |\n|---|---|", encoding="utf-8")
+        res = self.run_script("validate_context.py")
+        self.assertEqual(res.returncode, 0)
+        self.assertIn("[INFO] Modo Onboarding", res.stdout)
+
+    def test_translation_pending(self):
+        """DRAFT + VISION.md -> Exit 2"""
+        (self.context_dir / "brain/INCEPTION.md").write_text("status: DRAFT", encoding="utf-8")
+        (self.context_dir / "brain/VISION.md").write_text("Minha visão", encoding="utf-8")
         (self.context_dir / "brain/AGENT_REGISTRY.md").write_text("| Role | Permissao |\n|---|---|", encoding="utf-8")
         
         res = self.run_script("validate_context.py")
+        self.assertEqual(res.returncode, 2)
+        self.assertIn("[WARN] Tradução Pendente", res.stdout)
+        
+        res_enrich = self.run_script("enrich_context.py")
+        self.assertEqual(res_enrich.returncode, 2)
+        self.assertIn("[TRANSLATION_PENDING]", res_enrich.stdout)
+
+    def test_translation_lock(self):
+        """TRANSLATION_LOCK -> Exit 2"""
+        (self.context_dir / "brain/INCEPTION.md").write_text("status: TRANSLATION_LOCK", encoding="utf-8")
+        (self.context_dir / "brain/AGENT_REGISTRY.md").write_text("| Role | Permissao |\n|---|---|", encoding="utf-8")
+        
+        res = self.run_script("validate_context.py")
+        self.assertEqual(res.returncode, 2)
+        self.assertIn("[WARN] Bloqueio de Tradução", res.stdout)
+
+    def test_dirty_draft(self):
+        """DRAFT + Existing Code -> Exit 1 (Strategic Breach)"""
+        (self.context_dir / "brain/INCEPTION.md").write_text("status: DRAFT", encoding="utf-8")
+        (self.project_root / "src").mkdir()
+        (self.project_root / "src/main.py").write_text("print()", encoding="utf-8")
+        
+        res = self.run_script("validate_context.py")
+        self.assertEqual(res.returncode, 1)
+        self.assertIn("[FATAL] Inception em DRAFT mas projeto possui código", res.stdout)
+
+    def test_validate_integrity(self):
+        """ACTIVE + Valid Context -> Exit 0"""
+        (self.context_dir / "brain/AGENT_REGISTRY.md").write_text("| Role | Permissao |\n|---|---|", encoding="utf-8")
+        res = self.run_script("validate_context.py")
+        self.assertEqual(res.returncode, 0)
         self.assertIn("[SUCCESS]", res.stdout)
 
     def test_validate_missing_file(self):

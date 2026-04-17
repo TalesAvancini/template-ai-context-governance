@@ -12,6 +12,12 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).parent
 CONTEXT_DIR = SCRIPT_DIR.parent
 
+# Forçar UTF-8 em Windows
+if sys.platform == "win32":
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
 REQUIRED_FILES = [
     "brain/RULES.md",
     "brain/MASTER_FLOW.md",
@@ -75,9 +81,49 @@ def check_specs_structure():
     return True, f"OK ({len(active_specs)} specs ativas)"
 
 
+def get_inception_metadata():
+    """Lê metadados do Inception."""
+    path = CONTEXT_DIR / "brain" / "INCEPTION.md"
+    if not path.exists():
+        return None
+    try:
+        content = path.read_text(encoding="utf-8")
+        metadata = {}
+        for line in content.splitlines():
+            if ":" in line:
+                key, val = line.split(":", 1)
+                metadata[key.strip()] = val.strip().split("#")[0].strip()
+        return metadata
+    except:
+        return {}
+
+
+def is_non_initial_context():
+    """Detecta se o projeto já avançou além do estágio de onboarding."""
+    # Critério sugerido pela auditoria: lista de code roots
+    code_roots = ["src", "app", "packages", "services", "lib"]
+    root_dir = CONTEXT_DIR.parent
+    
+    # 1. Verifica pastas de código
+    for dr in code_roots:
+        path = root_dir / dr
+        if path.exists() and any(path.iterdir()):
+            return True, f"Pasta de código ativa encontrada: {dr}/"
+            
+    # 2. Verifica .specs/features/ ativos
+    specs_dir = root_dir / ".specs" / "features"
+    if specs_dir.exists():
+        active_specs = [d for d in specs_dir.iterdir() if d.is_dir()]
+        if active_specs:
+            return True, f"Especificações de feature ativas: {len(active_specs)}"
+            
+    return False, "Contexto inicial limpo"
+
+
 def validate():
-    print("--- Iniciando validação de contexto (v2.4.1 Hardened) ---")
+    print("--- Iniciando validação de contexto (v2.4.1 Hardened + Hybrid) ---")
     issues = []
+    exit_code = 0
 
     missing = check_files()
     if missing:
@@ -85,16 +131,36 @@ def validate():
     else:
         print("[OK] Todos os arquivos obrigatórios presentes.")
 
-    # Check for optional strategic layers
-    inception = CONTEXT_DIR / "brain/INCEPTION.md"
-    if inception.exists():
-        print("[OK] INCEPTION.md presente (Camada Estratégica Ativa).")
-    else:
-        print("[INFO] INCEPTION.md ausente (Modo de execução direta).")
+    # Inteligência de Onboarding & Inception
+    vision_exists = (CONTEXT_DIR / "brain" / "VISION.md").exists()
+    metadata = get_inception_metadata()
+    inception_status = metadata.get("status") if metadata else None
+    is_dirty, dirty_msg = is_non_initial_context()
+
+    if inception_status == "DRAFT":
+        if vision_exists:
+            print("[WARN] Tradução Pendente: VISION.md detectada. Solicite @spec-enricher.")
+            exit_code = 2
+        elif is_dirty:
+            issues.append(f"[FATAL] Inception em DRAFT mas projeto possui código ({dirty_msg}).")
+            exit_code = 1
+        else:
+            print(f"[INFO] Modo Onboarding: Projeto limpo. Consulte START_HERE.md.")
+            exit_code = 0
+    elif inception_status == "TRANSLATION_LOCK":
+        print("[WARN] Bloqueio de Tradução: INCEPTION.proposed.md aguardando ratificação.")
+        exit_code = 2
+    elif inception_status == "ACTIVE":
+        print("[OK] Governança ACTIVE: Limites validados.")
+        exit_code = 0
+    elif inception_status is not None:
+        issues.append(f"[ERROR] Status de Inception inválido: {inception_status}")
+        exit_code = 1
 
     spec_ok, spec_msg = check_specs_structure()
     if not spec_ok:
         issues.append(f"[WARN] .specs/: {spec_msg}")
+        if exit_code == 0: exit_code = 1
     else:
         print(f"[OK] .specs/: {spec_msg}")
 
@@ -103,6 +169,7 @@ def validate():
         issues.append(
             f"[WARN] JOURNAL.md excede limite: {journal_lines}/{JOURNAL_MAX_LINES}"
         )
+        if exit_code == 0: exit_code = 1
     else:
         print(f"[OK] JOURNAL.md dentro do limite: {journal_lines}/{JOURNAL_MAX_LINES}")
 
@@ -112,6 +179,7 @@ def validate():
         issues.append(
             f"[WARN] Contexto estimado alto: tokens_raw={tokens_raw} (~{tokens_k:.1f}k). Execute purge."
         )
+        if exit_code == 0: exit_code = 1
     else:
         print(
             f"[OK] Estimativa de contexto segura: tokens_raw={tokens_raw} (~{tokens_k:.1f}k)"
@@ -120,17 +188,21 @@ def validate():
     reg_ok, reg_msg = check_registry_structure()
     if not reg_ok:
         issues.append(f"[WARN] AGENT_REGISTRY.md: {reg_msg}")
+        if exit_code == 0: exit_code = 1
     else:
         print("[OK] AGENT_REGISTRY.md estrutura válida.")
 
     print("\n--- Relatório Final ---")
     if not issues:
+        if exit_code == 2:
+            print("[PENDING] Pendência estratégica detectada.")
+            sys.exit(2)
         print("[SUCCESS] Contexto íntegro. Pronto para execução.")
         sys.exit(0)
     else:
         for issue in issues:
             print(issue)
-        print("[FATAL] Resolva os alertas antes de gerar código.")
+        print("[FATAL] Erros de governança detectados.")
         sys.exit(1)
 
 
@@ -139,4 +211,6 @@ if __name__ == "__main__":
         validate()
     except Exception as e:
         print(f"[ERROR] Erro na execucao: {e}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)

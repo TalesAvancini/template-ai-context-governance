@@ -28,7 +28,9 @@ Status: [Ativo | Arquivado | Depreciado]
 .context/
 ├── 🧠 brain/
 │   ├── ...
-│   └── INCEPTION.md               # 🆕 Fronteiras estratégicas (Vibe, Boundaries)
+│   ├── INCEPTION.md               # 🆕 Fronteiras estratégicas (SSOT) [DRAFT|ACTIVE]
+│   ├── INCEPTION.proposed.md      # 🆕 Proposta gerada pela IA (Aguardando Ratificação)
+│   └── VISION.md                  # 🆕 Entrada narrativa humana (Input de Visão)
 │
 ├── 🌐 market/                      # 🆕 CAMADA ESTRATÉGICA (Restrições Externas)
 │   ├── SSOT_MAP.md
@@ -55,10 +57,28 @@ Status: [Ativo | Arquivado | Depreciado]
 │   └── features/           # Specs e tasks atômicas em execução
 │
 └── _scripts/               # CAMADA DE AUTOMACAO (The Motor)
-    ├── validate_context.py        # Validador de integridade
+    ├── validate_context.py        # Validador de integridade e status
+    ├── enrich_context.py          # Tradutor cognitivo e Gap Check
     ├── purge_journal.py           # Gerenciador de memória (Purge)
     ├── cleanup_specs.py           # Gerenciador de efemeridade (.specs)
     └── sync_project.py            # Sincronizador de requisitos
+
+---
+
+## 🚦 2.1 Ciclo de Vida do Inception (Hybrid Discovery)
+
+```mermaid
+graph TD
+    A[Start: DRAFT] -->|Human Input| B(VISION.md)
+    B -->|npm run context:enrich| C{AI Translation}
+    C -->|Output| D[INCEPTION.proposed.md]
+    D -->|status: TRANSLATION_LOCK| E[Ratificação Humana]
+    E -->|Approved & Renamed| F[status: ACTIVE]
+    F -->|Operational| G[Normal Dev Flow]
+    G -->|Boundary Breach| A
+```
+
+---
 ```
 
 ---

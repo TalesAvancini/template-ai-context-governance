@@ -19,6 +19,12 @@ Status: Ativo
 3. `[PRODUCTION]`: Desenvolvimento maduro de features.
 ⚠️ Transição de estado deve ser registrada no `JOURNAL.md`.
 
+## 🔄 0.1 Ciclo de Vida do Inception (Hybrid Discovery)
+O `INCEPTION.md` (brain/) regula o que a IA pode ou não fazer.
+*   `status: DRAFT`: Fase de onboarding ou reset. Permitido apenas leitura e criação de `VISION.md`. Bloqueia escrita em `src/` e `tests/`.
+*   `status: TRANSLATION_LOCK`: Ativado pelo `@spec-enricher` ao gerar o `INCEPTION.proposed.md`. **Bloqueio Global**: Nenhuma ferramenta de escrita (exceto o próprio enrich) funciona até a ratificação humana.
+*   `status: ACTIVE`: Estado normal de operação. Limites técnicos ratificados.
+
 ---
 
 ## 🛡️ 1. Checklist de Carga (Obrigatório)

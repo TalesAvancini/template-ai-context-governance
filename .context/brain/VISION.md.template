@@ -1,0 +1,19 @@
+# Visão do Projeto: [NOME DO PROJETO]
+
+> **Instruções**: Este arquivo é o ponto de partida humano. Não se preocupe com formatação técnica. Descreva a alma do projeto.
+
+## 🎯 O "Porquê" (Essência)
+*Descreva o problema principal que este projeto resolve.*
+
+## 🚀 O "O Quê" (Objetivos)
+*Quais são os 3 resultados principais que você espera ver funcionando?*
+
+## 🎭 Tom de Voz & Estilo
+*Como o projeto deve se comportar? (Ex: Minimalista, Robusto, Criativo, Seguro)*
+
+## 🛑 O que o projeto NÃO é
+*Defina as fronteiras para evitar escopo infinito.*
+
+---
+**Próximo Passo**: Assim que terminar de preencher, peça à IA: 
+`"@spec-enricher proponha meu inception baseado na minha vision"`

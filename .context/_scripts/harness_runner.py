@@ -108,7 +108,27 @@ def update_state_md(spec_dir: Path, status: str, detail: str = ""):
     status_print = status.replace("✅", "[OK]").replace("❌", "[FAIL]")
     print(f"[STATE.md] -> {status_print} na spec {spec_dir.name}")
 
+def get_inception_status():
+    """Lê o status do Inception mestre."""
+    if not INCEPTION.exists(): return "MISSING"
+    try:
+        content = INCEPTION.read_text(encoding="utf-8")
+        for line in content.splitlines():
+            if line.strip().startswith("status:"):
+                # Captura o valor antes de qualquer comentário #
+                return line.split(":")[1].strip().split("#")[0].strip()
+    except:
+        return "ERROR"
+    return "UNKNOWN"
+
 def main():
+    # 0. Verificação de Estado (Hybrid Discovery)
+    status = get_inception_status()
+    if status == "DRAFT":
+        print("[BYPASS] Inception em DRAFT. Pulando validações rigorosas do Harness.")
+        print("[INFO] Siga as instruções em START_HERE.md para ativar a governança completa.")
+        sys.exit(0)
+
     # 1. Definindo a pasta spec ativa
     features_dir = CONTEXT_DIR.parent / ".specs" / "features"
     spec_dir_env = os.environ.get("ACTIVE_SPEC")

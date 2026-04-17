@@ -4,6 +4,12 @@
 Exit: 0 (PRD ready) | 2 (Research needed) | 1 (Structural error)
 """
 import re, sys
+# Forçar UTF-8 em Windows
+if sys.platform == "win32":
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
 from datetime import date
 from pathlib import Path
 
@@ -68,11 +74,41 @@ def update_inbox(missing):
         header = "# MARKET INBOX\n| Gap | Fonte | Prioridade | Status | Data |\n|-----|-------|------------|--------|------|\n"
         INBOX.write_text(header + new_entries, encoding="utf-8")
 
+def get_inception_status():
+    """Lê o status do Inception mestre."""
+    if not INCEPTION.exists(): return "MISSING"
+    try:
+        content = INCEPTION.read_text(encoding="utf-8")
+        for line in content.splitlines():
+            if line.strip().startswith("status:"):
+                # Captura o valor antes de qualquer comentário #
+                return line.split(":")[1].strip().split("#")[0].strip()
+    except:
+        return "ERROR"
+    return "UNKNOWN"
+
 def main():
-    print("[RUN] Spec Enricher (Gap Check)...")
-    entities, status = scan_entities()
-    if status != "OK":
-        print(f"[ERROR] {status}")
+    print("[RUN] Spec Enricher (Gap Check & Strategy Sync)...")
+    
+    # Nova lógica de Onboarding Híbrido
+    status = get_inception_status()
+    vision_exists = (CONTEXT_DIR / "brain" / "VISION.md").exists()
+    
+    if status == "DRAFT":
+        if vision_exists:
+            print("[TRANSLATION_PENDING] Visão detectada. Solicite à IA: \"@spec-enricher proponha o INCEPTION.md\".")
+            sys.exit(2)
+        else:
+            print("[ONBOARDING_MODE] Inception em DRAFT e sem VISION.md. Consulte START_HERE.md.")
+            sys.exit(0)
+            
+    if status == "TRANSLATION_LOCK":
+        print("[TRANSLATION_LOCK] INCEPTION.proposed.md gerado. Revise, renomeie e mude status para ACTIVE.")
+        sys.exit(2)
+
+    entities, scan_status = scan_entities()
+    if scan_status != "OK":
+        print(f"[ERROR] {scan_status}")
         sys.exit(1)
 
     missing = check_market_coverage(entities)
