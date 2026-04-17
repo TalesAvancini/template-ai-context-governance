@@ -74,7 +74,7 @@ def check_specs_structure():
     features_dir = specs_dir / "features"
     if not features_dir.exists():
         return False, "Diretorio features ausente no .specs"
-    active_specs = [d for d in features_dir.iterdir() if d.is_dir()]
+    active_specs = [d for d in features_dir.iterdir() if d.is_dir() and not d.name.startswith('_')]
     for spec in active_specs:
         if not (spec / "STATE.md").exists():
             return False, f"Falha de integridade: {spec.name}/STATE.md ausente"

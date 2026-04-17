@@ -1,4 +1,12 @@
 ---
+contract_version: 1.0
+parties: ["@spec-driver", "@qa-validator"]
+definition_of_done:
+  - [x] Criar templates-base para INCEPTION.md e market/.
+  - [x] Registrar Role @vision-architect.
+  - [x] Inserir bloqueamento estratégico no Pipeline do Harness.
+qa_signoff: true
+signed_by: "@qa-validator"
 Epic: Governança do Template
 Feature: Camada Inception e Market (v2.4.0)
 Status: Active

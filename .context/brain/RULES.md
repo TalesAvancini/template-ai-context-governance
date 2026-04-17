@@ -38,6 +38,14 @@ Antes de gerar código de produção ou realizar refatorações, o Agente **DEVE
 
 ---
 
+## 🤝 1.1 Regra de Contrato de Sprint (Research-First)
+1. `@spec-driver` gera `spec.md` com bloco YAML de `definition_of_done`.
+2. `@qa-validator` revisa critérios. Se válidos, seta `qa_signoff: true` e `signed_by: "@qa-validator"`.
+3. **Bloqueio:** Se `qa_signoff == false` ou `definition_of_done` estiver vazio, o Harness retorna `Exit 1`.
+4. Nenhuma geração de código ou merge é permitida antes da assinatura.
+
+---
+
 ## 🔢 2. Ansiedade de Contexto & Ralph Wiggum Loop
 Para combater o *Context Anxiety* e alucinações por inchaço:
 - **Ralph Wiggum Loop:** O foco é absoluto e efêmero. Apenas resolver a Spec atômica atual no `The Workshop` (`.specs/`), persistir os descobrimentos difíceis no `JOURNAL.md`, e encerrar a sessão. A cada ciclo, a memória sintética zera e o sistema de arquivos assume como memória indestrutível.

@@ -248,3 +248,15 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:_template
+- **Detalhe:** sprint_contract: Contrato não assinado pelo @qa-validator (qa_signoff: false)
+
+## [HARNESS-FAIL] Report | spec:_template
+- **Detalhe:** sprint_contract: Contrato não assinado pelo @qa-validator (qa_signoff: false)
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid

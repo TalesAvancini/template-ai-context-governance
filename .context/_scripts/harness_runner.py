@@ -108,6 +108,33 @@ def check_enrichment_integrity(prd_path: Path):
     if missing: return False, f"Dependencies sem lastro em market/: {missing}"
     return True, "Enrichment contract OK"
 
+def check_sprint_contract(spec_path: Path):
+    """Valida se a spec possui contrato explícito e assinatura do QA."""
+    if not spec_path.exists():
+        return True, "Spec ausente (skip)"
+    
+    text = spec_path.read_text(encoding="utf-8")
+    # Extrai bloco YAML entre --- e ---
+    yaml_match = re.match(r'^---\n(.*?)\n---', text, re.DOTALL)
+    if not yaml_match:
+        return False, "Bloco de contrato (---) ausente no topo da spec"
+    
+    contract = yaml_match.group(1)
+    
+    # Validação semântica leve (stdlib-only)
+    has_dod = "definition_of_done:" in contract
+    has_signoff = re.search(r'qa_signoff:\s*true', contract, re.I)
+    has_signed_by = re.search(r'signed_by:\s*["\']?@qa-validator["\']?', contract, re.I)
+
+    if not has_dod:
+        return False, "Campo definition_of_done obrigatório"
+    if not has_signoff:
+        return False, "Contrato não assinado pelo @qa-validator (qa_signoff: false)"
+    if not has_signed_by:
+        return False, "Campo signed_by inválido ou ausente"
+        
+    return True, "Sprint contract validado e assinado"
+
 def log_harness(status, detail, spec_name="unknown"):
     """Registra no JOURNAL.md de forma compacta e atomica"""
     entry = f"\n## [HARNESS-{status.upper()}] Report | spec:{spec_name}\n- **Detalhe:** {detail}\n"
@@ -159,7 +186,7 @@ def main():
     else:
         # Fallback: spec modificada mais recentemente
         if features_dir.exists():
-            active = sorted([d for d in features_dir.iterdir() if d.is_dir()], key=os.path.getmtime, reverse=True)
+            active = sorted([d for d in features_dir.iterdir() if d.is_dir() and not d.name.startswith('_')], key=os.path.getmtime, reverse=True)
             spec_dir = active[0] if active else None
         else:
             spec_dir = None
@@ -171,7 +198,8 @@ def main():
         "schema": check_schema_contract(spec_path),
         "handoff": check_handoff_integrity(JOURNAL.read_text(encoding="utf-8") if JOURNAL.exists() else ""),
         "strategy": check_strategic_alignment(),
-        "enrichment": check_enrichment_integrity(PRD)
+        "enrichment": check_enrichment_integrity(PRD),
+        "sprint_contract": check_sprint_contract(spec_path)
     }
     
     fails = [f"{k}: {v[1]}" for k, v in checks.items() if not v[0]]

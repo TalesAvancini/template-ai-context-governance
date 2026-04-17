@@ -101,6 +101,7 @@ Status: Ativo
 1. Codigo dos testes (unitarios/integracao)
 2. Matriz de cenarios cobertos
 3. Recomendacoes de refatoracao se aplicavel
+4. Se atuando na revisão do Contrato de Sprint: Atualizar a spec mudando `qa_signoff: true` e `signed_by: "@qa-validator"` se a spec.md estiver rigorosa. Se houver desvio, devolva EXIT com o erro para o @spec-driver corrigir.
 ```
 
 ### 🔄 `@fullstack-generalist` (Modo Solo/Light)
@@ -193,9 +194,9 @@ Ao gerar o PRD.md, inclua EXATAMENTE esta seção no final:
 - Validar contrato contra schema.sql antes de definir outputs
 - Nunca hardcode; usar [PLACEHOLDER] se depender de env externo
 📤 Saída Esperada:
-1. Estrutura .specs/ criada
-2. spec.md com passos, contratos e critérios de verificação
-3. STATE.md: draft → pronto para execução
+1. Estrutura .specs/ criada com o_template padronizado do bloco YAML definition_of_done.
+2. spec.md com passos atômicos, onde o contrato e critérios de verificação residem na root (Frontmatter).
+3. STATE.md: draft → aguardando qa_signoff.
 ```
 💡 *Insight IA: Este prompt transforma intenção em plano executável. A spec é o "compilador" entre PRD e código. Mantenha-a enxuta e verificável.*
 
