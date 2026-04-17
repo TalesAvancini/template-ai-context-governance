@@ -9,7 +9,7 @@ Status: Ativo
 **Arquitetura:** AI-Agent Driven (Layered Context Architecture)  
 **PROJECT_MODE:** `[BOOTSTRAP]` *(Fases finitas: BOOTSTRAP, HARDENING, PRODUCTION)*
 
-> **Conceito Central:** A pasta `.context` é a **fonte da verdade** (Single Source of Truth). O projeto é dividido em camadas para garantir escala, foco e rastreabilidade.
+> **Conceito Central (H.O.K Forge):** A equação moderna do código autônomo é `Agente = Modelo + Harness`. O `.context` atua como Governador Cibernético (SSOT), não apenas como documentação.
 
 ---
 
@@ -38,10 +38,10 @@ Antes de gerar código de produção ou realizar refatorações, o Agente **DEVE
 
 ---
 
-## 🔢 2. Session Budget & Heurísticas de Token
-Para evitar alucinações por *Token Bloat* (excesso de memória na janela):
-- **Gatilhos de Alerta:** ~50.000 caracteres acumulados OU ~15-20 trocas densas de desenvolvimento.
-- **Ação ao atingir o limite:** Disparar: *"🔄 Contexto próximo do limite de foco. Deseja que eu execute o purge do JOURNAL, arquive o PRD atual ou inicie uma nova sessão limpa com snapshot de semente?"*
+## 🔢 2. Ansiedade de Contexto & Ralph Wiggum Loop
+Para combater o *Context Anxiety* e alucinações por inchaço:
+- **Ralph Wiggum Loop:** O foco é absoluto e efêmero. Apenas resolver a Spec atômica atual no `The Workshop` (`.specs/`), persistir os descobrimentos difíceis no `JOURNAL.md`, e encerrar a sessão. A cada ciclo, a memória sintética zera e o sistema de arquivos assume como memória indestrutível.
+- **Gatilhos de Alerta:** ~50.000 caracteres ou 15 trocas densas. Se atingido, purgue o Journal ou inicie chat limpo.
 
 ---
 
@@ -85,10 +85,11 @@ A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é o
 - **Depreciação:** Se função/arquivo for removido, marcar como `[DEPRECATED]` ou remover do contexto para evitar sugestão de código morto.
 ---
 
-## 🔍 8. Protocolo Oracle (Consult-Before-Act)
-- Se a spec ou PRD contiver ambiguidade técnica, execute: `npm run context:oracle "sua dúvida"`
-- Se `confidence < 0.5` -> pause, registre `[oracle:uncertain]` no `JOURNAL.md` e solicite clarificação humana.
-- Nunca assuma. Consulte!
+## 🔍 8. Protocolo Oracle & Engenharia de Guerrilha
+- **Stdlib-only:** Os scripts de Oráculo/Busca devem ser construídos estritamente usando a biblioteca padrão para evitar dependências pesadas. Nada de Kubernetes ou Vector DBs complexos para PMEs.
+- **UTF-8 Nativo:** Todos os scripts encarregados da governança em Python (`_scripts/`) devem ser envelopados para forçar I/O em UTF-8 (`sys.stdout = io.TextIOWrapper...`), garantindo blindagem contra quebras de console Windows.
+- Se a spec ou PRD contiver ambiguidade técnica, consulte limitando o escopo a Divulgação Progressiva: `npm run context:oracle "sua dúvida"`
+- Nunca assuma. Consulte! Se `confidence < 0.5` -> pause.
 
 ## 📖 9. Regra Karpathy (Citação Obrigatória)
 - Todo conteúdo/decisão de arquitetura sintetizado em `.context/` DEVE ser lastreado na realidade. Idealmente deve conter `> Fonte: raw/nome-arquivo`.

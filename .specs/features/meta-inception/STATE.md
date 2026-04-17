@@ -1,5 +1,5 @@
 ---
-status: ✅ PASSED
-updated: 2026-04-16 21:06
-detail: All checks passed
+status: ❌ FAILED
+updated: 2026-04-16 22:29
+detail: enrichment: Seção Critical Dependencies obrigatória para PRDs com integrações/compliance
 ---

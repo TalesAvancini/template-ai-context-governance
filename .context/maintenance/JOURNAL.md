@@ -7,6 +7,11 @@ Status: Ativo
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
+## 📅 2026-04-16 22:20
+**Decisão/Bug:** 🧭 [MODE: HYBRID_DISCOVERY] Implementação The Fool's Cut e Eng. de Guerrilha Concluída.
+**Solução:** Atualização cirúrgica na governança documental (PRD, RULES, TECHNICAL_REQUIREMENTS). O PRD oficializado como template livre do framework, e a equação 'Agente = Modelo + Harness' formalizada nas RULES.
+**Implicação:** A documentação mestre do framework está totalmente alinhada ao paradigma do Ralph Wiggum Loop e da Tríade H.O.K., prevenindo que IAs injetem filosofia do framework nas features do produto do usuário.
+
 ## 📅 2026-04-15 14:50
 **Decisão/Bug:** 🛡️ Antigravity Kit v2.4.1-Hardened CONCLUÍDO.
 **Solução:** Patches cirúrgicos nos scripts core, ativação da camada Inception/Market e isolamento de path no bundle. Pipeline Fail-Fast validado.
@@ -202,3 +207,9 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:meta-inception
+- **Detalhe:** enrichment: Seção Critical Dependencies obrigatória para PRDs com integrações/compliance

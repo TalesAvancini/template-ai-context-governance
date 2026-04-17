@@ -22,46 +22,47 @@ Status: [Ativo | Arquivado | Depreciado]
 
 ---
 
-## 📂 2. Estrutura do Diretório `.context/`
+## 📂 2. Estrutura de Governança (Context & Specs)
 
 ```text
-.context/
-├── 🧠 brain/
-│   ├── ...
-│   ├── INCEPTION.md               # 🆕 Fronteiras estratégicas (SSOT) [DRAFT|ACTIVE]
-│   ├── INCEPTION.proposed.md      # 🆕 Proposta gerada pela IA (Aguardando Ratificação)
-│   └── VISION.md                  # 🆕 Entrada narrativa humana (Input de Visão)
-│
-├── 🌐 market/                      # 🆕 CAMADA ESTRATÉGICA (Restrições Externas)
-│   ├── SSOT_MAP.md
-│   ├── MARKET_INBOX.md
-│   ├── economics.md
-│   ├── compliance/
-│   └── research/
-│
-├── 🛠️ maintenance/                 # CAMADA DE MANUTENÇÃO (The Housekeeper)
-│   ├── JOURNAL.md                 # Log vivo (Máx ~50k char - Memória Curta)
-│   ├── TECHNICAL_REQUIREMENTS.md  # Stack, libs e versões (Inventário)
-│   ├── rebuild_guide.md           # Guia de setup e infra (Pós-Mortem Vivo)
-│   ├── schema.sql                 # Snapshot do Banco de Dados (Verdade Real)
-│   ├── ARCHITECTURE.md            # Blueprint técnico evolutivo (O DNA)
-│   ├── TESTS.md                   # Ledger de padrões e TDDs
-│   ├── rx-anatomy.md              # Raio-X de pastas (Anatomia do Repositório)
-│   ├── rx-biology.md              # Raio-X de fluxos (Biologia do Negócio)
-│   └── _archive_context/          # Histórico imutável (A Biblioteca)
-│
-├── monitoring/             # CAMADA DE MONITORAMENTO (The Guardian)
-│   └── CONTEXT_HEALTH.md   # Dashboard de saúde técnica e cognitiva
-│
+/ (Root do Projeto)
 ├── .specs/                 # 🆕 WORKBENCH EFÊMERO (The Workshop - TLC)
 │   └── features/           # Specs e tasks atômicas em execução
 │
-└── _scripts/               # CAMADA DE AUTOMACAO (The Motor)
-    ├── validate_context.py        # Validador de integridade e status
-    ├── enrich_context.py          # Tradutor cognitivo e Gap Check
-    ├── purge_journal.py           # Gerenciador de memória (Purge)
-    ├── cleanup_specs.py           # Gerenciador de efemeridade (.specs)
-    └── sync_project.py            # Sincronizador de requisitos
+└── .context/               # 🏛️ GOVERNO E MEMÓRIA DE LONGO PRAZO
+    ├── 🧠 brain/
+    │   ├── ...
+    │   ├── INCEPTION.md               # Fronteiras estratégicas (SSOT) [DRAFT|ACTIVE]
+    │   ├── INCEPTION.proposed.md      # Proposta gerada pela IA (Aguardando Ratificação)
+    │   └── VISION.md                  # Entrada narrativa humana (Input de Visão)
+    │
+    ├── 🌐 market/                      # CAMADA ESTRATÉGICA (Restrições Externas)
+    │   ├── SSOT_MAP.md
+    │   ├── MARKET_INBOX.md
+    │   ├── economics.md
+    │   ├── compliance/
+    │   └── research/
+    │
+    ├── 🛠️ maintenance/                 # CAMADA DE MANUTENÇÃO (The Housekeeper)
+    │   ├── JOURNAL.md                 # Log vivo (Máx ~50k char - Memória Curta)
+    │   ├── TECHNICAL_REQUIREMENTS.md  # Stack, libs e infra (Inventário)
+    │   ├── rebuild_guide.md           # Guia de setup e infra (Pós-Mortem Vivo)
+    │   ├── schema.sql                 # Snapshot do Banco de Dados (Verdade Real)
+    │   ├── ARCHITECTURE.md            # Blueprint técnico evolutivo (O DNA)
+    │   ├── TESTS.md                   # Ledger de padrões e TDDs
+    │   ├── rx-anatomy.md              # Raio-X de pastas (Anatomia do Repositório)
+    │   ├── rx-biology.md              # Raio-X de fluxos (Biologia do Negócio)
+    │   └── _archive_context/          # Histórico imutável (A Biblioteca)
+    │
+    ├── monitoring/             # CAMADA DE MONITORAMENTO (The Guardian)
+    │   └── CONTEXT_HEALTH.md   # Dashboard de saúde técnica e cognitiva
+    │
+    └── _scripts/               # CAMADA DE AUTOMACAO (The Motor)
+        ├── validate_context.py        # Validador de integridade e status
+        ├── enrich_context.py          # Tradutor cognitivo e Gap Check
+        ├── purge_journal.py           # Gerenciador de memória (Purge)
+        ├── cleanup_specs.py           # Gerenciador de efemeridade (.specs)
+        └── sync_project.py            # Sincronizador de requisitos
 
 ---
 

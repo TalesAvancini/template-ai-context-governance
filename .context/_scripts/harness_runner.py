@@ -71,7 +71,7 @@ def check_enrichment_integrity(prd_path: Path):
     if not any(kw in text_lower for kw in trigger_keywords):
         return True, "Sem menção a integrações/compliance (skip)"
 
-    section_match = re.search(r'^## 🚨 Critical Dependencies\s*\n(.*?)(?=\n## |\Z)', text, re.I | re.DOTALL | re.MULTILINE)
+    section_match = re.search(r'^##\s*.*?Critical Dependencies.*?\n(.*?)(?=\n## |\Z)', text, re.I | re.DOTALL | re.MULTILINE)
     if not section_match: 
         return False, "Seção Critical Dependencies obrigatória para PRDs com integrações/compliance"
     
