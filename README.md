@@ -17,20 +17,22 @@ O kit evoluiu de validação passiva para **controle ativo e reativo**:
 
 ---
 
-## 🚀 Instalação Ultra-Rapida (One-Click Setup)
+## 🚀 Instalação e Onboarding
 
-Se voce quer inicializar este framework em um novo projeto do zero, basta rodar o nosso bootstrapper supremo:
-
+### Cenário 1: Repositório Novo (Template)
+Se você apenas clonou este repositório base, você já possui todo o ecossistema Antigravity. Apenas execute:
 ```bash
-# Usuários MacOS/Linux/WSL:
-bash init_ai_project.sh
-
-# Usuários Windows (Powershell/Cmd - requer Node.js):
-node -e "require('child_process').execSync('bash init_ai_project.sh || echo USE_WSL_OU_GIT_BASH', {stdio:'inherit'})" 
-# Alternativamente, abra o Git Bash e use o comando Mac/Linux.
+npm install
+npm run prepare # ativa os hooks do Husky
 ```
 
-O script ira criar automaticamente toda a estrutura de camadas, os workshops de execução, os motores de manutenção v2.2+, e configurar a blindagem Husky.
+### Cenário 2: Aplicando a projetos existentes (Bootstrapper)
+Se você quer governar um projeto pré-existente, copie os arquivos `.context/_scripts/`, `run_context.py` e execute o integrador via Bash:
+```bash
+# O ambiente precisa de um bash real compatível (Linux/Mac/WSL/Git Bash)
+bash init_ai_project.sh
+```
+> ⚠️ **Aviso Operacional:** O `init_ai_project.sh` cria as pastas estruturais de regras e injeta NPM Scripts cross-platform. Ele **não** gera os motores internos e aborta se a pasta `.context/` estruturada já existir. Certifique-se de copiar os `.py` desta raiz se estiver instalando manualmente!
 
 ---
 
