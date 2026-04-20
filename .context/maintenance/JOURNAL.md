@@ -7,6 +7,15 @@ Status: Ativo
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
+## 📅 2026-04-20 12:15
+**Decisão/Bug:** 🛡️ Hardening de Governança & Roteamento do Oráculo.
+**Solução:** 
+1. Implementado o `market/SSOT_MAP.md` como roteador central para o NotebookLM (Oracle Baseline).
+2. Injetados **Harnesses Preventivos** (Sticky Instructions) no topo de `INCEPTION.md`, `rx-anatomy.md` e `rx-biology.md` para blindar o contexto contra poluição de IAs.
+3. Atualizada a skill global `hok-governor` com a Regra 5 (Bússola Cognitiva).
+**Implicação:** O sistema agora possui auto-defesa documental e uma ponte clara e desacoplada para a base de conhecimento externa na nuvem (NotebookLM).
+**Handoff:** @antigravity-agent -> @user | Estado: Template Hardened e Blindado | Próximo: Implementação de novas features.
+
 ## 📅 2026-04-16 23:58
 **Decisão/Bug:** 🚩 [SAVEPOINT] Hardening v2.4.1 Concluído (Dogfooding Total).
 **Estado Atual:** O sistema está em modo `ACTIVE`, com o motor Python (`run_context.py`) consolidado como SSOT de execução. O "Execution Drift" foi erradicado: `Makefile`, `run_context.sh` e `init_ai_project.sh` são agora wrappers seguros.
@@ -257,6 +266,9 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-FAIL] Report | spec:_template
 - **Detalhe:** sprint_contract: Contrato não assinado pelo @qa-validator (qa_signoff: false)
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
 
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
