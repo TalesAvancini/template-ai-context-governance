@@ -5,6 +5,13 @@ Status: Ativo (v2.4.1-Hardened)
 ---
 
 # 🧬 rx-biology.md (Raio-X de Comportamento AI)
+
+> 🛡️ **HARNESS PREVENTIVO (PARA MÁQUINAS)** 
+> Este arquivo dita como as IAs interagem com a máquina de estados (O MODO DE PENSAR e HANDOFF).
+> - **NÃO** descreva arquiteturas de banco de dados ou diagramas de componentes de software aqui.
+> - **NÃO** adicione regras de compilação ou deploy (use os scripts raiz ou `.github/`).
+> - Foco 100% no Ralph Wiggum Loop e regras comportamentais entre Agentes.
+
 > Documenta as biológicas de interação, limites cognitivos e padrões de resposta esperados da IA orbitando a Tríade H.O.K Forge.
 
 ## 🧠 Modus Operandi (O Ralph Wiggum Loop)

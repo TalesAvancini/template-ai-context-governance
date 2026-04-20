@@ -6,6 +6,12 @@ status: ACTIVE  # [DRAFT | ACTIVE | TRANSLATION_LOCK]
 
 # 🧭 INCEPTION - Fronteiras Estratégicas (SSOT)
 
+> 🛡️ **HARNESS PREVENTIVO (PARA MÁQUINAS)** 
+> Este arquivo dita a Estratégia de Negócio e Limites Arquiteturais (O que NUNCA e SEMPRE fazer).
+> - **NÃO** insira UUIDs, IDs de nuvem, mapeamento de pastas, nem configurações de ferramentas.
+> - Dependências externas devem ir pro `market/SSOT_MAP.md`.
+> - Somente a role `@vision-architect` deve alterar significativamente este arquivo.
+
 *Ratificado a partir da tradução cognitiva do `VISION.md`.*
 
 ## 🎯 Visão Mestra

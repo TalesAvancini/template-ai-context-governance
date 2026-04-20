@@ -5,6 +5,13 @@ Status: Ativo
 ---
 
 # 🧬 rx-anatomy.md (Raio-X de Anatomia)
+
+> 🛡️ **HARNESS PREVENTIVO (PARA MÁQUINAS)** 
+> Este arquivo dita EXCLUSIVAMENTE a Estrutura de Pastas Físicas do repositório.
+> - **NÃO** insira regras de negócio, fluxos lógicos ou contratos de base de dados aqui.
+> - **NÃO** adicione dependências de infraestrutura de pacote (use `TECHNICAL_REQUIREMENTS.md`).
+> - Se você está editando as linhas abaixo, você deve estar criando ou justificando uma PASTA FÍSICA no disco.
+
 > Visão estrutural e organizacional do repositório.
 
 ## 📂 Estrutura de Pastas
