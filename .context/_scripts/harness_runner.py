@@ -111,7 +111,7 @@ def check_enrichment_integrity(prd_path: Path):
 def check_sprint_contract(spec_path: Path):
     """Valida se a spec possui contrato explícito e assinatura do QA."""
     if not spec_path.exists():
-        return True, "Spec ausente (skip)"
+        return False, "Nenhuma Spec ativa detectada. Commits sem Spec validada no The Workshop estão PROIBIDOS."
     
     text = spec_path.read_text(encoding="utf-8")
     # Extrai bloco YAML entre --- e ---

@@ -1,68 +1,85 @@
 #!/usr/bin/env python3
 """
-🔍 context_oracle.py — Oráculo de consulta local (Unicode-PT-BR Optimized)
-Indexa arquivos-chave da .context/ e retorna snippets + confianca.
+🔍 context_oracle.py — Oráculo de consulta local (H.O.K v2.5 Optimized)
+Busca determinística na camada WIKI/Compliance com retorno integral de arquivos.
 """
 import re, sys, json, os
 from pathlib import Path
 from collections import Counter
 
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
-INDEX_FILES = [
-    "brain/PRD.md", "brain/AGENT_REGISTRY.md", "brain/RULES.md",
-    "maintenance/schema.sql", "maintenance/TECHNICAL_REQUIREMENTS.md",
-    "maintenance/JOURNAL.md", "brain/INCEPTION.md", "market/SSOT_MAP.md"
-]
-EXTRA_INDEX = ["market/economics.md"]
 
 def build_index():
     index = {}
-    # Arquivos base
-    base_paths = [CONTEXT_DIR / f for f in INDEX_FILES + EXTRA_INDEX]
-    # Varredura dinâmica da camada Market (v2.4.1)
-    market_paths = [f for f in CONTEXT_DIR.glob("market/**/*.md") if f.is_file()]
+    # 🔒 Restringe busca APENAS a WIKI e compliance (Princípio do Menor Privilégio)
+    search_paths = [
+        CONTEXT_DIR / "market/WIKI",
+        CONTEXT_DIR / "market/compliance"
+    ]
     
-    for p in set(base_paths + market_paths):
-        if not p.exists(): continue
-        try:
-            rel = p.relative_to(CONTEXT_DIR).as_posix()
-            text = p.read_text(encoding="utf-8")
-            # Python 3 \w já inclui acentos e caracteres latinos
-            words = re.findall(r'\b\w{3,}\b', text.lower())
-            for w in set(words):
-                index.setdefault(w, []).append(rel)
-        except Exception:
-            continue
+    for search_dir in search_paths:
+        if not search_dir.exists(): continue
+        # rglob para varredura recursiva
+        for p in search_dir.rglob("*.md"):
+            try:
+                rel = p.relative_to(CONTEXT_DIR).as_posix()
+                text = p.read_text(encoding="utf-8")
+                
+                # Heurística de Matching 1: Palavras-chave no corpo
+                words = re.findall(r'\b\w{3,}\b', text.lower())
+                for w in set(words):
+                    index.setdefault(w, []).append({"path": rel, "weight": 0.2})
+                
+                # Heurística de Matching 2: Nome do arquivo (stem)
+                stem = p.stem.lower()
+                index.setdefault(stem, []).append({"path": rel, "weight": 0.5})
+                
+                # Heurística de Matching 3: Título / Keywords no Título
+                title_match = re.search(r'^#\s+(.+)$', text, re.MULTILINE)
+                if title_match:
+                    title = title_match.group(1).strip().lower()
+                    # Match exato do título (0.8)
+                    index.setdefault(title, []).append({"path": rel, "weight": 0.8})
+                    # Keywords dentro do título (0.6 por palavra do título)
+                    title_words = re.findall(r'\b\w{3,}\b', title)
+                    for tw in set(title_words):
+                        index.setdefault(tw, []).append({"path": rel, "weight": 0.6})
+            except Exception:
+                continue
     return index
 
 def query_oracle(question, role="unknown"):
     idx = build_index()
     keywords = set(re.findall(r'\b\w{3,}\b', question.lower()))
     hits = Counter()
+    
     for kw in keywords:
-        for file in idx.get(kw, []):
-            hits[file] += 1
+        for match in idx.get(kw, []):
+            hits[match["path"]] += match["weight"]
     
     if not hits:
-        return {"answer": "[WARN] Nenhuma referencia encontrada.", "confidence": 0.0, "sources": []}
+        return {
+            "answer": "[INFO] Termo não encontrado na WIKI de Mercado. Para lógica interna (schema, PRD), consulte o bundle do projeto.",
+            "confidence": 0.0, 
+            "sources": []
+        }
     
-    top_files = [f for f, _ in hits.most_common(3)]
-    snippets = []
-    for f in top_files:
-        content = (CONTEXT_DIR / f).read_text(encoding="utf-8")
-        for kw in keywords:
-            idx_kw = content.lower().find(kw)
-            if idx_kw != -1:
-                start = max(0, idx_kw - 100)
-                end = min(len(content), idx_kw + 100)
-                snippets.append(f"DOC {f}: `...{content[start:end].strip()}...`")
-                break
-                
-    conf = min(1.0, len(snippets) * 0.35)
+    # Seleciona apenas o match mais relevante (1 arquivo atômico por vez)
+    top_file, score = hits.most_common(1)[0]
+    
+    # Retorno Integral (Anti-Bloat)
+    if score >= 0.6:
+        content = (CONTEXT_DIR / top_file).read_text(encoding="utf-8")
+        return {
+            "answer": f"📄 ARQUIVO COMPLETO ({top_file}):\n\n{content}",
+            "confidence": min(1.0, score),
+            "sources": [top_file]
+        }
+    
     return {
-        "answer": "\n".join(snippets) or "[WARN] Nenhuma referencia direta encontrada.",
-        "confidence": conf,
-        "sources": top_files
+        "answer": "[WARN] Referência encontrada, mas com baixa confiança. Refine a pesquisa.",
+        "confidence": score,
+        "sources": [top_file]
     }
 
 if __name__ == "__main__":

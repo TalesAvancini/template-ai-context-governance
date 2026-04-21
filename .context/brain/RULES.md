@@ -99,9 +99,13 @@ A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é o
 - Se a spec ou PRD contiver ambiguidade técnica, consulte limitando o escopo a Divulgação Progressiva: `npm run context:oracle "sua dúvida"`
 - Nunca assuma. Consulte! Se `confidence < 0.5` -> pause.
 
-## 📖 9. Regra Karpathy (Citação Obrigatória)
-- Todo conteúdo/decisão de arquitetura sintetizado em `.context/` DEVE ser lastreado na realidade. Idealmente deve conter `> Fonte: raw/nome-arquivo`.
-- `npm run context:lint` avalia (atualmente em modo Warn-Only) se há claims de arquitetura (`implementa X`, `segue padrão Y`) sem lastro de documentação originária.
+## 📖 9. Regra Karpathy (Destilação Mandatória v2.5)
+O H.O.K utiliza a **Estratificação de Densidade** para evitar o *Context Anxiety*.
+
+1.  **Camada RAW (`market/RAW/`)**: Humano deposita dossiês brutos do NotebookLM. IA operacional NÃO lê esta pasta.
+2.  **Protocolo de Destilação**: IA ou Humano fatia o RAW em átomos na `market/WIKI/` (máx 500 tokens por arquivo).
+3.  **Citação Obrigatória (WIKI)**: Todo arquivo na WIKI DEVE conter `> Fonte: RAW/...` no topo. `npm run context:lint --strict` bloqueia commits em caso de violação.
+4.  **Consulta**: O Oráculo prioriza o `market/WIKI/` para conhecimento externo.
 ## 📊 10. Dashboard Health Sync
 - Antes de processar features complexas ou abrir Specs Atômicas, verifique o `.context/monitoring/CONTEXT_HEALTH.md` para assegurar que a janela de tokens e a saúde do Journal não exigem repouso ou manutenção prévia.
 

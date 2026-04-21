@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-📖 lint_wiki.py — Validacao Epistemologica (Karpathy Layer)
-Fase 2: Modo Strict + Sugestao Automatica de Fonte.
+📖 lint_wiki.py — Validacao Epistemologica (Karpathy Layer v2.5)
+Enforce de rastreabilidade mandatória para a Wiki de Mercado.
 """
 import sys
 import re
@@ -9,39 +9,36 @@ import argparse
 from pathlib import Path
 
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
-RAW_DIR = CONTEXT_DIR / "maintenance" / "_archive_context" / "raw"
-WIKI_DIRS = [CONTEXT_DIR / "brain", CONTEXT_DIR / "maintenance"]
+# RAW centralizado na nova estrutura Fase 3
+RAW_DIR = CONTEXT_DIR / "market" / "RAW"
+# Diretórios de Wiki (Adicionada a nova market/WIKI)
+WIKI_DIRS = [CONTEXT_DIR / "brain", CONTEXT_DIR / "maintenance", CONTEXT_DIR / "market" / "WIKI"]
 
-# Regex refinado para capturar claims técnicos, ignorando headers e metadados
-# Captura frases que parecem afirmações técnicas (ex: "O sistema usa X para Y.")
+# Regex para capturar claims técnicos
 CLAIM_REGEX = re.compile(
-    r'^(?![\s\-\*#>])'                      # Não começa com espaço, lista ou header
-    r'([A-ZÁÉÍÓÚÂÊÎÔÛÃÕÇ][a-záéíóúâêîôûãõç\s,]{15,}'  # Começa com maiúscula + texto longo
-    r'(?:utiliza|implementa|segue|requer|garante|valida|integra|usa|e|é)\s'  # Verbo técnico chave
-    r'.+?\.)',                              # Termina com ponto
+    r'^(?![\s\-\*#>])'
+    r'([A-ZÁÉÍÓÚÂÊÎÔÛÃÕÇ][a-záéíóúâêîôûãõç\s,]{15,}'
+    r'(?:utiliza|implementa|segue|requer|garante|valida|integra|usa|e|é)\s'
+    r'.+?\.)',
     re.MULTILINE
 )
 
 def find_raw_sources():
-    """Lista arquivos na inbox raw para sugestão."""
+    """Lista arquivos na inbox RAW para sugestão."""
     if not RAW_DIR.exists(): return []
     return [f.name for f in RAW_DIR.iterdir() if f.suffix == '.md']
 
 def suggest_source(claim_text, raw_files):
-    """Heurística simples: busca palavras-chave do claim nos nomes dos arquivos raw."""
+    """Heurística simples: busca palavras-chave do claim nos nomes dos arquivos RAW."""
     words = set(re.findall(r'\b\w{5,}\b', claim_text.lower()))
-    # Palavras comuns de ignorar
     ignore = {'deve', 'como', 'para', 'sistema', 'projeto', 'este', 'esta', 'ser', 'com', 'sobre'}
     words -= ignore
-    
     if not words: return None
     
     matches = []
     for raw_file in raw_files:
-        file_lower = raw_file.lower()
-        if any(w in file_lower for w in words):
-            matches.append(f"raw/{raw_file}")
-            
+        if any(w in raw_file.lower() for w in words):
+            matches.append(f"RAW/{raw_file}")
     return matches[0] if matches else None
 
 def check_wiki(strict=False):
@@ -52,52 +49,44 @@ def check_wiki(strict=False):
     for d in WIKI_DIRS:
         if not d.exists(): continue
         for f in d.rglob("*.md"):
-            # Ignora archive e o próprio lint report se existir
-            if "_archive" in str(f) or "lint_report" in str(f): continue
+            if "_archive" in str(f) or "lint_report" in str(f) or f.name.startswith("_"): continue
             
             text = f.read_text(encoding="utf-8")
-            
-            # Pula arquivos raiz de documentação geral (opcional, mas recomendado)
             if f.name in ["README.md", "MASTER_FLOW.md", "RULES.md", "CONTEXT_HEALTH.md", "rebuild_guide.md"]: continue
 
+            # 🛠️ REGRA MANDATÓRIA KARPATHY (v2.5)
+            # Se o arquivo está em market/WIKI, ele DEVE citar a fonte RAW
+            if "market" in str(f) and "WIKI" in str(f):
+                if "> Fonte: RAW/" not in text and "> Fonte: market/RAW/" not in text:
+                    issues.append(f"[FATAL] [{f.name}] Wiki de Mercado sem citação RAW obrigatória.")
+
+            # Checagem de claims (Geral)
             for match in CLAIM_REGEX.finditer(text):
                 claim = match.group(0)
-                # Verifica se há citação próxima (janela de -150 a +250 chars)
-                start_idx = max(0, match.start() - 150)
-                end_idx = min(len(text), match.start() + 250)
-                context_window = text[start_idx:end_idx]
-                citation_found = "> Fonte:" in context_window
-                
-                # Fallback: se não achou na janela, varre o arquivo inteiro (performance aceitável para .md)
-                if not citation_found and "> Fonte:" in text:
-                    citation_found = True
-
-                if not citation_found and "SSOT" not in text:
+                context_window = text[max(0, match.start() - 150):min(len(text), match.start() + 250)]
+                if "> Fonte:" not in context_window and "> Fonte:" not in text and "SSOT" not in text:
                     suggestion = suggest_source(claim, raw_files)
-                    
                     error_msg = f"[WARN] [{f.name}] Claim sem fonte: '{claim[:50]}...'"
-                    if suggestion:
-                        error_msg += f"\n   [DICA] Sugestao: Adicione '> Fonte: {suggestion}'"
-                    else:
-                        error_msg += f"\n   [DICA] Crie um arquivo em raw/ ou use '> Fonte: raw/novo.md'"
-                    
+                    if suggestion: error_msg += f"\n   [DICA] Sugestao: Adicione '> Fonte: {suggestion}'"
                     issues.append(error_msg)
 
     if issues:
         print("\n[LINT] Wiki Report:")
         print("\n".join(issues))
-        if strict:
-            print("\n[FATAL] Commits bloqueados por falta de epistemologia. Resolva os claims acima.")
+        # Se houver erro FATAL na WIKI, trava independente do strict-mode
+        has_fatal = any("[FATAL]" in i for i in issues)
+        if strict or has_fatal:
+            print("\n[FATAL] Pipeline bloqueado por integridade epistemológica.")
             sys.exit(1)
         else:
-            print("\n[WARN] Warning: Verifique as citacoes para manter a qualidade documental.")
-            sys.exit(0) # Não trava o pipeline em warn-mode
+            print("\n[WARN] Verifique as citacoes pendentes.")
+            sys.exit(0)
     else:
         print("[OK] Wiki limpa: Epistemologia em dia.")
         sys.exit(0)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Lint de Citacoes e Epistemologia")
-    parser.add_argument("--strict", action="store_true", help="Bloqueia o pipeline se houver erros")
+    parser = argparse.ArgumentParser(description="Lint de Karpathy Layer")
+    parser.add_argument("--strict", action="store_true", help="Bloqueia o pipeline")
     args = parser.parse_args()
     check_wiki(strict=args.strict)

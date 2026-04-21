@@ -7,6 +7,18 @@ Status: Ativo
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
+## 📅 2026-04-21 19:16
+**Decisão/Bug:** 🚨 Reforço Estrutural: Correção da Vulnerabilidade de Bypass do Linter (Fail-Closed).
+**Solução:** Alteramos o `harness_runner.py` de "Fail-Open" para "Fail-Closed". Antes, se não houvesse *spec*, o script dava 'skip' e liberava o commit. Agora, a ausência de uma Spec ativada na pasta `.specs/` aciona imediatamente `Exit 1` (BLOQUEIO). A física do projeto tornou-se inflexível quanto ao Contrato de Sprint.
+**Implicação:** Nenhum Agente (nem mesmo o Master) e nenhum Dev pode empurrar código à força bruta para o repositório sem assinar uma spec e colocar o YAML com `definition_of_done` e `qa_signoff: true`.
+**Handoff:** @vision-architect -> @user | Estado: Zero Trust. | Próximo: Aguardar novos rumos.
+
+## 📅 2026-04-21 19:00
+**Decisão/Bug:** 👑 Declaração Oficial de Release: Antigravity v2.5 (Karpathy Hardened).
+**Solução:** O agente @spec-driver (Flash) concluiu com sucesso o plano de infraestrutura Fase 3. O Oráculo agora opera com privilégio mínimo (`WIKI/` e `compliance/`) e indexação densa. O Workhop (`.specs/`) foi limpo. O agente @vision-architect (Pro) realizou o C-Level Audit (`npm run context:all`), selando a integridade epistemológica do projeto.
+**Implicação:** A governança atingiu o nível onde as alucinações táticas de IAs terceiras estão mitigadas tanto pela política de destilação de contexto quanto pela exigência do "Protocolo Anti-Atropelo".
+**Handoff:** @vision-architect -> @user | Estado: PRODUÇÃO (v2.5) | Próximo: Encerrar ciclo de hardening.
+
 ## 📅 2026-04-21 15:25
 **Decisão/Bug:** 🛡️ Hardening v2.5: Implementação do Protocolo Anti-Atropelo.
 **Solução:** Atualizada a skill `flash-harness` incorporando a "Cláusula de Inteligência Nativa" (Pro=Opcional, Flash=Obrigatório) e o "Bypass TRIVIAL".
@@ -317,3 +329,18 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-FAIL] Report | spec:meta-inception
 - **Detalhe:** handoff: Handoffs malformados: ['Handoff incompleto: ** @spec-enricher -> @user | E']
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:meta-inception
+- **Detalhe:** handoff: Handoffs malformados: ['Handoff incompleto: ** @vision-architect -> @user ']
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
