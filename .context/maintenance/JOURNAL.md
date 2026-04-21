@@ -7,6 +7,12 @@ Status: Ativo
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
+## 📅 2026-04-21 13:20
+**Decisão/Bug:** 🛡️ Implementação da Skill `flash-harness` (Governança Flash).
+**Solução:** Criada e ativada a skill global `flash-harness`. Ela impõe o protocolo de Desaceleração Cognitiva via `<thought_process>` para compensar o viés de pressa do modelo Gemini Flash.
+**Implicação:** Drástica redução de alucinações táticas. O modelo agora é forçado a realizar Auditoria Epistêmica e Ancoragem no Framework antes de gerar qualquer output técnico.
+**Handoff:** @vision-architect -> @governance-agent | Estado: Flash Hardened | Próximo: Produção.
+
 ## 📅 2026-04-21 00:23
 **Decisão/Bug:** 🛑 Implementação da Regra 6 (Protocolo de Estudo Tectônico) no Governor.
 **Solução:** Injetada a trava anti-entropia na skill global `hok-governor`, obrigando a IA a realizar um estudo de natureza funcional do arquivo antes de propor mudanças e proibindo redundâncias no `.context`.
@@ -272,6 +278,9 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-FAIL] Report | spec:_template
 - **Detalhe:** sprint_contract: Contrato não assinado pelo @qa-validator (qa_signoff: false)
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
 
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
