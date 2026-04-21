@@ -7,6 +7,12 @@ Status: Ativo
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
+## 📅 2026-04-21 00:23
+**Decisão/Bug:** 🛑 Implementação da Regra 6 (Protocolo de Estudo Tectônico) no Governor.
+**Solução:** Injetada a trava anti-entropia na skill global `hok-governor`, obrigando a IA a realizar um estudo de natureza funcional do arquivo antes de propor mudanças e proibindo redundâncias no `.context`.
+**Implicação:** Blindagem definitiva contra "gambiarras" arquiteturais e fragmentação de contexto por criação de arquivos desnecessários.
+**Handoff:** @antigravity-agent -> @user | Estado: Governança Fortalecida (v2.4.1+) | Próximo: Encerrar dia.
+
 ## 📅 2026-04-20 12:15
 **Decisão/Bug:** 🛡️ Hardening de Governança & Roteamento do Oráculo.
 **Solução:** 
@@ -266,6 +272,9 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-FAIL] Report | spec:_template
 - **Detalhe:** sprint_contract: Contrato não assinado pelo @qa-validator (qa_signoff: false)
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
 
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
