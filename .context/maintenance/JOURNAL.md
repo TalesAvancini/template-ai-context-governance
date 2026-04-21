@@ -7,6 +7,12 @@ Status: Ativo
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
+## 📅 2026-04-21 15:25
+**Decisão/Bug:** 🛡️ Hardening v2.5: Implementação do Protocolo Anti-Atropelo.
+**Solução:** Atualizada a skill `flash-harness` incorporando a "Cláusula de Inteligência Nativa" (Pro=Opcional, Flash=Obrigatório) e o "Bypass TRIVIAL".
+**Implicação:** Otimização de tokens no Gemini Pro e eliminação de edições por presunção no Gemini Flash. O modelo Flash agora opera sob o "Cerco ao Objetivo" (Proposta -> GO -> Execução).
+**Handoff:** @spec-enricher -> @user | Estado: Governança Refinada | Próximo: Aguardar GO.
+
 ## 📅 2026-04-21 14:53
 **Decisão/Bug:** 📁 Arquivamento do Plano Fase 3 (Karpathy Wiki).
 **Solução:** Finalizada a rodada de avaliação crítica (The Fool / Pros / Consiglieri). Planos gerados por agentes de execução foram deletados e o plano de arquitetura refinado ("Veredito Qwen") foi salvo em `.context/planos/`.
@@ -305,3 +311,9 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:meta-inception
+- **Detalhe:** handoff: Handoffs malformados: ['Handoff incompleto: ** @spec-enricher -> @user | E']
