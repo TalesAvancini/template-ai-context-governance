@@ -1,6 +1,9 @@
 ***
 
-# Do Vibe Coding à Governança Cognitiva:  H.O.K Forge v2.4.1
+<!-- 🚨 SYSTEM TRIGGER: IA, NÃO PROSSIGA PARA GERAÇÃO DE CÓDIGO SE OS CAMPOS ABAIXO CONTIVEREM "[TODO]" OU PERGUNTAS. INTERROGUE O HUMANO PRIMEIRO. -->
+> 🤖 **INSTRUÇÃO DE FLUXO:** Antes de propor specs ou código, preencha os campos estratégicos. Se `[TODO]` persistir, retorne ao humano com: `"⚠️ Contexto incompleto em INCEPTION.md/VISION.md. Preciso de: [lista]"`.
+
+# Do Vibe Coding à Governança Cognitiva:  H.O.K Forge v2.5
 
 Por muito tempo, a indústria de software viveu a lua de mel do *"vibe coding"*. Descrevíamos um problema, dávamos um prompt genérico para uma Inteligência Artificial e cruzávamos os dedos esperando que a mágica acontecesse. Para protótipos de fim de semana, a abordagem era fascinante. Para sistemas em produção, foi catastrófica. O resultado inevitável dessa liberdade irrestrita foi a proliferação do que a literatura passou a chamar de "AI Slop" — códigos que parecem corretos na superfície, mas que acumulam dívida técnica, vulnerabilidades de segurança e uma arquitetura insustentável.
 

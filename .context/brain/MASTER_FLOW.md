@@ -66,21 +66,15 @@ Status: [Ativo | Arquivado | Depreciado]
 
 ---
 
-## 🚦 2.1 Ciclo de Vida do Inception (Hybrid Discovery)
+## 🔄 2.1 Ciclo de Vida TLC Autobuilder (4 Atos)
+| Ato | Gatilho | Ferramenta/Script | Saída Esperada |
+|-----|---------|-------------------|----------------|
+| **1. [Semente]** | `INCEPTION.md` ativo + gaps | `npm run context:enrich` | `PRD.md` lastreado + `market/` populado |
+| **2. [Engenharia]** | Criação de `.specs/features/X/` | `qa_signoff: true` no frontmatter | Contrato de Sprint assinado |
+| **3. [Execução]** | `npm run context:harness` + `lint` | `harness_runner.py` + `lint_wiki.py` | Código validado + `STATE.md: ✅ PASSED` |
+| **4. [Rito]** | Merge ou >48h inativo | `npm run context:cleanup` | Spec arquivada + `JOURNAL.md` atualizado |
 
-```mermaid
-graph TD
-    A[Start: DRAFT] -->|Human Input| B(VISION.md)
-    B -->|npm run context:enrich| C{AI Translation}
-    C -->|Output| D[INCEPTION.proposed.md]
-    D -->|status: TRANSLATION_LOCK| E[Ratificação Humana]
-    E -->|Approved & Renamed| F[status: ACTIVE]
-    F -->|Operational| G[Normal Dev Flow]
-    G -->|Boundary Breach| A
-```
-
----
-```
+> 🤖 [SYSTEM HOOK] IA: Este fluxo é imutável. Não pule o Ato 2. Não gere código sem `qa_signoff`.
 
 ---
 

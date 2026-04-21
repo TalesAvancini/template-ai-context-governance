@@ -347,3 +347,6 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-PASS] Report | spec:harness_fail_closed
 - **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid

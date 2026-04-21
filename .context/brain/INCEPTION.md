@@ -4,6 +4,9 @@ mode: STRATEGIC
 status: ACTIVE  # [DRAFT | ACTIVE | TRANSLATION_LOCK]
 ---
 
+<!-- 🚨 SYSTEM TRIGGER: IA, NÃO PROSSIGA PARA GERAÇÃO DE CÓDIGO SE OS CAMPOS ABAIXO CONTIVEREM "[TODO]" OU PERGUNTAS. INTERROGUE O HUMANO PRIMEIRO. -->
+> 🤖 **INSTRUÇÃO DE FLUXO:** Antes de propor specs ou código, preencha os campos estratégicos. Se `[TODO]` persistir, retorne ao humano com: `"⚠️ Contexto incompleto em INCEPTION.md. Preciso de: [lista]"`.
+
 # 🧭 INCEPTION - Fronteiras Estratégicas (SSOT)
 
 > 🛡️ **HARNESS PREVENTIVO (PARA MÁQUINAS)** 
@@ -20,10 +23,15 @@ O Antigravity Kit (H.O.K Forge v2.4.1) é uma solução de **Harness Engineering
 ## 🛑 NUNCA (Boundaries)
 > *Limites inegociáveis. Se a IA tentar cruzar estas linhas, o Harness aplicará o fail-fast.*
 
+## 🛡️ Checklist Estratégico (Preenchimento Obrigatório)
+- [ ] **Transações DB?** (Sim/Não. Se sim, qual engine?)
+- [ ] **APIs Externas?** (Ex: Stripe, Meta, OpenAI)
+- [ ] **Compliance Obrigatório?** (Ex: LGPD, HIPAA, PCI)
+
 - **NUNCA** utilizar infraestruturas de MLOps de grande porte ou bancos vetoriais pesados. A indexação deve permanecer leve, rápida e focada na realidade financeira do projeto.
 - **NUNCA** confiar apenas na aprovação sintética da IA (Leniency Bias). Nenhuma linha é final sem passar pelo sensor computacional rígido do Harness de Contratos (`harness_runner.py`).
 - **NUNCA** introduzir complexidade tecnológica desnecessária no banco de estados; o repositório **deve** usar apenas `.md`, `.json` e `.sql` como SSOT (Single Source of Truth).
-- **NUNCA** permitir confabulação de dados. Afirmações técnicas sem citação explícita (`> Fonte: raw/...`) do Linter Epistemológico (Karpathy rule) serão sumariamente rejeitadas.
+- **NUNCA** permitir confabulação de dados. Afirmações técnicas sem citação explícita (`> Fonte: RAW/...`) do Linter Epistemológico (Karpathy rule) serão sumariamente rejeitadas.
 - **NUNCA** trabalhar com contexto infinito. As execuções devem usar o *Ralph Wiggum Loop*, quebrando o desenvolvimento em Specs Atômicas com aniquilação periódica de memória.
 
 ## 🟢 SEMPRE (Restrições de Processo)
