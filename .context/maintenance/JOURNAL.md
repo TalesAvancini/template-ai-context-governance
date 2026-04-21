@@ -7,6 +7,12 @@ Status: Ativo
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
+## 📅 2026-04-21 14:53
+**Decisão/Bug:** 📁 Arquivamento do Plano Fase 3 (Karpathy Wiki).
+**Solução:** Finalizada a rodada de avaliação crítica (The Fool / Pros / Consiglieri). Planos gerados por agentes de execução foram deletados e o plano de arquitetura refinado ("Veredito Qwen") foi salvo em `.context/planos/`.
+**Implicação:** O projeto não sofreu alterações de código, mas possui agora o blueprint oficial para escalabilidade "Zero RAG".
+**Handoff:** @vision-architect -> @user | Estado: Plano Arquivado | Próximo: Aguardar execução.
+
 ## 📅 2026-04-21 13:20
 **Decisão/Bug:** 🛡️ Implementação da Skill `flash-harness` (Governança Flash).
 **Solução:** Criada e ativada a skill global `flash-harness`. Ela impõe o protocolo de Desaceleração Cognitiva via `<thought_process>` para compensar o viés de pressa do modelo Gemini Flash.
@@ -278,6 +284,9 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-FAIL] Report | spec:_template
 - **Detalhe:** sprint_contract: Contrato não assinado pelo @qa-validator (qa_signoff: false)
+
+## [HARNESS-PASS] Report | spec:meta-inception
+- **Detalhe:** All contracts valid
 
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid

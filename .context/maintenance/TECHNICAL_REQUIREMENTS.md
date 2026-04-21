@@ -16,7 +16,7 @@ Para execução segura dos scripts de governança (Harness e Oracle):
 - **Node.js:** `>= 18.x` (para pacotes de pre-commits automáticos)
 
 <!-- AUTO-SYNC START -->
-*🤖 Atualizado automaticamente em 2026-04-21 00:24*
+*🤖 Atualizado automaticamente em 2026-04-21 13:23*
 
 ### DevDependencies
 - `husky`: `^9.1.7`
@@ -25,6 +25,7 @@ Para execução segura dos scripts de governança (Harness e Oracle):
 - `orders`
 
 <!-- AUTO-SYNC END -->
+
 
 
 
