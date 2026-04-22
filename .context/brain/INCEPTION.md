@@ -1,5 +1,5 @@
 ---
-version: 2.4.1
+version: 2.5.0
 mode: STRATEGIC
 status: ACTIVE  # [DRAFT | ACTIVE | TRANSLATION_LOCK]
 ---
@@ -18,7 +18,7 @@ status: ACTIVE  # [DRAFT | ACTIVE | TRANSLATION_LOCK]
 *Ratificado a partir da tradução cognitiva do `VISION.md`.*
 
 ## 🎯 Visão Mestra
-O Antigravity Kit (H.O.K Forge v2.4.1) é uma solução de **Harness Engineering** projetada para PMEs e Tech Leads. Seu objetivo é controlar o "AI Slop" e governar as IA geradoras de código através de uma arquitetura determinística implacável, reduzindo confabulações e inchaço de contexto sem depender de infraestruturas MLOps complexas. A equação fundamental é **Agente = Modelo + Harness**.
+O Antigravity Kit (H.O.K Forge v2.5.0) é uma solução de **Harness Engineering** projetada para PMEs e Tech Leads. Seu objetivo é controlar o "AI Slop" e governar as IA geradoras de código através de uma arquitetura determinística implacável, reduzindo confabulações e inchaço de contexto sem depender de infraestruturas MLOps complexas. A equação fundamental é **Agente = Modelo + Harness**.
 
 ## 🛑 NUNCA (Boundaries)
 > *Limites inegociáveis. Se a IA tentar cruzar estas linhas, o Harness aplicará o fail-fast.*

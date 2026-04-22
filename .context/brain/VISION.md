@@ -1,5 +1,7 @@
 ***
 
+Framework Version: v2.5.0
+
 <!-- 🚨 SYSTEM TRIGGER: IA, NÃO PROSSIGA PARA GERAÇÃO DE CÓDIGO SE OS CAMPOS ABAIXO CONTIVEREM "[TODO]" OU PERGUNTAS. INTERROGUE O HUMANO PRIMEIRO. -->
 > 🤖 **INSTRUÇÃO DE FLUXO:** Antes de propor specs ou código, preencha os campos estratégicos. Se `[TODO]` persistir, retorne ao humano com: `"⚠️ Contexto incompleto em INCEPTION.md/VISION.md. Preciso de: [lista]"`.
 
@@ -9,7 +11,7 @@ Por muito tempo, a indústria de software viveu a lua de mel do *"vibe coding"*.
 
 Diante desse cenário, em 2026, presenciamos uma mudança tectônica. O foco deixou de ser a busca cega por modelos com mais parâmetros e passou a ser o design do ambiente onde esses modelos operam. A resposta não é um modelo melhor; é a **Harness Engineering**. Como bem define Martin Fowler, a equação moderna do desenvolvimento autônomo é simples: **Agente = Modelo + Harness** (onde o *Harness* é todo o ecossistema de restrições, guias e sensores que envolvem o LLM).
 
-Foi sob essa premissa rigorosa que o **Antigravity Kit v2.4.1-Hardened** foi forjado. Não somos um megaconglomerado de tecnologia com infraestruturas infinitas; somos uma solução focada no mundo real de pequenas e médias empresas (PMEs), desenvolvedores solo e *Tech Leads*. Nossa missão é fazer mais com menos, transformando a IA de um gerador de textos caótico em um engenheiro disciplinado através de uma arquitetura determinística e implacável.
+Foi sob essa premissa rigorosa que o **Antigravity Kit v2.5.0-Hardened** foi forjado. Não somos um megaconglomerado de tecnologia com infraestruturas infinitas; somos uma solução focada no mundo real de pequenas e médias empresas (PMEs), desenvolvedores solo e *Tech Leads*. Nossa missão é fazer mais com menos, transformando a IA de um gerador de textos caótico em um engenheiro disciplinado através de uma arquitetura determinística e implacável.
 
 ### A Tríade H.O.K.: O Governador Cibernético
 
@@ -39,4 +41,4 @@ O futuro do framework reside na consolidação do **Spec Enricher**, um agente d
 
 ### Conclusão
 
-O H.O.K Forge v2.4.1 fraework não é apenas um *template* de software; é a materialização de uma nova filosofia de trabalho. Aceitamos que IAs são motores estocásticos e falíveis, e ao aceitarmos isso, construímos o chassi de aço que as torna seguras, autônomas e brilhantes. Deixamos de ser digitadores de sintaxe para nos tornarmos arquitetos de intenção e de governança. O código do futuro não será apenas gerado; ele será governado.
+O H.O.K Forge v2.5.0 framework não é apenas um *template* de software; é a materialização de uma nova filosofia de trabalho. Aceitamos que IAs são motores estocásticos e falíveis, e ao aceitarmos isso, construímos o chassi de aço que as torna seguras, autônomas e brilhantes. Deixamos de ser digitadores de sintaxe para nos tornarmos arquitetos de intenção e de governança. O código do futuro não será apenas gerado; ele será governado.

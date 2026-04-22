@@ -44,6 +44,11 @@ Antes de gerar código de produção ou realizar refatorações, o Agente **DEVE
 3. **Bloqueio:** Se `qa_signoff == false` ou `definition_of_done` estiver vazio, o Harness retorna `Exit 1`.
 4. Nenhuma geração de código ou merge é permitida antes da assinatura.
 
+## 🔄 1.2 Consistência de Versão (SSOT)
+1. `VERSION.md` é a única fonte da verdade para versão do framework.
+2. O pipeline `npm run context:all` executa `check_version_consistency.py` antes das demais validações.
+3. Drift em `package.json`, `INCEPTION.md` ou `VISION.md` bloqueia o pipeline (`Exit 1`).
+
 ---
 
 ## 🔢 2. Ansiedade de Contexto & Ralph Wiggum Loop

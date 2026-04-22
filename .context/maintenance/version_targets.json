@@ -1,0 +1,22 @@
+{
+  "ssot": "VERSION.md",
+  "targets": [
+    {
+      "path": "package.json",
+      "pattern": "\"version\"\\s*:\\s*\"([^\"]+)\"",
+      "mode": "must_match"
+    },
+    {
+      "path": ".context/brain/INCEPTION.md",
+      "pattern": "^version:\\s*([0-9]+\\.[0-9]+(?:\\.[0-9]+)?)\\s*$",
+      "mode": "must_match",
+      "multiline": true
+    },
+    {
+      "path": ".context/brain/VISION.md",
+      "pattern": "^Framework Version:\\s*v?([0-9]+\\.[0-9]+(?:\\.[0-9]+)?)\\s*$",
+      "mode": "must_match",
+      "multiline": true
+    }
+  ]
+}

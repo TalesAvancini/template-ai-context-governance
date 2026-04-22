@@ -1,8 +1,8 @@
 # 🛸 Antigravity Kit Versioning
-v2.5
-Dash: [Antigravity Kit v2.5 - Karpathy Hardened]
+v2.5.0
+Dash: [Antigravity Kit v2.5.0 - Karpathy Hardened]
 Audit Status: ✅ PASSED
-Release Date: 2026-04-21
+Release Date: 2026-04-22
 
 📜 Changelog:
 - **[Governança Ativa]** Implementado Protocolo "Anti-Atropelo" (Flash Harness) com `TRIVIAL` bypass.

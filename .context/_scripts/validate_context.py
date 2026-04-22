@@ -15,8 +15,9 @@ CONTEXT_DIR = SCRIPT_DIR.parent
 # Forçar UTF-8 em Windows
 if sys.platform == "win32":
     import io
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 REQUIRED_FILES = [
     "brain/RULES.md",
@@ -74,7 +75,9 @@ def check_specs_structure():
     features_dir = specs_dir / "features"
     if not features_dir.exists():
         return False, "Diretorio features ausente no .specs"
-    active_specs = [d for d in features_dir.iterdir() if d.is_dir() and not d.name.startswith('_')]
+    active_specs = [
+        d for d in features_dir.iterdir() if d.is_dir() and not d.name.startswith("_")
+    ]
     for spec in active_specs:
         if not (spec / "STATE.md").exists():
             return False, f"Falha de integridade: {spec.name}/STATE.md ausente"
@@ -103,25 +106,25 @@ def is_non_initial_context():
     # Critério sugerido pela auditoria: lista de code roots
     code_roots = ["src", "app", "packages", "services", "lib"]
     root_dir = CONTEXT_DIR.parent
-    
+
     # 1. Verifica pastas de código
     for dr in code_roots:
         path = root_dir / dr
         if path.exists() and any(path.iterdir()):
             return True, f"Pasta de código ativa encontrada: {dr}/"
-            
+
     # 2. Verifica .specs/features/ ativos
     specs_dir = root_dir / ".specs" / "features"
     if specs_dir.exists():
         active_specs = [d for d in specs_dir.iterdir() if d.is_dir()]
         if active_specs:
             return True, f"Especificações de feature ativas: {len(active_specs)}"
-            
+
     return False, "Contexto inicial limpo"
 
 
 def validate():
-    print("--- Iniciando validação de contexto (v2.4.1 Hardened + Hybrid) ---")
+    print("--- Iniciando validação de contexto (v2.5.0 Hardened + Hybrid) ---")
     issues = []
     exit_code = 0
 
@@ -139,16 +142,22 @@ def validate():
 
     if inception_status == "DRAFT":
         if vision_exists:
-            print("[WARN] Tradução Pendente: VISION.md detectada. Solicite @spec-enricher.")
+            print(
+                "[WARN] Tradução Pendente: VISION.md detectada. Solicite @spec-enricher."
+            )
             exit_code = 2
         elif is_dirty:
-            issues.append(f"[FATAL] Inception em DRAFT mas projeto possui código ({dirty_msg}).")
+            issues.append(
+                f"[FATAL] Inception em DRAFT mas projeto possui código ({dirty_msg})."
+            )
             exit_code = 1
         else:
             print(f"[INFO] Modo Onboarding: Projeto limpo. Consulte START_HERE.md.")
             exit_code = 0
     elif inception_status == "TRANSLATION_LOCK":
-        print("[WARN] Bloqueio de Tradução: INCEPTION.proposed.md aguardando ratificação.")
+        print(
+            "[WARN] Bloqueio de Tradução: INCEPTION.proposed.md aguardando ratificação."
+        )
         exit_code = 2
     elif inception_status == "ACTIVE":
         print("[OK] Governança ACTIVE: Limites validados.")
@@ -160,7 +169,8 @@ def validate():
     spec_ok, spec_msg = check_specs_structure()
     if not spec_ok:
         issues.append(f"[WARN] .specs/: {spec_msg}")
-        if exit_code == 0: exit_code = 1
+        if exit_code == 0:
+            exit_code = 1
     else:
         print(f"[OK] .specs/: {spec_msg}")
 
@@ -169,7 +179,8 @@ def validate():
         issues.append(
             f"[WARN] JOURNAL.md excede limite: {journal_lines}/{JOURNAL_MAX_LINES}"
         )
-        if exit_code == 0: exit_code = 1
+        if exit_code == 0:
+            exit_code = 1
     else:
         print(f"[OK] JOURNAL.md dentro do limite: {journal_lines}/{JOURNAL_MAX_LINES}")
 
@@ -179,7 +190,8 @@ def validate():
         issues.append(
             f"[WARN] Contexto estimado alto: tokens_raw={tokens_raw} (~{tokens_k:.1f}k). Execute purge."
         )
-        if exit_code == 0: exit_code = 1
+        if exit_code == 0:
+            exit_code = 1
     else:
         print(
             f"[OK] Estimativa de contexto segura: tokens_raw={tokens_raw} (~{tokens_k:.1f}k)"
@@ -188,7 +200,8 @@ def validate():
     reg_ok, reg_msg = check_registry_structure()
     if not reg_ok:
         issues.append(f"[WARN] AGENT_REGISTRY.md: {reg_msg}")
-        if exit_code == 0: exit_code = 1
+        if exit_code == 0:
+            exit_code = 1
     else:
         print("[OK] AGENT_REGISTRY.md estrutura válida.")
 
@@ -212,5 +225,6 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"[ERROR] Erro na execucao: {e}")
         import traceback
+
         traceback.print_exc()
         sys.exit(1)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-🐍 run_context.py - Gestor Universal de Contexto v2.4.1 (Hardened Pipeline)
+🐍 run_context.py - Gestor Universal de Contexto v2.5.0 (Hardened Pipeline)
 Sequencia otimizada: validate → scan-secrets → sync → migrations → harness → lint(strict) → health
 """
 
@@ -31,7 +31,7 @@ def run_script(name, args=None, capture=False):
     try:
         # Refatoração sugerida pela auditoria: Remover check=True para tratar códigos semânticos
         res = subprocess.run([sys.executable, str(script_path)] + args, check=False)
-        
+
         if res.returncode == 0:
             print(f"[OK] Concluido: {name}\n")
             return 0
@@ -39,7 +39,9 @@ def run_script(name, args=None, capture=False):
             print(f"[STRATEGIC BLOCK] Pendência em {name}. Pipeline local TRAVADO.\n")
             sys.exit(2)
         else:
-            print(f"[FATAL] Falha estrutural em {name}. Exit: {res.returncode}. Pipeline abortado.")
+            print(
+                f"[FATAL] Falha estrutural em {name}. Exit: {res.returncode}. Pipeline abortado."
+            )
             sys.exit(1)
     except Exception as e:
         print(f"[ERROR] Erro na execução de {name}: {e}\n")
@@ -65,7 +67,7 @@ def get_inception_status():
 def main():
     if len(sys.argv) < 2:
         print(
-            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|oracle|health|scan-secrets|check-migrations|enrich|all|help]"
+            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|lint-strict|oracle|health|scan-secrets|check-migrations|check-version|enrich|all|help]"
         )
         sys.exit(1)
 
@@ -75,7 +77,9 @@ def main():
     # Bloqueio global preventivo (Auditoria: TRANSLATION_LOCK uniforme)
     status = get_inception_status()
     if status == "TRANSLATION_LOCK" and cmd != "enrich" and cmd != "help":
-        print("[LOCKED] O projeto está em TRANSLATION_LOCK. Aceite ou rejeite o INCEPTION.proposed.md primeiro.")
+        print(
+            "[LOCKED] O projeto está em TRANSLATION_LOCK. Aceite ou rejeite o INCEPTION.proposed.md primeiro."
+        )
         sys.exit(2)
 
     if cmd == "validate":
@@ -100,12 +104,15 @@ def main():
         run_script("secrets_scanner.py", extra_args)
     elif cmd == "check-migrations":
         run_script("migration_registry.py", extra_args)
+    elif cmd == "check-version":
+        run_script("check_version_consistency.py", extra_args)
 
     elif cmd == "enrich":
         run_script("enrich_context.py", extra_args)
 
     elif cmd == "all":
-        # Pipeline Fail-Fast (Hardened v2.4.1 + Hybrid Discovery)
+        # Pipeline Fail-Fast (Hardened v2.5.0 + Hybrid Discovery)
+        run_script("check_version_consistency.py")
         run_script("validate_context.py")
         run_script("secrets_scanner.py")
         run_script("sync_project.py")
@@ -121,7 +128,7 @@ def main():
 
     elif cmd in ["help", "--help", "-h"]:
         print(
-            "Comandos: validate | purge | sync | cleanup | harness | lint | oracle | health | scan-secrets | check-migrations | enrich | all"
+            "Comandos: validate | purge | sync | cleanup | harness | lint | lint-strict | oracle | health | scan-secrets | check-migrations | check-version | enrich | all"
         )
     else:
         print(f"❌ Comando desconhecido: {cmd}")

@@ -356,3 +356,23 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-PASS] Report | spec:harness_fail_closed
 - **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
+
+## [2026-04-22 09:50] release: Antigravity Kit v2.5.0 'Hardened Matrix'
+- **Meta-Ação:** Implementação de SSOT de Versão e Endurecimento de Onboarding (Arquiteto).
+- **Destaques:** 
+  - `version_targets.json` ⮕ Matriz declarativa de sincronia de versão.
+  - `check_version_consistency.py` ⮕ Linter de drift integrado ao pipeline `all`.
+  - `harness_runner.py` ⮕ Poda real de arquivos e fail-closed para `DRAFT` quando há atividade.
+- **Status:** [CONSISTENT & HARDENED]
+- **Próximo:** Iniciar ciclo de desenvolvimento de features sobre fundação v2.5.0.
+
+---
