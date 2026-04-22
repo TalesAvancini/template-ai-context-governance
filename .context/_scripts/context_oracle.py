@@ -9,6 +9,13 @@ from collections import Counter
 
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
 
+# Import utilitário de log
+sys.path.append(str(CONTEXT_DIR / "_scripts"))
+try:
+    from _wiki_log_utils import append_to_wiki_log
+except ImportError:
+    def append_to_wiki_log(*args): pass
+
 def load_index_file():
     """Lê o índice mestre WIKI para roteamento determinístico."""
     index_file = CONTEXT_DIR / "market/WIKI/_index.md"
@@ -111,6 +118,13 @@ if __name__ == "__main__":
         print("Uso: python context_oracle.py \"sua pergunta aqui\"")
         sys.exit(1)
     res = query_oracle(sys.argv[1], os.environ.get("AGENT_ROLE", "manual"))
+    
+    # Log de Query (Resumido)
+    q_stub = sys.argv[1][:30] + "..." if len(sys.argv[1]) > 30 else sys.argv[1]
+    status = "OK" if res["confidence"] >= 0.5 else "FAIL"
+    source = res["sources"][0] if res["sources"] else "-"
+    append_to_wiki_log("QUERY", f"Busca: {q_stub} (conf: {res['confidence']:.2f})", source, status)
+
     try:
         print(json.dumps(res, indent=2, ensure_ascii=True))
     except Exception as e:

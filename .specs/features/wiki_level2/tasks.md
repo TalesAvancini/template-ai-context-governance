@@ -33,3 +33,23 @@ Rifa de tarefas atômicas para implementação do paradigma Karpathy Wiki.
 - [x] **TASK-07**: Patch em `validate_context.py`.
   - Injetar `check_wiki_integrity()`.
   - *Verify*: `npm run context:wiki-health`
+
+## [Phase 5] Traceability & Hotfix v2.5.1
+- [ ] **TASK-08**: Criar utilitário de log robusto.
+  - Criar `.context/_scripts/_wiki_log_utils.py` (atomic append + escape).
+  - *Verify*: Script manual de teste de escrita.
+- [ ] **TASK-09**: Instrumentar Ingestão e Lint.
+  - Patches em `ingest_wiki_guard.py` e `lint_wiki.py`.
+  - *Verify*: Validar entradas `OK/FAIL/SKIP` no log.
+- [ ] **TASK-10**: Instrumentar Oráculo (Resumo de Query).
+  - Patch em `context_oracle.py`.
+  - *Verify*: `npm run context:oracle` gera log.
+- [ ] **TASK-11**: Validação Operacional (Stress Test).
+  - Testar fluxo de erro e correção real.
+  - *Verify*: `wiki_log.md` preenchido corretamente.
+- [ ] **TASK-12**: Release Bump v2.5.1 (Global SSOT).
+  - Atualizar VERSION.md, package.json, Inception e Vision.
+  - *Verify*: `npm run context:check-version`.
+- [ ] **TASK-13**: Refatoração Factual do Walkthrough.
+  - Sincronizar narrativa com a realidade operacional.
+  - *Verify*: Leitura final do artefato.

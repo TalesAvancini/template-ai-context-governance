@@ -9,6 +9,13 @@ from pathlib import Path
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
 WIKI_DIR = CONTEXT_DIR / "market/WIKI"
 
+# Import utilitário de log
+sys.path.append(str(CONTEXT_DIR / "_scripts"))
+try:
+    from _wiki_log_utils import append_to_wiki_log
+except ImportError:
+    def append_to_wiki_log(*args): pass
+
 def validate_article(path):
     content = path.read_text(encoding="utf-8")
     errors = []
@@ -47,6 +54,7 @@ def main():
     
     if not articles:
         print("[OK] Nenhum artigo novo para validar.")
+        append_to_wiki_log("SKIP", "Nenhum artigo detectado para ingestão", "-", "OK")
         sys.exit(0)
 
     all_errors = {}
@@ -58,13 +66,18 @@ def main():
 
     if all_errors:
         print("❌ FALHA NA INGESTÃO WIKI:")
+        paths = []
         for path, errs in all_errors.items():
+            paths.append(path)
             print(f"\n📄 {path}:")
             for e in errs:
                 print(f"  - {e}")
+        append_to_wiki_log("INGEST", "Falha de conformidade Karpathy", ", ".join(paths), "FAIL")
         sys.exit(1)
 
     print(f"✅ Todos os {len(articles)} artigos WIKI estão em conformidade.")
+    filenames = [a.name for a in articles]
+    append_to_wiki_log("INGEST", f"Ingestão de {len(articles)} artigos", ", ".join(filenames), "OK")
     sys.exit(0)
 
 if __name__ == "__main__":

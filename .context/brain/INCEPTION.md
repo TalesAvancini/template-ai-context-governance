@@ -1,5 +1,5 @@
 ---
-version: 2.5.0
+version: 2.5.1
 mode: STRATEGIC
 status: ACTIVE  # [DRAFT | ACTIVE | TRANSLATION_LOCK]
 ---

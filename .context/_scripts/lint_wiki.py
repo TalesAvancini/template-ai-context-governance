@@ -9,6 +9,13 @@ import argparse
 from pathlib import Path
 
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
+
+# Import utilitário de log
+sys.path.append(str(CONTEXT_DIR / "_scripts"))
+try:
+    from _wiki_log_utils import append_to_wiki_log
+except ImportError:
+    def append_to_wiki_log(*args): pass
 # RAW centralizado na nova estrutura Fase 3
 RAW_DIR = CONTEXT_DIR / "market" / "RAW"
 # Diretórios de Wiki (Adicionada a nova market/WIKI)
@@ -87,6 +94,10 @@ def check_wiki(strict=False):
         print("\n".join(issues))
         # Se houver erro FATAL na WIKI, trava independente do strict-mode
         has_fatal = any("[FATAL]" in i for i in issues)
+        status = "FAIL" if (strict or has_fatal) else "WARN"
+        
+        append_to_wiki_log("LINT", f"Detectados {len(issues)} problemas", "-", status)
+        
         if strict or has_fatal:
             print("\n[FATAL] Pipeline bloqueado por integridade epistemológica.")
             sys.exit(1)
@@ -95,6 +106,7 @@ def check_wiki(strict=False):
             sys.exit(0)
     else:
         print("[OK] Wiki limpa: Epistemologia em dia.")
+        append_to_wiki_log("LINT", "Integridade epistemológica validada", "-", "OK")
         sys.exit(0)
 
 if __name__ == "__main__":
