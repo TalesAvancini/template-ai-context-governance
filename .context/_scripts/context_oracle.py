@@ -9,6 +9,22 @@ from collections import Counter
 
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
 
+def load_index_file():
+    """Lê o índice mestre WIKI para roteamento determinístico."""
+    index_file = CONTEXT_DIR / "market/WIKI/_index.md"
+    mapping = {}
+    if index_file.exists():
+        content = index_file.read_text(encoding="utf-8")
+        # Encontra padrões como: - [[link]] | tags: t1, t2
+        matches = re.finditer(r'- \[\[(.+?)\]\]\s*\|\s*tags:\s*(.+)', content)
+        for m in matches:
+            path_stub = m.group(1).strip()
+            tags = [t.strip().lower() for t in m.group(2).split(",")]
+            for tag in tags:
+                # Peso 1.0 para tags explícitas no índice
+                mapping.setdefault(tag, []).append({"path": f"market/WIKI/{path_stub}.md", "weight": 1.0})
+    return mapping
+
 def build_index():
     index = {}
     # 🔒 Restringe busca APENAS a WIKI e compliance (Princípio do Menor Privilégio)
@@ -50,11 +66,19 @@ def build_index():
 
 def query_oracle(question, role="unknown"):
     idx = build_index()
+    det_idx = load_index_file()
     keywords = set(re.findall(r'\b\w{3,}\b', question.lower()))
     hits = Counter()
     
+    # 1. Busca Determinística (Peso 1.0 - Vindo do _index.md)
+    for kw in keywords:
+        for match in det_idx.get(kw, []):
+            hits[match["path"]] += match["weight"]
+            
+    # 2. Busca Léxica (Pesos variados - Vindo do build_index dinâmico)
     for kw in keywords:
         for match in idx.get(kw, []):
+            # Se já houver um hit determinístico, somamos apenas se for o mesmo arquivo
             hits[match["path"]] += match["weight"]
     
     if not hits:

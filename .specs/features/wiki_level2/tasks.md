@@ -14,7 +14,7 @@ Rifa de tarefas atômicas para implementação do paradigma Karpathy Wiki.
   - *Verify*: Check manual dos arquivos.
 
 ## [Phase 2] Oracle Cascade
-- [ ] **TASK-03**: Patch cirúrgico em `context_oracle.py`.
+- [x] **TASK-03**: Patch cirúrgico em `context_oracle.py`.
   - Injetar lógica de busca SSOT -> Index -> Lexical.
   - *Verify*: `python .context/_scripts/context_oracle.py "test"` deve retornar fallback (exit 2).
 
