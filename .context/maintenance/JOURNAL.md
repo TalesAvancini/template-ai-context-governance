@@ -376,3 +376,6 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 - **Próximo:** Iniciar ciclo de desenvolvimento de features sobre fundação v2.5.0.
 
 ---
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
