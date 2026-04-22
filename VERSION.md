@@ -1,6 +1,6 @@
 # 🛸 Antigravity Kit Versioning
 v2.5.1
-Dash: [Antigravity Kit v2.5.0 - Karpathy Hardened]
+Dash: [Antigravity Kit v2.5.1 - Karpathy Traceability]
 Audit Status: ✅ PASSED
 Release Date: 2026-04-22
 

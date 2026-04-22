@@ -8,3 +8,7 @@
 | [2026-04-22 20:36] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
 | [2026-04-22 20:37] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
 | [2026-04-22 20:37] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-22 20:37] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-22 20:37] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-22 20:47] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-22 20:47] | LINT | Integridade epistemológica validada | - | OK |
