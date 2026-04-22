@@ -12,7 +12,7 @@ Status: Ativo
 | Metrica | Valor Atual | Limite Ideal | Pilar | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **Manutencao** | | | | |
-| Linhas do Journal | 396 | 600 | Tracker | [OK] |
+| Linhas do Journal | 399 | 600 | Tracker | [OK] |
 | Carga do Journal | 18k chars | 50k chars | Tracker | [OK] |
 | **Cognitivo** | | | | |
 | Estimativa Tokens | ~38k | 128k (Max) | Eficiencia | [OK] |

@@ -19,7 +19,7 @@ Rifa de tarefas atômicas para implementação do paradigma Karpathy Wiki.
   - *Verify*: `python .context/_scripts/context_oracle.py "test"` deve retornar fallback (exit 2).
 
 ## [Phase 3] Guard & Lint
-- [ ] **TASK-04**: Implementar `ingest_wiki_guard.py`.
+- [x] **TASK-04**: Implementar `ingest_wiki_guard.py`.
   - Validação de schema (Frontmatter, Fonte, Takeaways).
   - *Verify*: Rodar contra um mock inválido e esperar falha.
 - [ ] **TASK-05**: Atualizar `lint_wiki.py` para modo `--strict`.
