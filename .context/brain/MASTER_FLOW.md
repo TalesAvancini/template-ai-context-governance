@@ -37,7 +37,10 @@ Status: [Ativo | Arquivado | Depreciado]
     │   └── VISION.md                  # Entrada narrativa humana (Input de Visão)
     │
     ├── 🌐 market/                      # CAMADA ESTRATÉGICA (Restrições Externas)
+    │   ├── RAW/                       # Minério Bruto (Humano deposita)
+    │   ├── WIKI/                      # Conhecimento Destilado (Atômico)
     │   ├── SSOT_MAP.md
+    │   ├── wiki_log.md                # Log de Transação (Ingest/Lint)
     │   ├── MARKET_INBOX.md
     │   ├── economics.md
     │   ├── compliance/
@@ -71,10 +74,11 @@ Status: [Ativo | Arquivado | Depreciado]
 |-----|---------|-------------------|----------------|
 | **1. [Semente]** | `INCEPTION.md` ativo + gaps | `npm run context:enrich` | `PRD.md` lastreado + `market/` populado |
 | **2. [Engenharia]** | Criação de `.specs/features/X/` | `qa_signoff: true` no frontmatter | Contrato de Sprint assinado |
-| **3. [Execução]** | `npm run context:harness` + `lint` | `harness_runner.py` + `lint_wiki.py` | Código validado + `STATE.md: ✅ PASSED` |
-| **4. [Rito]** | Merge ou >48h inativo | `npm run context:cleanup` | Spec arquivada + `JOURNAL.md` atualizado |
+| **3. [Ingestão]** | `RAW/` novo ou `WIKI/` modificado | `npm run context:ingest-guard` | Artigo validado + `wiki_log.md` |
+| **4. [Execução]** | `npm run context:harness` + `lint` | `harness_runner.py` + `lint_wiki.py` | Código validado + `STATE.md: ✅ PASSED` |
+| **5. [Rito]** | Merge ou >48h inativo | `npm run context:cleanup` | Spec arquivada + `JOURNAL.md` atualizado |
 
-> 🤖 [SYSTEM HOOK] IA: Este fluxo é imutável. Não pule o Ato 2. Não gere código sem `qa_signoff`.
+> 🤖 [SYSTEM HOOK] IA: Este fluxo é imutável. Não pule o Ato 2. Não gere código sem `qa_signoff`. Toda destilação WIKI exige LINT-STRICT.
 
 ---
 

@@ -9,7 +9,7 @@ Rifa de tarefas atômicas para implementação do paradigma Karpathy Wiki.
   - Criar `.context/market/WIKI/_index.md` (root index).
   - Criar `.context/market/wiki_log.md` (append-only log).
   - *Verify*: `ls .context/market/WIKI/_index.md`
-- [ ] **TASK-02**: Atualizar documentação de governança.
+- [x] **TASK-02**: Atualizar documentação de governança.
   - Injetar fluxo INGEST -> LINT -> LOG em `RULES.md` e `MASTER_FLOW.md`.
   - *Verify*: Check manual dos arquivos.
 

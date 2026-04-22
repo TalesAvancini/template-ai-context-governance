@@ -107,10 +107,13 @@ A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é o
 ## 📖 9. Regra Karpathy (Destilação Mandatória v2.5)
 O H.O.K utiliza a **Estratificação de Densidade** para evitar o *Context Anxiety*.
 
-1.  **Camada RAW (`market/RAW/`)**: Humano deposita dossiês brutos do NotebookLM. IA operacional NÃO lê esta pasta.
-2.  **Protocolo de Destilação**: IA ou Humano fatia o RAW em átomos na `market/WIKI/` (máx 500 tokens por arquivo).
-3.  **Citação Obrigatória (WIKI)**: Todo arquivo na WIKI DEVE conter `> Fonte: RAW/...` no topo. `npm run context:lint --strict` bloqueia commits em caso de violação.
-4.  **Consulta**: O Oráculo prioriza o `market/WIKI/` para conhecimento externo.
+1.  **Camada RAW (`market/RAW/`)**: Humano deposita dossiês brutos. IA operacional NÃO lê esta pasta.
+2.  **Protocolo de Destilação**: IA fatia o RAW em átomos na `market/WIKI/` (máx 500 tokens por arquivo).
+3.  **Ciclo de Governança Wiki (Nível 2)**:
+    - **INGEST**: Destilação via `@wiki-ingestor`. Requer Frontmatter completo e citação `> Fonte: RAW/...`.
+    - **LINT**: `npm run context:lint-strict` bloqueia artigos sem fonte, takeaways ou estrutura.
+    - **LOG**: Toda transação de ingestão é registrada em `market/wiki_log.md` para rastreabilidade de linhagem.
+4.  **Consulta**: O Oráculo prioriza o `market/WIKI/` via roteamento determinístico (`_index.md`).
 ## 📊 10. Dashboard Health Sync
 - Antes de processar features complexas ou abrir Specs Atômicas, verifique o `.context/monitoring/CONTEXT_HEALTH.md` para assegurar que a janela de tokens e a saúde do Journal não exigem repouso ou manutenção prévia.
 
