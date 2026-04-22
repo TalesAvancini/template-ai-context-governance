@@ -379,3 +379,12 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-PASS] Report | spec:harness_fail_closed
 - **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:wiki_level2
+- **Detalhe:** sprint_contract: Bloco de contrato (---) ausente no topo da spec
+
+## [HARNESS-FAIL] Report | spec:wiki_level2
+- **Detalhe:** sprint_contract: Campo definition_of_done obrigatório
