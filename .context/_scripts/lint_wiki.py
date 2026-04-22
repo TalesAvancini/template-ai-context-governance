@@ -55,10 +55,22 @@ def check_wiki(strict=False):
             if f.name in ["README.md", "MASTER_FLOW.md", "RULES.md", "CONTEXT_HEALTH.md", "rebuild_guide.md"]: continue
 
             # 🛠️ REGRA MANDATÓRIA KARPATHY (v2.5)
-            # Se o arquivo está em market/WIKI, ele DEVE citar a fonte RAW
+            # Se o arquivo está em market/WIKI, ele DEVE seguir o schema Nível 2
             if "market" in str(f) and "WIKI" in str(f):
                 if "> Fonte: RAW/" not in text and "> Fonte: market/RAW/" not in text:
                     issues.append(f"[FATAL] [{f.name}] Wiki de Mercado sem citação RAW obrigatória.")
+                
+                if strict:
+                    # Check de Frontmatter Básico
+                    if not re.search(r'^---\s*\n(.*?)\n---\s*\n', text, re.DOTALL):
+                        issues.append(f"[FATAL] [{f.name}] Frontmatter ausente ou inválido.")
+                    
+                    # Check de Estrutura
+                    if "## Key Takeaways" not in text:
+                        issues.append(f"[FATAL] [{f.name}] Seção '## Key Takeaways' ausente.")
+                    
+                    if "## Related" not in text and "[[" not in text:
+                        issues.append(f"[FATAL] [{f.name}] Conectividade ausente (Related ou [[links]]).")
 
             # Checagem de claims (Geral)
             for match in CLAIM_REGEX.finditer(text):

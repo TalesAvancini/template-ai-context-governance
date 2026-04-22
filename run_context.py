@@ -109,6 +109,10 @@ def main():
 
     elif cmd == "enrich":
         run_script("enrich_context.py", extra_args)
+    elif cmd == "ingest-guard":
+        run_script("ingest_wiki_guard.py", extra_args)
+    elif cmd == "wiki-health":
+        run_script("validate_context.py", ["check_wiki_integrity"] + extra_args)
 
     elif cmd == "all":
         # Pipeline Fail-Fast (Hardened v2.5.0 + Hybrid Discovery)
@@ -118,6 +122,7 @@ def main():
         run_script("sync_project.py")
         run_script("migration_registry.py")
         run_script("harness_runner.py")
+        run_script("ingest_wiki_guard.py")
         print("[RUN] Executando lint_wiki.py (Strict)...")
         run_script("lint_wiki.py", ["--strict"])
         print("[RUN] Sincronizando Health Dashboard...")

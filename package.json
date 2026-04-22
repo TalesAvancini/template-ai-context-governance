@@ -16,6 +16,8 @@
     "context:check-migrations": "python run_context.py check-migrations",
     "context:check-version": "python run_context.py check-version",
     "context:enrich": "python run_context.py enrich",
+    "context:ingest-guard": "python run_context.py ingest-guard",
+    "context:wiki-health": "python run_context.py wiki-health",
     "context:capture": "python captura_projeto.py --emit-symbol-index --emit-import-map",
     "context:all": "python run_context.py all",
     "context:test": "python tests/test_context.py",

@@ -101,6 +101,21 @@ def get_inception_metadata():
         return {}
 
 
+def check_wiki_integrity():
+    """Verifica se a infraestrutura base da WIKI Nível 2 existe."""
+    index_file = CONTEXT_DIR / "market/WIKI/_index.md"
+    log_file = CONTEXT_DIR / "market/wiki_log.md"
+    
+    if not index_file.exists():
+        return False, "Índice mestre market/WIKI/_index.md ausente."
+    if index_file.stat().st_size < 50:
+        return False, "Índice mestre market/WIKI/_index.md parece estar vazio ou incompleto."
+    if not log_file.exists():
+        return False, "Log de transações market/wiki_log.md ausente."
+        
+    return True, "Estrutura Wiki OK"
+
+
 def is_non_initial_context():
     """Detecta se o projeto já avançou além do estágio de onboarding."""
     # Critério sugerido pela auditoria: lista de code roots
@@ -204,6 +219,14 @@ def validate():
             exit_code = 1
     else:
         print("[OK] AGENT_REGISTRY.md estrutura válida.")
+
+    wiki_ok, wiki_msg = check_wiki_integrity()
+    if not wiki_ok:
+        issues.append(f"[WARN] WIKI: {wiki_msg}")
+        if exit_code == 0:
+            exit_code = 1
+    else:
+        print(f"[OK] WIKI: {wiki_msg}")
 
     print("\n--- Relatório Final ---")
     if not issues:
