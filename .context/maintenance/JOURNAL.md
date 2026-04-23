@@ -7,6 +7,16 @@ Status: Ativo
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
+## 📅 2026-04-23 15:31
+**Decisão/Bug:** 🛡️ Hardening do Script de Captura (Anti-Bloat & Privacy).
+**Solução:** 
+1. Atualizado `captura_projeto.py` (v2.5.2) para ignorar globalmente as pastas `_archive_context`, `planos` e `RAW`.
+2. Implementado isolamento cirúrgico para a camada `market/RAW`, impedindo que dossiês de pesquisa pesados contaminem o contexto de codificação da IA.
+3. Sincronizada a versão interna do script com o baseline do projeto.
+**Implicação:** Blindagem definitiva contra "Context Anxiety". A IA agora recebe apenas conhecimento destilado, ignorando o lixo histórico e os planos de rascunho.
+**Evidência Operacional:** `npm run context:capture` gerou `contexto_v2.5.2.md` com sucesso, respeitando as novas exclusões.
+**Handoff:** @antigravity-agent -> @user | Estado: Captura Hardened | Próximo: Encerrar ciclo.
+
 ## 📅 2026-04-23 13:14
 **Decisão/Bug:** ✅ Hardening de Consistência de Versão (v2.5.2 Alignment).
 **Solução:** 

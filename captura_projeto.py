@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from fnmatch import fnmatch
 from pathlib import Path
 
-VERSION = "2.4.1"
+VERSION = "2.5.2"
 
 # 🛠️ CUSTOMIZE AQUI: Padrões universais + adicione os específicos do seu projeto
 PASTAS_IGNORAR = {
@@ -23,6 +23,7 @@ PASTAS_IGNORAR = {
     ".next", ".nuxt", ".vercel", ".netlify", ".vite", ".cache",
     ".vscode", ".idea", ".cursor", "coverage", ".pytest_cache",
     "captura_projeto", # 📝 Ignorar a própria pasta do utilitário
+    "_archive_context", "planos", "RAW",
 }
 
 ARQUIVOS_IGNORAR = {
@@ -205,7 +206,7 @@ def collect_files(config: BundleConfig) -> tuple[FileRecord, ...]:
         # 🛡️ Isolamento Cirúrgico (v2.4.1): Ignora pastas densas específicas
         rel_dir = current.relative_to(root).as_posix()
         if rel_dir == ".context/market":
-            dirnames[:] = [d for d in dirnames if d not in {"compliance", "research"}]
+            dirnames[:] = [d for d in dirnames if d not in {"compliance", "research", "RAW"}]
 
         if config.only_core:
             dirnames[:] = sorted(d for d in dirnames if (d in PASTAS_CORE or not is_root) and d not in PASTAS_IGNORAR)
