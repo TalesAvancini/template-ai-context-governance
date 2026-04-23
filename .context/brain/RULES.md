@@ -41,7 +41,7 @@ Antes de gerar código de produção ou realizar refatorações, o Agente **DEVE
 ## 🤝 1.1 Regra de Contrato de Sprint (Research-First)
 1. `@spec-driver` gera `spec.md` com bloco YAML de `definition_of_done`.
 2. `@qa-validator` revisa critérios. Se válidos, seta `qa_signoff: true` e `signed_by: "@qa-validator"`.
-3. **Regra v2.6-lite:** Se `type: standard`, o `validator_context_id` deve ser diferente do `executor_context_id` para que a assinatura seja valida.
+3. **Regra v2.5.2:** Se `type: standard`, o `validator_context_id` deve ser diferente do `executor_context_id` para que a assinatura seja valida.
 4. **Bloqueio:** Se `qa_signoff == false`, `definition_of_done` estiver vazio, ou (em `type: standard`) os IDs forem iguais/ausentes, o Harness retorna `Exit 1`.
 5. Nenhuma geração de código ou merge é permitida antes da assinatura.
 
@@ -105,7 +105,7 @@ A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é o
 - Se a spec ou PRD contiver ambiguidade técnica, consulte limitando o escopo a Divulgação Progressiva: `npm run context:oracle "sua dúvida"`
 - Nunca assuma. Consulte! Se `confidence < 0.5` -> pause.
 
-## 📖 9. Regra Karpathy (Destilação Mandatória v2.5)
+## 📖 9. Regra Karpathy (Destilação Mandatória v2.5.2)
 O H.O.K utiliza a **Estratificação de Densidade** para evitar o *Context Anxiety*.
 
 1.  **Camada RAW (`market/RAW/`)**: Humano deposita dossiês brutos. IA operacional NÃO lê esta pasta.

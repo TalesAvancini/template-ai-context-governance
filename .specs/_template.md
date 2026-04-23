@@ -1,5 +1,5 @@
 ---
-contract_version: 2.6-lite
+contract_version: 2.5.2
 parties: ["@spec-driver", "@qa-validator"]
 type: standard
 executor_context_id: "ctx-dev-YYYYMMDD-HHMM"
@@ -21,5 +21,5 @@ signed_by: null
 - [ ] Testes e/ou validacoes manuais executadas.
 - [ ] Resultado registrado no STATE.md.
 
-## 🔎 Regra v2.6-lite
+## 🔎 Regra de segregacao
 - Se `type: standard`, o `validator_context_id` deve ser diferente do `executor_context_id` antes de `qa_signoff: true`.

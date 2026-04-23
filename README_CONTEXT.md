@@ -1,7 +1,7 @@
 ---
 Criado em: 2026-04-10 22:45
 Ultima Atualizacao: 2026-04-11 23:30
-Status: Ativo (v2.4.1)
+Status: Ativo (v2.5.2)
 ---
 
 # 📖 README_CONTEXT.md — Guia de Operação do Framework
@@ -16,7 +16,7 @@ O diretório `.context/` é a **Fonte Unica da Verdade (SSOT)** do projeto. Ele 
 
 **Regra de Ouro:** `Se nao esta no .context, nao existe. O codigo deve ser o reflexo fiel do contexto.`
 
-## 🧩 Novos Pilares de Operação (v2.4.1+)
+## 🧩 Novos Pilares de Operação (v2.5.2+)
 - **🛡️ Harness:** O pipeline aborta automaticamente se uma Spec referenciar tabelas/campos inexistentes no `schema.sql` ou se handoffs estiverem incompletos.
 - **🔍 Oracle:** Ao detectar ambiguidade, execute `npm run context:oracle "sua pergunta"`. Retorno com `confidence < 0.5` pausa o fluxo e exige `[oracle:uncertain]` no `JOURNAL.md`.
 - **📖 Karpathy:** Todo claim técnico adicionado ao `.context/` deve conter `> Fonte: raw/nome-arquivo.md`. O `pre-commit` roda em modo `--strict` e rejeita commits sem citação.
@@ -68,7 +68,7 @@ O diretório `.context/` é a **Fonte Unica da Verdade (SSOT)** do projeto. Ele 
 
 ---
 
-## ⚙️ 5. Comandos Rápidos (Cheat Sheet v2.4.1)
+## ⚙️ 5. Comandos Rápidos (Cheat Sheet v2.5.2)
 ```bash
 # Validar integridade + estimar tokens
 npm run context:validate

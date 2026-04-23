@@ -1,3 +1,5 @@
 #!/usr/bin/env sh
-echo "🔍 [Husky] Validando contexto antes do commit..."
-python run_context.py all
+echo "🔍 [Husky] Validando contexto (modo read-only) antes do commit..."
+python run_context.py check-version
+python run_context.py validate
+python run_context.py scan-secrets

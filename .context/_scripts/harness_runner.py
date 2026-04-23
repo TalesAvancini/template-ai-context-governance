@@ -173,7 +173,7 @@ def check_sprint_contract(spec_path: Path):
     if not has_signed_by:
         return False, "Campo signed_by inválido ou ausente"
 
-    # Regra v2.6-lite: segregação de contexto para specs standard
+    # Regra v2.5.2: segregação de contexto para specs standard
     type_match = re.search(r'^\s*type:\s*["\']?(\w+)["\']?\s*$', contract, re.I | re.M)
     spec_type = type_match.group(1).strip().lower() if type_match else None
 

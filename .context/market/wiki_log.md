@@ -18,3 +18,7 @@
 | [2026-04-23 11:30] | LINT | Integridade epistemológica validada | - | OK |
 | [2026-04-23 11:44] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
 | [2026-04-23 11:44] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-23 11:45] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-23 11:45] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-23 13:13] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-23 13:13] | LINT | Integridade epistemológica validada | - | OK |
