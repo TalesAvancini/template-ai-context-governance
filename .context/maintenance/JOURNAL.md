@@ -1,11 +1,21 @@
 ---
 Criado em: 2026-04-10 20:50
-Ultima Atualizacao: 2026-04-22 21:10
+Ultima Atualizacao: 2026-04-23 11:39
 Status: Ativo
 ---
 
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
+
+## 📅 2026-04-23 11:39
+**Decisão/Bug:** ✅ v2.6-lite aplicado para segregação de validação em specs `standard`.
+**Solução:**
+1. Criado o template oficial `.specs/_template.md` com os campos `type`, `executor_context_id`, `validator_context_id`, `definition_of_done`, `qa_signoff` e `signed_by`.
+2. Atualizados `brain/MASTER_FLOW.md` e `brain/RULES.md` para formalizar que `type: standard` exige `executor_context_id != validator_context_id` antes de assinatura QA.
+3. Atualizado `.context/_scripts/harness_runner.py` para bloquear (`Exit 1`) specs `standard` com IDs ausentes/nulos/iguais, preservando compatibilidade das specs legadas sem `type`.
+**Implicação:** A assinatura de QA em sprint `standard` passa a exigir proveniência independente de contexto, reduzindo validação auto-referente.
+**Evidência Operacional:** Execução local validada com três cenários (IDs iguais = FAIL; IDs distintos = PASS; spec legado sem `type` = PASS).
+**Handoff:** @qa-validator -> @user | Estado: v2.6-lite aplicado | Próximo: Commit das mudanças.
 
 ## 📅 2026-04-22 21:10
 **Decisão/Bug:** 🧠 Salto Evolutivo: Governança por Evidência e Honestidade Técnica (Skills Upgrade).
@@ -395,6 +405,12 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-FAIL] Report | spec:wiki_level2
 - **Detalhe:** sprint_contract: Campo definition_of_done obrigatório
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
 
 ## [HARNESS-PASS] Report | spec:wiki_level2
 - **Detalhe:** All contracts valid
