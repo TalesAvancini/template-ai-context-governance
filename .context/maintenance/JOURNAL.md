@@ -1,13 +1,20 @@
 ---
 Criado em: 2026-04-10 20:50
-Ultima Atualizacao: 2026-04-14 11:50
+Ultima Atualizacao: 2026-04-22 21:10
 Status: Ativo
 ---
 
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
-## 📅 2026-04-21 19:16
+## 📅 2026-04-22 21:10
+**Decisão/Bug:** 🧠 Salto Evolutivo: Governança por Evidência e Honestidade Técnica (Skills Upgrade).
+**Solução:** 
+1. `hok-governor` (v1.2.0): Injetada a **Lei 8 (Espelhamento de Metadados)** para erradicar drifts narrativos de versão.
+2. `flash-harness` (v1.1.0): Injetado o **Gate de Evidência Operacional** e a **Regra Anti-Leniência**.
+**Implicação:** O framework agora proíbe retórica inflada ("atômico", "seguro") sem prova mecânica e exige visualização de logs/saídas para fechamento de tasks. O Antigravity Kit aprendeu com os erros de drift da release v2.5.1 e codificou a solução no seu "córtex central" (skills).
+**Handoff:** @vision-architect -> @user | Estado: Skills Hardened (v2.5.1 Ready) | Próximo: Novo Ciclo.
+
 **Decisão/Bug:** 🚨 Reforço Estrutural: Correção da Vulnerabilidade de Bypass do Linter (Fail-Closed).
 **Solução:** Alteramos o `harness_runner.py` de "Fail-Open" para "Fail-Closed". Antes, se não houvesse *spec*, o script dava 'skip' e liberava o commit. Agora, a ausência de uma Spec ativada na pasta `.specs/` aciona imediatamente `Exit 1` (BLOQUEIO). A física do projeto tornou-se inflexível quanto ao Contrato de Sprint.
 **Implicação:** Nenhum Agente (nem mesmo o Master) e nenhum Dev pode empurrar código à força bruta para o repositório sem assinar uma spec e colocar o YAML com `definition_of_done` e `qa_signoff: true`.
@@ -388,6 +395,9 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-FAIL] Report | spec:wiki_level2
 - **Detalhe:** sprint_contract: Campo definition_of_done obrigatório
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
 
 ## [HARNESS-PASS] Report | spec:wiki_level2
 - **Detalhe:** All contracts valid
