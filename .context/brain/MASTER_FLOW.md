@@ -73,12 +73,12 @@ Status: [Ativo | Arquivado | Depreciado]
 | Ato | Gatilho | Ferramenta/Script | Saída Esperada |
 |-----|---------|-------------------|----------------|
 | **1. [Semente]** | `INCEPTION.md` ativo + gaps | `npm run context:enrich` | `PRD.md` lastreado + `market/` populado |
-| **2. [Engenharia]** | Criação de `.specs/features/X/` | `qa_signoff: true` no frontmatter | Contrato de Sprint assinado |
+| **2. [Engenharia]** | Criação de `.specs/features/X/` | `qa_signoff: true` no frontmatter | Contrato assinado; se `type: standard`, validador em contexto distinto |
 | **3. [Ingestão]** | `RAW/` novo ou `WIKI/` modificado | `npm run context:ingest-guard` | Artigo validado + `wiki_log.md` |
 | **4. [Execução]** | `npm run context:harness` + `lint` | `harness_runner.py` + `lint_wiki.py` | Código validado + `STATE.md: ✅ PASSED` |
 | **5. [Rito]** | Merge ou >48h inativo | `npm run context:cleanup` | Spec arquivada + `JOURNAL.md` atualizado |
 
-> 🤖 [SYSTEM HOOK] IA: Este fluxo é imutável. Não pule o Ato 2. Não gere código sem `qa_signoff`. Toda destilação WIKI exige LINT-STRICT.
+> 🤖 [SYSTEM HOOK] IA: Este fluxo é imutável. Não pule o Ato 2. Não gere código sem `qa_signoff`. Em `type: standard`, `executor_context_id` e `validator_context_id` devem ser diferentes.
 
 ---
 

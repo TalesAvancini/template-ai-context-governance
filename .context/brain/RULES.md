@@ -41,8 +41,9 @@ Antes de gerar código de produção ou realizar refatorações, o Agente **DEVE
 ## 🤝 1.1 Regra de Contrato de Sprint (Research-First)
 1. `@spec-driver` gera `spec.md` com bloco YAML de `definition_of_done`.
 2. `@qa-validator` revisa critérios. Se válidos, seta `qa_signoff: true` e `signed_by: "@qa-validator"`.
-3. **Bloqueio:** Se `qa_signoff == false` ou `definition_of_done` estiver vazio, o Harness retorna `Exit 1`.
-4. Nenhuma geração de código ou merge é permitida antes da assinatura.
+3. **Regra v2.6-lite:** Se `type: standard`, o `validator_context_id` deve ser diferente do `executor_context_id` para que a assinatura seja valida.
+4. **Bloqueio:** Se `qa_signoff == false`, `definition_of_done` estiver vazio, ou (em `type: standard`) os IDs forem iguais/ausentes, o Harness retorna `Exit 1`.
+5. Nenhuma geração de código ou merge é permitida antes da assinatura.
 
 ## 🔄 1.2 Consistência de Versão (SSOT)
 1. `VERSION.md` é a única fonte da verdade para versão do framework.

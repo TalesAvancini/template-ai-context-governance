@@ -173,6 +173,41 @@ def check_sprint_contract(spec_path: Path):
     if not has_signed_by:
         return False, "Campo signed_by inválido ou ausente"
 
+    # Regra v2.6-lite: segregação de contexto para specs standard
+    type_match = re.search(r'^\s*type:\s*["\']?(\w+)["\']?\s*$', contract, re.I | re.M)
+    spec_type = type_match.group(1).strip().lower() if type_match else None
+
+    if spec_type == "standard":
+        exec_match = re.search(
+            r"^\s*executor_context_id:\s*(.+?)\s*$", contract, re.I | re.M
+        )
+        valid_match = re.search(
+            r"^\s*validator_context_id:\s*(.+?)\s*$", contract, re.I | re.M
+        )
+
+        executor_id = (
+            exec_match.group(1).strip().strip('"').strip("'") if exec_match else ""
+        )
+        validator_id = (
+            valid_match.group(1).strip().strip('"').strip("'") if valid_match else ""
+        )
+
+        missing_tokens = {"", "null", "none"}
+        if (
+            executor_id.lower() in missing_tokens
+            or validator_id.lower() in missing_tokens
+        ):
+            return (
+                False,
+                "Spec standard requer executor_context_id e validator_context_id preenchidos",
+            )
+
+        if executor_id == validator_id:
+            return (
+                False,
+                "Spec standard requer segregação: executor_context_id deve ser diferente de validator_context_id",
+            )
+
     return True, "Sprint contract validado e assinado"
 
 
