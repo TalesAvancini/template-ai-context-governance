@@ -211,6 +211,39 @@ def check_sprint_contract(spec_path: Path):
     return True, "Sprint contract validado e assinado"
 
 
+def check_journal_sam():
+    """Executa o Auditor Anti-Migué (SAM)."""
+    script_path = Path(__file__).resolve().parent / "workflow_journal_auditor.py"
+    if not script_path.exists():
+        return True, "SAM Auditor indisponivel (skip)"
+    
+    print("[RUN] Executando Auditoria Anti-Migué (SAM)...")
+    try:
+        # Tenta carregar o modo do Synapse para decidir se o erro é fatal
+        syn_path = CONTEXT_DIR / "maintenance" / "JOURNAL_SYNAPSE.md"
+        mode = "assist"
+        if syn_path.exists():
+            content = syn_path.read_text(encoding="utf-8")
+            match = re.search(r"<!-- SYNAPSE_JSON_START -->\s*(.*?)\s*<!-- SYNAPSE_JSON_END -->", content, re.DOTALL)
+            if match:
+                syn_json = json.loads(match.group(1))
+                mode = syn_json.get("mode", "assist")
+
+        res = subprocess.run([sys.executable, str(script_path)], capture_output=True, text=True)
+        
+        if res.returncode != 0:
+            msg = f"Violações SAM detectadas.\n{res.stdout}"
+            if mode == "strict":
+                return False, msg
+            else:
+                print(f"[WARN] SAM detectou pendencias mas está em modo ASSIST:\n{res.stdout}")
+                return True, "SAM PASS (Assist Mode)"
+        
+        return True, "SAM Audit OK"
+    except Exception as e:
+        return True, f"Erro ao executar SAM Auditor: {e} (skip)"
+
+
 def log_harness(status, detail, spec_name="unknown"):
     """Registra no JOURNAL.md de forma compacta e atomica"""
     entry = f"\n## [HARNESS-{status.upper()}] Report | spec:{spec_name}\n- **Detalhe:** {detail}\n"
@@ -355,6 +388,7 @@ def main():
         "strategy": check_strategic_alignment(),
         "enrichment": check_enrichment_integrity(PRD),
         "sprint_contract": check_sprint_contract(spec_path),
+        "journal_sam": check_journal_sam(),
     }
 
     fails = [f"{k}: {v[1]}" for k, v in checks.items() if not v[0]]

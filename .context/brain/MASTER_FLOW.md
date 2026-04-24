@@ -1,6 +1,6 @@
 ---
 Criado em: 2026-04-10 23:28
-Ultima Atualizacao: 2026-04-23 11:39
+Ultima Atualizacao: 2026-04-24 13:51
 Status: Ativo
 ---
 
@@ -48,6 +48,7 @@ Status: [Ativo | Arquivado | Depreciado]
     │
     ├── 🛠️ maintenance/                 # CAMADA DE MANUTENÇÃO (The Housekeeper)
     │   ├── JOURNAL.md                 # Log vivo (Máx ~50k char - Memória Curta)
+    │   ├── JOURNAL_SYNAPSE.md         # Matriz de Gatilhos Anti-Migué (SAM)
     │   ├── TECHNICAL_REQUIREMENTS.md  # Stack, libs e infra (Inventário)
     │   ├── rebuild_guide.md           # Guia de setup e infra (Pós-Mortem Vivo)
     │   ├── schema.sql                 # Snapshot do Banco de Dados (Verdade Real)
@@ -65,7 +66,8 @@ Status: [Ativo | Arquivado | Depreciado]
         ├── enrich_context.py          # Tradutor cognitivo e Gap Check
         ├── purge_journal.py           # Gerenciador de memória (Purge)
         ├── cleanup_specs.py           # Gerenciador de efemeridade (.specs)
-        └── sync_project.py            # Sincronizador de requisitos
+        ├── sync_project.py            # Sincronizador de requisitos
+        └── workflow_journal_auditor.py # Auditor do Sistema Anti-Migué (SAM)
 
 ---
 
@@ -75,10 +77,10 @@ Status: [Ativo | Arquivado | Depreciado]
 | **1. [Semente]** | `INCEPTION.md` ativo + gaps | `npm run context:enrich` | `PRD.md` lastreado + `market/` populado |
 | **2. [Engenharia]** | Criação de `.specs/features/X/` | `qa_signoff: true` no frontmatter | Contrato assinado; se `type: standard`, validador em contexto distinto |
 | **3. [Ingestão]** | `RAW/` novo ou `WIKI/` modificado | `npm run context:ingest-guard` | Artigo validado + `wiki_log.md` |
-| **4. [Execução]** | `npm run context:harness` + `lint` | `harness_runner.py` + `lint_wiki.py` | Código validado + `STATE.md: ✅ PASSED` |
+| **4. [Execução]** | `npm run context:harness` + SAM | `harness_runner.py` + `SAM Auditor` | Código validado + `STATE.md: ✅ PASSED` |
 | **5. [Rito]** | Merge ou >48h inativo | `npm run context:cleanup` | Spec arquivada + `JOURNAL.md` atualizado |
 
-> 🤖 [SYSTEM HOOK] IA: Este fluxo é imutável. Não pule o Ato 2. Não gere código sem `qa_signoff`. Em `type: standard`, `executor_context_id` e `validator_context_id` devem ser diferentes.
+> 🤖 [SYSTEM HOOK] IA: Este fluxo é imutável. Não pule o Ato 2. Não gere código sem `qa_signoff`. Em `type: standard`, `executor_context_id` e `validator_context_id` devem ser diferentes. Toda entrada no Journal deve passar pelo Reality Check (SAM).
 
 ---
 

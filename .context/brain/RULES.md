@@ -1,6 +1,6 @@
 ---
 Criado em: 2026-04-10 20:50
-Última Atualização: 2026-04-23 11:39
+Última Atualização: 2026-04-24 13:51
 Status: Ativo
 ---
 
@@ -61,9 +61,10 @@ Para combater o *Context Anxiety* e alucinações por inchaço:
 
 ## 🧠 3. Protocolo de Manutenção do Contexto
 A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é obrigatória.
-- **`maintenance/JOURNAL.md`:** Apenas decisões de arquitetura, resoluções de bugs complexos e mudanças de lógica. Proibido logar erros triviais. Ao atingir ~600 linhas ou 50k chars → acionar `_scripts/purge_journal.py`.
-- **`maintenance/TECHNICAL_REQUIREMENTS.md`:** Atualizar sempre que houver mudança em `package.json`, alteração de Schema ou integração de novas APIs.
-- **`maintenance/rebuild_guide.md`:** Atualizar com hacks de ambiente local, CI/CD ou passos manuais de deploy.
+- **`journal_mode: strict`**: Commits são bloqueados se a matriz `JOURNAL_SYNAPSE.md` não for cumprida (Git Diff vs Journal).
+- **`maintenance/JOURNAL.md`**: Apenas decisões de arquitetura, resoluções de bugs complexos e mudanças de lógica. Proibido logar erros triviais. Ao atingir ~600 linhas ou 50k chars → acionar `_scripts/purge_journal.py`.
+- **`maintenance/TECHNICAL_REQUIREMENTS.md`**: Atualizar sempre que houver mudança em `package.json`, alteração de Schema ou integração de novas APIs.
+- **`maintenance/rebuild_guide.md`**: Atualizar com hacks de ambiente local, CI/CD ou passos manuais de deploy.
 - **`.specs/` (Workshop Efêmero):** Specs são rascunhos de execução. Pós-merge ou >48h inativo → arquivar em `_archive_context/specs/`. Decisões técnicas devem migrar para o `JOURNAL.md` antes da limpeza.
 
 ---
@@ -82,6 +83,7 @@ A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é o
   `🔄 Handoff: @[role-atual] → @[role-próxima] | Estado: [resumo técnico] | Próximo: [ação]`
 - **Context Gate (Pré-Código):** Validar antes de gerar:  
   `[ ] PRD ativo` | `[ ] schema contém estruturas` | `[ ] JOURNAL < 550 linhas` | `[ ] zero secrets hardcoded`
+- **Sistema Anti-Migué (SAM):** Toda entrada no Journal deve seguir o template de narrativa + checklist de propagação + contrato de validação com IDs segregados.
 
 ---
 
@@ -115,7 +117,10 @@ O H.O.K utiliza a **Estratificação de Densidade** para evitar o *Context Anxie
     - **LINT**: `npm run context:lint-strict` bloqueia artigos sem fonte, takeaways ou estrutura.
     - **LOG**: Toda transação de ingestão é registrada em `market/wiki_log.md` para rastreabilidade de linhagem.
 4.  **Consulta**: O Oráculo prioriza o `market/WIKI/` via roteamento determinístico (`_index.md`).
+
 ## 📊 10. Dashboard Health Sync
 - Antes de processar features complexas ou abrir Specs Atômicas, verifique o `.context/monitoring/CONTEXT_HEALTH.md` para assegurar que a janela de tokens e a saúde do Journal não exigem repouso ou manutenção prévia.
+
+---
 
 > **Nota Final para a IA:** Você é a extensão cognitiva do desenvolvedor. Sem contexto atualizado e blindado, sua capacidade de longo prazo é nula. Seu compromisso é com a verdade documentada.

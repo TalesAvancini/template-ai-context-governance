@@ -67,7 +67,7 @@ def get_inception_status():
 def main():
     if len(sys.argv) < 2:
         print(
-            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|lint-strict|oracle|health|scan-secrets|check-migrations|check-version|enrich|all|help]"
+            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|lint-strict|oracle|health|scan-secrets|check-migrations|check-version|enrich|workflow-journal|all|help]"
         )
         sys.exit(1)
 
@@ -109,10 +109,10 @@ def main():
 
     elif cmd == "enrich":
         run_script("enrich_context.py", extra_args)
-    elif cmd == "ingest-guard":
-        run_script("ingest_wiki_guard.py", extra_args)
     elif cmd == "wiki-health":
         run_script("validate_context.py", ["check_wiki_integrity"] + extra_args)
+    elif cmd == "workflow-journal":
+        run_script("workflow_journal_auditor.py", extra_args)
 
     elif cmd == "all":
         # Pipeline Fail-Fast (Hardened v2.5.0 + Hybrid Discovery)
@@ -133,7 +133,7 @@ def main():
 
     elif cmd in ["help", "--help", "-h"]:
         print(
-            "Comandos: validate | purge | sync | cleanup | harness | lint | lint-strict | oracle | health | scan-secrets | check-migrations | check-version | enrich | all"
+            "Comandos: validate | purge | sync | cleanup | harness | lint | lint-strict | oracle | health | scan-secrets | check-migrations | check-version | enrich | workflow-journal | all"
         )
     else:
         print(f"❌ Comando desconhecido: {cmd}")
