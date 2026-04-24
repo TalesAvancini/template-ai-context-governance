@@ -23,6 +23,7 @@ except ImportError:
 
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
 JOURNAL = CONTEXT_DIR / "maintenance" / "JOURNAL.md"
+HARNESS_LOG = CONTEXT_DIR / "maintenance" / "HARNESS_LOG.md"
 SCHEMA = CONTEXT_DIR / "maintenance" / "schema.sql"
 HARNESS_REG = CONTEXT_DIR / "brain" / "HARNESS_REGISTRY.md"
 PRD = CONTEXT_DIR / "brain" / "PRD.md"
@@ -216,7 +217,7 @@ def check_journal_sam():
     script_path = Path(__file__).resolve().parent / "workflow_journal_auditor.py"
     if not script_path.exists():
         return True, "SAM Auditor indisponivel (skip)"
-    
+
     print("[RUN] Executando Auditoria Anti-Migué (SAM)...")
     try:
         # Tenta carregar o modo do Synapse para decidir se o erro é fatal
@@ -224,21 +225,32 @@ def check_journal_sam():
         mode = "assist"
         if syn_path.exists():
             content = syn_path.read_text(encoding="utf-8")
-            match = re.search(r"<!-- SYNAPSE_JSON_START -->\s*(.*?)\s*<!-- SYNAPSE_JSON_END -->", content, re.DOTALL)
+            match = re.search(
+                r"<!-- SYNAPSE_JSON_START -->\s*(.*?)\s*<!-- SYNAPSE_JSON_END -->",
+                content,
+                re.DOTALL,
+            )
             if match:
                 syn_json = json.loads(match.group(1))
                 mode = syn_json.get("mode", "assist")
 
-        res = subprocess.run([sys.executable, str(script_path)], capture_output=True, text=True, encoding='utf-8')
-        
+        res = subprocess.run(
+            [sys.executable, str(script_path)],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+        )
+
         if res.returncode != 0:
             msg = f"Violações SAM detectadas.\n{res.stdout}"
             if mode == "strict":
                 return False, msg
             else:
-                print(f"[WARN] SAM detectou pendencias mas está em modo ASSIST:\n{res.stdout}")
+                print(
+                    f"[WARN] SAM detectou pendencias mas está em modo ASSIST:\n{res.stdout}"
+                )
                 return True, "SAM PASS (Assist Mode)"
-        
+
         return True, "SAM Audit OK"
     except Exception as e:
         msg = f"Erro crítico ao executar SAM Auditor: {e}"
@@ -249,17 +261,24 @@ def check_journal_sam():
 
 
 def log_harness(status, detail, spec_name="unknown"):
-    """Registra no JOURNAL.md de forma compacta e atomica"""
+    """Registra no HARNESS_LOG.md de forma compacta e atomica"""
     entry = f"\n## [HARNESS-{status.upper()}] Report | spec:{spec_name}\n- **Detalhe:** {detail}\n"
     try:
-        tmp = JOURNAL.with_suffix(".tmp")
+        tmp = HARNESS_LOG.with_suffix(".tmp")
+        header = (
+            "---\n"
+            "Criado em: 2026-04-24 15:20\n"
+            "Ultima Atualizacao: 2026-04-24 15:20\n"
+            "Status: Ativo\n"
+            "---\n\n"
+            "# HARNESS_LOG.md\n"
+            "> Log tecnico automatico do Harness (PASS/FAIL).\n"
+        )
         content = (
-            JOURNAL.read_text(encoding="utf-8")
-            if JOURNAL.exists()
-            else "# JOURNAL.md\n"
+            HARNESS_LOG.read_text(encoding="utf-8") if HARNESS_LOG.exists() else header
         )
         tmp.write_text(content + entry, encoding="utf-8")
-        tmp.replace(JOURNAL)
+        tmp.replace(HARNESS_LOG)
     except Exception as e:
         print(f"[WARN] Falha ao logar harness: {e}")
 

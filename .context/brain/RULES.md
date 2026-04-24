@@ -63,6 +63,7 @@ Para combater o *Context Anxiety* e alucinações por inchaço:
 A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é obrigatória.
 - **`journal_mode: strict`**: Commits são bloqueados se a matriz `JOURNAL_SYNAPSE.md` não for cumprida (Git Diff vs Journal).
 - **`maintenance/JOURNAL.md`**: Apenas decisões de arquitetura, resoluções de bugs complexos e mudanças de lógica. Proibido logar erros triviais. Ao atingir ~600 linhas ou 50k chars → acionar `_scripts/purge_journal.py`.
+- **`maintenance/HARNESS_LOG.md`**: Log técnico automático do Harness (`[HARNESS-PASS]`/`[HARNESS-FAIL]`). Proibido gravar esses eventos no `JOURNAL.md`.
 - **`maintenance/TECHNICAL_REQUIREMENTS.md`**: Atualizar sempre que houver mudança em `package.json`, alteração de Schema ou integração de novas APIs.
 - **`maintenance/rebuild_guide.md`**: Atualizar com hacks de ambiente local, CI/CD ou passos manuais de deploy.
 - **`.specs/` (Workshop Efêmero):** Specs são rascunhos de execução. Pós-merge ou >48h inativo → arquivar em `_archive_context/specs/`. Decisões técnicas devem migrar para o `JOURNAL.md` antes da limpeza.

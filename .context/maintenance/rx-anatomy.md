@@ -19,7 +19,7 @@ Status: Ativo
 ├── .context/               # 🏛️ CAMADA DE GOVERNANÇA (Cérebro/Memória)
 │   ├── brain/              # Regras, PRD e Fronteiras (VISION/INCEPTION)
 │   ├── market/             # Camada Estratégica (SSOT, Limits, Compliance)
-│   ├── maintenance/        # Logs (JOURNAL), Schema e Inventários
+│   ├── maintenance/        # Logs (JOURNAL/HARNESS_LOG), Schema e Inventários
 │   ├── monitoring/         # Dashboard de Saúde (CONTEXT_HEALTH.md)
 │   └── _scripts/           # Motor de Validação em Python (Oráculo, Harness)
 ├── .specs/                  # 🧪 BANCADA DE EXECUÇÃO (Workshop Efêmero)
