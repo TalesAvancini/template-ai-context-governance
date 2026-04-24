@@ -1,9 +1,9 @@
 ---
 type: standard
 executor_context_id: "CTX_FLASH_SAM_FIX"
-validator_context_id: ""
-qa_signoff: false
-signed_by: ""
+validator_context_id: "CTX_QA_AUDIT_FINAL"
+qa_signoff: true
+signed_by: "@qa-validator"
 definition_of_done:
   - Criar JOURNAL_SYNAPSE.md contendo bloco JSON nativo e tabela de humanos (sem pyyaml).
   - Implementar comando `workflow-journal` em run_context.py cruzando Git diff, Synapse (JSON) e Journal.

@@ -201,7 +201,15 @@ Ao gerar o PRD.md, inclua EXATAMENTE esta seção no final:
 - Nunca hardcode; usar [PLACEHOLDER] se depender de env externo
 📤 Saída Esperada:
 1. Estrutura .specs/ criada com o_template padronizado do bloco YAML definition_of_done.
-2. spec.md com passos atômicos, onde o contrato e critérios de verificação residem na root (Frontmatter).
+2. spec.md com passos atômicos e o seguinte frontmatter obrigatório:
+   ```yaml
+   type: [standard|hotfix]
+   executor_context_id: ""
+   validator_context_id: ""
+   qa_signoff: false
+   signed_by: ""
+   definition_of_done: [...]
+   ```
 3. STATE.md: draft → aguardando qa_signoff.
 ```
 💡 *Insight IA: Este prompt transforma intenção em plano executável. A spec é o "compilador" entre PRD e código. Mantenha-a enxuta e verificável.*
