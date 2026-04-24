@@ -482,3 +482,29 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 
 ## [HARNESS-PASS] Report | spec:wiki_level2
 - **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## 📅 2026-04-23 22:20
+**Decisão/Bug:** 📚 Expansão Massiva da Wiki & Governança Epistemológica (Harness Triad).
+**Solução:** 
+1. Ingestão de três novos artigos core na Wiki: `Maintainability`, `Architecture` e `Behaviour` Harnesses, alinhados com a release **v2.5.2**.
+2. Documentação do padrão `Ralph Wiggum Loop` para garantir execução atômica e combate ao *Context Rot*.
+3. Criação do RAW Manifesto para servir como fonte SSOT de longa duração.
+4. Registro do plano `JOURNAL_SYNAPSE.md` para automatizar a reatividade do contexto via logs.
+**Implicação:** O framework agora possui uma base teórica sólida local, reduzindo a dependência de "hallucinations" e garantindo que o Agente Executor e o Validador operem sob as mesmas leis físicas de engenharia.
+**Evidência Operacional:** `npm run context:all` resultou em `Exit 0` após correção de cabeçalhos via `ingest_wiki_guard.py`.
+**Handoff:** @antigravity-agent -> @user | Estado: Wiki v2.5.2 Completa | Próximo: KBuM (Reset) na próxima sessão.

@@ -2,12 +2,12 @@
 
 ---
 schema_version: 1
-generated_at: 2026-04-22T00:13:52.811904+00:00
+generated_at: 2026-04-23T18:33:30.791110+00:00
 root: template_inicío_de_projeto
 mode: full
 profile: ai-default
-file_count: 83
-byte_count: 260598
+file_count: 74
+byte_count: 230293
 ignored_dirs:
   - .cache
   - .cursor
@@ -24,7 +24,9 @@ ignored_dirs:
   - .vercel
   - .vite
   - .vscode
+  - RAW
   - __pycache__
+  - _archive_context
   - bin
   - build
   - captura_projeto
@@ -33,6 +35,7 @@ ignored_dirs:
   - node_modules
   - obj
   - out
+  - planos
   - target
   - venv
 sensitive_rules:
@@ -49,6 +52,7 @@ sensitive_rules:
 
 ## INDEX_BY_DOMAIN
 - `config`:
+  - `.context/maintenance/version_targets.json` -> [file_51ed93c9d8ab](#file_51ed93c9d8ab)
   - `.github/workflows/context-health.yml` -> [file_e477c4c5a96c](#file_e477c4c5a96c)
   - `package.json` -> [file_7030d0b2f71b](#file_7030d0b2f71b)
 - `db`:
@@ -58,6 +62,8 @@ sensitive_rules:
   - ` .specs/features/docs_resenha/spec.md` -> [file_736dc30bc94f](#file_736dc30bc94f)
   - ` .specs/features/hardening_v2.5/STATE.md` -> [file_5f4ef6860006](#file_5f4ef6860006)
   - ` .specs/features/hardening_v2.5/spec.md` -> [file_f941f64c38fb](#file_f941f64c38fb)
+  - ` .specs/features/sync_maintenance/STATE.md` -> [file_39347a56c033](#file_39347a56c033)
+  - ` .specs/features/sync_maintenance/spec.md` -> [file_9c99344c7962](#file_9c99344c7962)
   - `.context/brain/AGENT_REGISTRY.md` -> [file_e7c17acb71ff](#file_e7c17acb71ff)
   - `.context/brain/HARNESS_REGISTRY.md` -> [file_4b29e274836e](#file_4b29e274836e)
   - `.context/brain/INCEPTION.md` -> [file_de9ef20db2be](#file_de9ef20db2be)
@@ -73,55 +79,43 @@ sensitive_rules:
   - `.context/maintenance/JOURNAL.md` -> [file_019509328844](#file_019509328844)
   - `.context/maintenance/TECHNICAL_REQUIREMENTS.md` -> [file_d069d4f2ebef](#file_d069d4f2ebef)
   - `.context/maintenance/TESTS.md` -> [file_0858a02cf53f](#file_0858a02cf53f)
-  - `.context/maintenance/_archive_context/prds/PLAN_SPRINT_CONTRACT.md` -> [file_a5acb6406832](#file_a5acb6406832)
-  - `.context/maintenance/_archive_context/raw/stripe_docs.md` -> [file_eaebfc593089](#file_eaebfc593089)
-  - `.context/maintenance/_archive_context/raw/template_inbox.md` -> [file_618e9f7de1e8](#file_618e9f7de1e8)
-  - `.context/maintenance/_archive_context/specs/_template_20260421_204026/spec.md` -> [file_47b9436c72d4](#file_47b9436c72d4)
-  - `.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/STATE.md` -> [file_5f4a4ae13ef8](#file_5f4a4ae13ef8)
-  - `.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/spec.md` -> [file_64bc4e458b6c](#file_64bc4e458b6c)
   - `.context/maintenance/rebuild_guide.md` -> [file_a5c71962029a](#file_a5c71962029a)
   - `.context/maintenance/rx-anatomy.md` -> [file_54a6a553d34b](#file_54a6a553d34b)
   - `.context/maintenance/rx-biology.md` -> [file_ca8da4f87431](#file_ca8da4f87431)
   - `.context/market/MARKET_INBOX.md` -> [file_81ef387da7b7](#file_81ef387da7b7)
   - `.context/market/SSOT_MAP.md` -> [file_65a089176b85](#file_65a089176b85)
+  - `.context/market/WIKI/_index.md` -> [file_578d56cac1a4](#file_578d56cac1a4)
   - `.context/market/WIKI/_template.md` -> [file_491684f3a96e](#file_491684f3a96e)
-  - `.context/market/WIKI/conceito_teste.md` -> [file_fae1276881db](#file_fae1276881db)
   - `.context/market/economics.md` -> [file_b5d38697335e](#file_b5d38697335e)
+  - `.context/market/wiki_log.md` -> [file_c255058b56fe](#file_c255058b56fe)
   - `.context/monitoring/CONTEXT_HEALTH.md` -> [file_068a21d64bec](#file_068a21d64bec)
   - `.context/monitoring/EXECUTION_BUFFER.md` -> [file_c6d44cc7da35](#file_c6d44cc7da35)
-  - `.context/planos/PHASE_3_KARPATHY_WIKI.md` -> [file_e824b208c3a2](#file_e824b208c3a2)
   - `.context/specs/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_37fb63b0fac5](#file_37fb63b0fac5)
   - `.context/specs/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_0511c79bd7d2](#file_0511c79bd7d2)
+  - `.specs/_template.md` -> [file_b838611f038c](#file_b838611f038c)
   - `.specs/features/harness_fail_closed/STATE.md` -> [file_d4f64fc3b549](#file_d4f64fc3b549)
   - `.specs/features/harness_fail_closed/spec.md` -> [file_a32e3bf74e3d](#file_a32e3bf74e3d)
   - `.specs/features/meta-inception/STATE.md` -> [file_238a0e1da225](#file_238a0e1da225)
   - `.specs/features/meta-inception/spec.md` -> [file_9801af51c558](#file_9801af51c558)
+  - `.specs/features/wiki_level2/STATE.md` -> [file_638d6695a3f1](#file_638d6695a3f1)
+  - `.specs/features/wiki_level2/spec.md` -> [file_86778e912e18](#file_86778e912e18)
+  - `.specs/features/wiki_level2/tasks.md` -> [file_fafce66dc671](#file_fafce66dc671)
   - `GUIA_ESTABILIZACAO_NOTEBOOKLM.md` -> [file_95dabcdf3543](#file_95dabcdf3543)
   - `README.md` -> [file_8ec9a00bfd09](#file_8ec9a00bfd09)
   - `README_CONTEXT.md` -> [file_4efb6293109d](#file_4efb6293109d)
   - `TEMPLATE_MIGRATION.md` -> [file_19e76e009f38](#file_19e76e009f38)
   - `VERSION.md` -> [file_f6f7100f063b](#file_f6f7100f063b)
   - `_modoLight/Modo_Light.md` -> [file_1f98938d3cd9](#file_1f98938d3cd9)
-  - `planos/RESEARCH_NOTE_SPRINT_CONTRACTS.md` -> [file_7c2f50daa3f4](#file_7c2f50daa3f4)
-  - `planos/_arquivo_planos/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_80252595b07f](#file_80252595b07f)
-  - `planos/_arquivo_planos/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_482a16303af0](#file_482a16303af0)
-  - `planos/_arquivo_planos/implementation_plan.md` -> [file_e7f1855928ad](#file_e7f1855928ad)
-  - `planos/_arquivo_planos/master_plan.md` -> [file_2d826d235b59](#file_2d826d235b59)
-  - `planos/_arquivo_planos/multi_agent_plan.md` -> [file_9efc22dd3673](#file_9efc22dd3673)
-  - `planos/_arquivo_planos/plan_hok_advanced_security_and_db.md` -> [file_5b368adbea18](#file_5b368adbea18)
-  - `planos/_arquivo_planos/plan_inception_final_v2_4.md` -> [file_4ebe74105a57](#file_4ebe74105a57)
-  - `planos/_arquivo_planos/plan_inception_market_v2_4.md` -> [file_46be75d9b52e](#file_46be75d9b52e)
-  - `planos/_arquivo_planos/roadmap_reactive_hok_v2_v3.md` -> [file_cf4807ec6c6c](#file_cf4807ec6c6c)
-  - `planos/_arquivo_planos/walkthrough_hok_triad.md` -> [file_6825d8758f8d](#file_6825d8758f8d)
-  - `planos/template_base_v2_3_1.md` -> [file_f23e47398730](#file_f23e47398730)
-  - `resenha.md` -> [file_013dd7887d0e](#file_013dd7887d0e)
 - `source`:
   - `.context/_scripts/_tz_utils.py` -> [file_dbef1acce0d4](#file_dbef1acce0d4)
+  - `.context/_scripts/_wiki_log_utils.py` -> [file_9ee5d49278ad](#file_9ee5d49278ad)
+  - `.context/_scripts/check_version_consistency.py` -> [file_4ffe1a34765a](#file_4ffe1a34765a)
   - `.context/_scripts/cleanup_specs.py` -> [file_82cd6bde54ff](#file_82cd6bde54ff)
   - `.context/_scripts/context_oracle.py` -> [file_10081abf87e1](#file_10081abf87e1)
   - `.context/_scripts/enrich_context.py` -> [file_e94b4e40315c](#file_e94b4e40315c)
   - `.context/_scripts/harness_runner.py` -> [file_1edef35c2f56](#file_1edef35c2f56)
   - `.context/_scripts/health_sync.py` -> [file_a642d240b9ab](#file_a642d240b9ab)
+  - `.context/_scripts/ingest_wiki_guard.py` -> [file_0731dcfd7873](#file_0731dcfd7873)
   - `.context/_scripts/lint_wiki.py` -> [file_ab41b07fb3fb](#file_ab41b07fb3fb)
   - `.context/_scripts/migration_registry.py` -> [file_d65b48a9d56c](#file_d65b48a9d56c)
   - `.context/_scripts/purge_journal.py` -> [file_024b28a37d29](#file_024b28a37d29)
@@ -141,12 +135,17 @@ sensitive_rules:
 - ` .specs/features/docs_resenha/spec.md` -> [file_736dc30bc94f](#file_736dc30bc94f)
 - ` .specs/features/hardening_v2.5/STATE.md` -> [file_5f4ef6860006](#file_5f4ef6860006)
 - ` .specs/features/hardening_v2.5/spec.md` -> [file_f941f64c38fb](#file_f941f64c38fb)
+- ` .specs/features/sync_maintenance/STATE.md` -> [file_39347a56c033](#file_39347a56c033)
+- ` .specs/features/sync_maintenance/spec.md` -> [file_9c99344c7962](#file_9c99344c7962)
 - `.context/_scripts/_tz_utils.py` -> [file_dbef1acce0d4](#file_dbef1acce0d4)
+- `.context/_scripts/_wiki_log_utils.py` -> [file_9ee5d49278ad](#file_9ee5d49278ad)
+- `.context/_scripts/check_version_consistency.py` -> [file_4ffe1a34765a](#file_4ffe1a34765a)
 - `.context/_scripts/cleanup_specs.py` -> [file_82cd6bde54ff](#file_82cd6bde54ff)
 - `.context/_scripts/context_oracle.py` -> [file_10081abf87e1](#file_10081abf87e1)
 - `.context/_scripts/enrich_context.py` -> [file_e94b4e40315c](#file_e94b4e40315c)
 - `.context/_scripts/harness_runner.py` -> [file_1edef35c2f56](#file_1edef35c2f56)
 - `.context/_scripts/health_sync.py` -> [file_a642d240b9ab](#file_a642d240b9ab)
+- `.context/_scripts/ingest_wiki_guard.py` -> [file_0731dcfd7873](#file_0731dcfd7873)
 - `.context/_scripts/lint_wiki.py` -> [file_ab41b07fb3fb](#file_ab41b07fb3fb)
 - `.context/_scripts/migration_registry.py` -> [file_d65b48a9d56c](#file_d65b48a9d56c)
 - `.context/_scripts/purge_journal.py` -> [file_024b28a37d29](#file_024b28a37d29)
@@ -168,33 +167,32 @@ sensitive_rules:
 - `.context/maintenance/JOURNAL.md` -> [file_019509328844](#file_019509328844)
 - `.context/maintenance/TECHNICAL_REQUIREMENTS.md` -> [file_d069d4f2ebef](#file_d069d4f2ebef)
 - `.context/maintenance/TESTS.md` -> [file_0858a02cf53f](#file_0858a02cf53f)
-- `.context/maintenance/_archive_context/prds/PLAN_SPRINT_CONTRACT.md` -> [file_a5acb6406832](#file_a5acb6406832)
-- `.context/maintenance/_archive_context/raw/stripe_docs.md` -> [file_eaebfc593089](#file_eaebfc593089)
-- `.context/maintenance/_archive_context/raw/template_inbox.md` -> [file_618e9f7de1e8](#file_618e9f7de1e8)
-- `.context/maintenance/_archive_context/specs/_template_20260421_204026/spec.md` -> [file_47b9436c72d4](#file_47b9436c72d4)
-- `.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/STATE.md` -> [file_5f4a4ae13ef8](#file_5f4a4ae13ef8)
-- `.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/spec.md` -> [file_64bc4e458b6c](#file_64bc4e458b6c)
 - `.context/maintenance/migrations/001_init.sql` -> [file_3707c3aa3239](#file_3707c3aa3239)
 - `.context/maintenance/rebuild_guide.md` -> [file_a5c71962029a](#file_a5c71962029a)
 - `.context/maintenance/rx-anatomy.md` -> [file_54a6a553d34b](#file_54a6a553d34b)
 - `.context/maintenance/rx-biology.md` -> [file_ca8da4f87431](#file_ca8da4f87431)
 - `.context/maintenance/schema.sql` -> [file_91d5627a725e](#file_91d5627a725e)
+- `.context/maintenance/version_targets.json` -> [file_51ed93c9d8ab](#file_51ed93c9d8ab)
 - `.context/market/MARKET_INBOX.md` -> [file_81ef387da7b7](#file_81ef387da7b7)
 - `.context/market/SSOT_MAP.md` -> [file_65a089176b85](#file_65a089176b85)
+- `.context/market/WIKI/_index.md` -> [file_578d56cac1a4](#file_578d56cac1a4)
 - `.context/market/WIKI/_template.md` -> [file_491684f3a96e](#file_491684f3a96e)
-- `.context/market/WIKI/conceito_teste.md` -> [file_fae1276881db](#file_fae1276881db)
 - `.context/market/economics.md` -> [file_b5d38697335e](#file_b5d38697335e)
+- `.context/market/wiki_log.md` -> [file_c255058b56fe](#file_c255058b56fe)
 - `.context/monitoring/CONTEXT_HEALTH.md` -> [file_068a21d64bec](#file_068a21d64bec)
 - `.context/monitoring/EXECUTION_BUFFER.md` -> [file_c6d44cc7da35](#file_c6d44cc7da35)
-- `.context/planos/PHASE_3_KARPATHY_WIKI.md` -> [file_e824b208c3a2](#file_e824b208c3a2)
 - `.context/specs/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_37fb63b0fac5](#file_37fb63b0fac5)
 - `.context/specs/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_0511c79bd7d2](#file_0511c79bd7d2)
 - `.github/workflows/context-health.yml` -> [file_e477c4c5a96c](#file_e477c4c5a96c)
 - `.husky/_/husky.sh` -> [file_3adfd36c1559](#file_3adfd36c1559)
+- `.specs/_template.md` -> [file_b838611f038c](#file_b838611f038c)
 - `.specs/features/harness_fail_closed/STATE.md` -> [file_d4f64fc3b549](#file_d4f64fc3b549)
 - `.specs/features/harness_fail_closed/spec.md` -> [file_a32e3bf74e3d](#file_a32e3bf74e3d)
 - `.specs/features/meta-inception/STATE.md` -> [file_238a0e1da225](#file_238a0e1da225)
 - `.specs/features/meta-inception/spec.md` -> [file_9801af51c558](#file_9801af51c558)
+- `.specs/features/wiki_level2/STATE.md` -> [file_638d6695a3f1](#file_638d6695a3f1)
+- `.specs/features/wiki_level2/spec.md` -> [file_86778e912e18](#file_86778e912e18)
+- `.specs/features/wiki_level2/tasks.md` -> [file_fafce66dc671](#file_fafce66dc671)
 - `GUIA_ESTABILIZACAO_NOTEBOOKLM.md` -> [file_95dabcdf3543](#file_95dabcdf3543)
 - `README.md` -> [file_8ec9a00bfd09](#file_8ec9a00bfd09)
 - `README_CONTEXT.md` -> [file_4efb6293109d](#file_4efb6293109d)
@@ -204,26 +202,13 @@ sensitive_rules:
 - `captura_projeto.py` -> [file_c3916196f58f](#file_c3916196f58f)
 - `init_ai_project.sh` -> [file_c59135753d26](#file_c59135753d26)
 - `package.json` -> [file_7030d0b2f71b](#file_7030d0b2f71b)
-- `planos/RESEARCH_NOTE_SPRINT_CONTRACTS.md` -> [file_7c2f50daa3f4](#file_7c2f50daa3f4)
-- `planos/_arquivo_planos/DIRECTIVA_V2.4.1_HARDENED.md` -> [file_80252595b07f](#file_80252595b07f)
-- `planos/_arquivo_planos/PLAN_SPEC_ENRICHER_V2.4.1.md` -> [file_482a16303af0](#file_482a16303af0)
-- `planos/_arquivo_planos/implementation_plan.md` -> [file_e7f1855928ad](#file_e7f1855928ad)
-- `planos/_arquivo_planos/master_plan.md` -> [file_2d826d235b59](#file_2d826d235b59)
-- `planos/_arquivo_planos/multi_agent_plan.md` -> [file_9efc22dd3673](#file_9efc22dd3673)
-- `planos/_arquivo_planos/plan_hok_advanced_security_and_db.md` -> [file_5b368adbea18](#file_5b368adbea18)
-- `planos/_arquivo_planos/plan_inception_final_v2_4.md` -> [file_4ebe74105a57](#file_4ebe74105a57)
-- `planos/_arquivo_planos/plan_inception_market_v2_4.md` -> [file_46be75d9b52e](#file_46be75d9b52e)
-- `planos/_arquivo_planos/roadmap_reactive_hok_v2_v3.md` -> [file_cf4807ec6c6c](#file_cf4807ec6c6c)
-- `planos/_arquivo_planos/walkthrough_hok_triad.md` -> [file_6825d8758f8d](#file_6825d8758f8d)
-- `planos/template_base_v2_3_1.md` -> [file_f23e47398730](#file_f23e47398730)
-- `resenha.md` -> [file_013dd7887d0e](#file_013dd7887d0e)
 - `run_context.py` -> [file_350a79f8b829](#file_350a79f8b829)
 - `run_context.sh` -> [file_86bac54f32d7](#file_86bac54f32d7)
 - `tests/test_context.py` -> [file_4c6bbd05056e](#file_4c6bbd05056e)
 
 ---
 <a id="file_f6a9dd4e6c97"></a>
-FILE_START id=file_f6a9dd4e6c97 path= .specs/features/docs_resenha/STATE.md domain=docs lang=markdown lines=5 bytes=82 mtime=2026-04-21T23:04:30.894740+00:00 sha1=55b3a4ebae1aa940ec05b1cdd1a340d3d2a43372
+FILE_START id=file_f6a9dd4e6c97 path= .specs/features/docs_resenha/STATE.md domain=docs lang=markdown lines=5 bytes=82 mtime=2026-04-23T14:06:00.087931+00:00 sha1=55b3a4ebae1aa940ec05b1cdd1a340d3d2a43372
 CHUNK_START id=f6a9dd4e6c97_c001 start_line=1 end_line=5
 ```markdown
 ---
@@ -238,7 +223,7 @@ FILE_END id=file_f6a9dd4e6c97
 
 ---
 <a id="file_736dc30bc94f"></a>
-FILE_START id=file_736dc30bc94f path= .specs/features/docs_resenha/spec.md domain=docs lang=markdown lines=9 bytes=274 mtime=2026-04-21T23:04:28.883652+00:00 sha1=8a2e4d88781bc7bcdd94940eb3d745ccb40a0143
+FILE_START id=file_736dc30bc94f path= .specs/features/docs_resenha/spec.md domain=docs lang=markdown lines=9 bytes=274 mtime=2026-04-23T14:06:00.089930+00:00 sha1=8a2e4d88781bc7bcdd94940eb3d745ccb40a0143
 CHUNK_START id=736dc30bc94f_c001 start_line=1 end_line=9
 ```markdown
 ---
@@ -257,7 +242,7 @@ FILE_END id=file_736dc30bc94f
 
 ---
 <a id="file_5f4ef6860006"></a>
-FILE_START id=file_5f4ef6860006 path= .specs/features/hardening_v2.5/STATE.md domain=docs lang=markdown lines=5 bytes=84 mtime=2026-04-21T23:40:05.934117+00:00 sha1=bc5c3f83bfe9e8fbb1ee3058dc9dfcda6dcdce91
+FILE_START id=file_5f4ef6860006 path= .specs/features/hardening_v2.5/STATE.md domain=docs lang=markdown lines=5 bytes=84 mtime=2026-04-23T14:06:00.092132+00:00 sha1=bc5c3f83bfe9e8fbb1ee3058dc9dfcda6dcdce91
 CHUNK_START id=5f4ef6860006_c001 start_line=1 end_line=5
 ```markdown
 ---
@@ -272,7 +257,7 @@ FILE_END id=file_5f4ef6860006
 
 ---
 <a id="file_f941f64c38fb"></a>
-FILE_START id=file_f941f64c38fb path= .specs/features/hardening_v2.5/spec.md domain=docs lang=markdown lines=13 bytes=449 mtime=2026-04-21T23:40:03.905083+00:00 sha1=54b211d4df661279c1738893d9a114caab2314e7
+FILE_START id=file_f941f64c38fb path= .specs/features/hardening_v2.5/spec.md domain=docs lang=markdown lines=13 bytes=449 mtime=2026-04-23T14:06:00.093643+00:00 sha1=54b211d4df661279c1738893d9a114caab2314e7
 CHUNK_START id=f941f64c38fb_c001 start_line=1 end_line=13
 ```markdown
 ---
@@ -292,6 +277,40 @@ Ações:
 ```
 CHUNK_END id=f941f64c38fb_c001
 FILE_END id=file_f941f64c38fb
+
+---
+<a id="file_39347a56c033"></a>
+FILE_START id=file_39347a56c033 path= .specs/features/sync_maintenance/STATE.md domain=docs lang=markdown lines=5 bytes=101 mtime=2026-04-23T14:06:00.095644+00:00 sha1=bf670324c5382439ece01583d60d3bc540025347
+CHUNK_START id=39347a56c033_c001 start_line=1 end_line=5
+```markdown
+---
+status: ✅ PASSED
+updated: 2026-04-22
+detail: Arquivos de manutenção prontos para commit.
+---
+
+```
+CHUNK_END id=39347a56c033_c001
+FILE_END id=file_39347a56c033
+
+---
+<a id="file_9c99344c7962"></a>
+FILE_START id=file_9c99344c7962 path= .specs/features/sync_maintenance/spec.md domain=docs lang=markdown lines=9 bytes=327 mtime=2026-04-23T14:06:00.096642+00:00 sha1=4dc412152491353d37e335453581463266a7c1cb
+CHUNK_START id=9c99344c7962_c001 start_line=1 end_line=9
+```markdown
+---
+status: ATIVO
+definition_of_done: Sincronização de arquivos de manutenção (Journal, Health, Tech Reqs) e arquivamento de specs históricas.
+qa_signoff: true
+signed_by: "@qa-validator"
+---
+
+# Spec: Sincronia de Manutenção
+Autoriza o commit das atualizações automáticas de contexto e arquivamento de specs de ontem.
+
+```
+CHUNK_END id=9c99344c7962_c001
+FILE_END id=file_9c99344c7962
 
 ---
 <a id="file_dbef1acce0d4"></a>
@@ -339,6 +358,172 @@ if __name__ == "__main__":
 ```
 CHUNK_END id=dbef1acce0d4_c001
 FILE_END id=file_dbef1acce0d4
+
+---
+<a id="file_9ee5d49278ad"></a>
+FILE_START id=file_9ee5d49278ad path=.context/_scripts/_wiki_log_utils.py domain=source lang=python lines=66 bytes=2541 mtime=2026-04-22T23:47:25.409048+00:00 sha1=eb8650ba121fe8cc8aaabaca70de01214509937e
+CHUNK_START id=9ee5d49278ad_c001 start_line=1 end_line=66
+```python
+#!/usr/bin/env python3
+"""
+🛠️ _wiki_log_utils.py — Utilitário de Rastreabilidade Wiki (H.O.K v2.5.1)
+Centraliza a escrita robusta e sincronizada no wiki_log.md.
+"""
+import os
+import sys
+import time
+from datetime import datetime
+from pathlib import Path
+
+CONTEXT_DIR = Path(__file__).resolve().parents[1]
+LOG_FILE = CONTEXT_DIR / "market/wiki_log.md"
+LOCK_FILE = CONTEXT_DIR / "_scripts/_wiki_log.lock"
+
+def append_to_wiki_log(mode, description, files, status):
+    """
+    Adiciona uma entrada ao log da Wiki de forma robusta e sincronizada.
+    mode: INGEST | LINT | QUERY | SKIP
+    """
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
+    
+    # Escape de pipes para não quebrar a tabela Markdown
+    safe_desc = str(description).replace("|", "\\|")
+    safe_files = str(files).replace("|", "\\|")
+    
+    line = f"| [{timestamp}] | {mode} | {safe_desc} | {safe_files} | {status} |\n"
+    
+    # Sincronização Simples (Spin Lock) para evitar concorrência
+    timeout = 5 # 5 segundos de timeout
+    start_time = time.time()
+    
+    while True:
+        try:
+            # Tenta criar o arquivo de lock de forma exclusiva
+            fd = os.open(LOCK_FILE, os.O_CREAT | os.O_EXCL | os.O_RDWR)
+            try:
+                # Se não existir o log, cria com cabeçalhos
+                if not LOG_FILE.exists():
+                    headers = [
+                        "# Wiki Log (Append-only)\n\n",
+                        "| Timestamp | Mode | Description | Files | Status |\n",
+                        "|-----------|------|-------------|-------|--------|\n"
+                    ]
+                    LOG_FILE.write_text("".join(headers), encoding="utf-8")
+                
+                with open(LOG_FILE, "a", encoding="utf-8") as f:
+                    f.write(line)
+                break # Sucesso
+            finally:
+                os.close(fd)
+                os.remove(LOCK_FILE)
+        except FileExistsError:
+            if time.time() - start_time > timeout:
+                print(f"[WARN] Timeout ao aguardar lock do wiki_log.md", file=sys.stderr)
+                break
+            time.sleep(0.1)
+        except Exception as e:
+            print(f"[WARN] Falha ao gravar no wiki_log.md: {e}", file=sys.stderr)
+            break
+
+if __name__ == "__main__":
+    # Teste rápido se chamado diretamente
+    test_mode = sys.argv[1] if len(sys.argv) > 1 else "TEST"
+    append_to_wiki_log(test_mode, "Teste de utilitário", "test.py", "OK")
+    print(f"[OK] Entrada de teste '{test_mode}' gravada.")
+
+```
+CHUNK_END id=9ee5d49278ad_c001
+FILE_END id=file_9ee5d49278ad
+
+---
+<a id="file_4ffe1a34765a"></a>
+FILE_START id=file_4ffe1a34765a path=.context/_scripts/check_version_consistency.py domain=source lang=python lines=80 bytes=2486 mtime=2026-04-22T12:37:52.914197+00:00 sha1=0f0bcd180ff803df099fc5f865ce6d3106e196d2
+CHUNK_START id=4ffe1a34765a_c001 start_line=1 end_line=80
+```python
+#!/usr/bin/env python3
+"""Verifica consistencia de versao via SSOT (VERSION.md) e matriz declarativa."""
+
+import json
+import re
+import sys
+from pathlib import Path
+
+# .../.context/_scripts/check_version_consistency.py -> raiz em parents[2]
+ROOT = Path(__file__).resolve().parents[2]
+VERSION_FILE = ROOT / "VERSION.md"
+TARGETS_FILE = ROOT / ".context" / "maintenance" / "version_targets.json"
+
+
+def get_ssot_version():
+    if not VERSION_FILE.exists():
+        return None
+    text = VERSION_FILE.read_text(encoding="utf-8")
+    # Aceita vX.Y ou vX.Y.Z e normaliza para X.Y.Z
+    match = re.search(r"^\s*v?(\d+)\.(\d+)(?:\.(\d+))?\s*$", text, re.MULTILINE)
+    if not match:
+        return None
+    major, minor, patch = match.group(1), match.group(2), match.group(3) or "0"
+    return f"{major}.{minor}.{patch}"
+
+
+def normalize_version(value):
+    value = value.strip()
+    m = re.match(r"^(\d+)\.(\d+)(?:\.(\d+))?$", value)
+    if not m:
+        return value
+    return f"{m.group(1)}.{m.group(2)}.{m.group(3) or '0'}"
+
+
+def validate_targets(version):
+    if not TARGETS_FILE.exists():
+        return [".context/maintenance/version_targets.json (ausente)"]
+
+    data = json.loads(TARGETS_FILE.read_text(encoding="utf-8"))
+    targets = data.get("targets", [])
+    mismatches = []
+
+    for target in targets:
+        rel_path = target["path"]
+        fpath = ROOT / rel_path
+        if not fpath.exists():
+            mismatches.append(f"{rel_path} (ausente)")
+            continue
+
+        content = fpath.read_text(encoding="utf-8")
+        flags = re.MULTILINE if target.get("multiline") else 0
+        m = re.search(target["pattern"], content, flags)
+
+        if not m:
+            mismatches.append(f"{rel_path} (padrao nao encontrado)")
+            continue
+
+        found = normalize_version(m.group(1))
+        if found != version:
+            mismatches.append(f"{rel_path} (esperado {version}, achado {found})")
+
+    return mismatches
+
+
+if __name__ == "__main__":
+    ssot_version = get_ssot_version()
+    if not ssot_version:
+        print("[FATAL] VERSION.md invalido ou ausente.")
+        sys.exit(1)
+
+    errors = validate_targets(ssot_version)
+    if errors:
+        print(f"\n[ERROR] Drift de versao detectado (SSOT: v{ssot_version}):")
+        for err in errors:
+            print(f"  - {err}")
+        print("\n[FATAL] Corrija manualmente os arquivos-alvo e rode novamente.")
+        sys.exit(1)
+
+    print(f"[OK] Versao consistente: v{ssot_version}")
+    sys.exit(0)
+
+```
+CHUNK_END id=4ffe1a34765a_c001
+FILE_END id=file_4ffe1a34765a
 
 ---
 <a id="file_82cd6bde54ff"></a>
@@ -423,8 +608,8 @@ FILE_END id=file_82cd6bde54ff
 
 ---
 <a id="file_10081abf87e1"></a>
-FILE_START id=file_10081abf87e1 path=.context/_scripts/context_oracle.py domain=source lang=python lines=95 bytes=3635 mtime=2026-04-21T21:56:49.416362+00:00 sha1=db678b82aaafb2648992f5e2cab81fb8dcd6fd53
-CHUNK_START id=10081abf87e1_c001 start_line=1 end_line=95
+FILE_START id=file_10081abf87e1 path=.context/_scripts/context_oracle.py domain=source lang=python lines=133 bytes=5290 mtime=2026-04-22T23:34:52.248624+00:00 sha1=61d7e4d041f8821d2240f83a9ad8b5c26baa9cb9
+CHUNK_START id=10081abf87e1_c001 start_line=1 end_line=133
 ```python
 #!/usr/bin/env python3
 """
@@ -436,6 +621,29 @@ from pathlib import Path
 from collections import Counter
 
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
+
+# Import utilitário de log
+sys.path.append(str(CONTEXT_DIR / "_scripts"))
+try:
+    from _wiki_log_utils import append_to_wiki_log
+except ImportError:
+    def append_to_wiki_log(*args): pass
+
+def load_index_file():
+    """Lê o índice mestre WIKI para roteamento determinístico."""
+    index_file = CONTEXT_DIR / "market/WIKI/_index.md"
+    mapping = {}
+    if index_file.exists():
+        content = index_file.read_text(encoding="utf-8")
+        # Encontra padrões como: - [[link]] | tags: t1, t2
+        matches = re.finditer(r'- \[\[(.+?)\]\]\s*\|\s*tags:\s*(.+)', content)
+        for m in matches:
+            path_stub = m.group(1).strip()
+            tags = [t.strip().lower() for t in m.group(2).split(",")]
+            for tag in tags:
+                # Peso 1.0 para tags explícitas no índice
+                mapping.setdefault(tag, []).append({"path": f"market/WIKI/{path_stub}.md", "weight": 1.0})
+    return mapping
 
 def build_index():
     index = {}
@@ -478,11 +686,19 @@ def build_index():
 
 def query_oracle(question, role="unknown"):
     idx = build_index()
+    det_idx = load_index_file()
     keywords = set(re.findall(r'\b\w{3,}\b', question.lower()))
     hits = Counter()
     
+    # 1. Busca Determinística (Peso 1.0 - Vindo do _index.md)
+    for kw in keywords:
+        for match in det_idx.get(kw, []):
+            hits[match["path"]] += match["weight"]
+            
+    # 2. Busca Léxica (Pesos variados - Vindo do build_index dinâmico)
     for kw in keywords:
         for match in idx.get(kw, []):
+            # Se já houver um hit determinístico, somamos apenas se for o mesmo arquivo
             hits[match["path"]] += match["weight"]
     
     if not hits:
@@ -515,6 +731,13 @@ if __name__ == "__main__":
         print("Uso: python context_oracle.py \"sua pergunta aqui\"")
         sys.exit(1)
     res = query_oracle(sys.argv[1], os.environ.get("AGENT_ROLE", "manual"))
+    
+    # Log de Query (Resumido)
+    q_stub = sys.argv[1][:30] + "..." if len(sys.argv[1]) > 30 else sys.argv[1]
+    status = "OK" if res["confidence"] >= 0.5 else "FAIL"
+    source = res["sources"][0] if res["sources"] else "-"
+    append_to_wiki_log("QUERY", f"Busca: {q_stub} (conf: {res['confidence']:.2f})", source, status)
+
     try:
         print(json.dumps(res, indent=2, ensure_ascii=True))
     except Exception as e:
@@ -663,27 +886,30 @@ FILE_END id=file_e94b4e40315c
 
 ---
 <a id="file_1edef35c2f56"></a>
-FILE_START id=file_1edef35c2f56 path=.context/_scripts/harness_runner.py domain=source lang=python lines=219 bytes=9550 mtime=2026-04-21T22:16:03.030237+00:00 sha1=fbe6e8c7113378b88136024475d2e15502e16f6b
-CHUNK_START id=1edef35c2f56_c001 start_line=1 end_line=219
+FILE_START id=file_1edef35c2f56 path=.context/_scripts/harness_runner.py domain=source lang=python lines=377 bytes=13475 mtime=2026-04-23T15:09:13.334620+00:00 sha1=c76d3a65d6be246539305f89c25c0963f6184a60
+CHUNK_START id=1edef35c2f56_c001 start_line=1 end_line=300
 ```python
 #!/usr/bin/env python3
 """
 🛡️ harness_runner.py — Validação reativa de contratos (Harness Layer)
 Valida spec vs schema, PRD vs código, e integridade de handoffs.
 """
+
 import os, re, sys, json, io
 from datetime import datetime
 from pathlib import Path
 
 if sys.platform == "win32":
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 try:
     from _tz_utils import format_ts
 except ImportError:
-    format_ts = lambda dt=None, fmt="%Y-%m-%d %H:%M": (dt or datetime.now()).strftime(fmt)
+    format_ts = lambda dt=None, fmt="%Y-%m-%d %H:%M": (dt or datetime.now()).strftime(
+        fmt
+    )
     print("[WARN] _tz_utils inacessivel. Usando timezone local MS-WIN.")
 
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
@@ -693,15 +919,20 @@ HARNESS_REG = CONTEXT_DIR / "brain" / "HARNESS_REGISTRY.md"
 PRD = CONTEXT_DIR / "brain" / "PRD.md"
 INCEPTION = CONTEXT_DIR / "brain" / "INCEPTION.md"
 
+
 def check_schema_contract(spec_path):
     """Valida se campos/tabelas da spec existem no schema.sql"""
     if not spec_path.exists() or not SCHEMA.exists():
         return True, "Schema/spec indisponivel (skip)"
     spec_text = spec_path.read_text(encoding="utf-8")
     schema_text = SCHEMA.read_text(encoding="utf-8")
-    tables_spec = set(re.findall(r'`(tabela|table)[\s_]+(\w+)', spec_text, re.I))
-    tables_schema = set(re.findall(r'CREATE\s+TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?[\"\']?(\w+)', schema_text, re.I))
-    
+    tables_spec = set(re.findall(r"`(tabela|table)[\s_]+(\w+)", spec_text, re.I))
+    tables_schema = set(
+        re.findall(
+            r"CREATE\s+TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?[\"\']?(\w+)", schema_text, re.I
+        )
+    )
+
     # We only care about the table name captured in group 2 for specs if the matched syntax was used.
     # A robust extraction gets just the table name.
     spec_tnames = {t[1] for t in tables_spec}
@@ -710,60 +941,87 @@ def check_schema_contract(spec_path):
         return False, f"Spec pede tabelas inexistentes: {missing}"
     return True, "Schema contract OK"
 
+
 def check_handoff_integrity(journal_text):
     """Verifica se handoffs recentes estao completos (suporta historico e padrao atual)"""
     fails = []
-    
+
     # Previne loop: ignora linhas de log do próprio harness (- **Detalhe:** handoff: ...)
     clean_lines = [
-        line for line in journal_text.splitlines() 
+        line
+        for line in journal_text.splitlines()
         if "[HARNESS-" not in line and "Handoffs malformados:" not in line
     ]
     clean_text = "\n".join(clean_lines)
-    
+
     # 1. Checa padrão legado: [handoff:...]
-    legados = re.findall(r'\[handoff:(.*?)\]', clean_text, re.I)
+    legados = re.findall(r"\[handoff:(.*?)\]", clean_text, re.I)
     for h in legados:
-        if h.count('|') < 2: fails.append(f"Legado incompleto: {h[:30]}")
+        if h.count("|") < 2:
+            fails.append(f"Legado incompleto: {h[:30]}")
 
     # 2. Checa padrão moderno: (🔄 )Handoff: RoleA -> RoleB | Info | Info
-    modernos = re.findall(r'(?:🔄\s*)?Handoff:\s*(.*?)(?=\n|$)', clean_text, re.I)
+    modernos = re.findall(r"(?:🔄\s*)?Handoff:\s*(.*?)(?=\n|$)", clean_text, re.I)
     for h in modernos:
-        if h.count('|') < 2: fails.append(f"Handoff incompleto: {h[:30]}")
+        if h.count("|") < 2:
+            fails.append(f"Handoff incompleto: {h[:30]}")
 
     if fails:
         return False, f"Handoffs malformados: {fails}"
     return True, "Handoffs integros"
+
 
 def check_strategic_alignment():
     if not INCEPTION.exists() or not PRD.exists():
         return True, "INCEPTION/PRD ausentes (skip estratégico)"
     prd_text = PRD.read_text(encoding="utf-8").lower()
     inception_text = INCEPTION.read_text(encoding="utf-8")
-    boundaries = re.findall(r'^-\s*NUNCA:\s*(.+)$', inception_text, re.I | re.MULTILINE)
-    violations = [b.strip() for b in boundaries if re.search(re.escape(b.strip().lower()), prd_text)]
-    if violations: return False, f"PRD viola boundaries estrategicas: {violations}"
+    boundaries = re.findall(r"^-\s*NUNCA:\s*(.+)$", inception_text, re.I | re.MULTILINE)
+    violations = [
+        b.strip()
+        for b in boundaries
+        if re.search(re.escape(b.strip().lower()), prd_text)
+    ]
+    if violations:
+        return False, f"PRD viola boundaries estrategicas: {violations}"
     return True, "Strategic alignment OK"
+
 
 def check_enrichment_integrity(prd_path: Path):
     """Valida seção Critical Dependencies semanticamente (bullet + Fonte: + market/)."""
-    if not prd_path.exists(): return True, "PRD ausente (skip)"
+    if not prd_path.exists():
+        return True, "PRD ausente (skip)"
     text = prd_path.read_text(encoding="utf-8")
     text_lower = text.lower()
 
     # Só exige a seção se o PRD mencionar integrações, compliance ou APIs externas
     trigger_keywords = [
-        "integração", "integracao", "integration", 
-        "compliance", "api externa", "external api", 
-        "stripe", "lgpd", "meta", "aws", "webhook"
+        "integração",
+        "integracao",
+        "integration",
+        "compliance",
+        "api externa",
+        "external api",
+        "stripe",
+        "lgpd",
+        "meta",
+        "aws",
+        "webhook",
     ]
     if not any(kw in text_lower for kw in trigger_keywords):
         return True, "Sem menção a integrações/compliance (skip)"
 
-    section_match = re.search(r'^##\s*.*?Critical Dependencies.*?\n(.*?)(?=\n## |\Z)', text, re.I | re.DOTALL | re.MULTILINE)
-    if not section_match: 
-        return False, "Seção Critical Dependencies obrigatória para PRDs com integrações/compliance"
-    
+    section_match = re.search(
+        r"^##\s*.*?Critical Dependencies.*?\n(.*?)(?=\n## |\Z)",
+        text,
+        re.I | re.DOTALL | re.MULTILINE,
+    )
+    if not section_match:
+        return (
+            False,
+            "Seção Critical Dependencies obrigatória para PRDs com integrações/compliance",
+        )
+
     deps_text = section_match.group(1)
     missing = []
     for line in deps_text.splitlines():
@@ -772,26 +1030,31 @@ def check_enrichment_integrity(prd_path: Path):
             # Validação semântica: deve conter "Fonte:" e "market/"
             if "fonte:" not in line.lower() or "market/" not in line.lower():
                 missing.append(line[:60])
-                
-    if missing: return False, f"Dependencies sem lastro em market/: {missing}"
+
+    if missing:
+        return False, f"Dependencies sem lastro em market/: {missing}"
     return True, "Enrichment contract OK"
+
 
 def check_sprint_contract(spec_path: Path):
     """Valida se a spec possui contrato explícito e assinatura do QA."""
     if not spec_path.exists():
-        return False, "Nenhuma Spec ativa detectada. Commits sem Spec validada no The Workshop estão PROIBIDOS."
-    
+        return (
+            False,
+            "Nenhuma Spec ativa detectada. Commits sem Spec validada no The Workshop estão PROIBIDOS.",
+        )
+
     text = spec_path.read_text(encoding="utf-8")
     # Extrai bloco YAML entre --- e ---
-    yaml_match = re.match(r'^---\n(.*?)\n---', text, re.DOTALL)
+    yaml_match = re.match(r"^---\n(.*?)\n---", text, re.DOTALL)
     if not yaml_match:
         return False, "Bloco de contrato (---) ausente no topo da spec"
-    
+
     contract = yaml_match.group(1)
-    
+
     # Validação semântica leve (stdlib-only)
     has_dod = "definition_of_done:" in contract
-    has_signoff = re.search(r'qa_signoff:\s*true', contract, re.I)
+    has_signoff = re.search(r"qa_signoff:\s*true", contract, re.I)
     has_signed_by = re.search(r'signed_by:\s*["\']?@qa-validator["\']?', contract, re.I)
 
     if not has_dod:
@@ -800,23 +1063,65 @@ def check_sprint_contract(spec_path: Path):
         return False, "Contrato não assinado pelo @qa-validator (qa_signoff: false)"
     if not has_signed_by:
         return False, "Campo signed_by inválido ou ausente"
-        
+
+    # Regra v2.5.2: segregação de contexto para specs standard
+    type_match = re.search(r'^\s*type:\s*["\']?(\w+)["\']?\s*$', contract, re.I | re.M)
+    spec_type = type_match.group(1).strip().lower() if type_match else None
+
+    if spec_type == "standard":
+        exec_match = re.search(
+            r"^\s*executor_context_id:\s*(.+?)\s*$", contract, re.I | re.M
+        )
+        valid_match = re.search(
+            r"^\s*validator_context_id:\s*(.+?)\s*$", contract, re.I | re.M
+        )
+
+        executor_id = (
+            exec_match.group(1).strip().strip('"').strip("'") if exec_match else ""
+        )
+        validator_id = (
+            valid_match.group(1).strip().strip('"').strip("'") if valid_match else ""
+        )
+
+        missing_tokens = {"", "null", "none"}
+        if (
+            executor_id.lower() in missing_tokens
+            or validator_id.lower() in missing_tokens
+        ):
+            return (
+                False,
+                "Spec standard requer executor_context_id e validator_context_id preenchidos",
+            )
+
+        if executor_id == validator_id:
+            return (
+                False,
+                "Spec standard requer segregação: executor_context_id deve ser diferente de validator_context_id",
+            )
+
     return True, "Sprint contract validado e assinado"
+
 
 def log_harness(status, detail, spec_name="unknown"):
     """Registra no JOURNAL.md de forma compacta e atomica"""
     entry = f"\n## [HARNESS-{status.upper()}] Report | spec:{spec_name}\n- **Detalhe:** {detail}\n"
     try:
         tmp = JOURNAL.with_suffix(".tmp")
-        content = JOURNAL.read_text(encoding="utf-8") if JOURNAL.exists() else "# JOURNAL.md\n"
+        content = (
+            JOURNAL.read_text(encoding="utf-8")
+            if JOURNAL.exists()
+            else "# JOURNAL.md\n"
+        )
         tmp.write_text(content + entry, encoding="utf-8")
         tmp.replace(JOURNAL)
     except Exception as e:
         print(f"[WARN] Falha ao logar harness: {e}")
 
+
 def update_state_md(spec_dir: Path, status: str, detail: str = ""):
     state = spec_dir / "STATE.md"
-    if not state.exists(): return
+    if not state.exists():
+        return
     content = f"---\nstatus: {status}\nupdated: {format_ts()}\ndetail: {detail}\n---\n"
     tmp = state.with_suffix(".tmp")
     tmp.write_text(content, encoding="utf-8")
@@ -824,9 +1129,11 @@ def update_state_md(spec_dir: Path, status: str, detail: str = ""):
     status_print = status.replace("✅", "[OK]").replace("❌", "[FAIL]")
     print(f"[STATE.md] -> {status_print} na spec {spec_dir.name}")
 
+
 def get_inception_status():
     """Lê o status do Inception mestre."""
-    if not INCEPTION.exists(): return "MISSING"
+    if not INCEPTION.exists():
+        return "MISSING"
     try:
         content = INCEPTION.read_text(encoding="utf-8")
         for line in content.splitlines():
@@ -837,57 +1144,136 @@ def get_inception_status():
         return "ERROR"
     return "UNKNOWN"
 
+
 def main():
     # 0. Verificação de Estado (Hybrid Discovery)
     status = get_inception_status()
     if status == "DRAFT":
-        print("[BYPASS] Inception em DRAFT. Pulando validações rigorosas do Harness.")
-        print("[INFO] Siga as instruções em START_HERE.md para ativar a governança completa.")
+        root = CONTEXT_DIR.parent
+        code_exts = {
+            ".py",
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx",
+            ".go",
+            ".rs",
+            ".java",
+            ".kt",
+            ".cs",
+            ".php",
+        }
+        ignore_names = {".gitkeep", ".keep"}
+        ignore_prefixes = ("README",)
+        ignore_dirs = {"node_modules", ".git", ".venv", "__pycache__", "dist", "build"}
+
+        def has_real_code_activity():
+            for code_root in ["src", "app", "packages", "services", "lib"]:
+                base = root / code_root
+                if not base.exists() or not base.is_dir():
+                    continue
+                for cur, dirs, files in os.walk(base):
+                    dirs[:] = [d for d in dirs if d not in ignore_dirs]
+                    for fname in files:
+                        if fname in ignore_names:
+                            continue
+                        if fname.startswith(ignore_prefixes):
+                            continue
+                        path = Path(cur) / fname
+                        if path.suffix.lower() in code_exts and path.stat().st_size > 0:
+                            return True
+            return False
+
+        def has_real_spec_activity():
+            specs_dir = root / ".specs" / "features"
+            if not specs_dir.exists() or not specs_dir.is_dir():
+                return False
+            for spec in specs_dir.iterdir():
+
+```
+CHUNK_END id=1edef35c2f56_c001
+CHUNK_START id=1edef35c2f56_c002 start_line=301 end_line=377
+```python
+                if not spec.is_dir() or spec.name.startswith("_"):
+                    continue
+                spec_file = spec / "spec.md"
+                state_file = spec / "STATE.md"
+                if (
+                    spec_file.exists()
+                    and state_file.exists()
+                    and spec_file.stat().st_size > 0
+                ):
+                    return True
+            return False
+
+        if has_real_code_activity() or has_real_spec_activity():
+            print(
+                "[FATAL] Projeto possui atividade real (código/specs) mas INCEPTION.md está em DRAFT."
+            )
+            print(
+                "[DICA] Ative a governança: altere status para ACTIVE em INCEPTION.md."
+            )
+            sys.exit(1)
+
+        print("[INFO] Modo Onboarding (DRAFT). Bypass permitido até ativação.")
         sys.exit(0)
 
     # 1. Definindo a pasta spec ativa
     features_dir = CONTEXT_DIR.parent / ".specs" / "features"
     spec_dir_env = os.environ.get("ACTIVE_SPEC")
-    
+
     if spec_dir_env and (features_dir / spec_dir_env).exists():
         spec_dir = features_dir / spec_dir_env
     else:
         # Fallback: spec modificada mais recentemente
         if features_dir.exists():
-            active = sorted([d for d in features_dir.iterdir() if d.is_dir() and not d.name.startswith('_')], key=os.path.getmtime, reverse=True)
+            active = sorted(
+                [
+                    d
+                    for d in features_dir.iterdir()
+                    if d.is_dir() and not d.name.startswith("_")
+                ],
+                key=os.path.getmtime,
+                reverse=True,
+            )
             spec_dir = active[0] if active else None
         else:
             spec_dir = None
 
     spec_name = spec_dir.name if spec_dir else "manual"
     spec_path = spec_dir / "spec.md" if spec_dir else Path("dummy")
-    
+
     checks = {
         "schema": check_schema_contract(spec_path),
-        "handoff": check_handoff_integrity(JOURNAL.read_text(encoding="utf-8") if JOURNAL.exists() else ""),
+        "handoff": check_handoff_integrity(
+            JOURNAL.read_text(encoding="utf-8") if JOURNAL.exists() else ""
+        ),
         "strategy": check_strategic_alignment(),
         "enrichment": check_enrichment_integrity(PRD),
-        "sprint_contract": check_sprint_contract(spec_path)
+        "sprint_contract": check_sprint_contract(spec_path),
     }
-    
+
     fails = [f"{k}: {v[1]}" for k, v in checks.items() if not v[0]]
     if fails:
         detail = " | ".join(fails)
         log_harness("fail", detail, spec_name)
-        if spec_dir: update_state_md(spec_dir, "❌ FAILED", detail)
+        if spec_dir:
+            update_state_md(spec_dir, "❌ FAILED", detail)
         print(f"[ERROR] Harness fail: {detail}")
         sys.exit(1)
-    
+
     log_harness("pass", "All contracts valid", spec_name)
-    if spec_dir: update_state_md(spec_dir, "✅ PASSED", "All checks passed")
+    if spec_dir:
+        update_state_md(spec_dir, "✅ PASSED", "All checks passed")
     print("[OK] Harness pass: Contracts validated.")
     sys.exit(0)
+
 
 if __name__ == "__main__":
     main()
 
 ```
-CHUNK_END id=1edef35c2f56_c001
+CHUNK_END id=1edef35c2f56_c002
 FILE_END id=file_1edef35c2f56
 
 ---
@@ -1012,9 +1398,107 @@ CHUNK_END id=a642d240b9ab_c001
 FILE_END id=file_a642d240b9ab
 
 ---
+<a id="file_0731dcfd7873"></a>
+FILE_START id=file_0731dcfd7873 path=.context/_scripts/ingest_wiki_guard.py domain=source lang=python lines=88 bytes=3112 mtime=2026-04-22T23:34:30.558813+00:00 sha1=8cf96a678ced2d689deb51608c115dcd75a632a8
+CHUNK_START id=0731dcfd7873_c001 start_line=1 end_line=88
+```python
+#!/usr/bin/env python3
+"""
+🛡️ ingest_wiki_guard.py — Guardião de Ingestão Wiki (H.O.K v2.5)
+Valida conformidade Karpathy antes de permitir a entrada de novos artigos.
+"""
+import re, sys, os
+from pathlib import Path
+
+CONTEXT_DIR = Path(__file__).resolve().parents[1]
+WIKI_DIR = CONTEXT_DIR / "market/WIKI"
+
+# Import utilitário de log
+sys.path.append(str(CONTEXT_DIR / "_scripts"))
+try:
+    from _wiki_log_utils import append_to_wiki_log
+except ImportError:
+    def append_to_wiki_log(*args): pass
+
+def validate_article(path):
+    content = path.read_text(encoding="utf-8")
+    errors = []
+
+    # 1. Validação de Frontmatter
+    frontmatter_match = re.search(r'^---\s*\n(.*?)\n---\s*\n', content, re.DOTALL)
+    if not frontmatter_match:
+        errors.append("Frontmatter (---) ausente ou mal formado.")
+    else:
+        fields = frontmatter_match.group(1)
+        required = ['id:', 'entity:', 'concept:', 'tags:', 'source:', 'last_updated:']
+        for r in required:
+            if r not in fields:
+                errors.append(f"Campo obrigatório '{r}' ausente no frontmatter.")
+
+    # 2. Validação de Fonte (Karpathy Rule)
+    if not re.search(r'^>\s*Fonte:\s*(market/)?RAW/.+\.md', content, re.MULTILINE):
+        errors.append("Citação de fonte '> Fonte: RAW/...' ausente ou inválida.")
+
+    # 3. Estrutura Mínima
+    if "## Key Takeaways" not in content:
+        errors.append("Seção '## Key Takeaways' ausente.")
+    
+    if "## Related" not in content and "[[" not in content:
+        errors.append("Conectividade ausente (Seção '## Related' ou '[[wikilinks]]' necessários).")
+
+    return errors
+
+def main():
+    if not WIKI_DIR.exists():
+        print("[OK] Diretório WIKI não encontrado. Ignorando.")
+        sys.exit(0)
+
+    # Coleta arquivos para validar (excluindo templates e indices)
+    articles = [p for p in WIKI_DIR.rglob("*.md") if not p.name.startswith("_")]
+    
+    if not articles:
+        print("[OK] Nenhum artigo novo para validar.")
+        append_to_wiki_log("SKIP", "Nenhum artigo detectado para ingestão", "-", "OK")
+        sys.exit(0)
+
+    all_errors = {}
+    for art in articles:
+        rel_path = art.relative_to(CONTEXT_DIR).as_posix()
+        errs = validate_article(art)
+        if errs:
+            all_errors[rel_path] = errs
+
+    if all_errors:
+        print("❌ FALHA NA INGESTÃO WIKI:")
+        paths = []
+        for path, errs in all_errors.items():
+            paths.append(path)
+            print(f"\n📄 {path}:")
+            for e in errs:
+                print(f"  - {e}")
+        append_to_wiki_log("INGEST", "Falha de conformidade Karpathy", ", ".join(paths), "FAIL")
+        sys.exit(1)
+
+    print(f"✅ Todos os {len(articles)} artigos WIKI estão em conformidade.")
+    filenames = [a.name for a in articles]
+    append_to_wiki_log("INGEST", f"Ingestão de {len(articles)} artigos", ", ".join(filenames), "OK")
+    sys.exit(0)
+
+if __name__ == "__main__":
+    # Garante UTF-8 no Windows
+    if sys.platform == "win32":
+        import io
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    main()
+
+```
+CHUNK_END id=0731dcfd7873_c001
+FILE_END id=file_0731dcfd7873
+
+---
 <a id="file_ab41b07fb3fb"></a>
-FILE_START id=file_ab41b07fb3fb path=.context/_scripts/lint_wiki.py domain=source lang=python lines=92 bytes=3862 mtime=2026-04-21T22:17:35.036366+00:00 sha1=d4342a3f1f504fb3505f861cc60e9d42b8b32c4f
-CHUNK_START id=ab41b07fb3fb_c001 start_line=1 end_line=92
+FILE_START id=file_ab41b07fb3fb path=.context/_scripts/lint_wiki.py domain=source lang=python lines=116 bytes=4999 mtime=2026-04-22T23:34:42.090035+00:00 sha1=844cbc05474f73fa7addd3038fbbc60b86ab460a
+CHUNK_START id=ab41b07fb3fb_c001 start_line=1 end_line=116
 ```python
 #!/usr/bin/env python3
 """
@@ -1027,6 +1511,13 @@ import argparse
 from pathlib import Path
 
 CONTEXT_DIR = Path(__file__).resolve().parents[1]
+
+# Import utilitário de log
+sys.path.append(str(CONTEXT_DIR / "_scripts"))
+try:
+    from _wiki_log_utils import append_to_wiki_log
+except ImportError:
+    def append_to_wiki_log(*args): pass
 # RAW centralizado na nova estrutura Fase 3
 RAW_DIR = CONTEXT_DIR / "market" / "RAW"
 # Diretórios de Wiki (Adicionada a nova market/WIKI)
@@ -1073,10 +1564,22 @@ def check_wiki(strict=False):
             if f.name in ["README.md", "MASTER_FLOW.md", "RULES.md", "CONTEXT_HEALTH.md", "rebuild_guide.md"]: continue
 
             # 🛠️ REGRA MANDATÓRIA KARPATHY (v2.5)
-            # Se o arquivo está em market/WIKI, ele DEVE citar a fonte RAW
+            # Se o arquivo está em market/WIKI, ele DEVE seguir o schema Nível 2
             if "market" in str(f) and "WIKI" in str(f):
                 if "> Fonte: RAW/" not in text and "> Fonte: market/RAW/" not in text:
                     issues.append(f"[FATAL] [{f.name}] Wiki de Mercado sem citação RAW obrigatória.")
+                
+                if strict:
+                    # Check de Frontmatter Básico
+                    if not re.search(r'^---\s*\n(.*?)\n---\s*\n', text, re.DOTALL):
+                        issues.append(f"[FATAL] [{f.name}] Frontmatter ausente ou inválido.")
+                    
+                    # Check de Estrutura
+                    if "## Key Takeaways" not in text:
+                        issues.append(f"[FATAL] [{f.name}] Seção '## Key Takeaways' ausente.")
+                    
+                    if "## Related" not in text and "[[" not in text:
+                        issues.append(f"[FATAL] [{f.name}] Conectividade ausente (Related ou [[links]]).")
 
             # Checagem de claims (Geral)
             for match in CLAIM_REGEX.finditer(text):
@@ -1093,6 +1596,10 @@ def check_wiki(strict=False):
         print("\n".join(issues))
         # Se houver erro FATAL na WIKI, trava independente do strict-mode
         has_fatal = any("[FATAL]" in i for i in issues)
+        status = "FAIL" if (strict or has_fatal) else "WARN"
+        
+        append_to_wiki_log("LINT", f"Detectados {len(issues)} problemas", "-", status)
+        
         if strict or has_fatal:
             print("\n[FATAL] Pipeline bloqueado por integridade epistemológica.")
             sys.exit(1)
@@ -1101,6 +1608,7 @@ def check_wiki(strict=False):
             sys.exit(0)
     else:
         print("[OK] Wiki limpa: Epistemologia em dia.")
+        append_to_wiki_log("LINT", "Integridade epistemológica validada", "-", "OK")
         sys.exit(0)
 
 if __name__ == "__main__":
@@ -1452,8 +1960,8 @@ FILE_END id=file_f122711ba9e1
 
 ---
 <a id="file_1077e9084ea1"></a>
-FILE_START id=file_1077e9084ea1 path=.context/_scripts/validate_context.py domain=source lang=python lines=216 bytes=7159 mtime=2026-04-17T14:54:43.645074+00:00 sha1=3768b151f9bc0cd03e1728cb584e5680781858d3
-CHUNK_START id=1077e9084ea1_c001 start_line=1 end_line=216
+FILE_START id=file_1077e9084ea1 path=.context/_scripts/validate_context.py domain=source lang=python lines=253 bytes=8091 mtime=2026-04-22T23:17:08.680799+00:00 sha1=c24e8617c984749da6e65e550b43cf786c4c913c
+CHUNK_START id=1077e9084ea1_c001 start_line=1 end_line=253
 ```python
 #!/usr/bin/env python3
 """
@@ -1472,8 +1980,9 @@ CONTEXT_DIR = SCRIPT_DIR.parent
 # Forçar UTF-8 em Windows
 if sys.platform == "win32":
     import io
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 REQUIRED_FILES = [
     "brain/RULES.md",
@@ -1531,7 +2040,9 @@ def check_specs_structure():
     features_dir = specs_dir / "features"
     if not features_dir.exists():
         return False, "Diretorio features ausente no .specs"
-    active_specs = [d for d in features_dir.iterdir() if d.is_dir() and not d.name.startswith('_')]
+    active_specs = [
+        d for d in features_dir.iterdir() if d.is_dir() and not d.name.startswith("_")
+    ]
     for spec in active_specs:
         if not (spec / "STATE.md").exists():
             return False, f"Falha de integridade: {spec.name}/STATE.md ausente"
@@ -1555,30 +2066,45 @@ def get_inception_metadata():
         return {}
 
 
+def check_wiki_integrity():
+    """Verifica se a infraestrutura base da WIKI Nível 2 existe."""
+    index_file = CONTEXT_DIR / "market/WIKI/_index.md"
+    log_file = CONTEXT_DIR / "market/wiki_log.md"
+    
+    if not index_file.exists():
+        return False, "Índice mestre market/WIKI/_index.md ausente."
+    if index_file.stat().st_size < 50:
+        return False, "Índice mestre market/WIKI/_index.md parece estar vazio ou incompleto."
+    if not log_file.exists():
+        return False, "Log de transações market/wiki_log.md ausente."
+        
+    return True, "Estrutura Wiki OK"
+
+
 def is_non_initial_context():
     """Detecta se o projeto já avançou além do estágio de onboarding."""
     # Critério sugerido pela auditoria: lista de code roots
     code_roots = ["src", "app", "packages", "services", "lib"]
     root_dir = CONTEXT_DIR.parent
-    
+
     # 1. Verifica pastas de código
     for dr in code_roots:
         path = root_dir / dr
         if path.exists() and any(path.iterdir()):
             return True, f"Pasta de código ativa encontrada: {dr}/"
-            
+
     # 2. Verifica .specs/features/ ativos
     specs_dir = root_dir / ".specs" / "features"
     if specs_dir.exists():
         active_specs = [d for d in specs_dir.iterdir() if d.is_dir()]
         if active_specs:
             return True, f"Especificações de feature ativas: {len(active_specs)}"
-            
+
     return False, "Contexto inicial limpo"
 
 
 def validate():
-    print("--- Iniciando validação de contexto (v2.4.1 Hardened + Hybrid) ---")
+    print("--- Iniciando validação de contexto (v2.5.0 Hardened + Hybrid) ---")
     issues = []
     exit_code = 0
 
@@ -1596,16 +2122,22 @@ def validate():
 
     if inception_status == "DRAFT":
         if vision_exists:
-            print("[WARN] Tradução Pendente: VISION.md detectada. Solicite @spec-enricher.")
+            print(
+                "[WARN] Tradução Pendente: VISION.md detectada. Solicite @spec-enricher."
+            )
             exit_code = 2
         elif is_dirty:
-            issues.append(f"[FATAL] Inception em DRAFT mas projeto possui código ({dirty_msg}).")
+            issues.append(
+                f"[FATAL] Inception em DRAFT mas projeto possui código ({dirty_msg})."
+            )
             exit_code = 1
         else:
             print(f"[INFO] Modo Onboarding: Projeto limpo. Consulte START_HERE.md.")
             exit_code = 0
     elif inception_status == "TRANSLATION_LOCK":
-        print("[WARN] Bloqueio de Tradução: INCEPTION.proposed.md aguardando ratificação.")
+        print(
+            "[WARN] Bloqueio de Tradução: INCEPTION.proposed.md aguardando ratificação."
+        )
         exit_code = 2
     elif inception_status == "ACTIVE":
         print("[OK] Governança ACTIVE: Limites validados.")
@@ -1617,7 +2149,8 @@ def validate():
     spec_ok, spec_msg = check_specs_structure()
     if not spec_ok:
         issues.append(f"[WARN] .specs/: {spec_msg}")
-        if exit_code == 0: exit_code = 1
+        if exit_code == 0:
+            exit_code = 1
     else:
         print(f"[OK] .specs/: {spec_msg}")
 
@@ -1626,7 +2159,8 @@ def validate():
         issues.append(
             f"[WARN] JOURNAL.md excede limite: {journal_lines}/{JOURNAL_MAX_LINES}"
         )
-        if exit_code == 0: exit_code = 1
+        if exit_code == 0:
+            exit_code = 1
     else:
         print(f"[OK] JOURNAL.md dentro do limite: {journal_lines}/{JOURNAL_MAX_LINES}")
 
@@ -1636,7 +2170,8 @@ def validate():
         issues.append(
             f"[WARN] Contexto estimado alto: tokens_raw={tokens_raw} (~{tokens_k:.1f}k). Execute purge."
         )
-        if exit_code == 0: exit_code = 1
+        if exit_code == 0:
+            exit_code = 1
     else:
         print(
             f"[OK] Estimativa de contexto segura: tokens_raw={tokens_raw} (~{tokens_k:.1f}k)"
@@ -1645,9 +2180,18 @@ def validate():
     reg_ok, reg_msg = check_registry_structure()
     if not reg_ok:
         issues.append(f"[WARN] AGENT_REGISTRY.md: {reg_msg}")
-        if exit_code == 0: exit_code = 1
+        if exit_code == 0:
+            exit_code = 1
     else:
         print("[OK] AGENT_REGISTRY.md estrutura válida.")
+
+    wiki_ok, wiki_msg = check_wiki_integrity()
+    if not wiki_ok:
+        issues.append(f"[WARN] WIKI: {wiki_msg}")
+        if exit_code == 0:
+            exit_code = 1
+    else:
+        print(f"[OK] WIKI: {wiki_msg}")
 
     print("\n--- Relatório Final ---")
     if not issues:
@@ -1669,6 +2213,7 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"[ERROR] Erro na execucao: {e}")
         import traceback
+
         traceback.print_exc()
         sys.exit(1)
 
@@ -1818,11 +2363,11 @@ FILE_END id=file_4b29e274836e
 
 ---
 <a id="file_de9ef20db2be"></a>
-FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=43 bytes=3454 mtime=2026-04-21T23:31:58.919034+00:00 sha1=2b3dfb00f050711f848cd339df298bff4cbdcf13
+FILE_START id=file_de9ef20db2be path=.context/brain/INCEPTION.md domain=docs lang=markdown lines=43 bytes=3455 mtime=2026-04-23T15:10:01.045421+00:00 sha1=1c3639bff80071b9781712b04dfd7edd74ca73bc
 CHUNK_START id=de9ef20db2be_c001 start_line=1 end_line=43
 ```markdown
 ---
-version: 2.4.1
+version: 2.5.2
 mode: STRATEGIC
 status: ACTIVE  # [DRAFT | ACTIVE | TRANSLATION_LOCK]
 ---
@@ -1841,7 +2386,7 @@ status: ACTIVE  # [DRAFT | ACTIVE | TRANSLATION_LOCK]
 *Ratificado a partir da tradução cognitiva do `VISION.md`.*
 
 ## 🎯 Visão Mestra
-O Antigravity Kit (H.O.K Forge v2.4.1) é uma solução de **Harness Engineering** projetada para PMEs e Tech Leads. Seu objetivo é controlar o "AI Slop" e governar as IA geradoras de código através de uma arquitetura determinística implacável, reduzindo confabulações e inchaço de contexto sem depender de infraestruturas MLOps complexas. A equação fundamental é **Agente = Modelo + Harness**.
+O Antigravity Kit (H.O.K Forge v2.5.2) é uma solução de **Harness Engineering** projetada para PMEs e Tech Leads. Seu objetivo é controlar o "AI Slop" e governar as IA geradoras de código através de uma arquitetura determinística implacável, reduzindo confabulações e inchaço de contexto sem depender de infraestruturas MLOps complexas. A equação fundamental é **Agente = Modelo + Harness**.
 
 ## 🛑 NUNCA (Boundaries)
 > *Limites inegociáveis. Se a IA tentar cruzar estas linhas, o Harness aplicará o fail-fast.*
@@ -1864,18 +2409,19 @@ O Antigravity Kit (H.O.K Forge v2.4.1) é uma solução de **Harness Engineering
 - **SEMPRE** aplicar a "Divulgação Progressiva". O conhecimento deve ser roteado *just-in-time*, entregando ao modelo apenas o que ele precisa saber para a task efêmera, evitando Context Bloat.
 - **SEMPRE** validar os limites técnicos usando o `schema.sql` antes de qualquer ação generativa de UI ou banco.
 - **SEMPRE** utilizar a pasta `market/` para populacionar lacunas tecnológicas via "Spec Enricher" antes de compilar Documentos de Requisitos finais (PRDs).
+
 ```
 CHUNK_END id=de9ef20db2be_c001
 FILE_END id=file_de9ef20db2be
 
 ---
 <a id="file_d833c436f547"></a>
-FILE_START id=file_d833c436f547 path=.context/brain/MASTER_FLOW.md domain=docs lang=markdown lines=103 bytes=5406 mtime=2026-04-21T23:32:02.383555+00:00 sha1=4969cf2a25c9b50e8091cd149452a1c5517da068
-CHUNK_START id=d833c436f547_c001 start_line=1 end_line=103
+FILE_START id=file_d833c436f547 path=.context/brain/MASTER_FLOW.md domain=docs lang=markdown lines=107 bytes=5912 mtime=2026-04-23T14:41:07.641418+00:00 sha1=e1d7f433195535d0dafdb6ae0a923408328e50fb
+CHUNK_START id=d833c436f547_c001 start_line=1 end_line=107
 ````markdown
 ---
 Criado em: 2026-04-10 23:28
-Ultima Atualizacao: 2026-04-10 23:28
+Ultima Atualizacao: 2026-04-23 11:39
 Status: Ativo
 ---
 
@@ -1912,7 +2458,10 @@ Status: [Ativo | Arquivado | Depreciado]
     │   └── VISION.md                  # Entrada narrativa humana (Input de Visão)
     │
     ├── 🌐 market/                      # CAMADA ESTRATÉGICA (Restrições Externas)
+    │   ├── RAW/                       # Minério Bruto (Humano deposita)
+    │   ├── WIKI/                      # Conhecimento Destilado (Atômico)
     │   ├── SSOT_MAP.md
+    │   ├── wiki_log.md                # Log de Transação (Ingest/Lint)
     │   ├── MARKET_INBOX.md
     │   ├── economics.md
     │   ├── compliance/
@@ -1945,11 +2494,12 @@ Status: [Ativo | Arquivado | Depreciado]
 | Ato | Gatilho | Ferramenta/Script | Saída Esperada |
 |-----|---------|-------------------|----------------|
 | **1. [Semente]** | `INCEPTION.md` ativo + gaps | `npm run context:enrich` | `PRD.md` lastreado + `market/` populado |
-| **2. [Engenharia]** | Criação de `.specs/features/X/` | `qa_signoff: true` no frontmatter | Contrato de Sprint assinado |
-| **3. [Execução]** | `npm run context:harness` + `lint` | `harness_runner.py` + `lint_wiki.py` | Código validado + `STATE.md: ✅ PASSED` |
-| **4. [Rito]** | Merge ou >48h inativo | `npm run context:cleanup` | Spec arquivada + `JOURNAL.md` atualizado |
+| **2. [Engenharia]** | Criação de `.specs/features/X/` | `qa_signoff: true` no frontmatter | Contrato assinado; se `type: standard`, validador em contexto distinto |
+| **3. [Ingestão]** | `RAW/` novo ou `WIKI/` modificado | `npm run context:ingest-guard` | Artigo validado + `wiki_log.md` |
+| **4. [Execução]** | `npm run context:harness` + `lint` | `harness_runner.py` + `lint_wiki.py` | Código validado + `STATE.md: ✅ PASSED` |
+| **5. [Rito]** | Merge ou >48h inativo | `npm run context:cleanup` | Spec arquivada + `JOURNAL.md` atualizado |
 
-> 🤖 [SYSTEM HOOK] IA: Este fluxo é imutável. Não pule o Ato 2. Não gere código sem `qa_signoff`.
+> 🤖 [SYSTEM HOOK] IA: Este fluxo é imutável. Não pule o Ato 2. Não gere código sem `qa_signoff`. Em `type: standard`, `executor_context_id` e `validator_context_id` devem ser diferentes.
 
 ---
 
@@ -2260,12 +2810,12 @@ FILE_END id=file_c94f001202db
 
 ---
 <a id="file_cd6526d17218"></a>
-FILE_START id=file_cd6526d17218 path=.context/brain/RULES.md domain=docs lang=markdown lines=112 bytes=7717 mtime=2026-04-21T21:54:08.043023+00:00 sha1=bf4c1ec50309ac5dfcfd438493ce8247ca23b161
-CHUNK_START id=cd6526d17218_c001 start_line=1 end_line=112
+FILE_START id=file_cd6526d17218 path=.context/brain/RULES.md domain=docs lang=markdown lines=121 bytes=8428 mtime=2026-04-23T16:12:49.465411+00:00 sha1=bda18421976aa89e223cbdfbcbe9a931fba8dbc4
+CHUNK_START id=cd6526d17218_c001 start_line=1 end_line=121
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
-Última Atualização: 2026-04-10 23:55
+Última Atualização: 2026-04-23 11:39
 Status: Ativo
 ---
 
@@ -2306,8 +2856,14 @@ Antes de gerar código de produção ou realizar refatorações, o Agente **DEVE
 ## 🤝 1.1 Regra de Contrato de Sprint (Research-First)
 1. `@spec-driver` gera `spec.md` com bloco YAML de `definition_of_done`.
 2. `@qa-validator` revisa critérios. Se válidos, seta `qa_signoff: true` e `signed_by: "@qa-validator"`.
-3. **Bloqueio:** Se `qa_signoff == false` ou `definition_of_done` estiver vazio, o Harness retorna `Exit 1`.
-4. Nenhuma geração de código ou merge é permitida antes da assinatura.
+3. **Regra v2.5.2:** Se `type: standard`, o `validator_context_id` deve ser diferente do `executor_context_id` para que a assinatura seja valida.
+4. **Bloqueio:** Se `qa_signoff == false`, `definition_of_done` estiver vazio, ou (em `type: standard`) os IDs forem iguais/ausentes, o Harness retorna `Exit 1`.
+5. Nenhuma geração de código ou merge é permitida antes da assinatura.
+
+## 🔄 1.2 Consistência de Versão (SSOT)
+1. `VERSION.md` é a única fonte da verdade para versão do framework.
+2. O pipeline `npm run context:all` executa `check_version_consistency.py` antes das demais validações.
+3. Drift em `package.json`, `INCEPTION.md` ou `VISION.md` bloqueia o pipeline (`Exit 1`).
 
 ---
 
@@ -2364,13 +2920,16 @@ A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é o
 - Se a spec ou PRD contiver ambiguidade técnica, consulte limitando o escopo a Divulgação Progressiva: `npm run context:oracle "sua dúvida"`
 - Nunca assuma. Consulte! Se `confidence < 0.5` -> pause.
 
-## 📖 9. Regra Karpathy (Destilação Mandatória v2.5)
+## 📖 9. Regra Karpathy (Destilação Mandatória v2.5.2)
 O H.O.K utiliza a **Estratificação de Densidade** para evitar o *Context Anxiety*.
 
-1.  **Camada RAW (`market/RAW/`)**: Humano deposita dossiês brutos do NotebookLM. IA operacional NÃO lê esta pasta.
-2.  **Protocolo de Destilação**: IA ou Humano fatia o RAW em átomos na `market/WIKI/` (máx 500 tokens por arquivo).
-3.  **Citação Obrigatória (WIKI)**: Todo arquivo na WIKI DEVE conter `> Fonte: RAW/...` no topo. `npm run context:lint --strict` bloqueia commits em caso de violação.
-4.  **Consulta**: O Oráculo prioriza o `market/WIKI/` para conhecimento externo.
+1.  **Camada RAW (`market/RAW/`)**: Humano deposita dossiês brutos. IA operacional NÃO lê esta pasta.
+2.  **Protocolo de Destilação**: IA fatia o RAW em átomos na `market/WIKI/` (máx 500 tokens por arquivo).
+3.  **Ciclo de Governança Wiki (Nível 2)**:
+    - **INGEST**: Destilação via `@wiki-ingestor`. Requer Frontmatter completo e citação `> Fonte: RAW/...`.
+    - **LINT**: `npm run context:lint-strict` bloqueia artigos sem fonte, takeaways ou estrutura.
+    - **LOG**: Toda transação de ingestão é registrada em `market/wiki_log.md` para rastreabilidade de linhagem.
+4.  **Consulta**: O Oráculo prioriza o `market/WIKI/` via roteamento determinístico (`_index.md`).
 ## 📊 10. Dashboard Health Sync
 - Antes de processar features complexas ou abrir Specs Atômicas, verifique o `.context/monitoring/CONTEXT_HEALTH.md` para assegurar que a janela de tokens e a saúde do Journal não exigem repouso ou manutenção prévia.
 
@@ -2476,10 +3035,12 @@ FILE_END id=file_450d7ec70909
 
 ---
 <a id="file_d2f31e4696a6"></a>
-FILE_START id=file_d2f31e4696a6 path=.context/brain/VISION.md domain=docs lang=markdown lines=42 bytes=7226 mtime=2026-04-21T23:31:32.291938+00:00 sha1=4a538eff2126b2d824abd9d32330a12668af360d
-CHUNK_START id=d2f31e4696a6_c001 start_line=1 end_line=42
+FILE_START id=file_d2f31e4696a6 path=.context/brain/VISION.md domain=docs lang=markdown lines=44 bytes=7254 mtime=2026-04-23T15:26:57.151891+00:00 sha1=43246ab516dda1697b1efe4e634120aebce63c56
+CHUNK_START id=d2f31e4696a6_c001 start_line=1 end_line=44
 ```markdown
 ***
+
+Framework Version: v2.5.2
 
 <!-- 🚨 SYSTEM TRIGGER: IA, NÃO PROSSIGA PARA GERAÇÃO DE CÓDIGO SE OS CAMPOS ABAIXO CONTIVEREM "[TODO]" OU PERGUNTAS. INTERROGUE O HUMANO PRIMEIRO. -->
 > 🤖 **INSTRUÇÃO DE FLUXO:** Antes de propor specs ou código, preencha os campos estratégicos. Se `[TODO]` persistir, retorne ao humano com: `"⚠️ Contexto incompleto em INCEPTION.md/VISION.md. Preciso de: [lista]"`.
@@ -2490,7 +3051,7 @@ Por muito tempo, a indústria de software viveu a lua de mel do *"vibe coding"*.
 
 Diante desse cenário, em 2026, presenciamos uma mudança tectônica. O foco deixou de ser a busca cega por modelos com mais parâmetros e passou a ser o design do ambiente onde esses modelos operam. A resposta não é um modelo melhor; é a **Harness Engineering**. Como bem define Martin Fowler, a equação moderna do desenvolvimento autônomo é simples: **Agente = Modelo + Harness** (onde o *Harness* é todo o ecossistema de restrições, guias e sensores que envolvem o LLM).
 
-Foi sob essa premissa rigorosa que o **Antigravity Kit v2.4.1-Hardened** foi forjado. Não somos um megaconglomerado de tecnologia com infraestruturas infinitas; somos uma solução focada no mundo real de pequenas e médias empresas (PMEs), desenvolvedores solo e *Tech Leads*. Nossa missão é fazer mais com menos, transformando a IA de um gerador de textos caótico em um engenheiro disciplinado através de uma arquitetura determinística e implacável.
+Foi sob essa premissa rigorosa que o **Antigravity Kit v2.5.2-Hardened** foi forjado. Não somos um megaconglomerado de tecnologia com infraestruturas infinitas; somos uma solução focada no mundo real de pequenas e médias empresas (PMEs), desenvolvedores solo e *Tech Leads*. Nossa missão é fazer mais com menos, transformando a IA de um gerador de textos caótico em um engenheiro disciplinado através de uma arquitetura determinística e implacável.
 
 ### A Tríade H.O.K.: O Governador Cibernético
 
@@ -2520,7 +3081,7 @@ O futuro do framework reside na consolidação do **Spec Enricher**, um agente d
 
 ### Conclusão
 
-O H.O.K Forge v2.4.1 fraework não é apenas um *template* de software; é a materialização de uma nova filosofia de trabalho. Aceitamos que IAs são motores estocásticos e falíveis, e ao aceitarmos isso, construímos o chassi de aço que as torna seguras, autônomas e brilhantes. Deixamos de ser digitadores de sintaxe para nos tornarmos arquitetos de intenção e de governança. O código do futuro não será apenas gerado; ele será governado.
+O H.O.K Forge v2.5.2 framework não é apenas um *template* de software; é a materialização de uma nova filosofia de trabalho. Aceitamos que IAs são motores estocásticos e falíveis, e ao aceitarmos isso, construímos o chassi de aço que as torna seguras, autônomas e brilhantes. Deixamos de ser digitadores de sintaxe para nos tornarmos arquitetos de intenção e de governança. O código do futuro não será apenas gerado; ele será governado.
 
 ```
 CHUNK_END id=d2f31e4696a6_c001
@@ -2555,19 +3116,56 @@ FILE_END id=file_9b6470da8849
 
 ---
 <a id="file_019509328844"></a>
-FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=358 bytes=17201 mtime=2026-04-21T23:48:25.722749+00:00 sha1=6ac1d020b3f240d24998f6d9cb16d760ed863290
+FILE_START id=file_019509328844 path=.context/maintenance/JOURNAL.md domain=docs lang=markdown lines=484 bytes=23416 mtime=2026-04-23T18:31:41.954752+00:00 sha1=bd90ab9ecbe4fffe87df6802cc68e0159123010b
 CHUNK_START id=019509328844_c001 start_line=1 end_line=300
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
-Ultima Atualizacao: 2026-04-14 11:50
+Ultima Atualizacao: 2026-04-23 12:06
 Status: Ativo
 ---
 
 # JOURNAL.md
 > Log vivo de decisoes e bugs. (Max 600 linhas)
 
-## 📅 2026-04-21 19:16
+## 📅 2026-04-23 15:31
+**Decisão/Bug:** 🛡️ Hardening do Script de Captura (Anti-Bloat & Privacy).
+**Solução:** 
+1. Atualizado `captura_projeto.py` (v2.5.2) para ignorar globalmente as pastas `_archive_context`, `planos` e `RAW`.
+2. Implementado isolamento cirúrgico para a camada `market/RAW`, impedindo que dossiês de pesquisa pesados contaminem o contexto de codificação da IA.
+3. Sincronizada a versão interna do script com o baseline do projeto.
+**Implicação:** Blindagem definitiva contra "Context Anxiety". A IA agora recebe apenas conhecimento destilado, ignorando o lixo histórico e os planos de rascunho.
+**Evidência Operacional:** `npm run context:capture` gerou `contexto_v2.5.2.md` com sucesso, respeitando as novas exclusões.
+**Handoff:** @antigravity-agent -> @user | Estado: Captura Hardened | Próximo: Encerrar ciclo.
+
+## 📅 2026-04-23 13:14
+**Decisão/Bug:** ✅ Hardening de Consistência de Versão (v2.5.2 Alignment).
+**Solução:** 
+1. Sincronização dos arquivos `README.md` e `README_CONTEXT.md` para refletir o baseline **v2.5.2**.
+2. Atualização das referências de versão no `RULES.md` para precisão técnica.
+3. Validação via pipeline `context:all` garantindo zero drift entre `VERSION.md` e o ecossistema documental.
+**Implicação:** Erradicação de drift narrativo. Futuros agentes operando no framework agora herdam as travas de segurança e regras corretas da v2.5.2 sem ambiguidade.
+**Evidência Operacional:** Execução de `npm run context:all` resultou em `Exit 0`.
+**Handoff:** @antigravity-agent -> @user | Estado: Versão Sincronizada | Próximo: Avaliação Git.
+
+## 📅 2026-04-23 12:06
+**Decisão/Bug:** ✅ v2.5.2 aplicado para segregação de validação em specs `standard`.
+**Solução:**
+1. Criado o template oficial `.specs/_template.md` com os campos `type`, `executor_context_id`, `validator_context_id`, `definition_of_done`, `qa_signoff` e `signed_by`.
+2. Atualizados `brain/MASTER_FLOW.md` e `brain/RULES.md` para formalizar que `type: standard` exige `executor_context_id != validator_context_id` antes de assinatura QA.
+3. Atualizado `.context/_scripts/harness_runner.py` para bloquear (`Exit 1`) specs `standard` com IDs ausentes/nulos/iguais, preservando compatibilidade das specs legadas sem `type`.
+**Implicação:** A assinatura de QA em sprint `standard` passa a exigir proveniência independente de contexto, reduzindo validação auto-referente.
+**Evidência Operacional:** Execução local validada com três cenários (IDs iguais = FAIL; IDs distintos = PASS; spec legado sem `type` = PASS).
+**Handoff:** @qa-validator -> @user | Estado: v2.5.2 aplicado | Próximo: Commit das mudanças.
+
+## 📅 2026-04-22 21:10
+**Decisão/Bug:** 🧠 Salto Evolutivo: Governança por Evidência e Honestidade Técnica (Skills Upgrade).
+**Solução:** 
+1. `hok-governor` (v1.2.0): Injetada a **Lei 8 (Espelhamento de Metadados)** para erradicar drifts narrativos de versão.
+2. `flash-harness` (v1.1.0): Injetado o **Gate de Evidência Operacional** e a **Regra Anti-Leniência**.
+**Implicação:** O framework agora proíbe retórica inflada ("atômico", "seguro") sem prova mecânica e exige visualização de logs/saídas para fechamento de tasks. O Antigravity Kit aprendeu com os erros de drift da release v2.5.1 e codificou a solução no seu "córtex central" (skills).
+**Handoff:** @vision-architect -> @user | Estado: Skills Hardened (v2.5.1 Ready) | Próximo: Novo Ciclo.
+
 **Decisão/Bug:** 🚨 Reforço Estrutural: Correção da Vulnerabilidade de Bypass do Linter (Fail-Closed).
 **Solução:** Alteramos o `harness_runner.py` de "Fail-Open" para "Fail-Closed". Antes, se não houvesse *spec*, o script dava 'skip' e liberava o commit. Agora, a ausência de uma Spec ativada na pasta `.specs/` aciona imediatamente `Exit 1` (BLOQUEIO). A física do projeto tornou-se inflexível quanto ao Contrato de Sprint.
 **Implicação:** Nenhum Agente (nem mesmo o Master) e nenhum Dev pode empurrar código à força bruta para o repositório sem assinar uma spec e colocar o YAML com `definition_of_done` e `qa_signoff: true`.
@@ -2821,6 +3419,11 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
 
+
+```
+CHUNK_END id=019509328844_c001
+CHUNK_START id=019509328844_c002 start_line=301 end_line=484
+```markdown
 ## [HARNESS-PASS] Report | spec:meta-inception
 - **Detalhe:** All contracts valid
 
@@ -2858,11 +3461,6 @@ O sistema garante a idempotencia de eventos cruzado com as webhooks da Stripe.
 - **Detalhe:** All contracts valid
 
 ## [HARNESS-FAIL] Report | spec:_template
-
-```
-CHUNK_END id=019509328844_c001
-CHUNK_START id=019509328844_c002 start_line=301 end_line=358
-```markdown
 - **Detalhe:** sprint_contract: Contrato não assinado pelo @qa-validator (qa_signoff: false)
 
 ## [HARNESS-FAIL] Report | spec:_template
@@ -2922,14 +3520,103 @@ CHUNK_START id=019509328844_c002 start_line=301 end_line=358
 ## [HARNESS-PASS] Report | spec:harness_fail_closed
 - **Detalhe:** All contracts valid
 
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
+
+## [2026-04-22 09:50] release: Antigravity Kit v2.5.0 'Hardened Matrix'
+- **Meta-Ação:** Implementação de SSOT de Versão e Endurecimento de Onboarding (Arquiteto).
+- **Destaques:** 
+  - `version_targets.json` ⮕ Matriz declarativa de sincronia de versão.
+  - `check_version_consistency.py` ⮕ Linter de drift integrado ao pipeline `all`.
+  - `harness_runner.py` ⮕ Poda real de arquivos e fail-closed para `DRAFT` quando há atividade.
+- **Status:** [CONSISTENT & HARDENED]
+- **Próximo:** Iniciar ciclo de desenvolvimento de features sobre fundação v2.5.0.
+
+---
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:harness_fail_closed
+- **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:wiki_level2
+- **Detalhe:** sprint_contract: Bloco de contrato (---) ausente no topo da spec
+
+## [HARNESS-FAIL] Report | spec:wiki_level2
+- **Detalhe:** sprint_contract: Campo definition_of_done obrigatório
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:wiki_level2
+- **Detalhe:** All contracts valid
+
 ```
 CHUNK_END id=019509328844_c002
 FILE_END id=file_019509328844
 
 ---
 <a id="file_d069d4f2ebef"></a>
-FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=102 bytes=963 mtime=2026-04-21T23:48:25.368969+00:00 sha1=e72e2a83a806dbc39f7342158a034a89dc77585f
-CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=102
+FILE_START id=file_d069d4f2ebef path=.context/maintenance/TECHNICAL_REQUIREMENTS.md domain=docs lang=markdown lines=128 bytes=989 mtime=2026-04-23T16:13:09.768560+00:00 sha1=d37f5068cfdd73f955c65746e68629891162e2a9
+CHUNK_START id=d069d4f2ebef_c001 start_line=1 end_line=128
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
@@ -2949,7 +3636,7 @@ Para execução segura dos scripts de governança (Harness e Oracle):
 - **Node.js:** `>= 18.x` (para pacotes de pre-commits automáticos)
 
 <!-- AUTO-SYNC START -->
-*🤖 Atualizado automaticamente em 2026-04-21 20:48*
+*🤖 Atualizado automaticamente em 2026-04-23 13:13*
 
 ### DevDependencies
 - `husky`: `^9.1.7`
@@ -2958,6 +3645,32 @@ Para execução segura dos scripts de governança (Harness e Oracle):
 - `orders`
 
 <!-- AUTO-SYNC END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3061,153 +3774,6 @@ Status: Ativo
 ```
 CHUNK_END id=0858a02cf53f_c001
 FILE_END id=file_0858a02cf53f
-
----
-<a id="file_a5acb6406832"></a>
-FILE_START id=file_a5acb6406832 path=.context/maintenance/_archive_context/prds/PLAN_SPRINT_CONTRACT.md domain=docs lang=markdown lines=23 bytes=1574 mtime=2026-04-17T14:46:46.697733+00:00 sha1=c57f4931bdccf5eafc25fc8edec8a136fd8b4ec7
-CHUNK_START id=a5acb6406832_c001 start_line=1 end_line=23
-```markdown
-# Implantação: Contratos de Sprint
-
-Abaixo documentamos as alterações que faremos no framewok base de governança do H.O.K para erradicar o viés de autoavaliação em Agentes, forçando o acordo do formato final de validação (`Definition of Done`) entre Geração e Code Review.
-
-## Resumo das Modificações (v2.5 Integration)
-
-### 1. Template de Contrato Enxuto e Atômico
-#### `spec.md` (Frontmatter)
-Ao criar `.specs/features/[slug]/spec.md`, o YAML Frontmatter embute o contrato diretamente via variáveis `definition_of_done`, `qa_signoff` e `signed_by`. Isso elimina a necessidade de um arquivo extra e isola o contrato cirurgicamente por Spec.
-
-### 2. Higiene de Roles
-#### `AGENT_REGISTRY.md` 
-Em vez de inchar o roteador com entidades novas, apenas estendemos a capacidade das originais:
-- `@spec-driver` (Responsável pelo Output do YAML com `qa_signoff: false`)
-- `@qa-validator` (Verifica a compatibilidade e injeta a validação `qa_signoff: true`). 
-
-### 3. Governança Teórica
-#### `RULES.md` 
-Adicionada a cláusula `1.1 Regra de Contrato de Sprint (Research-First)` determinando dependência mecânica da aprovação antes da codificação. As saídas de PROMPT_LIBRARY.md também ditam as novas restrições.
-
-### 4. Backpressure Mecânico Leve (Harness Layer)
-#### `harness_runner.py` 
-A injeção do check `check_sprint_contract()` lê diretamente via Parser Stdlib o YAML entre os metadados `---` da Spec na fase de CI/CD. Retorna Falha Letal (Exit 1) se não detectar `qa_signoff: true` ou o campo estrito `signed_by` não estiver atribuído.
-
-```
-CHUNK_END id=a5acb6406832_c001
-FILE_END id=file_a5acb6406832
-
----
-<a id="file_eaebfc593089"></a>
-FILE_START id=file_eaebfc593089 path=.context/maintenance/_archive_context/raw/stripe_docs.md domain=docs lang=markdown lines=4 bytes=184 mtime=2026-04-12T00:21:42.178827+00:00 sha1=a8ca349e81fe936c2d0c8e39de0d94e9f16ae2eb
-CHUNK_START id=eaebfc593089_c001 start_line=1 end_line=4
-```markdown
-# Documentação Webhooks do Stripe
-> Fonte: stripe.com/docs
-
-Para processar pagamentos de forma assíncrona, precisamos lidar com eventos de webhook e validar a assinatura da Stripe.
-
-```
-CHUNK_END id=eaebfc593089_c001
-FILE_END id=file_eaebfc593089
-
----
-<a id="file_618e9f7de1e8"></a>
-FILE_START id=file_618e9f7de1e8 path=.context/maintenance/_archive_context/raw/template_inbox.md domain=docs lang=markdown lines=17 bytes=585 mtime=2026-04-12T00:21:32.947043+00:00 sha1=e7906c232c8df4de3d7839e53291826495d57cd8
-CHUNK_START id=618e9f7de1e8_c001 start_line=1 end_line=17
-````markdown
-# 📚 [TÍTULO DO DOCUMENTO / FONTE]
-
-> **Data de Adição:** YYYY-MM-DD
-> **Fonte Original:** [Link ou Descrição]
-> **Motivador:** Por que isto está no contexto? (Ex: Definir contrato de API, regra de negócio, base de arquitetura)
-
-## Resumo Executivo
-(Uma ou duas frases explicando do que se trata para o RAG/Oracle processar facilmente).
-
----
-
-## Conteúdo / Excertos / Scripts
-Cole abaixo os tutoriais cruéis, referências de código ou diretrizes invioláveis que o AGENT deve usar como "SOT" (Source of Truth) ao sintetizar soluções.
-
-```text
-(Seu conteúdo aqui...)
-```
-
-````
-CHUNK_END id=618e9f7de1e8_c001
-FILE_END id=file_618e9f7de1e8
-
----
-<a id="file_47b9436c72d4"></a>
-FILE_START id=file_47b9436c72d4 path=.context/maintenance/_archive_context/specs/_template_20260421_204026/spec.md domain=docs lang=markdown lines=14 bytes=388 mtime=2026-04-17T14:30:46.316419+00:00 sha1=0a5b02cbff3cb6621902e89623b983f6b6d2a20d
-CHUNK_START id=47b9436c72d4_c001 start_line=1 end_line=14
-```markdown
----
-contract_version: 1.0
-parties: ["@spec-driver", "@qa-validator"]
-definition_of_done:
-  - [ ] Endpoint retorna 200 + payload tipado
-  - [ ] Webhook valida assinatura antes de mutar DB
-  - [ ] Cobertura de testes ≥ 80% (unit + edge cases)
-  - [ ] Zero segredos hardcoded; usa `.env`
-qa_signoff: false
-signed_by: null
----
-
-# 📄 Spec: [Nome da Feature]
-[Restante da spec atômica...]
-
-```
-CHUNK_END id=47b9436c72d4_c001
-FILE_END id=file_47b9436c72d4
-
----
-<a id="file_5f4a4ae13ef8"></a>
-FILE_START id=file_5f4a4ae13ef8 path=.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-12T03:41:44.408070+00:00 sha1=a5e7d0331e8f6f74044d9ae52e4930b5bd648d67
-CHUNK_START id=5f4a4ae13ef8_c001 start_line=1 end_line=5
-```markdown
----
-status: ✅ PASSED
-updated: 2026-04-12 00:41
-detail: All checks passed
----
-
-```
-CHUNK_END id=5f4a4ae13ef8_c001
-FILE_END id=file_5f4a4ae13ef8
-
----
-<a id="file_64bc4e458b6c"></a>
-FILE_START id=file_64bc4e458b6c path=.context/maintenance/_archive_context/specs/hok-advanced-modules_20260414_075508/spec.md domain=docs lang=markdown lines=24 bytes=1573 mtime=2026-04-12T02:10:32.710904+00:00 sha1=4afa0f114364110370467d1033c99a6a49058746
-CHUNK_START id=64bc4e458b6c_c001 start_line=1 end_line=24
-```markdown
-# 🚀 Spec: Automação Extrema H.O.K. (Security, Migrations, State Sync)
-
----
-
-## 🎯 1. Objetivo (O Quê e Por Quê)
-**Por Que:** O nível 3 de Governança (H.O.K.) precisa ser blindado contra vazamentos de tokens (Security), drift de dados (Migrations) e abandono de specs (State Sync).
-**O Quê:** Implementar scanners de segredo, registro de migrações e atualização autônoma do `STATE.md`, roteando tudo nativamente pelo `run_context.py`.
-
-## 📐 2. Escopo Técnico (Como)
-
-### 2.1. Módulos Core
-- `secrets_scanner.py`: Varredura via `git ls-files` para prevenir vazamentos na pipeline. Usa `.secrets-allowlist` para mitigar falsos positivos.
-- `migration_registry.py`: Força a padronização de arquivos `.sql` e cruza a validação com `schema.sql`.
-- `update_state_md`: Incorporado em `harness_runner.py`, muda interativamente o estado final da Spec.
-
-### 2.2. Integração Orquestrador
-- Modificar `run_context.py` para injetar `scan-secrets` e `check-migrations` no loop `all`.
-- Ordem do pipeline: `validate → scan-secrets → sync → check-migrations → harness → lint → health`.
-
-## 🧪 3. Critérios de Aceite (Done)
-- [ ] O `secrets_scanner.py` usa `git ls-files` ou fallback estrito (`src`, `api`, `config`, `.context`).
-- [ ] O `migration_registry.py` exige padrão `001_*.sql` e verifica contra `schema.sql`.
-- [ ] O `harness_runner.py` escreve `✅ PASSED` ou `❌ FAILED` no `STATE.md` desta própria pasta local ao ser acionado.
-- [ ] Todos os novos fluxos são orquestrados no `run_context.py` sem chamadas shell no `package.json`.
-
-```
-CHUNK_END id=64bc4e458b6c_c001
-FILE_END id=file_64bc4e458b6c
 
 ---
 <a id="file_3707c3aa3239"></a>
@@ -3411,6 +3977,38 @@ CHUNK_END id=91d5627a725e_c001
 FILE_END id=file_91d5627a725e
 
 ---
+<a id="file_51ed93c9d8ab"></a>
+FILE_START id=file_51ed93c9d8ab path=.context/maintenance/version_targets.json domain=config lang=json lines=22 bytes=538 mtime=2026-04-22T12:37:34.654694+00:00 sha1=c2279f3056490c43cd112154c87f7b6b97e852ac
+CHUNK_START id=51ed93c9d8ab_c001 start_line=1 end_line=22
+```json
+{
+  "ssot": "VERSION.md",
+  "targets": [
+    {
+      "path": "package.json",
+      "pattern": "\"version\"\\s*:\\s*\"([^\"]+)\"",
+      "mode": "must_match"
+    },
+    {
+      "path": ".context/brain/INCEPTION.md",
+      "pattern": "^version:\\s*([0-9]+\\.[0-9]+(?:\\.[0-9]+)?)\\s*$",
+      "mode": "must_match",
+      "multiline": true
+    },
+    {
+      "path": ".context/brain/VISION.md",
+      "pattern": "^Framework Version:\\s*v?([0-9]+\\.[0-9]+(?:\\.[0-9]+)?)\\s*$",
+      "mode": "must_match",
+      "multiline": true
+    }
+  ]
+}
+
+```
+CHUNK_END id=51ed93c9d8ab_c001
+FILE_END id=file_51ed93c9d8ab
+
+---
 <a id="file_81ef387da7b7"></a>
 FILE_START id=file_81ef387da7b7 path=.context/market/MARKET_INBOX.md domain=docs lang=markdown lines=11 bytes=341 mtime=2026-04-15T19:15:21.935146+00:00 sha1=66adcca82c5eae73d386371aef29795c87e283b3
 CHUNK_START id=81ef387da7b7_c001 start_line=1 end_line=11
@@ -3468,6 +4066,21 @@ CHUNK_END id=65a089176b85_c001
 FILE_END id=file_65a089176b85
 
 ---
+<a id="file_578d56cac1a4"></a>
+FILE_START id=file_578d56cac1a4 path=.context/market/WIKI/_index.md domain=docs lang=markdown lines=5 bytes=100 mtime=2026-04-22T23:08:43.528195+00:00 sha1=49feb4c64bb2f3a2838a667b4e78b5afb009b2e4
+CHUNK_START id=578d56cac1a4_c001 start_line=1 end_line=5
+```markdown
+# WIKI Index Raiz
+> Fonte: SSOT_MAP.md
+
+## Topicos
+- [[conceito_teste]] | tags: ecommerce, checkout
+
+```
+CHUNK_END id=578d56cac1a4_c001
+FILE_END id=file_578d56cac1a4
+
+---
 <a id="file_491684f3a96e"></a>
 FILE_START id=file_491684f3a96e path=.context/market/WIKI/_template.md domain=docs lang=markdown lines=26 bytes=451 mtime=2026-04-21T21:52:58.658989+00:00 sha1=cff3271c1a095ae525f40835ebdcf49adc208d3a
 CHUNK_START id=491684f3a96e_c001 start_line=1 end_line=26
@@ -3504,33 +4117,6 @@ CHUNK_END id=491684f3a96e_c001
 FILE_END id=file_491684f3a96e
 
 ---
-<a id="file_fae1276881db"></a>
-FILE_START id=file_fae1276881db path=.context/market/WIKI/conceito_teste.md domain=docs lang=markdown lines=17 bytes=427 mtime=2026-04-21T21:57:23.511976+00:00 sha1=114401ee57ab919ad7729d6b018f5222d7ac4d16
-CHUNK_START id=fae1276881db_c001 start_line=1 end_line=17
-```markdown
----
-entity: E-commerce
-concept: Expiracao de Transacao
-tags: [ecommerce, checkout, tempo, timeout]
-last_updated: 2026-04-21
-source: RAW/dossie_teste.md
----
-
-# Expiracao de Transacao (Teste Oraculo)
-
-> Fonte: RAW/dossie_teste.md
-
-## Resumo
-Define o tempo limite para a permanência de uma transação pendente no checkout.
-
-## Regras
-- Toda transação no sistema de e-commerce deve expirar após **15 minutos** de inatividade.
-
-```
-CHUNK_END id=fae1276881db_c001
-FILE_END id=file_fae1276881db
-
----
 <a id="file_b5d38697335e"></a>
 FILE_START id=file_b5d38697335e path=.context/market/economics.md domain=docs lang=markdown lines=7 bytes=109 mtime=2026-04-15T17:50:11.975520+00:00 sha1=17852efa34dbaea46351dcabac87aa67286e2e93
 CHUNK_START id=b5d38697335e_c001 start_line=1 end_line=7
@@ -3548,13 +4134,47 @@ CHUNK_END id=b5d38697335e_c001
 FILE_END id=file_b5d38697335e
 
 ---
+<a id="file_c255058b56fe"></a>
+FILE_START id=file_c255058b56fe path=.context/market/wiki_log.md domain=docs lang=markdown lines=24 bytes=1756 mtime=2026-04-23T16:13:10.596559+00:00 sha1=b7c18915dc39c03f69bce97b65f9eff45eb05193
+CHUNK_START id=c255058b56fe_c001 start_line=1 end_line=24
+```markdown
+# Wiki Log (Append-only)
+
+| Timestamp | Mode | Description | Files | Status |
+|-----------|------|-------------|-------|--------|
+| [2026-04-22 20:08] | INIT | INITIALIZED WIKI LEVEL 2 FOUNDATION | _index.md, wiki_log.md | OK |
+| [2026-04-22 20:35] | INGEST | Falha de conformidade Karpathy | market/WIKI/fail_log_test.md | FAIL |
+| [2026-04-22 20:36] | INGEST | Ingestão de 1 artigos | fail_log_test.md | OK |
+| [2026-04-22 20:36] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-22 20:37] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-22 20:37] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-22 20:37] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-22 20:37] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-22 20:47] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-22 20:47] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-22 20:47] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-22 20:48] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-23 11:30] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-23 11:30] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-23 11:44] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-23 11:44] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-23 11:45] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-23 11:45] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-23 13:13] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
+| [2026-04-23 13:13] | LINT | Integridade epistemológica validada | - | OK |
+
+```
+CHUNK_END id=c255058b56fe_c001
+FILE_END id=file_c255058b56fe
+
+---
 <a id="file_068a21d64bec"></a>
-FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1506 mtime=2026-04-21T23:48:26.622699+00:00 sha1=0a34d8d770aeff418828ea757a28f4b529923ed5
+FILE_START id=file_068a21d64bec path=.context/monitoring/CONTEXT_HEALTH.md domain=docs lang=markdown lines=38 bytes=1506 mtime=2026-04-23T16:13:10.880297+00:00 sha1=81c613e83d0d6f6a61cd5b1158fcf5173268a56c
 CHUNK_START id=068a21d64bec_c001 start_line=1 end_line=38
 ```markdown
 ---
 Criado em: 2026-04-10 20:50
-Ultima Atualizacao: 2026-04-21 20:48
+Ultima Atualizacao: 2026-04-23 13:13
 Status: Ativo
 ---
 
@@ -3566,15 +4186,15 @@ Status: Ativo
 | Metrica | Valor Atual | Limite Ideal | Pilar | Status |
 | :--- | :--- | :--- | :--- | :--- |
 | **Manutencao** | | | | |
-| Linhas do Journal | 358 | 600 | Tracker | [OK] |
-| Carga do Journal | 16k chars | 50k chars | Tracker | [OK] |
+| Linhas do Journal | 464 | 600 | Tracker | [OK] |
+| Carga do Journal | 21k chars | 50k chars | Tracker | [OK] |
 | **Cognitivo** | | | | |
-| Estimativa Tokens | ~36k | 128k (Max) | Eficiencia | [OK] |
+| Estimativa Tokens | ~41k | 128k (Max) | Eficiencia | [OK] |
 | **Consistencia** | | | | |
 | Tabelas no Schema | 1 | N/A | DB-First | [OK] |
 | Migrations Pendentes | 1 file(s) | N/A | DB-First | [OK] |
 | Ultimo Harness | Role Check | Pass/Fail | Integridade | [PASS] |
-| Ultima Sincronia | 2026-04-21 20:48 | Real-Time | Automacao | [OK] |
+| Ultima Sincronia | 2026-04-23 13:13 | Real-Time | Automacao | [OK] |
 <!-- HEALTH_TABLE_END -->
 
 ---
@@ -3614,65 +4234,6 @@ Este arquivo é a "memória de curto prazo" do H.O.K Governor. Toda ferramenta e
 ```
 CHUNK_END id=c6d44cc7da35_c001
 FILE_END id=file_c6d44cc7da35
-
----
-<a id="file_e824b208c3a2"></a>
-FILE_START id=file_e824b208c3a2 path=.context/planos/PHASE_3_KARPATHY_WIKI.md domain=docs lang=markdown lines=49 bytes=2717 mtime=2026-04-21T17:51:48.426815+00:00 sha1=091fec4d117d03dad6a137e4f07dfc219a95f4d6
-CHUNK_START id=e824b208c3a2_c001 start_line=1 end_line=49
-```markdown
-# [Fase 3] Karpathy Wiki Hardening (H.O.K v2.5 - Production Ready)
-
-Plano de engenharia final aprovado para implementação futura. Ele implementa a Wiki de Karpathy no `.context` garantindo **Zero RAG Analytics** com resiliência à prova do modelo Flash.
-
-## Status: SALVO PARA EXECUÇÃO FUTURA (Aguardando GO)
-
----
-
-## Proposed Changes
-
-### [Componente: Estrutura Física]
-
-#### [NEW] .context/market/RAW/ e .context/market/WIKI/
-*   **Aresta:** Serão criados com `.gitkeep`.
-*   **Regras:** `RAW/` será blindado contra leitura da IA e ignorado nos pacotes.
-*   **Template (`WIKI/_template.md`):** Arquivo mestre injetado contendo o YAML com `entity`, `concept`, `tags` e a exigência mandatória da linha `> Fonte: RAW/...`.
-
----
-
-### [Componente: Lógica e Consulta]
-
-#### [MODIFY] .context/_scripts/context_oracle.py
-O script sofrerá uma refatoração cirúrgica em sua inteligência de busca:
-1.  **Limitação (Privileged Isolation):** Pesquisará **apenas** em `market/WIKI` e `market/compliance`.
-2.  **Triple-Match Heuristic:** O *score* de confiança considerará 1º Tags/Frontmatter, 2º Nome do arquivo, 3º Início do conteúdo.
-3.  **Anti-Bloat Lock:** Retornará **exclusivamente 1 arquivo completo** (o *top match*), impedindo sobrecarga invisível.
-4.  **Graceful Fallback:** Se a pesquisa for sobre o código base da aplicação (ex: auth do database), e não houver retorno na WIKI, o script não mais "falha e sai", ele devolverá uma mensagem limpa instruindo a IA: `"[INFO] Termo não encontrado no WIKI (Mercado). Use seu bundle ou busque no schema/PRD."`
-
----
-
-### [Componente: Automação e Linting]
-
-#### [MODIFY] .context/_scripts/lint_wiki.py
-*   **Regra Karpathy Automática:** Injeção de uma checagem que fará o commit falhar se um manifesto na pasta `WIKI/` esquecer a fita de auditoria. Todo arquivo `WIKI/*.md` será escaneado por `> Fonte: RAW/` ou `> Fonte: market/RAW/`.
-
-#### [MODIFY] .context/brain/RULES.md
-*   Adição da seção **Protocolo de Destilação (RAW → WIKI)**, formalizando o contrato de que "Humanos lidam com o RAW, Agentes e Lint lidam com WIKI".
-
-#### [MODIFY] .context/_scripts/captura_projeto.py (ou equivalente de bundle)
-*   Assegurar que a regra de exclusão (ignore list) bloqueia a pastar `market/RAW/` de ser lida durante a construção do prompt gigantesco do projeto.
-
----
-
-## Verification Plan
-
-### Automated Tests
-1. Script injetará WIKI sem fita de auditoria → O Linter DEVE barrar.
-2. Script injetará WIKI com Frontmatter e Tags, testando o `context_oracle.py` contra as tags → DEVE retornar o arquivo inteiro sem erros de JSON.
-3. Oráculo consultando termos internos (ex: `postgres`) → DEVE devolver a mensagem de Fallback.
-
-```
-CHUNK_END id=e824b208c3a2_c001
-FILE_END id=file_e824b208c3a2
 
 ---
 <a id="file_37fb63b0fac5"></a>
@@ -3980,13 +4541,48 @@ CHUNK_END id=3adfd36c1559_c001
 FILE_END id=file_3adfd36c1559
 
 ---
+<a id="file_b838611f038c"></a>
+FILE_START id=file_b838611f038c path=.specs/_template.md domain=docs lang=markdown lines=25 bytes=671 mtime=2026-04-23T15:03:29.252894+00:00 sha1=2a614c9cd5347bb1019dff4d36733eb19cc91f7d
+CHUNK_START id=b838611f038c_c001 start_line=1 end_line=25
+```markdown
+---
+contract_version: 2.5.2
+parties: ["@spec-driver", "@qa-validator"]
+type: standard
+executor_context_id: "ctx-dev-YYYYMMDD-HHMM"
+validator_context_id: "ctx-qa-YYYYMMDD-HHMM"
+definition_of_done:
+  - [ ] Requisito 1
+  - [ ] Requisito 2
+qa_signoff: false
+signed_by: null
+---
+
+# 📄 Spec: [Nome da Feature]
+
+## 🎯 Objetivo
+[Descreva o que sera construido.]
+
+## ✅ Criterios de aceite
+- [ ] O requisito principal foi implementado.
+- [ ] Testes e/ou validacoes manuais executadas.
+- [ ] Resultado registrado no STATE.md.
+
+## 🔎 Regra de segregacao
+- Se `type: standard`, o `validator_context_id` deve ser diferente do `executor_context_id` antes de `qa_signoff: true`.
+
+```
+CHUNK_END id=b838611f038c_c001
+FILE_END id=file_b838611f038c
+
+---
 <a id="file_d4f64fc3b549"></a>
-FILE_START id=file_d4f64fc3b549 path=.specs/features/harness_fail_closed/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-21T23:48:25.724752+00:00 sha1=d97cc6f9c462384b12cfcc3a8e8ca84acdd950d6
+FILE_START id=file_d4f64fc3b549 path=.specs/features/harness_fail_closed/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-22T23:02:55.455444+00:00 sha1=a627e9b0e39cebcd966bff38fff2869fb72544c9
 CHUNK_START id=d4f64fc3b549_c001 start_line=1 end_line=5
 ```markdown
 ---
 status: ✅ PASSED
-updated: 2026-04-21 20:48
+updated: 2026-04-22 20:02
 detail: All checks passed
 ---
 
@@ -4074,6 +4670,139 @@ CHUNK_END id=9801af51c558_c001
 FILE_END id=file_9801af51c558
 
 ---
+<a id="file_638d6695a3f1"></a>
+FILE_START id=file_638d6695a3f1 path=.specs/features/wiki_level2/STATE.md domain=docs lang=markdown lines=5 bytes=79 mtime=2026-04-23T16:13:10.105855+00:00 sha1=148beb1b31b7c84b24afa16b4a71d25cf71264bb
+CHUNK_START id=638d6695a3f1_c001 start_line=1 end_line=5
+```markdown
+---
+status: ✅ PASSED
+updated: 2026-04-23 13:13
+detail: All checks passed
+---
+
+```
+CHUNK_END id=638d6695a3f1_c001
+FILE_END id=file_638d6695a3f1
+
+---
+<a id="file_86778e912e18"></a>
+FILE_START id=file_86778e912e18 path=.specs/features/wiki_level2/spec.md domain=docs lang=markdown lines=43 bytes=1834 mtime=2026-04-22T23:11:15.675831+00:00 sha1=71be78a7b5b40a5dd98bb2d0f899312d14766a6d
+CHUNK_START id=86778e912e18_c001 start_line=1 end_line=43
+```markdown
+---
+id: wiki_level2
+status: DRAFT
+qa_signoff: true
+signed_by: "@qa-validator"
+version: 1.0.0
+definition_of_done:
+  - "npm run context:all verde"
+  - "fallback lexical funcional"
+  - "artigos sem fonte bloqueados"
+---
+
+# Spec: Nível 2 Karpathy Wiki (Market Layer)
+
+## 🎯 Objetivo
+Implantar o Nível 2 da Wiki de Mercado (Karpathy Paradigm) focado em roteamento determinístico, guardrails de ingestão e lint incremental sem regressão no pipeline v2.5.0.
+
+## 📋 Requisitos (Rastreabilidade)
+
+### 1. Camada de Roteamento (ORACLE)
+- **ORACLE-01**: Implementar cascata de busca: `SSOT_MAP.md` -> `WIKI/_index.md` -> Fallback Lexical.
+- **ORACLE-02**: Retorno integral de arquivos MD para evitar truncamento cognitivo.
+- **ORACLE-03**: Fallback seguro (exit 2) com warning explícito em caso de baixa confiança.
+
+### 2. Contrato de Ingestão (GUARD)
+- **GUARD-01**: Criar `ingest_wiki_guard.py` para validar schema MD (Frontmatter + Fonte + Takeaways).
+- **GUARD-02**: Registro obrigatório de toda transação em `market/wiki_log.md`.
+- **GUARD-03**: Fast-path (exit 0) se a pasta estiver vazia (pre-onboarding).
+
+### 3. Governança e Qualidade (LINT)
+- **LINT-01**: Atualizar `lint_wiki.py` com flag `--strict` bloqueante para diretrizes Karpathy.
+- **LINT-02**: Integração no `npm run context:all` como gate obrigatório.
+- **LINT-03**: Health check estrutural em `validate_context.py` (check de existência do índice).
+
+## 📐 Design
+- **Localização**: `.context/market/WIKI/`
+- **Índice Mestre**: `.context/market/WIKI/_index.md`
+- **Scripting**: Python 3 (No external dependencies)
+
+## ✅ Critérios de Aceitação
+1. `npm run context:all` deve passar com 100% de sucesso.
+2. `npm run context:oracle` com termo inexistente deve disparar fallback e aviso.
+3. Artigo sem `> Fonte: RAW/...` deve ser bloqueado pelo lint.
+
+```
+CHUNK_END id=86778e912e18_c001
+FILE_END id=file_86778e912e18
+
+---
+<a id="file_fafce66dc671"></a>
+FILE_START id=file_fafce66dc671 path=.specs/features/wiki_level2/tasks.md domain=docs lang=markdown lines=55 bytes=2460 mtime=2026-04-22T23:32:40.379948+00:00 sha1=161c580635c9ecd7ba0d68aa9fab0db1d788b1af
+CHUNK_START id=fafce66dc671_c001 start_line=1 end_line=55
+```markdown
+# Tasks: Wiki Level 2
+
+Rifa de tarefas atômicas para implementação do paradigma Karpathy Wiki.
+
+---
+
+## [Phase 1] Foundation & Logs
+- [x] **TASK-01**: Criar arquivos base da Wiki.
+  - Criar `.context/market/WIKI/_index.md` (root index).
+  - Criar `.context/market/wiki_log.md` (append-only log).
+  - *Verify*: `ls .context/market/WIKI/_index.md`
+- [x] **TASK-02**: Atualizar documentação de governança.
+  - Injetar fluxo INGEST -> LINT -> LOG em `RULES.md` e `MASTER_FLOW.md`.
+  - *Verify*: Check manual dos arquivos.
+
+## [Phase 2] Oracle Cascade
+- [x] **TASK-03**: Patch cirúrgico em `context_oracle.py`.
+  - Injetar lógica de busca SSOT -> Index -> Lexical.
+  - *Verify*: `python .context/_scripts/context_oracle.py "test"` deve retornar fallback (exit 2).
+
+## [Phase 3] Guard & Lint
+- [x] **TASK-04**: Implementar `ingest_wiki_guard.py`.
+  - Validação de schema (Frontmatter, Fonte, Takeaways).
+  - *Verify*: Rodar contra um mock inválido e esperar falha.
+- [x] **TASK-05**: Atualizar `lint_wiki.py` para modo `--strict`.
+  - Bloqueio de artigos sem meta-dados Karpathy.
+  - *Verify*: `python .context/_scripts/lint_wiki.py --strict`
+- [x] **TASK-06**: Integrar no pipeline Central.
+  - Atualizar `run_context.py` e `package.json` com novos comandos.
+  - *Verify*: `npm run context:all` verde.
+
+## [Phase 4] Health Check
+- [x] **TASK-07**: Patch em `validate_context.py`.
+  - Injetar `check_wiki_integrity()`.
+  - *Verify*: `npm run context:wiki-health`
+
+## [Phase 5] Traceability & Hotfix v2.5.1
+- [ ] **TASK-08**: Criar utilitário de log robusto.
+  - Criar `.context/_scripts/_wiki_log_utils.py` (atomic append + escape).
+  - *Verify*: Script manual de teste de escrita.
+- [ ] **TASK-09**: Instrumentar Ingestão e Lint.
+  - Patches em `ingest_wiki_guard.py` e `lint_wiki.py`.
+  - *Verify*: Validar entradas `OK/FAIL/SKIP` no log.
+- [ ] **TASK-10**: Instrumentar Oráculo (Resumo de Query).
+  - Patch em `context_oracle.py`.
+  - *Verify*: `npm run context:oracle` gera log.
+- [ ] **TASK-11**: Validação Operacional (Stress Test).
+  - Testar fluxo de erro e correção real.
+  - *Verify*: `wiki_log.md` preenchido corretamente.
+- [ ] **TASK-12**: Release Bump v2.5.1 (Global SSOT).
+  - Atualizar VERSION.md, package.json, Inception e Vision.
+  - *Verify*: `npm run context:check-version`.
+- [ ] **TASK-13**: Refatoração Factual do Walkthrough.
+  - Sincronizar narrativa com a realidade operacional.
+  - *Verify*: Leitura final do artefato.
+
+```
+CHUNK_END id=fafce66dc671_c001
+FILE_END id=file_fafce66dc671
+
+---
 <a id="file_95dabcdf3543"></a>
 FILE_START id=file_95dabcdf3543 path=GUIA_ESTABILIZACAO_NOTEBOOKLM.md domain=docs lang=markdown lines=56 bytes=2342 mtime=2026-04-16T01:24:16.342106+00:00 sha1=42fda535b309349df1a8c83c959f0cc2e534875a
 CHUNK_START id=95dabcdf3543_c001 start_line=1 end_line=56
@@ -4141,10 +4870,10 @@ FILE_END id=file_95dabcdf3543
 
 ---
 <a id="file_8ec9a00bfd09"></a>
-FILE_START id=file_8ec9a00bfd09 path=README.md domain=docs lang=markdown lines=97 bytes=4687 mtime=2026-04-17T02:54:18.326312+00:00 sha1=d90edde9bce80b7d3ab4b7c3663171d4c9ed3806
+FILE_START id=file_8ec9a00bfd09 path=README.md domain=docs lang=markdown lines=97 bytes=4687 mtime=2026-04-23T16:12:13.144613+00:00 sha1=23e3abb6e9ba9b868808626442bbec6112a64a74
 CHUNK_START id=8ec9a00bfd09_c001 start_line=1 end_line=97
 ````markdown
-# 🛸 Antigravity Kit v2.4.1 Hardened (H.O.K. Enabled)
+# 🛸 Antigravity Kit v2.5.2 Hardened (H.O.K. Enabled)
 > **O ecossistema definitivo para engenharia AI-Ready: Governança Macro + Execução Atômica + Controle Ativo.**
 
 Este repositório é um **Template Semente** desenhado para projetos que utilizam IA como parceira de codificação. Ele unifica o **Antigravity Kit** com o **TLC Spec-Driven** e eleva a governança ao **Nível 3 (H.O.K.)**, garantindo que Propósito → Execução → Validação operem em loop fechado e autônomo.
@@ -4196,7 +4925,7 @@ bash init_ai_project.sh
 
 ---
 
-## 🚀 Comandos de Operação (v2.4.1)
+## 🚀 Comandos de Operação (v2.5.2)
 | Comando | Descrição |
 |---------|-----------|
 | `npm run context:validate` | Checa integridade, estrutura e estimativa de tokens |
@@ -4248,13 +4977,13 @@ FILE_END id=file_8ec9a00bfd09
 
 ---
 <a id="file_4efb6293109d"></a>
-FILE_START id=file_4efb6293109d path=README_CONTEXT.md domain=docs lang=markdown lines=124 bytes=6147 mtime=2026-04-17T02:44:29.651973+00:00 sha1=8bac7d41d2d4d10afd0d0506792f2349f0ccfd36
+FILE_START id=file_4efb6293109d path=README_CONTEXT.md domain=docs lang=markdown lines=124 bytes=6147 mtime=2026-04-23T16:12:19.354400+00:00 sha1=1d7fc538fa85b139c3882b3f40c7525e7ed5429f
 CHUNK_START id=4efb6293109d_c001 start_line=1 end_line=124
 ````markdown
 ---
 Criado em: 2026-04-10 22:45
 Ultima Atualizacao: 2026-04-11 23:30
-Status: Ativo (v2.4.1)
+Status: Ativo (v2.5.2)
 ---
 
 # 📖 README_CONTEXT.md — Guia de Operação do Framework
@@ -4269,7 +4998,7 @@ O diretório `.context/` é a **Fonte Unica da Verdade (SSOT)** do projeto. Ele 
 
 **Regra de Ouro:** `Se nao esta no .context, nao existe. O codigo deve ser o reflexo fiel do contexto.`
 
-## 🧩 Novos Pilares de Operação (v2.4.1+)
+## 🧩 Novos Pilares de Operação (v2.5.2+)
 - **🛡️ Harness:** O pipeline aborta automaticamente se uma Spec referenciar tabelas/campos inexistentes no `schema.sql` ou se handoffs estiverem incompletos.
 - **🔍 Oracle:** Ao detectar ambiguidade, execute `npm run context:oracle "sua pergunta"`. Retorno com `confidence < 0.5` pausa o fluxo e exige `[oracle:uncertain]` no `JOURNAL.md`.
 - **📖 Karpathy:** Todo claim técnico adicionado ao `.context/` deve conter `> Fonte: raw/nome-arquivo.md`. O `pre-commit` roda em modo `--strict` e rejeita commits sem citação.
@@ -4321,7 +5050,7 @@ O diretório `.context/` é a **Fonte Unica da Verdade (SSOT)** do projeto. Ele 
 
 ---
 
-## ⚙️ 5. Comandos Rápidos (Cheat Sheet v2.4.1)
+## ⚙️ 5. Comandos Rápidos (Cheat Sheet v2.5.2)
 ```bash
 # Validar integridade + estimar tokens
 npm run context:validate
@@ -4451,20 +5180,19 @@ FILE_END id=file_19e76e009f38
 
 ---
 <a id="file_f6f7100f063b"></a>
-FILE_START id=file_f6f7100f063b path=VERSION.md domain=docs lang=markdown lines=11 bytes=648 mtime=2026-04-21T22:00:44.995971+00:00 sha1=df3f5db87f81f17cbfe8be9abe712d476971a14c
-CHUNK_START id=f6f7100f063b_c001 start_line=1 end_line=11
+FILE_START id=file_f6f7100f063b path=VERSION.md domain=docs lang=markdown lines=10 bytes=537 mtime=2026-04-23T15:08:13.037173+00:00 sha1=8f9a8ce10e35a27487d66c85490f535adcdb2d5a
+CHUNK_START id=f6f7100f063b_c001 start_line=1 end_line=10
 ```markdown
 # 🛸 Antigravity Kit Versioning
-v2.5
-Dash: [Antigravity Kit v2.5 - Karpathy Hardened]
+v2.5.2
+Dash: [Antigravity Kit v2.5.2 - Independent QA Segregation]
 Audit Status: ✅ PASSED
-Release Date: 2026-04-21
+Release Date: 2026-04-23
 
 📜 Changelog:
-- **[Governança Ativa]** Implementado Protocolo "Anti-Atropelo" (Flash Harness) com `TRIVIAL` bypass.
-- **[Zero RAG]** Implementado Karpathy Wiki (Fase 3). Separação estrutural `market/RAW/` e `market/WIKI/`.
-- **[Oráculo Determinístico v2.5]** Bibliotecário restrito apenas ao escopo WIKI/Compliance, retornando **arquivos na íntegra** (Triple-Match Heuristic).
-- **[Lint Epistemológico]** Rastreador Karpathy ativo em modo strict-bloqueador para a pasta de inteligência de mercado.
+- **[Segregação QA]** Specs `type: standard` exigem `executor_context_id != validator_context_id` no harness.
+- **[Contrato de Sprint]** Template oficial `.specs/_template.md` atualizado com campos de proveniência e assinatura.
+- **[Hook Estável]** Pre-commit em modo read-only (`check-version`, `validate`, `scan-secrets`) para evitar drift automático em cadeia.
 
 ```
 CHUNK_END id=f6f7100f063b_c001
@@ -4621,7 +5349,7 @@ FILE_END id=file_1f98938d3cd9
 
 ---
 <a id="file_c3916196f58f"></a>
-FILE_START id=file_c3916196f58f path=captura_projeto.py domain=source lang=python lines=428 bytes=17796 mtime=2026-04-15T17:50:48.490335+00:00 sha1=6daa595e9a20d6ad7dc4d5f51479222aaf235f05
+FILE_START id=file_c3916196f58f path=captura_projeto.py domain=source lang=python lines=429 bytes=17844 mtime=2026-04-23T18:31:18.210183+00:00 sha1=6108c27d0315281c1f40bec72da49685422fdcc9
 CHUNK_START id=c3916196f58f_c001 start_line=1 end_line=300
 ```python
 #!/usr/bin/env python3
@@ -4640,7 +5368,7 @@ from datetime import datetime, timezone
 from fnmatch import fnmatch
 from pathlib import Path
 
-VERSION = "2.4.1"
+VERSION = "2.5.2"
 
 # 🛠️ CUSTOMIZE AQUI: Padrões universais + adicione os específicos do seu projeto
 PASTAS_IGNORAR = {
@@ -4649,6 +5377,7 @@ PASTAS_IGNORAR = {
     ".next", ".nuxt", ".vercel", ".netlify", ".vite", ".cache",
     ".vscode", ".idea", ".cursor", "coverage", ".pytest_cache",
     "captura_projeto", # 📝 Ignorar a própria pasta do utilitário
+    "_archive_context", "planos", "RAW",
 }
 
 ARQUIVOS_IGNORAR = {
@@ -4831,7 +5560,7 @@ def collect_files(config: BundleConfig) -> tuple[FileRecord, ...]:
         # 🛡️ Isolamento Cirúrgico (v2.4.1): Ignora pastas densas específicas
         rel_dir = current.relative_to(root).as_posix()
         if rel_dir == ".context/market":
-            dirnames[:] = [d for d in dirnames if d not in {"compliance", "research"}]
+            dirnames[:] = [d for d in dirnames if d not in {"compliance", "research", "RAW"}]
 
         if config.only_core:
             dirnames[:] = sorted(d for d in dirnames if (d in PASTAS_CORE or not is_root) and d not in PASTAS_IGNORAR)
@@ -4923,12 +5652,12 @@ def get_dynamic_filename(config: BundleConfig) -> str:
         return config.output
     
     base = "contexto"
-    ver = f"_v{VERSION}"
 
 ```
 CHUNK_END id=c3916196f58f_c001
-CHUNK_START id=c3916196f58f_c002 start_line=301 end_line=428
+CHUNK_START id=c3916196f58f_c002 start_line=301 end_line=429
 ````python
+    ver = f"_v{VERSION}"
     suffix = ""
     if config.toc_only: suffix += "_toc"
     if config.only_core: suffix += "_core"
@@ -5200,12 +5929,12 @@ FILE_END id=file_c59135753d26
 
 ---
 <a id="file_7030d0b2f71b"></a>
-FILE_START id=file_7030d0b2f71b path=package.json domain=config lang=json lines=34 bytes=1232 mtime=2026-04-15T19:13:58.308600+00:00 sha1=dc707667997b95d8b8900b73c970f7356df992ef
-CHUNK_START id=7030d0b2f71b_c001 start_line=1 end_line=34
+FILE_START id=file_7030d0b2f71b path=package.json domain=config lang=json lines=38 bytes=1494 mtime=2026-04-23T15:08:31.764449+00:00 sha1=d790fbee1062be196684ab2ca82037ffc394e56a
+CHUNK_START id=7030d0b2f71b_c001 start_line=1 end_line=38
 ```json
 {
   "name": "ai-context-governance-template",
-  "version": "2.4.1",
+  "version": "2.5.2",
   "description": "AI-Ready Template with Layered Context Governance & Spec-Driven Execution",
   "scripts": {
     "context:validate": "python run_context.py validate",
@@ -5214,11 +5943,15 @@ CHUNK_START id=7030d0b2f71b_c001 start_line=1 end_line=34
     "context:purge": "python run_context.py purge",
     "context:harness": "python run_context.py harness",
     "context:lint": "python run_context.py lint",
+    "context:lint-strict": "python run_context.py lint-strict",
     "context:oracle": "python run_context.py oracle",
     "context:health": "python run_context.py health",
     "context:scan-secrets": "python run_context.py scan-secrets",
     "context:check-migrations": "python run_context.py check-migrations",
+    "context:check-version": "python run_context.py check-version",
     "context:enrich": "python run_context.py enrich",
+    "context:ingest-guard": "python run_context.py ingest-guard",
+    "context:wiki-health": "python run_context.py wiki-health",
     "context:capture": "python captura_projeto.py --emit-symbol-index --emit-import-map",
     "context:all": "python run_context.py all",
     "context:test": "python tests/test_context.py",
@@ -5243,1374 +5976,13 @@ CHUNK_END id=7030d0b2f71b_c001
 FILE_END id=file_7030d0b2f71b
 
 ---
-<a id="file_7c2f50daa3f4"></a>
-FILE_START id=file_7c2f50daa3f4 path=planos/RESEARCH_NOTE_SPRINT_CONTRACTS.md domain=docs lang=markdown lines=19 bytes=1321 mtime=2026-04-15T20:04:35.439521+00:00 sha1=c5f557bd5f78146273a135f13f0d6ec82bcd5088
-CHUNK_START id=7c2f50daa3f4_c001 start_line=1 end_line=19
-```markdown
-# 🕵️‍♂️ Research: Harness Engineering & Sprint Contracts
-> Fonte: Anthropic Engineering Blog & Waldemar Neto (Dev Lab)
-
-## 1. O Problema: O Limite do Spec-Driven
-O desenvolvimento guiado apenas por especificações (*Spec-Driven*) atinge um teto de vidro em projetos de longa duração. A amnésia do modelo e a falta de restrições externas levam ao "Vibe Coding", onde o código parece correto, mas degrada a arquitetura.
-
-## 2. A Solução: Harness Engineering
-O **Harness (Armadura)** é o ecossistema que envolve a IA. Ele não pede permissão; ele impõe validade.
-- **Veredito Binário:** O Harness (testes, lints, schemas) deve retornar `0/1`. O agente não é o juiz de sua própria qualidade.
-- **Restrição de Execução:** O código só é aceito se passar na "Armadura".
-
-## 3. Contratos de Sprint (O Ritual)
-Antes de gerar código, o **@qa-validator** e o **@spec-driver** negociam um contrato:
-- **Harness Spec:** Quais testes automatizados devem estar verdes?
-- **DoD (Definition of Done):** Critérios de aceite inegociáveis.
-- **Custo/Complexidade:** Acerto de expectativas de tokens e infraestrutura.
-
-## 4. Aplicação no Antigravity Kit
-O pipeline deve ser interrompido (`Exit 2`) se o Contrato de Sprint não estiver assinado, garantindo que a execução seja sempre **Safety-First**.
-
-```
-CHUNK_END id=7c2f50daa3f4_c001
-FILE_END id=file_7c2f50daa3f4
-
----
-<a id="file_80252595b07f"></a>
-FILE_START id=file_80252595b07f path=planos/_arquivo_planos/DIRECTIVA_V2.4.1_HARDENED.md domain=docs lang=markdown lines=174 bytes=8421 mtime=2026-04-15T17:41:55.756194+00:00 sha1=7b18093a0456bf1be767656576630ad229da9324
-CHUNK_START id=80252595b07f_c001 start_line=1 end_line=174
-````markdown
-# Plano de Implementação: Antigravity Kit v2.4.1-Hardened
-
-Este plano detalha a aplicação da **Diretiva de Implementação v2.4.1-Hardened**, focando em patches cirúrgicos, segurança fail-fast e ativação da governança estratégica (Inception/Market).
-
-## 🗺️ Mapa Visual da Arquitetura
-
-Para garantir o entendimento determinístico da ordem temporal e lógica, os diagramas abaixo regem o comportamento dos agentes.
-
-### 1. Fluxo de Execução Fail-Fast (`run_context.py`)
-*O pipeline é uma esteira crítica. Qualquer falha em segurança, sincronia ou contrato interrompe o fluxo imediatamente.*
-
-```mermaid
-graph TD
-    Start([npm run context:all]) --> Validate[1. validate_context.py]
-    Validate -->|FAIL| Error([❌ EXIT 1: Build Quebrado])
-    Validate -->|Integrity OK| Secrets[2. secrets_scanner.py]
-    Secrets -->|FAIL: Hits Found| Error
-    Secrets -->|Clean| Sync[3. sync_project.py]
-    Sync -->|FAIL| Error
-    Sync -->|Updated| Migrations[4. migration_registry.py]
-    Migrations -->|FAIL: Order Broken| Error
-    Migrations -->|Order OK| Harness{5. harness_runner.py}
-    
-    Harness -->|FAIL: Strategy/Schema| Error
-    Harness -->|PASS: All Contracts| Lint[6. lint_wiki.py --strict]
-    
-    Lint -->|FAIL: Missing Source| Error
-    Lint -->|Citations OK| Health[7. health_sync.py]
-    Health -->|Updated| Done([✅ DONE: Pipeline Sucesso])
-```
-
-### 2. A Máquina de Estados do Projeto (`RULES.md`)
-*Define o modo operacional e os critérios de transição de maturidade.*
-
-```mermaid
-stateDiagram-v2
-    [*] --> BOOTSTRAP
-    
-    BOOTSTRAP: [BOOTSTRAP]
-    note right of BOOTSTRAP
-      Foco: Estrutura, Scripts, 
-      Inception e Market Setup.
-      Regras: Validação de diretórios.
-    end note
-    
-    BOOTSTRAP --> HARDENING: JOURNAL Entry + Context Pass + Harness Validated
-    HARDENING: [HARDENING]
-    note right of HARDENING
-      Foco: Segurança, CI/CD, 
-      Scanners e Estabilidade.
-      Regras: Zero falhas no Harness Pipeline.
-    end note
-    
-    HARDENING --> PRODUCTION: Zero falhas em N sessões + Baseline v2.4.1
-    PRODUCTION: [PRODUCTION]
-    note right of PRODUCTION
-      Foco: Features Reais.
-      Market/ vira fonte estratégica prioritária (SSOT_MAP).
-    end note
-```
-
-### 3. O Rito do Spec Enricher (Concepção → Execução)
-*Inclui o estado Exit 2 para pesquisa pendente e o fluxo de incepção estratégica.*
-
-```mermaid
-sequenceDiagram
-    participant Human
-    participant Vision as @vision-architect
-    participant Inception as INCEPTION.md
-    participant Market as MARKET/ Folders
-    participant Enricher as @spec-enricher
-    participant PRD as PRD.md
-
-    Human->>Vision: "Tenho uma ideia para X"
-    Vision->>Inception: Escreve [Boundaries] (- NUNCA: X)
-    Enricher->>Inception: Lê INCEPTION.md e escaneia Entidades
-    Enricher->>Market: Verifica compliance/ e research/
-    
-    alt Exit 2: Research Needed
-        Market-->>Enricher: Incerteza técnica ou Gaps
-        Enricher->>Market: Registra em MARKET_INBOX.md [TODO]
-        Enricher->>Human: ❌ EXIT 2: Pesquisa necessária. Popule market/
-        Human->>Market: Insere fontes (Karpathy Rule)
-        Note over Enricher, Market: Reinicia ciclo Enrich
-    else Fontes Presentes
-        Market-->>Enricher: Documentos encontrados
-        Enricher->>Enricher: Valida viabilidade vs Boundaries
-        Enricher->>PRD: Gera PRD.md lastreado (> Fonte: market/...)
-        Note right of PRD: Pronto para Handoff TLC
-    end
-```
-
-## User Review Required
-
-> [!IMPORTANT]
-> **Regra de Patch Rígida:** Não substituiremos arquivos inteiros. Faremos edições apenas nos blocos indicados para preservar a integridade das funções auxiliares.
-> **Estado Atual:** Muitos componentes já possuem a lógica da v2.4.1 instalada. Este plano irá **formalizar, corrigir discrepâncias de string (acentuação, logs) e garantir a presença dos novos arquivos** da camada Market.
-
-## Proposed Changes
-
-### 📂 FASE 1: Scripts Core (Hardening)
-
-#### [MODIFY] [run_context.py](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/run_context.py)
-- Sincronizar o bloco `elif cmd == "all":` para incluir o print de sincronização e a string final com acentuação correta conforme a diretiva.
-
-#### [MODIFY] [validate_context.py](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/_scripts/validate_context.py)
-- Garantir a verificação da camada opcional `INCEPTION.md`.
-- Assegurar que `sys.exit(1)` seja chamado se houver `issues`.
-
-#### [MODIFY] [context_oracle.py](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/_scripts/context_oracle.py)
-- Revisar regex Unicode para garantir compatibilidade PT-BR (`\b\w{3,}\b`).
-- Confirmar indexação de `brain/INCEPTION.md` e `market/SSOT_MAP.md`.
-
-#### [MODIFY] [harness_runner.py](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/_scripts/harness_runner.py)
-- Sincronizar a função `check_strategic_alignment()` e o dicionário de `checks` no `main()`.
-
-#### [MODIFY] [secrets_scanner.py](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/_scripts/secrets_scanner.py)
-- Validar `JSON_ALLOWLIST` e a lógica de scan que ignora MDs e imagens, mas escaneia JSONs fora da allowlist.
-
----
-
-### 📂 FASE 2: Governança & Registry
-
-#### [MODIFY] [RULES.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/RULES.md)
-- Inserir/Sincronizar a seção `## 🏗️ 0. Máquina de Estados (PROJECT_MODE)` com o texto exato da diretiva.
-
-#### [MODIFY] [AGENT_REGISTRY.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/AGENT_REGISTRY.md)
-- Adicionar/Sincronizar a role `@vision-architect` e a camada `Strategic` na tabela de isolamento.
-
-#### [MODIFY] [MASTER_FLOW.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/MASTER_FLOW.md)
-- Atualizar árvore de diretórios para incluir explicitamente a camada `🌐 market/`.
-
-#### [MODIFY] [PROMPT_LIBRARY.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/PROMPT_LIBRARY.md)
-- Sincronizar o prompt do `@vision-architect` com os gatilhos e restrições H.O.K.
-
----
-
-### 📂 FASE 3: Camada Inception + Market
-
-#### [NEW] [INCEPTION.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/INCEPTION.md)
-- Criar template mestre com boundaries `- NUNCA:`.
-
-#### [NEW] [SSOT_MAP.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/market/SSOT_MAP.md)
-- Definir hierarquia da verdade.
-
-#### [NEW] [MARKET_INBOX.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/market/MARKET_INBOX.md) e [economics.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/market/economics.md)
-- Criar arquivos com frontmatter padrão.
-
-#### [NEW] .gitkeeps
-- Criar em `market/compliance/` e `market/research/`.
-
----
-
-### 📂 FASE 4: Isolamento & Bundle
-
-#### [MODIFY] [captura_projeto.py](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/captura_projeto.py)
-- Aplicar o filtro **path-scoped** para ignorar `compliance/` e `research/` no bundle.
-
-#### [MODIFY] [JOURNAL.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/maintenance/JOURNAL.md)
-- Registrar a entrada de conclusão do hardening.
-
----
-
-## Verification Plan
-
-### Automated Tests
-1. **Pipeline Completo:** `npm run context:all` (Saída esperada: `[DONE] ... concluído com sucesso.`)
-2. **Isolamento Market:** Comando python para verificar se `market/compliance` e `market/research` NÃO estão no bundle.
-3. **Oracle Unicode:** Consultar termos com acento e verificar confidence.
-4. **Harness Fail-Fast:** Inserir boundary proibida no `INCEPTION.md` e violar no `PRD.md`, verificando se o Harness bloqueia com exit 1.
-
-### Manual Verification
-- Revisão visual dos arquivos `.md` gerados na camada `market/`.
-- Verificação do frontmatter YAML em todos os novos arquivos.
-
-````
-CHUNK_END id=80252595b07f_c001
-FILE_END id=file_80252595b07f
-
----
-<a id="file_482a16303af0"></a>
-FILE_START id=file_482a16303af0 path=planos/_arquivo_planos/PLAN_SPEC_ENRICHER_V2.4.1.md domain=docs lang=markdown lines=58 bytes=2572 mtime=2026-04-15T19:09:36.074497+00:00 sha1=9069fe10243396ca96cc0b1e8b76b29a7084307e
-CHUNK_START id=482a16303af0_c001 start_line=1 end_line=58
-```markdown
-# 📜 PLANO DE IMPLEMENTAÇÃO: Spec Enricher (v2.4.1-Hardened)
-*(Documento mestre para instalação do Módulo de Enriquecimento de Especificações)*
-
----
-
-## 🎯 Objetivo & Visão
-Instalar o **@spec-enricher** como role e ritual oficial, criando a ponte cognitiva entre a incepção estratégica e as especificações funcionais. O sistema deve impedir a geração de PRDs se houver gaps de mercado, forçando o ciclo **Research -> Valid -> Execute**.
-
----
-
-## 🛠️ Arquitetura de Patches (Auditada)
-
-### 🐍 scripts/enrich_context.py (Gap-Checker)
-- **Logica:** Scan `INCEPTION.md` -> Busca restrita em `market/compliance` e `market/research` -> Validação de conteúdo (1000 chars) -> Update `MARKET_INBOX.md` (uma linha por entidade).
-- **Exit Codes:** `0` (Ready), `2` (Research Needed), `1` (Error).
-
-### 🛡️ scripts/harness_runner.py (Integrity Check)
-- **Nova Funcionalidade:** `check_enrichment_integrity(prd_path)`.
-- **Gatilhos Semânticos:** Monitora menções a integrações/compliance (integracao, compliance, integration, external api, etc.).
-- **Contrato:** Exige seção `## 🚨 Critical Dependencies` com formato exato `- **{Entidade}** → Fonte: market/...`.
-
-### 🐍 run_context.py (Dispatcher)
-- **Integração:** Novo comando `enrich`.
-- **Tratamento:** `subprocess.run(..., check=False)` + print do `[STRATEGIC BLOCK]`.
-- **Help:** Atualizado para refletir o novo rito.
-
----
-
-## 📋 Matriz de Roles & Prompts
-
-| Role | Especialidade | Escrita | Leitura (Market) | Gátilho |
-|------|---------------|---------|------------------|---------|
-| `@spec-enricher` | Tradução estratégica, validação de gaps, PRDs lastreados | `PRD.md`, `MARKET_INBOX.md` | `compliance/`, `research/`, `INCEPTION.md` | `npm run context:enrich` |
-
----
-
-## ✅ Plano de Verificação (H.O.K.)
-
-### 1. Teste de Bloqueio (Exit 2)
-1. Inserir entidade (ex: `LGPD`) no `INCEPTION.md`.
-2. Certificar ausência do arquivo fonte em `market/`.
-3. Rodar `npm run context:enrich`.
-4. **Esperado:** Exit 2 + Mensagem de Strategic Block.
-
-### 2. Teste de Sucesso (Exit 0)
-1. Criar arquivo fonte `market/research/LGPD.md`.
-2. Rodar `npm run context:enrich`.
-3. **Esperado:** Exit 0 + Mensagem de Sucesso.
-
-### 3. Teste de Validação (Harness)
-1. Criar `PRD.md` com menção a integrações mas sem a seção de dependências.
-2. Rodar `npm run context:harness`.
-3. **Esperado:** Exit 1 + Erro de contrato de enriquecimento.
-
----
-
-## 🔒 Handoff Final (Estado Pronto)
-`@vision-architect` (Incepção) ⮕ `@spec-enricher` (Research & PRD) ⮕ `@spec-driver` (Specs)
-
-```
-CHUNK_END id=482a16303af0_c001
-FILE_END id=file_482a16303af0
-
----
-<a id="file_e7f1855928ad"></a>
-FILE_START id=file_e7f1855928ad path=planos/_arquivo_planos/implementation_plan.md domain=docs lang=markdown lines=77 bytes=3338 mtime=2026-04-10T23:15:28.184032+00:00 sha1=37ad3605aae584ee4398621d92edd7b76058413e
-CHUNK_START id=e7f1855928ad_c001 start_line=1 end_line=77
-```markdown
-# 🏛️ Plano de Expansão: Context Governance Framework (v2.0)
-
-Este plano detalha a transição do template de um sistema de documentação estática para um framework de governança ativa, focado em **escala**, **automação** e **prevenção de drift**.
-
-## 🕒 Metadados do Plano
-- **Criado em:** 2026-04-10
-- **Foco:** Automação em Python e Escala de Contexto
-- **Status:** Aguardando Aprovação
-
----
-
-## 🧩 1. Estrutura de Arquivos Ampliada
-
-Vamos expandir a pasta `.context/` para incluir novas camadas de inteligência:
-
-### [NEW] Novos Documentos de Governança
-- **`PROMPT_LIBRARY.md`**: Catálogo de personas e templates de prompts específicos para garantir consistência entre sessões.
-- **`SESSION_MANAGER.md`**: Regras de gerenciamento de janela de tokens, limites de sessão e snapshots de resumo.
-- **`CONTEXT_HEALTH.md`**: Dashboard de saúde do contexto (métricas de linhas, divergências e obsolescência).
-- **`AGENT_REGISTRY.md`**: Definição de papéis (Expertises) e permissões de escrita/leitura nos arquivos do contexto.
-
----
-
-## 📜 2. Atualização dos Protocolos (`RULES.md`)
-
-Injetaremos novos protocolos de segurança e eficiência no arquivo de leis do agente:
-
-### 🔹 Context Gate (Validação Pré-Voo)
-O Agente deve realizar um "Checklist de Integridade" antes de gerar código, validando se o PRD e o Schema estão sincronizados.
-
-### 🔹 Session Budget (Gestão de Tokens)
-Definição de limites claros: ao atingir 80% da janela de contexto (estimada), o agente **deve** realizar um purge do `JOURNAL.md` (via script) e gerar um resumo semente.
-
----
-
-## 🛠️ 3. Automação com Python (`.context/_scripts/`)
-
-Criaremos scripts em Python para tornar a governança ativa e independente do ambiente da IDE.
-
-### #### [NEW] `validate_context.py`
-- Verifica se o `schema.sql` contém os campos referenciados no PRD atual.
-- Valida o limite de linhas do `JOURNAL.md`.
-- Gera um alerta visual se o status em qualquer arquivo for `Stale` ou `Deprecated`.
-
-### #### [NEW] `purge_journal.py`
-- Executa a lógica de arquivamento: move os primeiros 70% do log para `_archive_context/journals/`.
-- Mantém os 30% finais e insere um resumo gerado pela IA no topo como conexão lógica.
-
-### #### [NEW] `init_context.py`
-- Script de bootstrap que inicializa a estrutura em novos projetos, gera os metadados de tempo reais e cria o `schema.sql` inicial.
-
----
-
-## 📈 4. Monitoramento (`CONTEXT_HEALTH.md`)
-
-Criação do dashboard dinâmico que será atualizado periodicamente pelos scripts ou manualmente pela IA.
-
-| Métrica | Limite | Ação em caso de Falha |
-| :--- | :--- | :--- |
-| JOURNAL size | 600 linhas | Trigger `purge_journal.py` |
-| PRD sync | 100% | Bloqueio de geração de UI |
-| Token Window | 128k (80%) | Trigger Snapshot de Sessão |
-
----
-
-## 🚦 Próximos Passos (Workflow)
-
-1.  **Aprovação do Plano** (Você).
-2.  **Criação dos Arquivos MD** com os templates propostos.
-3.  **Geração do Código Python** para cada script de automação.
-4.  **Atualização do `MASTER_FLOW.md` e `RULES.md`** para refletir a nova arquitetura.
-5.  **Validação Final** da estrutura completa.
-
----
-
-> [!IMPORTANT]
-> A implementação será feita de forma **não invasiva** e **não executável** conforme solicitado, apenas preparando o repositório para ser exportado para o GitHub.
-
-```
-CHUNK_END id=e7f1855928ad_c001
-FILE_END id=file_e7f1855928ad
-
----
-<a id="file_2d826d235b59"></a>
-FILE_START id=file_2d826d235b59 path=planos/_arquivo_planos/master_plan.md domain=docs lang=markdown lines=88 bytes=3620 mtime=2026-04-10T23:48:33.652301+00:00 sha1=9269f2e75a4300b61121c540eb8c3e57ba44329f
-CHUNK_START id=2d826d235b59_c001 start_line=1 end_line=88
-````markdown
-# 🏛️ MASTER PLAN: Context Governance Framework (v2.0 + Multi-Agent)
-
-Este plano consolida as estratégias de **Automação de Manutenção** e **Especialização Cognitiva (Multi-Agent)** em um único framework modular, pronto para escalar de pequenos MVPs a grandes sistemas.
-
-## 🕒 Metadados
-- **Versão:** 2.0 (Consolidada)
-- **Foco:** Eficiência de Tokens, Governança Rígida e Automação Python
-- **Status:** Aguardando Aprovação Final
-
----
-
-## 🧩 1. Estrutura de Arquivos em Camadas (`.context/`)
-
-A pasta será organizada em quatro camadas lógicas para isolamento operacional:
-
-### 🧠 Camada Cognitiva (The Brain)
-- **`MASTER_FLOW.md`**: Diretriz mestre de navegação.
-- **`RULES.md`**: Protocolos de conduta ("A Lei").
-- **`AGENT_REGISTRY.md`**: DNS de papéis, permissões e isolamento.
-- **`PROMPT_LIBRARY.md`**: Biblioteca de templates de prompts.
-- **`PRD.md`**: Requisito em execução (O "Norte").
-- **`ROADMAP.md`**: Metas e fases (O Planejamento).
-
-### 🛠️ Camada de Manutenção (The Housekeeper)
-- **`JOURNAL.md`**: Log vivo (limite heurístico de tokens).
-- **`TECHNICAL_REQUIREMENTS.md`**: Inventário técnico consolidado.
-- **`rebuild_guide.md`**: Manual de setup e infra.
-- **`schema.sql`**: Snapshot do banco de dados.
-- **`ARCHITECTURE.md`**, `TESTS.md`, `rx-anatomy.md`, `rx-biology.md`.
-- **`_archive_context/`**: Memória de longo prazo.
-
-### 📊 Camada de Monitoramento (The Dashboard)
-- **`CONTEXT_HEALTH.md`**: Status dashboard técnico e cognitivo.
-
-### ⚙️ Camada de Automação (The Arms)
-- **`_scripts/`**: Scripts Python com `#!/usr/bin/env python3`.
-
----
-
-## 📜 2. Protocolos Integrados em `RULES.md`
-
-1.  **🛡️ Checklist de Carga (Obrigatório):** Antes de codificar, validar carga de:
-    - [ ] Global (Rules, MasterFlow, Roadmap)
-    - [ ] Role (Registry-defined)
-    - [ ] Ephemeral (PRD ativo + Journal tail 30-50 lines)
-2.  **🔒 Context Gate:** Verificação de integridade Schema vs PRD.
-3.  **🤖 Active Role Declaration:** Início de tarefa com `🤖 Ativando @[role]`.
-4.  **🔢 Heurística de Token (Session Budget):** Disparar alerta de reset/purge ao detectar:
-    - `~15-20 trocas densas` OU `~50k caracteres no prompt`.
-5.  **🤝 Handoff Protocol:** Registro estruturado no `JOURNAL.md` em trocas de domínio.
-
----
-
-## 🐍 3. Automação Python (`.context/_scripts/`)
-
-Scripts unificados que entendem a hierarquia de agentes:
-
-- **`validate_context.py`**: Checa integridade de arquivos, conformidade de roles e saúde geral.
-- **`purge_journal.py`**: Arquiva 70% do log e gera uma semente de contexto no topo do arquivo atual.
-- **`sync_project.py`**: Atualiza `TECHNICAL_REQUIREMENTS.md` lendo o `package.json` e `schema.sql`.
-
----
-
-## 📈 4. Dashboard de Saúde (`CONTEXT_HEALTH.md`)
-
-```markdown
-# 📊 Context Health Check
-| Métrica | Status | Pilar |
-| :--- | :--- | :--- |
-| Journal Line Count | [ 412 / 600 ] | Manutenção |
-| Active Role | @frontend-specialist | Cognitivo |
-| Schema Consistency | ✅ Synchronized | DB-First |
-| Token Window | ⚠️ 78k (80%) | Sessão |
-```
-
----
-
-## 🚦 Roadmap de Execução
-
-1.  **Fase 1: Estrutura MD** (Criar Registry, Prompt Library e Health).
-2.  **Fase 2: As Leis** (Atualizar Master Flow e Rules com a lógica Multi-Agent).
-3.  **Fase 3: Os Braços** (Implementar scripts Python em `_scripts/`).
-4.  **Fase 4: Finalização** (Git Commit + Walkthrough).
-
----
-
-> [!IMPORTANT]
-> Este plano prioriza a **independência**. O projeto pode ser operado em "Modo Solo" (Single Agent) usando a role `@fullstack-generalist`, ou em "Modo Escala" (Multi-Agent) conforme a necessidade.
-
-````
-CHUNK_END id=2d826d235b59_c001
-FILE_END id=file_2d826d235b59
-
----
-<a id="file_9efc22dd3673"></a>
-FILE_START id=file_9efc22dd3673 path=planos/_arquivo_planos/multi_agent_plan.md domain=docs lang=markdown lines=62 bytes=2824 mtime=2026-04-10T23:32:27.825062+00:00 sha1=71ea8355ff980c67c66959bec1e4782108bad081
-CHUNK_START id=9efc22dd3673_c001 start_line=1 end_line=62
-```markdown
-# 🤖 Plano de Implementação: Arquitetura Multi-Agent
-
-Este plano detalha a especialização do template com foco em **Especialização de Papéis**, **Isolamento de Contexto** e **Protocolos de Handoff**. O objetivo é transformar o agente em um sistema de engenharia cognitiva coordenado.
-
-## 🕒 Metadados do Plano
-- **Criado em:** 2026-04-10
-- **Foco:** Roles, Context Isolation & Token Efficiency
-- **Status:** Aguardando Aprovação (Em Separado)
-
----
-
-## 🧩 1. Novos Componentes de Estrutura
-
-### [REFINED] `AGENT_REGISTRY.md`
-- **Conceito:** DNS cognitivo e Manifesto de Especialidades.
-- **Regra de Ouro:** "Não registrado = Não executado".
-- **Conteúdo Robusto:** Tabela com Roles (`@db-architect`, `@frontend-specialist`, `@backend-engineer`, `@qa-validator`, `@devops-guardian`, `@context-keeper`, `@fullstack-generalist`), permissões granulares de escrita e gatilhos de ativação.
-- **Human Insights:** Blocos de contexto explicando o "porquê" das decisões técnicas para futuras IAs.
-
-### [NEW] `PROMPT_LIBRARY.md`
-- **Função:** Catálogo de templates de prompts de alta performance.
-- **Conteúdo:** Instruções estruturadas para tarefas repetitivas (ex: "Criação de Componente", "Análise de Bug Crítico", "Escrita de Documentação").
-
----
-
-## 📑 2. Protocolos de Handoff & Isolamento
-
-### 🛡️ Camadas de Isolamento (Context Layering)
-Implementação de carregamento por camadas no `RULES.md`:
-1.  **🌍 Global (Sempre):** `RULES.md`, `MASTER_FLOW.md`, `ROADMAP.md`.
-2.  **🎯 Role-Specific:** Definido no registry (ex: `@db` lê `schema.sql`).
-3.  **📦 Task-Ephemeral:** `PRD.md` ativo e últimas 30-50 linhas do `JOURNAL.md`.
-4.  **🗃️ Deep Archive:** Acesso apenas sob demanda explícita.
-
-### 🤝 Protocolo de Handoff Estruturado
-Tarefas cross-domain exigem registro de estado no `JOURNAL.md` antes da troca:
-- **Formato:** `🔄 Handoff: @[role-atual] → @[role-próxima] | Estado: [Checkpoint Técnico] | Próximo: [Ação]`
-
----
-
-## 🛠️ 3. Integração com o Workflow Atual
-
-### [MODIFY] `RULES.md`
-- Adicionar a seção **3.1 Protocolo Multi-Agent**.
-- Definir a obrigatoriedade da declaração de ativação: `🤖 Ativando @[role] | Tarefa: [X]`.
-
-### [MODIFY] `MASTER_FLOW.md`
-- Incluir `AGENT_REGISTRY.md` e `PROMPT_LIBRARY.md` no diagrama de árvore.
-- Adicionar o ciclo de vida da sessão Multi-Agent.
-
----
-
-## 🚦 Próximos Passos
-
-1.  **Revisão do Plano** em paralelo com o plano de Automação (v2.0).
-2.  **Criação dos arquivos MD** com os templates pré-definidos.
-3.  **Simulação de Handoff** para testagem da lógica de semente (`Seed Context`).
-
----
-
-> [!TIP]
-> Esta arquitetura permite que o projeto escale para milhares de linhas de código sem que a IA perca o foco ou alucine por excesso de arquivos irrelevantes na janela de contexto.
-
-```
-CHUNK_END id=9efc22dd3673_c001
-FILE_END id=file_9efc22dd3673
-
----
-<a id="file_5b368adbea18"></a>
-FILE_START id=file_5b368adbea18 path=planos/_arquivo_planos/plan_hok_advanced_security_and_db.md domain=docs lang=markdown lines=54 bytes=2567 mtime=2026-04-12T01:55:31.645679+00:00 sha1=cf3305760cc94cf4ce1e359641fe889b16696354
-CHUNK_START id=5b368adbea18_c001 start_line=1 end_line=54
-```markdown
-# 🗺️ Plano de Implementação: Automação Extrema H.O.K.
-
-**Data:** 2026-04-11
-**Versão:** v2.3.1-refinement
-**Status:** Planejamento Aprovado / Pronto para Execução
-
-Este plano detalha a injeção dos módulos H.O.K Avançados: Secret Scanner, SQL Migration Registry e Automação de STATE.md. Foca em performance O(N) Git Files, whitelists epistemológicas e validação atômica de DB-First.
-
----
-
-## 🕵️ Avaliação Crítica do Especialista (@system-architect)
-
-O plano aborda três lacunas críticas na governança atual:
-1. **Segurança (Leak Prevention):** Scanner reativo no pré-commit para impedir o vazamento de chaves (Stripe, AWS, Supabase).
-2. **Consistência de Dados (Migrations):** Registro e ordenação de arquivos SQL para evitar 'drift' entre o código e o banco.
-3. **Sincronia Cognitiva (State Sync):** Atualização automática do `STATE.md` das specs via Harness, eliminando specs "zumbis" no workshop.
-
----
-
-## 🛠️ Mudanças Propostas
-
-### 🔐 1. Secrets Scanner (`secrets_scanner.py`)
-- Implementação usando `git ls-files` para garantir processamento instantâneo.
-- Suporte a `.secrets-allowlist` para ignorar falsos positivos em documentações e exemplos.
-- Regex de detecção para: Stripe, Supabase, Google Services e Padrões de ENV Frontend.
-
-### 🗂️ 2. Migration Registry (`migration_registry.py`)
-- Verificação de ordem estrita (`001_`, `002_`, etc).
-- Check de integridade entre as migrations localizadas em `.context/maintenance/migrations/` e o snapshot global `schema.sql`.
-
-### 🤖 3. State Automation (`harness_runner.py`)
-- Injeção da rotina `update_state_md()`.
-- Lógica de detecção de Spec ativa via variável de ambiente `ACTIVE_SPEC` ou fallback por data de modificação.
-
----
-
-## 🚀 Ordem de Execução no Pipeline `all`
-A ordem foi otimizada para falhar o mais rápido possível (fail-fast) em caso de violação grave:
-1. `validate` (Arquivos/Estrutura)
-2. `scan-secrets` (Segurança) ⬅️ **Novo**
-3. `sync` (Dependências)
-4. `check-migrations` (Banco de Dados) ⬅️ **Novo**
-5. `harness` (Contratos + STATE Update) ⬅️ **Evolução**
-6. `lint` (Epistemologia)
-7. `health` (Dashboard)
-
----
-
-## 📈 Critérios de Sucesso
-- Pipeline bloqueia commit se uma chave API real for detectada fora do `.env`.
-- `STATE.md` da spec ativa muda automaticamente para `✅ PASSED` ou `❌ FAILED` sem intervenção humana.
-- Erros de ordem em arquivos SQL são detectados antes do merge.
-
-> 💡 **Nota:** Este plano prioriza a estabilidade e performance em sistemas Windows e Monorepos.
-
-```
-CHUNK_END id=5b368adbea18_c001
-FILE_END id=file_5b368adbea18
-
----
-<a id="file_4ebe74105a57"></a>
-FILE_START id=file_4ebe74105a57 path=planos/_arquivo_planos/plan_inception_final_v2_4.md domain=docs lang=markdown lines=79 bytes=5369 mtime=2026-04-14T14:17:36.087744+00:00 sha1=f065eff9f0cf713fa7a76b33e65e9bf81174228a
-CHUNK_START id=4ebe74105a57_c001 start_line=1 end_line=79
-```markdown
-# Implementation Plan: Inception + Market v2.4.0 (Fase 1 & 2)
-
-O objetivo central deste plano é criar a fundação estratégica do projeto antes que qualquer código ou PRD rígido seja emitido. Com as críticas refinadas do especialista, a arquitetura agora possui rastreabilidade estratégica e premissas fortes sem engessar os projetos legados. 
-
-Tudo será feito via **Dogfooding** utilizando `.specs/features/meta-inception/`.
-
-## User Review Required
-> [!NOTE]
-> A implementação será rigorosa. O `validate_context.py` acomodará o `INCEPTION.md` como opcional para não quebrar compatibilidade reversa com projetos legados.
-
----
-
-## 🏗️ Fase 0: Dogfooding (Abertura de Contexto)
-Emulando nosso fluxo, abriremos uma feature spec para justificar as mudanças:
-
-### [System Spec]
-#### [NEW] [.specs/features/meta-inception/spec.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.specs/features/meta-inception/spec.md)
-#### [NEW] [.specs/features/meta-inception/STATE.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.specs/features/meta-inception/STATE.md)
-
----
-
-## 📁 Fase 1: Fundação Documental 
-
-Criaremos a estrutura de Market e atualizaremos a Árvore Mestre do sistema.
-
-#### [MODIFY] [.context/brain/MASTER_FLOW.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/MASTER_FLOW.md)
-- Inserir a documentação da nova camada `🌐 market/` contendo Restrições externas, economia, compliance.
-
-#### [NEW] [.context/brain/INCEPTION.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/INCEPTION.md)
-- Template com seções: `[Vibe]`, `[Boundaries]` (ex: `- NUNCA: <regra>`), `[Gaps]`, `[Assumptions]` e log de tomada de decisão.
-
-#### [NEW] [.context/market/SSOT_MAP.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/market/SSOT_MAP.md)
-- Define a hierarquia explícita de verdade: `compliance > inception > prd > journal`.
-
-#### [NEW] [.context/market/MARKET_INBOX.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/market/MARKET_INBOX.md)
-- Lista de gaps em formato de tabela com colunas (Gap, Fonte, Prioridade, Status) obedecendo à Regra Karpathy de citações raw.
-
-#### [NEW] [.context/market/economics.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/market/economics.md)
-#### [NEW] [.context/market/compliance/.gitkeep](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/market/compliance/.gitkeep)
-#### [NEW] [.context/market/research/.gitkeep](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/market/research/.gitkeep)
-
----
-
-## 🤖 Fase 2: Governança de Agentes & Harness
-
-Integrar regras de Market dentro do orquestrador sistêmico.
-
-#### [MODIFY] [.context/brain/AGENT_REGISTRY.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/AGENT_REGISTRY.md)
-- Inserir a role `@vision-architect`.  
-- *Escopo Restritivo*: Escrita em `INCEPTION.md`, leitura em `market/`. Tarefas: definir boundaries, validar gaps de mercado.
-
-#### [MODIFY] [.context/brain/PROMPT_LIBRARY.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/PROMPT_LIBRARY.md)
-- Adicionar o bloco de personalidade/prompt para roteamento para o `@vision-architect`.
-
-#### [MODIFY] [.context/brain/RULES.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/RULES.md)
-- Checklist de carga opcional para permitir que a camada Market seja consumida.
-
-#### [MODIFY] [.context/_scripts/validate_context.py](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/_scripts/validate_context.py)
-- Não exigir `INCEPTION.md` na lista fixa (backward compatibility), mas alertar `[OK] INCEPTION.md presente` se estiver lá.
-
-#### [MODIFY] [.context/_scripts/context_oracle.py](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/_scripts/context_oracle.py)
-- Adicionar `brain/INCEPTION.md` e `market/SSOT_MAP.md` à indexação caso existam.
-
-#### [MODIFY] [.context/_scripts/harness_runner.py](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/_scripts/harness_runner.py)
-- Implementar a rotina isolada `check_strategic_alignment(prd_path, inception_path)`.
-- Buscar no `INCEPTION.md` ocorrências do bloco `Boundaries` (`- NUNCA:`).
-- Procurar no `PRD.md` se há a ocorrência proibida e setar Exit 1 se houver match.
-
----
-
-## 🧪 Verification Plan (Dogfood)
-
-1. Abrir e documentar a Spec `meta-inception`.
-2. Rodar a montagem (Fases 1 e 2).
-3. Teste Negativo (Fail-Fast): 
-   - Criaremos temporariamente `- NUNCA: usar mongoDB` no Inception;
-   - Registraremos `usar mongoDB` no PRD;
-   - Executar `python .context/_scripts/harness_runner.py` e constatar que ele impede a transição quebrando o build.
-4. Fechar logando o sucesso no `JOURNAL.md` e limpando os arquivos de teste negativo.
-
-```
-CHUNK_END id=4ebe74105a57_c001
-FILE_END id=file_4ebe74105a57
-
----
-<a id="file_46be75d9b52e"></a>
-FILE_START id=file_46be75d9b52e path=planos/_arquivo_planos/plan_inception_market_v2_4.md domain=docs lang=markdown lines=65 bytes=3658 mtime=2026-04-14T11:45:09.915754+00:00 sha1=cd869123cd6543d25a3fe7bbe6b4a4681ee5abbb
-CHUNK_START id=46be75d9b52e_c001 start_line=1 end_line=65
-```markdown
-# 🧭 Plano: Expansão Estratégica INCEPTION + MARKET (v2.4.0)
-
-Este plano detalha a implementação da camada de concepção pré-PRD, permitindo que o caos criativo seja filtrado e validado por dados externos antes de entrar na governança rígida de execução.
-
-## Avaliação dos Especialistas
-
-> [!NOTE]
-> **Veredito:** Arquitetura altamente recomendada para projetos que exigem conformidade (LGPD, Stripe, Meta) ou pesquisa profunda.
-
-**Pontos Fortes:**
-- **Anti-Token-Bloat:** A biblioteca `MARKET/` não é carregada no bundle principal; ela vive apenas no índice do Oráculo.
-- **Rastreabilidade:** Força o `Karpathy Script` a exigir fontes de mercado para decisões de negócio.
-- **Separação de Preocupações:** `@vision-architect` cuida do "O Quê" e "Por Quê", enquanto o restante do H.O.K. cuida do "Como".
-
-**Riscos Identificados:**
-- **Ruído Semântico:** Se o `INCEPTION.md` ficar muito poluído, o Oráculo pode trazer referências obsoletas.
-- **Drift de Visão:** O PRD pode se desviar da Inception. Precisamos do Harness para validar isso.
-
----
-
-## Proposta de Melhoramentos (Refinamentos Antigravity)
-
-### 1. Camada de Concepção (`.context/market/`)
-- Criar a estrutura física:
-  - `compliance/`: Regras de ouro (ex: "Stripe Guidelines").
-  - `research/`: Fatos brutos (NotebookLM outputs).
-  - `economics.md`: Tabela de custos de infra e tokens.
-- **Refinamento Antigravity:** Adicionar um `SSOT_MAP.md` dentro de `market/` para o Oráculo saber quais arquivos têm prioridade em termos de conformidade.
-
-### 2. O Útero Criativo (`.context/brain/INCEPTION.md`)
-- Novo blueprint com seções:
-  - `[Vibe]`: Descrição subjetiva do desejo humano.
-  - `[Boundaries]`: O que NÃO faremos (vital para o Harness).
-  - `[Gaps]`: Termos ou tecnologias marcados com `??` que exigem research.
-
-### 3. Automação e "Oráculo 2.0"
-- **Update `context_oracle.py`**: Adicionar suporte a caminhos dinâmicos para incluir `.context/market/`.
-- **New Script `identify_gaps.py`**: Automatizar a leitura do `INCEPTION.md` em busca de incertezas e gerar uma lista de "Shopping de Conhecimento" em `MARKET_INBOX.md`.
-- **Update `harness_runner.py`**: Adicionar o check `STRATEGIC_ALIGNMENT` (valida PRD vs Inception Boundaries).
-
----
-
-## Proposed Changes
-
-### [Component Name]
-
-#### [NEW] [INCEPTION_TEMPLATE.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/INCEPTION.md)
-#### [NEW] [Market Directory Structure](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/market/)
-#### [MODIFY] [context_oracle.py](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/_scripts/context_oracle.py)
-#### [MODIFY] [AGENT_REGISTRY.md](file:///c:/Users/User/Desktop/ProjetosAntigravity/TEMPLATES/template_inic%C3%ADo_de_projeto/.context/brain/AGENT_REGISTRY.md)
-
----
-
-## Próximos Passos (Workflow proposto)
-
-1. **Aprovação deste Plano.**
-2. **Setup da Estrutura**: Criar as pastas e o arquivo `INCEPTION.md`.
-3. **Registro da Role**: Adicionar `@vision-architect` ao registry.
-4. **Upgrade do Oráculo**: Permitir a indexação da camada Market.
-5. **Teste de Stress**: Rodar um brainstorm simulado e ver o Oráculo buscar no `market/`.
-
-## Open Questions
-
-- Qual o formato preferencial para as saídas do NotebookLM? Recomendo **Markdown com citações em linha** para facilitar o trabalho do Karpathy.
-- Deseja que o `captura_projeto.py` ignore a pasta `market/` explicitamente (forçando o uso do Oráculo) ou que leve apenas o `SSOT_MAP.md`? (Recomendo ignorar tudo e usar só Oráculo).
-
-```
-CHUNK_END id=46be75d9b52e_c001
-FILE_END id=file_46be75d9b52e
-
----
-<a id="file_cf4807ec6c6c"></a>
-FILE_START id=file_cf4807ec6c6c path=planos/_arquivo_planos/roadmap_reactive_hok_v2_v3.md domain=docs lang=markdown lines=43 bytes=2070 mtime=2026-04-12T00:16:01.408542+00:00 sha1=bcab4c7525fa8c4ba078bf84d63965f3e60d3e23
-CHUNK_START id=cf4807ec6c6c_c001 start_line=1 end_line=43
-```markdown
-# 🗺️ Roadmap de Governança Reativa (Fases 2 e 3) - Antigravity Kit v2.2
-**Data de Criação:** 2026-04-11
-**Status:** Planejamento Aprovado / Pronto para Execução
-
-Este plano estratégico detalha a transformação do Antigravity Kit de um sistema de validação passivo para um **Sistema Nervoso Autônomo**, focado em dashboards dinâmicos e inteligência proativa.
-
----
-
-## 📊 Fase 2: Health Sync & Dashboard Vivo
-*Transformação do CONTEXT_HEALTH.md em um monitor de "pulso" em tempo real.*
-
-### Objetivos:
-1. **Dinamização do Health Check:** Scripts Python atualizarão automaticamente as métricas de saúde (linhas do log, status do harness, token estimation).
-2. **Tratamento de Exit 2 (Oracle):** O orquestrador `run_context.py` interceptará baixas confianças do Oráculo para forçar intervenção humana via `[oracle:uncertain]`.
-
-### Entregáveis:
-- [ ] Integração de marcadores HTML/RegEx no `CONTEXT_HEALTH.md`.
-- [ ] Patch no `run_context.py` para sincronização de métricas pós-validação.
-- [ ] Refinamento da lógica de fallback no Orquestrador.
-
----
-
-## 🔍 Fase 3: Oracle Routing & Karpathy Strict Mode
-*Evolução da inteligência semântica e fiscalização rigorosa de fontes.*
-
-### Objetivos:
-1. **Auto-Sugestão Karpathy:** Se um claim técnico falhar no lint, o motor buscará automaticamente em `raw_inbox/` uma fonte provável e sugerirá a citação.
-2. **Strict Mode:** Bloqueio total de commits se houver claims sem lastro (pós-período de carência de Fase 1).
-
-### Entregáveis:
-- [ ] Refactor no `lint_wiki.py` para inclusão do parâmetro `--strict`.
-- [ ] Ponte entre `context_oracle.py` e `lint_wiki.py` para busca de fontes sugeridas.
-
----
-
-## 📈 Critérios de Sucesso
-- `npm run context:all` gera atualização visual imediata no Dash de saúde.
-- Redução de zero alucinações técnicas em specs através de pausas obrigatórias (Exit 2).
-- Bibliografia do projeto 100% rastreável até a pasta `raw/`.
-
----
-> [!IMPORTANT]
-> **Governança:** "O contexto não é lido, ele é respirado pela automação."
-
-```
-CHUNK_END id=cf4807ec6c6c_c001
-FILE_END id=file_cf4807ec6c6c
-
----
-<a id="file_6825d8758f8d"></a>
-FILE_START id=file_6825d8758f8d path=planos/_arquivo_planos/walkthrough_hok_triad.md domain=docs lang=markdown lines=32 bytes=2243 mtime=2026-04-12T00:05:31.404227+00:00 sha1=0bbfa5d700f335f10599d185d0fa8e788cf93cac
-CHUNK_START id=6825d8758f8d_c001 start_line=1 end_line=32
-```markdown
-# 🚀 Walkthrough: Implantação da Tríade H.O.K (Governança Nível 3)
-
-A semente transformou-se em um cérebro inteligente e reativo. Nós acabamos de entregar as 3 camadas do H.O.K (Harness, Oracle, Karpathy) de forma cirurgicamente perfeitamente integrada ao Orquestrador Python nativo que configuramos ontem. Nada de scripts quebrados no Windows ou vazamento de responsabilidades.
-
-## 🛠️ O que foi construído nesta Sprint Atômica?
-
-### 1. 🛡️ Harness (Validador de Contratos)
-- Registramos o catálogo oficial no `.context/brain/HARNESS_REGISTRY.md`.
-- Implementamos o `.context/_scripts/harness_runner.py` que entra para inspecionar, por exemplo, se a IA usou uma Spec que chama uma tabela SQL fantasma, barrando o fluxo antes do dano.
-
-### 2. 🔍 Oracle (RAG Python Local)
-- Demos à luz o `.context/_scripts/context_oracle.py`! Com ele, a IA tem a instrução de acionar `npm run context:oracle "meu problema"` caso identifique redundância, e assim o Oráculo retorna as melhores passagens das REGRAS em _std-lib_, com índice de `confidence` para ela analisar se está pisando em ovos.
-
-### 3. 📖 Karpathy (Epistemologia Obrigatória)
-- Criamos a pasta in-box inviolável `.context/maintenance/_archive_context/raw/` (via `.gitkeep`).
-- Entregamos o `lint_wiki.py` no modo *Fase 1 (Warn-Only)*.
-- Extra: o Regex foi isolado para evitar ser barulhento nos nossos Root Docs (como `RULES.md` e `MASTER_FLOW.md`).
-
-## ⚙️ A Orquestração Central (run_context.py)
-
-O script principal absorveu a tríade! Em vez de manchar o `package.json` com caminhos rígidos, nosso C-Level Handler (`run_context.py`) agora atende:
-- `python run_context.py harness`
-- `python run_context.py lint`
-- `python run_context.py oracle`
-
-Quando a validação dispara no prep-commit Husky, tudo gira nas engrenagens corretas no `npm run context:all`. 
-
----
-> [!TIP]
-> **Teste Agora Mesmo:** Escolha qualquer trecho sobre arquitetura em algum manual e peça pro oráculo responder. Execute `npm run context:oracle "O que é o TLC?"` e sinta o poder consultivo retornando sem nenhuma API adicional no meio.
-
-**Status:** Missão e teste de pipeline finalizados sem um alerta sequer. O Cérebro Híbrido agora tem sistema imunológico. 🧬🦾
-
-```
-CHUNK_END id=6825d8758f8d_c001
-FILE_END id=file_6825d8758f8d
-
----
-<a id="file_f23e47398730"></a>
-FILE_START id=file_f23e47398730 path=planos/template_base_v2_3_1.md domain=docs lang=markdown lines=376 bytes=11814 mtime=2026-04-14T14:42:34.080446+00:00 sha1=b5883553cf4d4667c6381e63b064b87d92e2ba46
-CHUNK_START id=f23e47398730_c001 start_line=1 end_line=300
-````markdown
-# 🚀 Templates Iniciais - Antigravity Kit v2.3.1 (Hardened)
-
-Abaixo estão os templates essenciais para inicializar um novo projeto com governança de contexto e defesas ativadas (Fail-Fast Pipeline).
-
----
-
-## 📁 Estrutura Mínima Recomendada
-
-```
-meu-projeto/
-├── .context/
-│   ├── brain/
-│   │   ├── RULES.md
-│   │   ├── MASTER_FLOW.md
-│   │   ├── ROADMAP.md
-│   │   ├── AGENT_REGISTRY.md
-│   │   ├── PRD.md
-│   │   └── PROMPT_LIBRARY.md
-│   ├── maintenance/
-│   │   ├── JOURNAL.md
-│   │   ├── TECHNICAL_REQUIREMENTS.md
-│   │   ├── TESTS.md
-│   │   ├── rx-biology.md
-│   │   ├── schema.sql
-│   │   ├── rebuild_guide.md
-│   │   └── _archive_context/
-│   │       └── raw/
-│   ├── monitoring/
-│   │   └── CONTEXT_HEALTH.md
-│   └── _scripts/
-│       ├── _tz_utils.py
-│       ├── validate_context.py
-│       ├── secrets_scanner.py
-│       ├── sync_project.py
-│       ├── migration_registry.py
-│       ├── harness_runner.py
-│       ├── lint_wiki.py
-│       ├── health_sync.py
-│       ├── context_oracle.py
-│       └── cleanup_specs.py
-├── .specs/
-│   └── features/
-├── .github/workflows/
-│   └── context-health.yml
-├── .husky/
-├── tests/
-├── package.json
-├── run_context.py
-├── run_context.sh
-├── .gitignore
-├── .env.example
-├── README.md
-└── README_CONTEXT.md
-```
-
----
-
-## 📄 `package.json` (Template Base)
-
-```json
-{
-  "name": "meu-projeto-ai",
-  "version": "1.0.0",
-  "description": "Projeto AI-Ready com Antigravity Kit",
-  "scripts": {
-    "context:validate": "python run_context.py validate",
-    "context:sync": "python run_context.py sync",
-    "context:cleanup": "python run_context.py cleanup",
-    "context:purge": "python run_context.py purge",
-    "context:harness": "python run_context.py harness",
-    "context:lint": "python run_context.py lint",
-    "context:oracle": "python run_context.py oracle",
-    "context:health": "python run_context.py health",
-    "context:all": "python run_context.py all",
-    "context:test": "python tests/test_context.py",
-    "prepare": "husky"
-  },
-  "keywords": ["ai", "context-governance", "spec-driven"],
-  "author": "Seu Nome",
-  "license": "MIT",
-  "devDependencies": {
-    "husky": "^9.1.7"
-  }
-}
-```
-
----
-
-## 📜 `.context/brain/RULES.md` (Template Base)
-
-```markdown
----
-Criado em: {{DATA_ATUAL}}
-Última Atualização: {{DATA_ATUAL}}
-Status: Ativo
----
-
-# 📜 RULES.md — Template Universal de Contexto & Governança
-**Projeto:** {{NOME_DO_PROJETO}}  
-**Arquitetura:** AI-Agent Driven (Layered Context Architecture)  
-**PROJECT_MODE:** `[BOOTSTRAP]` *(Fases finitas: BOOTSTRAP, HARDENING, PRODUCTION)*
-
-> **Conceito Central:** A pasta `.context` é a **fonte da verdade** (Single Source of Truth). O projeto é dividido em camadas para garantir escala e rastreabilidade.
-
----
-
-## 🏗️ 0. Máquina de Estados do Projeto (`PROJECT_MODE`)
-O template governa a si mesmo e ao projeto através de três estados rígidos:
-1. **`[BOOTSTRAP]`**: Focado na criação da infraestrutura do projeto e arquitetura.
-2. **`[HARDENING]`**: Ajustes em segurança (ci/cd, secret-scanners), estabilização e redução de dívida técnica.
-3. **`[PRODUCTION]`**: Desenvolvimento maduro de features.
-> ⚠️ **Regra de Transição:** Qualquer mudança de estado deve ser registrada no `JOURNAL.md` via `[handoff]`.
-
----
-
-## 🛡️ 1. Checklist de Carga (Obrigatório)
-Antes de gerar código, validar:
-1. [ ] **Global:** `brain/RULES.md`, `brain/MASTER_FLOW.md`, `brain/ROADMAP.md`
-2. [ ] **Role:** Conforme `brain/AGENT_REGISTRY.md`
-3. [ ] **Ephemeral:** `brain/PRD.md` + `maintenance/schema.sql` + `JOURNAL.md` (últimas 30 linhas)
-> ⚠️ Se qualquer item estiver ausente → parar e solicitar correção.
-
----
-
-## 🔢 2. Session Budget & Heurísticas de Token
-- **Alerta:** ~50k caracteres OU ~15-20 trocas densas
-- **Ação:** Oferecer purge do JOURNAL ou snapshot de sessão
-
----
-
-## 🧠 3. Protocolo de Manutenção
-- **JOURNAL.md:** Apenas decisões arquiteturais e bugs complexos. Limite: ~600 linhas.
-- **TECHNICAL_REQUIREMENTS.md:** Atualizar com mudanças em deps/schema.
-- **.specs/:** Specs efêmeras → arquivar pós-merge ou >48h inativo.
-
----
-
-## 🗄️ 4. Protocolo Database-First
-1. Validar `maintenance/schema.sql` antes de criar UI/lógica dependente.
-2. Se campo inexistente → avisar e sugerir migration.
-
----
-
-## 🤖 5. Comportamento do Agente
-- **Ativação:** `🤖 Ativando @[role] | Escopo: [descrição]`
-- **Isolamento:** Carregar APENAS `Global + Role-Specific + Task-Ephemeral`
-- **Handoff:** Registrar em `JOURNAL.md` ao cruzar domínios
-
----
-
-## 🚨 6. Segurança
-- **Segredos:** Nunca hardcoded. Usar `[VAR_NAME]` + `.env`
-- **Depreciação:** Marcar como `[DEPRECATED]` ao remover
-```
-
----
-
-## 📊 `.context/monitoring/CONTEXT_HEALTH.md` (Template Base)
-
-```markdown
----
-Criado em: {{DATA_ATUAL}}
-Última Atualização: {{DATA_ATUAL}}
-Status: Ativo
----
-
-# 📊 Health Check do Contexto - Dashboard
-
-💡 *Insight Humano: Este dashboard informa se o contexto está "poluído" ou "desatualizado".*
-
-<!-- HEALTH_TABLE_START -->
-| Metrica | Valor Atual | Limite Ideal | Pilar | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| **Governanca** | | | | |
-| Project Mode | `BOOTSTRAP` | N/A | Lifecycle | [OK] |
-| Fila de Hardening | 0 | 0 | Roadmap | [OK] |
-| **Manutencao** | | | | |
-| Linhas do Journal | 10 | 600 | Tracker | [OK] |
-| Carga do Journal | 500 chars | 50k chars | Tracker | [OK] |
-| **Cognitivo** | | | | |
-| Estimativa Tokens | ~1k | 128k (Max) | Eficiencia | [OK] |
-| **Consistencia** | | | | |
-| Tabelas no Schema | 0 | N/A | DB-First | [OK] |
-| Migrations Pendentes| 0 file(s) | N/A | DB-First | [OK] |
-| Ultimo Harness | Seed Check | Pass/Fail | Integridade | [PASS] |
-| Ultima Sincronia | {{DATA_ATUAL}} | Real-Time | Automacao | [OK] |
-<!-- HEALTH_TABLE_END -->
-
----
-
-## 🚨 Regras de Degradação & Ações
-- **Se Journal > 550 linhas ou > 45k char:** Ativar `@context-keeper` para rodar `_scripts/purge_journal.py`.
-- **Se Schema vs PRD divergir:** Bloquear geração de UI até migration.
-```
-
----
-
-## 🔄 `run_context.py` (Orquestrador V2.3.1 HARDENED)
-
-```python
-#!/usr/bin/env python3
-"""
-🐍 run_context.py - Gestor Universal de Contexto (v2.3.1 Hardened)
-Orquestrador multiplataforma protegido com Fail-Fast estrito.
-"""
-import sys
-import subprocess
-from pathlib import Path
-
-BASE_DIR = Path(__file__).parent
-SCRIPTS_DIR = BASE_DIR / ".context" / "_scripts"
-
-def run_script(name, args=None):
-    if args is None: args = []
-    script_path = SCRIPTS_DIR / name
-    if not script_path.exists():
-        print(f"[ERROR] Script {name} não encontrado em {SCRIPTS_DIR}")
-        sys.exit(1)
-    
-    print(f"\n[RUN] Executando {name}...")
-    try:
-        subprocess.run([sys.executable, str(script_path)] + args, check=True)
-    except subprocess.CalledProcessError:
-        print(f"\n[FATAL] Falha na etapa: {name}.")
-        print("[FATAL] O pipeline foi interrompido para manter a integridade do repositório.")
-        sys.exit(1)
-
-def main():
-    if len(sys.argv) < 2:
-        print("[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|oracle|health|lint|all]")
-        sys.exit(1)
-
-    cmd = sys.argv[1]
-    extra_args = sys.argv[2:]
-
-    if cmd == "validate": run_script("validate_context.py", extra_args)
-    elif cmd == "sync":   run_script("sync_project.py", extra_args)
-    elif cmd == "purge":  run_script("purge_journal.py", extra_args)
-    elif cmd == "oracle": run_script("context_oracle.py", extra_args)
-    elif cmd == "harness": run_script("harness_runner.py", extra_args)
-    elif cmd == "lint":   run_script("lint_wiki.py", extra_args)
-    elif cmd == "health": run_script("health_sync.py", extra_args)
-    elif cmd == "cleanup": run_script("cleanup_specs.py", extra_args)
-    elif cmd == "all":
-        # Fail-Fast Pipeline Crítico (Hardened v2.3.1)
-        run_script("validate_context.py")
-        run_script("secrets_scanner.py")
-        run_script("sync_project.py")
-        run_script("migration_registry.py")
-        run_script("harness_runner.py")
-        run_script("lint_wiki.py", ["--strict"])
-        run_script("health_sync.py")
-        print("\n[DONE] Pipeline H.O.K. + Security + Migrations + Health concluído com sucesso.")
-    else:
-        print(f"❌ Comando desconhecido: {cmd}")
-        sys.exit(1)
-
-if __name__ == "__main__":
-    main()
-```
-
----
-
-## 🧹 `.context/_scripts/validate_context.py` (V2.3.1 HARDENED)
-
-```python
-#!/usr/bin/env python3
-"""
-🔍 validate_context.py (v2.3.1 Hardened)
-Verifica saúde do .context, tokens e valida arquivos. Bloqueia pipeline em caso de falha.
-"""
-import sys
-from pathlib import Path
-
-SCRIPT_DIR = Path(__file__).parent
-CONTEXT_DIR = SCRIPT_DIR.parent
-
-REQUIRED_FILES = [
-    "brain/RULES.md", 
-    "brain/MASTER_FLOW.md", 
-    "brain/ROADMAP.md",
-    "brain/AGENT_REGISTRY.md",
-    "brain/PRD.md", 
-    "maintenance/JOURNAL.md", 
-    "maintenance/schema.sql", 
-    "maintenance/TECHNICAL_REQUIREMENTS.md",
-    "monitoring/CONTEXT_HEALTH.md"
-]
-
-JOURNAL_MAX_LINES = 600
-TOKEN_WARN_THRESHOLD_CHARS = 400_000
-
-def check_files():
-    return [f for f in REQUIRED_FILES if not (CONTEXT_DIR / f).exists()]
-
-def validate():
-    print(f"--- Iniciando validação de contexto (v2.3 Hardened) ---")
-    issues = []
-
-    missing = check_files()
-
-````
-CHUNK_END id=f23e47398730_c001
-CHUNK_START id=f23e47398730_c002 start_line=301 end_line=376
-````markdown
-    if missing: 
-        issues.append(f"[ERROR] Arquivos ausentes: {', '.join(missing)}")
-    else: 
-        print("[OK] Todos os arquivos obrigatórios presentes.")
-
-    # Simulação da contagem do Journal e Tokens para o Template Base
-    journal = CONTEXT_DIR / "maintenance/JOURNAL.md"
-    if journal.exists():
-        lines = len(journal.read_text(encoding="utf-8").splitlines())
-        if lines > JOURNAL_MAX_LINES: issues.append(f"[ERROR] JOURNAL excedeu: {lines} linhas.")
-        else: print(f"[OK] JOURNAL.md dentro do limite: {lines}/{JOURNAL_MAX_LINES}")
-
-    print("\n--- Relatório Final ---")
-    if not issues:
-        print("[SUCCESS] Contexto íntegro. Pronto para execução.")
-        sys.exit(0) # IMPORTANT: Exit 0 forces CI/CD to proceed safely
-    else:
-        for issue in issues: 
-            print(issue)
-        print("[FATAL] Resolva os corrompimentos de contexto antes de continuar.")
-        sys.exit(1) # IMPORTANT: Exit 1 blocks CI/CD on failure
-
-if __name__ == "__main__":
-    validate()
-```
-
----
-
-## 🚀 Script de Bootstrap Rápido (`init_project.sh`)
-
-```bash
-#!/usr/bin/env bash
-# init_project.sh - Inicializa template Antigravity Kit v2.3.1 (Hardened)
-set -euo pipefail
-
-PROJECT_NAME="${1:-meu-projeto}"
-NOW=$(date +%Y-%m-%d\ %H:%M)
-
-echo "🚀 Inicializando $PROJECT_NAME com Antigravity Kit v2.3.1..."
-
-# Correção Sintática: Criar estrutura
-mkdir -p "$PROJECT_NAME"/.context/{brain,maintenance,maintenance/_archive_context/raw,monitoring,_scripts}
-mkdir -p "$PROJECT_NAME"/.specs/features
-mkdir -p "$PROJECT_NAME"/tests
-mkdir -p "$PROJECT_NAME"/.github/workflows
-mkdir -p "$PROJECT_NAME"/.husky
-
-cd "$PROJECT_NAME"
-
-# Criar .gitignore
-cat > .gitignore << 'EOF'
-__pycache__/
-*.py[cod]
-.venv/
-node_modules/
-.env
-.env.local
-.vscode/
-*.log
-EOF
-
-# Criar .env.example
-cat > .env.example << 'EOF'
-CONTEXT_TIMEZONE=America/Sao_Paulo
-PROJECT_NAME=meu-projeto
-STRIPE_SECRET_KEY=[STRIPE_SECRET_KEY]
-DATABASE_URL=[DATABASE_URL]
-EOF
-
-echo "✅ Estrutura criada em $PROJECT_NAME/"
-echo ""
-echo "📋 Próximos passos:"
-echo "1. Configure os .md e Python scripts nas subpastas apropriadas de .context/"
-echo "2. Rode: npm install"
-echo "3. Validação V2.3.1: npm run context:all"
-```
-
-````
-CHUNK_END id=f23e47398730_c002
-FILE_END id=file_f23e47398730
-
----
-<a id="file_013dd7887d0e"></a>
-FILE_START id=file_013dd7887d0e path=resenha.md domain=docs lang=markdown lines=99 bytes=4790 mtime=2026-04-21T23:04:17.815602+00:00 sha1=68c8395f9a92d1036cd26a65451e3c7ccd051034
-CHUNK_START id=013dd7887d0e_c001 start_line=1 end_line=99
-````markdown
-# 🪐 Resenha Técnica: Antigravity Kit v2.5 (H.O.K.)
-
-O **Antigravity Kit (H.O.K. - Hardened Operations Kit)** é um framework de governança cibernética projetado para transformar repositórios comuns em ecossistemas inteligentes prontos para coexistência com IAs de alta performance. Diferente de uma documentação estática, o H.O.K. atua como o **Governador de Contexto**, garantindo que a IA opere sob restrições físicas e lógicas invioláveis.
-
----
-
-## 🏛️ 1. Arquitetura em Camadas (O `.context`)
-
-O diretório `.context` é o centro nervoso do framework. Ele é dividido em camadas funcionais para evitar a "alucinação por inchaço" (Context Bloat).
-
-```mermaid
-graph TD
-    subgraph "Camada de Memória Longa (.context)"
-        B[🧠 brain] --- M[🌐 market]
-        M --- MN[🛠️ maintenance]
-        MN --- MO[📊 monitoring]
-    end
-    
-    subgraph "Camada de Execução Efêmera"
-        W[🆕 .specs/ Workshop] 
-    end
-    
-    W -->|Merge & Sync| MN
-    MN -->|Purge & Archive| B
-```
-
-### 📂 Estrutura de Pastas e Componentes:
-
-1.  **`🧠 brain/` (Cérebro Estratégico)**:
-    - **`INCEPTION.md`**: Define o que o projeto É e o que NUNCA será. É a SSOT (Single Source of Truth) estratégica.
-    - **`RULES.md`**: O manual de conduta da IA. Contém as travas de segurança e os protocolos de interação.
-    - **`MASTER_FLOW.md`**: O blueprint de como os dados e as tarefas devem fluir.
-
-2.  **`🌐 market/` (Inteligência de Mercado & Karpathy Wiki)**:
-    - **`RAW/`**: "Minério bruto" (dossiês, PDFs convertidos, transcrições). **IAs não leem esta pasta!**
-    - **`WIKI/`**: Conhecimento destilado e atômico (padrão Karpathy). São as pílulas que o Oráculo consome.
-    - **`compliance/`**: Regras externas e restrições legais.
-
-3.  **`🛠️ maintenance/` (A Casa do Housekeeper)**:
-    - **`JOURNAL.md`**: Log vivo de decisões técnicas complexas. Tem limite de 600 linhas para manter o contexto magro.
-    - **`schema.sql`**: A verdade definitiva sobre o Banco de Dados. Impede a IA de alucinar tabelas que não existem.
-    - **`TECHNICAL_REQUIREMENTS.md`**: Inventário técnico de stacks e dependências.
-
-4.  **`📊 monitoring/` (O Guardião)**:
-    - **`CONTEXT_HEALTH.md`**: Dashboard gerado via script que mostra o consumo de tokens e a saúde dos arquivos.
-
-5.  **`⚙️ _scripts/` (O Motor)**:
-    - Automações em Python puro (stdlib-only) que fazem o linter de WIKI, validação de specs e purge de journal.
-
----
-
-## 🚦 2. O Ciclo de Vida: The Workshop vs. Governança
-
-O H.O.K. v2.5 separa o **caos da criação** da **ordem da documentação**:
-
--   **`.specs/` (O Workshop)**: É um ambiente efêmero. Aqui a IA abre uma "Spec Atômica", realiza a tarefa e, após o sucesso, a pasta é destruída. Nada de lixo atômico na raiz!
--   **TLC (Specify | Design | Tasks | Execute)**: O processo disciplinado onde nenhuma linha de código é escrita sem um contrato assinado (`qa_signoff: true`).
-
----
-
-## 📖 3. Protocolo de Destilação Karpathy (Zero RAG)
-
-Este é o diferencial da v2.5. Para evitar o custo e a imprecisão de bancos de dados vetoriais (RAG), o H.O.K. usa **Estratificação de Densidade**:
-
-1.  **Depositar (RAW)**: Informação bruta entra na pasta RAW.
-2.  **Destilar (WIKI)**: IA ou Humano transforma o RAW em arquivos Markdown pequenos e densos.
-3.  **Rastrear (Lint)**: O arquivo WIKI **obrigatoriamente** cita sua fonte RAW. Se não citar, o Husky (Pre-commit) bloqueia o commit.
-4.  **Consultar (Oráculo)**: A IA usa o script `context_oracle.py` para buscar termos na WIKI e retornar o arquivo **INTEGRAL**, garantindo que ela tenha a visão completa do conceito, sem cortes.
-
----
-
-## 🛡️ 4. Governança Inflexível (Fail-Closed)
-
-A versão 2.5 implementou a "Física do Repositório":
--   **Anti-Atropelo**: IAs leves (Gemini Flash) são proibidas de comitar sem proposta prévia e aprovação humana.
--   **Harness Lock**: Se não houver uma Spec ativa e assinada em `.specs/`, o `harness_runner.py` retorna `Exit 1` e aborta o commit. Não há commit sem contrato.
-
-```mermaid
-sequenceDiagram
-    participant U as Usuário
-    participant P as Agente Pro
-    participant F as Agente Flash (Executor)
-    participant H as Harness (Policial Python)
-    
-    U->>P: Solicita Feature
-    P->>F: Delega com Spec e Contrato
-    F->>F: Escreve no Workbench (.specs)
-    F->>H: Tenta Commit
-    alt Contrato Inválido
-        H-->>F: Exit 1 (BLOQUEIO)
-    else Contrato Assinado
-        H-->>F: Exit 0 (LIBERADO)
-        F->>U: Feature Concluída
-    end
-```
-
----
-
-> **Nota de Release v2.5:** O Antigravity Kit transforma a interação com IAs em um processo industrial de alta precisão, onde o contexto é blindado e a alucinação é mitigada por travas físicas de código.
-
-````
-CHUNK_END id=013dd7887d0e_c001
-FILE_END id=file_013dd7887d0e
-
----
 <a id="file_350a79f8b829"></a>
-FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=132 bytes=4701 mtime=2026-04-17T00:17:10.870257+00:00 sha1=6d9a72194cc0708819959eaa59b6027ffaf0a851
-CHUNK_START id=350a79f8b829_c001 start_line=1 end_line=132
+FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=144 bytes=5190 mtime=2026-04-22T23:16:30.370440+00:00 sha1=d888ea6eb9ffb21318a8abcb892c99af10ca6374
+CHUNK_START id=350a79f8b829_c001 start_line=1 end_line=144
 ```python
 #!/usr/bin/env python3
 """
-🐍 run_context.py - Gestor Universal de Contexto v2.4.1 (Hardened Pipeline)
+🐍 run_context.py - Gestor Universal de Contexto v2.5.0 (Hardened Pipeline)
 Sequencia otimizada: validate → scan-secrets → sync → migrations → harness → lint(strict) → health
 """
 
@@ -6641,7 +6013,7 @@ def run_script(name, args=None, capture=False):
     try:
         # Refatoração sugerida pela auditoria: Remover check=True para tratar códigos semânticos
         res = subprocess.run([sys.executable, str(script_path)] + args, check=False)
-        
+
         if res.returncode == 0:
             print(f"[OK] Concluido: {name}\n")
             return 0
@@ -6649,7 +6021,9 @@ def run_script(name, args=None, capture=False):
             print(f"[STRATEGIC BLOCK] Pendência em {name}. Pipeline local TRAVADO.\n")
             sys.exit(2)
         else:
-            print(f"[FATAL] Falha estrutural em {name}. Exit: {res.returncode}. Pipeline abortado.")
+            print(
+                f"[FATAL] Falha estrutural em {name}. Exit: {res.returncode}. Pipeline abortado."
+            )
             sys.exit(1)
     except Exception as e:
         print(f"[ERROR] Erro na execução de {name}: {e}\n")
@@ -6675,7 +6049,7 @@ def get_inception_status():
 def main():
     if len(sys.argv) < 2:
         print(
-            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|oracle|health|scan-secrets|check-migrations|enrich|all|help]"
+            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|lint-strict|oracle|health|scan-secrets|check-migrations|check-version|enrich|all|help]"
         )
         sys.exit(1)
 
@@ -6685,7 +6059,9 @@ def main():
     # Bloqueio global preventivo (Auditoria: TRANSLATION_LOCK uniforme)
     status = get_inception_status()
     if status == "TRANSLATION_LOCK" and cmd != "enrich" and cmd != "help":
-        print("[LOCKED] O projeto está em TRANSLATION_LOCK. Aceite ou rejeite o INCEPTION.proposed.md primeiro.")
+        print(
+            "[LOCKED] O projeto está em TRANSLATION_LOCK. Aceite ou rejeite o INCEPTION.proposed.md primeiro."
+        )
         sys.exit(2)
 
     if cmd == "validate":
@@ -6710,17 +6086,25 @@ def main():
         run_script("secrets_scanner.py", extra_args)
     elif cmd == "check-migrations":
         run_script("migration_registry.py", extra_args)
+    elif cmd == "check-version":
+        run_script("check_version_consistency.py", extra_args)
 
     elif cmd == "enrich":
         run_script("enrich_context.py", extra_args)
+    elif cmd == "ingest-guard":
+        run_script("ingest_wiki_guard.py", extra_args)
+    elif cmd == "wiki-health":
+        run_script("validate_context.py", ["check_wiki_integrity"] + extra_args)
 
     elif cmd == "all":
-        # Pipeline Fail-Fast (Hardened v2.4.1 + Hybrid Discovery)
+        # Pipeline Fail-Fast (Hardened v2.5.0 + Hybrid Discovery)
+        run_script("check_version_consistency.py")
         run_script("validate_context.py")
         run_script("secrets_scanner.py")
         run_script("sync_project.py")
         run_script("migration_registry.py")
         run_script("harness_runner.py")
+        run_script("ingest_wiki_guard.py")
         print("[RUN] Executando lint_wiki.py (Strict)...")
         run_script("lint_wiki.py", ["--strict"])
         print("[RUN] Sincronizando Health Dashboard...")
@@ -6731,7 +6115,7 @@ def main():
 
     elif cmd in ["help", "--help", "-h"]:
         print(
-            "Comandos: validate | purge | sync | cleanup | harness | lint | oracle | health | scan-secrets | check-migrations | enrich | all"
+            "Comandos: validate | purge | sync | cleanup | harness | lint | lint-strict | oracle | health | scan-secrets | check-migrations | check-version | enrich | all"
         )
     else:
         print(f"❌ Comando desconhecido: {cmd}")

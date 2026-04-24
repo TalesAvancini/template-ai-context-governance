@@ -1,5 +1,5 @@
 ---
-version: 2.4.1
+version: 2.5.2
 type: GOVERNANCE
 ---
 
@@ -18,9 +18,11 @@ O NotebookLM armazena o "Contexto Massivo" contínuo (PDFs, pesquisas, históric
 Ordem de precedência (o nível superior sempre anula o inferior):
 
 1. `🔮 Oráculo Externo (NotebookLM)`: Literatura de mercado, manuais extensos e macro-histórico.
-2. `market/compliance/*.md`: Regras imutáveis de negócio locais (Leis, Controles).
-3. `brain/INCEPTION.md`: Visão estratégica, regras comportamentais (NUNCA/SEMPRE).
-4. `brain/PRD.md`: Regras do produto e fluxo transacional atual.
-5. `maintenance/schema.sql`: O contrato final implementado tecnicamente.
+2. `market/WIKI/concepts/`: Conhecimento destilado e regras de engenharia (Harness, TDD).
+3. `market/compliance/*.md`: Regras imutáveis de negócio locais (Leis, Controles).
+4. `brain/INCEPTION.md`: Visão estratégica, regras comportamentais (NUNCA/SEMPRE).
+5. `brain/PRD.md`: Regras do produto e fluxo transacional atual.
+6. `maintenance/schema.sql`: O contrato final implementado tecnicamente.
 
 ⚠️ **Conflito Nuvem vs Local:** Em caso de divergência entre o Oráculo (Mercado/Visão) e os arquivos locais, a IA deve disparar um alerta e o Humano deve arbitrar quem detém a verdade correta no momento (Paradigma da Lei 3 - Hok Governor).
+

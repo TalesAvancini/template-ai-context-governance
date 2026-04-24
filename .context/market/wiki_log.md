@@ -22,3 +22,12 @@
 | [2026-04-23 11:45] | LINT | Integridade epistemológica validada | - | OK |
 | [2026-04-23 13:13] | SKIP | Nenhum artigo detectado para ingestão | - | OK |
 | [2026-04-23 13:13] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-23 21:54] | INGEST | Falha de conformidade Karpathy | market/WIKI/concepts/harness_maintainability.md | FAIL |
+| [2026-04-23 21:54] | INGEST | Ingestão de 1 artigos | harness_maintainability.md | OK |
+| [2026-04-23 21:54] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-23 21:59] | INGEST | Ingestão de 2 artigos | harness_architecture.md, harness_maintainability.md | OK |
+| [2026-04-23 21:59] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-23 22:01] | INGEST | Ingestão de 3 artigos | harness_architecture.md, harness_behavior.md, harness_maintainability.md | OK |
+| [2026-04-23 22:01] | LINT | Integridade epistemológica validada | - | OK |
+| [2026-04-23 22:03] | INGEST | Ingestão de 4 artigos | harness_architecture.md, harness_behavior.md, harness_maintainability.md, ralph_wiggum_loop.md | OK |
+| [2026-04-23 22:03] | LINT | Integridade epistemológica validada | - | OK |
