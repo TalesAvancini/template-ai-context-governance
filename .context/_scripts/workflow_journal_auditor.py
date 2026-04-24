@@ -17,19 +17,27 @@ CONTEXT_DIR = Path(__file__).resolve().parents[1]
 JOURNAL_PATH = CONTEXT_DIR / "maintenance" / "JOURNAL.md"
 SYNAPSE_PATH = CONTEXT_DIR / "maintenance" / "JOURNAL_SYNAPSE.md"
 
-def get_git_diff():
-    """Retorna lista de arquivos modificados e novos (não comitados)."""
+def get_git_state():
+    """Retorna dicionário com arquivos modificados e novos."""
     try:
-        # Arquivos modificados/staged
-        res = subprocess.run(["git", "diff", "--name-only", "HEAD"], capture_output=True, text=True, check=True)
-        files = set(res.stdout.splitlines())
-        # Arquivos novos (untracked)
-        res_untracked = subprocess.run(["git", "ls-files", "--others", "--exclude-standard"], capture_output=True, text=True, check=True)
-        files.update(res_untracked.stdout.splitlines())
-        return files
+        res = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, check=True)
+        lines = res.stdout.splitlines()
+        
+        modified = set()
+        new_files = set()
+        
+        for line in lines:
+            status = line[:2]
+            path = line[3:].strip()
+            if "??" in status or "A" in status:
+                new_files.add(path)
+            else:
+                modified.add(path)
+        
+        return {"modified": modified, "new": new_files, "all": modified.union(new_files)}
     except Exception as e:
         print(f"[ERROR] Falha ao ler Git: {e}")
-        return set()
+        return {"modified": set(), "new": set(), "all": set()}
 
 def get_synapse_rules():
     """Extrai JSON do JOURNAL_SYNAPSE.md."""
@@ -51,15 +59,15 @@ def get_latest_journal_entry():
     if not JOURNAL_PATH.exists():
         return ""
     content = JOURNAL_PATH.read_text(encoding="utf-8")
-    entries = re.split(r"(?=## 📅)", content)
-    # Ignora o cabeçalho do arquivo
-    valid_entries = [e for e in entries if "## 📅" in e]
-    return valid_entries[0] if valid_entries else ""
+    # Usa um separador que garanta o início da linha para evitar sub-seções
+    entries = re.split(r"(?m)^## 📅", content)
+    valid_entries = [e for e in entries if e.strip()]
+    return "## 📅" + valid_entries[-1] if valid_entries else ""
 
 def audit():
     print("🤖 Iniciando Auditoria Anti-Migué (SAM)...")
     
-    diff_files = get_git_diff()
+    git = get_git_state()
     synapse = get_synapse_rules()
     mode = synapse.get("mode", "assist")
     entry = get_latest_journal_entry()
@@ -69,62 +77,56 @@ def audit():
         return 1
 
     violations = []
-    obligations_met = True
 
     for rule in synapse.get("rules", []):
         rule_id = rule.get("id")
         triggered = False
         
-        # 1. Verifica se a regra foi disparada por arquivos alterados
         for pattern in rule.get("when_any_changed", []):
-            if any(re.search(re.escape(pattern), f) for f in diff_files):
+            if any(re.search(re.escape(pattern), f) for f in git["all"]):
                 triggered = True
                 break
         
-        # 2. Verifica se a regra foi disparada por novos caminhos
         if not triggered:
             for pattern in rule.get("when_new_path_under", []):
-                if any(f.startswith(pattern) for f in diff_files):
+                if any(f.startswith(pattern) for f in git["new"]):
                     triggered = True
                     break
 
         if triggered:
             print(f"[INFO] Regra '{rule_id}' disparada.")
-            # Verificar tags no Journal
             for tag in rule.get("require_journal_tags", []):
                 if tag.lower() not in entry.lower():
                     violations.append(f"Regra '{rule_id}': Tag '{tag}' ausente no Journal.")
             
-            # Verificar arquivos que deveriam ser tocados (propagação)
             for req_file in rule.get("require_files_touched", []):
-                # O arquivo deve estar no diff (foi alterado)
-                if not any(f.endswith(req_file) for f in diff_files):
+                if not any(f.endswith(req_file) for f in git["all"]):
                     violations.append(f"Regra '{rule_id}': Arquivo '{req_file}' não foi propagado (ausente no diff).")
                 
-                # O checkbox correspondente deve estar marcado no Journal
                 checkbox_pattern = rf"-\s*\[x\]\s*`?{re.escape(req_file)}`?"
                 if not re.search(checkbox_pattern, entry, re.I):
                     violations.append(f"Regra '{rule_id}': Checkbox [x] para '{req_file}' ausente ou desmarcado no Journal.")
 
-    # Validação de Segregação de Contexto (Modo Strict)
+    # Validação de Segregação de Contexto (REGEX ROBUSTO)
     if mode == "strict" or "### Contrato de Validacao" in entry:
-        exec_id = re.search(r"executor_context_id:\s*`?(.*?)`?", entry, re.I)
-        valid_id = re.search(r"validator_context_id:\s*`?(.*?)`?", entry, re.I)
-        status_match = re.search(r"status:\s*`?(.*?)`?", entry, re.I)
+        # Regex captura o conteúdo dentro de backticks ou texto puro, ignorando espaços
+        e_id_match = re.search(r"executor_context_id:\s*`?([\w\-_]+)`?", entry, re.I)
+        v_id_match = re.search(r"validator_context_id:\s*`?([\w\-_]+)`?", entry, re.I)
+        # Status busca por emojis ou texto READY TO COMMIT
+        status_match = re.search(r"status:\s*`?(.*?)`?\n", entry, re.I)
         
-        e_id = exec_id.group(1).strip() if exec_id else ""
-        v_id = valid_id.group(1).strip() if valid_id else ""
+        e_id = e_id_match.group(1).strip() if e_id_match else ""
+        v_id = v_id_match.group(1).strip() if v_id_match else ""
         status = status_match.group(1).strip() if status_match else ""
 
-        if not e_id or v_id in ["", "[PENDENTE]"]:
-            violations.append("Contrato de Validação incompleto (IDs ausentes).")
+        if not e_id or not v_id or v_id == "[PENDENTE]":
+            violations.append(f"Contrato incompleto. Detectado: executor='{e_id}', validator='{v_id}'.")
         elif e_id == v_id:
-            violations.append("Violação de Segregação: executor_context_id == validator_context_id.")
+            violations.append(f"Violação de Segregação: executor_context_id == validator_context_id ('{e_id}').")
         
-        if "READY TO COMMIT" not in status and "🟢" not in status:
-            violations.append("Status de validação não é 'READY TO COMMIT'.")
+        if not any(x in status for x in ["READY TO COMMIT", "🟢"]):
+            violations.append(f"Status de validação inválido: '{status}'. Esperado 'READY TO COMMIT'.")
 
-    # Resultado Final
     if violations:
         print("\n❌ VIOLAÇÕES DETECTADAS:")
         for v in violations:

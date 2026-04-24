@@ -4,7 +4,7 @@
 Valida spec vs schema, PRD vs código, e integridade de handoffs.
 """
 
-import os, re, sys, json, io
+import os, re, sys, json, io, subprocess
 from datetime import datetime
 from pathlib import Path
 
@@ -229,7 +229,7 @@ def check_journal_sam():
                 syn_json = json.loads(match.group(1))
                 mode = syn_json.get("mode", "assist")
 
-        res = subprocess.run([sys.executable, str(script_path)], capture_output=True, text=True)
+        res = subprocess.run([sys.executable, str(script_path)], capture_output=True, text=True, encoding='utf-8')
         
         if res.returncode != 0:
             msg = f"Violações SAM detectadas.\n{res.stdout}"
@@ -241,7 +241,11 @@ def check_journal_sam():
         
         return True, "SAM Audit OK"
     except Exception as e:
-        return True, f"Erro ao executar SAM Auditor: {e} (skip)"
+        msg = f"Erro crítico ao executar SAM Auditor: {e}"
+        if mode == "strict":
+            return False, msg
+        print(f"[WARN] {msg} (skip em assist)")
+        return True, msg
 
 
 def log_harness(status, detail, spec_name="unknown"):

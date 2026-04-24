@@ -6,7 +6,7 @@ O Agente Executor deve cumprir as promessas geradas por estas regras para libera
 <!-- SYNAPSE_JSON_START -->
 {
   "version": 1,
-  "mode": "assist",
+  "mode": "strict",
   "rules": [
     {
       "id": "sql_change",

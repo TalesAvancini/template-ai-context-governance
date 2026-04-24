@@ -83,25 +83,31 @@ Status: Ativo
 4. Nota de seguranca/performance se aplicavel
 ```
 
-### 🧪 `@qa-validator`
-**Gatilho:** Testes, validacao, edge cases, cobertura, mocks  
-**Contexto Obrigatorio:** `maintenance/TESTS.md`, `maintenance/JOURNAL.md` (bugs recentes), `brain/PRD.md` (criterios de aceite)
+### 🧪 `@qa-validator` (Auditor do Circuito SAM)
+**Gatilho:** `"assine contrato"`, `"valide DoD"`, `"auditoria SAM"`, `"rode testes"`
+**Contexto Obrigatório:** `spec.md`, `maintenance/JOURNAL_SYNAPSE.md`, `maintenance/JOURNAL.md`, `brain/PRD.md`
 ```text
-🤖 Ativando @qa-validator | Tarefa: {{descrição_curta}}
-📌 PRD_REF: {{#ID ou "N/A"}}
-📌 SCOPE: {{arquivo/feature a ser testada}}
+🤖 Ativando @qa-validator | Tarefa: Auditoria SAM para {{feature}}
+📌 SCOPE: {{arquivo/feature a ser auditada}}
 📌 CONTEXT_CHECK: ✅ Validado via npm run context:validate
-🎯 Objetivo: {{criar testes, validar edge cases ou aumentar cobertura}}
-🚧 Restricoes:
-- Seguir framework de testes definido em maintenance/TECHNICAL_REQUIREMENTS.md
-- Mockar servicos externos; nao depender de rede real
-- Cobrir happy path + 2 edge cases criticos no minimo
-- Documentar falhas conhecidas no maintenance/JOURNAL.md se houver
-📤 Saida Esperada:
-1. Codigo dos testes (unitarios/integracao)
-2. Matriz de cenarios cobertos
-3. Recomendacoes de refatoracao se aplicavel
-4. Se atuando na revisão do Contrato de Sprint: Atualizar a spec mudando `qa_signoff: true` e `signed_by: "@qa-validator"` se a spec.md estiver rigorosa. Se houver desvio, devolva EXIT com o erro para o @spec-driver corrigir.
+
+🔒 PROTOCOLO DE AUDITORIA SAM (Obrigatório):
+1. REALIDADE FÍSICA: Executar `git diff --name-only` e `git diff --stat`.
+2. OBRIGAÇÃO: Ler `maintenance/JOURNAL_SYNAPSE.md` (regras e modo).
+3. PROMESSA: Ler a última entrada do `maintenance/JOURNAL.md` (Narrativa + Checkboxes + Contrato).
+4. VALIDAÇÃO DETERMINÍSTICA: Executar `npm run context:workflow-journal` e `npm run context:harness`.
+5. SEGREGAÇÃO: Validar se executor_context_id != validator_context_id.
+
+🚧 REGRAS DE VERDITO:
+- Proibido assinar por confiança narrativa ou amizade algorítmica.
+- Se qualquer check falhar (Exit 1 ou omissão de diff):
+  -> Registrar VETO objetivo no JOURNAL.md: "❌ VETO: [motivo]"
+  -> Manter qa_signoff: false
+  -> Handoff para @spec-driver: "🔄 Handoff: @qa-validator -> @spec-driver | Estado: FAILED | Pendência: [X]"
+- Se TUDO passar (Exit 0 + realidade comprovada):
+  -> Atualizar spec.md: qa_signoff: true, signed_by: "@qa-validator", validator_context_id: "{{meu_id}}"
+  -> Atualizar JOURNAL.md: status: "🟢 READY TO COMMIT", validator_verdict: "Aprovado via SAM Audit"
+  -> Atualizar STATE.md: status: "✅ COMPLETED"
 ```
 
 ### 🔄 `@fullstack-generalist` (Modo Solo/Light)
