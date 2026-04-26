@@ -15,7 +15,7 @@ Nota: Semente pos-purge. 98 entradas arquivadas em journal_archive_20260424_1440
 1. O `harness_runner.py` foi alterado para gravar PASS/FAIL em `maintenance/HARNESS_LOG.md`.
 2. O `JOURNAL.md` foi limpo para manter apenas narrativa, contratos e handoffs.
 3. Entradas automáticas `[HARNESS-*]` antigas permanecem auditáveis no histórico de Git e nos arquivos arquivados do Journal.
-4. Atualizado `rx-anatomy.md` para refletir explicitamente a presença do `HARNESS_LOG.md` na camada maintenance.
+4. Atualizado `rx-anatomy.md` para refletir explicitamente a presença do `HARNESS_LOG.md` e `RX_REPOSITORIO.md` na camada maintenance.
 **Implicação:** Eliminação de poluição narrativa no Journal e redução do risco de purge degradar memória operacional humana.
 **Handoff:** @context-keeper -> @user | Estado: Journal sanitizado | Próximo: Validar pipeline.
 
@@ -96,6 +96,28 @@ Governança, Regras, Market
 - validator_verdict: `Saneamento e evolução biológica validados pelo usuário.`
 
 **Handoff:** @antigravity-agent -> @user | Estado: RX Biológico Evoluído | Próximo: Commitar mudanças.
+
+## 📅 2026-04-26 01:18
+**Decisão/Bug:** 🗺️ Implementação do RX_REPOSITORIO (Mapa Funcional).
+**Ação:**
+1. Criado o arquivo `.context/maintenance/RX_REPOSITORIO.md` baseado no modelo de sucesso do projeto `aline-insta`.
+2. O arquivo provê uma visão macro funcional que complementa a anatomia física.
+3. Atualizado `rx-anatomy.md` para incluir a nova referência.
+
+### Matriz de Propagação (Sinapse)
+- [x] `.context/maintenance/RX_REPOSITORIO.md` -> [Novo mapa funcional]
+- [x] `.context/maintenance/rx-anatomy.md` -> [Mapa atualizado]
+- [x] `.context/maintenance/JOURNAL.md` -> [Registro de criação]
+
+### Contrato de Validação
+- executor_context_id: `CTX_MAP_0426_01`
+- validator_context_id: `CTX_USER_AUDIT_MAP`
+- segregation_check: `executor_context_id != validator_context_id`
+- status: `🟢 READY TO COMMIT`
+- validator_verdict: `Mapa funcional integrado e validado.`
+
+**Handoff:** @antigravity-agent -> @user | Estado: Mapa Funcional Integrado | Próximo: Finalizar sessão.
+
 
 
 

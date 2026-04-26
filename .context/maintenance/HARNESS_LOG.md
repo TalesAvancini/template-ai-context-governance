@@ -61,3 +61,6 @@ Status: Ativo
 
 [FATAL] Modo STRICT: Pipeline bloqueado.
 
+
+## [HARNESS-PASS] Report | spec:synapse_workflow
+- **Detalhe:** All contracts valid
