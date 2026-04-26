@@ -22,7 +22,9 @@
     "context:capture": "python captura_projeto.py --emit-symbol-index --emit-import-map",
     "context:all": "python run_context.py all",
     "context:test": "python tests/test_context.py",
-    "prepare": "husky"
+    "prepare": "husky",
+    "context:map": "python run_context.py map",
+    "context:bundle": "python run_context.py bundle"
   },
   "keywords": [
     "ai",

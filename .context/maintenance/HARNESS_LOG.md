@@ -104,3 +104,15 @@ Status: Ativo
 
 ## [HARNESS-PASS] Report | spec:qa_subagent
 - **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:qa_subagent
+- **Detalhe:** journal_sam: Violações SAM detectadas.
+🤖 Iniciando Auditoria Anti-Migué (SAM)...
+[INFO] Regra 'new_context_path' disparada.
+
+❌ VIOLAÇÕES DETECTADAS:
+  - Regra 'new_context_path': Arquivo '.context/maintenance/rx-anatomy.md' não foi propagado (ausente no diff).
+  - Regra 'new_context_path': Checkbox [x] para '.context/maintenance/rx-anatomy.md' ausente ou desmarcado no Journal.
+
+[FATAL] Modo STRICT: Pipeline bloqueado.
+

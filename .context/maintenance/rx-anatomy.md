@@ -19,8 +19,8 @@ Status: Ativo
 │   ├── brain/              # Regras, PRD e Fronteiras (VISION/INCEPTION)
 │   ├── market/             # Camada Estratégica (SSOT, Limits, Compliance)
 │   ├── maintenance/        # Logs (JOURNAL/HARNESS_LOG), RX_REPOSITORIO.md e Inventários
-│   ├── monitoring/         # Dashboard de Saúde (CONTEXT_HEALTH.md)
-│   └── _scripts/           # Motor de Validação em Python (Oráculo, Harness)
+│   ├── monitoring/         # Dashboard de Saúde e Mapa (PROJECT_INDEX.md)
+│   └── _scripts/           # Motor de Validação em Python (Oráculo, Bundler, Harness)
 ├── .specs/                  # 🧪 BANCADA DE EXECUÇÃO (Workshop Efêmero)
 │   └── features/            # Specs atômicas ativas (max 3)
 ├── tests/                   # Suíte de testes (Infra e Unitários)

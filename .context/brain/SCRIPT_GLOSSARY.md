@@ -16,7 +16,13 @@ Status: Ativo
 | Script | O Órgão | Responsabilidade | Como Invocá-lo |
 | :--- | :--- | :--- | :--- |
 | `run_context.py` | **O Cérebro Motor** | O roteador de comandos CLI. Todos os comandos `npm run context:*` batem aqui. Ele encapsula chamadas para o `_scripts/` abstraindo o sistema operacional (funciona em Windows, Mac, Linux nativamente). | `npm run context:all` ou `python run_context.py [comando]` |
-| `captura_projeto.py` | **Olho que Tudo Vê** | Um bundler que empacota todo o contexto do projeto em um único arquivo de texto gigante (ex: `contexto_v2.5.2.md`) para ser alimentado em IAs com grandes janelas de contexto (como Gemini 1.5 Pro). | `python captura_projeto.py` |
+
+---
+
+## 📡 Motores de Visão e Mapeamento
+| Script | O Órgão | Responsabilidade | Como Invocá-lo |
+| :--- | :--- | :--- | :--- |
+| `project_bundler.py` | **Olho que Tudo Vê** | Um bundler de contexto. Na versão `map` (--toc-only), ele gera um índice de todos os arquivos do projeto para `PROJECT_INDEX.md`, servindo como mapa para IAs e subagentes não criarem código duplicado. Na versão `bundle`, empacota o repositório inteiro em um markdown gigantesco (`contexto.md`). | `npm run context:map` ou `npm run context:bundle` |
 
 ---
 

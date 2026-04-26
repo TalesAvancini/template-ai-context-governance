@@ -67,7 +67,7 @@ def get_inception_status():
 def main():
     if len(sys.argv) < 2:
         print(
-            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|lint-strict|oracle|health|scan-secrets|check-migrations|check-version|enrich|workflow-journal|all|help]"
+            "[USAGE] python run_context.py [validate|purge|sync|cleanup|harness|lint|lint-strict|oracle|health|scan-secrets|check-migrations|check-version|enrich|workflow-journal|map|bundle|all|help]"
         )
         sys.exit(1)
 
@@ -113,6 +113,10 @@ def main():
         run_script("validate_context.py", ["check_wiki_integrity"] + extra_args)
     elif cmd == "workflow-journal":
         run_script("workflow_journal_auditor.py", extra_args)
+    elif cmd == "map":
+        run_script("project_bundler.py", ["--toc-only", "-o", ".context/monitoring/PROJECT_INDEX.md"] + extra_args)
+    elif cmd == "bundle":
+        run_script("project_bundler.py", ["-o", "contexto.md"] + extra_args)
 
     elif cmd == "all":
         # Pipeline Fail-Fast (Hardened v2.5.0 + Hybrid Discovery)
@@ -127,13 +131,15 @@ def main():
         run_script("lint_wiki.py", ["--strict"])
         print("[RUN] Sincronizando Health Dashboard...")
         run_script("health_sync.py")
+        print("[RUN] Gerando Mapa de Arquivos Atualizado (PROJECT_INDEX)...")
+        run_script("project_bundler.py", ["--toc-only", "-o", ".context/monitoring/PROJECT_INDEX.md"])
         print(
-            "[DONE] Pipeline H.O.K. + Security + Migrations + Health concluído com sucesso."
+            "[DONE] Pipeline H.O.K. + Security + Migrations + Health + Index concluído com sucesso."
         )
 
     elif cmd in ["help", "--help", "-h"]:
         print(
-            "Comandos: validate | purge | sync | cleanup | harness | lint | lint-strict | oracle | health | scan-secrets | check-migrations | check-version | enrich | workflow-journal | all"
+            "Comandos: validate | purge | sync | cleanup | harness | lint | lint-strict | oracle | health | scan-secrets | check-migrations | check-version | enrich | workflow-journal | map | bundle | all"
         )
     else:
         print(f"❌ Comando desconhecido: {cmd}")

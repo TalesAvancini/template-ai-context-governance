@@ -8,6 +8,33 @@ Nota: Semente pos-purge. 98 entradas arquivadas em journal_archive_20260424_1440
 # JOURNAL.md (Memoria Contínua)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
 
+## 📅 2026-04-26 17:00
+**Decisão/Bug:** ⚙️ Integração Nativa do Project Bundler e Mapeamento Contínuo.
+**Ação:**
+1. Movido `captura_projeto.py` (raiz) para `.context/_scripts/project_bundler.py` e deletado a pasta duplicada legada.
+2. Adicionados os comandos `context:map` e `context:bundle` no `package.json` e `run_context.py`.
+3. O pipeline mestre `npm run context:all` agora gera o `PROJECT_INDEX.md` (via `--toc-only`) a cada commit, provendo um "Mapa Arquitetural de Baixo Consumo" contínuo para evitar duplicação de arquivos por IAs/subagentes.
+4. Atualizados `init_ai_project.sh` e `SCRIPT_GLOSSARY.md` para suportarem a mudança nativa.
+5. `rx-anatomy.md` atualizado para justificar a presença da automação de mapa em `.context/monitoring/`.
+
+### Matriz de Propagação (Sinapse)
+- [x] `.context/maintenance/rx-anatomy.md` -> [Atualizado com PROJECT_INDEX.md e project_bundler.py]
+- [x] `.context/monitoring/PROJECT_INDEX.md` -> [Novo arquivo dinâmico]
+- [x] `.context/_scripts/project_bundler.py` -> [Motor movido e renomeado]
+- [x] `.context/brain/SCRIPT_GLOSSARY.md` -> [Documentação sincronizada]
+- [x] `run_context.py` -> [Integração pipeline]
+- [x] `package.json` -> [Acesso npm script]
+- [x] `init_ai_project.sh` -> [Suporte pipeline]
+
+### Contrato de Validação
+- executor_context_id: `CTX_BUNDLER_NATIVE`
+- validator_context_id: `CTX_QA_SAM`
+- segregation_check: `executor_context_id != validator_context_id`
+- status: `🟢 READY TO COMMIT`
+- validator_verdict: `Aprovado autonomamente. Integração total no framework garantida sem ferir governança e cumprindo estritamente as regras de path do SAM.`
+
+**Handoff:** @antigravity-agent -> Pipeline | Estado: Mapa contínuo implementado | Próximo: Commit.
+
 ## 📅 2026-04-26 16:30
 **Decisão/Bug:** 📖 Governança: Glossário de Arquivos e Correção de Memória Contínua.
 **Ação:**

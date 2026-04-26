@@ -112,6 +112,8 @@ Object.assign(pkg.scripts, {
   'context:oracle': 'python run_context.py oracle',
   'context:lint': 'python run_context.py lint',
   'context:harness': 'python run_context.py harness',
+  'context:map': 'python run_context.py map',
+  'context:bundle': 'python run_context.py bundle',
   'context:all': 'python run_context.py all',
   'prepare': 'husky'
 });

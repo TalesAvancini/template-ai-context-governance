@@ -2,12 +2,12 @@
 
 ---
 schema_version: 1
-generated_at: 2026-04-26T19:50:14.617871+00:00
+generated_at: 2026-04-26T20:04:06.305510+00:00
 root: template_inicío_de_projeto
 mode: full | TOC
 profile: ai-default
 file_count: 83
-byte_count: 264965
+byte_count: 265882
 ignored_dirs:
   - .cache
   - .cursor
@@ -126,6 +126,7 @@ sensitive_rules:
   - `.context/_scripts/ingest_wiki_guard.py` -> [file_0731dcfd7873](#file_0731dcfd7873)
   - `.context/_scripts/lint_wiki.py` -> [file_ab41b07fb3fb](#file_ab41b07fb3fb)
   - `.context/_scripts/migration_registry.py` -> [file_d65b48a9d56c](#file_d65b48a9d56c)
+  - `.context/_scripts/project_bundler.py` -> [file_02d732116d93](#file_02d732116d93)
   - `.context/_scripts/purge_journal.py` -> [file_024b28a37d29](#file_024b28a37d29)
   - `.context/_scripts/secrets_scanner.py` -> [file_e98b95e5fb6d](#file_e98b95e5fb6d)
   - `.context/_scripts/sync_project.py` -> [file_f122711ba9e1](#file_f122711ba9e1)
@@ -133,7 +134,6 @@ sensitive_rules:
   - `.context/_scripts/workflow_journal_auditor.py` -> [file_8f42e61c8a29](#file_8f42e61c8a29)
   - `.context/maintenance/schema.sql` -> [file_91d5627a725e](#file_91d5627a725e)
   - `.husky/_/husky.sh` -> [file_3adfd36c1559](#file_3adfd36c1559)
-  - `captura_projeto.py` -> [file_c3916196f58f](#file_c3916196f58f)
   - `init_ai_project.sh` -> [file_c59135753d26](#file_c59135753d26)
   - `run_context.py` -> [file_350a79f8b829](#file_350a79f8b829)
   - `run_context.sh` -> [file_86bac54f32d7](#file_86bac54f32d7)
@@ -152,6 +152,7 @@ sensitive_rules:
 - `.context/_scripts/ingest_wiki_guard.py` -> [file_0731dcfd7873](#file_0731dcfd7873)
 - `.context/_scripts/lint_wiki.py` -> [file_ab41b07fb3fb](#file_ab41b07fb3fb)
 - `.context/_scripts/migration_registry.py` -> [file_d65b48a9d56c](#file_d65b48a9d56c)
+- `.context/_scripts/project_bundler.py` -> [file_02d732116d93](#file_02d732116d93)
 - `.context/_scripts/purge_journal.py` -> [file_024b28a37d29](#file_024b28a37d29)
 - `.context/_scripts/secrets_scanner.py` -> [file_e98b95e5fb6d](#file_e98b95e5fb6d)
 - `.context/_scripts/sync_project.py` -> [file_f122711ba9e1](#file_f122711ba9e1)
@@ -217,7 +218,6 @@ sensitive_rules:
 - `TEMPLATE_MIGRATION.md` -> [file_19e76e009f38](#file_19e76e009f38)
 - `VERSION.md` -> [file_f6f7100f063b](#file_f6f7100f063b)
 - `_modoLight/Modo_Light.md` -> [file_1f98938d3cd9](#file_1f98938d3cd9)
-- `captura_projeto.py` -> [file_c3916196f58f](#file_c3916196f58f)
 - `init_ai_project.sh` -> [file_c59135753d26](#file_c59135753d26)
 - `package.json` -> [file_7030d0b2f71b](#file_7030d0b2f71b)
 - `run_context.py` -> [file_350a79f8b829](#file_350a79f8b829)
@@ -295,6 +295,12 @@ FILE_END id=file_ab41b07fb3fb
 FILE_START id=file_d65b48a9d56c path=.context/_scripts/migration_registry.py domain=source lang=python lines=44 bytes=1700 mtime=2026-04-12T02:18:47.875961+00:00 sha1=a1e9beb894aba2b44931e9c41522a020b7359ebf
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_d65b48a9d56c
+
+---
+<a id="file_02d732116d93"></a>
+FILE_START id=file_02d732116d93 path=.context/_scripts/project_bundler.py domain=source lang=python lines=429 bytes=17844 mtime=2026-04-23T18:31:18.210183+00:00 sha1=6108c27d0315281c1f40bec72da49685422fdcc9
+CONTENT_OMITTED toc_only=true
+FILE_END id=file_02d732116d93
 
 ---
 <a id="file_024b28a37d29"></a>
@@ -382,7 +388,7 @@ FILE_END id=file_cd6526d17218
 
 ---
 <a id="file_aa59d3515582"></a>
-FILE_START id=file_aa59d3515582 path=.context/brain/SCRIPT_GLOSSARY.md domain=docs lang=markdown lines=71 bytes=6307 mtime=2026-04-26T19:35:41.422924+00:00 sha1=23914dfc4641af29f1fd864e52ec38316534993f
+FILE_START id=file_aa59d3515582 path=.context/brain/SCRIPT_GLOSSARY.md domain=docs lang=markdown lines=77 bytes=6567 mtime=2026-04-26T20:03:37.862155+00:00 sha1=ea7546e41f4ff30d9a85ef476b6e332bee869198
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_aa59d3515582
 
@@ -687,26 +693,20 @@ CONTENT_OMITTED toc_only=true
 FILE_END id=file_1f98938d3cd9
 
 ---
-<a id="file_c3916196f58f"></a>
-FILE_START id=file_c3916196f58f path=captura_projeto.py domain=source lang=python lines=429 bytes=17844 mtime=2026-04-23T18:31:18.210183+00:00 sha1=6108c27d0315281c1f40bec72da49685422fdcc9
-CONTENT_OMITTED toc_only=true
-FILE_END id=file_c3916196f58f
-
----
 <a id="file_c59135753d26"></a>
-FILE_START id=file_c59135753d26 path=init_ai_project.sh domain=source lang=bash lines=127 bytes=4447 mtime=2026-04-17T02:44:14.961287+00:00 sha1=f14d70f06e7349803e99a3d2521a4f54ff1a669d
+FILE_START id=file_c59135753d26 path=init_ai_project.sh domain=source lang=bash lines=129 bytes=4545 mtime=2026-04-26T20:03:25.730753+00:00 sha1=787c754dec5d442f485c2a35346827d8f358ec96
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_c59135753d26
 
 ---
 <a id="file_7030d0b2f71b"></a>
-FILE_START id=file_7030d0b2f71b path=package.json domain=config lang=json lines=39 bytes=1568 mtime=2026-04-24T16:49:54.881804+00:00 sha1=7816f60c1885e171b680ea7a3b46327061198aea
+FILE_START id=file_7030d0b2f71b path=package.json domain=config lang=json lines=41 bytes=1670 mtime=2026-04-26T20:03:15.234425+00:00 sha1=175eb33cadfea1e970819bda42dfe283708089c3
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_7030d0b2f71b
 
 ---
 <a id="file_350a79f8b829"></a>
-FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=144 bytes=5237 mtime=2026-04-24T16:49:40.512135+00:00 sha1=497d822d910a424b0fac306dd171b7eadba8975a
+FILE_START id=file_350a79f8b829 path=run_context.py domain=source lang=python lines=150 bytes=5694 mtime=2026-04-26T20:02:40.996990+00:00 sha1=8df94515229ce3edbceae07a28d15cad4a96f496
 CONTENT_OMITTED toc_only=true
 FILE_END id=file_350a79f8b829
 
