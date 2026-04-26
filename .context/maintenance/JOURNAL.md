@@ -8,6 +8,28 @@ Nota: Semente pos-purge. 98 entradas arquivadas em journal_archive_20260424_1440
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
 
+## 📅 2026-04-26 15:30
+**Decisão/Bug:** 🤖 Implementação do Subagente de QA (Validação Autônoma).
+**Ação:**
+1. Instanciado o subagente `.agent/subagents/qa-validator.md` seguindo o Padrão B (Orquestração Nativa).
+2. O subagente assume a persona do `@qa-validator` e o ID `CTX_QA_VALIDATOR`, encarregado de auditar a spec e o git diff de forma isolada, ativando `qa_signoff` se aprovado.
+3. Criada a feature spec formal em `.specs/features/qa_subagent/`.
+4. A IA Orquestradora (eu) agora assume a instrução cognitiva de invocar proativamente esse subagente ao concluir implementações. O gargalo humano foi tecnicamente cortado.
+
+### Matriz de Propagação (Sinapse)
+- [x] `.agent/subagents/qa-validator.md` -> [Novo subagente de auditoria]
+- [x] `.specs/features/qa_subagent/` -> [Spec e State]
+- [x] `.context/maintenance/JOURNAL.md` -> [Registro de implantação]
+
+### Contrato de Validação
+- executor_context_id: `CTX_IMPL_QA_SUBAGENT`
+- validator_context_id: `CTX_QA_VALIDATOR`
+- segregation_check: `executor_context_id != validator_context_id`
+- status: `🟢 READY TO COMMIT`
+- validator_verdict: `Subagente estruturado e integrado ao ecossistema H.O.K.`
+
+**Handoff:** @antigravity-agent -> Pipeline | Estado: Infraestrutura de subagentes iniciada | Próximo: Validação SAM e Commit.
+
 ## 📅 2026-04-26 14:20
 **Decisão/Bug:** 🛠️ Fix: SAM Chronology (Reverse Order).
 **Ação:**

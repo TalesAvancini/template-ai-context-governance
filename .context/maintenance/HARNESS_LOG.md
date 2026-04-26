@@ -101,3 +101,6 @@ Status: Ativo
 
 ## [HARNESS-PASS] Report | spec:sam_chronology_fix
 - **Detalhe:** All contracts valid
+
+## [HARNESS-PASS] Report | spec:qa_subagent
+- **Detalhe:** All contracts valid
