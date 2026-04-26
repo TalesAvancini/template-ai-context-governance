@@ -60,9 +60,11 @@ Status: [Ativo | Arquivado | Depreciado]
     │   └── _archive_context/          # Histórico imutável (A Biblioteca)
     │
     ├── monitoring/             # CAMADA DE MONITORAMENTO (The Guardian)
-    │   └── CONTEXT_HEALTH.md   # Dashboard de saúde técnica e cognitiva
+    │   ├── CONTEXT_HEALTH.md   # Dashboard de saúde técnica e cognitiva
+    │   └── PROJECT_INDEX.md    # Mapa do repositório atualizado a cada commit (Radar)
     │
     └── _scripts/               # CAMADA DE AUTOMACAO (The Motor)
+        ├── project_bundler.py         # Motor gerador do PROJECT_INDEX
         ├── validate_context.py        # Validador de integridade e status
         ├── enrich_context.py          # Tradutor cognitivo e Gap Check
         ├── purge_journal.py           # Gerenciador de memória (Purge)
@@ -99,7 +101,8 @@ Status: [Ativo | Arquivado | Depreciado]
 ### 🤖 Roteamento & Isolamento Multi-Agent
 1.  **Ativação:** Consultar `brain/AGENT_REGISTRY.md` + template de `brain/PROMPT_LIBRARY.md` e declarar ativação.
 2.  **Janela de Contexto:** Global + Role-Specific + Task-Ephemeral. Nunca carregar o `_archive/` sem comando explícito.
-3.  **Sync Pós-Execução:** Ao finalizar uma tarefa, valide a consistência entre código, `schema.sql` e `JOURNAL.md` antes de encerrar.
+3.  **Radar Arquitetural:** Sempre consulte `monitoring/PROJECT_INDEX.md` ANTES de criar novos arquivos, utilitários ou componentes para evitar duplicação de código.
+4.  **Sync Pós-Execução:** Ao finalizar uma tarefa, valide a consistência entre código, `schema.sql` e `JOURNAL.md` antes de encerrar.
 
 ### 📝 Gestão do JOURNAL.md
 - **Limite:** Máximo de 600 linhas.

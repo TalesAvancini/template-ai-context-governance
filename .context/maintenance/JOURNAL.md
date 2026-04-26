@@ -8,6 +8,30 @@ Nota: Semente pos-purge. 98 entradas arquivadas em journal_archive_20260424_1440
 # JOURNAL.md (Memoria Contínua)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
 
+## 📅 2026-04-26 17:30
+**Decisão/Bug:** 📖 Governança, Regras: Atualização da Cognição da IA sobre o Radar Arquitetural.
+**Ação:**
+1. Inserido o `PROJECT_INDEX.md` como item obrigatório na camada "Navigation Layer" da Checklist de Carga no `RULES.md`.
+2. Criada a regra "Prevenção de Duplicidade" no protocolo Database-First, ordenando consulta ao index antes da criação de arquivos.
+3. Adicionado o `PROJECT_INDEX.md` e o `project_bundler.py` na árvore visual do `MASTER_FLOW.md`.
+4. Adicionado o gatilho de "Radar Arquitetural" no roteamento Multi-Agent do `MASTER_FLOW.md`.
+5. Modificado o Changelog do `VERSION.md` para satisfazer as exigências de metadados do protocolo de Rules Change.
+
+### Matriz de Propagação (Sinapse)
+- [x] `.context/brain/RULES.md` -> [Regras atualizadas]
+- [x] `.context/brain/MASTER_FLOW.md` -> [Árvore e passos atualizados]
+- [x] `VERSION.md` -> [Changelog registrado para validação do bump]
+- [x] `.context/maintenance/JOURNAL.md` -> [Tags registradas]
+
+### Contrato de Validação
+- executor_context_id: `CTX_RULES_RADAR_0426`
+- validator_context_id: `CTX_QA_SAM`
+- segregation_check: `executor_context_id != validator_context_id`
+- status: `🟢 READY TO COMMIT`
+- validator_verdict: `Aprovado autonomamente. As novas regras foram cravadas no Master Flow e nas Rules, blindando a IA contra alucinações e duplicação de diretórios.`
+
+**Handoff:** @antigravity-agent -> Pipeline | Estado: Rules atualizadas e validadas | Próximo: Commit.
+
 ## 📅 2026-04-26 17:20 | 🚩 WAY POINT: Visão Computacional de Contexto Integrada
 **Estado Atual:**
 1. **Integração Total:** O `project_bundler.py` agora é um órgão nativo do framework.

@@ -8,3 +8,4 @@ Release Date: 2026-04-23
 - **[Segregação QA]** Specs `type: standard` exigem `executor_context_id != validator_context_id` no harness.
 - **[Contrato de Sprint]** Template oficial `.specs/_template.md` atualizado com campos de proveniência e assinatura.
 - **[Hook Estável]** Pre-commit em modo read-only (`check-version`, `validate`, `scan-secrets`) para evitar drift automático em cadeia.
+- **[Radar Arquitetural]** Integração do `monitoring/PROJECT_INDEX.md` como consulta obrigatória nas RULES para evitar duplicação.

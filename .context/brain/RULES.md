@@ -33,6 +33,7 @@ Antes de gerar código de produção ou realizar refatorações, o Agente **DEVE
 2. **[ ] Strategic Layer:** `brain/INCEPTION.md` (se existir) + `market/SSOT_MAP.md`
 3. **[ ] Role Layer:** Conforme definido em `brain/AGENT_REGISTRY.md` para a Role ativa.
 4. **[ ] Ephemeral Layer:** `brain/PRD.md` ativo + `maintenance/schema.sql` + últimas 30-50 linhas do `maintenance/JOURNAL.md`
+5. **[ ] Navigation Layer:** `monitoring/PROJECT_INDEX.md` (Consultar obrigatoriamente antes de criar novos arquivos)
 
 > ⚠️ **Bloqueio de Execução:** Se qualquer item estiver ausente ou desatualizado, a IA deve parar e solicitar a carga correta antes de prosseguir.
 
@@ -70,10 +71,11 @@ A IA atua como bibliotecário chefe. Consistência entre Código e Contexto é o
 
 ---
 
-## 🗄️ 4. Protocolo Database-First (Anti-Alucinação)
-É proibido construir código baseado em suposições sobre a estrutura do Banco de Dados.
-1. **Verificação Obrigatória:** Antes de criar UI/lógica dependente de dados, validar `maintenance/schema.sql`.
+## 🗄️ 4. Protocolo Database & Architecture First (Anti-Alucinação)
+É proibido construir código baseado em suposições sobre a estrutura do Banco de Dados ou Arquitetura.
+1. **Verificação de Dados Obrigatória:** Antes de criar UI/lógica dependente de dados, validar `maintenance/schema.sql`.
 2. **Aviso de Divergência:** Se o código exigir um campo inexistente, parar e avisar: *"⚠️ Alerta: O Frontend exige o campo X, mas ele não existe no Schema. Sugiro gerar a migration antes de prosseguir."*
+3. **Prevenção de Duplicidade:** Antes de criar *qualquer* arquivo, componente (ex: botão, modal) ou utilitário novo, a IA DEVE inspecionar `monitoring/PROJECT_INDEX.md`. Se a responsabilidade já existir, reescreva ou estenda o código existente. NUNCA crie duplicatas funcionais.
 
 ---
 
