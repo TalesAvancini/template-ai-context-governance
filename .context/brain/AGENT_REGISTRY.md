@@ -36,7 +36,7 @@ Status: Ativo
 | `@devops-guardian` | CI/CD, deploy, env vars, monitoramento, segurança infra | `.github/workflows/`, `Dockerfile`, `maintenance/rebuild_guide.md`, `.env.example` | `maintenance/rebuild_guide.md`, `maintenance/TECHNICAL_REQUIREMENTS.md` (infra), `brain/ROADMAP.md` (deploys) | "deploy", "CI/CD", "docker", "variável de ambiente", "monitoramento", "rollback" |
 | `@vision-architect` | Estratégia, validação de market fit, definição de boundaries | `.context/brain/INCEPTION.md`, `.context/market/MARKET_INBOX.md` | `.context/brain/INCEPTION.md`, `.context/market/SSOT_MAP.md` | "definir boundary", "validar gap de mercado", "revisar inception" |
 | `@spec-enricher` | Tradução estratégica em PRD, tradução cognitiva VISION -> INCEPTION, validação de gaps de mercado | `.context/brain/PRD.md`, `.context/brain/INCEPTION.proposed.md`, `maintenance/JOURNAL.md` | `.context/brain/INCEPTION.md`, `.context/brain/VISION.md`, `.context/market/SSOT_MAP.md` | "enriquecer spec", "gerar PRD", "traduzir visão", "propor inception", `npm run context:enrich` |
-| `@spec-driver` | Criação de specs, execução técnica atômica, geração de contrato DoD | `.specs/`, `src/`, `tests/`, `contract` (frontmatter) | `spec.md`, `schema.sql`, `STATE.md`, `JOURNAL.md` (tail 30) | `"crie spec"`, `"inicie execução"`, `"autopilot"`, "modo híbrido" |
+| `@spec-driver` | Execução técnica atômica (Spoke), geração de contrato DoD (Execution Log) | `.specs/`, `src/`, `tests/`, `contract` (frontmatter) | `spec.md`, `schema.sql`, `STATE.md`, `JOURNAL.md` (tail 30) | `"inicie execução"`, `"autopilot"`, "execute a spec" |
 | `@context-keeper` | Sync, purge, validação de consistência, saúde do contexto | `.context/` (exceto `_archive/`), `maintenance/JOURNAL.md`, `brain/RULES.md` | `brain/RULES.md`, `brain/MASTER_FLOW.md`, `maintenance/JOURNAL.md`, `monitoring/CONTEXT_HEALTH.md` | "atualize contexto", "purge", "health check", "validar consistência", "sincronizar" |
 | `@fullstack-generalist` | Modo fallback para tarefas transversais ou projetos light | Leitura em todo o projeto; Escrita apenas com confirmação explícita | `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/JOURNAL.md` (últimas 30 linhas) + Global | "modo light", "tarefa rápida", "projeto pequeno", "não especificado" |
 
@@ -55,11 +55,14 @@ Status: Ativo
 
 ## 🔒 Protocolos de Execução
 
-### 🧭 Roteamento de Tarefas
+### 🧭 Roteamento de Tarefas & Spawn de Subagentes
 ```text
 1. Receber comando → 2. Consultar AGENT_REGISTRY.md → 3. Identificar role(s) adequada(s)
 4. Declarar ativação: "🤖 Ativando @[role] | Escopo: [descrição curta]"
-5. Carregar APENAS: Global + Role-Specific + Task-Ephemeral
+5. Se for um Executor/Validator isolado (Hub & Spoke):
+   - Os prompts de sistema físicos residem na pasta `.agent/subagents/`.
+   - O Hub OBRIGATORIAMENTE encerra a sua resposta com o gatilho `/[nome-do-agente] [instrução]`.
+   - Isso garante que o host (ex: Cline/Cursor) spawne o agente isolado sem poluição cognitiva.
 6. Executar dentro das permissões → 7. Registrar handoff no JOURNAL.md se cruzar domínios
 ```
 
