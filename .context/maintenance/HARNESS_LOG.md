@@ -175,3 +175,6 @@ Status: Ativo
 
 [FATAL] Modo STRICT: Pipeline bloqueado.
 
+
+## [HARNESS-FAIL] Report | spec:oracle_v3
+- **Detalhe:** handoff: Handoffs malformados: ['Handoff incompleto: ** @flash -> @user | Estado: S'] | impact_radius: Raio de impacto excedido! (Modificados: 29 > Limite: 10). Re-fragmente a SPEC ou aumente o limite se justificado.
