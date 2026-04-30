@@ -1,7 +1,7 @@
 ---
 status: ✅ PASSED
-updated: 2026-04-30 18:35
-detail: "Onda 04 100% Concluída. D1/D2 Automatizados."
+updated: 2026-04-30 18:36
+detail: All checks passed
 ---
 
 # 🧠 STATE: Evolução Contract Sprints
@@ -51,15 +51,10 @@ qa_checkpoint:
   signed_at: 2026-04-30 18:25
 
 ## sprint_04
-start_hash: 3fe9cdc5fd57a80d5a23649c75de0f4a621d86e8
-captured_at: 2026-04-30 18:30
-captured_by: @spec-driver
-status: PASSED
-policy_profile: hybrid
 impact_snapshot:
   files_changed: 5
-  churn_added: 95
-  churn_removed: 21
+  churn_added: 97
+  churn_removed: 19
 impact_score: 2.5
 gates:
   hard_failed: []
