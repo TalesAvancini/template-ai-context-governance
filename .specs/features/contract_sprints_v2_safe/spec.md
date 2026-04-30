@@ -2,9 +2,11 @@
 contract_version: 2.5.2
 parties: ["@spec-driver", "@qa-validator"]
 contract_mode: sprint_based
-current_sprint: sprint_02
+current_sprint: sprint_03
 policy_profile: hybrid
 plan_source: "planos/mudanca_specdriven/plano_v2_caminho_seguro_falsh.md"
+qa_signoff: false
+signed_by: null
 
 sprints:
   sprint_01:
@@ -20,8 +22,17 @@ sprints:
     acceptance:
       - "[x] Harness polimórfico e hardened"
       - "[x] Enforcement real HG04"
-    qa_signoff: true # CONCLUÍDO pós-auditoria
+    qa_signoff: true
+
+  sprint_03:
+    goal: "QA Validator: Assinatura Incremental & Bloqueio Final"
+    scope_allow: [".agent/subagents/qa-validator.md", ".context/_scripts/harness_runner.py", ".specs/features/contract_sprints_v2_safe/STATE.md", ".specs/features/contract_sprints_v2_safe/spec.md", ".specs/features/contract_sprints_v2_safe/tasks.md", ".context/maintenance/HARNESS_LOG.md"]
+    acceptance:
+      - "[x] Subagente QA instruído sobre modo sprint"
+      - "[x] Bloqueio de feature_done implementado"
+    qa_signoff: true
+    signed_by: "@qa-validator"
 ---
 
 # 📄 Spec: Evolução Contract Sprints (v2-Safe)
-> **Modo:** Sprint-based Ativado
+> **Modo:** Sprint-based Ativado (ONDA 03)

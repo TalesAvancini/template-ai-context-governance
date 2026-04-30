@@ -274,3 +274,21 @@ Status: Ativo
 
 ## [HARNESS-PASS] Report | spec:contract_sprints_v2_safe
 - **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:contract_sprints_v2_safe
+- **Detalhe:** sprint_contract: [HG06] Start_hash inválido ou não resolvível: ca3e14811f0627e942a49c8ffbcd0aec71e04ea2a
+
+## [HARNESS-FAIL] Report | spec:contract_sprints_v2_safe
+- **Detalhe:** sprint_contract: [HG01] Violação de Escopo Sprint: Arquivo '.context/maintenance/HARNESS_LOG.md' fora do planejado para sprint_03.
+
+## [HARNESS-PASS] Report | spec:contract_sprints_v2_safe
+- **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:contract_sprints_v2_safe
+- **Detalhe:** sprint_contract: [HG01] Violação de Escopo Sprint: Arquivo '.context/_scripts/harness_runner.py' fora do planejado para sprint_03.
+
+## [HARNESS-FAIL] Report | spec:contract_sprints_v2_safe
+- **Detalhe:** sprint_contract: [HG04] Bloqueio Final: A última sprint deve ter signoff interno antes do signoff global.
+
+## [HARNESS-PASS] Report | spec:contract_sprints_v2_safe
+- **Detalhe:** All contracts valid

@@ -267,7 +267,17 @@ def _validate_sprint_contract(contract, spec_path):
                 if not any(f.startswith(a) or a in f for a in allowed):
                     return False, f"[HG01] Violação de Escopo Sprint: Arquivo '{f}' fora do planejado para {curr}."
 
-    return True, f"Sprint contract ({curr}) validado com Hardening Pass"
+    # C2: Bloqueio de feature_done global
+    global_signoff = re.search(r"^qa_signoff:\s*true", contract, re.I | re.M)
+    if global_signoff:
+        # Se tentou fechar a feature, a sprint atual DEVE ser a última e DEVE estar assinada
+        last_sprint = all_sprints[-1] if all_sprints else None
+        if curr != last_sprint:
+            return False, f"[HG04] Bloqueio Final: Não é possível dar signoff global se a sprint atual ({curr}) não é a última ({last_sprint})."
+        if "qa_signoff: true" not in sprint_block.lower():
+            return False, "[HG04] Bloqueio Final: A última sprint deve ter signoff interno antes do signoff global."
+
+    return True, f"Sprint contract ({curr}) validado com Hardening Pass (C2 Enforced)"
 
 def check_sprint_contract(spec_path: Path):
     """Valida o contrato da spec detectando o modo de operação (Dual Mode)."""

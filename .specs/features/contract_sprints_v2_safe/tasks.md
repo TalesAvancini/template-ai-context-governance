@@ -20,8 +20,9 @@
 - [x] **Verify B**: Auditoria Codex validada com sucesso.
 
 ## 🧪 Onda 3: QA Validator (Fase C)
-- [ ] **TASK-08 (C1)**: Revisar prompt do subagente para checkpoint incremental.
-- [ ] **Verify C**: Teste de assinatura parcial.
+- [x] **TASK-08 (C1)**: Revisar prompt do subagente para checkpoint incremental.
+- [x] **TASK-C2**: Implementar bloqueio de `feature_done` global sem signoff de sprint (C2).
+- [x] **Verify C**: Teste de migué e assinatura parcial validado.
 
 ## 📊 Onda 4: Impacto Incremental (Fase D)
 - [ ] **TASK-09 (D1)**: Captura de `start_hash` no início da sprint.
