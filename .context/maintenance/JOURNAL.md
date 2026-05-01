@@ -521,4 +521,14 @@ Governança, Regras, Market
 **Evidência:** Eventos GF-JOURNAL-ORDER e GF-STATE-FRESHNESS emitidos no log operacional.
 **Harness Check:** `78968dd` (PASS).
 **Handoff:** `@spec-driver` ⮕ `@qa-validator`.
-**Estado:** Aguardando signoff definitivo da Sprint 03.
+## 📅 2026-04-30 22:45
+**Ação:** ✅ QA Signoff Sprint 03 (Governance Rules Hardening).
+**Auditor:** `@qa-validator` (Codex)
+**Verificação:** Implementação de `[GOVERNANCE-FRICTION]` automatizada; Modo Advisory validado; Refinamento Zero Side Effect (trava de variável de ambiente) funcional e testado sem poluição de árvore local.
+**Resultado:** `qa_signoff: true` aplicado na `sprint_03`. Transição para `current_sprint: sprint_04`.
+
+## 📅 2026-04-30 22:45
+**Ação:** 🛡️ Rito de Abertura: Sprint 04 (Sincronização Institucional).
+**Contexto:** Sincronização de ativos de governança (Glossários e Bibliotecas).
+**Handoff:** `@qa-validator` ⮕ `@spec-driver`.
+**Estado:** `🚧 IN_PROGRESS` (Sprint 04).

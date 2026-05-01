@@ -2,11 +2,11 @@
 contract_version: 2.5.2
 parties: ["@spec-driver", "@qa-validator"]
 contract_mode: sprint_based
-current_sprint: sprint_03
+current_sprint: sprint_04
 policy_profile: hybrid
 plan_source: planos/governance_rules_hardening/plano_governance_rules_hardening.md
-qa_signoff: false
-signed_by: null
+qa_signoff: true
+signed_by: "@qa-validator"
 
 sprints:
   sprint_01:
@@ -62,6 +62,22 @@ sprints:
       - "[x] Ordem cronológica do JOURNAL tratada como WARN (não bloqueante)"
       - "[x] Disciplina de `STATE.updated` reforçada no checklist (datetime completo)"
       - "[x] Eventos `[GOVERNANCE-FRICTION]` automatizados no HARNESS_LOG.md"
+    qa_signoff: true
+    signed_by: "@qa-validator"
+
+  sprint_04:
+    goal: "Sincronização Institucional: Glossários, Bibliotecas e Runbooks finais."
+    scope_allow:
+      - ".context/brain/MASTER_FLOW.md"
+      - ".context/brain/RULES.md"
+      - ".context/maintenance/JOURNAL.md"
+      - ".specs/features/governance_rules_hardening/spec.md"
+      - ".specs/features/governance_rules_hardening/tasks.md"
+      - ".specs/features/governance_rules_hardening/STATE.md"
+    scope_deny: []
+    acceptance:
+      - "[ ] HARNESS_REGISTRY.md e glossários atualizados"
+      - "[ ] PROMPT_LIBRARY.md atualizada com padrões de hardening"
     qa_signoff: false
     signed_by: null
 ---

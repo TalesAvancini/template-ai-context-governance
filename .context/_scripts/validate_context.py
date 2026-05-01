@@ -139,7 +139,10 @@ def check_sprint_acceptance_sync():
 
 
 def log_friction(event_code, detail):
-    """Registra fricção de governança no HARNESS_LOG.md."""
+    """Registra fricção de governança no HARNESS_LOG.md se a flag estiver ativa."""
+    if os.environ.get("CONTEXT_WRITE_ADVISORY_LOG") != "1":
+        return
+        
     log_path = CONTEXT_DIR / "maintenance/HARNESS_LOG.md"
     if not log_path.exists():
         return
