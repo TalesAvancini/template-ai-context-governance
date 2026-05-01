@@ -477,7 +477,7 @@ Governança, Regras, Market
 **Contexto:** Transição para governança determinística e anti-fraude narrativa.
 **Dados de Arranque:**
 - **Feature:** `.specs/features/governance_rules_hardening/`
-- **Start Hash:** `fd21dac9e7c7aeb9a4b1d9fe40d4ff64905655e6` (Estabilizado)
+- **Start Hash:** `39a4c71dc7f657e5442255ab9bba24b1d2f9408f` (100% Limpo)
 - **Status:** `🚧 IN_PROGRESS`
 - **Executor:** `@antigravity-agent`
 **Nota:** Baseline ajustado após auditoria de bootstrap para garantir integridade total.
