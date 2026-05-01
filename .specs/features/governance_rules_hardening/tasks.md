@@ -29,8 +29,8 @@
 - [x] **TASK-11**: Implementar `check_sprint_acceptance_sync` como erro bloqueante.
 
 ## 🏗️ Sprint 06: Hardening de Agenciamento (Nervos)
-- [ ] **TASK-12**: Atualizar papéis spec-driver e qa-validator com protocolo Hardened Closing.
-- [ ] **TASK-13**: Implementar transição atômica para `IN_PROGRESS` via código.
+- [x] **TASK-12**: Atualizar papéis spec-driver e qa-validator com protocolo Hardened Closing.
+- [x] **TASK-13**: Implementar transição atômica para `IN_PROGRESS` via código.
 
 ## 🏗️ Sprint 07: Hardening SAM & Telemetria
 - [ ] **TASK-14**: Implementar detecção de fraude narrativa no `workflow_journal_auditor.py`.

@@ -1,12 +1,96 @@
 ---
 Criado em: 2026-04-10 20:50
-Ultima Atualizacao: 2026-04-28 23:45
+Ultima Atualizacao: 2026-04-30 23:16
 Status: Ativo
 Nota: Semente pos-purge. 98 entradas arquivadas em journal_archive_20260424_144021.md.
 ---
 
 # JOURNAL.md (Memoria Contínua)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
+
+## 📅 2026-04-30 23:16
+**Ação:** ✅ Conclusão Técnica Sprint 06 (Hardening de Agenciamento).
+**Entrega:** 
+1. Papéis `@spec-driver` e `@qa-validator` endurecidos no `AGENT_REGISTRY.md` com o Protocolo Hardened Closing (V5).
+2. Implementada validação de baseline atômica em `validate_context.py` (check de `start_hash` no Git).
+3. Corrigida lógica de cronologia reversa no validador para eliminar falso-positivos.
+**Harness Check:** `21c28b1` (PASS).
+**Handoff:** `@spec-driver` ⮕ `@qa-validator`.
+
+## 📅 2026-04-30 23:12
+**Ação:** 🛡️ Rito de Sincronização & Abertura: Sprint 06 (Hardening de Agenciamento).
+**Contexto:** Auditoria de autocrítica detectou ausência das Sprints 06, 07 e 08 na `spec.md`. Contrato sincronizado com o plano `tasks.md`.
+**Estado:** `🚧 IN_PROGRESS` (Sprint 06).
+
+## 📅 2026-04-30 23:12
+**Ação:** ✅ QA Signoff Sprint 05 (Governance Rules Hardening).
+**Auditor:** `@qa-validator` (Antigravity)
+**Verificação:** Enforcement bloqueante validado. Sincronização de Sprints 06-08 na `spec.md` concluída.
+**Resultado:** `qa_signoff: true` aplicado na `sprint_05`. Transição para `current_sprint: sprint_06`.
+
+## 📅 2026-04-30 22:58
+**Ação:** ✅ Conclusão Técnica Sprint 05.
+**Entrega:** Enforcement Automático (Músculos). `validate_context.py` endurecido.
+**Harness Check:** `f8bd242` (PASS).
+
+## 📅 2026-04-30 22:56
+**Ação:** 🛡️ Rito de Abertura: Sprint 05 (Enforcement Automático).
+**Objetivo:** Implementar validações bloqueantes (Fail-Closed) em `validate_context.py`.
+
+## 📅 2026-04-30 22:56
+**Ação:** ✅ QA Signoff Sprint 04 (Governance Rules Hardening).
+**Auditor:** `@qa-validator` (Codex)
+**Resultado:** `qa_signoff: true` aplicado na `sprint_04`. Transição para `current_sprint: sprint_05`.
+
+## 📅 2026-04-30 22:50
+**Ação:** ✅ Conclusão Técnica Sprint 04.
+**Entrega:** Sincronização institucional (Harness H05, Glossários, Prompts) concluída.
+**Harness Check:** `a4fa31c` (PASS).
+
+## 📅 2026-04-30 22:46
+**Ação:** 🛡️ Rito de Abertura (Recalibrado): Sprint 04 (Sincronização Institucional).
+**Baseline (start_hash):** `09e85cf` (Validado).
+
+## 📅 2026-04-30 22:45
+**Ação:** ✅ QA Signoff Sprint 03 (Governance Rules Hardening).
+**Auditor:** `@qa-validator` (Codex)
+**Resultado:** `qa_signoff: true` aplicado na `sprint_03`. Transição para `current_sprint: sprint_04`.
+
+## 📅 2026-04-30 22:35
+**Ação:** 🔧 Refinamento Auditoria Sprint 03.
+**Ajustes:** Automação de log `[GOVERNANCE-FRICTION]`, refinamento de check de `STATE.updated` e trava Zero Side Effect.
+**Harness Check:** `78968dd` (PASS).
+
+## 📅 2026-04-30 22:25
+**Ação:** ✅ Conclusão Técnica Sprint 03.
+**Entrega:** Regras `MIMO_STATE_INTEGRITY` (via Advisory), Checklist Anti-Reincidência e padrão `GOVERNANCE-FRICTION`.
+**Harness Check:** `5291491` (PASS).
+
+## 📅 2026-04-30 22:02
+**Ação:** ✅ QA Signoff Sprint 02 (Governance Rules Hardening).
+**Auditor:** `@qa-validator` (Codex)
+**Resultado:** `qa_signoff: true` aplicado na `sprint_02`. Transição para `current_sprint: sprint_03`.
+
+## 📅 2026-04-30 21:57
+**Ação:** ✅ Conclusão Técnica Sprint 02.
+**Entrega:** Regras `MIMO_STATE_INTEGRITY` e `CRITICAL_SCRIPT_SANITY` implementadas e integradas.
+**Harness Check:** `c3c5e32` (PASS).
+
+## 📅 2026-04-30 21:49
+**Ação:** ✅ QA Signoff Sprint 01 (Governance Rules Hardening).
+**Auditor:** `@qa-validator` (Codex)
+**Resultado:** `qa_signoff: true` aplicado na `sprint_01`. Transição para `current_sprint: sprint_02`.
+
+## 📅 2026-04-30 21:42
+**Ação:** ✅ Conclusão Técnica Sprint 01.
+**Entrega:** Regras `CLOSE_WAVE`, `ANTI_FALSE_PASS` e rito `Pre-Close Audit` implementados.
+**Harness Check:** `aa389b8` (PASS).
+
+## 📅 2026-04-30 21:00
+**Ação:** 🛡️ Rito de Início: Governance Rules Hardening (v5).
+**Contexto:** Transição para governança determinística e anti-fraude narrativa.
+**Start Hash:** `39a4c71`
+**Objetivo Imediato:** Sprint 01 — Regras Canônicas em `RULES.md`.
 
 ## 📅 2026-04-30 18:55 | 🛡️ ONDA 05: Institucionalização v2-Safe (Higiene & SSOT)
 **Decisão/Bug:** Finalização do Hardening de Contract Sprints com proteção de cleanup e atualização de regras mestras. [Governança] [Regras] [Harness]
@@ -441,78 +525,3 @@ Nota: Semente pos-purge. 98 entradas arquivadas em journal_archive_20260424_1440
 ## [2026-04-22 09:50] release: Antigravity Kit v2.5.0 'Hardened Matrix'
 - **Meta-Ação:** Implementação de SSOT de Versão e Endurecimento de Onboarding (Arquiteto).
 - **Status:** [CONSISTENT & HARDENED]
-
-## 📅 2026-04-30 21:00
-**Ação:** 🛡️ Rito de Início: Governance Rules Hardening (v5).
-**Contexto:** Transição para governança determinística e anti-fraude narrativa.
-**Start Hash:** `39a4c71`
-**Objetivo Imediato:** Sprint 01 — Regras Canônicas em `RULES.md`.
-
-## 📅 2026-04-30 21:42
-**Ação:** ✅ Conclusão Técnica Sprint 01.
-**Entrega:** Regras `CLOSE_WAVE`, `ANTI_FALSE_PASS` e rito `Pre-Close Audit` implementados.
-**Harness Check:** `aa389b8` (PASS).
-
-## 📅 2026-04-30 21:49
-**Ação:** ✅ QA Signoff Sprint 01 (Governance Rules Hardening).
-**Auditor:** `@qa-validator` (Codex)
-**Resultado:** `qa_signoff: true` aplicado na `sprint_01`. Transição para `current_sprint: sprint_02`.
-
-## 📅 2026-04-30 21:57
-**Ação:** ✅ Conclusão Técnica Sprint 02.
-**Entrega:** Regras `MIMO_STATE_INTEGRITY` e `CRITICAL_SCRIPT_SANITY` implementadas e integradas.
-**Harness Check:** `c3c5e32` (PASS).
-
-## 📅 2026-04-30 22:02
-**Ação:** ✅ QA Signoff Sprint 02 (Governance Rules Hardening).
-**Auditor:** `@qa-validator` (Codex)
-**Resultado:** `qa_signoff: true` aplicado na `sprint_02`. Transição para `current_sprint: sprint_03`.
-
-## 📅 2026-04-30 22:25
-**Ação:** ✅ Conclusão Técnica Sprint 03.
-**Entrega:** Regras `MIMO_STATE_INTEGRITY` (via Advisory), Checklist Anti-Reincidência e padrão `GOVERNANCE-FRICTION`.
-**Harness Check:** `5291491` (PASS).
-
-## 📅 2026-04-30 22:35
-**Ação:** 🔧 Refinamento Auditoria Sprint 03.
-**Ajustes:** Automação de log `[GOVERNANCE-FRICTION]`, refinamento de check de `STATE.updated` e trava Zero Side Effect.
-**Harness Check:** `78968dd` (PASS).
-
-## 📅 2026-04-30 22:45
-**Ação:** ✅ QA Signoff Sprint 03 (Governance Rules Hardening).
-**Auditor:** `@qa-validator` (Codex)
-**Resultado:** `qa_signoff: true` aplicado na `sprint_03`. Transição para `current_sprint: sprint_04`.
-
-## 📅 2026-04-30 22:46
-**Ação:** 🛡️ Rito de Abertura (Recalibrado): Sprint 04 (Sincronização Institucional).
-**Baseline (start_hash):** `09e85cf` (Validado).
-
-## 📅 2026-04-30 22:50
-**Ação:** ✅ Conclusão Técnica Sprint 04.
-**Entrega:** Sincronização institucional (Harness H05, Glossários, Prompts) concluída.
-**Harness Check:** `a4fa31c` (PASS).
-
-## 📅 2026-04-30 22:56
-**Ação:** ✅ QA Signoff Sprint 04 (Governance Rules Hardening).
-**Auditor:** `@qa-validator` (Codex)
-**Resultado:** `qa_signoff: true` aplicado na `sprint_04`. Transição para `current_sprint: sprint_05`.
-
-## 📅 2026-04-30 22:56
-**Ação:** 🛡️ Rito de Abertura: Sprint 05 (Enforcement Automático).
-**Objetivo:** Implementar validações bloqueantes (Fail-Closed) em `validate_context.py`.
-
-## 📅 2026-04-30 22:58
-**Ação:** ✅ Conclusão Técnica Sprint 05.
-**Entrega:** Enforcement Automático (Músculos). `validate_context.py` endurecido.
-**Harness Check:** `f8bd242` (PASS).
-
-## 📅 2026-04-30 23:12
-**Ação:** ✅ QA Signoff Sprint 05 (Governance Rules Hardening).
-**Auditor:** `@qa-validator` (Antigravity)
-**Verificação:** Enforcement bloqueante validado. Sincronização de Sprints 06-08 na `spec.md` concluída.
-**Resultado:** `qa_signoff: true` aplicado na `sprint_05`. Transição para `current_sprint: sprint_06`.
-
-## 📅 2026-04-30 23:12
-**Ação:** 🛡️ Rito de Sincronização & Abertura: Sprint 06 (Hardening de Agenciamento).
-**Contexto:** Auditoria de autocrítica detectou ausência das Sprints 06, 07 e 08 na `spec.md`. Contrato sincronizado com o plano `tasks.md`.
-**Estado:** `🚧 IN_PROGRESS` (Sprint 06).

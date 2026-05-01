@@ -155,7 +155,7 @@ def log_friction(event_code, detail):
 
 
 def check_journal_chronology():
-    """Modo Advisory: Avisa se as datas no JOURNAL.md não estão em ordem crescente."""
+    """Modo Advisory: Avisa se as datas no JOURNAL.md não estão em Ordem Reversa (Novo no Topo)."""
     journal = CONTEXT_DIR / "maintenance/JOURNAL.md"
     if not journal.exists():
         return True, "Sem Journal"
@@ -171,8 +171,9 @@ def check_journal_chronology():
     for i in range(1, len(date_patterns)):
         prev = date_patterns[i-1]
         curr = date_patterns[i]
-        if curr < prev:
-            msg = f"Inversão detectada: {curr} aparece após {prev}"
+        # Em ordem reversa, curr (item de baixo) deve ser <= prev (item de cima)
+        if curr > prev:
+            msg = f"Inversão detectada (Ordem Reversa): {curr} aparece abaixo de {prev}"
             warnings.append(msg)
             log_friction("GF-JOURNAL-ORDER", msg)
 
@@ -222,6 +223,43 @@ def check_state_freshness():
 
     if warnings:
         return False, " | ".join(warnings)
+    return True, "OK"
+
+
+def check_atomic_transition():
+    """Valida se o start_hash de uma spec IN_PROGRESS existe no histórico Git."""
+    specs_dir = CONTEXT_DIR.parent / ".specs" / "features"
+    if not specs_dir.exists():
+        return True, "Sem specs"
+
+    issues = []
+    for spec_dir in [d for d in specs_dir.iterdir() if d.is_dir() and not d.name.startswith("_")]:
+        state_path = spec_dir / "STATE.md"
+        if not state_path.exists():
+            continue
+
+        content = state_path.read_text(encoding="utf-8", errors="ignore")
+        status_match = re.search(r"status:\s*.*IN_PROGRESS", content, re.I)
+        if not status_match:
+            continue
+
+        hash_match = re.search(r"start_hash:\s*[\"']?([a-f0-9]{7,40})[\"']?", content, re.I)
+        if not hash_match:
+            issues.append(f"{spec_dir.name}: status IN_PROGRESS mas start_hash ausente")
+            continue
+
+        start_hash = hash_match.group(1)
+        # Verifica se o hash existe no Git
+        check_git = subprocess.run(
+            ["git", "cat-file", "-t", start_hash],
+            capture_output=True,
+            text=True
+        )
+        if check_git.returncode != 0:
+            issues.append(f"{spec_dir.name}: start_hash inválido ou inexistente ({start_hash})")
+
+    if issues:
+        return False, " | ".join(issues)
     return True, "OK"
 
 
@@ -432,6 +470,14 @@ def validate():
         exit_code = 1
     else:
         print(f"[OK] WIKI: {wiki_msg}")
+
+    atomic_ok, atomic_msg = check_atomic_transition()
+    if not atomic_ok:
+        issues.append(f"[ERROR] Atomic Transition: {atomic_msg}")
+        exit_code = 1
+        log_friction("GF-ATOMIC-DESYNC", atomic_msg)
+    else:
+        print(f"[OK] Atomic Transition: {atomic_msg}")
 
     # --- Camada ADVISORY (Sprint 03) ---
     j_chron_ok, j_chron_msg = check_journal_chronology()

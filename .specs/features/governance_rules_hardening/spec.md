@@ -106,8 +106,8 @@ sprints:
       - ".specs/features/governance_rules_hardening/STATE.md"
     scope_deny: []
     acceptance:
-      - "[ ] Papéis spec-driver e qa-validator atualizados com Hardened Closing"
-      - "[ ] Implementada transição atômica para IN_PROGRESS via protocolo"
+      - "[x] Papéis spec-driver e qa-validator atualizados com Hardened Closing"
+      - "[x] Implementada transição atômica para IN_PROGRESS via protocolo"
     qa_signoff: false
     signed_by: null
 

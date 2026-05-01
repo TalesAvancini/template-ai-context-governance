@@ -1,6 +1,6 @@
 ---
 Criado em: 2026-04-10 20:50
-Última Atualização: 2026-04-10 20:50
+Última Atualização: 2026-04-30 23:15
 Status: Ativo
 ---
 
@@ -32,11 +32,11 @@ Status: Ativo
 | `@db-architect` | Migrations, índices, normalização, otimização de queries | `maintenance/schema.sql`, `migrations/`, `maintenance/TECHNICAL_REQUIREMENTS.md` (seção DB) | `maintenance/schema.sql`, `maintenance/TECHNICAL_REQUIREMENTS.md`, `maintenance/JOURNAL.md` (bugs de performance) | "criar tabela", "migration", "otimizar query", "índice", "normalizar", "ERD" |
 | `@frontend-specialist` | UI/UX, componentes, estado, acessibilidade, CSS, responsividade | `src/components/`, `src/pages/`, `src/styles/`, `maintenance/rx-anatomy.md` | `maintenance/rx-anatomy.md`, `maintenance/ARCHITECTURE.md` (UI Layer), `brain/PRD.md` (fluxos visuais) | "tela", "componente", "layout", "responsivo", "acessibilidade", "CSS", "estado" |
 | `@backend-engineer` | APIs, auth, lógica de negócio, webhooks, cache, filas | `src/api/`, `src/services/`, `src/utils/`, `src/config/` | `maintenance/rx-biology.md`, `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/TECHNICAL_REQUIREMENTS.md` (APIs) | "endpoint", "rota", "validação", "webhook", "auth", "serviço", "cache" |
-| `@qa-validator` | Auditor do circuito SAM, revisor de DoD, validação física de evidências (git diff vs journal) | `contract` (frontmatter `qa_signoff`), `tests/`, `maintenance/JOURNAL.md`, `STATE.md` | `spec.md`, `maintenance/JOURNAL_SYNAPSE.md`, `maintenance/JOURNAL.md` | `"assine contrato"`, `"valide DoD"`, `"rode testes"`, "testar", "auditoria SAM" |
+| `@qa-validator` | Auditor do circuito SAM, revisor de DoD, validação física de evidências (git diff vs journal), **Gatekeeper de Cronologia V5** | `contract` (frontmatter `qa_signoff`), `tests/`, `maintenance/JOURNAL.md`, `STATE.md`, `HARNESS_LOG.md` | `spec.md`, `STATE.md`, `maintenance/JOURNAL.md` | `"assine contrato"`, `"valide DoD"`, `"auditoria SAM"`, `"veredito QA"` |
 | `@devops-guardian` | CI/CD, deploy, env vars, monitoramento, segurança infra | `.github/workflows/`, `Dockerfile`, `maintenance/rebuild_guide.md`, `.env.example` | `maintenance/rebuild_guide.md`, `maintenance/TECHNICAL_REQUIREMENTS.md` (infra), `brain/ROADMAP.md` (deploys) | "deploy", "CI/CD", "docker", "variável de ambiente", "monitoramento", "rollback" |
 | `@vision-architect` | Estratégia, validação de market fit, definição de boundaries | `.context/brain/INCEPTION.md`, `.context/market/MARKET_INBOX.md` | `.context/brain/INCEPTION.md`, `.context/market/SSOT_MAP.md` | "definir boundary", "validar gap de mercado", "revisar inception" |
 | `@spec-enricher` | Tradução estratégica em PRD, tradução cognitiva VISION -> INCEPTION, validação de gaps de mercado | `.context/brain/PRD.md`, `.context/brain/INCEPTION.proposed.md`, `maintenance/JOURNAL.md` | `.context/brain/INCEPTION.md`, `.context/brain/VISION.md`, `.context/market/SSOT_MAP.md` | "enriquecer spec", "gerar PRD", "traduzir visão", "propor inception", `npm run context:enrich` |
-| `@spec-driver` | Execução técnica atômica (Spoke), geração de contrato DoD (Execution Log) | `.specs/`, `src/`, `tests/`, `contract` (frontmatter) | `spec.md`, `schema.sql`, `STATE.md`, `JOURNAL.md` (tail 30) | `"inicie execução"`, `"autopilot"`, "execute a spec" |
+| `@spec-driver` | Execução técnica atômica (Spoke), geração de contrato DoD (Execution Log), **Executor MIMO (Surgical Edits)** | `.specs/`, `src/`, `tests/`, `contract` (frontmatter) | `spec.md`, `STATE.md`, `JOURNAL.md`, `brain/RULES.md` | `"inicie execução"`, `"autopilot"`, `"execute a spec"`, `"MIMO close"` |
 | `@context-keeper` | Sync, purge, validação de consistência, saúde do contexto | `.context/` (exceto `_archive/`), `maintenance/JOURNAL.md`, `brain/RULES.md` | `brain/RULES.md`, `brain/MASTER_FLOW.md`, `maintenance/JOURNAL.md`, `monitoring/CONTEXT_HEALTH.md` | "atualize contexto", "purge", "health check", "validar consistência", "sincronizar" |
 | `@fullstack-generalist` | Modo fallback para tarefas transversais ou projetos light | Leitura em todo o projeto; Escrita apenas com confirmação explícita | `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/JOURNAL.md` (últimas 30 linhas) + Global | "modo light", "tarefa rápida", "projeto pequeno", "não especificado" |
 
@@ -50,6 +50,24 @@ Status: Ativo
 > 2. **Pre-flight Gate:** Obrigatório rodar `grep` de impacto antes de editar código.
 > 3. **Skills Obrigatórias:** `codenavi` (Mapeamento) e `flash-harness` (Log Sequencial).
 > 4. **Backpressure:** Acionar `SCOPE_BLOWOUT` se o impacto real > `max_impact_radius`.
+> 5. **Hardened Closing:** Proibido fechar tarefa sem rito de `Pre-close Self-Audit` e verificação de árvore git limpa.
+
+---
+
+## 🛡️ Protocolo Hardened Closing (V5)
+> **Rito Obrigatório para fechamento de Sprints e Features:**
+
+### 1. @spec-driver (Pre-close Self-Audit)
+- [ ] **Higiene:** `git status --short` deve estar vazio (ou apenas arquivos da spec).
+- [ ] **MIMO:** Validar que as edições foram cirúrgicas e não reescreveram arquivos desnecessariamente.
+- [ ] **Evidência:** Registrar `Harness Check (hash)` e `Impact Radius` no `JOURNAL.md`.
+- [ ] **Handoff:** Invocação explícita do `@qa-validator`.
+
+### 2. @qa-validator (Audit & Signoff)
+- [ ] **Cronologia:** Validar ordem crescente estrita no `JOURNAL.md`.
+- [ ] **Baseline:** Validar que o `start_hash` no `STATE.md` existe no histórico Git.
+- [ ] **Truthfulness:** Confrontar `git diff --stat` com a narrativa do `JOURNAL.md`.
+- [ ] **Veredito:** Apenas após aprovação física, setar `qa_signoff: true` e assinar o contrato.
 
 ---
 
