@@ -22,6 +22,7 @@
 ## D. Pre-close Self-Audit
 - [ ] `spec.md`, `tasks.md`, `STATE.md` coerentes
 - [ ] criterios de aceite atualizados
+- [ ] se tasks da sprint atual estao concluidas, `acceptance` no `spec.md` esta marcado (`[x]`)
 - [ ] evidencia no `JOURNAL.md` ou `HARNESS_LOG.md`
 - [ ] validacao executada (`context:validate` ou equivalente)
 
@@ -30,5 +31,6 @@
 - [ ] harness PASS
 - [ ] arvore Git limpa
 - [ ] nenhum conflito entre narrativa e estado
+- [ ] metadados de `RULES.md` e `MASTER_FLOW.md` atualizados
 
 Se qualquer item falhar, manter status `IN_PROGRESS`.

@@ -7,6 +7,9 @@ Retorna exit 1 se houver qualquer alerta ou erro.
 
 import os
 import sys
+import re
+import subprocess
+from datetime import datetime
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
@@ -82,6 +85,107 @@ def check_specs_structure():
         if not (spec / "STATE.md").exists():
             return False, f"Falha de integridade: {spec.name}/STATE.md ausente"
     return True, f"OK ({len(active_specs)} specs ativas)"
+
+
+def _normalize_sprint_label(sprint_key: str):
+    m = re.search(r"(\d+)$", sprint_key)
+    if not m:
+        return sprint_key
+    return f"Sprint {int(m.group(1)):02d}"
+
+
+def check_sprint_acceptance_sync():
+    """Falha se tasks da sprint atual estao concluídas, mas acceptance da sprint segue pendente."""
+    specs_dir = CONTEXT_DIR.parent / ".specs" / "features"
+    if not specs_dir.exists():
+        return True, "Sem specs ativas"
+
+    issues = []
+    for spec_dir in [d for d in specs_dir.iterdir() if d.is_dir() and not d.name.startswith("_")]:
+        spec_path = spec_dir / "spec.md"
+        tasks_path = spec_dir / "tasks.md"
+        if not spec_path.exists() or not tasks_path.exists():
+            continue
+
+        spec_text = spec_path.read_text(encoding="utf-8", errors="ignore")
+        if "contract_mode: sprint_based" not in spec_text:
+            continue
+
+        curr_match = re.search(r"current_sprint:\s*(sprint_\d+)", spec_text, re.I)
+        if not curr_match:
+            continue
+        curr = curr_match.group(1).lower()
+
+        sprint_block = re.search(rf"{curr}:(.*?)(?=\n\s*sprint_\d+:|\Z)", spec_text, re.I | re.DOTALL)
+        if not sprint_block:
+            continue
+
+        acceptance_pending = "[ ]" in sprint_block.group(1)
+        sprint_label = _normalize_sprint_label(curr)
+        tasks_text = tasks_path.read_text(encoding="utf-8", errors="ignore")
+        section = re.search(rf"##\s+.*{re.escape(sprint_label)}.*?(?=\n##\s+|\Z)", tasks_text, re.I | re.DOTALL)
+        if not section:
+            continue
+
+        unchecked_tasks = re.search(r"^-\s*\[\s\]", section.group(0), re.M)
+        tasks_completed = unchecked_tasks is None
+
+        if tasks_completed and acceptance_pending:
+            issues.append(f"{spec_dir.name}: tasks de {curr} concluídas, mas acceptance no spec permanece pendente")
+
+    if issues:
+        return False, " | ".join(issues)
+    return True, "OK"
+
+
+def _extract_header_update(md_text: str):
+    for line in md_text.splitlines()[:25]:
+        if line.lower().startswith("última atualização:") or line.lower().startswith("ultima atualizacao:"):
+            return line.split(":", 1)[1].strip()
+    return None
+
+
+def check_metadata_freshness():
+    """Alerta se metadados de atualização parecem defasados vs ultimo commit do arquivo."""
+    targets = [
+        CONTEXT_DIR / "brain" / "RULES.md",
+        CONTEXT_DIR / "brain" / "MASTER_FLOW.md",
+    ]
+    stale = []
+
+    for path in targets:
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        header = _extract_header_update(text)
+        if not header:
+            stale.append(f"{path.name}: metadado 'Ultima Atualizacao' ausente")
+            continue
+
+        try:
+            git_dt = subprocess.run(
+                ["git", "log", "-1", "--format=%ci", "--", str(path)],
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+            )
+            if git_dt.returncode != 0 or not git_dt.stdout.strip():
+                continue
+            commit_date = git_dt.stdout.strip().split(" ")[0]
+
+            m = re.search(r"(\d{4}-\d{2}-\d{2})", header)
+            if not m:
+                stale.append(f"{path.name}: metadado de data invalido ({header})")
+                continue
+            header_date = m.group(1)
+            if header_date < commit_date:
+                stale.append(f"{path.name}: metadado desatualizado ({header_date} < {commit_date})")
+        except Exception:
+            continue
+
+    if stale:
+        return False, " | ".join(stale)
+    return True, "OK"
 
 
 def get_inception_metadata():
@@ -189,6 +293,14 @@ def validate():
     else:
         print(f"[OK] .specs/: {spec_msg}")
 
+    acceptance_ok, acceptance_msg = check_sprint_acceptance_sync()
+    if not acceptance_ok:
+        issues.append(f"[WARN] Sprint Acceptance Sync: {acceptance_msg}")
+        if exit_code == 0:
+            exit_code = 1
+    else:
+        print(f"[OK] Sprint Acceptance Sync: {acceptance_msg}")
+
     journal_lines, journal_ok = check_journal_lines()
     if not journal_ok:
         issues.append(
@@ -219,6 +331,14 @@ def validate():
             exit_code = 1
     else:
         print("[OK] AGENT_REGISTRY.md estrutura válida.")
+
+    meta_ok, meta_msg = check_metadata_freshness()
+    if not meta_ok:
+        issues.append(f"[WARN] Metadata freshness: {meta_msg}")
+        if exit_code == 0:
+            exit_code = 1
+    else:
+        print(f"[OK] Metadata freshness: {meta_msg}")
 
     wiki_ok, wiki_msg = check_wiki_integrity()
     if not wiki_ok:

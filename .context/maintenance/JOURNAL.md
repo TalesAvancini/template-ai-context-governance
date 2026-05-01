@@ -489,3 +489,9 @@ Governança, Regras, Market
 **Harness Check:** `aa389b8` (PASS).
 **Handoff:** `@spec-driver` ⮕ `@qa-validator` (Usuário/Codex).
 **Estado:** Aguardando `qa_signoff: true` em `spec.md` e `tasks.md`.
+
+## 📅 2026-04-30 21:49
+**Ação:** ✅ QA Signoff Sprint 01 (Governance Rules Hardening).
+**Auditor:** `@qa-validator` (Codex)
+**Verificação:** Coerência `spec/tasks/state`, regras canônicas em `RULES.md`, rito `Pre-Close Audit` em `MASTER_FLOW.md`, árvore limpa.
+**Resultado:** `qa_signoff: true` aplicado na `sprint_01`. Transição para `current_sprint: sprint_02`.

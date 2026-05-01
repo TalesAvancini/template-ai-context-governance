@@ -41,9 +41,10 @@ Aplica-se a todas as features em `.specs/features/*` que usam `contract_mode: sp
 Antes de pedir QA:
 1. `git status --short` limpo.
 2. Coerencia entre `spec.md`, `tasks.md`, `STATE.md`.
-3. Sprint atual com criterios de aceite objetivos.
+3. Sprint atual com criterios de aceite objetivos e sincronizados.
 4. Evidencia em `JOURNAL.md` e/ou `HARNESS_LOG.md`.
 5. Rodar validacao aplicavel (`context:validate` ou equivalente).
+6. Se `tasks` da sprint estiverem 100% concluidas, os itens de `acceptance` no `spec.md` nao podem ficar `[ ]`.
 
 ## Rito 5: QA Signoff
 1. `qa-validator` verifica requisitos da sprint atual.
@@ -61,6 +62,7 @@ Somente permitido se:
 3. Arvore Git limpa
 4. Evidencias registradas
 5. `qa_signoff` da sprint atual = true
+6. Metadados de cabecalho de `RULES.md` e `MASTER_FLOW.md` atualizados (campo de ultima atualizacao consistente).
 
 Se qualquer item falhar: status obrigatorio `IN_PROGRESS`.
 

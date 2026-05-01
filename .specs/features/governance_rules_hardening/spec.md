@@ -2,7 +2,7 @@
 contract_version: 2.5.2
 parties: ["@spec-driver", "@qa-validator"]
 contract_mode: sprint_based
-current_sprint: sprint_01
+current_sprint: sprint_02
 policy_profile: hybrid
 plan_source: planos/governance_rules_hardening/plano_governance_rules_hardening.md
 qa_signoff: false
@@ -21,11 +21,12 @@ sprints:
       - ".context/maintenance/HARNESS_LOG.md"
     scope_deny: []
     acceptance:
-      - "[ ] Regras CLOSE_WAVE e ANTI_FALSE_PASS publicadas no RULES.md"
-      - "[ ] Rito Pre-Close Audit inserido no MASTER_FLOW.md"
-      - "[ ] Passo Pre-close Self-Audit adicionado ao workflow do spec-driver"
-      - "[ ] Exemplos PASS/FAIL incluídos no RULES.md"
-    qa_signoff: false
+      - "[x] Regras CLOSE_WAVE e ANTI_FALSE_PASS publicadas no RULES.md"
+      - "[x] Rito Pre-Close Audit inserido no MASTER_FLOW.md"
+      - "[x] Passo Pre-close Self-Audit adicionado ao workflow do spec-driver"
+      - "[x] Exemplos PASS/FAIL incluídos no RULES.md"
+    qa_signoff: true
+    signed_by: "@qa-validator"
 
   sprint_02:
     goal: "Integridade SSOT (MIMO_STATE_INTEGRITY) e Sanidade de Script (CRITICAL_SCRIPT_SANITY)."
