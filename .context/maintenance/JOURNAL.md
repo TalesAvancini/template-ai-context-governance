@@ -527,8 +527,9 @@ Governança, Regras, Market
 **Verificação:** Implementação de `[GOVERNANCE-FRICTION]` automatizada; Modo Advisory validado; Refinamento Zero Side Effect (trava de variável de ambiente) funcional e testado sem poluição de árvore local.
 **Resultado:** `qa_signoff: true` aplicado na `sprint_03`. Transição para `current_sprint: sprint_04`.
 
-## 📅 2026-04-30 22:45
-**Ação:** 🛡️ Rito de Abertura: Sprint 04 (Sincronização Institucional).
-**Contexto:** Sincronização de ativos de governança (Glossários e Bibliotecas).
+## 📅 2026-04-30 22:46
+**Ação:** 🛡️ Rito de Abertura (Recalibrado): Sprint 04 (Sincronização Institucional).
+**Contexto:** Recaptura de baseline real após detecção de hash inválido no STATE.md. Zero Side Effect validado.
 **Handoff:** `@qa-validator` ⮕ `@spec-driver`.
+**Baseline (start_hash):** `09e85cf` (Validado via `git cat-file`).
 **Estado:** `🚧 IN_PROGRESS` (Sprint 04).
