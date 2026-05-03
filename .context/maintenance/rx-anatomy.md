@@ -1,5 +1,4 @@
-Criado em: 2026-04-10 23:27
-Ultima Atualizacao: 2026-04-26 00:57
+Ultima Atualizacao: 2026-05-03 02:08
 Status: Ativo
 
 
@@ -23,6 +22,9 @@ Status: Ativo
 │   └── _scripts/           # Motor de Validação em Python (Oráculo, Bundler, Harness)
 ├── .specs/                  # 🧪 BANCADA DE EXECUÇÃO (Workshop Efêmero)
 │   └── features/            # Specs atômicas ativas (max 3)
+├── .agent/                  # 🤖 CAMADA DE AGENCIAMENTO (Templates/Subagentes)
+│   ├── templates/           # Molde de Spec V3 e Scratchpads
+│   └── subagents/           # Persona de QA-Validator e Prompts Especializados
 ├── tests/                   # Suíte de testes (Infra e Unitários)
 ├── run_context.py          # ⚙️ Orquestrador Universal Python (SSOT de Execução)
 ├── init_ai_project.sh      # Bootstrapper Supremo (injeta python no NPM)

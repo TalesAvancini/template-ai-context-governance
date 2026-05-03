@@ -85,9 +85,8 @@ Status: Ativo
 
 | Arquivo | Responsabilidade Principal | Agente Guardião |
 | :--- | :--- | :--- |
-| `features/<nome>/spec.md` | **Contrato de Código.** Define os `definition_of_done`. Exige rito de assinatura formal `@spec-driver` / `@qa-validator` sob protocolo V5. | `@spec-driver` / `@qa-validator` |
-| `features/<nome>/STATE.md` | **Gatekeeper de Estado.** Define status (`WIP`, `DONE`). Sob V5, é a âncora de `start_hash` (baseline) para telemetria de diff. | `@qa-validator` |
-| `_template.md` | **Molde de Contrato.** O template que deve ser clonado para iniciar qualquer nova funcionalidade. | `@spec-driver` |
+| `features/<nome>/spec.md` | **Contrato de Código.** Define os `definition_of_done`. Exige rito de assinatura formal `@spec-driver` / `@qa-validator` sob protocolo Chain-Skills V3. | `@spec-driver` / `@qa-validator` |
+| `features/<nome>/STATE.md` | **Gatekeeper de Estado.** Define status (`WIP`, `DONE`). Na V3, é a âncora das 9 Skills e telemetria de diff. | `@qa-validator` |
 
 ---
 
@@ -95,4 +94,6 @@ Status: Ativo
 
 | Arquivo | Responsabilidade Principal | Agente Guardião |
 | :--- | :--- | :--- |
+| `templates/spec_v3.md` | **Molde de Contrato V3.** O template oficial para iniciar novas features com as 9 Skills integradas. | `@spec-driver` |
+| `templates/AGENT_SCRATCHPAD.md` | **Template de Metacognição.** Molde para a memória de trabalho anti-loop de cada feature. | `@spec-driver` |
 | `subagents/qa-validator.md` | **Padrão B de Subagente.** Validador Físico. Subagente que é invocado de forma autônoma (Zero Trust) para ler Diffs, Specs e autorizar o commit. | IA Orquestradora |

@@ -28,6 +28,8 @@ Nota: Semente pos-purge. 33 entradas arquivadas em journal_archive_20260503_0151
 - [x] `.specs/features/governance_rules_hardening/tasks.md -> .specs/features/_arquive_features/governance_rules_hardening/tasks.md` -> [Arquivado]
 - [x] `.specs/features/governance_rules_hardening/design.md -> .specs/features/_arquive_features/governance_rules_hardening/design.md` -> [Arquivado]
 - [x] `.specs/features/governance_rules_hardening/spec.md -> .specs/features/_arquive_features/governance_rules_hardening/spec.md` -> [Arquivado]
+- [x] `.context/brain/FILE_GLOSSARY.md` -> [Dicionário V3 Sincronizado]
+- [x] `.context/maintenance/rx-anatomy.md` -> [Anatomia V3 Sincronizada]
 
 ### Contrato de Validação
 - executor_context_id: `CTX_V3_BYPASS`
