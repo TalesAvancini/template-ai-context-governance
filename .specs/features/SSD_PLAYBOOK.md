@@ -26,13 +26,18 @@ Toda feature deve progredir através destas skills no `STATE.md`:
 
 ---
 
-## 🛡️ Protocolo Anti-Loop (Metacognição)
-Sempre que o Gatekeeper ou o Harness retornar um erro `[BLOCKED]` ou `[FATAL]`:
-1.  **Não repita a ação.**
-2.  Documente no **Scratchpad**:
-    - **Erro exato**: O que o console disse.
-    - **Hipótese**: Por que o sistema barrou?
-    - **Correção**: Qual o ajuste na Spec ou no código?
+## 🛡️ Protocolo Anti-Loop e Escalation
+Sempre que o Gatekeeper ou o Harness retornar um erro `[BLOCKED]` ou `[FATAL]`, a IA (Executor) entrará em bloqueio cognitivo:
+1.  Ela **NÃO** repetirá a ação.
+2.  Ela documentará o erro na seção `INBOX` do `AGENT_SCRATCHPAD.md`.
+3.  Ela ejetará o controle com o comando `[HANDOFF: ESCALATION]`.
+
+## 👑 O Papel do Orquestrador (Desbloqueio e Sistema Imunológico)
+O Orquestrador (Humano ou IA Master) é o único autorizado a destravar o Executor após um Escalation.
+1. **Resolução de Diretiva:** Abra o Scratchpad, leia o INBOX e escreva a solução na seção `DIRECTIVES`.
+2. **Gatilho de Despertar (Invocação Explícita):** Não responda com comandos genéricos. Para evitar a Amnésia de Persona, invoque o agente explicitamente:
+   > `@spec-driver [RESUME] Diretiva injetada no Scratchpad. Leia a seção DIRECTIVES e retome a execução de onde parou no STATE.md.`
+3. **O Sistema Imunológico (Faxina Cognitiva):** Se o mesmo erro for escalado em múltiplas sprints, o Orquestrador deve limpar o Scratchpad e **promover a regra permanentemente** adicionando-a ao `SSD_ERRORS_LEDGER.md` ou atualizando as restrições da Spec.
 
 ## 🚫 Regras Proibidas (Zero-Trust)
 - Proibido editar arquivos de regras (`RULES.md`, `MASTER_FLOW.md`) sem autorização de intervenção nível 3.

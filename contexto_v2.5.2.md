@@ -2,12 +2,12 @@
 
 ---
 schema_version: 1
-generated_at: 2026-05-03T05:14:23.794113+00:00
+generated_at: 2026-05-03T16:47:40.826731+00:00
 root: template_inicío_de_projeto
 mode: full
 profile: ai-default
 file_count: 127
-byte_count: 513098
+byte_count: 513878
 ignored_dirs:
   - .cache
   - .cursor
@@ -450,8 +450,8 @@ FILE_END id=file_a412f1bb7017
 
 ---
 <a id="file_4047da35f994"></a>
-FILE_START id=file_4047da35f994 path=.agent/templates/AGENT_SCRATCHPAD.md domain=docs lang=markdown lines=30 bytes=1380 mtime=2026-05-03T04:30:03.754671+00:00 sha1=06784a56e48ba74c70681fc500a205ab6e01da72
-CHUNK_START id=4047da35f994_c001 start_line=1 end_line=30
+FILE_START id=file_4047da35f994 path=.agent/templates/AGENT_SCRATCHPAD.md domain=docs lang=markdown lines=38 bytes=1852 mtime=2026-05-03T16:38:50.705209+00:00 sha1=019996c12bbdb7281122e59212fab4022fac4609
+CHUNK_START id=4047da35f994_c001 start_line=1 end_line=38
 ```markdown
 # 🧠 AGENT_SCRATCHPAD
 Feature: [feature_id]
@@ -475,14 +475,22 @@ Se você recebeu um erro e parou aqui, verifique se a solução já está abaixo
 
 ---
 
-## 📝 Thought Log (Anti-Loop Memory)
-
-Use esta seção para registrar falhas que NÃO estão nos Known Traps acima:
+## 📥 INBOX (Escalation & Dúvidas)
+> **Uso Exclusivo do Subagente.** Se você travou ou não sabe como seguir, preencha o card abaixo e pare. Lance o gatilho `[HANDOFF: ESCALATION]` no terminal.
 
 ### 🛑 [Task ID] - [Timestamp]
-- **Erro:** [Descreva o erro exato]
-- **Hipótese:** [Por que falhou?]
-- **Novo Plano:** [O que vai tentar de diferente?]
+- **Ação Desejada:** [O que você queria fazer?]
+- **Ação Executada:** [O que você tentou na prática?]
+- **Bloqueio (Fato):** [Qual foi o erro exato do Gatekeeper/Harness?]
+- **Hipótese:** [Por que você acha que falhou?]
+
+---
+
+## 📤 DIRECTIVES (Resoluções do Orquestrador)
+> **Uso Exclusivo do Orquestrador.** Injetar soluções aqui para destravar o subagente.
+
+- **[Timestamp] | Solução para [Task ID]:** 
+  - [Escreva a diretriz clara, ex: "Ignore o erro X e adicione o arquivo Y na allow_list."]
 
 ```
 CHUNK_END id=4047da35f994_c001
@@ -3826,8 +3834,8 @@ FILE_END id=file_8f42e61c8a29
 
 ---
 <a id="file_89208fd921cb"></a>
-FILE_START id=file_89208fd921cb path=.context/_scripts/write_with_validation.py domain=source lang=python lines=124 bytes=5408 mtime=2026-05-03T04:21:17.743919+00:00 sha1=3049ede784bf3a10cb51b10c5472e6be5ff01a58
-CHUNK_START id=89208fd921cb_c001 start_line=1 end_line=124
+FILE_START id=file_89208fd921cb path=.context/_scripts/write_with_validation.py domain=source lang=python lines=128 bytes=5716 mtime=2026-05-03T16:47:15.315387+00:00 sha1=1eeb784bfd26b5297dd6fbc7c510747add740849
+CHUNK_START id=89208fd921cb_c001 start_line=1 end_line=128
 ```python
 #!/usr/bin/env python3
 """
@@ -3952,6 +3960,10 @@ if __name__ == "__main__":
         sys.exit(0)
     else:
         print(f"[BLOCKED] {reason}")
+        print("\n🚨 GATILHO ANTI-LOOP ATIVADO:")
+        print("Voce esta PROIBIDO de tentar a mesma acao cegamente.")
+        print("Abra o AGENT_SCRATCHPAD.md da sua feature agora mesmo.")
+        print("Se a solucao nao for obvia (Known Traps), preencha a secao INBOX e declare [HANDOFF: ESCALATION].")
         sys.exit(1)
 
 ```

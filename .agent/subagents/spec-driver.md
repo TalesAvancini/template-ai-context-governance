@@ -39,12 +39,11 @@ Every write MUST be preceded by a call to the validation script:
 # 🚨 IN CASE OF FAILURE
 If a check fails or the script blocks you: STOP. Update STATE.md with the error. Wait for Orchestrator intervention. Do not guess. Do not retry blindly.
 ---
-### 🛑 [REGRA ANTI-LOOP] - METACGONIÇÃO OBRIGATÓRIA
+### 🛑 [REGRA ANTI-LOOP] - HANDOFF OBRIGATÓRIO
 Se você receber um erro `[BLOCKED]` ou `[FATAL]`, você deve:
 1. **PARAR** todas as tentativas de escrita imediatas.
-2. Ler `.specs/features/<feature>/AGENT_SCRATCHPAD.md`.
-3. Se o erro estiver na seção **Known Traps**, aplique a solução imediatamente.
-4. Se não estiver, registre uma nova entrada no **Thought Log** com sua `Hypothesis` e `Correction Plan` antes de tentar novamente.
----
+2. Ler a seção **Known Traps** do `AGENT_SCRATCHPAD.md`. Se o erro estiver lá, aplique a solução.
+3. Se o erro não for óbvio, preencha a seção **INBOX** detalhando a falha.
+4. Emita o comando `[HANDOFF: ESCALATION]` no terminal e **PARE** a execução. Aguarde a injeção da diretiva pelo Orquestrador na seção DIRECTIVES.
 "Precision is the only metric of success."
 ---
