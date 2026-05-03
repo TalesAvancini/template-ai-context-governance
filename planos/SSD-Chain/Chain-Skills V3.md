@@ -70,11 +70,11 @@ FASE 3 — ORQUESTRADOR
   □ Testar protocolo de intervenção Nível 2 (rollback)
   □ Testar protocolo de intervenção Nível 3 (aborto)
 
-FASE 4 — INTEGRAÇÃO ANTIGRAVITY
-  □ Configurar DENY/ALLOW de ferramentas no IDE
-  □ Testar que edit_file é bloqueado pelo sistema
-  □ Testar que methodical_writer é a única via de escrita
-  □ Testar cenário de falha: executor tenta usar ferramenta DENYed
+FASE 4 — INTEGRAÇÃO DA SKILL
+  □ Configurar instrução restritiva no prompt da skill (bloqueio cognitivo, sem bloqueio hard global)
+  □ Testar obediência: executor não deve usar edit_file
+  □ Testar que methodical_writer é a única via de escrita tentada
+  □ Testar cenário de falha: workflow_journal_auditor pega violação se a regra for quebrada
 
 FASE 5 — PILOTO
   □ Selecionar 1 feature de risco baixo
@@ -517,7 +517,7 @@ LOCAL:        STATE.md, secao ## CHAIN_EXECUTION_LOG
 | H3 | Após CADA escrita, executar `view_file` no trecho modificado para confirmar integridade | **Bloqueio** se leitura não confirmada |
 | H4 | Atualizar `tasks.md` **imediatamente** após cada task concluída (não no final) | **Bloqueio** se tasks.md desatualizado |
 | H5 | Se modificou script de governança → rodar sanity check (RULES §1.8) | **Bloqueio** se sanity falhar |
-| H6 | Proibido usar `edit_file` ou `multi_replace_file_content` — ferramentas DENYed pelo Antigravity | Sistema bloqueia automaticamente |
+| H6 | Proibido usar `edit_file` ou equivalentes (Regra Cognitiva da Skill) | Auditoria (SAM) pega a violação e **aborta** a sprint |
 
 ---
 
@@ -525,8 +525,8 @@ LOCAL:        STATE.md, secao ## CHAIN_EXECUTION_LOG
 
 | Tier | Linhas | Condição |
 |---|---|---|
-| **Tier 1** | Até 15 | Sempre permitido |
-| **Tier 2** | 16-50 | Requer justificativa no EXECUTION_LOG **antes** da escrita |
+| **Tier 1** | Até 15 | Padrão (Ideal para pequenos patches) |
+| **Tier 2** | 16-50 | Requer justificativa no EXECUTION_LOG **antes** da escrita (Uso mandatório se Tier 1 for quebrar blocos lógicos como funções inteiras) |
 | **Tier 3** | 50+ | Apenas para arquivos **novos** ou reescrita total com aprovação do scope |
 
 **Justificativa para Tier 2 (exemplo):**
@@ -1270,15 +1270,7 @@ parameters:
     type: string
     required: true
     description: "Conteudo a ser escrito (maximo 15 linhas no Tier 1)"
-tool_permissions:
-  allow:
-    - methodical_writer
-    - view_file
-    - execute_command
-  deny:
-    - edit_file
-    - multi_replace_file_content
-    - write_to_file
+# Nota: tool_permissions deny removido. Regra 100% via prompt.
 ```
 
 #### Configuração do Executor no Antigravity
@@ -1290,24 +1282,12 @@ name: spec-driver
 description: Executor mecanico controlado por Chain-Skills V3
 model: flash
 readonly: false
-tool_permissions:
-  allow:
-    - methodical_writer
-    - view_file
-    - execute_command
-    - grep_search
-  deny:
-    - edit_file
-    - multi_replace_file_content
-    - write_to_file
+# Nota: A restricao de ferramentas e COGNITIVA via prompt,
+# nao usamos hard-deny global para manter flexibilidade do orquestrador.
 ---
 ```
 
-**Efeito:** Quando o executor (Flash) tentar usar `edit_file` diretamente:
-```
-Tool 'edit_file' is not available in this context.
-Use 'methodical_writer' instead.
-```
+**Efeito:** O executor tentará instintivamente obedecer à regra do prompt. Se tentar burlar (por erro ou impulsividade) usando `edit_file`, a auditoria de Handoff ou o SAM (Anti-Migué) identificará o uso não-autorizado pelos logs e abortará a sprint por fraude comportamental.
 
 ---
 
@@ -1333,7 +1313,7 @@ You do NOT think freely. You follow the chain.
 2. You DO NOT skip any skill in the chain.
 3. You DO NOT write code before SCOPE_LOCKED exists.
 4. You DO NOT hand off before AUDIT_PASS exists.
-5. You DO NOT use denied tools (edit_file, write_to_file, multi_replace_file_content).
+5. You DO NOT use generic edit tools (`edit_file`, `write_to_file`, etc). You MUST use the `methodical_writer` skill. This is a STRICT cognitive rule. Violation triggers SAM abort.
 6. Every write MUST pass through write_with_validation.py.
 
 # Chain-Skills Protocol (MANDATORY)
@@ -1435,6 +1415,7 @@ The next skill ONLY executes if the previous artifact exists.
 - Do NOT try to fix alone
 - Update STATE.md with the error
 - Wait for orchestrator (agent central) intervention
+- **Note for Orchestrator**: If the failure is a minor Markdown typo in STATE.md (e.g. CHAIN_SCOPE_LOCKED instead of CHAIN_SCOPE), the Orchestrator has autonomy to silently fix it (Intervention Level 1) and proceed, avoiding unnecessary rollbacks.
 - If blocked: state reason and STOP
 
 # Philosophy
