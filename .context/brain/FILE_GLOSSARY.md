@@ -102,7 +102,7 @@ Status: Ativo
 
 | Arquivo | Responsabilidade Principal | Agente Guardião |
 | :--- | :--- | :--- |
-| `README.md` | O manual de "Firmwares" do projeto. Explica a diferença entre Roles e Sub-Agents. | `@context-keeper` |
+| `README_subagents.md` | O manual de "Firmwares" do projeto. Explica a diferença entre Roles e Sub-Agents. | `@context-keeper` |
 | `templates/spec_v3.md` | **Molde de Contrato V3.** O template oficial para iniciar novas features com as 9 Skills integradas. | `@spec-driver` |
 | `templates/AGENT_SCRATCHPAD.md` | **Template de Metacognição.** Molde para a memória de trabalho anti-loop de cada feature. | `@spec-driver` |
 | `subagents/spec-driver.md` | **Executor Determinístico.** Subagente orquestrador da Chain-Skills V3. Executa as 9 skills em sequência rígida (Fail-Closed). | IA Orquestradora |
