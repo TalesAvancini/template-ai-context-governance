@@ -8,6 +8,19 @@ Nota: Semente pos-purge. 33 entradas arquivadas em journal_archive_20260503_0151
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
 
+## 📅 2026-05-04 00:37
+**Decisão/Bug:** 🧠 Governança Cognitiva Validada (MiMo v2.1 - Fim da Iniciativa).
+**Ação:**
+1. Realizada a **Institucionalização de Arquivos**: Registrado o papel do `.enriched.md` no `FILE_GLOSSARY.md`.
+2. Executado **Stress Test Real**: O motor de injeção provou eficácia ao servir Scars contextuais que impediram ações destrutivas durante a simulação.
+3. Decidido por **Abordagem Lean**: Pulo do "buraco de minhoca" de métricas visuais em favor da integridade funcional.
+4. Finalização oficial da implementação do sistema de memória estratégica do H.O.K Forge.
+
+### Matriz de Propagação (Sinapse)
+- [x] `.context/brain/FILE_GLOSSARY.md` -> [Enriquecido: enriched.md]
+- [x] `.specs/features/gov_v3_stabilization/.enriched.md` -> [Auditado e Validado]
+- [x] `git commit` -> [Fechamento da Iniciativa]
+
 ## 📅 2026-05-04 00:22
 **Decisão/Bug:** 🛡️ Inteligência e Heurísticas de Memória (MiMo v2.1).
 **Ação:**
