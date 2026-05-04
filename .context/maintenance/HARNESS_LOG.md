@@ -848,3 +848,21 @@ Status: Ativo
 
 [FATAL] Modo STRICT: Pipeline bloqueado.
 
+
+## [HARNESS-FAIL] Report | spec:gov_v3_stabilization
+- **Detalhe:** journal_sam: Violações SAM detectadas.
+🤖 Iniciando Auditoria Anti-Migué (SAM)...
+
+❌ VIOLAÇÕES DETECTADAS:
+  - Contrato incompleto. Detectado: executor='', validator=''.
+  - Status de validação inválido: ''. Esperado 'READY TO COMMIT'.
+  - Fraude Narrativa: Arquivo '.context/_scripts/inject_learnings.py' marcado como [x] no Journal, mas não há alterações no Git.
+  - Fraude Narrativa: Arquivo 'planos/MiMo_Learnings_Consolidado.md' marcado como [x] no Journal, mas não há alterações no Git.
+  - Fraude Narrativa: Arquivo '.specs/features/gov_v3_stabilization/.enriched.md' marcado como [x] no Journal, mas não há alterações no Git.
+  - Fraude Narrativa: Arquivo '.context/maintenance/JOURNAL.md' marcado como [x] no Journal, mas não há alterações no Git.
+  - Fraude Narrativa: Arquivo '.context/_scripts/learnings_aggregator.py' marcado como [x] no Journal, mas não há alterações no Git.
+  - Fraude Narrativa: Arquivo 'planos/Learnnings/Learnings_MiMo_v2.md' marcado como [x] no Journal, mas não há alterações no Git.
+  - Modificação Silenciosa: Arquivo '.context/maintenance/TECHNICAL_REQUIREMENTS.md' alterado no Git mas ausente na Matriz de Propagação do Journal.
+
+[FATAL] Modo STRICT: Pipeline bloqueado.
+

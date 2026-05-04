@@ -35,11 +35,9 @@ def safe_parse_ledger():
     content = LEDGER_FILE.read_text(encoding="utf-8", errors="replace")
     
     # Regex para capturar ### Scar #NNN — Título
-    # Seguido de campos da scar até a próxima scar ou EOF
     scar_blocks = re.split(r'(?m)^###\s*Scar\s*#\d+\s*[—\-]\s*', content)
     
     if len(scar_blocks) <= 1:
-        # Tenta checar se há blocos, senao retorna vazio
         return scars
         
     for block in scar_blocks[1:]:
@@ -74,17 +72,58 @@ def safe_parse_ledger():
         
     return scars
 
-def calculate_score(scar):
-    """Calcula a relevância da Scar. Base simples para V1."""
-    score = 50 # Base
-    # Penalidade por idade poderia entrar aqui
-    return score
+def safe_parse_harness_log():
+    """Analisa o HARNESS_LOG.md em busca de falhas recorrentes."""
+    failures = {}
+    if not HARNESS_LOG_FILE.exists():
+        return failures
+    
+    content = HARNESS_LOG_FILE.read_text(encoding="utf-8", errors="replace")
+    
+    # Busca por: ## [HARNESS-FAIL] Report | spec:name
+    matches = re.findall(r'## \[HARNESS-FAIL\] Report \| spec:(.*)', content)
+    for spec in matches:
+        spec = spec.strip()
+        failures[spec] = failures.get(spec, 0) + 1
+        
+    return failures
 
-def generate_learnings_md(scars):
+def calculate_score(scar, harness_failures):
+    """Calcula a relevância da Scar com Decaimento e Frequência."""
+    score = 100 # Base
+    
+    # Bônus por reincidência no Harness
+    feat_name = scar.get("feature", "")
+    if feat_name in harness_failures:
+        # Cada falha no log soma 10 pontos
+        score += (harness_failures[feat_name] * 10)
+        
+    # Decaimento Temporal (Decay)
+    try:
+        data_str = scar.get("data", "").split(" ")[0]
+        data_scar = datetime.strptime(data_str, "%Y-%m-%d")
+        dias = (datetime.now() - data_scar).days
+        
+        if dias > 30:
+            score *= 0.5 # Perde metade do peso após 1 mês
+        elif dias > 7:
+            score *= 0.9 # Perde 10% após 1 semana
+    except:
+        pass # Data malformada mantém score base
+        
+    return int(score)
+
+def generate_learnings_md(scars, harness_failures):
     """Gera o arquivo LEARNINGS.md estruturado."""
     
-    # Ordena scars por score (aqui todas têm 50, mantemos a ordem de extração)
-    scars = sorted(scars, key=lambda x: calculate_score(x), reverse=True)
+    # Mapeia scores
+    scored_scars = []
+    for s in scars:
+        s["_score"] = calculate_score(s, harness_failures)
+        scored_scars.append(s)
+        
+    # Ordena por score decrescente
+    scored_scars = sorted(scored_scars, key=lambda x: x["_score"], reverse=True)
     
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     
@@ -103,37 +142,52 @@ Status: Ativo
 *(Erros que custaram caro e NÃO devem ser repetidos)*
 
 """
-    for i, scar in enumerate(scars[:10], 1):
-        md += f"### [SCAR-{i:03d}] {scar['title']} (Score: {calculate_score(scar)})\n"
+    for i, scar in enumerate(scored_scars[:10], 1):
+        md += f"### [SCAR-{i:03d}] {scar['title']} (Score: {scar['_score']})\n"
         md += f"- **Última vez:** {scar['feature']} ({scar['data']})\n"
         md += f"- **O que aconteceu:** {scar['erro']} -> {scar['causa_raiz']}\n"
         md += f"- **A Regra:** {scar['regra']}\n\n"
         
-    md += "---\n\n## ⚠️ Propostas de Novas Regras\n*(Nenhuma regra nova consolidada neste ciclo)*\n"
+    # Auto-Scars (Falhas no Harness sem registro no Ledger)
+    md += "---\n\n## ⚠️ Alertas Automáticos (Harness Log)\n"
+    found_auto = False
+    for spec, count in harness_failures.items():
+        if count >= 3: # Threshold
+            # Verifica se já não existe no Ledger (busca simples por nome)
+            if not any(spec.lower() in s.get("feature", "").lower() for s in scars):
+                md += f"- **[LOOP DETECTADO]** Spec `{spec}` falhou {count} vezes recentemente. Requer análise estratégica.\n"
+                found_auto = True
     
+    if not found_auto:
+        md += "*(Nenhum loop de erro crítico detectado fora do Ledger)*\n"
+        
     return md
 
 def main():
     triage_mode = "--triage" in sys.argv
     
-    print("🧠 [LEARNINGS] Iniciando agregação de memória (MiMo v2)...")
+    print("🧠 [LEARNINGS] Iniciando agregação de memória (MiMo v2.1 - Pro)...")
     
     scars = safe_parse_ledger()
+    harness_failures = safe_parse_harness_log()
+    
     print(f"[INFO] {len(scars)} Scars lidas do Ledger.")
+    print(f"[INFO] {len(harness_failures)} Features com falhas no log.")
     
     if triage_mode:
         print("\n--- TRIAGE MODE ---")
-        for scar in scars:
-            print(f"Scar: {scar['title']} | Feature: {scar['feature']}")
+        for s in scars:
+            score = calculate_score(s, harness_failures)
+            print(f"[{score} pts] {s['title']} | Feat: {s['feature']}")
         print("-------------------\n")
         sys.exit(0)
         
-    content = generate_learnings_md(scars)
+    content = generate_learnings_md(scars, harness_failures)
     
     LEARNINGS_FILE.parent.mkdir(parents=True, exist_ok=True)
     LEARNINGS_FILE.write_text(content, encoding="utf-8")
     
-    print(f"✅ [SUCCESS] LEARNINGS.md atualizado com {len(scars)} memórias estratégicas.")
+    print(f"✅ [SUCCESS] LEARNINGS.md atualizado com heurísticas e auto-scars.")
 
 if __name__ == "__main__":
     main()

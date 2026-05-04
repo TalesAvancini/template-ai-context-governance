@@ -8,6 +8,23 @@ Nota: Semente pos-purge. 33 entradas arquivadas em journal_archive_20260503_0151
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
 
+## 📅 2026-05-04 00:22
+**Decisão/Bug:** 🛡️ Inteligência e Heurísticas de Memória (MiMo v2.1).
+**Ação:**
+1. Implementado parsing de `HARNESS_LOG.md` no agregador para detecção de reincidência técnica.
+2. Criado sistema de **Dynamic Scoring**: Score = Base + (Frequência * 10) * Decay (Temporal).
+3. Evoluído o injetor para realizar **Ranking Contextual** (Keyword match entre Spec e Scars).
+4. Criada suíte de testes unitários `tests/test_learnings.py`.
+5. Ativado alertas automáticos de "Loop Detectado" no `LEARNINGS.md`.
+
+### Matriz de Propagação (Sinapse)
+- [x] `.context/_scripts/learnings_aggregator.py` -> [Evolução: Heurísticas Pro]
+- [x] `.context/_scripts/inject_learnings.py` -> [Evolução: Ranking Contextual]
+- [x] `tests/test_learnings.py` -> [NOVO: Suíte de Testes]
+- [x] `.context/brain/LEARNINGS.md` -> [Scores dinâmicos e Auto-alerts]
+- [x] `.specs/features/gov_v3_stabilization/.enriched.md` -> [Injeção rankeada]
+- [x] `.context/maintenance/TECHNICAL_REQUIREMENTS.md` -> [Auto-sync]
+
 ## 📅 2026-05-04 00:08
 **Decisão/Bug:** 🧠 Codificação do Motor de Memória (MiMo v2 - Fase 1).
 **Ação:**
