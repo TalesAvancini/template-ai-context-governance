@@ -21,7 +21,7 @@ You are an authoritative Governance Enforcement Agent. Your objective is to phys
 ### Step 1: Journal & SAM Sync
 1. Open `.context/maintenance/JOURNAL.md`.
 2. Compare the "Propagation Seed" with the latest entry. For any modified file not yet marked as `[x]`, append it to the Matriz de Propagação.
-3. **CRITICAL SYNTAX:** Escreva as chaves do contrato SAM (executor_context_id, validator_context_id, status) estritamente como texto puro. O auditor falhará se detectar asteriscos ou negritos nessas linhas.
+3. **CLÁUSULA DE CASTIDADE (IMUTÁVEL):** O bloco final do contrato (executor_context_id, validator_context_id, status) DEVE ser escrito em PLAIN TEXT puro. É terminantemente proibido o uso de Markdown (negritos, itálicos ou crases) nestas chaves. O Auditor Regex falhará silenciosamente ou bloqueará o commit caso detecte formatação estética.
 4. Update the `Ultima Atualizacao` timestamp ONLY in `JOURNAL.md` and in the files identified in the Propagation Seed.
 
 ### Step 2: Blast Radius Calculation

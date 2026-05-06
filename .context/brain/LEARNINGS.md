@@ -42,6 +42,16 @@ Status: Ativo
 - **O que aconteceu:** Tentativa de mapear 40+ arquivos em tabela Markdown NxN (1600+ células). -> Inviabilidade técnica de renderização, legibilidade e manutenção.
 - **A Regra:** Utilizar **Adjacency Lists** (Listas de Adjacência) estruturadas para mapear acoplamentos granulares acima de 10 nós, garantindo foco no *Blast Radius* imediato.
 
+### [SCAR-007] Formatação Estrita YAML x Markdown (Score: 210)
+- **Última vez:** governance-resiliency-fixes (2026-05-05)
+- **O que aconteceu:** Uso de negritos/itálicos em chaves de controle (ex: `**status:**`). -> Quebra de resiliência dos parsers Regex do Harness.
+- **A Regra:** Regra 1.11 do `RULES.md` (SAM Syntax Strictness). Usar apenas PLAIN TEXT em metadados.
+
+### [SCAR-008] A Síndrome da Mosca na Janela (Score: 300)
+- **Última vez:** systemic_vaccination (2026-05-06)
+- **O que aconteceu:** Repetição cega de ações após erro do Gatekeeper/Harness sem diagnóstico de causa raiz.
+- **A Regra:** Protocolo Anti-Loop do `SSD_PLAYBOOK.md`. Se houver bloqueio, PARE, documente no INBOX e aguarde diretriz.
+
 ---
 
 ## 💎 Gold Nuggets (Estratégias Vencedoras)

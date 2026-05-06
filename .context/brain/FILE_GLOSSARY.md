@@ -115,4 +115,13 @@ Status: Ativo
 | `subagents/readme_chain_SDD.md` | **Padrão C de Subagente.** Especialista em documentação. Mantém os metadados externos e READMEs alinhados com o estado do sistema. | IA Orquestradora |
 | `skills/methodical_writer.json` | **Restrição de Ferramentas.** Configuração de permissões estritas e limites para a Skill 6 (Escrita Cirúrgica). | `@spec-driver` |
 | `skills/journal-sync/SKILL.md` | **Orquestrador de Acoplamento.** Sincroniza o Journal e propaga alterações via Blast Radius autonômico. | `@antigravity` |
+| `skills/hok-governor/SKILL.md` | **Governador de Conduta.** Baseline de senso comum e travas de segurança contra alucinações e loops. | `@antigravity` |
+
+---
+
+## 📅 `planos/` (Ideação e Estratégia)
+
+| Arquivo | Responsabilidade Principal | Agente Guardião |
+| :--- | :--- | :--- |
+| `planos/melhoria_spec-driver/` | Documentação de melhorias táticas para o executor do Spec-Driven V3. | `@orchestrator` |
  
