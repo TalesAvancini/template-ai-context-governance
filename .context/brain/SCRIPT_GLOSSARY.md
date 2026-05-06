@@ -1,6 +1,6 @@
 ---
 Criado em: 2026-04-26
-Ultima Atualizacao: 2026-05-04
+Ultima Atualizacao: 2026-05-05
 Status: Ativo
 ---
 
@@ -46,6 +46,7 @@ Status: Ativo
 
 | Script | O Órgão | Responsabilidade | Como Invocá-lo |
 | :--- | :--- | :--- | :--- |
+| `affinity_lite.py` | **Detector de Drift** | Motor de análise de afinidade. Identifica Acoplamentos Fantasmas (temporal) e Referências Mortas (referencial) usando Jaccard e Word Boundary Scanning. | `npm run context:affinity` |
 | `context_oracle.py` | **Memória RAG** | Implementa uma busca semântica leve usando `stdlib` (sem Chroma/VectorDBs de terceiros). Utilizado pelas IAs para resolver ambiguidades e varrer a Wiki em busca da verdade. | `npm run context:oracle "sua dúvida"` |
 | `enrich_context.py` | **Córtex Pré-Frontal**| Analisa a narrativa livre do arquivo `VISION.md` e a traduz em limites técnicos estritos (`INCEPTION.md`). Detecta "gaps" de lógica antes do código ser escrito. | `npm run context:enrich` |
 | `ingest_wiki_guard.py` | **Sistema Digestório**| Consome arquivos pesados de PDFs ou pesquisas da pasta `RAW/` e os destila (resume e formata) em pequenas pílulas indexadas na pasta `WIKI/`. | `npm run context:ingest-guard` |

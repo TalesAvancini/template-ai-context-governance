@@ -1,6 +1,6 @@
 ---
 Criado em: 2026-04-26
-Ultima Atualizacao: 2026-05-05 00:01
+Ultima Atualizacao: 2026-05-05 22:50
 Status: Ativo
 ---
 
@@ -60,6 +60,8 @@ Status: Ativo
 | `rx-communications.md` | **Mapa de Conectividade Global.** SSOT da topologia técnica e "fiação" entre artefatos do sistema. | `@context-keeper` |
 | `rx-learnings.md` | **Memória Estratégica.** Raio-X da Governança Cognitiva (H.O.K Learnings). | `@context-keeper` |
 | `rx-sam-audit.md` | **Auditoria de Integridade.** Raio-X do Sistema Anti-Migué (SAM). | `@qa-validator` |
+| `rx-affinity-lite.md` | **Auditoria de Afinidade.** Relatório de detecção de Drift Temporal (Ghost Couplings) e Referencial (Dead Refs). | `@antigravity` |
+| `rx-affinity-lite.json` | **Dados Brutos de Drift.** Matriz de adjacência parseável resultante do motor de afinidade. | `@antigravity` |
 | `RX_REPOSITORIO.md` | **Raio-X de Governança.** Mapeia o ecossistema Antigravity, explicando os motores lógicos (SAM, Harness, Zero Trust). | `@context-keeper` |
 | `JOURNAL_SYNAPSE.md` | **Regras de Expurgos.** Configurações de quando e como o Journal deve arquivar dados antigos para economizar tokens. | `@context-keeper` |
 | `rebuild_guide.md` | **Recuperação de Desastres.** Instruções passo a passo para um desenvolvedor recriar a máquina do zero e rodar a aplicação. | `@devops-guardian` |

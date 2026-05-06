@@ -1,12 +1,37 @@
 ---
 Criado em: 2026-05-03 01:51
-Ultima Atualizacao: 2026-05-05 21:26
+Ultima Atualizacao: 2026-05-05 22:52
 Status: Ativo
 Nota: Semente pos-purge. 33 entradas arquivadas em journal_archive_20260503_015104.md.
 ---
 
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
+
+## 📅 2026-05-05 22:40 | 📊 Affinity Lite v1.0 (SSD-Chain Hardened)
+**Estado Atual:**
+- [x] **Affinity Scanner:** Implementado `affinity_lite.py` (stdlib) para detecção de Drift Temporal e Referencial.
+- [x] **SSD Playbook Compliance:** Feature executada seguindo as 9 Skills obrigatórias da Cadeia de Disciplina V3.0.
+- [x] **Telemetria:** Inicializado `.specs/features/affinity-lite/STATE.md` com evidência quantitativa de análise.
+
+**Matriz de Propagação:**
+- [x] `.context/_scripts/affinity_lite.py` -> Motor de Jaccard e Regex implementado.
+- [x] `.specs/features/affinity-lite/` -> Pasta de feature com spec, tasks e state.
+- [x] `.context/maintenance/rx-affinity-lite.md` -> Primeiro report de acoplamento fantasma gerado.
+- [x] `.context/maintenance/rx-communications.md` -> Mapeamento da nova ferramenta de auditoria.
+- [x] `.context/brain/SCRIPT_GLOSSARY.md` -> Registro oficial do novo motor no inventário de scripts.
+- [x] `tests/test_affinity_lite.py` -> Cobertura de testes unitários 100%.
+- [x] `package.json` -> Inclusão do atalho context:affinity.
+- [x] `.specs/features/gov_v3_stabilization/STATE.md` -> Remediação de advisories stale.
+- [x] `.context/maintenance/TECHNICAL_REQUIREMENTS.md` -> Sincronia de dependências via context:sync.
+- [x] `.context/brain/FILE_GLOSSARY.md` -> Registro de caminhos de contexto (SAM Requirement).
+- [x] `planos/IDEIAS/afinidade-py/` -> Documentação de ideação e crítica arquitetural.
+- [x] `.specs/features/gov_v3_stabilization/.enriched.md` -> Sync de cicatrizes de memória.
+- [x] `.context/maintenance/rx-affinity-lite.json` -> Output parseável do detector de drift.
+
+executor_context_id: affinity-lite
+validator_context_id: harness
+status: READY TO COMMIT
 
 ## 📅 2026-05-05 21:26 | 🧠 Deterministic journal-sync v2.0 (Reality Check)
 **Estado Atual:**

@@ -27,7 +27,8 @@
     "context:test": "python tests/test_context.py",
     "prepare": "husky",
     "context:map": "python run_context.py map",
-    "context:bundle": "python run_context.py bundle"
+    "context:bundle": "python run_context.py bundle",
+    "context:affinity": "python .context/_scripts/affinity_lite.py"
   },
   "keywords": [
     "ai",

@@ -1,0 +1,4728 @@
+{
+  "run_id": "89844333",
+  "timestamp": "2026-05-05T22:30:12.295995",
+  "stats": {
+    "processed": 233,
+    "ghosts": 2,
+    "dead_refs": 0,
+    "healthy": 256
+  },
+  "results": [
+    {
+      "pair": [
+        ".agent/skills/journal-sync/SKILL.md",
+        ".context/maintenance/rx-communications.md"
+      ],
+      "temporal": 0.286,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/skills/journal-sync/SKILL.md",
+        ".context/brain/RULES.md"
+      ],
+      "temporal": 0.054,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/skills/journal-sync/SKILL.md",
+        ".context/brain/FILE_GLOSSARY.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/skills/journal-sync/SKILL.md",
+        ".context/brain/LEARNINGS.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/brain/RULES.md"
+      ],
+      "temporal": 0.198,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/brain/FILE_GLOSSARY.md"
+      ],
+      "temporal": 0.094,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/brain/AGENT_REGISTRY.md"
+      ],
+      "temporal": 0.097,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/brain/MASTER_FLOW.md"
+      ],
+      "temporal": 0.152,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/maintenance/HARNESS_LOG.md"
+      ],
+      "temporal": 0.173,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md"
+      ],
+      "temporal": 0.54,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        "package.json"
+      ],
+      "temporal": 0.105,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        "run_context.py"
+      ],
+      "temporal": 0.13,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/market/wiki_log.md"
+      ],
+      "temporal": 0.149,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/monitoring/CONTEXT_HEALTH.md"
+      ],
+      "temporal": 0.496,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.065,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.066,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.104,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.065,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.15,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.066,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        "VERSION.md"
+      ],
+      "temporal": 0.066,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL.md",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.066,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-communications.md",
+        ".context/brain/FILE_GLOSSARY.md"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-communications.md",
+        ".context/brain/LEARNINGS.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-communications.md",
+        ".context/brain/MASTER_FLOW.md"
+      ],
+      "temporal": 0.057,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/brain/FILE_GLOSSARY.md"
+      ],
+      "temporal": 0.08,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".agent/subagents/spec-driver.md"
+      ],
+      "temporal": 0.073,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/brain/AGENT_REGISTRY.md"
+      ],
+      "temporal": 0.214,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/brain/MASTER_FLOW.md"
+      ],
+      "temporal": 0.595,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/brain/SCRIPT_GLOSSARY.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/maintenance/JOURNAL_SYNAPSE.md"
+      ],
+      "temporal": 0.054,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".husky/pre-commit"
+      ],
+      "temporal": 0.079,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/maintenance/HARNESS_LOG.md"
+      ],
+      "temporal": 0.092,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md"
+      ],
+      "temporal": 0.205,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        "package.json"
+      ],
+      "temporal": 0.156,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        "run_context.py"
+      ],
+      "temporal": 0.174,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/brain/TLC_INTEGRATION.md"
+      ],
+      "temporal": 0.081,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/market/wiki_log.md"
+      ],
+      "temporal": 0.102,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/monitoring/CONTEXT_HEALTH.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.07,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.178,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.146,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/_scripts/cleanup_specs.py"
+      ],
+      "temporal": 0.053,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.298,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.098,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        "VERSION.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.053,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.119,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.073,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.079,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/RULES.md",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.054,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".context/brain/LEARNINGS.md"
+      ],
+      "temporal": 0.105,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".agent/subagents/spec-driver.md"
+      ],
+      "temporal": 0.13,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".context/brain/AGENT_REGISTRY.md"
+      ],
+      "temporal": 0.065,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".context/brain/MASTER_FLOW.md"
+      ],
+      "temporal": 0.14,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".context/brain/SCRIPT_GLOSSARY.md"
+      ],
+      "temporal": 0.263,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".context/maintenance/JOURNAL_SYNAPSE.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".agent/templates/AGENT_SCRATCHPAD.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".specs/features/SSD_PLAYBOOK.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".context/maintenance/HARNESS_LOG.md"
+      ],
+      "temporal": 0.06,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".specs/features/gov_v3_stabilization/STATE.md"
+      ],
+      "temporal": 0.105,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".specs/features/SSD_ERRORS_LEDGER.md"
+      ],
+      "temporal": 0.105,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/FILE_GLOSSARY.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/LEARNINGS.md",
+        ".context/brain/SCRIPT_GLOSSARY.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/LEARNINGS.md",
+        ".specs/features/SSD_PLAYBOOK.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/LEARNINGS.md",
+        ".context/maintenance/HARNESS_LOG.md"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/LEARNINGS.md",
+        ".specs/features/gov_v3_stabilization/STATE.md"
+      ],
+      "temporal": 0.5,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/LEARNINGS.md",
+        ".specs/features/SSD_ERRORS_LEDGER.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/LEARNINGS.md",
+        "package.json"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/LEARNINGS.md",
+        "run_context.py"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        ".gitignore"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        ".agent/subagents/spec-driver.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        ".context/brain/SCRIPT_GLOSSARY.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        ".context/maintenance/HARNESS_LOG.md"
+      ],
+      "temporal": 0.079,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        ".specs/features/gov_v3_stabilization/STATE.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        ".specs/features/SSD_ERRORS_LEDGER.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        ".context/brain/TLC_INTEGRATION.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        ".context/_scripts/write_with_validation.py"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.067,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        "planos/comentarios_Flash.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/project_bundler.py",
+        "planos/log_planos.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".gitignore",
+        ".agent/subagents/spec-driver.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 0.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".gitignore",
+        ".agent/templates/AGENT_SCRATCHPAD.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 0.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".gitignore",
+        ".context/_scripts/write_with_validation.py"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 0.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".gitignore",
+        "_flash_report/log_extracao_v2.5.2.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 0.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".gitignore",
+        "planos/SSD-Chain/Chain-Skills V3.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 0.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".context/brain/AGENT_REGISTRY.md"
+      ],
+      "temporal": 0.095,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".context/brain/MASTER_FLOW.md"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".context/brain/SCRIPT_GLOSSARY.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".context/maintenance/JOURNAL_SYNAPSE.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".husky/pre-commit"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".agent/templates/AGENT_SCRATCHPAD.md"
+      ],
+      "temporal": 0.222,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".specs/features/SSD_PLAYBOOK.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".specs/features/gov_v3_stabilization/STATE.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".specs/features/SSD_ERRORS_LEDGER.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".context/brain/TLC_INTEGRATION.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        ".context/_scripts/write_with_validation.py"
+      ],
+      "temporal": 0.333,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        "_flash_report/log_extracao_v2.5.2.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/subagents/spec-driver.md",
+        "planos/SSD-Chain/Chain-Skills V3.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/brain/MASTER_FLOW.md"
+      ],
+      "temporal": 0.211,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/brain/SCRIPT_GLOSSARY.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/maintenance/JOURNAL_SYNAPSE.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".husky/pre-commit"
+      ],
+      "temporal": 0.053,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".agent/templates/AGENT_SCRATCHPAD.md"
+      ],
+      "temporal": 0.059,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".specs/features/SSD_PLAYBOOK.md"
+      ],
+      "temporal": 0.118,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md"
+      ],
+      "temporal": 0.076,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".specs/features/SSD_ERRORS_LEDGER.md"
+      ],
+      "temporal": 0.059,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        "package.json"
+      ],
+      "temporal": 0.069,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        "run_context.py"
+      ],
+      "temporal": 0.138,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/brain/TLC_INTEGRATION.md"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/monitoring/CONTEXT_HEALTH.md"
+      ],
+      "temporal": 0.087,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.087,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/_scripts/workflow_journal_auditor.py"
+      ],
+      "temporal": 0.118,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.28,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.368,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/_scripts/cleanup_specs.py"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.212,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/maintenance/rx-biology.md"
+      ],
+      "temporal": 0.053,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.118,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.13,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.059,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.059,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.059,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.059,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.059,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/AGENT_REGISTRY.md",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.059,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/brain/SCRIPT_GLOSSARY.md"
+      ],
+      "temporal": 0.057,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/maintenance/JOURNAL_SYNAPSE.md"
+      ],
+      "temporal": 0.062,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/maintenance/HARNESS_LOG.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md"
+      ],
+      "temporal": 0.122,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        "run_context.py"
+      ],
+      "temporal": 0.089,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/brain/TLC_INTEGRATION.md"
+      ],
+      "temporal": 0.094,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/market/wiki_log.md"
+      ],
+      "temporal": 0.089,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/monitoring/CONTEXT_HEALTH.md"
+      ],
+      "temporal": 0.138,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.079,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.053,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.171,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.135,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/_scripts/cleanup_specs.py"
+      ],
+      "temporal": 0.061,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.191,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.053,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.061,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.105,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.057,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.062,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.062,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.062,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/MASTER_FLOW.md",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.062,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        ".context/maintenance/JOURNAL_SYNAPSE.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        ".husky/pre-commit"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        ".specs/features/SSD_PLAYBOOK.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        ".context/maintenance/HARNESS_LOG.md"
+      ],
+      "temporal": 0.079,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        ".specs/features/gov_v3_stabilization/STATE.md"
+      ],
+      "temporal": 0.286,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        ".specs/features/SSD_ERRORS_LEDGER.md"
+      ],
+      "temporal": 0.286,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        "package.json"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        "run_context.py"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        ".context/brain/TLC_INTEGRATION.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        ".context/_scripts/write_with_validation.py"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.067,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/SCRIPT_GLOSSARY.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.062,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL_SYNAPSE.md",
+        ".husky/pre-commit"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL_SYNAPSE.md",
+        "package.json"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL_SYNAPSE.md",
+        "run_context.py"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL_SYNAPSE.md",
+        ".context/_scripts/workflow_journal_auditor.py"
+      ],
+      "temporal": 0.4,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL_SYNAPSE.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/JOURNAL_SYNAPSE.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".husky/pre-commit",
+        "package.json"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".husky/pre-commit",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".husky/pre-commit",
+        "VERSION.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".husky/pre-commit",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.067,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".husky/pre-commit",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".husky/pre-commit",
+        "README.md"
+      ],
+      "temporal": 0.071,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".husky/pre-commit",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".husky/pre-commit",
+        "run_context.sh"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/templates/AGENT_SCRATCHPAD.md",
+        ".specs/features/SSD_PLAYBOOK.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/templates/AGENT_SCRATCHPAD.md",
+        ".context/_scripts/write_with_validation.py"
+      ],
+      "temporal": 0.4,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/templates/AGENT_SCRATCHPAD.md",
+        "_flash_report/log_extracao_v2.5.2.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".agent/templates/AGENT_SCRATCHPAD.md",
+        "planos/SSD-Chain/Chain-Skills V3.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_PLAYBOOK.md",
+        ".context/maintenance/HARNESS_LOG.md"
+      ],
+      "temporal": 0.054,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_PLAYBOOK.md",
+        ".specs/features/gov_v3_stabilization/STATE.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_PLAYBOOK.md",
+        ".specs/features/SSD_ERRORS_LEDGER.md"
+      ],
+      "temporal": 0.4,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_PLAYBOOK.md",
+        "package.json"
+      ],
+      "temporal": 0.053,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_PLAYBOOK.md",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_PLAYBOOK.md",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        ".specs/features/gov_v3_stabilization/STATE.md"
+      ],
+      "temporal": 0.086,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        ".specs/features/SSD_ERRORS_LEDGER.md"
+      ],
+      "temporal": 0.086,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        ".context/_scripts/write_with_validation.py"
+      ],
+      "temporal": 0.054,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        ".context/market/wiki_log.md"
+      ],
+      "temporal": 0.262,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        ".context/monitoring/CONTEXT_HEALTH.md"
+      ],
+      "temporal": 0.118,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        "_flash_report/log_extracao_v2.5.2.md"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.176,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/HARNESS_LOG.md",
+        "planos/log_planos.md"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        "package.json"
+      ],
+      "temporal": 0.178,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        "run_context.py"
+      ],
+      "temporal": 0.222,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/market/wiki_log.md"
+      ],
+      "temporal": 0.239,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/monitoring/CONTEXT_HEALTH.md"
+      ],
+      "temporal": 0.857,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.096,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.082,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.13,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.066,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.159,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.097,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        "VERSION.md"
+      ],
+      "temporal": 0.129,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/maintenance/rx-biology.md"
+      ],
+      "temporal": 0.071,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.057,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.157,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.086,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        "README.md"
+      ],
+      "temporal": 0.081,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.099,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TECHNICAL_REQUIREMENTS.md",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/gov_v3_stabilization/STATE.md",
+        ".specs/features/SSD_ERRORS_LEDGER.md"
+      ],
+      "temporal": 0.5,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/gov_v3_stabilization/STATE.md",
+        "package.json"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/gov_v3_stabilization/STATE.md",
+        "run_context.py"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/gov_v3_stabilization/STATE.md",
+        ".context/brain/TLC_INTEGRATION.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/gov_v3_stabilization/STATE.md",
+        ".context/_scripts/write_with_validation.py"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/gov_v3_stabilization/STATE.md",
+        ".context/market/wiki_log.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_ERRORS_LEDGER.md",
+        "package.json"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_ERRORS_LEDGER.md",
+        "run_context.py"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_ERRORS_LEDGER.md",
+        ".context/brain/TLC_INTEGRATION.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_ERRORS_LEDGER.md",
+        ".context/_scripts/write_with_validation.py"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_ERRORS_LEDGER.md",
+        ".context/market/wiki_log.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_ERRORS_LEDGER.md",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".specs/features/SSD_ERRORS_LEDGER.md",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        "run_context.py"
+      ],
+      "temporal": 0.478,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/market/wiki_log.md"
+      ],
+      "temporal": 0.062,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/monitoring/CONTEXT_HEALTH.md"
+      ],
+      "temporal": 0.134,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.087,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.095,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/workflow_journal_auditor.py"
+      ],
+      "temporal": 0.053,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.138,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.08,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.171,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/_wiki_log_utils.py"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.087,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/ingest_wiki_guard.py"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        "VERSION.md"
+      ],
+      "temporal": 0.25,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/maintenance/rx-biology.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.158,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        "README.md"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        "Makefile"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        "run_context.sh"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.105,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/secrets_scanner.py"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/health_sync.py"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "package.json",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/monitoring/CONTEXT_HEALTH.md"
+      ],
+      "temporal": 0.164,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.08,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.087,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.25,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.115,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.229,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.227,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        "VERSION.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.16,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.182,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        "run_context.sh"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/_scripts/secrets_scanner.py"
+      ],
+      "temporal": 0.105,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "run_context.py",
+        ".context/_scripts/health_sync.py"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/TLC_INTEGRATION.md",
+        ".context/_scripts/write_with_validation.py"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/TLC_INTEGRATION.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/TLC_INTEGRATION.md",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/TLC_INTEGRATION.md",
+        "_flash_report/log_extracao_v2.5.2.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/TLC_INTEGRATION.md",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/TLC_INTEGRATION.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.071,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/TLC_INTEGRATION.md",
+        ".context/_scripts/cleanup_specs.py"
+      ],
+      "temporal": 0.333,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/TLC_INTEGRATION.md",
+        "planos/comentarios_Flash.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/TLC_INTEGRATION.md",
+        "README.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/write_with_validation.py",
+        "_flash_report/log_extracao_v2.5.2.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/write_with_validation.py",
+        "planos/SSD-Chain/Chain-Skills V3.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/wiki_log.md",
+        ".context/monitoring/CONTEXT_HEALTH.md"
+      ],
+      "temporal": 0.279,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/wiki_log.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/wiki_log.md",
+        "_flash_report/log_extracao_v2.5.2.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/wiki_log.md",
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/wiki_log.md",
+        ".context/_scripts/_wiki_log_utils.py"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/wiki_log.md",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.08,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/wiki_log.md",
+        ".context/_scripts/ingest_wiki_guard.py"
+      ],
+      "temporal": 0.105,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/wiki_log.md",
+        "VERSION.md"
+      ],
+      "temporal": 0.174,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/wiki_log.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.115,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/wiki_log.md",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/maintenance/rx-anatomy.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.095,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.132,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.076,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.164,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.095,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        "VERSION.md"
+      ],
+      "temporal": 0.131,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/maintenance/rx-biology.md"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.067,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.183,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        "README.md"
+      ],
+      "temporal": 0.094,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.079,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/_scripts/secrets_scanner.py"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/monitoring/CONTEXT_HEALTH.md",
+        ".context/_scripts/health_sync.py"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        "README_CONTEXT.md"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.214,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.08,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.105,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/_scripts/cleanup_specs.py"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.061,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/maintenance/rx-biology.md"
+      ],
+      "temporal": 0.364,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        "README.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        "Makefile"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        "run_context.sh"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.071,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-anatomy.md",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        "init_ai_project.sh"
+      ],
+      "temporal": 0.231,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.133,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        "VERSION.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        ".context/maintenance/rx-biology.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.154,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        "README.md"
+      ],
+      "temporal": 0.462,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        "Makefile"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        "run_context.sh"
+      ],
+      "temporal": 0.182,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        ".context/_scripts/health_sync.py"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README_CONTEXT.md",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "init_ai_project.sh",
+        ".context/_scripts/validate_context.py"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "init_ai_project.sh",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.059,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "init_ai_project.sh",
+        ".context/_scripts/cleanup_specs.py"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "init_ai_project.sh",
+        "VERSION.md"
+      ],
+      "temporal": 0.067,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "init_ai_project.sh",
+        ".context/maintenance/rx-biology.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "init_ai_project.sh",
+        "README.md"
+      ],
+      "temporal": 0.308,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "init_ai_project.sh",
+        "Makefile"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "init_ai_project.sh",
+        "run_context.sh"
+      ],
+      "temporal": 0.222,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "_flash_report/log_extracao_v2.5.2.md",
+        "planos/SSD-Chain/Chain-Skills V3.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "_flash_report/log_extracao_v2.5.2.md",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "_flash_report/log_extracao_v2.5.2.md",
+        ".context/_scripts/cleanup_specs.py"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "_flash_report/log_extracao_v2.5.2.md",
+        "planos/comentarios_Flash.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "_flash_report/log_extracao_v2.5.2.md",
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "_flash_report/log_extracao_v2.5.2.md",
+        ".context/_scripts/_wiki_log_utils.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "_flash_report/log_extracao_v2.5.2.md",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "_flash_report/log_extracao_v2.5.2.md",
+        ".context/_scripts/ingest_wiki_guard.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/workflow_journal_auditor.py",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.071,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/workflow_journal_auditor.py",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.074,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/brain/PROMPT_LIBRARY.md"
+      ],
+      "temporal": 0.217,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/_scripts/cleanup_specs.py"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.135,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.13,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        "VERSION.md"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/maintenance/rx-biology.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.105,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.095,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        "README.md"
+      ],
+      "temporal": 0.08,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        "run_context.sh"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/_scripts/secrets_scanner.py"
+      ],
+      "temporal": 0.053,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/validate_context.py",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/_scripts/cleanup_specs.py"
+      ],
+      "temporal": 0.071,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/_scripts/harness_runner.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/_scripts/_wiki_log_utils.py"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.176,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/_scripts/ingest_wiki_guard.py"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/maintenance/rx-biology.md"
+      ],
+      "temporal": 0.067,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.154,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        "README.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.273,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PROMPT_LIBRARY.md",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/cleanup_specs.py",
+        "planos/comentarios_Flash.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/cleanup_specs.py",
+        "README.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/harness_runner.py",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.172,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/harness_runner.py",
+        "VERSION.md"
+      ],
+      "temporal": 0.097,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/harness_runner.py",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.074,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/harness_runner.py",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.161,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/harness_runner.py",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.107,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/harness_runner.py",
+        "README.md"
+      ],
+      "temporal": 0.094,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/harness_runner.py",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.065,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/harness_runner.py",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.071,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/harness_runner.py",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.12,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "planos/comentarios_Flash.md",
+        "planos/log_planos.md"
+      ],
+      "temporal": 0.5,
+      "referential_f1": 0.846,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc",
+        ".context/_scripts/_wiki_log_utils.py"
+      ],
+      "temporal": 1.0,
+      "referential_f1": 0.0,
+      "type": "Ghost Coupling"
+    },
+    {
+      "pair": [
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 0.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc",
+        ".context/_scripts/ingest_wiki_guard.py"
+      ],
+      "temporal": 0.5,
+      "referential_f1": 0.0,
+      "type": "Ghost Coupling"
+    },
+    {
+      "pair": [
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc",
+        "VERSION.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 0.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 0.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.286,
+      "referential_f1": 0.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/__pycache__/_wiki_log_utils.cpython-314.pyc",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 0.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/_wiki_log_utils.py",
+        ".context/_scripts/context_oracle.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/_wiki_log_utils.py",
+        ".context/_scripts/ingest_wiki_guard.py"
+      ],
+      "temporal": 0.5,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/_wiki_log_utils.py",
+        "VERSION.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/_wiki_log_utils.py",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/_wiki_log_utils.py",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.286,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/_wiki_log_utils.py",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/_scripts/ingest_wiki_guard.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        "VERSION.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/maintenance/rx-biology.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.182,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.176,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.071,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.214,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/context_oracle.py",
+        ".context/_scripts/secrets_scanner.py"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/ingest_wiki_guard.py",
+        "VERSION.md"
+      ],
+      "temporal": 0.091,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/ingest_wiki_guard.py",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/ingest_wiki_guard.py",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/ingest_wiki_guard.py",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "VERSION.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.25,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "VERSION.md",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.364,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "VERSION.md",
+        "README.md"
+      ],
+      "temporal": 0.188,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "VERSION.md",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.133,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "VERSION.md",
+        "run_context.sh"
+      ],
+      "temporal": 0.182,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        ".context/market/SSOT_MAP.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.067,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        "README.md"
+      ],
+      "temporal": 0.071,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.333,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.333,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.333,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        "Makefile"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        "run_context.sh"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.111,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        ".context/_scripts/secrets_scanner.py"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/rx-biology.md",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/SSOT_MAP.md",
+        ".context/brain/INCEPTION.md"
+      ],
+      "temporal": 0.25,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/market/SSOT_MAP.md",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.4,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/INCEPTION.md",
+        ".context/brain/VISION.md"
+      ],
+      "temporal": 0.545,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/INCEPTION.md",
+        "README.md"
+      ],
+      "temporal": 0.05,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/INCEPTION.md",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.056,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/INCEPTION.md",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/INCEPTION.md",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/INCEPTION.md",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/INCEPTION.md",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/VISION.md",
+        "README.md"
+      ],
+      "temporal": 0.067,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/VISION.md",
+        ".context/_scripts/lint_wiki.py"
+      ],
+      "temporal": 0.077,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/VISION.md",
+        ".context/brain/ROADMAP.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/VISION.md",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/VISION.md",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 0.125,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README.md",
+        "Makefile"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README.md",
+        "run_context.sh"
+      ],
+      "temporal": 0.167,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README.md",
+        ".context/_scripts/health_sync.py"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README.md",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "README.md",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.083,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/lint_wiki.py",
+        ".context/_scripts/secrets_scanner.py"
+      ],
+      "temporal": 0.1,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/lint_wiki.py",
+        ".context/_scripts/health_sync.py"
+      ],
+      "temporal": 0.222,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/ROADMAP.md",
+        ".context/maintenance/ARCHITECTURE.md"
+      ],
+      "temporal": 1.0,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/ROADMAP.md",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 1.0,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/ROADMAP.md",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/ROADMAP.md",
+        ".context/_scripts/secrets_scanner.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/ROADMAP.md",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/ROADMAP.md",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/ROADMAP.md",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/ARCHITECTURE.md",
+        ".context/maintenance/TESTS.md"
+      ],
+      "temporal": 1.0,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/ARCHITECTURE.md",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/ARCHITECTURE.md",
+        ".context/_scripts/secrets_scanner.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/ARCHITECTURE.md",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/ARCHITECTURE.md",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/ARCHITECTURE.md",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TESTS.md",
+        ".context/brain/PRD.md"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TESTS.md",
+        ".context/_scripts/secrets_scanner.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TESTS.md",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TESTS.md",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/maintenance/TESTS.md",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        "Makefile",
+        "run_context.sh"
+      ],
+      "temporal": 0.4,
+      "referential_f1": 0.301,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PRD.md",
+        ".context/market/MARKET_INBOX.md"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PRD.md",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PRD.md",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.143,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/brain/PRD.md",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.333,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/secrets_scanner.py",
+        ".context/_scripts/health_sync.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/health_sync.py",
+        ".context/_scripts/purge_journal.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/health_sync.py",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 0.2,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/purge_journal.py",
+        ".context/_scripts/sync_project.py"
+      ],
+      "temporal": 1.0,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/purge_journal.py",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.5,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    },
+    {
+      "pair": [
+        ".context/_scripts/sync_project.py",
+        ".context/maintenance/schema.sql"
+      ],
+      "temporal": 0.5,
+      "referential_f1": 1.0,
+      "type": "Healthy"
+    }
+  ]
+}

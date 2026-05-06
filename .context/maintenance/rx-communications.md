@@ -274,6 +274,10 @@ Esta seção mapeia os "músculos" do ecossistema definidos no `SCRIPT_GLOSSARY.
   - **Gatilho:** Husky `commit-msg`.
 
 ### 🧠 Motores Epistemológicos
+- **`affinity_lite.py`**
+  - **Lê (Depende de):** Git Log (`git log`), Conteúdo de Docs (`.md`), Scripts (`.py`).
+  - **Escreve em (Afeta):** `rx-affinity-lite.md` e `rx-affinity-lite.json` (Revela Acoplamentos Fantasma).
+  - **Gatilho:** `npm run context:affinity` (a ser adicionado no package.json).
 - **`context_oracle.py`**
   - **Lê (Depende de):** Documentos e Wiki (`.context/`).
   - **Escreve em (Afeta):** Respostas no terminal / Prompt RAG.

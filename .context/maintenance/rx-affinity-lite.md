@@ -1,0 +1,1064 @@
+# 📊 Relatório de Afinidade e Drift (Affinity Lite)
+> Gerado em: 2026-05-05T22:30:12.295995 | ID: 89844333
+
+## 📈 Resumo Executivo
+- 📁 Arquivos Processados: 233
+- 👻 Acoplamentos Fantasma: 2
+- 💀 Referências Mortas: 0
+- ✅ Conexões Saudáveis: 256
+
+## 🕸️ Matriz de Drift (Lista de Adjacência)
+Abaixo estão listados os pares com desvio operacional detectado.
+
+### 📍 Ghost Coupling
+- **_wiki_log_utils.cpython-314.pyc** ↔️ **_wiki_log_utils.py**
+  - Temporal: `1.0` | Referencial: `0.0`
+- **_wiki_log_utils.cpython-314.pyc** ↔️ **ingest_wiki_guard.py**
+  - Temporal: `0.5` | Referencial: `0.0`
+
+### 📍 Healthy
+- **SKILL.md** ↔️ **rx-communications.md**
+  - Temporal: `0.286` | Referencial: `1.0`
+- **SKILL.md** ↔️ **RULES.md**
+  - Temporal: `0.054` | Referencial: `1.0`
+- **SKILL.md** ↔️ **FILE_GLOSSARY.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **SKILL.md** ↔️ **LEARNINGS.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **RULES.md**
+  - Temporal: `0.198` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **FILE_GLOSSARY.md**
+  - Temporal: `0.094` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **AGENT_REGISTRY.md**
+  - Temporal: `0.097` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **MASTER_FLOW.md**
+  - Temporal: `0.152` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **HARNESS_LOG.md**
+  - Temporal: `0.173` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **TECHNICAL_REQUIREMENTS.md**
+  - Temporal: `0.54` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **package.json**
+  - Temporal: `0.105` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **run_context.py**
+  - Temporal: `0.13` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **wiki_log.md**
+  - Temporal: `0.149` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **CONTEXT_HEALTH.md**
+  - Temporal: `0.496` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.065` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.066` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **validate_context.py**
+  - Temporal: `0.104` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.065` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **harness_runner.py**
+  - Temporal: `0.15` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **context_oracle.py**
+  - Temporal: `0.066` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **VERSION.md**
+  - Temporal: `0.066` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **JOURNAL.md** ↔️ **lint_wiki.py**
+  - Temporal: `0.066` | Referencial: `1.0`
+- **rx-communications.md** ↔️ **FILE_GLOSSARY.md**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **rx-communications.md** ↔️ **LEARNINGS.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **rx-communications.md** ↔️ **MASTER_FLOW.md**
+  - Temporal: `0.057` | Referencial: `1.0`
+- **RULES.md** ↔️ **FILE_GLOSSARY.md**
+  - Temporal: `0.08` | Referencial: `1.0`
+- **RULES.md** ↔️ **spec-driver.md**
+  - Temporal: `0.073` | Referencial: `1.0`
+- **RULES.md** ↔️ **AGENT_REGISTRY.md**
+  - Temporal: `0.214` | Referencial: `1.0`
+- **RULES.md** ↔️ **MASTER_FLOW.md**
+  - Temporal: `0.595` | Referencial: `1.0`
+- **RULES.md** ↔️ **SCRIPT_GLOSSARY.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **RULES.md** ↔️ **JOURNAL_SYNAPSE.md**
+  - Temporal: `0.054` | Referencial: `1.0`
+- **RULES.md** ↔️ **pre-commit**
+  - Temporal: `0.079` | Referencial: `1.0`
+- **RULES.md** ↔️ **HARNESS_LOG.md**
+  - Temporal: `0.092` | Referencial: `1.0`
+- **RULES.md** ↔️ **TECHNICAL_REQUIREMENTS.md**
+  - Temporal: `0.205` | Referencial: `1.0`
+- **RULES.md** ↔️ **package.json**
+  - Temporal: `0.156` | Referencial: `1.0`
+- **RULES.md** ↔️ **run_context.py**
+  - Temporal: `0.174` | Referencial: `1.0`
+- **RULES.md** ↔️ **TLC_INTEGRATION.md**
+  - Temporal: `0.081` | Referencial: `1.0`
+- **RULES.md** ↔️ **wiki_log.md**
+  - Temporal: `0.102` | Referencial: `1.0`
+- **RULES.md** ↔️ **CONTEXT_HEALTH.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **RULES.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.07` | Referencial: `1.0`
+- **RULES.md** ↔️ **validate_context.py**
+  - Temporal: `0.178` | Referencial: `1.0`
+- **RULES.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.146` | Referencial: `1.0`
+- **RULES.md** ↔️ **cleanup_specs.py**
+  - Temporal: `0.053` | Referencial: `1.0`
+- **RULES.md** ↔️ **harness_runner.py**
+  - Temporal: `0.298` | Referencial: `1.0`
+- **RULES.md** ↔️ **context_oracle.py**
+  - Temporal: `0.098` | Referencial: `1.0`
+- **RULES.md** ↔️ **VERSION.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **RULES.md** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.053` | Referencial: `1.0`
+- **RULES.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.119` | Referencial: `1.0`
+- **RULES.md** ↔️ **VISION.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **RULES.md** ↔️ **lint_wiki.py**
+  - Temporal: `0.073` | Referencial: `1.0`
+- **RULES.md** ↔️ **PRD.md**
+  - Temporal: `0.079` | Referencial: `1.0`
+- **RULES.md** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.054` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **LEARNINGS.md**
+  - Temporal: `0.105` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **spec-driver.md**
+  - Temporal: `0.13` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **AGENT_REGISTRY.md**
+  - Temporal: `0.065` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **MASTER_FLOW.md**
+  - Temporal: `0.14` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **SCRIPT_GLOSSARY.md**
+  - Temporal: `0.263` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **JOURNAL_SYNAPSE.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **AGENT_SCRATCHPAD.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **SSD_PLAYBOOK.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **HARNESS_LOG.md**
+  - Temporal: `0.06` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **STATE.md**
+  - Temporal: `0.105` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **SSD_ERRORS_LEDGER.md**
+  - Temporal: `0.105` | Referencial: `1.0`
+- **FILE_GLOSSARY.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **LEARNINGS.md** ↔️ **SCRIPT_GLOSSARY.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **LEARNINGS.md** ↔️ **SSD_PLAYBOOK.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **LEARNINGS.md** ↔️ **HARNESS_LOG.md**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **LEARNINGS.md** ↔️ **STATE.md**
+  - Temporal: `0.5` | Referencial: `1.0`
+- **LEARNINGS.md** ↔️ **SSD_ERRORS_LEDGER.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **LEARNINGS.md** ↔️ **package.json**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **LEARNINGS.md** ↔️ **run_context.py**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **.gitignore**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **spec-driver.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **SCRIPT_GLOSSARY.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **HARNESS_LOG.md**
+  - Temporal: `0.079` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **STATE.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **SSD_ERRORS_LEDGER.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **TLC_INTEGRATION.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **write_with_validation.py**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **rx-anatomy.md**
+  - Temporal: `0.067` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **init_ai_project.sh**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **comentarios_Flash.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **project_bundler.py** ↔️ **log_planos.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **.gitignore** ↔️ **spec-driver.md**
+  - Temporal: `0.1` | Referencial: `0.0`
+- **.gitignore** ↔️ **AGENT_SCRATCHPAD.md**
+  - Temporal: `0.2` | Referencial: `0.0`
+- **.gitignore** ↔️ **write_with_validation.py**
+  - Temporal: `0.167` | Referencial: `0.0`
+- **.gitignore** ↔️ **log_extracao_v2.5.2.md**
+  - Temporal: `0.2` | Referencial: `0.0`
+- **.gitignore** ↔️ **Chain-Skills V3.md**
+  - Temporal: `0.2` | Referencial: `0.0`
+- **spec-driver.md** ↔️ **AGENT_REGISTRY.md**
+  - Temporal: `0.095` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **MASTER_FLOW.md**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **SCRIPT_GLOSSARY.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **JOURNAL_SYNAPSE.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **pre-commit**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **AGENT_SCRATCHPAD.md**
+  - Temporal: `0.222` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **SSD_PLAYBOOK.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **STATE.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **SSD_ERRORS_LEDGER.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **TLC_INTEGRATION.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **write_with_validation.py**
+  - Temporal: `0.333` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **log_extracao_v2.5.2.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **spec-driver.md** ↔️ **Chain-Skills V3.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **MASTER_FLOW.md**
+  - Temporal: `0.211` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **SCRIPT_GLOSSARY.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **JOURNAL_SYNAPSE.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **pre-commit**
+  - Temporal: `0.053` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **AGENT_SCRATCHPAD.md**
+  - Temporal: `0.059` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **SSD_PLAYBOOK.md**
+  - Temporal: `0.118` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **TECHNICAL_REQUIREMENTS.md**
+  - Temporal: `0.076` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **SSD_ERRORS_LEDGER.md**
+  - Temporal: `0.059` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **package.json**
+  - Temporal: `0.069` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **run_context.py**
+  - Temporal: `0.138` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **TLC_INTEGRATION.md**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **CONTEXT_HEALTH.md**
+  - Temporal: `0.087` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.087` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **init_ai_project.sh**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **workflow_journal_auditor.py**
+  - Temporal: `0.118` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **validate_context.py**
+  - Temporal: `0.28` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.368` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **cleanup_specs.py**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **harness_runner.py**
+  - Temporal: `0.212` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **context_oracle.py**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **rx-biology.md**
+  - Temporal: `0.053` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.118` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.13` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **VISION.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **ROADMAP.md**
+  - Temporal: `0.059` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.059` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **TESTS.md**
+  - Temporal: `0.059` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **PRD.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **purge_journal.py**
+  - Temporal: `0.059` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **sync_project.py**
+  - Temporal: `0.059` | Referencial: `1.0`
+- **AGENT_REGISTRY.md** ↔️ **schema.sql**
+  - Temporal: `0.059` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **SCRIPT_GLOSSARY.md**
+  - Temporal: `0.057` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **JOURNAL_SYNAPSE.md**
+  - Temporal: `0.062` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **HARNESS_LOG.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **TECHNICAL_REQUIREMENTS.md**
+  - Temporal: `0.122` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **run_context.py**
+  - Temporal: `0.089` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **TLC_INTEGRATION.md**
+  - Temporal: `0.094` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **wiki_log.md**
+  - Temporal: `0.089` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **CONTEXT_HEALTH.md**
+  - Temporal: `0.138` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.079` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.053` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **validate_context.py**
+  - Temporal: `0.171` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.135` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **cleanup_specs.py**
+  - Temporal: `0.061` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **harness_runner.py**
+  - Temporal: `0.191` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **context_oracle.py**
+  - Temporal: `0.053` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.061` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.105` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **VISION.md**
+  - Temporal: `0.057` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **ROADMAP.md**
+  - Temporal: `0.062` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.062` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **TESTS.md**
+  - Temporal: `0.062` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **PRD.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **MASTER_FLOW.md** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.062` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **JOURNAL_SYNAPSE.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **pre-commit**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **SSD_PLAYBOOK.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **HARNESS_LOG.md**
+  - Temporal: `0.079` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **STATE.md**
+  - Temporal: `0.286` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **SSD_ERRORS_LEDGER.md**
+  - Temporal: `0.286` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **package.json**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **run_context.py**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **TLC_INTEGRATION.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **write_with_validation.py**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.067` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **init_ai_project.sh**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **SCRIPT_GLOSSARY.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.062` | Referencial: `1.0`
+- **JOURNAL_SYNAPSE.md** ↔️ **pre-commit**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **JOURNAL_SYNAPSE.md** ↔️ **package.json**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **JOURNAL_SYNAPSE.md** ↔️ **run_context.py**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **JOURNAL_SYNAPSE.md** ↔️ **workflow_journal_auditor.py**
+  - Temporal: `0.4` | Referencial: `1.0`
+- **JOURNAL_SYNAPSE.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **JOURNAL_SYNAPSE.md** ↔️ **harness_runner.py**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **pre-commit** ↔️ **package.json**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **pre-commit** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **pre-commit** ↔️ **VERSION.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **pre-commit** ↔️ **INCEPTION.md**
+  - Temporal: `0.067` | Referencial: `1.0`
+- **pre-commit** ↔️ **VISION.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **pre-commit** ↔️ **README.md**
+  - Temporal: `0.071` | Referencial: `1.0`
+- **pre-commit** ↔️ **lint_wiki.py**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **pre-commit** ↔️ **run_context.sh**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **AGENT_SCRATCHPAD.md** ↔️ **SSD_PLAYBOOK.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **AGENT_SCRATCHPAD.md** ↔️ **write_with_validation.py**
+  - Temporal: `0.4` | Referencial: `1.0`
+- **AGENT_SCRATCHPAD.md** ↔️ **log_extracao_v2.5.2.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **AGENT_SCRATCHPAD.md** ↔️ **Chain-Skills V3.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **SSD_PLAYBOOK.md** ↔️ **HARNESS_LOG.md**
+  - Temporal: `0.054` | Referencial: `1.0`
+- **SSD_PLAYBOOK.md** ↔️ **STATE.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **SSD_PLAYBOOK.md** ↔️ **SSD_ERRORS_LEDGER.md**
+  - Temporal: `0.4` | Referencial: `1.0`
+- **SSD_PLAYBOOK.md** ↔️ **package.json**
+  - Temporal: `0.053` | Referencial: `1.0`
+- **SSD_PLAYBOOK.md** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **SSD_PLAYBOOK.md** ↔️ **init_ai_project.sh**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **TECHNICAL_REQUIREMENTS.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **STATE.md**
+  - Temporal: `0.086` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **SSD_ERRORS_LEDGER.md**
+  - Temporal: `0.086` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **write_with_validation.py**
+  - Temporal: `0.054` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **wiki_log.md**
+  - Temporal: `0.262` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **CONTEXT_HEALTH.md**
+  - Temporal: `0.118` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **init_ai_project.sh**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **log_extracao_v2.5.2.md**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **harness_runner.py**
+  - Temporal: `0.176` | Referencial: `1.0`
+- **HARNESS_LOG.md** ↔️ **log_planos.md**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **package.json**
+  - Temporal: `0.178` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **run_context.py**
+  - Temporal: `0.222` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **wiki_log.md**
+  - Temporal: `0.239` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **CONTEXT_HEALTH.md**
+  - Temporal: `0.857` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.096` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.082` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **validate_context.py**
+  - Temporal: `0.13` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.066` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **harness_runner.py**
+  - Temporal: `0.159` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **context_oracle.py**
+  - Temporal: `0.097` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **VERSION.md**
+  - Temporal: `0.129` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **rx-biology.md**
+  - Temporal: `0.071` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.057` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.157` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **VISION.md**
+  - Temporal: `0.086` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **README.md**
+  - Temporal: `0.081` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **lint_wiki.py**
+  - Temporal: `0.099` | Referencial: `1.0`
+- **TECHNICAL_REQUIREMENTS.md** ↔️ **PRD.md**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **STATE.md** ↔️ **SSD_ERRORS_LEDGER.md**
+  - Temporal: `0.5` | Referencial: `1.0`
+- **STATE.md** ↔️ **package.json**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **STATE.md** ↔️ **run_context.py**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **STATE.md** ↔️ **TLC_INTEGRATION.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **STATE.md** ↔️ **write_with_validation.py**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **STATE.md** ↔️ **wiki_log.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **SSD_ERRORS_LEDGER.md** ↔️ **package.json**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **SSD_ERRORS_LEDGER.md** ↔️ **run_context.py**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **SSD_ERRORS_LEDGER.md** ↔️ **TLC_INTEGRATION.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **SSD_ERRORS_LEDGER.md** ↔️ **write_with_validation.py**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **SSD_ERRORS_LEDGER.md** ↔️ **wiki_log.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **SSD_ERRORS_LEDGER.md** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **SSD_ERRORS_LEDGER.md** ↔️ **init_ai_project.sh**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **package.json** ↔️ **run_context.py**
+  - Temporal: `0.478` | Referencial: `1.0`
+- **package.json** ↔️ **wiki_log.md**
+  - Temporal: `0.062` | Referencial: `1.0`
+- **package.json** ↔️ **CONTEXT_HEALTH.md**
+  - Temporal: `0.134` | Referencial: `1.0`
+- **package.json** ↔️ **rx-anatomy.md**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **package.json** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.087` | Referencial: `1.0`
+- **package.json** ↔️ **init_ai_project.sh**
+  - Temporal: `0.095` | Referencial: `1.0`
+- **package.json** ↔️ **workflow_journal_auditor.py**
+  - Temporal: `0.053` | Referencial: `1.0`
+- **package.json** ↔️ **validate_context.py**
+  - Temporal: `0.138` | Referencial: `1.0`
+- **package.json** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.08` | Referencial: `1.0`
+- **package.json** ↔️ **harness_runner.py**
+  - Temporal: `0.171` | Referencial: `1.0`
+- **package.json** ↔️ **_wiki_log_utils.cpython-314.pyc**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **_wiki_log_utils.py**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **context_oracle.py**
+  - Temporal: `0.087` | Referencial: `1.0`
+- **package.json** ↔️ **ingest_wiki_guard.py**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **VERSION.md**
+  - Temporal: `0.25` | Referencial: `1.0`
+- **package.json** ↔️ **rx-biology.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **package.json** ↔️ **INCEPTION.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **package.json** ↔️ **VISION.md**
+  - Temporal: `0.158` | Referencial: `1.0`
+- **package.json** ↔️ **README.md**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **package.json** ↔️ **lint_wiki.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **package.json** ↔️ **ROADMAP.md**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **TESTS.md**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **Makefile**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **run_context.sh**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **package.json** ↔️ **PRD.md**
+  - Temporal: `0.105` | Referencial: `1.0`
+- **package.json** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **secrets_scanner.py**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **health_sync.py**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **purge_journal.py**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **sync_project.py**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **package.json** ↔️ **schema.sql**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **run_context.py** ↔️ **CONTEXT_HEALTH.md**
+  - Temporal: `0.164` | Referencial: `1.0`
+- **run_context.py** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.08` | Referencial: `1.0`
+- **run_context.py** ↔️ **init_ai_project.sh**
+  - Temporal: `0.087` | Referencial: `1.0`
+- **run_context.py** ↔️ **validate_context.py**
+  - Temporal: `0.25` | Referencial: `1.0`
+- **run_context.py** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.115` | Referencial: `1.0`
+- **run_context.py** ↔️ **harness_runner.py**
+  - Temporal: `0.229` | Referencial: `1.0`
+- **run_context.py** ↔️ **context_oracle.py**
+  - Temporal: `0.227` | Referencial: `1.0`
+- **run_context.py** ↔️ **VERSION.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **run_context.py** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **run_context.py** ↔️ **INCEPTION.md**
+  - Temporal: `0.16` | Referencial: `1.0`
+- **run_context.py** ↔️ **VISION.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **run_context.py** ↔️ **lint_wiki.py**
+  - Temporal: `0.182` | Referencial: `1.0`
+- **run_context.py** ↔️ **ROADMAP.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **run_context.py** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **run_context.py** ↔️ **TESTS.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **run_context.py** ↔️ **run_context.sh**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **run_context.py** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **run_context.py** ↔️ **secrets_scanner.py**
+  - Temporal: `0.105` | Referencial: `1.0`
+- **run_context.py** ↔️ **health_sync.py**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **TLC_INTEGRATION.md** ↔️ **write_with_validation.py**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **TLC_INTEGRATION.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **TLC_INTEGRATION.md** ↔️ **init_ai_project.sh**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **TLC_INTEGRATION.md** ↔️ **log_extracao_v2.5.2.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **TLC_INTEGRATION.md** ↔️ **validate_context.py**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **TLC_INTEGRATION.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.071` | Referencial: `1.0`
+- **TLC_INTEGRATION.md** ↔️ **cleanup_specs.py**
+  - Temporal: `0.333` | Referencial: `1.0`
+- **TLC_INTEGRATION.md** ↔️ **comentarios_Flash.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **TLC_INTEGRATION.md** ↔️ **README.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **write_with_validation.py** ↔️ **log_extracao_v2.5.2.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **write_with_validation.py** ↔️ **Chain-Skills V3.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **wiki_log.md** ↔️ **CONTEXT_HEALTH.md**
+  - Temporal: `0.279` | Referencial: `1.0`
+- **wiki_log.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **wiki_log.md** ↔️ **log_extracao_v2.5.2.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **wiki_log.md** ↔️ **_wiki_log_utils.cpython-314.pyc**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **wiki_log.md** ↔️ **_wiki_log_utils.py**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **wiki_log.md** ↔️ **context_oracle.py**
+  - Temporal: `0.08` | Referencial: `1.0`
+- **wiki_log.md** ↔️ **ingest_wiki_guard.py**
+  - Temporal: `0.105` | Referencial: `1.0`
+- **wiki_log.md** ↔️ **VERSION.md**
+  - Temporal: `0.174` | Referencial: `1.0`
+- **wiki_log.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.115` | Referencial: `1.0`
+- **wiki_log.md** ↔️ **VISION.md**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **rx-anatomy.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.095` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **validate_context.py**
+  - Temporal: `0.132` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.076` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **harness_runner.py**
+  - Temporal: `0.164` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **context_oracle.py**
+  - Temporal: `0.095` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **VERSION.md**
+  - Temporal: `0.131` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **rx-biology.md**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.067` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.183` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **VISION.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **README.md**
+  - Temporal: `0.094` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **lint_wiki.py**
+  - Temporal: `0.079` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **ROADMAP.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **TESTS.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **secrets_scanner.py**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **CONTEXT_HEALTH.md** ↔️ **health_sync.py**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **README_CONTEXT.md**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **init_ai_project.sh**
+  - Temporal: `0.214` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **validate_context.py**
+  - Temporal: `0.08` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.105` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **cleanup_specs.py**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **harness_runner.py**
+  - Temporal: `0.061` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **rx-biology.md**
+  - Temporal: `0.364` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **README.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **ROADMAP.md**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **TESTS.md**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **Makefile**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **run_context.sh**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **PRD.md**
+  - Temporal: `0.071` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **purge_journal.py**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **sync_project.py**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **rx-anatomy.md** ↔️ **schema.sql**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **init_ai_project.sh**
+  - Temporal: `0.231` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **validate_context.py**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **harness_runner.py**
+  - Temporal: `0.133` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **VERSION.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **rx-biology.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **VISION.md**
+  - Temporal: `0.154` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **README.md**
+  - Temporal: `0.462` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **Makefile**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **run_context.sh**
+  - Temporal: `0.182` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **health_sync.py**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **purge_journal.py**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **README_CONTEXT.md** ↔️ **sync_project.py**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **init_ai_project.sh** ↔️ **validate_context.py**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **init_ai_project.sh** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.059` | Referencial: `1.0`
+- **init_ai_project.sh** ↔️ **cleanup_specs.py**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **init_ai_project.sh** ↔️ **VERSION.md**
+  - Temporal: `0.067` | Referencial: `1.0`
+- **init_ai_project.sh** ↔️ **rx-biology.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **init_ai_project.sh** ↔️ **README.md**
+  - Temporal: `0.308` | Referencial: `1.0`
+- **init_ai_project.sh** ↔️ **Makefile**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **init_ai_project.sh** ↔️ **run_context.sh**
+  - Temporal: `0.222` | Referencial: `1.0`
+- **log_extracao_v2.5.2.md** ↔️ **Chain-Skills V3.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **log_extracao_v2.5.2.md** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **log_extracao_v2.5.2.md** ↔️ **cleanup_specs.py**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **log_extracao_v2.5.2.md** ↔️ **comentarios_Flash.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **log_extracao_v2.5.2.md** ↔️ **_wiki_log_utils.cpython-314.pyc**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **log_extracao_v2.5.2.md** ↔️ **_wiki_log_utils.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **log_extracao_v2.5.2.md** ↔️ **context_oracle.py**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **log_extracao_v2.5.2.md** ↔️ **ingest_wiki_guard.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **workflow_journal_auditor.py** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.071` | Referencial: `1.0`
+- **workflow_journal_auditor.py** ↔️ **harness_runner.py**
+  - Temporal: `0.074` | Referencial: `1.0`
+- **validate_context.py** ↔️ **PROMPT_LIBRARY.md**
+  - Temporal: `0.217` | Referencial: `1.0`
+- **validate_context.py** ↔️ **cleanup_specs.py**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **validate_context.py** ↔️ **harness_runner.py**
+  - Temporal: `0.135` | Referencial: `1.0`
+- **validate_context.py** ↔️ **context_oracle.py**
+  - Temporal: `0.13` | Referencial: `1.0`
+- **validate_context.py** ↔️ **VERSION.md**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **validate_context.py** ↔️ **rx-biology.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **validate_context.py** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.105` | Referencial: `1.0`
+- **validate_context.py** ↔️ **INCEPTION.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **validate_context.py** ↔️ **VISION.md**
+  - Temporal: `0.095` | Referencial: `1.0`
+- **validate_context.py** ↔️ **README.md**
+  - Temporal: `0.08` | Referencial: `1.0`
+- **validate_context.py** ↔️ **ROADMAP.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **validate_context.py** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **validate_context.py** ↔️ **TESTS.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **validate_context.py** ↔️ **run_context.sh**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **validate_context.py** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **validate_context.py** ↔️ **secrets_scanner.py**
+  - Temporal: `0.053` | Referencial: `1.0`
+- **validate_context.py** ↔️ **purge_journal.py**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **validate_context.py** ↔️ **sync_project.py**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **validate_context.py** ↔️ **schema.sql**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **cleanup_specs.py**
+  - Temporal: `0.071` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **harness_runner.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **_wiki_log_utils.cpython-314.pyc**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **_wiki_log_utils.py**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **context_oracle.py**
+  - Temporal: `0.176` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **ingest_wiki_guard.py**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **rx-biology.md**
+  - Temporal: `0.067` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.154` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **README.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **ROADMAP.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **TESTS.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **PRD.md**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.273` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **purge_journal.py**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **sync_project.py**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **PROMPT_LIBRARY.md** ↔️ **schema.sql**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **cleanup_specs.py** ↔️ **comentarios_Flash.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **cleanup_specs.py** ↔️ **README.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **harness_runner.py** ↔️ **context_oracle.py**
+  - Temporal: `0.172` | Referencial: `1.0`
+- **harness_runner.py** ↔️ **VERSION.md**
+  - Temporal: `0.097` | Referencial: `1.0`
+- **harness_runner.py** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.074` | Referencial: `1.0`
+- **harness_runner.py** ↔️ **INCEPTION.md**
+  - Temporal: `0.161` | Referencial: `1.0`
+- **harness_runner.py** ↔️ **VISION.md**
+  - Temporal: `0.107` | Referencial: `1.0`
+- **harness_runner.py** ↔️ **README.md**
+  - Temporal: `0.094` | Referencial: `1.0`
+- **harness_runner.py** ↔️ **lint_wiki.py**
+  - Temporal: `0.065` | Referencial: `1.0`
+- **harness_runner.py** ↔️ **PRD.md**
+  - Temporal: `0.071` | Referencial: `1.0`
+- **harness_runner.py** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.12` | Referencial: `1.0`
+- **comentarios_Flash.md** ↔️ **log_planos.md**
+  - Temporal: `0.5` | Referencial: `0.846`
+- **_wiki_log_utils.cpython-314.pyc** ↔️ **context_oracle.py**
+  - Temporal: `0.2` | Referencial: `0.0`
+- **_wiki_log_utils.cpython-314.pyc** ↔️ **VERSION.md**
+  - Temporal: `0.2` | Referencial: `0.0`
+- **_wiki_log_utils.cpython-314.pyc** ↔️ **INCEPTION.md**
+  - Temporal: `0.167` | Referencial: `0.0`
+- **_wiki_log_utils.cpython-314.pyc** ↔️ **VISION.md**
+  - Temporal: `0.286` | Referencial: `0.0`
+- **_wiki_log_utils.cpython-314.pyc** ↔️ **lint_wiki.py**
+  - Temporal: `0.1` | Referencial: `0.0`
+- **_wiki_log_utils.py** ↔️ **context_oracle.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **_wiki_log_utils.py** ↔️ **ingest_wiki_guard.py**
+  - Temporal: `0.5` | Referencial: `1.0`
+- **_wiki_log_utils.py** ↔️ **VERSION.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **_wiki_log_utils.py** ↔️ **INCEPTION.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **_wiki_log_utils.py** ↔️ **VISION.md**
+  - Temporal: `0.286` | Referencial: `1.0`
+- **_wiki_log_utils.py** ↔️ **lint_wiki.py**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **ingest_wiki_guard.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **VERSION.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **rx-biology.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.182` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **INCEPTION.md**
+  - Temporal: `0.176` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **VISION.md**
+  - Temporal: `0.071` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **lint_wiki.py**
+  - Temporal: `0.214` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **ROADMAP.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **TESTS.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **context_oracle.py** ↔️ **secrets_scanner.py**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **ingest_wiki_guard.py** ↔️ **VERSION.md**
+  - Temporal: `0.091` | Referencial: `1.0`
+- **ingest_wiki_guard.py** ↔️ **INCEPTION.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **ingest_wiki_guard.py** ↔️ **VISION.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **ingest_wiki_guard.py** ↔️ **lint_wiki.py**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **VERSION.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.25` | Referencial: `1.0`
+- **VERSION.md** ↔️ **VISION.md**
+  - Temporal: `0.364` | Referencial: `1.0`
+- **VERSION.md** ↔️ **README.md**
+  - Temporal: `0.188` | Referencial: `1.0`
+- **VERSION.md** ↔️ **lint_wiki.py**
+  - Temporal: `0.133` | Referencial: `1.0`
+- **VERSION.md** ↔️ **run_context.sh**
+  - Temporal: `0.182` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **SSOT_MAP.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.067` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **README.md**
+  - Temporal: `0.071` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **ROADMAP.md**
+  - Temporal: `0.333` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.333` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **TESTS.md**
+  - Temporal: `0.333` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **Makefile**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **run_context.sh**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **PRD.md**
+  - Temporal: `0.111` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **secrets_scanner.py**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **purge_journal.py**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **sync_project.py**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **rx-biology.md** ↔️ **schema.sql**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **SSOT_MAP.md** ↔️ **INCEPTION.md**
+  - Temporal: `0.25` | Referencial: `1.0`
+- **SSOT_MAP.md** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.4` | Referencial: `1.0`
+- **INCEPTION.md** ↔️ **VISION.md**
+  - Temporal: `0.545` | Referencial: `1.0`
+- **INCEPTION.md** ↔️ **README.md**
+  - Temporal: `0.05` | Referencial: `1.0`
+- **INCEPTION.md** ↔️ **lint_wiki.py**
+  - Temporal: `0.056` | Referencial: `1.0`
+- **INCEPTION.md** ↔️ **ROADMAP.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **INCEPTION.md** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **INCEPTION.md** ↔️ **TESTS.md**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **INCEPTION.md** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **VISION.md** ↔️ **README.md**
+  - Temporal: `0.067` | Referencial: `1.0`
+- **VISION.md** ↔️ **lint_wiki.py**
+  - Temporal: `0.077` | Referencial: `1.0`
+- **VISION.md** ↔️ **ROADMAP.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **VISION.md** ↔️ **ARCHITECTURE.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **VISION.md** ↔️ **TESTS.md**
+  - Temporal: `0.125` | Referencial: `1.0`
+- **README.md** ↔️ **Makefile**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **README.md** ↔️ **run_context.sh**
+  - Temporal: `0.167` | Referencial: `1.0`
+- **README.md** ↔️ **health_sync.py**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **README.md** ↔️ **purge_journal.py**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **README.md** ↔️ **sync_project.py**
+  - Temporal: `0.083` | Referencial: `1.0`
+- **lint_wiki.py** ↔️ **secrets_scanner.py**
+  - Temporal: `0.1` | Referencial: `1.0`
+- **lint_wiki.py** ↔️ **health_sync.py**
+  - Temporal: `0.222` | Referencial: `1.0`
+- **ROADMAP.md** ↔️ **ARCHITECTURE.md**
+  - Temporal: `1.0` | Referencial: `1.0`
+- **ROADMAP.md** ↔️ **TESTS.md**
+  - Temporal: `1.0` | Referencial: `1.0`
+- **ROADMAP.md** ↔️ **PRD.md**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **ROADMAP.md** ↔️ **secrets_scanner.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **ROADMAP.md** ↔️ **purge_journal.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **ROADMAP.md** ↔️ **sync_project.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **ROADMAP.md** ↔️ **schema.sql**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **ARCHITECTURE.md** ↔️ **TESTS.md**
+  - Temporal: `1.0` | Referencial: `1.0`
+- **ARCHITECTURE.md** ↔️ **PRD.md**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **ARCHITECTURE.md** ↔️ **secrets_scanner.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **ARCHITECTURE.md** ↔️ **purge_journal.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **ARCHITECTURE.md** ↔️ **sync_project.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **ARCHITECTURE.md** ↔️ **schema.sql**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **TESTS.md** ↔️ **PRD.md**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **TESTS.md** ↔️ **secrets_scanner.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **TESTS.md** ↔️ **purge_journal.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **TESTS.md** ↔️ **sync_project.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **TESTS.md** ↔️ **schema.sql**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **Makefile** ↔️ **run_context.sh**
+  - Temporal: `0.4` | Referencial: `0.301`
+- **PRD.md** ↔️ **MARKET_INBOX.md**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **PRD.md** ↔️ **purge_journal.py**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **PRD.md** ↔️ **sync_project.py**
+  - Temporal: `0.143` | Referencial: `1.0`
+- **PRD.md** ↔️ **schema.sql**
+  - Temporal: `0.333` | Referencial: `1.0`
+- **secrets_scanner.py** ↔️ **health_sync.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **health_sync.py** ↔️ **purge_journal.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **health_sync.py** ↔️ **sync_project.py**
+  - Temporal: `0.2` | Referencial: `1.0`
+- **purge_journal.py** ↔️ **sync_project.py**
+  - Temporal: `1.0` | Referencial: `1.0`
+- **purge_journal.py** ↔️ **schema.sql**
+  - Temporal: `0.5` | Referencial: `1.0`
+- **sync_project.py** ↔️ **schema.sql**
+  - Temporal: `0.5` | Referencial: `1.0`
+
