@@ -998,3 +998,6 @@ Status: Ativo
 
 ## [HARNESS-FAIL] Report | spec:manual
 - **Detalhe:** sprint_contract: Nenhuma Spec ativa detectada.
+
+## [HARNESS-FAIL] Report | spec:manual
+- **Detalhe:** sprint_contract: Nenhuma Spec ativa detectada.

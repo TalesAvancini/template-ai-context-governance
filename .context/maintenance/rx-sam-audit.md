@@ -54,10 +54,11 @@ Se ambos os IDs forem iguais, o commit é bloqueado por violação de segregaç�
 ### 🛑 3.3 Fail-Closed Gatekeeper
 Diferente de outros linters que apenas avisam, o SAM está injetado no `.husky/pre-commit`. Ele **aborta** o processo de commit fisicamente. Nenhuma "confabulação" de IA consegue penetrar o histórico do Git sem satisfazer as regras do `JOURNAL_SYNAPSE.md`.
 
-### 🤖 3.4 Interação com Pipelines e Arquivos Auto-Gerados
-O SAM é cego para a autoria da modificação. Se o pipeline de governança (`run_context.py`) alterar arquivos indexadores (como `PROJECT_INDEX*.md`, `CONTEXT_HEALTH.md` ou `wiki_log.md`) ou auto-geradores atuarem, o Git registrará um *diff*. 
-**Regra de Ouro:** O Agente deve obrigatoriamente antecipar essas alterações do pipeline e registrar tais arquivos na Matriz de Propagação do `JOURNAL.md`. Falhar nisso acionará a violação de "Modificação Silenciosa", bloqueando o commit.
-*Exceção:* Diretórios explícitamente declarados como isentos (ex: `graphify-out/` ou `.agents/`) são ignorados pelo motor do SAM (`workflow_journal_auditor.py`).
+### 🤖 3.4 Arquivos Sombra e o Gatilho de Estado do Diário (Curto-Circuito)
+Para evitar o paradoxo do "Catch-22" onde o pipeline gera relatórios *depois* do agente fechar o diário, o SAM implementa duas camadas de imunidade:
+1. **Shadow Files (`SHADOW_FILES`):** Arquivos gerados automaticamente pelo pipeline (como `PROJECT_INDEX*.md`, `LEARNINGS.md`, `CONTEXT_HEALTH.md`) são completamente isentos das regras de Fraude Narrativa e Modificação Silenciosa.
+2. **Gatilho de Estado do Diário (Curto-Circuito):** O SAM inteligentemente verifica a natureza dos arquivos pendentes no Git. Se **nenhum** arquivo governado da arquitetura foi alterado (apenas regras ignoradas em `.agents/` ou Shadow Files) e o `JOURNAL.md` não recebeu uma nova entrada, o SAM aprova o commit silenciosamente, dispensando a burocracia para sincronização de logs.
+* **Bloqueio Cirúrgico:** Se você modificar *qualquer* arquivo governado (ex: código-fonte, specs, regras centrais) e esquecer de atualizar o `JOURNAL.md`, o SAM dispara um erro fatal de "Modificação Silenciosa" IMEDIATAMENTE, protegendo o repositório contra edições órfãs.
 
 ---
 

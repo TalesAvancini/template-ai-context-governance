@@ -8,6 +8,22 @@ Nota: Semente pos-purge. 24 entradas arquivadas em journal_archive_20260522_1430
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
 
+## 📅 2026-05-22 16:20 | 🧠 Feat: Gatilho de Estado do Diario (Curto-Circuito SAM) #Governance #SAM
+**Estado Atual:**
+- [x] **Inteligência do SAM:** Implementado o "Gatilho de Estado do Diário" no auditor (`workflow_journal_auditor.py`). O SAM agora não cobra entrada no Journal se apenas Shadow Files ou arquivos ignorados forem alterados.
+- [x] **Ajuste de Regras:** Renomeado `.agents/rules/regras_roteadas.md` para `.agents/rules/rules.md`.
+- [x] **Sincronização:** Arquivos auto-gerados de shadow foram sincronizados.
+
+**Matriz de Propagação:**
+- [x] .context/_scripts/workflow_journal_auditor.py -> [Adição do curto-circuito de estado]
+- [x] .context/maintenance/rx-sam-audit.md -> [Atualização da seção 3.4 com as regras de imunidade]
+- [x] .context/brain/FLOW_JOURNAL_SYNC.md -> [Inclusão da seção 3.3 sobre o Gatilho]
+- [x] .context/maintenance/JOURNAL.md -> [Registro da evolução]
+
+executor_context_id: architect-agent
+validator_context_id: user-request
+status: READY TO COMMIT
+
 ## 📅 2026-05-22 15:18 | 📝 Docs: Estabelecimento da Constituição do Journal #Docs #Governance
 **Estado Atual:**
 - [x] **Constituição:** O arquivo `FLOW_JOURNAL_SYNC.md` foi reescrito para atuar como a visão ultra-completa e definitiva do pipeline. Ele agora inclui as regras de Ordem Cronológica Reversa, Limites de Linhas (`purge_journal.py`), Regras do SAM e Imunidade (Shadow Files / Ignored Prefixes).

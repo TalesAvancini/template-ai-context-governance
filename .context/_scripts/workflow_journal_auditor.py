@@ -91,6 +91,31 @@ def audit():
     git = get_git_state()
     synapse = get_synapse_rules()
     mode = synapse.get("mode", "assist")
+    
+    # --- NOVO CURTO-CIRCUITO DE ESTADO DO DIÁRIO (Gatilho SAM Inteligente) ---
+    # Verifica se há alterações em arquivos governados (não-sombras e não-ignorados)
+    governed_files = [f for f in git["all"] if not any(f.endswith(s) or s in f for s in SHADOW_FILES)]
+    
+    # Se o JOURNAL.md não foi alterado no Git, o usuário não escreveu uma nova promessa.
+    is_journal_modified = any(f.endswith("JOURNAL.md") for f in git["all"])
+    
+    if not is_journal_modified:
+        if not governed_files:
+            print("\n✅ [INFO] Apenas arquivos sombra ou ignorados pendentes. SAM não exige nova entrada no diário.")
+            return 0
+        else:
+            print("\n❌ [FATAL] Modificação Silenciosa: Foram detectados arquivos governados alterados, mas o JOURNAL.md não possui uma nova entrada para este commit.")
+            print("Arquivos governados detectados (exemplo):")
+            for gf in list(governed_files)[:3]:
+                print(f"  - {gf}")
+            if mode == "strict":
+                print("\n[FATAL] Modo STRICT: Pipeline bloqueado.")
+                return 1
+            else:
+                print("\n[WARN] Modo ASSIST: Pipeline prosseguindo com avisos.")
+                return 0
+    # -----------------------------------------------
+
     entry = get_latest_journal_entry()
     
     if not entry:

@@ -80,6 +80,12 @@ Se o SAM é tão estrito, como lidamos com scripts que geram arquivos automatica
 
 > **💡 Regra de Ouro:** Criou um novo relatório auto-gerado que vai rodar no pre-commit? **Adicione-o na lista `SHADOW_FILES` do SAM**, caso contrário, prepare-se para o bloqueio de Modificação Silenciosa.
 
+### 3.3 O Curto-Circuito do Diário (Gatilho de Estado)
+- **Problema:** O SAM costumava ler a entrada velha do Journal e reclamar de Fraude Narrativa se você esquecesse de fazer uma entrada nova (pois os arquivos antigos já estavam commitados e sumiam do Git). Além disso, era chato ter que preencher o Journal só para atualizar logs automáticos e regras de IA.
+- **Solução:** O SAM ganhou inteligência de estado. Se você não alterou o `JOURNAL.md`, o SAM vasculha seu Git procurando se você tocou em algum arquivo *governado* (não-sombra e não-ignorado). 
+  - Se **NÃO** tocou (apenas mexeu em `.agents/` ou Shadow Files): O SAM te libera sem pedir entrada no Journal. 
+  - Se **TOCOU** na arquitetura: O SAM bloqueia com erro fatal IMEDIATO de "Modificação Silenciosa", antes mesmo de ler matriz velha, alertando que você modificou código sem abrir uma ata no diário.
+
 ---
 
 ## ⛓️ 4. A Arquitetura do Ecossistema
