@@ -27,6 +27,7 @@ Status: [Ativo | Arquivado | Depreciado]
 
 ```text
 / (Root do Projeto)
+├── AGENTS.md               # 🛡️ MANIFESTO DE GOVERNANÇA (Root Rulebook)
 ├── .specs/                 # 🆕 WORKBENCH EFÊMERO (The Workshop - TLC)
 │   └── features/           # Specs e tasks atômicas em execução
 │
@@ -35,7 +36,12 @@ Status: [Ativo | Arquivado | Depreciado]
     │   ├── ...
     │   ├── INCEPTION.md               # Fronteiras estratégicas (SSOT) [DRAFT|ACTIVE]
     │   ├── INCEPTION.proposed.md      # Proposta gerada pela IA (Aguardando Ratificação)
-    │   └── VISION.md                  # Entrada narrativa humana (Input de Visão)
+    │   ├── VISION.md                  # Entrada narrativa humana (Input de Visão)
+    │   ├── FLOW_SDD.md                # Framework de Spec-Driven Development
+    │   ├── FLOW_JOURNAL_SYNC.md       # A Constituição do Diário (SAM e Commits)
+    │   ├── FLOW_PROPAGATION.md        # Mapeamento de dependências
+    │   ├── FLOW_WIKI_ORACLE.md        # Diretrizes da base de conhecimento
+    │   └── SCRIPT_GLOSSARY.md         # Catálogo de scripts de manutenção
     │
     ├── 🌐 market/                      # CAMADA ESTRATÉGICA (Restrições Externas)
     │   ├── RAW/                       # Minério Bruto (Humano deposita)
@@ -72,7 +78,9 @@ Status: [Ativo | Arquivado | Depreciado]
         ├── purge_journal.py           # Gerenciador de memória (Purge)
         ├── cleanup_specs.py           # Gerenciador de efemeridade (.specs)
         ├── sync_project.py            # Sincronizador de requisitos
-        └── workflow_journal_auditor.py # Auditor do Sistema Anti-Migué (SAM)
+        ├── workflow_journal_auditor.py # Auditor do Sistema Anti-Migué (SAM)
+        ├── blast_radius.py            # Analisador de propagação de escopo
+        └── affinity_lite.py           # Mapa de afinidades entre módulos
 
 > ⚠️ **Script Sanity:** Qualquer alteração nos scripts da camada `_scripts/` exige execução de sanidade imediata e registro de não-regressão conforme Regra 1.8.
 
@@ -96,7 +104,7 @@ Status: [Ativo | Arquivado | Depreciado]
 Para projetos de complexidade média/alta, o Antigravity utiliza a segregação de agentes em processos isolados para atingir **Zero Trust**.
 
 > **Mecanismo de Spawn (Isolamento Físico):**
-> Os Spokes (Executores e Validadores) não são apenas personas da IA Principal. Eles residem fisicamente em `.agent/subagents/` (ex: `spec-driver.md`, `qa-validator.md`). Para invocá-los sem poluição de contexto, o Hub deve finalizar a execução usando a sintaxe de delegação explícita do Host: `/[nome-do-subagente] [instrução]`.
+> Os Spokes (Executores e Validadores) não são apenas personas da IA Principal. Eles residem fisicamente em `.agent/subagents/` (ex: `spec-driver.md`, `qa-validator.md`) enquanto regras modulares habitam `.agents/rules/`. Para invocá-los sem poluição de contexto, o Hub deve finalizar a execução usando a sintaxe de delegação explícita do Host: `/[nome-do-subagente] [instrução]`.
 
 1.  **[Planner - Hub]**: IA Principal desenha a SPEC na janela atual, define `max_impact_radius` e emite o comando de Spawn (`/spec-driver`). O Hub OBRIGATORIAMENTE injeta os **Raw Payloads** (IDs e textos de regras) na Spec para evitar caça externa.
 2.  **[Pre-flight - Executor]**: Novo processo limpo nasce e roda `grep` (Pre-flight Gate). Se impacto > Limite → `SCOPE_BLOWOUT` (Telemetria no `STATE.md`).

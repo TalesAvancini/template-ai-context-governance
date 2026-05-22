@@ -15,6 +15,7 @@ Status: Ativo
 
 | Arquivo | Responsabilidade Principal | Agente Guardião |
 | :--- | :--- | :--- |
+| `AGENTS.md` | **O Manifesto.** Regras de governança inquebráveis e leitura obrigatória no boot. | Humano / `@context-keeper` |
 | `README.md` | Apresentação comercial/técnica do repositório para o mundo externo. | `@fullstack-generalist` |
 | `README_CONTEXT.md` | O manual de operação do framework. Ensina IAs e humanos a interagirem com a pasta `.context`. | `@context-keeper` |
 | `VERSION.md` | A versão semântica atual da aplicação e do framework. | Script de CI |

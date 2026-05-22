@@ -8,6 +8,21 @@ Nota: Semente pos-purge. 24 entradas arquivadas em journal_archive_20260522_1430
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
 
+## 📅 2026-05-22 17:48 | 🗺️ Docs: Atualização do MASTER_FLOW.md e FILE_GLOSSARY.md (Auditoria flow-auditor) #Docs #Governance #Auditor
+**Estado Atual:**
+- [x] **Auditoria e Atualização:** O `MASTER_FLOW.md` foi auditado e atualizado (Reality Check) para incluir arquivos da camada `brain/` e `_scripts/` que estavam omissos, refletindo a arquitetura real, incluindo `AGENTS.md`, `SCRIPT_GLOSSARY.md`, `blast_radius.py`, entre outros.
+- [x] **Padronização:** Citação de isolamento de agentes foi refinada para deixar clara a distinção física das pastas.
+- [x] **Sincronia de Dicionário:** O `AGENTS.md` (Manifesto) foi inserido na raiz do `FILE_GLOSSARY.md`.
+
+**Matriz de Propagação:**
+- [x] .context/brain/MASTER_FLOW.md -> [Inclusão de scripts e docs esquecidos e refinamento descritivo]
+- [x] .context/brain/FILE_GLOSSARY.md -> [Adição do AGENTS.md na seção raiz]
+- [x] .context/maintenance/JOURNAL.md -> [Registro da auditoria]
+
+executor_context_id: architect-agent
+validator_context_id: flow-auditor
+status: READY TO COMMIT
+
 ## 📅 2026-05-22 16:40 | 📝 Docs: Gatilhos Semânticos do AGENTS.md #Docs #Agents
 **Estado Atual:**
 - [x] **Refinamento:** Os gatilhos de leitura condicional do `AGENTS.md` foram reescritos de forma mais assertiva, orientada à tarefa.
