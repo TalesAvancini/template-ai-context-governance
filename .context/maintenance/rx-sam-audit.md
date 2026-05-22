@@ -54,6 +54,11 @@ Se ambos os IDs forem iguais, o commit é bloqueado por violação de segregaç�
 ### 🛑 3.3 Fail-Closed Gatekeeper
 Diferente de outros linters que apenas avisam, o SAM está injetado no `.husky/pre-commit`. Ele **aborta** o processo de commit fisicamente. Nenhuma "confabulação" de IA consegue penetrar o histórico do Git sem satisfazer as regras do `JOURNAL_SYNAPSE.md`.
 
+### 🤖 3.4 Interação com Pipelines e Arquivos Auto-Gerados
+O SAM é cego para a autoria da modificação. Se o pipeline de governança (`run_context.py`) alterar arquivos indexadores (como `PROJECT_INDEX*.md`, `CONTEXT_HEALTH.md` ou `wiki_log.md`) ou auto-geradores atuarem, o Git registrará um *diff*. 
+**Regra de Ouro:** O Agente deve obrigatoriamente antecipar essas alterações do pipeline e registrar tais arquivos na Matriz de Propagação do `JOURNAL.md`. Falhar nisso acionará a violação de "Modificação Silenciosa", bloqueando o commit.
+*Exceção:* Diretórios explícitamente declarados como isentos (ex: `graphify-out/` ou `.agents/`) são ignorados pelo motor do SAM (`workflow_journal_auditor.py`).
+
 ---
 
 ## 4. Tipos de Violação Detectados
