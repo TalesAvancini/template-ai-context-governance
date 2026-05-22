@@ -41,6 +41,7 @@ Status: Ativo
 | `@fullstack-generalist` | Modo fallback para tarefas transversais ou projetos light | Leitura em todo o projeto; Escrita apenas com confirmação explícita | `brain/PRD.md`, `maintenance/schema.sql`, `maintenance/JOURNAL.md` (últimas 30 linhas) + Global | "modo light", "tarefa rápida", "projeto pequeno", "não especificado" |
 | `@gov-friction-analyst` | Diagnóstico de atrito de governança e filtragem de overkill | `.agent/skills/gov-friction-analyst/`, `maintenance/JOURNAL.md` (Checklist de Propagação) | 9 arquivos core (MASTER_FLOW, RULES, etc.), `SSD_ERRORS_LEDGER.md`, `AGENT_SCRATCHPAD.md` | "analise as dores do executor", "resolva bloqueios do gatekeeper", "diagnostique falhas" |
 | `@closure-thinker` | Síntese de fechamento analítica e rastreabilidade de origem | `.agent/skills/closure-thinker/`, `CLOSURE.md` | `spec.md`, `STATE.md`, `JOURNAL.md`, `.git/diff` | "gere o closure", "audite a entrega final", "extraia cicatrizes da feature" |
+| `@sdd-orchestrator` | Orquestração do ciclo de vida SDD (Blast Radius, Spec Draft, Handoff) | `.specs/features/`, `.agent/skills/sdd-orchestrator/` | `brain/FLOW_SDD.md`, `maintenance/rx-communications.md`, `brain/RULES.md` | "start SDD", "start a feature", "write a spec", "nova feature" |
 
 > [!IMPORTANT]
 > **Diretriz Operacional (@gov-friction-analyst):**

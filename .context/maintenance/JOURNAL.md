@@ -1,12 +1,51 @@
 ---
 Criado em: 2026-05-06 19:15
-Ultima Atualizacao: 2026-05-07 23:15
+Ultima Atualizacao: 2026-05-22 00:37
 Status: Ativo
 Nota: Semente pos-purge. 24 entradas arquivadas em journal_archive_20260506_191531.md.
 ---
 
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
+
+## 📅 2026-05-22 01:08 | 🛠️ Ajuste: Setup Pre-Flight do SDD Orchestrator #Setup #Governance #Roles #Agents
+**Estado Atual:**
+- [x] **Registry:** Restaurada a role do `@sdd-orchestrator` no `AGENT_REGISTRY.md`.
+- [x] **Skill:** Adicionado o Step 0 (Pre-Flight Check) na skill do orquestrador para evitar acoplamento fantasma.
+
+**Matriz de Propagação:**
+- [x] .agent/skills/sdd-orchestrator/SKILL.md -> [Atualização de Skill com Pre-Flight]
+- [x] .context/brain/AGENT_REGISTRY.md -> [Registro de Role restaurado]
+- [x] .context/maintenance/JOURNAL.md -> [Registro do Setup]
+
+executor_context_id: sdd-orchestrator
+validator_context_id: user-request
+status: READY TO COMMIT
+
+## 📅 2026-05-22 00:37 | 🚀 Implantação: Calculadora Blast Radius MVP & Sincronização #Governance #Verification #Tooling #Hardening
+**Estado Atual:**
+- [x] **Script de Blast Radius:** Criado o script `.context/_scripts/blast_radius.py` com classificação híbrida em buckets priorizados (`must_update`, `likely_update`, `declared_only`), suporte a fallback e checagem de commits desatualizados.
+- [x] **Testes de Blast Radius:** Criada a suíte de testes unitários `tests/test_blast_radius.py` cobrindo 6 cenários essenciais.
+- [x] **Evolução de Skill:** Atualizada a skill `journal-sync` em `.agent/skills/journal-sync/SKILL.md` (v2.3.0) para integrar a nova calculadora e raciocínio recursivo baseado em buckets.
+- [x] **Glossários e Conectividade:** Mapeado o novo script no glossário de ferramentas (`SCRIPT_GLOSSARY.md`) e na conectividade de automação (`rx-communications.md`).
+- [x] **Gatilhos e Husky:** Integrado o hook `.husky/post-commit` e os scripts do `package.json` (`context:blast-radius` e `test:blast-radius`).
+- [x] **Alinhamento do Glossário:** Atualizado o arquivo `.context/brain/FILE_GLOSSARY.md` para satisfazer a regra de novo caminho no contexto.
+
+**Matriz de Propagação:**
+- [x] .context/_scripts/blast_radius.py -> [Script principal criado]
+- [x] tests/test_blast_radius.py -> [Suíte de testes de cobertura criada]
+- [x] .agent/skills/journal-sync/SKILL.md -> [Atualização da skill para v2.3.0]
+- [x] .context/brain/SCRIPT_GLOSSARY.md -> [Glossário de scripts atualizado]
+- [x] .context/maintenance/rx-communications.md -> [Mapa de conectividade atualizado]
+- [x] .husky/post-commit -> [Hook do Husky criado]
+- [x] package.json -> [Scripts context:blast-radius e test:blast-radius adicionados]
+- [x] .context/brain/FILE_GLOSSARY.md -> [Atualizado metadados]
+- [x] .specs/features/blast_radius_mvp/ -> [Definições e acompanhamento da feature]
+- [x] .context/maintenance/JOURNAL.md -> [Registro final da implantação]
+
+executor_context_id: spec-driver
+validator_context_id: qa-validator
+status: READY TO COMMIT
 
 ## 📅 2026-05-20 19:10 | 🛠️ Ajuste: Exclusão do Graphify do Bundle de Contexto #Tooling #Refactor #Graphify
 **Estado Atual:**
