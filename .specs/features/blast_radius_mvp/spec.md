@@ -31,7 +31,8 @@ sprint_01:
     - Os 6 testes unitários em `tests/test_blast_radius.py` passam.
     - O Hook post-commit do Husky foi criado com guard fail-safe.
     - A skill `journal-sync` e os docs (GLOSSARY e rx-communications) foram atualizados de acordo com o plano.
-  qa_signoff: false
+  qa_signoff: true
+  signed_by: "@qa-validator"
 ---
 
 # Feature: Blast Radius Inteligente (Lean MVP)

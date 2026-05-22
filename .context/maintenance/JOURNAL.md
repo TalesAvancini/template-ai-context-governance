@@ -1,12 +1,25 @@
 ---
 Criado em: 2026-05-06 19:15
-Ultima Atualizacao: 2026-05-22 00:37
+Ultima Atualizacao: 2026-05-22 01:35
 Status: Ativo
 Nota: Semente pos-purge. 24 entradas arquivadas em journal_archive_20260506_191531.md.
 ---
 
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
+
+## 📅 2026-05-22 01:35 | 🏁 Signoff: Homologação e Assinatura do QA #Governance #Validation
+**Estado Atual:**
+- [x] **Signoff:** Assinado o contrato de QA para a feature `blast_radius_mvp`.
+
+**Matriz de Propagação:**
+- [x] .specs/features/blast_radius_mvp/spec.md -> [Signoff de QA atualizado]
+- [x] .specs/features/blast_radius_mvp/STATE.md -> [Status PASSED atualizado]
+- [x] .context/maintenance/JOURNAL.md -> [Registro de Signoff]
+
+executor_context_id: qa-validator
+validator_context_id: user-request
+status: READY TO COMMIT
 
 ## 📅 2026-05-22 01:25 | 🏁 Closure: Blast Radius MVP #Governance #Verification #Tooling
 **Estado Atual:**
