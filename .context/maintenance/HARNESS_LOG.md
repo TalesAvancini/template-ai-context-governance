@@ -995,3 +995,6 @@ Status: Ativo
 
 ## [HARNESS-PASS] Report | spec:blast_radius_mvp
 - **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:manual
+- **Detalhe:** sprint_contract: Nenhuma Spec ativa detectada.

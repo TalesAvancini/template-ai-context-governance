@@ -8,6 +8,18 @@ Nota: Semente pos-purge. 24 entradas arquivadas em journal_archive_20260522_1430
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
 
+## 📅 2026-05-22 15:18 | 📝 Docs: Estabelecimento da Constituição do Journal #Docs #Governance
+**Estado Atual:**
+- [x] **Constituição:** O arquivo `FLOW_JOURNAL_SYNC.md` foi reescrito para atuar como a visão ultra-completa e definitiva do pipeline. Ele agora inclui as regras de Ordem Cronológica Reversa, Limites de Linhas (`purge_journal.py`), Regras do SAM e Imunidade (Shadow Files / Ignored Prefixes).
+
+**Matriz de Propagação:**
+- [x] .context/brain/FLOW_JOURNAL_SYNC.md -> [Reescrita completa com regras atualizadas]
+- [x] .context/maintenance/JOURNAL.md -> [Registro desta documentação]
+
+executor_context_id: bugfix-purge
+validator_context_id: flow-auditor
+status: READY TO COMMIT
+
 ## 📅 2026-05-22 15:02 | 🧹 Chore: Encerramento e Arquivamento da Spec blast_radius_mvp #Maintenance #Specs
 **Estado Atual:**
 - [x] **Encerramento:** A feature `blast_radius_mvp` foi concluída e a spec estava protegida/aberta indevidamente. O diretório foi forçadamente movido para `_archive_context` utilizando a rotina do `cleanup_specs.py`.
