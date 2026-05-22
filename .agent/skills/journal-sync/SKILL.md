@@ -4,10 +4,10 @@ description: Syncs JOURNAL.md and propagates changes based on the actual git sta
 license: CC-BY-4.0
 metadata:
   author: Antigravity Architect
-  version: 2.2.0
+  version: 2.3.0
 ---
 
-# Journal Sync & Blast Radius Propagator (v2.2.0 - Recursive Reasoning)
+# Journal Sync & Blast Radius Propagator (v2.3.0 - Recursive Reasoning)
 
 You are an authoritative Governance Enforcement Agent. Your objective is to physically enforce architectural consistency across the H.O.K ecosystem using the Git Status as the single source of truth.
 
@@ -27,18 +27,23 @@ You are an authoritative Governance Enforcement Agent. Your objective is to phys
 4. Update the `Ultima Atualizacao` timestamp ONLY in `JOURNAL.md` and in the files identified in the Propagation Seed.
 
 ### Step 2: Blast Radius Calculation (Raciocínio Recursivo)
-1. Use `view_file` to read `.context/maintenance/rx-communications.md`.
-2. Use the "Propagation Seed" as search keys in Section 4 and 5 (Adjacency Lists).
-3. Identify all files listed under **"Afeta:"** (or "Escreve em:") for those modified files.
-4. **Raciocínio Recursivo (OBRIGATÓRIO):** Para CADA arquivo listado como afetado, responda mentalmente:
+1. Execute `python .context/_scripts/blast_radius.py --changed <PROPAGATION_SEED_FILES> --format text`
+2. Read the three output buckets:
+   - `must_update`: Both graph and governance agree — OBRIGATÓRIO atualizar ou justificar.
+   - `likely_update`: Graph found connection, governance doesn't declare — revisar com atenção.
+   - `declared_only`: Governance declares, graph doesn't see — validar se edge ainda faz sentido.
+3. If `warnings` is not empty, note them in the Journal entry.
+4. **Raciocínio Recursivo (OBRIGATÓRIO):** Para CADA arquivo listado nos buckets, responda mentalmente:
    > "A natureza específica da minha alteração realmente impacta o CONTEÚDO deste arquivo alvo?"
    - **SIM** → Inclua na propagação e na Matriz `[x]`.
-   - **NÃO** → Descarte. Não propague só porque a adjacência sugere.
-   - **Arquivo não listado, mas detectou impacto real** → Propague mesmo assim (rx-communications pode estar desatualizado).
+   - **NÃO** → Descarte. Não propague só porque o bucket sugere.
+   - **Arquivo não listado, mas detectou impacto real** → Propague mesmo assim.
 
-   **Exemplo correto:** Mudei `spec-driver.md` (nova Skill 10). rx-communications diz: afeta `RULES.md`, `MASTER_FLOW.md`, `AGENT_REGISTRY.md`. Raciocínio: `AGENT_REGISTRY` → SIM (version bump). `MASTER_FLOW` → SIM (diagrama de skills). `RULES.md` → NÃO (nenhuma regra nova criada).
+   **Exemplo correto:** Mudei `spec-driver.md` (nova Skill 10). blast_radius retorna: `must_update: [MASTER_FLOW.md, AGENT_REGISTRY.md]`, `declared_only: [RULES.md]`. Raciocínio: `AGENT_REGISTRY` → SIM (version bump). `MASTER_FLOW` → SIM (diagrama de skills). `RULES.md` → NÃO (nenhuma regra nova criada).
 
    **Exemplo errado (propagação cega):** Mudei condição de ativação no `sobriedade-operacional.md` → propagar para `RULES.md` e `AGENT_REGISTRY.md` ← ERRADO. A mudança é cosmética/condicional, não altera regras nem roles.
+5. **Fallback:** Se `blast_radius.py` retornar exit ≠ 0, ler `rx-communications.md` manualmente (fluxo legado) e registrar no Journal que modo degradado foi usado.
+
 
 ### Step 3: Autonomic Cascade Execution (Power Mode)
 1. Execute edições APENAS nos arquivos que passaram no Raciocínio Recursivo do Step 2.

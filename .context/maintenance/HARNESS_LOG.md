@@ -866,3 +866,48 @@ Status: Ativo
 
 [FATAL] Modo STRICT: Pipeline bloqueado.
 
+
+## [HARNESS-FAIL] Report | spec:blast_radius_mvp
+- **Detalhe:** sprint_contract: [HG06] start_hash não encontrado para sprint_01 no STATE.md (Formato esperado: ## sprint_01 
+ start_hash: ...) | journal_sam: Violações SAM detectadas.
+🤖 Iniciando Auditoria Anti-Migué (SAM)...
+[INFO] Regra 'roles_registry_change' disparada.
+[INFO] Regra 'new_context_path' disparada.
+
+❌ VIOLAÇÕES DETECTADAS:
+  - Regra 'roles_registry_change': Tag 'Roles' ausente no Journal.
+  - Regra 'roles_registry_change': Tag 'Agents' ausente no Journal.
+  - Regra 'roles_registry_change': Arquivo '.context/brain/FILE_GLOSSARY.md' não foi propagado (ausente no diff).
+  - Regra 'roles_registry_change': Checkbox [x] para '.context/brain/FILE_GLOSSARY.md' ausente ou desmarcado no Journal.
+  - Regra 'new_context_path': Arquivo '.context/brain/FILE_GLOSSARY.md' não foi propagado (ausente no diff).
+  - Regra 'new_context_path': Checkbox [x] para '.context/brain/FILE_GLOSSARY.md' ausente ou desmarcado no Journal.
+  - Modificação Silenciosa: Arquivo '.specs/features/blast_radius_mvp/' alterado no Git mas ausente na Matriz de Propagação do Journal.
+  - Modificação Silenciosa: Arquivo '.context/brain/AGENT_REGISTRY.md' alterado no Git mas ausente na Matriz de Propagação do Journal.
+  - Modificação Silenciosa: Arquivo '.agent/skills/sdd-orchestrator/' alterado no Git mas ausente na Matriz de Propagação do Journal.
+  - Modificação Silenciosa: Arquivo '.context/maintenance/TECHNICAL_REQUIREMENTS.md' alterado no Git mas ausente na Matriz de Propagação do Journal.
+  - Modificação Silenciosa: Arquivo '.context/brain/LEARNINGS.md' alterado no Git mas ausente na Matriz de Propagação do Journal.
+
+[FATAL] Modo STRICT: Pipeline bloqueado.
+
+
+## [HARNESS-FAIL] Report | spec:blast_radius_mvp
+- **Detalhe:** journal_sam: Violações SAM detectadas.
+🤖 Iniciando Auditoria Anti-Migué (SAM)...
+[INFO] Regra 'roles_registry_change' disparada.
+[INFO] Regra 'new_context_path' disparada.
+
+❌ VIOLAÇÕES DETECTADAS:
+  - Regra 'roles_registry_change': Tag 'Roles' ausente no Journal.
+  - Regra 'roles_registry_change': Tag 'Agents' ausente no Journal.
+  - Regra 'roles_registry_change': Arquivo '.context/brain/FILE_GLOSSARY.md' não foi propagado (ausente no diff).
+  - Regra 'roles_registry_change': Checkbox [x] para '.context/brain/FILE_GLOSSARY.md' ausente ou desmarcado no Journal.
+  - Regra 'new_context_path': Arquivo '.context/brain/FILE_GLOSSARY.md' não foi propagado (ausente no diff).
+  - Regra 'new_context_path': Checkbox [x] para '.context/brain/FILE_GLOSSARY.md' ausente ou desmarcado no Journal.
+  - Modificação Silenciosa: Arquivo '.context/maintenance/TECHNICAL_REQUIREMENTS.md' alterado no Git mas ausente na Matriz de Propagação do Journal.
+  - Modificação Silenciosa: Arquivo '.context/brain/AGENT_REGISTRY.md' alterado no Git mas ausente na Matriz de Propagação do Journal.
+  - Modificação Silenciosa: Arquivo '.agent/skills/sdd-orchestrator/' alterado no Git mas ausente na Matriz de Propagação do Journal.
+  - Modificação Silenciosa: Arquivo '.context/brain/LEARNINGS.md' alterado no Git mas ausente na Matriz de Propagação do Journal.
+  - Modificação Silenciosa: Arquivo '.specs/features/blast_radius_mvp/' alterado no Git mas ausente na Matriz de Propagação do Journal.
+
+[FATAL] Modo STRICT: Pipeline bloqueado.
+

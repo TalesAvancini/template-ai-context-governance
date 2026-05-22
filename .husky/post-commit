@@ -1,0 +1,6 @@
+#!/bin/sh
+# Husky post-commit hook: Auto-sync journal on commit (Reality Check)
+# Prevents desynchronization of the governance timeline.
+
+echo "--- Running post-commit Journal Sync ---"
+python .context/_scripts/blast_radius.py --changed $(git diff-tree --no-commit-id --name-only -r HEAD) || true

@@ -318,6 +318,10 @@ Esta seção mapeia os "músculos" do ecossistema definidos no `SCRIPT_GLOSSARY.
   - **Lê (Depende de):** `LEARNINGS.md`, `spec.md` da feature atual.
   - **Escreve em (Afeta):** `*.enriched.md`.
   - **Gatilho:** `npm run context:inject`
+- **`blast_radius.py`**
+  - **Lê (Depende de):** `graph.json`, `rx-communications.md`.
+  - **Escreve em (Afeta):** `JOURNAL.md`, stdout (buckets priorizados).
+  - **Gatilho:** Skill `journal-sync`.
 
 ### 🧹 Limpeza e Manutenção
 - **`purge_journal.py`**

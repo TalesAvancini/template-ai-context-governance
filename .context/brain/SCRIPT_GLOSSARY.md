@@ -55,6 +55,7 @@ Status: Ativo
 | `oracle_analytics.py` | **Lobo Temporal** | Analisa a qualidade da base de dados e do histórico RAG do projeto, emitindo relatórios de eficácia analítica e apontando inconsistências de domínio. | `npm run context:oracle-analytics` |
 | `learnings_aggregator.py` | **Memória Estratégica** | O "Lobo Temporal". Varre logs de erro e o Ledger tático para consolidar cicatrizes e recorrências no `LEARNINGS.md`. | `npm run context:learnings` |
 | `inject_learnings.py` | **Córtex de Contexto** | Injeta as cicatrizes mais relevantes na spec de trabalho atual, gerando o `.enriched.md` para evitar reincidência de erros. | `npm run context:inject` |
+| `blast_radius.py` | **Radar de Blast Radius** | Calculadora híbrida de impacto de propagação. Combina o grafo estrutural do Graphify (`graph.json`) com o mapa de governança (`rx-communications.md`) para retornar 3 buckets priorizados: `must_update` (ambas concordam), `likely_update` (só estrutural), `declared_only` (só governança). Consumido pelo skill `journal-sync` no Step 2. Degrada graciosamente quando Graphify não está disponível. | `npm run context:blast-radius -- --changed file1.py file2.md` |
 
 ---
 
