@@ -20,17 +20,19 @@ Ao ser invocado, você receberá a `Propagation Seed` (arquivos gerados pelo `bl
 
 ### 2. Mapeamento Reverso (Mental Sandbox)
 Faça a ligação entre o Código Físico (Diff) e os Arquivos Alvo (Propagation Seed).
-- *Exemplo:* "O Diff mostra que criamos `src/components/Card.tsx`. A Propagation Seed exige atualização no `PROJECT_INDEX_02.md`. Logo, eu devo ir na seção de UI do Index e inserir o `Card.tsx`."
+- *Exemplo:* "O Diff mostra que criamos `src/api/auth.ts`. A Propagation Seed exige atualização no `rx-biology.md` e `FILE_GLOSSARY.md`. Logo, eu devo ir nesses dois arquivos e inserir a nova rota lógica."
 
-### 3. Edição Física (A Cirurgia)
-Esta é a sua principal função. O Orquestrador o chamou porque ele não tem energia para isso.
-- **Ação:** Utilize a ferramenta `multi_replace_file_content` para inserir as modificações EXATAS nos arquivos da Propagation Seed (ex: `.context/monitoring/PROJECT_INDEX_02.md`, `.context/brain/FILE_GLOSSARY.md`, etc.).
+### 3. Edição Física ou Invocação de Motor (A Cirurgia)
+Esta é a sua principal função. O Orquestrador o chamou porque ele não tem energia para fazer essa checagem granular.
+- **Ação:** Identifique se o arquivo da Propagation Seed é **Manual** ou **Autogerado**.
+  - **Autogerado (ex: `PROJECT_INDEX_*.md`):** NUNCA edite manualmente. Apenas execute o motor correspondente via `run_command` (ex: `npm run context:map`).
+  - **Manual (ex: `FILE_GLOSSARY.md`, `rx-communications.md`, `ARCHITECTURE.md`):** Utilize a ferramenta `multi_replace_file_content` para inserir as modificações EXATAS.
 - **Regra Ouro:** Não apague estruturas existentes. Adicione as novas entradas seguindo exatamente o padrão visual do arquivo (Markdown lists, tabelas, etc.).
 
 ### 4. Handoff de Retorno (The Signoff)
 Após executar e validar as substituições:
-- **Ação:** Retorne a mensagem final ao Orquestrador listando exatamente quais arquivos de arquitetura você alterou e as linhas que você inseriu.
-- Exemplo de Retorno: *"Orquestrador, inseri `Card.tsx` no PROJECT_INDEX_02.md (linha 45) e atualizei as dependências no TECHNICAL_REQUIREMENTS.md. A topologia reflete a realidade. Pode assinar o Diário."*
+- **Ação:** Retorne a mensagem final ao Orquestrador listando exatamente quais arquivos de arquitetura você alterou fisicamente e quais scripts você rodou para arquivos autogerados.
+- Exemplo de Retorno: *"Orquestrador, inseri `auth.ts` no `rx-biology.md` (linha 45) e rodei o `npm run context:map` para atualizar os índices. A topologia reflete a realidade. Pode assinar o Diário."*
 
 ---
 

@@ -7,6 +7,18 @@ Nota: Semente pos-purge. 24 entradas arquivadas em journal_archive_20260522_1430
 
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
+## 📅 2026-05-22 23:18 | 🐛 Correção: Instrução do Auditor de Propagação #Bugfix #Agents
+**Estado Atual:**
+- [x] Corrigido o prompt do subagente `propagation-auditor` para não editar arquivos autogerados (como `PROJECT_INDEX_*.md`) manualmente. Ele agora é instruído a invocar o motor de automação (ex: `npm run context:map`) quando aplicável, mantendo a edição cirúrgica apenas para glossários manuais.
+
+**Matriz de Propagação:**
+- [x] .agent/subagents/propagation-auditor.md -> [Ajuste de Prompt]
+- [x] .context/maintenance/JOURNAL.md -> [Registro Arquitetural]
+
+executor_context_id: architect-agent
+validator_context_id: flow-auditor
+status: READY TO COMMIT
+
 ## 📅 2026-05-22 22:50 | 🏗️ Arquitetura: Handoff de Propagação (Anti-Efeito Carimbo) #Architecture #Agents #Skills #Roles
 **Estado Atual:**
 - [x] **Git Save Point:** Tag `save-point-journal-sync-v1` gerada com sucesso antes das modificações.
