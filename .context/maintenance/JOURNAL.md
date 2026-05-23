@@ -7,6 +7,21 @@ Nota: Semente pos-purge. 24 entradas arquivadas em journal_archive_20260522_1430
 
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
+## 📅 2026-05-22 22:04 | 🏗️ Skills: Refatoração completa da persona do hok-governor #Skills #Governance #Refactor
+**Estado Atual:**
+- [x] **Ajuste de Tom:** Transição da persona de "Ditador Zero-Trust" para "Arquiteto Sênior Colaborativo", alinhando as exigências ao respeito pelo usuário.
+- [x] **Consistência Numérica e Atualização de Referências:** Corrigido o pulo da numeração das leis (agora de 1 a 6) e substituída a dependência obsoleta do `rx-anatomy.md` pelos novos guias (`PROJECT_INDEX_*.md` e `FILE_GLOSSARY.md`).
+- [x] **Lei de Propagação (Checklist Dinâmico):** Substituído o formato de checklist fixo/engessado no `JOURNAL.md` por uma orientação de Matriz de Propagação enxuta e gerada dinamicamente com base no que foi tocado.
+- [x] **Padrão Ouro Comportamental:** As 4 diretivas do manifesto (`AGENTS.md`) — *No Explanation No GO, The "Go" Protocol, Bandeira Branca e Anti-Loop* — foram injetadas como **Restrição Crítica Global** na arquitetura mental da skill.
+
+**Matriz de Propagação:**
+- [x] .agent/skills/hok-governor/SKILL.md -> [Reescrita completa do arquivo]
+- [x] .context/maintenance/JOURNAL.md -> [Registro da refatoração]
+
+executor_context_id: architect-agent
+validator_context_id: flow-auditor
+status: READY TO COMMIT
+
 ## 📅 2026-05-22 21:50 | 🧠 Skills: Evolução do hok-governor para Orquestrador Supremo #Skills #Governance
 **Estado Atual:**
 - [x] **Carga Suprema (Boot):** Injetada a regra de inicialização obrigatória (`view_file` no RULES, MASTER_FLOW e AGENT_REGISTRY).
