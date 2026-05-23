@@ -7,6 +7,26 @@ Nota: Semente pos-purge. 24 entradas arquivadas em journal_archive_20260522_1430
 
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
+
+## 📅 2026-05-23 16:36 | 🏛️ Arquitetura: Lipoaspiração do MASTER_FLOW e Resgate de Skills #Architecture #Governance #Refactor
+**Estado Atual:**
+- [x] **Expurgo Seguro:** O `PROMPT_LIBRARY.md` foi oficialmente deletado do repositório por obsolescência.
+- [x] **Resgate de Skills (Ato 1 TLC):** Antes do expurgo, os papéis essenciais de incepção foram salvos e transformados nos subagentes `.agent/subagents/vision-architect.md` e `.agent/subagents/spec-enricher.md` (Ato 1).
+- [x] **Refatoração do MASTER_FLOW.md:** Removidas as redundâncias do ciclo SDD. O documento agora atua estritamente como Roteador Global (Mapa Mundi) e guardião das Leis Macro (Arquivamento, Purge, Fricção Operacional).
+- [x] **Upgrade no sdd-orchestrator:** A skill do orquestrador foi atualizada para engolir os detalhes táticos extraídos do Master Flow (acionamento explícito de `context:harness` e `context:cleanup`, e uso do gatilho `[GOVERNANCE-FRICTION]`).
+
+**Matriz de Propagação:**
+- [x] .context/brain/PROMPT_LIBRARY.md -> [Deletado]
+- [x] .agent/subagents/vision-architect.md -> [Criado]
+- [x] .agent/subagents/spec-enricher.md -> [Criado]
+- [x] .context/brain/MASTER_FLOW.md -> [Refatorado]
+- [x] .agent/skills/sdd-orchestrator/SKILL.md -> [Atualizado]
+- [x] .context/maintenance/JOURNAL.md -> [Registro Arquitetural]
+
+executor_context_id: architect-agent
+validator_context_id: user-request
+status: READY TO COMMIT
+
 ## 📅 2026-05-22 23:18 | 🐛 Correção: Instrução do Auditor de Propagação #Bugfix #Agents
 **Estado Atual:**
 - [x] Corrigido o prompt do subagente `propagation-auditor` para não editar arquivos autogerados (como `PROJECT_INDEX_*.md`) manualmente. Ele agora é instruído a invocar o motor de automação (ex: `npm run context:map`) quando aplicável, mantendo a edição cirúrgica apenas para glossários manuais.

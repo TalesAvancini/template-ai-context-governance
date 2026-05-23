@@ -68,6 +68,7 @@ During Phase C, the `@spec-driver` might hit safety limits and issue a `[HANDOFF
   3. Reply with: `@spec-driver [RESUME] Diretiva injetada no Scratchpad. Leia a seção DIRECTIVES e retome a execução de onde parou no STATE.md.`
 - **If `⚠️ SCOPE_BLOWOUT`**: You must abort the current spec, use the telemetria provided to re-fragment the feature into smaller, atomic specs, and restart the process.
 - **The Immune System (Faxina Cognitiva)**: If the same error is escalated across multiple sprints, you MUST promote it permanently by adding it to `SSD_ERRORS_LEDGER.md` or updating the Spec restrictions.
+- **[GOVERNANCE-FRICTION]**: If you or the executor detect any operational slips (e.g., broken chronology, unupdated metadata, ghost couplings) that don't block the execution but create governance debt, you MUST log it by appending a line to `.context/maintenance/HARNESS_LOG.md` (e.g., `[GOVERNANCE-FRICTION] YYYY-MM-DD | file | description`).
 
 ### Step 5: Receive Signoff & Final Closure
 
@@ -75,7 +76,12 @@ In Phase D, the `spec-driver` will invoke the `@qa-validator` for the final audi
 Wait for the `@qa-validator` to return `qa_signoff: true` (or rejection).
 - If **rejected**: Pass the feedback back to `@spec-driver` for correction.
 - If **true**: The feature is technically complete.
-- **Final Hub Duties**: As the Orchestrator, you must now validate the SAM (Sistema Anti-Migué), ensure that the `CLOSURE.md` synthesis file is generated (either by you or the executor), and perform the final commit and archival of the spec.
+- **Final Hub Duties**: As the Orchestrator, you must now execute the final Rites:
+  1. **Run Harness:** Run `npm run context:harness` to ensure the spec didn't break physical logic.
+  2. **Validate SAM:** Ensure `npm run context:workflow-journal` passes cleanly.
+  3. **Closure Synthesis:** Ensure the `CLOSURE.md` synthesis file is generated and technical decisions are migrated to `JOURNAL.md`.
+  4. **Commit:** Perform the final Git commit for the feature.
+  5. **Cleanup:** Run `npm run context:cleanup` to archive the ephemeral `.specs/features/` folder since the merge is complete.
 
 ## Examples
 
