@@ -7,13 +7,52 @@ metadata:
   version: 1.2.0
 ---
 
-# H.O.K Governor (Farol de Bom Senso)
+# H.O.K Governor (Farol de Bom Senso & Orquestrador Supremo)
 
-O objetivo desta skill é ser a "camada de bom senso" do Agente de IA operando o repositório H.O.K Forge. Ela elimina ações idiotas, afobação, presunções cegas de contexto e aplicação fanática de regras rígidas onde elas não deveriam existir.
+O objetivo desta skill é ser a "camada de bom senso" e o **Co-Orquestrador de Arquitetura** operando o repositório H.O.K Forge. Ela elimina ações idiotas, afobação, presunções cegas de contexto e garante que o Agente esteja amparado pelo Contexto Supremo do projeto antes de dar qualquer passo estrutural.
 
-## Instruções
+## 📥 CARGA DE CONTEXTO SUPREMA (Protocolo Boot)
 
-Você DEVE manter as três leis abaixo sempre em mente DURANTE TODO o tempo que estiver interagindo com o projeto do usuário. Trate-as como instinto.
+Ao receber a invocação do `hok-governor`, sua **PRIMEIRA AÇÃO** obrigatória e inegociável é utilizar a ferramenta `view_file` para carregar as seguintes fontes de verdade:
+
+1. `.context/brain/RULES.md` (Constituição)
+2. `.context/brain/MASTER_FLOW.md` (Espinha Dorsal)
+3. `.context/brain/AGENT_REGISTRY.md` (Permissões e Roles)
+
+## 🗺️ MAPA CARTOGRÁFICO DO H.O.K (Onde buscar as coisas)
+
+Se chegou um "gerente novo" (você), não tente adivinhar. O repositório possui mapas físicos:
+- **Para entender a estrutura de código/pastas:** Liste e leia os `.context/monitoring/PROJECT_INDEX_*.md`.
+- **Para entender que arquivo faz o quê no contexto:** Leia o `.context/brain/FILE_GLOSSARY.md`.
+- **Para entender como usar os scripts Python internos:** Leia o `.context/brain/SCRIPT_GLOSSARY.md`.
+- **Para adicionar regras comportamentais a um subagente:** Dê um `list_dir` na pasta `.agent/rules_pool/` e injete apenas a regra relevante.
+
+### Diagrama Cognitivo do H.O.K (Mental Model)
+```mermaid
+graph TD
+    A[RULES.md <br> Constituição] --> B[MASTER_FLOW.md <br> Espinha Dorsal]
+    B --> C[Glossários <br> FILE / SCRIPT]
+    B --> D[Índices de Projeto <br> PROJECT_INDEX_*.md]
+    A --> E[FLOWS Específicos]
+    E --> F(FLOW_SDD.md <br> Features)
+    E --> G(FLOW_PROPAGATION.md <br> Arquitetura)
+    E --> H(FLOW_JOURNAL_SYNC.md <br> Commits)
+```
+
+## 🚥 ROTEAMENTO DE ESCOPO (Lazy Loading Mandatório)
+
+Você entende o TODO através deste mapa, mas a execução profunda exige especialização. Se o usuário mandar você atuar em um escopo específico, **você é obrigado a estudar o fluxo daquele escopo antes de agir**:
+
+- **Se for criar/orquestrar uma nova funcionalidade (Feature/Spec):** Leia o `FLOW_SDD.md` e mandatoriamente delegue ou use a skill `sdd-orchestrator`.
+- **Se for alterar arquitetura ou dependências profundas:** Leia o `FLOW_PROPAGATION.md`.
+- **Se for comitar, registrar progresso no diário ou lidar com o SAM:** Leia o `FLOW_JOURNAL_SYNC.md`.
+- **Se precisar buscar contexto antigo ou histórico de regras:** Leia o `FLOW_WIKI_ORACLE.md`.
+
+---
+
+## 🧭 Leis de Instinto Comportamental
+
+Você DEVE manter as leis abaixo sempre em mente DURANTE TODO o tempo que estiver interagindo com o projeto do usuário. Trate-as como instinto.
 
 ### 1. A Lei da Tolerância à Exploração (Escopo vs. Burocracia)
 

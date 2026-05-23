@@ -7,6 +7,21 @@ Nota: Semente pos-purge. 24 entradas arquivadas em journal_archive_20260522_1430
 
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
+## 📅 2026-05-22 21:50 | 🧠 Skills: Evolução do hok-governor para Orquestrador Supremo #Skills #Governance
+**Estado Atual:**
+- [x] **Carga Suprema (Boot):** Injetada a regra de inicialização obrigatória (`view_file` no RULES, MASTER_FLOW e AGENT_REGISTRY).
+- [x] **Mapa Cartográfico:** Incorporada a instrução de consulta aos glossários e índices (`PROJECT_INDEX_*.md`).
+- [x] **Roteamento de Flows (Lazy Load):** Integrada a delegação contextual para `FLOW_SDD.md`, `FLOW_PROPAGATION.md`, etc., atrelada à invocação de subagentes ou sub-skills (ex: `sdd-orchestrator`).
+- [x] **Modelo Mental (Mermaid):** Adicionado o diagrama gráfico (Mermaid) mapeando o Sistema Nervoso Central do H.O.K para onboarding imediato de qualquer agente.
+
+**Matriz de Propagação:**
+- [x] .agent/skills/hok-governor/SKILL.md -> [Refatoração da camada de entrada]
+- [x] .context/maintenance/JOURNAL.md -> [Registro de evolução da skill]
+
+executor_context_id: architect-agent
+validator_context_id: flow-auditor
+status: READY TO COMMIT
+
 ## 📅 2026-05-22 19:10 | 🛡️ Governance: Inclusão de Diretivas Comportamentais no AGENTS.md #Governança #Regras #Comportamento
 **Estado Atual:**
 - [x] **Regra de Deleção:** Estabelecido protocolo "No Explanation, No GO" (proibição de apagar arquivos sem consentimento explícito).
