@@ -1,0 +1,29 @@
+# .graphifyignore
+# Ignorar pastas de rascunhos, histórico e ideias que não fazem parte do core do framework
+planos/
+_modoLight/
+.specs/
+scratch/
+.kilo/
+
+# Ignorar o diretório de bundle do contexto (redundância e tamanho gigante) e arquivos históricos arquivados
+.context/bundle/
+.context/maintenance/_archive_context/
+
+# Ignorar o próprio output do Graphify
+graphify-out/
+
+# Ignorar arquivos e pastas do Git, Husky e linting
+.git/
+.github/
+.husky/
+.venv/
+node_modules/
+.ruff_cache/
+
+# Ignorar caches de compiladores e testes
+__pycache__/
+tests/__pycache__/
+
+# Ignorar a pasta math-wizard (exemplo legado)
+math-wizard/

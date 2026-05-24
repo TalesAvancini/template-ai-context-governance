@@ -8,6 +8,19 @@ Nota: Semente pos-purge. 24 entradas arquivadas em journal_archive_20260522_1430
 # JOURNAL.md (Memoria Curta)
 > Mantido por purge_journal.py. Limite heuristico de caracteres atingido.
 
+## 📅 2026-05-24 15:04 | ⚙️ Configuração: Exclusões do Graphify via ignore #Tooling #Refactor #Graphify
+**Estado Atual:**
+- [x] **Criação do .graphifyignore:** Criado o arquivo `.graphifyignore` na raiz do projeto para ignorar pastas de rascunhos (`planos/`, `scratch/`), o monstro `.context/bundle/`, `.context/maintenance/_archive_context/`, `math-wizard/` e pastas de cache temporárias.
+- [x] **Grafo Atualizado:** Reconstruído o grafo em background para refletir a nova topologia limpa.
+
+**Matriz de Propagação:**
+- [x] .graphifyignore -> [Criação do arquivo de exclusão com as restrições de sandbox e arquivo histórico]
+- [x] .context/maintenance/JOURNAL.md -> [Registro de atividade]
+
+executor_context_id: architect-agent
+validator_context_id: user-request
+status: READY TO COMMIT
+
 ## 📅 2026-05-23 17:42 | 🏛️ Arquitetura: Sincronização de Glossário e Regra de Ouro 5 #Architecture #Governance #Refactor
 **Estado Atual:**
 - [x] **Expurgo do Glossário:** Removidas todas as referências ao falecido `PROMPT_LIBRARY.md` do `FILE_GLOSSARY.md` e do `rx-communications.md`.
