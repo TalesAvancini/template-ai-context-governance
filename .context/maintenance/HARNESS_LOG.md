@@ -1053,3 +1053,41 @@ Arquivos governados detectados (exemplo):
 
 ## [HARNESS-PASS] Report | spec:teste_trivial_dryrun
 - **Detalhe:** All contracts valid
+
+## [HARNESS-FAIL] Report | spec:teste_trivial_dryrun
+- **Detalhe:** journal_sam: Violações SAM detectadas.
+🤖 Iniciando Auditoria Anti-Migué (SAM)...
+[INFO] Regra 'spec_driver_integrity' disparada.
+[INFO] Regra 'roles_registry_change' disparada.
+
+❌ VIOLAÇÕES DETECTADAS:
+  - Regra 'spec_driver_integrity': Tag 'Firmware' ausente no Journal.
+  - Regra 'spec_driver_integrity': Tag 'Governance Core' ausente no Journal.
+  - Regra 'spec_driver_integrity': Arquivo '.context/brain/RULES.md' não foi propagado (ausente no diff).
+  - Regra 'spec_driver_integrity': Checkbox [x] para '.context/brain/RULES.md' ausente ou desmarcado no Journal.
+  - Regra 'spec_driver_integrity': Arquivo '.context/brain/MASTER_FLOW.md' não foi propagado (ausente no diff).
+  - Regra 'spec_driver_integrity': Checkbox [x] para '.context/brain/MASTER_FLOW.md' ausente ou desmarcado no Journal.
+  - Regra 'roles_registry_change': Tag 'Roles' ausente no Journal.
+  - Regra 'roles_registry_change': Arquivo '.context/brain/FILE_GLOSSARY.md' não foi propagado (ausente no diff).
+  - Regra 'roles_registry_change': Checkbox [x] para '.context/brain/FILE_GLOSSARY.md' ausente ou desmarcado no Journal.
+  - Regra 'roles_registry_change': Arquivo '.context/brain/SCRIPT_GLOSSARY.md' não foi propagado (ausente no diff).
+  - Regra 'roles_registry_change': Checkbox [x] para '.context/brain/SCRIPT_GLOSSARY.md' ausente ou desmarcado no Journal.
+
+[FATAL] Modo STRICT: Pipeline bloqueado.
+
+
+## [HARNESS-FAIL] Report | spec:teste_trivial_dryrun
+- **Detalhe:** impact_radius: Raio de impacto excedido! (Modificados: 13 > Limite: 8). Re-fragmente a SPEC ou aumente o limite se justificado. | journal_sam: Violações SAM detectadas.
+🤖 Iniciando Auditoria Anti-Migué (SAM)...
+[INFO] Regra 'spec_driver_integrity' disparada.
+[INFO] Regra 'roles_registry_change' disparada.
+[INFO] Regra 'rules_change' disparada.
+
+❌ VIOLAÇÕES DETECTADAS:
+  - Modificação Silenciosa: Arquivo '.specs/features/teste_trivial_dryrun/STATE.md' alterado no Git mas ausente na Matriz de Propagação do Journal.
+
+[FATAL] Modo STRICT: Pipeline bloqueado.
+
+
+## [HARNESS-PASS] Report | spec:teste_trivial_dryrun
+- **Detalhe:** All contracts valid

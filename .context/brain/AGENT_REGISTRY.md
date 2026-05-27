@@ -76,7 +76,7 @@ Status: Ativo
 - [ ] **Higiene:** `git status --short` deve estar vazio (ou apenas arquivos da spec).
 - [ ] **MIMO:** Validar que as edições foram cirúrgicas e não reescreveram arquivos desnecessariamente.
 - [ ] **Evidência:** Registrar `Harness Check (hash)` e `Impact Radius` no `JOURNAL.md`.
-- [ ] **Handoff:** Invocação explícita do `@qa-validator`.
+- [ ] **Handoff:** Notificar o Orquestrador sobre a prontidão para validação (o Orquestrador será responsável por invocar o `@qa-validator`).
 
 ### 2. @qa-validator (Audit & Signoff)
 - [ ] **Cronologia:** Validar ordem crescente estrita no `JOURNAL.md`.

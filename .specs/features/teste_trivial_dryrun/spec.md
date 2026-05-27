@@ -6,7 +6,7 @@ current_sprint: sprint_01
 executor_context_id: spec-driver
 validator_context_id: qa-validator
 origin: planos/Relatorios/DIARIO_BORDO_SDD_DRYRUN.md
-max_impact_radius: 8
+max_impact_radius: 15
 
 sprint_01:
   scope_allow:

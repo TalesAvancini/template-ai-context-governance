@@ -1,6 +1,12 @@
+---
+Criado em: 2026-05-24 12:30
+Última Atualização: 2026-05-27 19:45
+Status: Ativo
+---
+
 # 🏛️ Flow SDD — A Constituição dos 9 Arquivos
 
-> Mapa visual e funcional dos 9 arquivos que compõem o lastro do processo **Spec-Driven Development (SDD)** no framework H.O.K Forge.
+> Mapa visual e funcional dos arquivos e agentes que compõem o lastro do processo **Spec-Driven Development (SDD)** no framework H.O.K Forge.
 
 ---
 
@@ -18,17 +24,20 @@ graph TB
         RULES["📜 RULES.md<br/>(As Leis)"]:::law
         MASTER["🏛️ MASTER_FLOW.md<br/>(A Orquestração)"]:::law
         REGISTRY["🤖 AGENT_REGISTRY.md<br/>(O DNS Cognitivo)"]:::law
+        ORCHESTRATOR["🧑 @sdd-orchestrator<br/>(O Hub Orquestrador)"]:::law
     end
 
     subgraph "⚙️ CAMADA DE MOTOR — Define 'Como Executar'"
         DRIVER["🕹️ spec-driver.md<br/>(O Executor)"]:::engine
         PLAYBOOK["📜 SSD_PLAYBOOK.md<br/>(O Manual Tático)"]:::engine
         SPECV3["📋 spec_v3.md<br/>(O Molde da Spec)"]:::engine
+        AUDITOR["🤖 @propagation-auditor<br/>(O Auditor Topológico)"]:::engine
     end
 
     subgraph "🧠 CAMADA DE ESTADO — Memória Volátil da Sprint"
         SCRATCHPAD["📥 AGENT_SCRATCHPAD.md<br/>(Rascunho + Escalation)"]:::tactical
         LEDGER["📕 SSD_ERRORS_LEDGER.md<br/>(Cicatrizes Permanentes)"]:::tactical
+        CLOSURE["📋 CLOSURE.md<br/>(A Entrega Síntese)"]:::tactical
     end
 
     subgraph "📡 CAMADA TRANSVERSAL — O Sistema Nervoso"
@@ -40,12 +49,15 @@ graph TB
     RULES -->|"Alimenta regras"| DRIVER
     MASTER -->|"Orquestra sequência"| DRIVER
     REGISTRY -->|"Define escopo/permissões"| DRIVER
+    ORCHESTRATOR -->|"Inicia spec / Trata escalações / Invoca QA"| DRIVER
 
     %% Conexões de Motor
     PLAYBOOK -->|"Guia tático"| DRIVER
     SPECV3 -->|"Template base"| DRIVER
     DRIVER -->|"Consulta traps"| SCRATCHPAD
     DRIVER -->|"Consulta scars"| LEDGER
+    DRIVER -->|"Gera na conclusão"| CLOSURE
+    AUDITOR -->|"Verifica impacto de"| CLOSURE
 
     %% Feedback Loops
     LEDGER -.->|"Scars viram Leis"| RULES
@@ -87,12 +99,7 @@ graph TB
 | **Localização** | `.context/brain/AGENT_REGISTRY.md` |
 | **Papel no SDD** | Cadastro de todos os agentes com especialidade, permissões, contexto auto-load e gatilhos. Define **quem** pode fazer **o quê**. Contém a blindagem Chain-Skills V3. |
 | **Lê de** | `.agent/subagents/` (definições de agentes) |
-| **É consumido por** | Roteamento do Orquestrador, `spec-driver.md` (para saber suas próprias restrições) |
-| **Blast Radius** | 🟡 Impacta o escopo de atuação de todas as IAs. Dessincronia aqui = agente operando fora do escopo. |
-
----
-
-### ⚙️ Camada de Motor (O Como)
+| **É consumido por** | Roteamento do Orquestrador, `spec-driver.md` (para saber suas próprias restrições### ⚙️ Camada de Motor (O Como)
 
 #### 4. `spec-driver.md` — O Executor Mecânico
 | Atributo | Detalhe |
@@ -101,7 +108,7 @@ graph TB
 | **Papel no SDD** | Subagente determinístico que executa a cadeia de 9 skills. Opera sob Zero-Trust: proibido usar ferramentas genéricas de escrita. Contém protocolos ANTI-LOOP e RESUME. |
 | **Lê de** | `RULES.md`, `MASTER_FLOW.md`, `AGENT_REGISTRY.md`, `SSD_PLAYBOOK.md`, `AGENT_SCRATCHPAD.md`, `SSD_ERRORS_LEDGER.md` |
 | **Produz** | Mutações em `STATE.md`, código via `write_with_validation.py`, escalations no `SCRATCHPAD` |
-| **Blast Radius** | 🔴 **Acoplamento Extremo** — O próprio arquivo declara: qualquer alteração DEVE ser sincronizada com `MASTER_FLOW`, `RULES`, `spec_v3`, `SCRATCHPAD` e `PLAYBOOK`. |
+| **Blast Radius** | 🔴 **Acoplamento Extremo** — O próprio arquivo declara: qualquer alteração DEVE ser sincronizada com `MASTER_FLOW`, `RULES`, `spec_v3`, `SCRATCHPAD`, `PLAYBOOK` e `AGENT_REGISTRY.md`. |
 
 #### 5. `SSD_PLAYBOOK.md` — O Manual Tático
 | Atributo | Detalhe |
@@ -128,10 +135,10 @@ graph TB
 #### 7. `AGENT_SCRATCHPAD.md` — O Rascunho Volátil
 | Atributo | Detalhe |
 |----------|---------|
-| **Localização** | `.agent/templates/AGENT_SCRATCHPAD.md` |
-| **Papel no SDD** | Buffer de comunicação entre Executor e Orquestrador. Contém **Known Traps** (soluções para erros comuns), **INBOX** (escalations do subagente) e **DIRECTIVES** (resoluções do humano). |
+| **Localização** | `.agent/templates/AGENT_SCRATCHPAD.md` (template) / `.specs/features/<feature_id>/AGENT_SCRATCHPAD.md` (instância física por feature) |
+| **Papel no SDD** | Buffer de comunicação entre Executor e Orquestrador. Existe em duas formas: o template estático e a instância física copiada para cada feature ativa onde o executor escreve escalações (INBOX) e o Orquestrador injeta resoluções (DIRECTIVES). |
 | **Lê de** | Erros em tempo de execução, `SSD_ERRORS_LEDGER.md` (traps promovidas) |
-| **É consumido por** | `spec-driver.md` (primeira consulta em caso de erro) |
+| **É consumido por** | `spec-driver.md` (primeira consulta em caso de erro) e Orquestrador (para injetar diretivas) |
 | **Blast Radius** | 🟢 Baixo impacto sistêmico. É volátil por design (limpo entre features). Traps crônicas são **promovidas** ao Ledger. |
 
 #### 8. `SSD_ERRORS_LEDGER.md` — As Cicatrizes Permanentes
@@ -143,17 +150,29 @@ graph TB
 | **É consumido por** | `inject_learnings.py` → `*.enriched.md`, `RULES.md` (scars viram leis) |
 | **Blast Radius** | 🟡 Nova scar → nova vacina injetada em todas as specs futuras via MiMo. |
 
+#### 9. `CLOSURE.md` — A Entrega Síntese
+| Atributo | Detalhe |
+|----------|---------|
+| **Localização** | `.specs/features/<feature_id>/CLOSURE.md` |
+| **Papel no SDD** | Relatório de fechamento analítico de preenchimento obrigatório na Skill 9 (Handoff). Documenta a rastreabilidade (plano original vs. entrega real), modificações executadas, cicatrizes agregadas (SCARs) e pendências de backlog. |
+| **Lê de** | `STATE.md`, `tasks.md`, `git diff` |
+| **É consumido por** | `@qa-validator` para auditoria final e signoff do contrato |
+| **Blast Radius** | 🟢 Baixo. É um artefato descritivo gerado no encerramento do ciclo. |
+
 ---
 
 ### 📡 Camada Transversal
 
-#### 9. `rx-communications.md` — O Sistema Nervoso
+#### 10. `rx-communications.md` — O Sistema Nervoso
 | Atributo | Detalhe |
 |----------|---------|
 | **Localização** | `.context/maintenance/rx-communications.md` |
 | **Papel no SDD** | Mapa SSOT de toda a topologia de conectividade. Documenta quem afeta quem (blast radius) tanto para arquivos de governança quanto para scripts de automação. É o "raio-X" que previne modificações silenciosas. |
 | **Lê de** | Estado real do repositório (reflete a realidade) |
 | **É consumido por** | `@gov-friction-analyst`, qualquer agente que precise avaliar impacto antes de modificar |
+| **Blast Radius** | 🟢 Não tem impacto executivo direto. É **descritivo**, não prescritivo. Mas se estiver desatualizado, agentes tomam decisões com mapa errado. |
+
+---@gov-friction-analyst`, qualquer agente que precise avaliar impacto antes de modificar |
 | **Blast Radius** | 🟢 Não tem impacto executivo direto. É **descritivo**, não prescritivo. Mas se estiver desatualizado, agentes tomam decisões com mapa errado. |
 
 ---
@@ -191,6 +210,7 @@ graph LR
     DRIVER -->|"MUST sync"| SPECV3
     DRIVER -->|"MUST sync"| SCRATCHPAD
     DRIVER -->|"MUST sync"| PLAYBOOK
+    DRIVER -->|"MUST sync"| REGISTRY
 
     LEDGER -->|"Promove para"| RULES
     SCRATCHPAD -->|"Promove para"| LEDGER
@@ -206,7 +226,7 @@ graph LR
 |:---|:---|:---|
 | `RULES.md` | `MASTER_FLOW`, `spec-driver` | `PLAYBOOK`, `spec_v3`, `REGISTRY` |
 | `MASTER_FLOW.md` | `spec-driver` | `REGISTRY`, `PLAYBOOK` |
-| `spec-driver.md` | `MASTER_FLOW`, `RULES`, `spec_v3`, `SCRATCHPAD`, `PLAYBOOK` | `REGISTRY` |
+| `spec-driver.md` | `MASTER_FLOW`, `RULES`, `spec_v3`, `SCRATCHPAD`, `PLAYBOOK`, `AGENT_REGISTRY` | — |
 | `AGENT_REGISTRY.md` | — | `spec-driver` (se mudar permissões) |
 | `SSD_PLAYBOOK.md` | — | `spec-driver` (se mudar fases/skills) |
 | `spec_v3.md` | — | `spec-driver`, `PLAYBOOK` |
@@ -224,44 +244,85 @@ sequenceDiagram
     participant SD as 🕹️ spec-driver
     participant Gate as 🔒 write_with_validation.py
     participant QA as 🔍 qa-validator
+    participant Prop as 🤖 @propagation-auditor
 
-    Note over Hub: Cria spec usando spec_v3.md template
-    Hub->>SD: /spec-driver [instrução]
+    Note over Hub: Step 0: Pre-Flight Check (Baseline)
+    Note over Hub: Step 1 & 2: Blast Radius & Draft Spec
+    Note over Hub: Step 3: Vaccine Injection (MiMo) & Setup Commit
+    Hub->>SD: Invocação: @spec-driver [instrução]
 
     rect rgb(26, 26, 46)
         Note over SD: FASE A — Preparação
-        SD->>SD: Skill 1: CONTEXT_LOADED<br/>(Lê RULES + enriched.md)
-        SD->>SD: Skill 2: SPEC_DIGEST<br/>(npm run context:inject + Fail-Fast)
-        SD->>SD: Skill 3: STRATEGY_PLANNER<br/>(STRATEGY_LOG no STATE.md)
+        SD->>SD: Skill 1: context-loader<br/>(Lê RULES + enriched.md)
+        SD->>SD: Skill 2: spec-digest<br/>(Valida STATE.md + allow_list)
+        SD->>SD: Skill 3: strategy-planner<br/>(Planos e STRATEGY_LOG no STATE.md)
     end
 
     rect rgb(15, 52, 96)
         Note over SD: FASE B — Blindagem
-        SD->>SD: Skill 4: BASELINE_ANCHOR<br/>(git hash de segurança)
-        SD->>SD: Skill 5: SCOPE_GUARD<br/>(Physical Check: dir/ls allow_list)
+        SD->>SD: Skill 4: baseline-anchor<br/>(Hash do STATE.md / git rev-parse)
+        SD->>SD: Skill 5: scope-guard<br/>(Physical Check: dir/ls allow_list)
+    end
+
+    alt Morte do Executor (Quota/Crash)
+        Note over Hub: Protocolo de Recuperação (D-08):<br/>Hub lê STATE.md físico e re-spawna
+        Hub->>SD: Invocação: @spec-driver [RESUME]
     end
 
     rect rgb(83, 52, 131)
         Note over SD: FASE C — Execução
-        SD->>Gate: Skill 6: METHODICAL_WRITER<br/>(Tier 1/2/3 + validação)
-        Gate-->>SD: PASS / BLOCKED
-        alt BLOCKED
-            SD->>SD: Consulta AGENT_SCRATCHPAD Known Traps
-            SD->>Hub: [HANDOFF: ESCALATION]
-            Hub->>SD: @spec-driver [RESUME]
+        SD->>Gate: Skill 6: methodical-writer<br/>(Valida escrita com Gatekeeper)
+        Gate-->>SD: PASS / BLOCKED (ex: fora do escopo)
+        alt Bloqueio (BLOCKED) / Bandeira Branca
+            SD->>SD: Documenta falha no Scratchpad INBOX
+            SD->>Hub: Notificação chat: [HANDOFF: ESCALATION]
+            Note over Hub: Step 4: Trata escalação no Scratchpad DIRECTIVES
+            Hub->>SD: Mensagem chat: @spec-driver [RESUME]
+            SD->>SD: Lê DIRECTIVES, atualiza STATE.md e retoma
         end
-        SD->>SD: Skill 7: INTEGRITY_CHECK<br/>(spec vs tasks vs state)
+        SD->>SD: Skill 7: integrity-check<br/>(Verifica coerência spec/tasks/state)
     end
 
     rect rgb(27, 27, 47)
         Note over SD: FASE D — Fechamento
-        SD->>SD: Skill 8: SELF_AUDIT<br/>(npm run context:harness)
-        SD->>QA: Skill 9: HANDOFF<br/>(/qa-validator)
+        SD->>SD: Skill 8: self-audit<br/>(npm run context:harness)
+        SD->>SD: Skill 9: handoff<br/>(Gera CLOSURE.md e termina)
+        SD-->>Hub: Retorna término da Cadeia
     end
 
+    Note over Hub: Step 5: Final Closure (Ritos)
+    Hub->>QA: Spawna validador: @qa-validator [audit]
     QA->>QA: Cronologia + Baseline + Truthfulness
-    QA-->>Hub: qa_signoff: true (ou rejeição)
+    QA-->>Hub: qa_signoff: true (Contrato assinado)
+    
+    rect rgb(30, 40, 45)
+        Note over Hub: Step 5.3: Propagação Semântica
+        alt Alterações somente em Sandbox/Meta
+            Note over Hub: Dispensa Justificada (D-11):<br/>Registra justificativa no STATE.md
+        else
+            Hub->>Prop: Spawna auditor ou executa skill semantic-propagation
+            Prop-->>Hub: Plano de propagação aplicado
+        end
+    end
+    
+    Note over Hub: Step 5.4-5.7: learnings, commit final e cleanup
 ```
+
+### 4.1 Mapeamento de Nomenclatura de Skills
+
+Para resolver divergências entre a nomenclatura de controle da suíte de execução (`spec-driver.md`) e os nomes operacionais do manual estratégico (`SSD_PLAYBOOK.md`), utiliza-se a seguinte tabela de equivalência:
+
+| Ordem | Skill Executiva (`spec-driver.md`) | Skill Semântica (`SSD_PLAYBOOK.md`) | Descrição e Propósito |
+|:---|:---|:---|:---|
+| **Skill 1** | `context-loader` | `MIMO_MEMORY` / `CONTEXT_LOADED` | Carrega regras do sistema e memória de cicatrizes |
+| **Skill 2** | `spec-digest` | `CONSTRAINTS_EXTRACTED` | Valida o contrato enriquecido e a allow_list física |
+| **Skill 3** | `strategy-planner` | `TECHNICAL_APPROACH` | Define o plano cirúrgico (STRATEGY_LOG) no STATE.md |
+| **Skill 4** | `baseline-anchor` | `BASELINE_ANCHORED` | Ancoragem de hash de segurança antes da mutação |
+| **Skill 5** | `scope-guard` | `SCOPE_LOCKED` / `SCRATCHPAD_SYNCED` | Validação física das existências dos whitelists |
+| **Skill 6** | `methodical-writer` | `EVIDENCE_GENERATION` | Escrita cirúrgica restrita pelo Gatekeeper e Tiers |
+| **Skill 7** | `integrity-check` | `INTEGRITY_CHECKED` | Validação de consistência lógica Spec vs Tasks vs State |
+| **Skill 8** | `self-audit` | `SELF_AUDITED` | Rodar validação automatizada (`npm run context:harness`) |
+| **Skill 9** | `handoff` | `REMEDIATION` / `HANDOFF` | Geração do relatório final `CLOSURE.md` e término |
 
 ---
 

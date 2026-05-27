@@ -33,7 +33,7 @@ You must execute these skills in strict sequential order. Do not skip. Do not ju
 6. **methodical-writer:** Execute surgical writes (Tier 1: 15 lines limit). **GATEKEEPER:** O validador rejeitara a escrita se houver bloqueio pendente sem `RESUME_DIRECTIVE`.
 7. **integrity-check:** Verify coherence between spec/tasks/state.
 8. **self-audit:** Run harness/validation and capture raw output.
-9. **handoff:** Deliver artifacts to the Orchestrator/QA e **GERE o `CLOSURE.md`** síntese (conforme `.agent/templates/CLOSURE.md`).
+9. **handoff:** Deliver artifacts and report completion to the Orchestrator, and **GERE o `CLOSURE.md`** síntese (conforme `.agent/templates/CLOSURE.md`).
 
 # 🛠️ EXECUTION GATE (Skill 6)
 Every write MUST be preceded by a call to the validation script:

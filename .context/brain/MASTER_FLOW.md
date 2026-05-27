@@ -1,6 +1,6 @@
 ---
 Criado em: 2026-04-10 23:28
-Ultima Atualizacao: 2026-05-23 16:35
+Ultima Atualizacao: 2026-05-27 20:08
 Status: Ativo
 ---
 

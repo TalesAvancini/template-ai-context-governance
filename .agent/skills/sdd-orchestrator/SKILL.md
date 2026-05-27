@@ -50,8 +50,8 @@ npm run context:inject
 ```
 3. Verify that the `*.enriched.md` file was generated.
 4. **Physical Scratchpad Instantiation:** You MUST copy the template `.agent/templates/AGENT_SCRATCHPAD.md` to `.specs/features/<feature_id>/AGENT_SCRATCHPAD.md` to ensure the executor has a physical escalation buffer.
-5. **Git Cleanliness Gate (Pre-Delegation):** Before spawning the executor subagent, you MUST commit the spec setup (the drafted `spec.md`, `STATE.md`, `tasks.md`, `AGENT_SCRATCHPAD.md`, and the `*.enriched.md` files) to seal the feature setup in Git. Run:
-   - `git add .specs/features/<feature_id>/`
+5. **Git Cleanliness Gate (Pre-Delegation):** Before spawning the executor subagent, you MUST commit the spec setup (the drafted `spec.md`, `STATE.md`, `tasks.md`, `AGENT_SCRATCHPAD.md`, `*.enriched.md`, and `JOURNAL.md` files) to seal the feature setup in Git. Run:
+   - `git add .specs/features/<feature_id>/ .context/maintenance/JOURNAL.md`
    - Create a corresponding setup entry at the top of `JOURNAL.md` for this setup commit.
    - Run `git commit -m "chore(sprint): setup spec, STATE and SCRATCHPAD for <feature_id>"`
    - Run `git push` to sync the baseline.
@@ -59,27 +59,31 @@ npm run context:inject
 6. Hand off execution to the `spec-driver` subagent (e.g., via `/spec-driver [instrução]`), passing the path to the spec.
 7. Once delegated, **do not close the task**. Wait for execution.
 
-### Step 4: Handle Escalations & The Immune System
+### Step 4: Handle Escalations, Recovery & The Immune System
 
-During Phase C, the `@spec-driver` might hit safety limits and issue a `[HANDOFF: ESCALATION]`.
-- **If `[BLOCKED]`**: 
+During Phase C, the `@spec-driver` might hit safety limits, crash, or issue a `[HANDOFF: ESCALATION]`.
+- **If `[BLOCKED]` or White Flag**: 
   1. Review the escalation request in the `INBOX` of `AGENT_SCRATCHPAD.md`.
   2. Write your clear solution or directive in the `DIRECTIVES` section of the Scratchpad.
   3. Reply with: `@spec-driver [RESUME] Diretiva injetada no Scratchpad. Leia a seção DIRECTIVES e retome a execução de onde parou no STATE.md.`
+- **If Executor Crashes/Dies (transient network or model error)**:
+  1. **Recovery Protocol:** Do not lose the sprint progress. Read the physical files `STATE.md` and `tasks.md` from the workspace to locate where the agent stopped.
+  2. Re-spawn/invoke the `@spec-driver` subagent passing a resume instruction specifying the last completed skill and ordering it to pick up execution from there (using the physical state).
 - **If `⚠️ SCOPE_BLOWOUT`**: You must abort the current spec, use the telemetria provided to re-fragment the feature into smaller, atomic specs, and restart the process.
 - **The Immune System (Faxina Cognitiva)**: If the same error is escalated across multiple sprints, you MUST promote it permanently by adding it to `SSD_ERRORS_LEDGER.md` or updating the Spec restrictions.
 - **[GOVERNANCE-FRICTION]**: If you or the executor detect any operational slips (e.g., broken chronology, unupdated metadata, ghost couplings) that don't block the execution but create governance debt, you MUST log it by appending a line to `.context/maintenance/HARNESS_LOG.md` (e.g., `[GOVERNANCE-FRICTION] YYYY-MM-DD | file | description`).
 
 ### Step 5: Receive Signoff & Final Closure
 
-In Phase D, the `spec-driver` will invoke the `@qa-validator` for the final audit.
+In Phase D, the `spec-driver` will notify the Orchestrator (Hub) that execution is complete. The Orchestrator will then invoke/spawn the `@qa-validator` subagent for the final audit.
 Wait for the `@qa-validator` to return `qa_signoff: true` (or rejection).
 - If **rejected**: Pass the feedback back to `@spec-driver` for correction.
 - If **true**: The feature is technically complete.
 - **Final Hub Duties**: As the Orchestrator, you must now execute the final Rites:
   1. **Run Harness:** Run `npm run context:harness` to ensure the spec didn't break physical logic.
   2. **Validate SAM:** Ensure `npm run context:workflow-journal` passes cleanly.
-  3. **Orchestrate Semantic Propagation (The Hub Super-Skill):** The orchestrator acts as a management super-skill: instead of executing propagation themselves, they direct and explain things to the subagents, passing the seeds and paths via handoff while the subagents do the work. Evaluate the `@qa-validator`'s handoff query about starting the propagation phase:
+  3. **Orchestrate Semantic Propagation (The Hub Super-Skill):** The orchestrator acts as a management super-skill. Evaluate the `@qa-validator`'s handoff query:
+     * **Bypass Justificado (Escopo Sandbox/Meta):** Se as alterações afetarem exclusivamente arquivos sandbox (`scratch/`) ou metadados de especificação (`spec.md`, `STATE.md`), a propagação semântica é dispensada. Você deve registrar a dispensa formal em `STATE.md` sob a seção de fechamento e pular para o rito de aprendizados.
      * **For Small/Medium specs:** Direct `@qa-validator` to execute the propagation (fusing QA and propagation roles). In the handoff, the orchestrator MUST explain the context of the changes and direct the validator to run the skill. Reply with: `@qa-validator [RUN_PROPAGATION] Execute the semantic-propagation skill (file:///.agent/skills/semantic-propagation/SKILL.md) using the following modified files (seeds) as input: <list_of_seeds>. Here is the explanation of the changes: <explanation_of_changes_and_intent>.`
      * **For Large/Complex specs:** Instruct `@qa-validator` to terminate. Spawn the `@propagation-auditor` to handle the large scope, explaining the task and directing it to run the skill. Reply with: `@propagation-auditor [RUN_PROPAGATION] Execute the semantic-propagation skill (file:///.agent/skills/semantic-propagation/SKILL.md) using the following modified files (seeds) as input: <list_of_seeds>. Here is the explanation of the changes: <explanation_of_changes_and_intent>.`
   4. **Aggregate Learnings:** Run `npm run context:learnings` to compile the error scars from `SSD_ERRORS_LEDGER.md` and failure loops from `HARNESS_LOG.md` into `LEARNINGS.md` before the spec directory is archived.
